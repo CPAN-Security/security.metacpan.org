@@ -86,7 +86,7 @@ The _CPAN-SEC_ concerns itself with a limited domain:
 
 ### Out-of-scope
 
-- Security issues handled by &lt;security@perl.org&gt; 
+- Security issues handled by &lt;perl-security@perl.org&gt; 
   - The perl interpreter itself
   - Perl Core modules managed by &lt;perl5-porters@perl.org&gt;
 - Supply-chain issues that are found outside of CPAN, for example:

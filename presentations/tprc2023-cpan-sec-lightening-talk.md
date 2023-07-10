@@ -16,11 +16,11 @@
 
 # CPAN Security WG
 
+This is an introduction!
 
 Note:
 
 Yay! We care about security on CPAN! :-D
-
 
 
 [comment]: # (!!!)
@@ -28,9 +28,7 @@ Yay! We care about security on CPAN! :-D
 ## CPAN-SEC
 
 * We care about security on CPAN!
-* Perl Toolchain Summit 2023 in Lyon, France
-
-This is an introduction!
+* Made @ Perl Toolchain Summit 2023 in Lyon, France
 
 Note:
 
@@ -39,10 +37,9 @@ Established in April at the PTS 2023 in Lyon, France
 This is an introduction and a **call for participation**!
 
 
-
 [comment]: # (!!!)
 
-## We care about…
+## What do we care about?
 
 Note:
 
@@ -126,9 +123,9 @@ Keeping the different security information channels and documentaion up-to-date 
 
 Note:
 
-* Rules, project management and funding
+* Rules, project management, funding
 * Integration with non-CPAN package indices
-* Tooling for analyzing dependencies for known vulnerabilities
+* Tooling for analyzing deps for known vulnerabilities
 * Tracking legal and privacy issues around CPAN metadata, and compliance with GDPR, NIS2, and other regulations
 
 
@@ -146,7 +143,7 @@ Breno, Graham, Ingy, Andreas, Leon, Olaf, Renée, Sam, Salve, Stig, Tim, Merijn,
 
 [comment]: # (!!!)
 
-### Picture proof
+### PTS Picture proof
 
 ![Group picture showing stigo, ingy, sjn, leont, tux and garu](media/cpan-sec-group-photo-lyon-2023.jpeg)
 
@@ -164,9 +161,9 @@ Note:
 
 ### Join us!
 
-* Do you work with & **care about security**
-* Have **tuits to spare**
-
+* Do you work with & **care about security**?
+* Have **tuits to spare**?
+* A **responsible** employer?
 
 Note:
 
@@ -200,4 +197,4 @@ We're also looking into presence in other channels, including the Fediverse! (No
 
 Note:
 
-
+A lot more people have helped though! :-)

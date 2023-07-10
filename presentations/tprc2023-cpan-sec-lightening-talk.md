@@ -51,7 +51,7 @@ Here are some of the things we care about!
 
 ### CPAN Vulnerability Index
 
-**Auditing** and tracking vulnerabilities
+👉 **Auditing** and tracking vulnerabilities
 
 Note:
 
@@ -62,7 +62,7 @@ Standardization and publishing of CPAN package vulnerabilities in relevant index
 
 ### CPAN Provenance & Supply Chain Security
 
-Establishing a **trusted publishing infrastructure**
+👉 Establishing a **trusted publishing infrastructure**
 
 Note:
 
@@ -73,7 +73,7 @@ Establishing a trusted publishing infrastructure, including tooling and integrat
 
 ### CPAN Software Bills of Materials
 
-**SBOM** creation and verification
+👉 **SBOM** creation and verification
 
 Note:
 
@@ -84,7 +84,7 @@ Tooling for creating and managing standard SBOM objects like OWASP CycloneDX and
 
 ### CPAN Transparency Logs
 
-Tooling for **third-party monitoring of updates** to ecosystem packages
+👉 Tooling for **third-party monitoring** of package changes
 
 Note:
 
@@ -95,7 +95,7 @@ Tooling for monitoring updates, but also integrity checking of metadata using to
 
 ### CPAN Security Patch Tooling
 
-Tooling for CPAN Distro security patches to enable **high-priority updates**.
+👉 Tooling for CPAN Distro security patches to enable **high-priority updates**
 
 Note:
 
@@ -106,7 +106,7 @@ Develop tooling for publishing and applying third-party security patches to CPAN
 
 ### CPAN Security Outreach & Information
 
-Security and **incident communication** through relevant&nbsp;media&nbsp;channels
+👉 Security and **incident communication** through relevant&nbsp;media&nbsp;channels
 
 Note:
 
@@ -117,15 +117,15 @@ Keeping the different security information channels and documentaion up-to-date 
 
 ### And more!
 
-* Software Composition Analysis
-* CPAN-SEC Governance, Policy & Funding
-* Rich Metadata & Dependencies
-* Metadata Privacy and Compliance
+* 👉 Software Composition Analysis
+* 👉 CPAN-SEC Governance, Policy & Funding
+* 👉 Rich Metadata & Dependencies
+* 👉 Metadata Privacy and Compliance
 
 Note:
 
 * Tooling for analyzing deps for known vulnerabilities
-* Working group rules, project management, funding
+* Working group rules, playbooks, governance, funding
 * Improve integration with non-CPAN package indices like RPM, apt etc.
 * Tracking legal and privacy issues around CPAN metadata, and compliance with GDPR, NIS2, and other regulations
 

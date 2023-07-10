@@ -89,13 +89,13 @@ Standardization and publishing of CPAN package vulnerabilities in relevant index
 
 [comment]: # (|||)
 
-### CPAN Provenance
+### CPAN Provenance & Supply Chain Security
 
 Establishing a **trusted publishing infrastructure**
 
 Note:
 
-Establishing a trusted publishing infrastructure, including tooling and integration with in-toto.io and SLSA
+Establishing a trusted publishing infrastructure, including tooling and integration with in-toto.io and SLSA. 
 
 
 [comment]: # (|||)
@@ -135,7 +135,7 @@ Develop tooling for publishing and applying third-party security patches to CPAN
 
 ### CPAN Security Outreach & Information
 
-Security and incident communication through relevant media channels
+Security and **incident communication** through relevant media channels
 
 Note:
 
@@ -159,43 +159,43 @@ Note:
 * Tracking legal and privacy issues around CPAN metadata, and compliance with GDPR, NIS2, and other regulations
 
 
-[comment]: # (|||)
-
-### 
-
-
-[comment]: # (|||)
-
-### 
-
-
 
 [comment]: # (!!!)
 
-### --
+### Join us!
 
+* If you work with & care about security
+* Have tuits to spare
 
 
 Note:
 
+Do you have time to volunteer?
 
-[comment]: # (!!!)
-
-### --
-
-
-Note:
-
+Check with your employer, and ask if they are willing to dedicate 20% of your time to 
 
 
 [comment]: # (!!!)
 
-### 
+### Where to find us
 
+https://security.metacpan.org/
 
+ircs://irc.perl.org#cpan-security
 
 Note:
 
+We're also looking into presence in other channels, including the Fediverse! (Not Twitter, though)
 
+
+[comment]: # (!!!)
+
+# Thanks!
+
+* Olaf Alders
+* Salve J. Nilsen (slides)
+
+
+Note:
 
 

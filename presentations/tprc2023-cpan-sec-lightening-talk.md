@@ -1,6 +1,7 @@
 [comment]: # (Compile this presentation with the command below)
-[comment]: # (mdslides docs.md --include dist)
+[comment]: # (mdslides tprc2023-cpan-sec-lightening-talk.md --include media)
 [comment]: # (...or by running the Makefile with "make")
+[comment]: # (mdslides can be installed from https://github.com/dadoomer/markdown-slides/)
 
 [comment]: # (THEME = solarized)
 
@@ -10,8 +11,8 @@
 [comment]: # (width: "960")
 [comment]: # (height: "700")
 [comment]: # (help: true)
-[comment]: # (progress: false)
-[comment]: # (controlsBackArrows: "hidden")
+[comment]: # (progress: true)
+[comment]: # (controlsBackArrows: "true")
 
 
 # CPAN Security WG

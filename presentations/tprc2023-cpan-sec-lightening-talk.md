@@ -165,7 +165,7 @@ Note:
 Breno, Graham, Ingy, Andreas, Leon, Olaf, Renée, Sam, Salve, Stig, Tim, Merijn, …and others!
 
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ### PTS Picture proof
 
@@ -190,6 +190,7 @@ Do you…
 * …Work with & **care about security**?
 * …Have **tuits to spare**?
 * …Have a **responsible** employer?
+* …Enjoy putting **ducks in a row**?
 
 Note:
 
@@ -200,7 +201,7 @@ Check with your employer, and ask if they are willing to dedicate a percentage o
 
 [comment]: # (!!!)
 
-### Where to find us
+### Find us & join!
 
 ircs://irc.perl.org#cpan-security
 

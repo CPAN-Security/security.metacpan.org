@@ -39,33 +39,6 @@ Established in April at the PTS 2023 in Lyon, France
 This is an introduction and a **call for participation**!
 
 
-[comment]: # (!!!)
-
-### Contributors
-
-**garu**, **haarg**, **ingy**, **klapperl**, **leont**, **oalders**, **reneeb**, **sam**, **sjn**, **stigo**, **timlegge**, **[Tux]**, …and others!
-
-
-Note:
-
-Breno, Graham, Ingy, Andreas, Leon, Olaf, Renée, Sam, Salve, Stig, Tim, Merijn, …and others!
-
-
-[comment]: # (!!!)
-
-### Picture proof
-
-![Group picture showing stigo, ingy, sjn, leont, tux and garu](media/cpan-sec-group-photo-lyon-2023.jpeg)
-
-Note:
-* **stigo** (Stig)
-* **ingy** (Ingy)
-* **sjn** (Salve)
-* **leont** (Leon)
-* **[Tux]** (Merijn)
-* **garu** (Breno)
-
-
 
 [comment]: # (!!!)
 
@@ -159,20 +132,47 @@ Note:
 * Tracking legal and privacy issues around CPAN metadata, and compliance with GDPR, NIS2, and other regulations
 
 
+[comment]: # (!!!)
+
+### Who are we?
+
+**garu**, **haarg**, **ingy**, **klapperl**, **leont**, **oalders**, **reneeb**, **sam**, **sjn**, **stigo**, **timlegge**, **[Tux]**, …and others!
+
+
+Note:
+
+Breno, Graham, Ingy, Andreas, Leon, Olaf, Renée, Sam, Salve, Stig, Tim, Merijn, …and others!
+
+
+[comment]: # (!!!)
+
+### Picture proof
+
+![Group picture showing stigo, ingy, sjn, leont, tux and garu](media/cpan-sec-group-photo-lyon-2023.jpeg)
+
+Note:
+* **stigo** (Stig)
+* **ingy** (Ingy)
+* **sjn** (Salve)
+* **leont** (Leon)
+* **[Tux]** (Merijn)
+* **garu** (Breno)
+
+
 
 [comment]: # (!!!)
 
 ### Join us!
 
-* If you work with & care about security
-* Have tuits to spare
+* Do you work with & **care about security**
+* Have **tuits to spare**
 
 
 Note:
 
 Do you have time to volunteer?
 
-Check with your employer, and ask if they are willing to dedicate 20% of your time to 
+Check with your employer, and ask if they are willing to dedicate a percentage of your time on supply-chain security!
 
 
 [comment]: # (!!!)
@@ -182,6 +182,8 @@ Check with your employer, and ask if they are willing to dedicate 20% of your ti
 https://security.metacpan.org/
 
 ircs://irc.perl.org#cpan-security
+
+mailto:security@cpan.org
 
 Note:
 

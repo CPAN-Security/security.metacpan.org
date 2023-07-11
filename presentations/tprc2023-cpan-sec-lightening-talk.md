@@ -135,13 +135,17 @@ Note:
 ## Why now?
 
 * Increased **demands to software supply chain security** and metadata from upcoming laws
-    * EU [NIS2 Directive](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) &amp; [Cyber Resilence Act](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)
     * US [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) _Improving the Nation’s Cybersecurity_
+    * EU [NIS2 Directive](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) &amp; [Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)
 * **Raise community awareness** on security
 * CPAN is in the dependency trees of _many_ businesses, so it's high time we **get our ducks in&nbsp;a&nbsp;row**&nbsp;🦆🦆
 
 Note:
 
+* EO 14028
+    * Executive Order on Improving the Nation’s Cybersecurity
+    * Issued May 12, 2021
+    * All federal agencies, businesses or contractors that work with or sell to the US federal government
 * NIS2
     * Directive (EU) 2022/2555 (NIS2)
     * Must be implemented by 17 October 2024
@@ -150,11 +154,7 @@ Note:
     * Cyber Resilience Act
     * Must be implemented by July 2025 (estimated)
     * CE certification of software used in and with **internet-connected devices**
-* EO-14028
-    * Executive Order on Improving the Nation’s Cybersecurity
-    * Issued May 12, 2021
-    * All federal agencies, businesses or contractors that work with or sell to the US federal government
-
+* Raise awareness on impact and responsibility around security
 
 [comment]: # (!!!)
 

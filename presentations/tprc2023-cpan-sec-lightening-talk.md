@@ -84,7 +84,7 @@ Tooling for creating and managing standard SBOM objects like OWASP CycloneDX and
 
 ### CPAN Transparency Logs
 
-👉 Tooling for **third-party monitoring** of package changes
+👉 Tooling for **third-party monitoring** of&nbsp;package&nbsp;changes
 
 Note:
 
@@ -120,13 +120,13 @@ Keeping the different security information channels and documentaion up-to-date 
 * 👉 Software Composition Analysis
 * 👉 CPAN-SEC Governance, Policy & Funding
 * 👉 Rich Metadata & Dependencies
-* 👉 Metadata Privacy and Compliance
+* 👉 Privacy and Compliance
 
 Note:
 
 * Tooling for analyzing deps for known vulnerabilities
 * Working group rules, playbooks, governance, funding
-* Improve integration with non-CPAN package indices like RPM, apt etc.
+* Improve interoperability with non-CPAN package indices
 * Tracking legal and privacy issues around CPAN metadata, and compliance with GDPR, NIS2, and other regulations
 
 
@@ -134,23 +134,25 @@ Note:
 
 ## Why now?
 
-* Upcoming regulations in EU ([NIS2](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive), [CRA](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)) and the US ([Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)) make demands to software supply chain security
-* CPAN is used by _many_ so we need to get our ducks in&nbsp;a&nbsp;row
+* Increased demands to software supply chain security from upcoming laws and regulations
+    * EU [NIS2](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive), [CRA](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act) and related
+    * US [Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
+* CPAN is in the dependency trees of _many_, so it's high time we get our ducks in&nbsp;a&nbsp;row
 
 Note:
 
 * NIS2
     * Directive (EU) 2022/2555 (NIS2)
     * Must be implemented by 17 October 2024
-    * Software used by EU institutions that manage critical infrastructure
+    * Software used by EU institutions that manage **critical infrastructure**
 * CRA
     * Cyber Resilience Act
     * Must be implemented by July 2025 (estimated)
-    * CE certification of software used in and with internet-connected devices in the EU market
+    * CE certification of software used in and with **internet-connected devices**
 * EO-14028
     * Executive Order on Improving the Nation’s Cybersecurity
     * Issued May 12, 2021
-    * Applies to all federal agencies and businesses or contractors that work with or sell to the Federal Government
+    * All federal agencies, businesses or contractors that work with or sell to the US federal government
 
 
 [comment]: # (!!!)
@@ -189,14 +191,16 @@ Do you…
 
 * …Work with & **care about security**?
 * …Have **tuits to spare**?
-* …Have a **responsible** employer?
+* …Have a **security commons-aware** employer?
 * …Enjoy putting **ducks in a row**?
 
 Note:
 
-Do you have time to volunteer?
+* Do you have a **security background** or care about the toolchain?
+* Do you have **time to volunteer**?
+* Is your employer willing to **dedicate a percentage of your time** to improve our security commons?
 
-Check with your employer, and ask if they are willing to dedicate a percentage of your time on supply-chain security!
+We need volunteers!
 
 
 [comment]: # (!!!)

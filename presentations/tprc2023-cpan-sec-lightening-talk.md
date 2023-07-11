@@ -136,8 +136,8 @@ Note:
 
 * Increased **demands to software supply chain security** and metadata from upcoming laws
     * EU [NIS2 Directive](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) &amp; [Cyber Resilence Act](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)
-    * US [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) on _Improving the Nation’s Cybersecurity_
-* A perceived need to **raise community awareness**
+    * US [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) _Improving the Nation’s Cybersecurity_
+* **Raise community awareness** on security
 * CPAN is in the dependency trees of _many_ businesses, so it's high time we **get our ducks in&nbsp;a&nbsp;row**&nbsp;🦆🦆
 
 Note:
@@ -170,7 +170,7 @@ Breno, Graham, Ingy, Andreas, Leon, Olaf, Renée, Sam, Salve, Stig, Tim, Merijn,
 
 [comment]: # (|||)
 
-### PTS Picture proof
+### PTS Picture Proof
 
 ![Group picture showing stigo, ingy, sjn, leont, tux and garu](media/cpan-sec-group-photo-lyon-2023.jpeg)
 

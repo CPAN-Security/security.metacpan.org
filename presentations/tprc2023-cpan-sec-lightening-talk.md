@@ -137,7 +137,7 @@ Note:
 * Increased demands to software supply chain security from upcoming laws and regulations
     * EU [NIS2](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive), [CRA](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act) and related
     * US [Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
-* CPAN is in the dependency trees of _many_, so it's high time we get our ducks in&nbsp;a&nbsp;row
+* CPAN is in the dependency trees of _many_, so it's high time we get our ducks in&nbsp;a&nbsp;row 🦆🦆
 
 Note:
 
@@ -191,8 +191,8 @@ Do you…
 
 * …Work with & **care about security**?
 * …Have **tuits to spare**?
-* …Have a **security commons-aware** employer?
-* …Enjoy putting **ducks in a row**?
+* …Have a **security commons** aware employer?
+* …Enjoy geting your **ducks in a row**?
 
 Note:
 
@@ -205,7 +205,7 @@ We need volunteers!
 
 [comment]: # (!!!)
 
-### Find us & join!
+### Find us!
 
 ircs://irc.perl.org#cpan-security
 
@@ -225,10 +225,11 @@ WIP: Presence in other channels, including the Fediverse! (Not Twitter, though)
 
 # Thanks!
 
+🦆🦆🦆🦆🦆🦆
+
 * Olaf Alders
 * Salve J. Nilsen (slides)
 
-🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆
 
 Note:
 

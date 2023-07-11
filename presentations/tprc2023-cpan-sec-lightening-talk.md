@@ -213,6 +213,7 @@ https://security.metacpan.org/
 
 mailto:cpan-security@perl.org
 
+
 Note:
 
 Ingy or Olaf is at this conference too!
@@ -226,6 +227,8 @@ WIP: Presence in other channels, including the Fediverse! (Not Twitter, though)
 
 * Olaf Alders
 * Salve J. Nilsen (slides)
+
+🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆
 
 Note:
 

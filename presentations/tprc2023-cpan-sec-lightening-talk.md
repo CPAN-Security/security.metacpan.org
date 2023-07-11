@@ -134,10 +134,10 @@ Note:
 
 ## Why now?
 
-* Increased **demands to software supply chain security** and metadata from upcoming laws
+* **Increased demands from upcoming laws** to supply chain security and metadata
     * US [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) _Improving the Nation’s Cybersecurity_
     * EU [NIS2 Directive](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) &amp; [Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)
-* **Raise community awareness** on security
+* **Raise community awareness** on security topics
 * CPAN is in the dependency trees of _many_ businesses, so it's high time we **get our ducks in&nbsp;a&nbsp;row**&nbsp;🦆🦆
 
 Note:

@@ -1,13 +1,16 @@
-Welcome to the CPAN Security Working Group. This is a community effort for supporting security incidents and concerns on CPAN distributions.
+Welcome to the CPAN Security Working Group (CPAN-SEC). This is a community effort for supporting security incidents and concerns on CPAN distributions and infrastructure.
 
 
 # Contact us
 
-* You can reach us by sending a mail to &lt;cpan-security at perl.org&gt;
+
+* Join us in our [IRC channel](ircs://irc.perl.org/#cpan-security)
+* Send a mail to &lt;cpan-security&#64;perl.org&gt;
 
 
 # Resources
 
 * [IRC channel](ircs://irc.perl.org/#cpan-security)
-* [Group charter](docs/charter.md)
+* [Github organization](https://github.com/orgs/CPAN-Security)
 * [Projects](https://github.com/orgs/CPAN-Security/projects)
+* [Group charter](docs/charter.md) (Work in progress)

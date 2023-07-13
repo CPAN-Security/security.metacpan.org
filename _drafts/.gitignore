@@ -1,0 +1,3 @@
+# https://jekyllrb.com/docs/drafts/
+# $EDITOR _drafts/a-draft-post.md
+# jekyll serve --drafts

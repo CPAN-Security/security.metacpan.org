@@ -1,5 +1,6 @@
 title: CPAN-SEC
-email: cpan-security@perl.org
+author: CPAN Security Outreach & Information Project
+#email: cpan-security@perl.org
 description: >-
   CPAN Security Working Group (CPAN-SEC)
 baseurl: ""

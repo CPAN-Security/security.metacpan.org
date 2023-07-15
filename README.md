@@ -1,5 +1,6 @@
 Welcome to the [CPAN Security Working Group](https://security.metacpan.org/).
 This is a community effort for supporting and responding to security incidents.
+
 We also care about other security-related concerns with CPAN distributions, and the CPAN/PAUSE infrastructure, tooling and ecosystem in general.
 This includes improving supply chain security, making CPAN become a more secure and trustworthy publishing platform, and more.
 

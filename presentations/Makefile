@@ -1,6 +1,6 @@
-all: tprc2023-cpan-sec-lightening-talk/index.html
+all: tprc2023-cpan-sec-lightning-talk/index.html
 
 
-tprc2023-cpan-sec-lightening-talk/index.html: tprc2023-cpan-sec-lightening-talk.md
-	mdslides tprc2023-cpan-sec-lightening-talk.md --include media
+tprc2023-cpan-sec-lightning-talk/index.html: tprc2023-cpan-sec-lightning-talk.md
+	mdslides tprc2023-cpan-sec-lightning-talk.md --include media
 

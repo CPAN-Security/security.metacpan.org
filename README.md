@@ -1,6 +1,7 @@
 Welcome to the [CPAN Security Working Group](https://security.metacpan.org/).
 This is a community effort for supporting and responding to security incidents.
-We also care about related concerns with CPAN distributions, like improving supply chain security and making CPAN become a more secure and trustworthy publishing platform.
+We also care about other security-related concerns with CPAN distributions, and the CPAN/PAUSE infrastructure, tooling and ecosystem in general.
+This includes improving supply chain security, making CPAN become a more secure and trustworthy publishing platform, and more.
 
 
 ## Contact us
@@ -15,4 +16,4 @@ We also care about related concerns with CPAN distributions, like improving supp
 * [IRC channel](ircs://irc.perl.org/#cpan-security)
 * [Github organization](https://github.com/orgs/CPAN-Security)
 * [Projects](https://github.com/orgs/CPAN-Security/projects)
-* [Group charter](docs/charter.mdSubscribe on the Work) (Work in progress)
+* [Group charter](docs/charter.md) (Work in progress)

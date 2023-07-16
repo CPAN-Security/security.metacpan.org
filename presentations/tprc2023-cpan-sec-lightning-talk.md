@@ -172,7 +172,7 @@ Breno, Graham, Ingy, Andreas, Leon, Olaf, Renée, Sam, Salve, Stig, Tim, Merijn,
 
 ### PTS Picture Proof
 
-![Group picture showing stigo, ingy, sjn, leont, tux and garu](media/cpan-sec-group-photo-lyon-2023.jpeg)
+![Group picture showing stigo, ingy, sjn, leont, tux and garu](media/cpan-sec-group-picture-PTS2023.jpeg)
 
 Note:
 * **stigo** (Stig)

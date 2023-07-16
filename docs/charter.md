@@ -36,7 +36,6 @@ The group was established at the Perl Toolchain Summit 2023 in Lyon, France, wit
 This list has been subject for discussions and revisioning, and the resulting tasks and topics are layed out under the subject lines below.
 
 
-
 ## Goals and Intentions
 
 The _CPAN-SEC_ intends to be a forum for coordinating and assisting in resolving security issues found on CPAN. This may include:
@@ -218,10 +217,10 @@ Founding members, from left to right in the group picture linked below.
 - H. Merijn "Tux" Brand
 - Breno "garu" Oliveira
 
-**Not in picture**
+#### Additional initiators
 
-- mickey
 - haarg
+- mickey
 
 
 ### Charter authors

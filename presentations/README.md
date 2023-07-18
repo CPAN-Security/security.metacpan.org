@@ -6,7 +6,7 @@ permalink: /presentations/
 
 This directory contains presentations given at conferences and other events. For now, the following have been published:
 
-* TPRC 2023 in Toronto, Canada – [Lightning talks](tprc2023-cpan-sec-lightning-talk/)
+* TPRC 2023 in Toronto, Canada – Lightning talk [Video](https://www.youtube.com/watch?v=_lOiXFXZv3I), [Slides](tprc2023-cpan-sec-lightning-talk/)
 
 
 #### How to generate the files

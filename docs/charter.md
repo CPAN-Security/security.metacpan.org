@@ -206,9 +206,11 @@ Examples of these may include…
 
 ### Founding members
 
-Founding members, from left to right in the group picture linked below.
-
 ![Group picture showing stigo, ingy, sjn, leont, tux and garu](../media/cpan-sec-group-picture-PTS2023.jpeg)
+
+Picture taken by `sjn` at the Perl Toolchain Summit 2023 in Lyon, France.
+
+From left to right,
 
 - stigo
 - Ingy döt Net

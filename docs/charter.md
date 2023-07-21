@@ -36,19 +36,6 @@ The group was established at the Perl Toolchain Summit 2023 in Lyon, France, wit
 This list has been subject for discussions and revisioning, and the resulting tasks and topics are layed out under the subject lines below.
 
 
-### Founding members
-
-Founding members, from left to right in the group picture linked below.
-
-![Group picture showing stigo, ingy, sjn, leont, tux and garu](../media/cpan-sec-group-picture-PTS2023.jpeg)
-
-- stigo
-- Ingy döt Net
-- Salve J. Nilsen
-- Leon Timmermans
-- H. Merijn "Tux" Brand
-- Breno "garu" Oliveira
-
 
 ## Goals and Intentions
 
@@ -216,17 +203,25 @@ Examples of these may include…
 - …
 
 
-## Other acknowledgements
+## Acknowledgements
 
-### Initiators
-  
-- garu
+### Founding members
+
+Founding members, from left to right in the group picture linked below.
+
+![Group picture showing stigo, ingy, sjn, leont, tux and garu](../media/cpan-sec-group-picture-PTS2023.jpeg)
+
 - stigo
+- Ingy döt Net
+- Salve J. Nilsen
+- Leon Timmermans
+- H. Merijn "Tux" Brand
+- Breno "garu" Oliveira
+
+**Not in picture**
+
 - mickey
 - haarg
-- leont
-- ingy
-- …
 
 
 ### Charter authors

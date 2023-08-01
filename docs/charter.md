@@ -170,10 +170,11 @@ Examples of these may include…
 
 ### Projects
 
-- Tooling for signing of CPAN artifacts – [CPAN Provenance](https://github.com/orgs/CPAN-Security/projects/3)
-- Collect and publish vulnerabilities in CPAN distributions, including creating & managing infrastructure for showing vulnerability info on MetaCPAN. (`CPANSEC` or `CPAN-VULN`) – [CPAN Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
-- Tooling for creating and verifying Software Bills of Materials for CPAN distributions – [CPAN Software Bills of Materials](https://github.com/orgs/CPAN-Security/projects/1)
-- High-priority updates to CPAN packages
+- [CPAN Provenance & Supply Chain Security](https://github.com/orgs/CPAN-Security/projects/3) – Tooling for signing of CPAN artifacts
+- [CPAN Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10) – Collect and publish vulnerabilities in CPAN distributions, including creating & managing infrastructure for showing vulnerability info on MetaCPAN. (`CPANSEC` or `CPAN-VULN`)
+- [CPAN Software Bills of Materials](https://github.com/orgs/CPAN-Security/projects/1) – Tooling for creating and verifying Software Bills of Materials for CPAN distributions
+- [CPAN Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11) – High-priority updates to CPAN packages
+- …and [other projects](https://github.com/orgs/CPAN-Security/projects)
 - ~~Registering as a CVE Numbering Authority~~
   - **FIXME**: Probably not useful? Please share your thoughts.
 - …
@@ -187,6 +188,7 @@ Examples of these may include…
 ### Public contact points
 
 - TBD
+- https://security.metacpan.org/
 - ircs://irc.perl.org/#cpan-security
 - &lt;cpan-security@perl.org&gt; (mailing list)
 - Presence on Mastodon, Twitter, etc.
@@ -197,7 +199,7 @@ Examples of these may include…
 
 - TBD
 - RSS/Atom feed with advisories
-- Blog under a well-known domain (e.g. security.cpan.org)
+- Blog under a well-known domain (e.g. security.metacpan.org)
 - Github group: https://github.com/CPAN-Security
 - …
 

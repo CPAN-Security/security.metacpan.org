@@ -21,7 +21,7 @@ This is an introduction!
 
 Note:
 
-Hei! I'm <NAME> and we're here to talk to you about the CPAN Security Working Group
+Hei! I'm <NAME> and I'm here to introduce the CPAN Security Working Group to you
 
 
 [comment]: # (!!!)
@@ -35,7 +35,6 @@ Note:
 
 Established in April this year at the Perl Toolchain Summit in Lyon, France
 
-This is an introduction and a **call for participation**!
 
 
 [comment]: # (!!!)
@@ -43,6 +42,8 @@ This is an introduction and a **call for participation**!
 ## What do we care about?
 
 Note:
+
+This is an introduction and a **call for participation**!
 
 Here are some of the things we care about!
 

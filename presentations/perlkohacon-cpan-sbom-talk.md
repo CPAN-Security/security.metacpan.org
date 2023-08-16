@@ -88,8 +88,7 @@ Imagine an announcement...
 
 [comment]: # (!!! data-auto-animate)
 
-## Legal background
-
+## Regulators and lawmakers step in
 
 * US [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) _Improving the Nation’s Cybersecurity_
 * EU [NIS2 Directive](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) 

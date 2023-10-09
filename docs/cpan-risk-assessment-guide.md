@@ -44,7 +44,7 @@ These items apply to all dependencies that use CPAN as a publishing and/or distr
 1. Well-developed and functional test-suite
 2. Source code repository availability
 3. Author availability
-4. Object signatures
+4. Distribution signatures
 5. …
 
 
@@ -56,3 +56,8 @@ These items apply to all dependencies that use CPAN as a publishing and/or distr
 
 See also https://neilb.org/adoption/ for a better list of candidates for adoption
 if you are open for taking responsibility beyond your direct dependency requirements.
+
+
+## See Also
+
+1. [How to adopt a CPAN distribution](https://metacpan.org/about/faq#howtoadoptadistribution)

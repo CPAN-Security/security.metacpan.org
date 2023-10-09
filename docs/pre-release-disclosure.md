@@ -48,4 +48,4 @@ The CPAN Security Working Group <[cpan-security@perl.org](cpan-security@perl.org
 
 ------------------
 
-Based on: [https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure](https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure (CC-BY-SA-4.0)
+Based on: [https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure](https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure) (CC-BY-SA-4.0)

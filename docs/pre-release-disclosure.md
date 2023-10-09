@@ -4,6 +4,10 @@ title: Pre-Release Disclosure
 toc: true
 ---
 
+**Document status:** ⚠️  DRAFT
+-----------------------------
+
+## Purpose
 
 The CPAN Security Working Group (CPAN-SEC) receives and handles reports of
 undisclosed vulnerabilities to be able to assist the community in preparing
@@ -13,6 +17,8 @@ announcements.
 This includes access to embargoed pre-release vulnerability information provided
 by external sources contingent on the understanding that we will not disclose
 this information prior to the public announcement date of the vulnerability.
+
+## Disclosure Agreement
 
 Members on the cpan-security@perl.org mailing list need to agree to the
 following:
@@ -46,6 +52,13 @@ replying to this agreement. (Preference “I acknowledge this document”).
 
 The CPAN Security Working Group <[cpan-security@perl.org](cpan-security@perl.org)>
 
+## Signatories
+
+* [E. X. Ampleburger](https://github.com/example)
+* …
+
 ------------------
 
-Based on: [https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure](https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure) (CC-BY-SA-4.0)
+## References
+
+Based on: [https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure](https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure (CC-BY-SA-4.0)

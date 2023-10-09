@@ -4,16 +4,14 @@ title: CPAN Security WG Charter
 toc: true
 ---
 
-**IMPORTANT ⚠️ IMPORTANT ⚠️ IMPORTANT**
------------------
+**Document status:** ⚠️  DRAFT ⚠️ 
+---------------------------------
 
-What you see here is a **proposal** for the charter of a CPAN Security Working Group (_CPAN-SEC_), to be set up in 2023. Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
+What you see here is a **DRAFT** for the charter of a CPAN Security Working Group (_CPAN-SEC_), to be set up in 2023. Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
 
 Discussion on IRC: [ircs://irc.perl.org/#cpan-security](ircs://irc.perl.org/#cpan-security)
 
-**IMPORTANT ⚠️ IMPORTANT ⚠️ IMPORTANT**
-
-------------------
+---------------------------------
 
 
 ## Purpose

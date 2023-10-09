@@ -52,6 +52,8 @@ replying to this agreement. (Preference “I acknowledge this document”).
 
 The CPAN Security Working Group <[cpan-security@perl.org](cpan-security@perl.org)>
 
+------------------
+
 ## Signatories
 
 * [E. X. Ampleburger](https://github.com/example)
@@ -61,4 +63,4 @@ The CPAN Security Working Group <[cpan-security@perl.org](cpan-security@perl.org
 
 ## References
 
-Based on: [https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure](https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure (CC-BY-SA-4.0)
+* Based on: [https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure](https://wiki.gentoo.org/wiki/Project:Security/Pre-Release-Disclosure) (CC-BY-SA-4.0)

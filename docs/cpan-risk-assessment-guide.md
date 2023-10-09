@@ -15,8 +15,8 @@ Corrections or improvements to this text can be filed in the [security.metacpan.
 For this check-list, we take inspiration from the following sources.
 
 * https://opensource.com/article/22/11/community-metrics
-* 
-
+* http://neilb.org/2013/08/07/adoptme.html
+* …
 
 ## Recommended check-list
 
@@ -47,3 +47,12 @@ These items apply to all dependencies that use CPAN as a publishing and/or distr
 4. Object signatures
 5. …
 
+
+### Risk mitigation options
+
+1. Availability for adoption (Owner is unresponsive, and distribution is available for adoption) ([ADOPTME](https://metacpan.org/author/ADOPTME))
+2. Availability for assisting (Owner is looking for co-maintainer support) ([NEEDHELP](https://metacpan.org/author/NEEDHELP))
+3. Availability for handoff (Owner is looking for someone to take over the distribution) ([HANDOFF](https://metacpan.org/author/HANDOFF))
+
+See also https://neilb.org/adoption/ for a better list of candidates for adoption
+if you are open for taking responsibility beyond your direct dependency requirements.

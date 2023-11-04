@@ -1,0 +1,65 @@
+# This file can be generated with https://dreampuf.github.io/GraphvizOnline/
+
+digraph CPANCompleteSupplyChain {
+
+  subgraph cluster_author1_private {
+    style=filled;
+    color="grey80";
+    node [style=filled,color=white];
+    label = "Private";
+
+    "mymodule" -> "Example::MyModule";
+  }
+
+  subgraph cluster_author2_private {
+    style=filled;
+    color="grey80";
+    node [style=filled,color=white];
+    label = "DarkPAN";
+
+    "mymodule" -> "Example::MyModule";
+  }
+
+
+  subgraph cluster_repository_private {
+    style=filled;
+    color="grey90";
+    node [style=filled,color=white];
+    label = "CPAN";
+
+    "CPAN::a" -> "CPAN::b" -> "CPAN::c";
+    "CPAN::f" -> "CPAN::g";
+  }
+
+  subgraph cluster_repository_public {
+    style=filled;
+    color="grey90";
+    node [style=filled,color=white];
+    label = "CPAN";
+
+    "CPAN::a" -> "CPAN::b" -> "CPAN::c";
+    "CPAN::f" -> "CPAN::g";
+  }
+
+
+  subgraph cluster_cpan {
+    style=filled;
+    color="grey65";
+    node [style=filled,color=white];
+    label = "BackPAN";
+    
+    "BackPAN::d" -> "BackPAN::h";
+  }
+
+  "libf.so" -> "CPAN::f";
+  "CPAN::g" -> "MyCorp::e";
+  "/usr/bin/d" -> "BackPAN::d";
+  "/usr/bin/d" -> "MyCorp::d";
+  "CPAN::c" -> "MyCorp::App";
+  "liba-0.1.1.so" -> "CPAN::a";
+  "BackPAN::h" -> "MyCorp::App";
+  "MyCorp::e" -> "MyCorp::App";
+  
+   "MyCorp::App" [shape=Msquare];
+}
+

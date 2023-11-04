@@ -1,65 +1,127 @@
 # This file can be generated with https://dreampuf.github.io/GraphvizOnline/
+# or https://sketchviz.com/
 
 digraph CPANCompleteSupplyChain {
 
-  subgraph cluster_author1_private {
+  subgraph cluster_author {
+    style=filled;
+    color="grey80";
+	shape=Msquare;
+    node [style=filled,color=white];
+    label = "Author";
+
+    "mymodule" -> "m2";
+  }
+
+  subgraph cluster_packager {
     style=filled;
     color="grey80";
     node [style=filled,color=white];
-    label = "Private";
+    label = "Packager";
 
-    "mymodule" -> "Example::MyModule";
-  }
-
-  subgraph cluster_author2_private {
-    style=filled;
-    color="grey80";
-    node [style=filled,color=white];
-    label = "DarkPAN";
-
-    "mymodule" -> "Example::MyModule";
+    "m2" -> "m3";
   }
 
 
-  subgraph cluster_repository_private {
+  subgraph cluster_repository {
     style=filled;
     color="grey90";
     node [style=filled,color=white];
-    label = "CPAN";
+    label = "Repository";
 
-    "CPAN::a" -> "CPAN::b" -> "CPAN::c";
-    "CPAN::f" -> "CPAN::g";
+    "m2" -> "m4";
   }
 
-  subgraph cluster_repository_public {
+  subgraph cluster_distributor {
     style=filled;
     color="grey90";
     node [style=filled,color=white];
-    label = "CPAN";
+    label = "Distributor";
 
-    "CPAN::a" -> "CPAN::b" -> "CPAN::c";
-    "CPAN::f" -> "CPAN::g";
+    "m3" -> "m5";
   }
 
-
-  subgraph cluster_cpan {
+  subgraph cluster_patcher {
     style=filled;
     color="grey65";
     node [style=filled,color=white];
-    label = "BackPAN";
-    
-    "BackPAN::d" -> "BackPAN::h";
+    label = "Patcher";
+
+    "m4" -> "m7";
   }
 
-  "libf.so" -> "CPAN::f";
-  "CPAN::g" -> "MyCorp::e";
-  "/usr/bin/d" -> "BackPAN::d";
-  "/usr/bin/d" -> "MyCorp::d";
-  "CPAN::c" -> "MyCorp::App";
-  "liba-0.1.1.so" -> "CPAN::a";
-  "BackPAN::h" -> "MyCorp::App";
-  "MyCorp::e" -> "MyCorp::App";
-  
-   "MyCorp::App" [shape=Msquare];
-}
+  subgraph cluster_curator {
+    style=filled;
+    color="grey65";
+    node [style=filled,color=white];
+    label = "Curator";
 
+    "m4" -> "m7";
+  }
+
+  subgraph cluster_reviewer {
+    style=filled;
+    color="grey65";
+    node [style=filled,color=white];
+    label = "Security reviewer / Pentester";
+
+    "m4" -> "m7";
+  }
+
+  subgraph cluster_developer {
+    style=filled;
+    color="grey65";
+    node [style=filled,color=white];
+    label = "Developer";
+
+    "m4" -> "m7";
+  }
+
+  subgraph cluster_tester {
+    style=filled;
+    color="grey65";
+    node [style=filled,color=white];
+    label = "Quality Assurance / Tester";
+
+    "m4" -> "m7";
+  }
+
+  subgraph cluster_secops {
+    style=filled;
+    color="grey65";
+    node [style=filled,color=white];
+    label = "Security / Operations";
+
+    "m4" -> "m7";
+  }
+
+  subgraph cluster_deployer {
+    style=filled;
+    color="grey65";
+    node [style=filled,color=white];
+    label = "Deployer";
+
+    "m4" -> "m7";
+  }
+
+  subgraph cluster_consumer {
+    style=filled;
+    color="grey65";
+    node [style=filled,color=white];
+    label = "Consumer";
+
+    "m4" -> "m7";
+  }
+
+  subgraph cluster_auditor {
+    style=filled;
+    color="grey65";
+    node [style=filled,color=white];
+    label = "Auditor";
+
+    "m4" -> "m7";
+  }
+
+  "MyCorp::e" -> "MyCorp::App";
+   "Consumer" [shape=Msquare];
+}

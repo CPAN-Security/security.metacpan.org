@@ -1,127 +1,232 @@
-# This file can be generated with https://dreampuf.github.io/GraphvizOnline/
-# or https://sketchviz.com/
+// This file can be generated with https://dreampuf.github.io/GraphvizOnline/
+// or https://sketchviz.com/
 
-digraph CPANCompleteSupplyChain {
+digraph CPANSupplyChain {
+  node [style=filled,color=white,shape=rect];
+  graph [color=grey80,style=filled];
 
   subgraph cluster_author {
-    style=filled;
-    color="grey80";
-	shape=Msquare;
-    node [style=filled,color=white];
-    label = "Author";
+    label = "Author B. Exampleburger";
 
-    "mymodule" -> "m2";
+    subgraph cluster_sbom_author {
+        color="grey70";
+        label = "SBOM::Author";
+        "field1"; "field2";
+    }
+
+    "git push";
+    "cpan upload";
+  }
+
+  subgraph cluster_repository {
+    label = "Reposita S. Examplesdottir";
+
+    subgraph cluster_sbom_repository {
+        color="grey70";
+        label = "SBOM::Repository";
+        "field3"; "field4";
+    }
+
+    "git@github.com/author/foo-bar.git";
   }
 
   subgraph cluster_packager {
-    style=filled;
-    color="grey80";
-    node [style=filled,color=white];
-    label = "Packager";
+    label = "Packager Q. Exampleton";
 
-    "m2" -> "m3";
+    subgraph cluster_sbom_packager {
+        color="grey70";
+        label = "SBOM::Packager";
+        "field5"; "field6";
+    }
+
+    "libfoobar-perl";
   }
 
-
-  subgraph cluster_repository {
-    style=filled;
+  subgraph cluster_patcher_darkpan {
+    label = "Patchy Q. 'darkpan' Examplesson";
     color="grey90";
-    node [style=filled,color=white];
-    label = "Repository";
 
-    "m2" -> "m4";
+    subgraph cluster_sbom_patcher_darkpan {
+        color="grey70";
+        label = "SBOM::Patcher";
+        "field7"; "field8";
+    }
+
+    "Foo::Bar-1.0-security-fix.patch";
   }
 
-  subgraph cluster_distributor {
-    style=filled;
+  subgraph cluster_patcher_apt {
+    label = "Patchy R. 'apt' Examplesson";
+
+    subgraph cluster_sbom_patcher_apt {
+        color="grey70";
+        label = "SBOM::Patcher";
+        "field9"; "field10";
+    }
+
+    "foo-bar-1.0-security-fix.patch";
+  }
+
+
+  subgraph cluster_distributor_cpan {
+    label = "Distributor E. 'cpan' Examplovitsj";
     color="grey90";
-    node [style=filled,color=white];
-    label = "Distributor";
 
-    "m3" -> "m5";
+    subgraph cluster_sbom_distributor_cpan {
+        color="grey70";
+        label = "SBOM::Distributor";
+        "field11"; "field12";
+    }
+
+    "AUTHOR/Foo-Bar-1.0.tar.gz";
   }
 
-  subgraph cluster_patcher {
-    style=filled;
-    color="grey65";
-    node [style=filled,color=white];
-    label = "Patcher";
+  subgraph cluster_distributor_apt {
+    label = "Distributor F. 'apt' Examplovitsj";
 
-    "m4" -> "m7";
+    subgraph cluster_sbom_distributor_apt {
+        color="grey70";
+        label = "SBOM::Distributor";
+        "field13"; "field14";
+    }
+
+    "pkg:apt/ubuntu/libfoobar-perl";
+  }
+
+
+  subgraph cluster_curator_darkpan {
+    label = "Curato D. 'darkpan' Examplez";
+    color="grey90";
+
+    subgraph cluster_sbom_curator_darkpan {
+        color="grey70";
+        label = "SBOM::Curator";
+        "field15"; "field16";
+    }
+
+    "darkpan pin AUTHOR/Foo-Bar-1.0.tar.gz"
   }
 
   subgraph cluster_curator {
-    style=filled;
-    color="grey65";
-    node [style=filled,color=white];
-    label = "Curator";
+    label = "Curato D. 'apt' Examplez";
 
-    "m4" -> "m7";
+    subgraph cluster_sbom_curator_apt {
+        color="grey70";
+        label = "SBOM::Curator";
+        "field17"; "field18";
+    }
+
+    "apt pin libfoobar-perl";
+  }
+
+
+  subgraph cluster_developer {
+    label = "Developer E. Eksempelrud";
+    color="grey90";
+
+    subgraph cluster_sbom_developer {
+        color="grey70";
+        label = "SBOM::Developer";
+        "field19"; "field20";
+    }
+
+    "pkg:apt/ubuntu/libfoobar-perl?repository_url=apt.mycorp.example" -> "My::App";
+    "pkg:cpan/AUTHOR/Foo-Bar?repository_url=cpan.mycorp.example" -> "My::App";
   }
 
   subgraph cluster_reviewer {
-    style=filled;
-    color="grey65";
-    node [style=filled,color=white];
-    label = "Security reviewer / Pentester";
+    // Security reviewer does active pen/sec testing of components
+    label = "Reviewer S. Examplito";
 
-    "m4" -> "m7";
-  }
+    subgraph cluster_sbom_reviewer {
+        color="grey70";
+        label = "SBOM::Reviewer";
+        "field21"; "field22";
+    }
 
-  subgraph cluster_developer {
-    style=filled;
-    color="grey65";
-    node [style=filled,color=white];
-    label = "Developer";
+    "pentest approve libfoobar-perl";
 
-    "m4" -> "m7";
   }
 
   subgraph cluster_tester {
-    style=filled;
-    color="grey65";
-    node [style=filled,color=white];
     label = "Quality Assurance / Tester";
+    color="grey90";
 
-    "m4" -> "m7";
+    subgraph cluster_sbom_tester {
+        color="grey70";
+        label = "SBOM::Tester";
+        "field23"; "field24";
+    }
+
+
+    "prove ./my-app";
   }
 
   subgraph cluster_secops {
-    style=filled;
-    color="grey65";
-    node [style=filled,color=white];
-    label = "Security / Operations";
+    label = "SecOps T. Examplemesser";
+    color="grey90";
 
-    "m4" -> "m7";
+    subgraph cluster_sbom_secops {
+        color="grey70";
+        label = "SBOM::SecOps";
+        "field25"; "field26";
+    }
+
+    "cpansec ./my-app";
   }
 
   subgraph cluster_deployer {
-    style=filled;
-    color="grey65";
-    node [style=filled,color=white];
-    label = "Deployer";
+    label = "Deployer E. Exampledorf";
+    color="grey90";
 
-    "m4" -> "m7";
+    subgraph cluster_sbom_deployer {
+        color="grey70";
+        label = "SBOM::Deployer";
+        "field27"; "field28";
+    }
+
+    "carton install --deployment";
   }
 
   subgraph cluster_consumer {
-    style=filled;
-    color="grey65";
-    node [style=filled,color=white];
-    label = "Consumer";
+    label = "Consumer D. Examplemann";
 
-    "m4" -> "m7";
+    "SBOM::Consumer" [shape=Msquare];
   }
 
   subgraph cluster_auditor {
-    style=filled;
-    color="grey65";
-    node [style=filled,color=white];
-    label = "Auditor";
+    label = "Auditora B. Examplova";
 
-    "m4" -> "m7";
+    "SBOM::Auditor";
   }
 
-  "MyCorp::e" -> "MyCorp::App";
-   "Consumer" [shape=Msquare];
+  // Author
+  "cpan upload" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
+  "git push" -> "git@github.com/author/foo-bar.git";
+
+  // Packager builds and creats native packages of a dist
+  "AUTHOR/Foo-Bar-1.0.tar.gz" -> "libfoobar-perl";
+  "git@github.com/author/foo-bar.git" -> "libfoobar-perl";
+
+  // Patcher may apply fixes to locally distributed native packages
+  "foo-bar-1.0-security-fix.patch" -> "libfoobar-perl";
+  "Foo::Bar-1.0-security-fix.patch" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
+
+  // Curator
+  "apt pin libfoobar-perl" -> "pkg:apt/ubuntu/libfoobar-perl";
+  "darkpan pin AUTHOR/Foo-Bar-1.0.tar.gz" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
+
+  // Distributor
+  "pkg:cpan/AUTHOR/Foo-Bar" -> "pkg:cpan/AUTHOR/Foo-Bar?repository_url=cpan.mycorp.example";
+  "pkg:apt/ubuntu/libfoobar-perl" -> "pkg:apt/ubuntu/libfoobar-perl?repository_url=apt.mycorp.example"
+  
+  // Deployer
+  
+  
+  // Consumer
+  
+  
+  
+  //Auditor
+
 }

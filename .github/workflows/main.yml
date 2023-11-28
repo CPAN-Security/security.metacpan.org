@@ -10,8 +10,8 @@ jobs:
         if: github.event_name == 'push'
         with:
           channel: "#cpan-security"
-          server: "irc.perl.org"
-          port: 6667
+          server: "ssl.irc.perl.org"
+          port: 7062
           nickname: cpansec-gh 
           message: |
             ${{ github.actor }} pushed ${{ github.event.ref }} ${{ github.event.compare }}
@@ -21,8 +21,8 @@ jobs:
         if: github.event_name == 'pull_request'
         with:
           channel: "#cpan-security"
-          server: "irc.perl.org"
-          port: 6667
+          server: "ssl.irc.perl.org"
+          port: 7062
           nickname: cpansec-gh 
           message: |
             ${{ github.actor }} opened PR ${{ github.event.pull_request.html_url }}
@@ -31,8 +31,8 @@ jobs:
         if: github.event_name == 'create' && github.event.ref_type == 'tag'
         with:
           channel: "#cpan-security"
-          server: "irc.perl.org"
-          port: 6667
+          server: "ssl.irc.perl.org"
+          port: 7062
           nickname: cpansec-gh 
           message: |
             ${{ github.actor }} tagged ${{ github.repository }} ${{ github.event.ref }}

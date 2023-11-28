@@ -200,25 +200,34 @@ digraph CPANSupplyChain {
     "SBOM::Auditor";
   }
 
-  // Author
-  "cpan upload" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
+  // Owner – Has the legal owership rights for the dist (e.g a business, or the author)
+
+  // Author – The initial and/or main creator of the dist. Typically works on all aspects of the code, including features, bugfixes, tests and security issues. Has the final say on the original contents of the dist. The Author _can_ be a group of people, though a single point of responsibility is recommended. If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (see below).
   "git push" -> "git@github.com/author/foo-bar.git";
+  "cpan upload" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
 
-  // Packager builds and creats native packages of a dist
-  "AUTHOR/Foo-Bar-1.0.tar.gz" -> "libfoobar-perl";
-  "git@github.com/author/foo-bar.git" -> "libfoobar-perl";
+  // Steward – An type of Author with reduced responsibilities. Ensures the ongoing quality of the code. Typically only works on security issues and bugfixes. Usually doesn't work on new features. Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.
 
-  // Patcher may apply fixes to locally distributed native packages
+  // Custodian – A type of Steward with reduced responsibilities. Cares about the ongoing security of the code. Typically only conserned with updating dependencies or applying security fixes. Works with the Author primarily, and may take responsibility on their behalf when it comes to security concerns.
+
+  // Patcher – Applies security and bugfixes to distributed native packages. Works mainly with the Packager, and is downstream of the Author. This task is only necessary if upstream (Author, Steward or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g. when backporting of fixes are needed due to downstream version pinning).
   "foo-bar-1.0-security-fix.patch" -> "libfoobar-perl";
   "Foo::Bar-1.0-security-fix.patch" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
 
-  // Curator
+  // Packager – Builds and creates native packages from a dist received from upstream, optionally with patches applied from the Patcher. Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
+  "git@github.com/author/foo-bar.git" -> "libfoobar-perl";
+  "AUTHOR/Foo-Bar-1.0.tar.gz" -> "libfoobar-perl";
+
+  // Curator – Selects or pins which releases are suitable for use within an organization. Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bugfixes and security updates.
   "apt pin libfoobar-perl" -> "pkg:apt/ubuntu/libfoobar-perl";
   "darkpan pin AUTHOR/Foo-Bar-1.0.tar.gz" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
 
-  // Distributor
-  "pkg:cpan/AUTHOR/Foo-Bar" -> "pkg:cpan/AUTHOR/Foo-Bar?repository_url=cpan.mycorp.example";
+  // Distributor – Ensures the availability of packages, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
   "pkg:apt/ubuntu/libfoobar-perl" -> "pkg:apt/ubuntu/libfoobar-perl?repository_url=apt.mycorp.example"
+  "pkg:cpan/AUTHOR/Foo-Bar" -> "pkg:cpan/AUTHOR/Foo-Bar?repository_url=cpan.mycorp.example";
+
+  // Developer — Uses packages and components as dependencies in their own project or product. A Developer is considered to be identical to an Author from the downstream perspective.
+  
   
   // Deployer
   
@@ -226,7 +235,6 @@ digraph CPANSupplyChain {
   // Consumer
   
   
-  
-  //Auditor
+  // Auditor
 
 }

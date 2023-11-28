@@ -11,6 +11,7 @@ jobs:
         with:
           channel: "#cpan-security"
           server: "irc.perl.org"
+          port: 6667
           nickname: cpansec-gh 
           message: |
             ${{ github.actor }} pushed ${{ github.event.ref }} ${{ github.event.compare }}
@@ -21,6 +22,7 @@ jobs:
         with:
           channel: "#cpan-security"
           server: "irc.perl.org"
+          port: 6667
           nickname: cpansec-gh 
           message: |
             ${{ github.actor }} opened PR ${{ github.event.pull_request.html_url }}
@@ -30,6 +32,7 @@ jobs:
         with:
           channel: "#cpan-security"
           server: "irc.perl.org"
+          port: 6667
           nickname: cpansec-gh 
           message: |
             ${{ github.actor }} tagged ${{ github.repository }} ${{ github.event.ref }}

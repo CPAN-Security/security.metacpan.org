@@ -1,230 +1,266 @@
 // This file can be generated with https://dreampuf.github.io/GraphvizOnline/
 // or https://sketchviz.com/
 
+// This file is © Salve J. Nilsen <sjn@cpan.org>. Some rights reserved.
+// You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.
+
 digraph CPANSupplyChain {
   node [style=filled,color=white,shape=rect];
   graph [color=grey80,style=filled];
 
   subgraph cluster_author {
-    label = "Author B. Exampleburger";
+    label = "Author";
+
+    "git push";
+    "pause upload";
 
     subgraph cluster_sbom_author {
         color="grey70";
         label = "SBOM::Author";
         "field1"; "field2";
     }
-
-    "git push";
-    "cpan upload";
   }
 
   subgraph cluster_repository {
-    label = "Reposita S. Examplesdottir";
+    label = "Central git repository";
+
+    // From Author
+    "git push" -> "git@github.com/author/foo-bar.git";
 
     subgraph cluster_sbom_repository {
         color="grey70";
         label = "SBOM::Repository";
         "field3"; "field4";
     }
-
-    "git@github.com/author/foo-bar.git";
   }
 
-  subgraph cluster_packager {
-    label = "Packager Q. Exampleton";
+  subgraph cluster_apt_ecosystem {
+    label = "The APT/Debian ecosystem";
+    color="grey90";
 
-    subgraph cluster_sbom_packager {
+    subgraph cluster_packager_apt {
+      label = "Packager (DPKG)";
+      color="grey80";
+
+      // From Repository
+      "libfoobar-perl-1.0.dpkg";
+
+      // From Patcher
+      "libfoobar-perl-1.0-patch.dpkg"
+
+      subgraph cluster_sbom_packager {
         color="grey70";
         label = "SBOM::Packager";
         "field5"; "field6";
+      }
     }
 
-    "libfoobar-perl";
-  }
+    subgraph cluster_curator_apt {
+      label = "Curator (APT)";
+      color="grey80";
 
-  subgraph cluster_patcher_darkpan {
-    label = "Patchy Q. 'darkpan' Examplesson";
+      "apt pin libfoobar-perl";
+
+      subgraph cluster_sbom_curator_apt {
+          color="grey70";
+          label = "SBOM::Curator";
+          "field17"; "field18";
+      }
+    }
+
+    subgraph cluster_patcher_apt {
+      label = "Patcher (DPKG)";
+      color="grey80";
+
+      // From Curator
+      "apt pin libfoobar-perl" -> "foo-bar-1.0-security.patch";
+
+      // From Developer
+      "My::App" -> "foo-bar-1.0-security.patch";
+
+      subgraph cluster_sbom_patcher_apt {
+          color="grey70";
+          label = "SBOM::Patcher";
+          "field9"; "field10";
+      }
+    }
+
+    subgraph cluster_distributor_apt {
+      label = "Distributor (APT)";
+      color="grey80";
+
+      "pkg:apt/ubuntu/libfoobar-perl";
+
+      subgraph cluster_sbom_distributor_apt {
+          color="grey70";
+          label = "SBOM::Distributor";
+          "field13"; "field14";
+      }
+    }
+  } // cluster_apt_ecosystem
+
+  subgraph cluster_cpan_ecosystem {
+    label = "The CPAN Ecosystem";
     color="grey90";
 
-    subgraph cluster_sbom_patcher_darkpan {
+    subgraph cluster_patcher_cpan {
+      label = "Patcher (CPAN)";
+      color="grey80";
+
+      // From Author
+      "My::App" -> "Foo::Bar-1.0-security.patch";
+
+      subgraph cluster_sbom_patcher_cpan {
         color="grey70";
         label = "SBOM::Patcher";
         "field7"; "field8";
+      }
     }
 
-    "Foo::Bar-1.0-security-fix.patch";
-  }
+    subgraph cluster_curator_cpan {
+      label = "Curator (CPAN)";
+      color="grey80";
 
-  subgraph cluster_patcher_apt {
-    label = "Patchy R. 'apt' Examplesson";
+      "darkpan pin AUTHOR/Foo-Bar-1.0.tar.gz"
 
-    subgraph cluster_sbom_patcher_apt {
-        color="grey70";
-        label = "SBOM::Patcher";
-        "field9"; "field10";
+      subgraph cluster_sbom_curator_cpan {
+          color="grey70";
+          label = "SBOM::Curator";
+          "field15"; "field16";
+      }
     }
 
-    "foo-bar-1.0-security-fix.patch";
-  }
+    subgraph cluster_distributor_cpan {
+      label = "Distributor (CPAN)";
+      color="grey80";
 
+      // From Author
+      "pause upload" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
+      "pause upload" -> "pkg:cpan/AUTHOR/Foo-Bar@1.0?repository_url=cpan.mycorp.example";
 
-  subgraph cluster_distributor_cpan {
-    label = "Distributor E. 'cpan' Examplovitsj";
-    color="grey90";
+      // From Patcher
+      "Foo::Bar-1.0-security.patch" -> "AUTHOR/Foo-Bar-1.0-patch.tar.gz";
+      "Foo::Bar-1.0-security.patch" -> "pkg:cpan/AUTHOR/Foo-Bar@1.0-patch?repository_url=cpan.mycorp.example";
 
-    subgraph cluster_sbom_distributor_cpan {
+      subgraph cluster_sbom_distributor_cpan {
         color="grey70";
         label = "SBOM::Distributor";
         "field11"; "field12";
+      }
     }
-
-    "AUTHOR/Foo-Bar-1.0.tar.gz";
-  }
-
-  subgraph cluster_distributor_apt {
-    label = "Distributor F. 'apt' Examplovitsj";
-
-    subgraph cluster_sbom_distributor_apt {
-        color="grey70";
-        label = "SBOM::Distributor";
-        "field13"; "field14";
-    }
-
-    "pkg:apt/ubuntu/libfoobar-perl";
-  }
-
-
-  subgraph cluster_curator_darkpan {
-    label = "Curato D. 'darkpan' Examplez";
-    color="grey90";
-
-    subgraph cluster_sbom_curator_darkpan {
-        color="grey70";
-        label = "SBOM::Curator";
-        "field15"; "field16";
-    }
-
-    "darkpan pin AUTHOR/Foo-Bar-1.0.tar.gz"
-  }
-
-  subgraph cluster_curator {
-    label = "Curato D. 'apt' Examplez";
-
-    subgraph cluster_sbom_curator_apt {
-        color="grey70";
-        label = "SBOM::Curator";
-        "field17"; "field18";
-    }
-
-    "apt pin libfoobar-perl";
-  }
-
+  } // cluster_cpan_ecosystem
 
   subgraph cluster_developer {
-    label = "Developer E. Eksempelrud";
-    color="grey90";
+    label = "Developer";
 
-    subgraph cluster_sbom_developer {
+    // From local APT distributor
+    "pkg:apt/ubuntu/libfoobar-perl?repository_url=apt.mycorp.example" -> "My::App";
+
+    // From local CPAN distributor
+    "pkg:cpan/AUTHOR/Foo-Bar?repository_url=cpan.mycorp.example" -> "My::App";
+
+    subgraph cluster_developer_sbom {
         color="grey70";
         label = "SBOM::Developer";
         "field19"; "field20";
     }
-
-    "pkg:apt/ubuntu/libfoobar-perl?repository_url=apt.mycorp.example" -> "My::App";
-    "pkg:cpan/AUTHOR/Foo-Bar?repository_url=cpan.mycorp.example" -> "My::App";
   }
 
   subgraph cluster_reviewer {
     // Security reviewer does active pen/sec testing of components
-    label = "Reviewer S. Examplito";
+    label = "Reviewer";
 
-    subgraph cluster_sbom_reviewer {
+    "pentest approve my-app";
+
+    subgraph cluster_reviewer_sbom {
         color="grey70";
         label = "SBOM::Reviewer";
         "field21"; "field22";
     }
-
-    "pentest approve libfoobar-perl";
-
   }
 
   subgraph cluster_tester {
     label = "Quality Assurance / Tester";
-    color="grey90";
 
-    subgraph cluster_sbom_tester {
+    "prove ./my-app";
+
+    subgraph cluster_tester_sbom {
         color="grey70";
         label = "SBOM::Tester";
         "field23"; "field24";
     }
-
-
-    "prove ./my-app";
   }
 
   subgraph cluster_secops {
-    label = "SecOps T. Examplemesser";
-    color="grey90";
+    label = "SecOps";
 
-    subgraph cluster_sbom_secops {
+    "cpan-audit ./my-app";
+
+    subgraph cluster_secops_sbom {
         color="grey70";
         label = "SBOM::SecOps";
         "field25"; "field26";
     }
-
-    "cpansec ./my-app";
   }
 
   subgraph cluster_deployer {
-    label = "Deployer E. Exampledorf";
-    color="grey90";
+    label = "Deployer";
 
-    subgraph cluster_sbom_deployer {
+    "carton install --deployment ./my-app";
+
+    subgraph cluster_deployer_sbom {
         color="grey70";
         label = "SBOM::Deployer";
         "field27"; "field28";
     }
-
-    "carton install --deployment";
   }
 
   subgraph cluster_consumer {
-    label = "Consumer D. Examplemann";
+    label = "Consumer";
 
-    "SBOM::Consumer" [shape=Msquare];
+    subgraph cluster_consumer_sbom {
+        color="grey70";
+        label = "SBOM::Consumer";
+        "field29"; "field30";
+    }
   }
 
   subgraph cluster_auditor {
-    label = "Auditora B. Examplova";
+    label = "Auditor";
 
-    "SBOM::Auditor";
+    subgraph cluster_auditor_sbom {
+        color="grey70";
+        label = "SBOM::Auditor";
+        "field31"; "field32";
+    }
   }
+
 
   // Owner – Has the legal owership rights for the dist (e.g a business, or the author)
 
   // Author – The initial and/or main creator of the dist. Typically works on all aspects of the code, including features, bugfixes, tests and security issues. Has the final say on the original contents of the dist. The Author _can_ be a group of people, though a single point of responsibility is recommended. If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (see below).
   "git push" -> "git@github.com/author/foo-bar.git";
-  "cpan upload" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
+  "pause upload" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
 
   // Steward – An type of Author with reduced responsibilities. Ensures the ongoing quality of the code. Typically only works on security issues and bugfixes. Usually doesn't work on new features. Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.
 
   // Custodian – A type of Steward with reduced responsibilities. Cares about the ongoing security of the code. Typically only conserned with updating dependencies or applying security fixes. Works with the Author primarily, and may take responsibility on their behalf when it comes to security concerns.
 
   // Patcher – Applies security and bugfixes to distributed native packages. Works mainly with the Packager, and is downstream of the Author. This task is only necessary if upstream (Author, Steward or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g. when backporting of fixes are needed due to downstream version pinning).
-  "foo-bar-1.0-security-fix.patch" -> "libfoobar-perl";
-  "Foo::Bar-1.0-security-fix.patch" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
+  "foo-bar-1.0-security.patch" -> "libfoobar-perl-1.0-patch.dpkg";
+  "Foo::Bar-1.0-security.patch" -> "AUTHOR/Foo-Bar-1.0-patch.tar.gz";
 
   // Packager – Builds and creates native packages from a dist received from upstream, optionally with patches applied from the Patcher. Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
-  "git@github.com/author/foo-bar.git" -> "libfoobar-perl";
-  "AUTHOR/Foo-Bar-1.0.tar.gz" -> "libfoobar-perl";
+  "AUTHOR/Foo-Bar-1.0.tar.gz" -> "libfoobar-perl-1.0.dpkg";
+  "git@github.com/author/foo-bar.git" -> "libfoobar-perl-1.0.dpkg";
 
   // Curator – Selects or pins which releases are suitable for use within an organization. Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bugfixes and security updates.
   "apt pin libfoobar-perl" -> "pkg:apt/ubuntu/libfoobar-perl";
   "darkpan pin AUTHOR/Foo-Bar-1.0.tar.gz" -> "AUTHOR/Foo-Bar-1.0.tar.gz";
 
   // Distributor – Ensures the availability of packages, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
-  "pkg:apt/ubuntu/libfoobar-perl" -> "pkg:apt/ubuntu/libfoobar-perl?repository_url=apt.mycorp.example"
   "pkg:cpan/AUTHOR/Foo-Bar" -> "pkg:cpan/AUTHOR/Foo-Bar?repository_url=cpan.mycorp.example";
+  "pkg:apt/ubuntu/libfoobar-perl" -> "pkg:apt/ubuntu/libfoobar-perl?repository_url=apt.mycorp.example"
 
   // Developer — Uses packages and components as dependencies in their own project or product. A Developer is considered to be identical to an Author from the downstream perspective.
   
@@ -238,3 +274,5 @@ digraph CPANSupplyChain {
   // Auditor
 
 }
+
+// vim: ts=2 et

@@ -30,7 +30,7 @@ not to be shared with anyone besides;
    - The authors or security team of affected packages
    - The sender and recipients of the original notification email 
 
-   Information should be kept [[TLP:RED]](https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage)
+   Information should be kept [[TLP:RED]](https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage) and shared, with the groups listed above, on a need to know basis only.
 
 2. All discussion about the pre-release information is to be handled through
 private channels such as the cpan-security@perl.org mailing list. This

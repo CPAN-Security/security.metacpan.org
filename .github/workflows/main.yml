@@ -13,10 +13,9 @@ jobs:
           server: "ssl.irc.perl.org"
           port: 7062
           nickname: cpansec-gh 
-          message: |
-            ${{ github.actor }} pushed ${{ github.event.ref }} ${{ github.event.compare }}
+          message: ${{ github.actor }} pushed ${{ github.event.ref }} ${{ github.event.compare }}
       - name: irc pull request
-        uses: rectalogic/notify-irc@v1
+       uses: rectalogic/notify-irc@v1
         if: github.event_name == 'pull_request'
         with:
           channel: "#cpan-security"

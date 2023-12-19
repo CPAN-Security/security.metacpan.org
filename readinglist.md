@@ -20,6 +20,7 @@
 
 ### Useful articles and papers
 
+* [Software Suppliers Playbook: SBOM Production and Provision](https://www.ntia.gov/files/ntia/publications/software_suppliers_sbom_production_and_provision_-_final.pdf)
 * [Managing Open Source and SBOMs](https://resilientcyber.substack.com/p/managing-open-source-and-sboms), Chris Huges 2023
 * [Understanding OWASP’s Bill of Material Maturity Model: Not all SBOMs are created equal](https://www.csoonline.com/article/1246904/not-all-sboms-are-created-equal-understanding-owasps-bill-of-material-maturity-model.html), Chris Huges 2023
 

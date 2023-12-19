@@ -9,7 +9,6 @@
 ### Project documentation
 
 * (CDX) [CycloneDX Use Cases](https://cyclonedx.org/use-cases/)
-* (CDX) []()
 
 ### Related regulations, etc.
 
@@ -19,7 +18,19 @@
 * (EU) [Cyber Resilience Act](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-proposal-for-cybersecurity-regulation) (CRA)
 * (EU) [Product Liability Directive](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive) (PLD)
 
-### Relevant articles
+### Useful articles and papers
 
 * [Managing Open Source and SBOMs](https://resilientcyber.substack.com/p/managing-open-source-and-sboms), Chris Huges 2023
+* [Understanding OWASP’s Bill of Material Maturity Model: Not all SBOMs are created equal](https://www.csoonline.com/article/1246904/not-all-sboms-are-created-equal-understanding-owasps-bill-of-material-maturity-model.html), Chris Huges 2023
 
+
+## Software identification
+
+* (CPAN) [URI::PackageURL](https://github.com/giterlizzi/perl-URI-PackageURL)
+* [PURL Specification](https://github.com/package-url/purl-spec)
+* (CPAN) [CPAN::DistnameInfo](https://github.com/Perl-Toolchain-Gang/CPAN-DistnameInfo)
+
+
+### Useful articles and papers
+
+* (NIST) [Software Identification Ecosystem Option Analysis](https://assets.lsdsoftware.com/read-aloud/page-scripts/pdf-upload.html)

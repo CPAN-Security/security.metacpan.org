@@ -19,4 +19,4 @@ This includes improving supply chain security, making CPAN become a more secure 
 * [Projects](https://github.com/orgs/CPAN-Security/projects)
 * [Group charter](docs/charter.md) (Work in progress)
 * [Presentations](presentations/) about us and our work
-* [Reading list](readinglist.md)
+* [Reading list](docs/readinglist.md) (Work in progress)

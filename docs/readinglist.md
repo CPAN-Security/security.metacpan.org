@@ -1,3 +1,8 @@
+---
+layout: page
+title: CPANSec Recommended Reading List
+toc: true
+---
 # Reading list
 
 

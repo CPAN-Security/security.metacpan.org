@@ -17,3 +17,8 @@
     * Section 4
 * (EU) [NIS2]()
 * (EU) [CRA]()
+
+### Relevant articles
+
+* [Managing Open Source and SBOMs](https://resilientcyber.substack.com/p/managing-open-source-and-sboms), Chris Huges 2023
+

@@ -15,8 +15,9 @@
 
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
     * Section 4
-* (EU) [NIS2]()
-* (EU) [CRA]()
+* (EU) [Network and Information Systems directive II](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive) (NIS2)
+* (EU) [Cyber Resilience Act](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-proposal-for-cybersecurity-regulation) (CRA)
+* (EU) [Product Liability Directive](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive) (PLD)
 
 ### Relevant articles
 

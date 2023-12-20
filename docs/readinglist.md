@@ -1,10 +1,10 @@
 ---
 layout: page
-title: CPANSec Recommended Reading List
+title: Reading List
 toc: true
 ---
-# Reading list
 
+This is The CPAN Security Working Group recommended reading list. If you have any additions or improvements, please [open an issue](https://github.com/CPAN-Security/security.metacpan.org/issues)!
 
 ## Software Bills of Materials (SBOM)
 
@@ -32,8 +32,8 @@ toc: true
 
 ## Software identification
 
-* (CPAN) [URI::PackageURL](https://github.com/giterlizzi/perl-URI-PackageURL)
 * [PURL Specification](https://github.com/package-url/purl-spec)
+* (CPAN) [URI::PackageURL](https://github.com/giterlizzi/perl-URI-PackageURL)
 * (CPAN) [CPAN::DistnameInfo](https://github.com/Perl-Toolchain-Gang/CPAN-DistnameInfo)
 
 

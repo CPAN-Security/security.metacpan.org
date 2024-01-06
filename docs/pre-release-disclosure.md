@@ -4,12 +4,11 @@ title: Pre-Release Disclosure
 toc: true
 ---
 
-**Document status:** ⚠️  DRAFT
------------------------------
+Version: 1.0
 
 ## Purpose
 
-The CPAN Security Working Group (CPAN-SEC) receives and handles reports of
+The CPAN Security Working Group (CPAN-Sec) receives and handles reports of
 undisclosed vulnerabilities to be able to assist the community in preparing
 patches, coordinating with authors and reporters, and preparing public
 announcements.
@@ -20,8 +19,8 @@ this information prior to the public announcement date of the vulnerability.
 
 ## Disclosure Agreement
 
-Members on the cpan-security@perl.org mailing list need to agree to the
-following:
+Members need to agree to the following before getting access to information
+about undisclosed vulnerabilities through private channels:
 
 1. The information that you obtain as part of the pre-release notification is
 not to be shared with anyone besides;
@@ -47,8 +46,9 @@ vulnerabilities is NOT permitted to any system during the embargo, with the
 exception of CRITICAL vulnerabilities that threaten the integrity of PAUSE, CPAN
 or MetaCPAN.
 
-Members of the cpan-security@perl.org mailing list need to accept these terms by
-replying to this agreement. (Preference “I acknowledge this document”).
+Members of CPAN-Sec that needs access to pre-release disclosure information
+(i.e. members of the cpan-security@perl.org mailing list, VINCE/CC portal, or
+similar) need to accept these terms by adding their name to "Signatories" below.
 
 The CPAN Security Working Group <[cpan-security@perl.org](cpan-security@perl.org)>
 

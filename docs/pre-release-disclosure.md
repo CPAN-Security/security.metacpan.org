@@ -56,8 +56,7 @@ The CPAN Security Working Group <[cpan-security@perl.org](cpan-security@perl.org
 
 ## Signatories
 
-* [E. X. Ampleburger](https://github.com/example)
-* …
+* [Stig P](https://github.com/stigtsp)
 
 ------------------
 

@@ -57,6 +57,7 @@ The CPAN Security Working Group <[cpan-security@perl.org](cpan-security@perl.org
 ## Signatories
 
 * [Stig P](https://github.com/stigtsp)
+* [timlegge](https://github.com/timlegge)
 
 ------------------
 

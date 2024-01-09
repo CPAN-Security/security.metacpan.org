@@ -60,6 +60,7 @@ The CPAN Security Working Group <[cpan-security@perl.org](cpan-security@perl.org
 * [timlegge](https://github.com/timlegge)
 * [sjn](https://github.com/sjn)
 * [oalders](https://github.com/oalders)
+* [garu](https://github.com/garu)
 
 ------------------
 

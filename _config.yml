@@ -7,8 +7,19 @@ baseurl: ""
 url: "https://security.metacpan.org"
 domain: security.cpan.org
 
+header_pages:
+  - /docs/report
+  - /docs/pre-release-disclosure
+  - /docs/charter
+  - /presentations/
+  - /docs/minutes/
+  - /docs/readinglist
+
 # Build settings
 theme: minima
+
+minima:
+  skin: auto
 
 #plugins:
 #  - jekyll-feed

@@ -8,7 +8,7 @@ url: "https://security.metacpan.org"
 domain: security.cpan.org
 
 header_pages:
-  - /docs/report
+  - /docs/report.md
   - /docs/pre-release-disclosure
   - /docs/charter
   - /presentations/

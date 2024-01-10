@@ -10,10 +10,8 @@ domain: security.cpan.org
 header_pages:
   - docs/report.md
   - docs/pre-release-disclosure.md
-  - docs/charter
+  - docs/README.md
   - presentations/README.md
-  - docs/minutes/
-  - docs/readinglist
 
 # Build settings
 theme: minima

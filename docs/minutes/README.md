@@ -4,6 +4,6 @@ title: Minutes
 permalink: /docs/minutes/
 ---
 
-This directory contains minutes from CPAN-Sec WG meetings.
+CPAN Security Working Group meeting minutes.
 
 * [2024-01-06](cpansec-minutes-2024-01-06.md)

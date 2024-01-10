@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: /docs/minutes/
 ---
 # Minutes 2024-01-06
 

@@ -8,12 +8,12 @@ url: "https://security.metacpan.org"
 domain: security.cpan.org
 
 header_pages:
-  - /docs/report.md
+  - docs/report.md
   - docs/pre-release-disclosure.md
-  - /docs/charter
-  - /presentations/README.md
-  - /docs/minutes/
-  - /docs/readinglist
+  - docs/charter
+  - presentations/README.md
+  - docs/minutes/
+  - docs/readinglist
 
 # Build settings
 theme: minima

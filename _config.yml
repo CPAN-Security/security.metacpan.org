@@ -9,9 +9,9 @@ domain: security.cpan.org
 
 header_pages:
   - /docs/report.md
-  - /docs/pre-release-disclosure
+  - docs/pre-release-disclosure.md
   - /docs/charter
-  - /presentations/
+  - /presentations/README.md
   - /docs/minutes/
   - /docs/readinglist
 

@@ -1,3 +1,7 @@
+---
+layout: page
+permalink: /docs/minutes/
+---
 # Minutes 2024-01-06
 
 Meeting was on Saturday January 6th, 2024, at 12:00 UTC.

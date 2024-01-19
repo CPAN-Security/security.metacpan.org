@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: CPAN Security WG Charter
+description: CPAN Security Working Group Charter
 toc: true
 ---
 
@@ -20,6 +21,11 @@ Discussion on IRC: [ircs://irc.perl.org/#cpan-security](ircs://irc.perl.org/#cpa
 
 This charter lays out the background, intentions, mandate, scope, means and methods for the CPAN Security Working Group (CPAN-SEC, until a name is decided).
 This document also explicitly acknowledges a few related organizations and communitites, and spell out responsibility demarcation lines between these, if any.
+
+
+## Name
+
+The full name of the group is **CPAN Security Working Group**. Valid abbreviations are **CPAN Security WG**, and **CPAN-SEC**.
 
 
 ## Background
@@ -238,4 +244,4 @@ From left to right,
 
 ## Version
 
-v0.6.6
+v0.6.7

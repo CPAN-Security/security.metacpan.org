@@ -10,7 +10,7 @@ This is The CPAN Security Working Group recommended reading list. If you have an
 
 * [The Minimum Elements For a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf)
 * [Securing the Software Supply Chain: Recommended Practices for Managing OSS and SBOMs](https://media.defense.gov/2023/Dec/11/2003355557/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN%20RECOMMENDED%20PRACTICES%20FOR%20MANAGING%20OPEN%20SOURCE%20SOFTWARE%20AND%20SOFTWARE%20BILL%20OF%20MATERIALS.PDF)
-* [Survery of Existing SBOM Formats and Standards (20191025)](https://www.ntia.gov/files/ntia/publications/ntia_sbom_formats_and_standards_whitepaper_-_version_20191025.pdf)
+* [Survery of Existing SBOM Formats and Standards (Version 2021)](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf)
 
 ### Project documentation
 

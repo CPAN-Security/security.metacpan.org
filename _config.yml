@@ -17,10 +17,14 @@ header_pages:
 theme: minima
 
 minima:
-  skin: auto
+  skin: classic
 
-#plugins:
+plugins:
+  - jekyll-seo-tag
 #  - jekyll-feed
+
+social_links:
+  - { platform: github,     user_url: "https://github.com/CPAN-Security" }
 
 # Exclude from processing.
 # The following items will not be processed, by default.

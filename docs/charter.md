@@ -1,19 +1,18 @@
 ﻿---
 layout: page
-title: CPAN Security WG Charter
+title: Charter
+description: CPAN Security WG Charter
 toc: true
 ---
 
-**IMPORTANT ⚠️ IMPORTANT ⚠️ IMPORTANT**
------------------
+**Document status:** ⚠️  DRAFT
+---------------------------------
 
-What you see here is a **proposal** for the charter of a CPAN Security Working Group (_CPAN-SEC_), to be set up in 2023. Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
+What you see here is a **DRAFT** for the charter of a CPAN Security Working Group (_CPAN-SEC_), to be set up in 2023. Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
 
 Discussion on IRC: [ircs://irc.perl.org/#cpan-security](ircs://irc.perl.org/#cpan-security)
 
-**IMPORTANT ⚠️ IMPORTANT ⚠️ IMPORTANT**
-
-------------------
+---------------------------------
 
 
 ## Purpose
@@ -33,7 +32,7 @@ The group was established at the Perl Toolchain Summit 2023 in Lyon, France, wit
 - Supply-chain security
 - etc.
 
-This list has been subject for discussions and revisioning, and the resulting tasks and topics are layed out under the subject lines below.
+This list has been subject for discussions and revisioning, and the resulting tasks and topics are laid out under the subject lines below.
 
 
 ## Goals and Intentions
@@ -77,7 +76,7 @@ The _CPAN-SEC_ concerns itself with a limited domain:
   - Perl Core modules managed by &lt;perl5-porters@perl.org&gt;
 - Supply-chain issues that are found outside of CPAN, for example:
   - Downstream security issues related to repackaging or patching of CPAN distros by third party packaging system (e.g. Debian's apt, Redhat's rpm, etc).
-- Third party libraries, files and services linked to or used by CPAN distributions;
+- Third party libraries, files and services linked to or used by CPAN distributions (unless the library is packaged with the affected CPAN distribution);
 - ~~CPAN distributions that function as shims (wrappers) for non-CPAN projects or resources.~~ Examples:
   - ~~CPAN Distributions that are pure wrappers around compiled libraries (e.g. XS modules wrapping `libxml2` or `sqlite3`)~~
     - **Rationale**: XS modules are _in scope_ until tooling for warning about upstream vulnerabilities is in place. (sjn)
@@ -104,7 +103,7 @@ Our goal is to facilitate in-good-faith productive and security-focused discussi
 ### Relations with commercial, governmental and other non-volunteering entities
 
 _CPAN-SEC_ is a forum to assist in resolving technical issues.
-It should be regarded as a contact point for technical staffo.
+It should be regarded as a contact point for technical staff.
 The _CPAN-SEC_ is not directly associated with any third party and does not do contract work for third parties, nor provides non-technical assistance.
 
 If you represent the management or legal department at your business and/or need to address non-technical issues, we probably cannot help you.
@@ -129,9 +128,9 @@ In addition, the _CPAN-SEC_ may ask for formal mandates from _delegating authori
 
 Public statements of support should not be considered more than an acknowledgment of intent, and as non-binding promises to support each other in good faith to resolve relevant security issues.
 
-Formal mandates, on the other hand are intended to establish clear lines of responsibility and accountability, and with this function as meaningful steps to establish legitimacy.
+Formal mandates, on the other hand are intended to establish clear lines of responsibility and accountability, and with this, function as meaningful steps to establish legitimacy.
 
-If the _CPAN-SEC_ asks for a formal mandate from a delegating authority (DA), the _CPAN-SEC_ members acknowledge that delegating authority may withdraw their mandate at any time if they decide the _CPAN-SEC_ is incapable or unwilling to fulfil its mandate, or in case the CPAN-SEC decides to delegate any recieved responsibilities to a third party.
+If the _CPAN-SEC_ asks for a formal mandate from a delegating authority (DA), the _CPAN-SEC_ members acknowledge that delegating authority may withdraw their mandate at any time if they decide the _CPAN-SEC_ is incapable or unwilling to fulfil its mandate, or in case the CPAN-SEC decides to delegate any received responsibilities to a third party.
 
 In the unfortunate situation when a delegating authority is disbanded, becomes unresponsive, or transfers/loses its autority to delegate responsibilities to us, the CPAN-SEC members may ask for a formal mandate from a replacing authority.
 

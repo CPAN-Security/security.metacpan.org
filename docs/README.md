@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Documents & Guides
+title: Documents
 permalink: /docs/
 ---
 
-CPAN Security WG documents and guides:
+Documents relevant to the CPAN Security Working Group.
 
-* [CPAN Security Working Group Charter](charter.html)
-* [Pre-release Disclosure Statement](pre-release-disclosure.html)
-* [CPAN Risk Assessment Guide](cpan-risk-assessment-guide.html)
+* [Charter](charter.md)
+* [Pre-release Disclosure Agreement](pre-release-disclosure.md)
+* [Reading list](readinglist.md)
+* [Meeting minutes](minutes/)

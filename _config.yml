@@ -5,7 +5,7 @@ description: >-
   CPAN Security Working Group (CPAN-SEC)
 baseurl: ""
 url: "https://security.metacpan.org"
-domain: security.cpan.org
+domain: security.metacpan.org
 
 header_pages:
   - docs/report.md

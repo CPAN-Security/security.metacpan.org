@@ -5,13 +5,26 @@ description: >-
   CPAN Security Working Group (CPAN-SEC)
 baseurl: ""
 url: "https://security.metacpan.org"
-domain: security.cpan.org
+domain: security.metacpan.org
+
+header_pages:
+  - docs/report.md
+  - docs/pre-release-disclosure.md
+  - docs/README.md
+  - presentations/README.md
 
 # Build settings
 theme: minima
 
-#plugins:
+minima:
+  skin: classic
+
+plugins:
+  - jekyll-seo-tag
 #  - jekyll-feed
+
+social_links:
+  - { platform: github,     user_url: "https://github.com/CPAN-Security" }
 
 # Exclude from processing.
 # The following items will not be processed, by default.

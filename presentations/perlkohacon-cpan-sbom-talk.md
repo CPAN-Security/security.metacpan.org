@@ -1,5 +1,5 @@
 [comment]: # (Compile this presentation with the command below)
-[comment]: # (mdslides tprc2023-sbom-talk.md --include ../media)
+[comment]: # (mdslides perlkohacon-cpan-sbom-talk.md --include ../media)
 [comment]: # (...or by running the Makefile with "make")
 [comment]: # (mdslides can be installed from https://github.com/dadoomer/markdown-slides/)
 [comment]: # (diagram was made on https://dreampuf.github.io/GraphvizOnline/ using media/CPAN-deps-1.dot as input)
@@ -54,6 +54,11 @@ Imagine an announcement...
 * [Solarwinds](https://en.wikipedia.org/wiki/2020_United_States_federal_government_data_breach) – US Gov't data breach, March 2020
 * [Log4Shell](https://en.wikipedia.org/wiki/Log4Shell) – Java logging library, December 2021
 
+Note:
+
+* These are the large well-known ones in recent years.
+* There are more, and many that only affect a few of us.
+
 
 [comment]: # (!!! data-auto-animate)
 
@@ -107,12 +112,12 @@ Note:
     * Issued May 12, 2021
     * All federal agencies, businesses or contractors that work with or sell to the US federal government
 * NIS2
-    * Software used by EU institutions that manage **critical infrastructure**
     * Directive (EU) 2022/2555 (NIS2)
+    * Software used by EU institutions that manage **critical infrastructure**
     * Must be implemented by 17 October 2024
 * CRA
-    * CE certification of software used in and with **internet-connected devices**
     * Cyber Resilience Act
+    * CE certification of software used in and with **internet-connected devices**
     * Must be implemented by July 2025 (estimated)
 
 
@@ -149,6 +154,9 @@ SBOMs are for keeping track of important information across dependencies
 - OWASP CycloneDX
 - Software Package Data Exchange (SPDX)
 
+- CPE
+- SWID
+- PackageURL
 
 [comment]: # (!!!)
 

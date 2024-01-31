@@ -56,3 +56,79 @@
 SBOM communities MUST start educating users about open source ecosystems too
 
 Ecosystem developers don't see the point in working on this
+
+
+## How are transitive dependencies introduced?
+
+* Include after publish (Download)
+* Embed before publish
+* Depend (Use & resolve)
+* Patch (Modify)
+* Assumed present (Implied)
+
+## Why are dependencies introduced?
+
+* Use (add functionality or features)
+* Extend (add and modify functionality)
+* Transpose to a new language ecosystem (FFI)
+* Build, compile, link
+* Test, check or verify
+* Package, re-package, patch
+* Sign
+* Document, translate
+* Manage, support with Dev tasks
+* Publish
+
+## What can depended upon?
+
+* Code
+* Services (Cron, NTP, SMTP)
+* Runtime environments (container, virtual machines)
+* System resources (ram, disk, inodes, threads, processes, hw devices)
+
+# Presentation
+
+## Cover Page / Intro
+## About me
+## Why ask if "SBOMs can become a first class citizen in Open Source Ecosystems?"
+Because...
+Software composition analysis
+Vulnerability detection
+...becomes easier with up-to-date authoritative information
+## Example: CPAN
+## CPAN's upstreams
+## The river of CPAN
+## CPAN's downstreams
+## Who manages this?
+## Open Source Volunteers
+Not a "third party" but a SECOND party!
+What agreement? Check your open source license!
+They are, in fact, your unpaid colleagues
+## Reactions
+"Freeloader says what?"
+"What's in it for me?"
+"This is not my problem"
+"We already keep track of this, why do we need another way?"
+"Can this be used for creating reproducible builds?"
+## What do these volunteers need?
+Motivation, Engagement, O(fun)
+Context and reasons
+Something that is a joy to work with
+Targeted documentation
+If it's not fun it interesting: Money
+## An Open Source perspective
+Please do not waste Volunteer time
+Please do not assume they will come just because you made something
+## An Ecosystem perspective
+Please do not take them for granted
+## Standards
+
+## Interoperability
+Universal package identification - YES
+Universal dependency resolution - YES
+SBOM standards convergence - NOW
+## Coordination
+
+## Money
+
+## Can SBOM become a first class citizen in Open Source Ecosystems?

@@ -1,7 +1,6 @@
+# A Simplified Open Source Supply Chain
+
 ```mermaid
----
-title: A Simplified Open Source Supply Chain
----
 stateDiagram-v2
     state "Author\nCustodian\nSteward" as author
     state "Distributor — Repository" as distributor_repo 

@@ -21,12 +21,12 @@ stateDiagram-v2
     	[*] --> author
     }
 
+    author --> ecosystem_repo
+    author --> ecosystem_lang
+
 	note right of ecosystem_author
 		Open Source Developer
 	end note
-
-    author --> ecosystem_repo
-    author --> ecosystem_lang
 
     state "Language Ecosystem" as ecosystem_lang {
     	[*] --> distributor_lang

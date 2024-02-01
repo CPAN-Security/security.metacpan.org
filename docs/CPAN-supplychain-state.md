@@ -2,109 +2,70 @@
 ---
 title: The CPAN Supply Chain
 ---
-flowchart TD
-    subgraph ecosystem_upstream [Upstream Distributors]
-        upstream_lang_distributor
-        upstream_repo_distributor
-        upstream_package_distributor
-    end
+stateDiagram-v2
+    state "Author\nCustodian" as author
+    state "Distributor — Repository" as distributor_repo 
+    state "Distributor — Language" as distributor_lang 
+    state "Distributor — Package" as distributor_package
+    state "Patcher" as patcher
+    state "Packager" as packager
+    state "Curator" as curator
+    state "Developer" as developer
+    state "Deployer" as deployer
+    state "Scanner" as scanner
+    state "Consumer" as consumer
+    state "Auditor" as auditor
 
-    subgraph ecosystem_author [Author Ecosystem]
-        author
-    end
+	[*] --> ecosystem_author
 
-    subgraph ecosystem_lang [Language Ecosystem]
-        distributor_lang
-    end
+	state "Author Ecosystem" as ecosystem_author {
+    	[*] --> author
+    }
 
-    subgraph ecosystem_repo [Repository Ecosystem]
-        distributor_repo
-    end
+    author --> ecosystem_repo
+    author --> ecosystem_lang
 
-    subgraph ecosystem_package [Package Ecosystem]
-        patcher
-        packager
-        curator
-        distributor_package
-    end
+    state "Language Ecosystem" as ecosystem_lang {
+    	[*] --> distributor_lang
+    }
 
-    subgraph ecosystem_developer [Developer Ecosystem]
-        developer
-    end
+	distributor_lang --> ecosystem_developer
+	distributor_lang --> ecosystem_package
 
-    subgraph ecosystem_production [Production Ecosystem]
-        deployer
-        scanner
-        consumer
-        auditor
-    end
+	state "Repository Ecosystem" as ecosystem_repo {
+		[*] --> distributor_repo
+	}
 
-    subgraph ecosystem_downstream [Downstream Distributors]
-        downstream_lang_distributor
-        downstream_repo_distributor
-        downstream_package_distributor
-    end
+   	distributor_repo --> ecosystem_package
+    distributor_repo --> ecosystem_developer
 
-    subgraph author [Author\nCustodian]
-    end
+	state "Package Ecosystem" as ecosystem_package {
+		[*] --> patcher
+		[*] --> packager
+    	patcher --> packager
+    	packager --> curator
+    	packager --> distributor_package
+    	curator --> distributor_package
+	}
 
-    subgraph distributor_repo [Distributor – Repository]
-    end
+    distributor_package --> ecosystem_developer
 
-    subgraph distributor_lang [Distributor — Language]
-    end
+	state "Developer Ecosystem" as ecosystem_developer {
+		[*] --> developer
+	}
 
-    subgraph distributor_package [Distributor — Package]
-    end
+    developer --> ecosystem_prod
 
-    subgraph patcher [Patcher]
-    end
+	state "Production Ecosystem" as ecosystem_prod {
+		[*] --> deployer
+    	deployer --> scanner
+    	deployer --> consumer
+    	deployer --> auditor
 
-    subgraph packager [Packager]
-    end
+	}
 
-    subgraph curator [Curator]
-    end
+    developer --> [*]
 
-    subgraph developer [Developer]
-    end
-
-    subgraph deployer [Deployer]
-    end
-
-    subgraph scanner [Scanner]
-    end
-
-    subgraph consumer [Consumer]
-    end
-
-    subgraph auditor [Auditor]
-    end
-
-    upstream_lang_distributor --> author
-    upstream_repo_distributor --> author
-    upstream_package_distributor --> author
-    author -->|upload| distributor_lang
-    distributor_lang -->|download| developer
-    distributor_lang -->|download| packager
-    distributor_lang -->|download| patcher
-    patcher --> packager
-    packager --> distributor_package
-    packager --> curator
-    curator --> distributor_package
-    developer --> deployer
-    developer --> downstream_repo_distributor
-    developer --> downstream_lang_distributor
-    developer --> downstream_package_distributor
-    distributor_package -->|package install| developer
-    deployer -->|pentest| scanner
-    deployer -->|use| consumer
-    deployer -->|verify| auditor
-
-    author <-->|pull\npush| distributor_repo
-    distributor_repo -->|pull| packager
-    distributor_repo <-->|pull\npush| patcher
-    distributor_repo <-->|pull\npush| developer
 
 ```
 

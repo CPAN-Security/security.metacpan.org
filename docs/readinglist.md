@@ -16,6 +16,7 @@ This is The CPAN Security Working Group recommended reading list. If you have an
 ### Project documentation
 
 * (CDX) [CycloneDX Use Cases](https://cyclonedx.org/use-cases/)
+* (SPDX) [A Practical Guide to SPDX](https://fossa.com/learn/spdx)
 
 ### Related regulations, etc.
 

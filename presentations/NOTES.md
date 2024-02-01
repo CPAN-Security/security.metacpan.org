@@ -37,3 +37,98 @@
     - While having SBOMs for documenting dependency resolution, there is also the other side of this coin – way to specify dependencies! Many ecosystems are myopic in this regard too.
         - Using Package URLs for specifying service dependencies might be a step forward here? E.g. <pkg:service/ntp>, <pkg:service/smtp> can be enough for an OS provider to do service discovery and communicate it's resolution for use in a software build or deployment SBOM
 
+
+## Needed
+
+1. A plan for converging and eventually merging SBOM standards
+    1.  ...or at minimum, a common standard taxonomy, to make interoperability easier.
+    2.  ...including instructions on what fields are intended to be used for, and how to disambiguate between them when there is medt for it
+2. Open Source Software lifecycles need to be featured much more prominently, do that businesses that are unfamiliar with it (or suffer from a limited business-centric perspective of it) may get a clear indication of what the need to learn function as constructive participants when interacting with open source developers.
+    1. Ref. CycloneDX' "Authoritative guide to SBOM" 
+3. Open source components are not "third party components" in the traditional "product-centric" sense. Instead, they need to be treated and communicated as living projects, where community resources and channels are presented as core features on par with project name and version number.
+4. Project naming is not solved
+    1. Purls are useful for specifying resolved dependencies
+    2. Purls are less useful for specifying required dependencies, since the same component may be found on lots of different ecosystems
+    3. Specifying per-ecosystem requirements can quickly become tedious! This is especially true for platform-agnostic software
+5. To ensure authoritative component metadata is available in an ecosystem independent manner, we need a standard way to look for SBOMs. Filesystem location would be ideal, since we cannot assume network connectivity during a build process.
+    1. Also, a common filesystem directory schema for storing, reusing, verifying, and referring to SBOM objects recursively, so component reuse doesn't introduce metadata duplication
+  
+SBOM communities MUST start educating users about open source ecosystems too
+
+Ecosystem developers don't see the point in working on this
+
+
+## How are transitive dependencies introduced?
+
+* Include after publish (Download)
+* Embed before publish
+* Depend (Use & resolve)
+* Patch (Modify)
+* Assumed present (Implied)
+
+## Why are dependencies introduced?
+
+* Use (add functionality or features)
+* Extend (add and modify functionality)
+* Transpose to a new language ecosystem (FFI)
+* Build, compile, link
+* Test, check or verify
+* Package, re-package, patch
+* Sign
+* Document, translate
+* Manage, support with Dev tasks
+* Publish
+
+## What can depended upon?
+
+* Code
+* Services (Cron, NTP, SMTP)
+* Runtime environments (container, virtual machines)
+* System resources (ram, disk, inodes, threads, processes, hw devices)
+
+# Presentation
+
+## Cover Page / Intro
+## About me
+## Why ask if "SBOMs can become a first class citizen in Open Source Ecosystems?"
+Because...
+Software composition analysis
+Vulnerability detection
+...becomes easier with up-to-date authoritative information
+## Example: CPAN
+## CPAN's upstreams
+## The river of CPAN
+## CPAN's downstreams
+## Who manages this?
+## Open Source Volunteers
+Not a "third party" but a SECOND party!
+What agreement? Check your open source license!
+They are, in fact, your unpaid colleagues
+## Reactions
+"Freeloader says what?"
+"What's in it for me?"
+"This is not my problem"
+"We already keep track of this, why do we need another way?"
+"Can this be used for creating reproducible builds?"
+## What do these volunteers need?
+Motivation, Engagement, O(fun)
+Context and reasons
+Something that is a joy to work with
+Targeted documentation
+If it's not fun it interesting: Money
+## An Open Source perspective
+Please do not waste Volunteer time
+Please do not assume they will come just because you made something
+## An Ecosystem perspective
+Please do not take them for granted
+## Standards
+
+## Interoperability
+Universal package identification - YES
+Universal dependency resolution - YES
+SBOM standards convergence - NOW
+## Coordination
+
+## Money
+
+## Can SBOM become a first class citizen in Open Source Ecosystems?

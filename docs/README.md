@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Documents
+title: Documents & Guides
 permalink: /docs/
 ---
 

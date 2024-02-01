@@ -272,7 +272,7 @@ digraph CPANSupplyChain {
 
   // Consumer – The software in use in production
 
-  // SecOps / SOC – Runtime security checks; Vulnerability monitoring, etc.
+  // Scanner – Runtime and static security checks; Vulnerability monitoring, etc.
   
   // Auditor / Compliance – Verifies that all necessary metadata is available, up-to-date and made use of.
 

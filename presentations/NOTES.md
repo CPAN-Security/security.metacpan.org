@@ -1,9 +1,23 @@
-# Thoughts around NIS2 and CRA
+# Thoughts around NIS2, CRA and PLD
 
 - Redirect Liability for Open Source software towards separate companies (Send the devs to a separate LLC)
 - Copyleft (reciprocal) licenses have a greater chance of fostering a culture for sending improvements upstream
 - Non-copyleft (non-reciprocal) software with changes may be more expensive to fix internally, than if you use copyleft software and make an effort to send your changes upstream.
 - With the CE mark introduction, FOSS developers may get a proper income stream for their software. "No, I will not put a CE mark on the release, unless you pay for the audit and the liability transfer."
+
+- With the requirements from these laws, we should be able to make a few assumptions and predict the following timeline
+    - The laws will force institutions to get a better-converging-on-complete picture of their software stacks, and their Open Source sependencies
+        - If they don't do this, they risk fines due to requiremens in the NIS2 Directive and the Cyber Resilience Act
+    - The same institutions will have to make their software stacks trivially updatable (e.g. roll them into a CI/CD pipeline)
+        - If they don't make it easier to apply security updates, they risk fines due to the Product Liability Directive
+    - With these two assumptions in place, we can assume the following consequences
+        - Demands for backwards compatibility will be reduced
+        - Any ecosystems that don't make it easy for users to implement these things, risk abandonment
+        - Demands for interoperable tooling will increase
+        - Demands for secure supply-chain infrastructure will increase
+        - Demands for Unambiguous software identification will increase
+        - Demands for 
+    - 
 
 
 # Thoughts around SBOM
@@ -36,7 +50,6 @@
         - From a roles perspective, these life cycles must include _all_ activities that are done in Open Source ecosystems: Owner, Author, Custodian, Packager, Patcher, Curator, Publisher, Developer, Tester, Builder, Deployer, SecOps, Consumer, and Auditor.
     - While having SBOMs for documenting dependency resolution, there is also the other side of this coin – way to specify dependencies! Many ecosystems are myopic in this regard too.
         - Using Package URLs for specifying service dependencies might be a step forward here? E.g. <pkg:service/ntp>, <pkg:service/smtp> can be enough for an OS provider to do service discovery and communicate it's resolution for use in a software build or deployment SBOM
-
 
 ## Needed
 
@@ -95,6 +108,10 @@ Because...
 Software composition analysis
 Vulnerability detection
 ...becomes easier with up-to-date authoritative information
+- End-to-end overview of provenance
+- Reduce false positives of downstream tooling by making authoritative information available throughout each link in the supply chain
+- Help create actionable information that takes Open Source communities into account
+- Open Source is for enabling people who care
 ## Example: CPAN
 ## CPAN's upstreams
 ## The river of CPAN
@@ -132,3 +149,5 @@ SBOM standards convergence - NOW
 ## Money
 
 ## Can SBOM become a first class citizen in Open Source Ecosystems?
+
+

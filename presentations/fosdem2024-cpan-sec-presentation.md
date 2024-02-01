@@ -36,7 +36,6 @@ Note:
 Established in April last year at the Perl Toolchain Summit in Lyon, France
 
 
-
 [comment]: # (!!!)
 
 ## What do we care about?
@@ -50,7 +49,7 @@ Here are some of the things we care about!
 
 [comment]: # (|||)
 
-### CPAN Vulnerability Index
+### Vulnerability Index
 
 👉 **Audit** and track vulnerabilities
 
@@ -61,7 +60,7 @@ Improve security awareness by standardizing and publishing CPAN package vulnerab
 
 [comment]: # (|||)
 
-### CPAN Provenance & Supply Chain Security
+### Provenance & Supply Chain Security
 
 👉 Establish a **trusted publishing infrastructure**
 
@@ -72,7 +71,7 @@ Establish a trusted publishing infrastructure and tooling, with inspiration from
 
 [comment]: # (|||)
 
-### CPAN Software Bills of Materials
+### Metadata & Software Bills of Materials
 
 👉 **SBOM** creation and verification
 
@@ -83,7 +82,7 @@ Support risk analysis and management by writing tooling for managing standard SB
 
 [comment]: # (|||)
 
-### CPAN Transparency Logs
+### Transparency Logs
 
 👉 Tooling for **third-party monitoring** of&nbsp;package&nbsp;changes
 
@@ -94,7 +93,7 @@ Write tooling for monitoring package updates and integrity checking of metadata 
 
 [comment]: # (|||)
 
-### CPAN Security Patch Tooling
+### Security Patch Tooling
 
 👉 Tooling for CPAN Distro security patches to enable **high-priority updates**
 
@@ -105,7 +104,7 @@ Enable high-priority updates of CPAN packages, by developing tooling for publish
 
 [comment]: # (|||)
 
-### CPAN Security Outreach & Information
+### Security Outreach & Information
 
 👉 Security and **incident communication** through relevant&nbsp;media&nbsp;channels
 
@@ -119,18 +118,17 @@ Keep different information channels (websites, social media) up-to-date and rele
 ### And more!
 
 * 👉 Software Composition Analysis
-* 👉 CPAN-SEC Governance, Policy & Funding
-* 👉 Rich Metadata & Dependencies
 * 👉 Privacy and Compliance
+* 👉 Governance, Policy & Funding
 
 Note:
 
 And more!
 
 * Analyze dependencies for known vulnerabilities
-* Establish constructive rules, playbooks, governance, policy, and funding channels
 * Improve interoperability with non-CPAN package indices
 * Track legal and privacy issues around CPAN metadata, and compliance with regulations
+* Establish constructive rules, playbooks, governance, policy, and funding channels for security work
 
 
 [comment]: # (!!!)

@@ -112,6 +112,22 @@ Note:
 
 Keep different information channels (websites, social media) up-to-date and relevant with info on incidents, best practices and other documentation.
 
+[comment]: # (|||)
+
+### Privacy and Compliance
+
+👉 Share information around CPAN metadata, GDPR, and NIS2 compliance guides and other relevant regulations.
+
+Note:
+
+
+[comment]: # (|||)
+
+### And more!
+
+
+Note:
+
 
 [comment]: # (|||)
 

@@ -13,7 +13,8 @@ stateDiagram-v2
     state "Deployer" as deployer
     state "Scanner\nSecOps\nPentester" as scanner
     state "Consumer\nUser" as consumer
-    state "Auditor" as auditor
+    state "Auditor – Internal" as auditor_internal
+    state "Auditor – External" as auditor_external
 
 	[*] --> ecosystem_author
 
@@ -25,7 +26,7 @@ stateDiagram-v2
     author --> ecosystem_lang
 
 	note right of ecosystem_author
-		Open Source Developer
+		Publishes Open Source
 	end note
 
     state "Language Ecosystem" as ecosystem_lang {
@@ -60,24 +61,23 @@ stateDiagram-v2
 
 	state "Developer Environment" as ecosystem_developer {
 		[*] --> developer
+    	deployer --> auditor_internal
 	}
 
 	note right of ecosystem_developer
-		"Closed Source" Author
+		Does NOT publish Open Source
 	end note
 
     developer --> ecosystem_prod
+    developer --> [*]
 
 	state "Production Environment" as ecosystem_prod {
 		[*] --> deployer
     	deployer --> scanner
-    	deployer --> consumer
-    	deployer --> auditor
-
+    	deployer --> auditor_external
 	}
 
-    developer --> [*]
-
+    deployer --> consumer
 
 ```
 

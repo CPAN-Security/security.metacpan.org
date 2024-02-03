@@ -95,8 +95,8 @@ Improve security awareness by standardizing and publishing CPAN package vulnerab
 
 👉 Establish a Secure CPAN Downloads
 
-* #TODO: TLS support in all CPAN clients (cpanpm, cpanm, etc)
-* #TODO: Implementing "The Update Framework" in CPAN
+* #TODO – TLS support in all CPAN clients (cpanpm, cpanm, etc)
+* #TODO – Implementing "The Update Framework" in CPAN
     * Repository signatures (yes this is from CPAN)
     * Author signatures (yes this is from AUTHOR)
 

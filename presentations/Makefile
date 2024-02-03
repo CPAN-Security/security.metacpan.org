@@ -1,4 +1,4 @@
-all: tprc2023-cpan-sec-lightning-talk/index.html perlkohacon-cpan-sec-lightning-talk/index.html nis2-cra-intro/index.html perlkohacon-cpan-sbom-talk/index.html
+all: tprc2023-cpan-sec-lightning-talk/index.html perlkohacon-cpan-sec-lightning-talk/index.html nis2-cra-intro/index.html perlkohacon-cpan-sbom-talk/index.html fosdem2024-cpan-sec-presentation/index.html
 
 
 tprc2023-cpan-sec-lightning-talk/index.html: tprc2023-cpan-sec-lightning-talk.md

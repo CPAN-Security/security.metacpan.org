@@ -2,7 +2,7 @@
 
 ```mermaid
 stateDiagram-v2
-    state "Author\nCustodian\nSteward" as author
+    state "Author\nCustodian\nSteward\nPublisher" as author
     state "Distributor — Repository" as distributor_repo 
     state "Distributor — Language" as distributor_lang 
     state "Distributor — Package" as distributor_package
@@ -35,7 +35,7 @@ stateDiagram-v2
 	distributor_lang --> ecosystem_developer
 	distributor_lang --> ecosystem_package
 
-	state "Repository Ecosystem" as ecosystem_repo {
+	state "Collaboration Ecosystem" as ecosystem_repo {
 		[*] --> distributor_repo
 	}
 
@@ -83,40 +83,65 @@ stateDiagram-v2
 
 # SBOM::Roles
 
+In a supply chain, we can expect to meet many people filling distinct roles.
+Here is a list of them, where we try to distinguish clearly between the different roles.
+Any given person can be expected to have one or more roles, and switch between them as needed.
+Common for all roles, is that they have some need for SBOM documents - either to ensure they are correct (create, update), passed on (distribute) or ensure that they match the accompanying software (verify).
+
 ## Owner
 
-Has the legal owership rights for the dist (e.g a business, or the author)
+Has the legal owership rights for the dist (e.g a business, or the author). May decide the name of the project, or other parameters for (or on behalf of) the Author.
 
 ## Author
 
-The initial and/or main creator of the component in question.  Typically works on all aspects of the code, including features, bugfixes, tests and security issues. Has the final say on the original contents of the package. The Author _can_ be a group of people, though a single point of responsibility is common. If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective. See below).
+The initial and/or main creator of the component in question.
+ Typically works on all aspects of the code, including features, bugfixes, tests and security issues.
+Has the final say on the original contents of the package.
+The Author _can_ be a group of people, though a single point of responsibility is common.
+If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective.
+See below).
 
 ### Steward
-A type of Author with reduced responsibilities. Ensures the ongoing quality of the code. Typically only works on security issues and bugfixes. Usually doesn't work on new features. Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.
+A type of Author with reduced responsibilities.
+Ensures the ongoing quality of the code.
+Typically only works on security issues and bugfixes.
+Usually doesn't work on new features.
+Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.
 
 ### Custodian
-A type of Steward with reduced responsibilities. Cares about the ongoing security of the code. Typically only conserned with updating dependencies or applying security fixes. Works with the Author primarily, and may take responsibility on their behalf when it comes to security concerns.
+A type of Steward with reduced responsibilities.
+Cares about the ongoing security of the code.
+Typically only conserned with updating dependencies or applying security fixes.
+Works with the Author primarily, and may take responsibility on their behalf when it comes to security concerns.
 
-## Publisher
-Places the component on an ecosystem publishing platform, on behalf of the Author, Steward or Custodian. Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.
+### Publisher
+Places the component on an ecosystem publishing platform, on behalf of the Author, Steward or Custodian.
+Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.
 
-## RepositoryHost
-A Publisher that offers a public repository to Authors, so they may cooperate and share ongoing work in public.
+## RepositoryHost (?)
+Someone that offers a public repository to Authors, so they may cooperate and share ongoing work in public.
 
 ## Patcher
-Applies security and bugfixes to distributed native packages. Works mainly with the Packager, and is downstream of the Author. This task is only necessary if upstream (Author, Steward or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g. when backporting of fixes are needed due to downstream version pinning).
+Applies security and bugfixes to distributed native packages.
+Works mainly with the Packager, and is downstream of the Author.
+This task is only necessary if upstream (Author, Steward or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g.
+when backporting of fixes are needed due to downstream version pinning).
 
 ## Packager
-Builds and creates native packages from a dist received from upstream, optionally with patches applied from the Patcher. Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
+Builds and creates native packages from a dist received from upstream, optionally with patches applied from the Patcher.
+Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
 
 ## Curator
-Selects or pins which releases are suitable for use within an organization. Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bugfixes and security updates.
+Selects or pins which releases are suitable for use within an organization.
+Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bugfixes and security updates.
 
 ## Distributor
 Ensures the availability of packages, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 ## Developer
-Uses packages and components as dependencies in their own project or product. A Developer is considered to be identical to an Author from the upstream (Author's) perspective. A common difference from an Author is that a Developer doesn't publish their work as Open Source.
+Uses packages and components as dependencies in their own project or product.
+A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
+The main difference from an Author is that a Developer doesn't publish their work as Open Source.
 
 ## Deployer
 Final preparation and installation of the software into production environment.
@@ -125,7 +150,7 @@ Final preparation and installation of the software into production environment.
 Runtime and static security checks; Vulnerability monitoring, etc.
 
 ## Consumer
-The software in use in production.
+The software in use in production, by a user.
 
 ## Auditor / Compliance
 Verifies that all necessary metadata is available, up-to-date and made use of.
@@ -133,5 +158,6 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 # License
 
-This is © Salve J. Nilsen <sjn@cpan.org>. Some rights reserved.
+This is © Salve J.  Nilsen <sjn@cpan.org>.
+Some rights reserved.
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.

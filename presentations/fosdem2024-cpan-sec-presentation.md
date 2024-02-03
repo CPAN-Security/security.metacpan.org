@@ -48,7 +48,7 @@ Note:
 
 [comment]: # (!!!)
 
-## Security topics in scope
+## In-Scope Security Topics
 
 Note:
 
@@ -66,11 +66,15 @@ Here are some of the things we care about!
 
 * CVE-2023-7101 **Spreadsheet::ParseExcel** (affecting CVE-2023-7102)
 * CVE-2024-23525 & CVE-2024-22368 **Spreadsheet::ParseXLSX**
-* Coordination on CERT.org VINCE
+* Coordination via kb.CERT.org VINCE and our mailing list
 
 Note:
 
 Keep different information channels (websites, social media) up-to-date and relevant with info on incidents, best practices and other documentation.
+
+VINCE – Vulnerability Information and Coordination Environment
+
+Topics not under embargo are discussed on IRC
 
 
 [comment]: # (|||)

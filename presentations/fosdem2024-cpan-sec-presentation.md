@@ -17,7 +17,7 @@
 
 # CPAN Security Working Group
 
-This is an introduction!
+Introduction & Update
 
 Note:
 
@@ -28,23 +28,49 @@ Hei! I'm <NAME> and I'm here to introduce the CPAN Security Working Group to you
 
 ## CPAN-SEC
 
-* Made @ **Perl Toolchain Summit** 2023 in Lyon, France
-* We care about **security on CPAN**!
+* Est. at **Perl Toolchain Summit** 2023 in Lyon 🇫🇷
+* Work & care for **Security on CPAN**!
 
 Note:
 
 Established in April last year at the Perl Toolchain Summit in Lyon, France
 
+[comment]: # (|||)
 
-[comment]: # (!!!)
+### PTS 2023
 
-## What do we care about?
+![Group picture showing PTS 2023 pariticipants](media/pts-group-picture-PTS2023.jpeg)
 
 Note:
 
-This is an introduction and a **call for participation**!
+* (Almost) everyone at the 2023 Perl Toolchain Summit
+
+
+[comment]: # (!!!)
+
+## Security topics in scope
+
+Note:
 
 Here are some of the things we care about!
+
+
+[comment]: # (|||)
+
+### Security Outreach & Information
+
+👉 Supporting security and **incident response and communication** through relevant&nbsp;channels
+
+* #Ongoing – Guides & Documentation work
+* #Ongoing – Incident response & support
+
+* CVE-2023-7101 **Spreadsheet::ParseExcel** (affecting CVE-2023-7102)
+* CVE-2024-23525 & CVE-2024-22368 **Spreadsheet::ParseXLSX**
+* Coordination on CERT.org VINCE
+
+Note:
+
+Keep different information channels (websites, social media) up-to-date and relevant with info on incidents, best practices and other documentation.
 
 
 [comment]: # (|||)
@@ -53,9 +79,11 @@ Here are some of the things we care about!
 
 👉 **Audit** and track vulnerabilities
 
+* #TODO
+
 Note:
 
-Improve security awareness by standardizing and publishing CPAN package vulnerabilities in relevant indices (our own, or CVE, or other). Possibly register as a CVE Numbering Authority.
+Improve security awareness by standardizing and publishing CPAN package vulnerabilities in relevant indices (our own, or CVE, or other).
 
 
 [comment]: # (|||)
@@ -63,6 +91,8 @@ Improve security awareness by standardizing and publishing CPAN package vulnerab
 ### Provenance & Supply Chain Security
 
 👉 Establish a **trusted publishing infrastructure**
+
+* #TODO – Look at in-toto.io and SLSA
 
 Note:
 
@@ -75,9 +105,15 @@ Establish a trusted publishing infrastructure and tooling, with inspiration from
 
 👉 **SBOM** creation and verification
 
+* #Ongoing – CPAN PackageURL in spec
+* #TODO – PackageURL-enabled CPAN tooling
+* #TODO – SBOM-enabled CPAN tooling
+
 Note:
 
 Support risk analysis and management by writing tooling for managing standard SBOM objects like OWASP CycloneDX or SPDX, and do this by using existing and new CPAN metadata.
+
+Improve interoperability with non-CPAN package indices
 
 
 [comment]: # (|||)
@@ -85,6 +121,8 @@ Support risk analysis and management by writing tooling for managing standard SB
 ### Transparency Logs
 
 👉 Tooling for **third-party monitoring** of&nbsp;package&nbsp;changes
+
+* #TODO – Sigstore for CPAN
 
 Note:
 
@@ -95,7 +133,9 @@ Write tooling for monitoring package updates and integrity checking of metadata 
 
 ### Security Patch Tooling
 
-👉 Tooling for CPAN Distro security patches to enable **high-priority updates**
+👉 Tooling for CPAN Distro security patches to enable high-priority updates
+
+* #TODO
 
 Note:
 
@@ -104,58 +144,75 @@ Enable high-priority updates of CPAN packages, by developing tooling for publish
 
 [comment]: # (|||)
 
-### Security Outreach & Information
-
-👉 Security and **incident communication** through relevant&nbsp;media&nbsp;channels
-
-Note:
-
-Keep different information channels (websites, social media) up-to-date and relevant with info on incidents, best practices and other documentation.
-
-[comment]: # (|||)
-
 ### Privacy and Compliance
 
-👉 Share information around CPAN metadata, GDPR, and NIS2 compliance guides and other relevant regulations.
+👉 Share information around CPAN metadata, GDPR, CRA, PLD, and NIS2 compliance guides and other relevant regulations.
+
+* #Ongoing – CPAN-SEC Reading List
 
 Note:
+
+Still lots to do!
+
+
+[comment]: # (|||)
+
+### Software Composition Analysis
+
+👉 Promote and create tooling for detecting known vulnerabilities.
+
+* #TODO
+
+Note:
+
+* Analyze dependencies for known vulnerabilities
+
+
+[comment]: # (|||)
+
+### Governance, Policy & Funding
+
+👉 Governance, Policy & Funding
+
+* Pre-Release Disclosure Agreement
+* #Ongoing – Charter
+* #Ongoing – CPAN Supply chain overview
+
+Note:
+
+* Establish constructive rules, playbooks, governance, policy, and funding channels for security work that is needed.
 
 
 [comment]: # (|||)
 
 ### And more!
 
+👉The security landscape is evolving, so must CPAN!
 
-Note:
-
-
-[comment]: # (|||)
-
-### And more!
-
-* 👉 Software Composition Analysis
-* 👉 Privacy and Compliance
-* 👉 Governance, Policy & Funding
+* Perl and CPAN is still in use everywhere
+* New security demands from authorities
+* Old "workarounds" and "conveniences" are not acceptable any more
+* Interoperability across ecosystem boundraries
 
 Note:
 
 And more!
 
-* Analyze dependencies for known vulnerabilities
-* Improve interoperability with non-CPAN package indices
-* Track legal and privacy issues around CPAN metadata, and compliance with regulations
-* Establish constructive rules, playbooks, governance, policy, and funding channels for security work
+Let's have an organization in place that can help improve our security landscape as we discover new vulnerabilities and issues!
+Sometimes, response time is of the essence, and that means someone has to be there to respond.
+
+Interoperability – Perl and CPAN is part of a larger Open Source landscape!
 
 
 [comment]: # (!!!)
 
-## Why now?
+## New security demands
 
 * **Increased demands from upcoming laws** on supply chain security and metadata
     * US [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) _Improving the Nation’s Cybersecurity_
     * EU [NIS2 Directive](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) &amp; [Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)
 * **Raise community awareness** on security topics
-* CPAN is in the dependency trees of _many_ businesses, so it's high time we **get our ducks in&nbsp;a&nbsp;row**&nbsp;🦆🦆🦆🦆
+* **Show** that CPAN authors are **getting their ducks in&nbsp;a&nbsp;row**&nbsp;🦆🦆🦆🦆
 
 Note:
 
@@ -177,22 +234,25 @@ US Executive Order 14028
 
 Also: Raise awareness on impact and responsibility around security on CPAN
 
+Also: This is a massive trust-building exercise!
 
 [comment]: # (!!!)
 
 ### Who are we?
 
-**garu**, **haarg**, **ingy**, **klapperl**, **leont**, **oalders**, **reneeb**, **sam**, **sjn**, **stigo**, **timlegge**, **Tux**, …and others!
+**garu**, **haarg**, **ingy**, **jjatria**, **klapperl**, **leont**, **oalders**, **petek**, **reneeb**, **sam**, **sjn**, **stigo**, **timlegge**, **Tux**, …and others!
 
 
 Note:
 
-Breno, Graham, Ingy, Andreas, Leon, Olaf, Renée, Sam, Salve, Stig, Tim, Merijn, …and others!
+With varying levels of involvement, we're…
+
+Breno, Graham, Ingy, José, Andreas, Leon, Olaf, Pete, Renée, Sam, Salve, Stig, Tim, Merijn, …and others!
 
 
 [comment]: # (!!!)
 
-### PTS Picture Proof
+### CPAN-SEC WG
 
 ![Group picture showing stigo, ingy, sjn, leont, tux and garu](media/cpan-sec-group-picture-PTS2023.jpeg)
 
@@ -204,7 +264,6 @@ Note:
 * Merijn
 * Breno
 
-
 [comment]: # (!!!)
 
 ### Join us!
@@ -212,7 +271,7 @@ Note:
 Do you…
 
 * …Work with & **care about security**?
-* …Have **tuits to spare**?
+* …Have **spare tuits**?
 * …Have a **security commons** aware employer?
 * …Enjoy getting your **ducks in a row**? 🦆🦆🦆🦆
 
@@ -229,7 +288,7 @@ We need volunteers!
 
 ### Find us!
 
-ircs://irc.perl.org#cpan-security
+ircs://ssl.irc.perl.org:7062/#cpan-security
 
 https://security.metacpan.org/
 

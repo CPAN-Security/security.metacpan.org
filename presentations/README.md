@@ -11,15 +11,3 @@ This directory contains presentations given at conferences and other events. For
 * Perl & Koha con 2023 in Helsinki, Finland – SBOM Introduction [Slides](perlkohacon-cpan-sbom-talk/)
 * FOSDEM 2024 ([Perl and Raku devroom](https://fosdem.org/2024/schedule/track/perl-raku/)) in Brussels, Belgium – [The CPAN Security Working Group](https://fosdem.org/2024/schedule/event/fosdem-2024-2395-the-cpan-security-working-group/) ([slides](fosdem2024-cpan-sec-presentation/))
 * FOSDEM 2024 ([Software Bill of Materials devroom](https://fosdem.org/2024/schedule/track/software-bill-of-materials/)) – [Can SBOMs become first-class citizens in Open Source ecosystems?](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/)
-
-
-#### How to generate the files
-
-These pages are generated with dadoomer's markdown-slides tool and Reveal.js.
-Please see these separate projects for license and usage terms.
-
-* Dadoomer's [markdown-slides](https://github.com/dadoomer/markdown-slides)
-* [Reveal.js](https://revealjs.com)
-
-After installing markdown-slides, you should be able to build your presentations
-by just running `make` in the presentations directory.

@@ -1,5 +1,5 @@
 [comment]: # (Compile this presentation with the command below)
-[comment]: # (mdslides fosdem2024-cpan-sec-presentation.md --include ../media)
+[comment]: # (mdslides fosdem2024-sbom-in-open-source-ecosystems-talk.md --include ../media)
 [comment]: # (...or by running the Makefile with "make")
 [comment]: # (mdslides can be installed from https://github.com/dadoomer/markdown-slides/)
 
@@ -15,35 +15,33 @@
 [comment]: # (controlsBackArrows: "true")
 
 
-# CPAN Security Working Group
+# Can SBOMs become first-class citizens in Open Source ecosystems?
 
-Introduction & Update
+Salve J. Nilsen
+
+Software Bill of Materials devroom – FOSDEM 2024
 
 Note:
 
-Hei! I'm <NAME> and I'm here to introduce the CPAN Security Working Group to you
 
 
 [comment]: # (!!!)
 
-## CPAN-SEC
+## 
 
-* Est. at **Perl Toolchain Summit** 2023 in Lyon 🇫🇷
-* Work & care for **Security on CPAN**!
 
 Note:
 
-Established in April last year at the Perl Toolchain Summit in Lyon, France
 
 [comment]: # (|||)
 
-### PTS 2023
+### 
 
 ![Group picture showing PTS 2023 pariticipants](media/pts-group-picture-PTS2023.jpeg)
 
 Note:
 
-* (Almost) everyone at the 2023 Perl Toolchain Summit
+*  the 2023 Perl Toolchain Summit
 
 
 [comment]: # (!!!)
@@ -62,8 +60,8 @@ Here are some of the things we care about!
 👉 Facilitating **responsible/coordinated disclosure** between authors, reporters and users.
 
 * We register CVEs and **notify** stakeholders; **coordinate** and triage vuln reports; **help** authors and reporters, so **vulns don't get ignored**
-    * CVE-2023-7101 **Spreadsheet::ParseExcel** (RCE affecting Barracuda Email Appliances)
-    * CVE-2024-23525 & CVE-2024-22368 **Spreadsheet::ParseXLSX**
+* CVE-2023-7101 **Spreadsheet::ParseExcel** (RCE affecting Barracuda Email Appliances)
+* CVE-2024-23525 & CVE-2024-22368 **Spreadsheet::ParseXLSX**
 * Pre-release coordination via cpan-security@perl.org, and tools like CC/VINCE
 
 
@@ -95,8 +93,8 @@ Improve security awareness by standardizing and publishing CPAN package vulnerab
 
 👉 Establish a Secure CPAN Downloads
 
-* #TODO: TLS support in all CPAN clients (cpanpm, cpanm, etc)
-* #TODO: Implementing "The Update Framework" in CPAN
+* TLS support in all CPAN clients (cpanpm, cpanm, etc)
+* Implementing "The Update Framework" in CPAN
     * Repository signatures (yes this is from CPAN)
     * Author signatures (yes this is from AUTHOR)
 

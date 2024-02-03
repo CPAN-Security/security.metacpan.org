@@ -1,18 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>CPAN Security Working Group</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/zenburn.min.css" id="highlight-theme"></head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section data-markdown  ><textarea data-template>
 [comment]: # (Compile this presentation with the command below)
-[comment]: # (mdslides fosdem2024-cpan-sec-presentation.md --include ../media)
+[comment]: # (mdslides +fosdem2024-sbom-in-open-source-ecosystems-talk/index.html --include ../media)
 [comment]: # (...or by running the Makefile with "make")
 [comment]: # (mdslides can be installed from https://github.com/dadoomer/markdown-slides/)
 
-[comment]: # (THEME = solarized)
 
-[comment]: # (minScale: 0.2)
-[comment]: # (maxScale: 4.0)
-[comment]: # (controls: true)
-[comment]: # (width: "960")
-[comment]: # (height: "700")
-[comment]: # (help: true)
-[comment]: # (progress: true)
-[comment]: # (controlsBackArrows: "true")
 
 
 # CPAN Security Working Group
@@ -24,7 +31,9 @@ Note:
 Hei! I'm <NAME> and I'm here to introduce the CPAN Security Working Group to you
 
 
-[comment]: # (!!!)
+</textarea></section>
+<section>
+<section data-markdown  ><textarea data-template>
 
 ## CPAN-SEC
 
@@ -35,7 +44,8 @@ Note:
 
 Established in April last year at the Perl Toolchain Summit in Lyon, France
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### PTS 2023
 
@@ -46,7 +56,10 @@ Note:
 * (Almost) everyone at the 2023 Perl Toolchain Summit
 
 
-[comment]: # (!!!)
+</textarea></section>
+</section>
+<section>
+<section data-markdown  ><textarea data-template>
 
 ## In-Scope Security Topics
 
@@ -55,15 +68,16 @@ Note:
 Here are some of the things we care about!
 
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Security Outreach & Information
 
 👉 Facilitating **responsible/coordinated disclosure** between authors, reporters and users.
 
 * We register CVEs and **notify** stakeholders; **coordinate** and triage vuln reports; **help** authors and reporters, so **vulns don't get ignored**
-    * CVE-2023-7101 **Spreadsheet::ParseExcel** (RCE affecting Barracuda Email Appliances)
-    * CVE-2024-23525 & CVE-2024-22368 **Spreadsheet::ParseXLSX**
+* CVE-2023-7101 **Spreadsheet::ParseExcel** (RCE affecting Barracuda Email Appliances)
+* CVE-2024-23525 & CVE-2024-22368 **Spreadsheet::ParseXLSX**
 * Pre-release coordination via cpan-security@perl.org, and tools like CC/VINCE
 
 
@@ -76,7 +90,8 @@ VINCE – Vulnerability Information and Coordination Environment
 Topics not under embargo are discussed on IRC
 
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Vulnerability Index
 
@@ -89,14 +104,15 @@ Note:
 Improve security awareness by standardizing and publishing CPAN package vulnerabilities in relevant indices (our own, or CVE, or other).
 
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Provenance & Supply Chain Security
 
 👉 Establish a Secure CPAN Downloads
 
-* #TODO: TLS support in all CPAN clients (cpanpm, cpanm, etc)
-* #TODO: Implementing "The Update Framework" in CPAN
+* TLS support in all CPAN clients (cpanpm, cpanm, etc)
+* Implementing "The Update Framework" in CPAN
     * Repository signatures (yes this is from CPAN)
     * Author signatures (yes this is from AUTHOR)
 
@@ -112,7 +128,8 @@ The TUF spec supports repo and author signing
 TUF mitigates attacks that the current PGP signed CHECKSUMS implemetation is vulnerable to, like replay attacks and downgrade attacks,
 
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Metadata & Software Bills of Materials
 
@@ -129,7 +146,8 @@ Support risk analysis and management by writing tooling for managing standard SB
 Improve interoperability with non-CPAN package indices
 
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Transparency Logs
 
@@ -142,7 +160,8 @@ Note:
 Write tooling for monitoring package updates and integrity checking of metadata using tools like `sigstore` or `sigsum`, or take inspiration from `transparency.dev`.
 
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Security Patch Tooling
 
@@ -155,7 +174,8 @@ Note:
 Enable high-priority updates of CPAN packages, by developing tooling for publishing and applying third-party security patches to CPAN distributions with non-responsive authors.
 
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Privacy and Compliance
 
@@ -168,7 +188,8 @@ Note:
 Still lots to do!
 
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Software Composition Analysis
 
@@ -181,7 +202,8 @@ Note:
 * Analyze dependencies for known vulnerabilities
 
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Governance, Policy & Funding
 
@@ -196,7 +218,8 @@ Note:
 * Establish constructive rules, playbooks, governance, policy, and funding channels for security work that is needed.
 
 
-[comment]: # (|||)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### And more!
 
@@ -217,7 +240,9 @@ Sometimes, response time is of the essence, and that means someone has to be the
 Interoperability – Perl and CPAN is part of a larger Open Source landscape!
 
 
-[comment]: # (!!!)
+</textarea></section>
+</section>
+<section data-markdown  ><textarea data-template>
 
 ## New security demands
 
@@ -249,7 +274,8 @@ Also: Raise awareness on impact and responsibility around security on CPAN
 
 Also: This is a massive trust-building exercise!
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Who are we?
 
@@ -263,7 +289,8 @@ With varying levels of involvement, we're…
 Breno, Graham, Ingy, José, Andreas, Leon, Olaf, Pete, Renée, Sam, Salve, Stig, Tim, Merijn, …and others!
 
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### CPAN-SEC WG
 
@@ -277,7 +304,8 @@ Note:
 * Merijn
 * Breno
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Join us!
 
@@ -297,7 +325,8 @@ Note:
 We need volunteers!
 
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Find us!
 
@@ -313,11 +342,13 @@ Note:
 We're on the web, IRC, mail and eventually on other places.
 
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 # Questions & Comments
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown ><textarea data-template>
 
 # Thanks!
 
@@ -330,3 +361,34 @@ We're on the web, IRC, mail and eventually on other places.
 Note:
 
 Thanks!
+</textarea></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+Reveal.initialize({
+controls : false,
+markdown : {smartypants: true},
+minScale : 0.2,
+maxScale : 4.0,
+controls : true,
+width : "960",
+height : "700",
+help : true,
+progress : true,
+controlsBackArrows : "true",
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>

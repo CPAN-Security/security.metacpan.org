@@ -59,14 +59,16 @@ Here are some of the things we care about!
 
 ### Security Outreach & Information
 
-👉 Supporting security and **incident response and communication** through relevant&nbsp;channels
+👉 Facilitating **responsible/coordinated disclosure** between authors, reporters and users.
 
-* #Ongoing – Guides & Documentation work
-* #Ongoing – Incident response & support
+* We register CVEs and notify stakeholders
+* We coordinate and triage vuln reports
+* We help authors and reporters, so vulns dont get ignored
 
-* CVE-2023-7101 **Spreadsheet::ParseExcel** (affecting CVE-2023-7102)
+* CVE-2023-7101 **Spreadsheet::ParseExcel** (RCE affecting Barracuda Email Appliances)
 * CVE-2024-23525 & CVE-2024-22368 **Spreadsheet::ParseXLSX**
-* Coordination via kb.CERT.org VINCE and our mailing list
+* Pre-release coordination via our mailing list cpan-security@perl.org, and other tools like CC/VINCE
+
 
 Note:
 
@@ -94,13 +96,23 @@ Improve security awareness by standardizing and publishing CPAN package vulnerab
 
 ### Provenance & Supply Chain Security
 
-👉 Establish a **trusted publishing infrastructure**
+👉 Establish a Secure CPAN Downloads
 
-* #TODO – Look at in-toto.io and SLSA
+* TLS support in all CPAN clients (cpanpm, cpanm, etc)
+* Implementing "The Update Framework" in CPAN
+    * Repository signatures (yes this is from CPAN)
+    * Author signatures (yes this is from AUTHOR)
+
 
 Note:
 
-Establish a trusted publishing infrastructure and tooling, with inspiration from `in-toto.io` and "Salsa" (`SLSA`). 
+We want to make TLS in cpan clients on by default, with cert verfiicaton on
+
+Looking at getting The Update Framework (pypi has some implementation of this) as a supported, this is in addition to TLS
+
+The TUF spec supports repo and author signing
+
+TUF mitigates attacks that the current PGP signed CHECKSUMS implemetation is vulnerable to, like replay attacks and downgrade attacks,
 
 
 [comment]: # (|||)
@@ -193,7 +205,7 @@ Note:
 
 👉The security landscape is evolving, so must CPAN!
 
-* Perl and CPAN is still in use everywhere
+* Perl and CPAN is in use **everywhere**
 * New security demands from authorities
 * Old "workarounds" and "conveniences" are not acceptable any more
 * Interoperability across ecosystem boundraries

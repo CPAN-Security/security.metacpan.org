@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>CPAN Security Working Group</title>
+<title>Can SBOMs become first-class citizens in Open Source ecosystems?</title>
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 <link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
@@ -15,34 +15,60 @@
 			<div class="slides">
 <section data-markdown  ><textarea data-template>
 [comment]: # (Compile this presentation with the command below)
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 [comment]: # (mdslides fosdem2024-cpan-sec-presentation.md --include ../media)
+=======
+[comment]: # (mdslides fosdem2024-sbom-in-open-source-ecosystems-talk.md --include ../media)
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 [comment]: # (...or by running the Makefile with "make")
 [comment]: # (mdslides can be installed from https://github.com/dadoomer/markdown-slides/)
 
 
 
 
-# CPAN Security Working Group
+# Can SBOMs become first-class citizens in Open Source ecosystems?
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 This is an introduction!
+=======
+Salve J. Nilsen
+
+Software Bill of Materials devroom – FOSDEM 2024
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 Note:
 
-Hei! I'm <NAME> and I'm here to introduce the CPAN Security Working Group to you
 
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## CPAN-SEC
+## About me
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 * Made @ **Perl Toolchain Summit** 2023 in Lyon, France
 * We care about **security on CPAN**!
+=======
+* Salve J. Nilsen, from Oslo, Norway
+* Developer, 25+ years with the Perl and CPAN ecosystems & communities
+* Currently volunteering for the **CPAN Security Working Group**
+* Offering a **Supply Chain** perspective
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 Note:
 
-Established in April last year at the Perl Toolchain Summit in Lyon, France
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
+=======
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Why ask the question?
+
+- Get an end-to-end overview of provenance
+- Reduce false positives in downstream security tooling
+- Ensure actionable information is available
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 
 </textarea></section>
@@ -53,14 +79,18 @@ Established in April last year at the Perl Toolchain Summit in Lyon, France
 
 Note:
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 This is an introduction and a **call for participation**!
 
 Here are some of the things we care about!
+=======
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 ### CPAN Vulnerability Index
 
 👉 **Audit** and track vulnerabilities
@@ -69,41 +99,71 @@ Note:
 
 Improve security awareness by standardizing and publishing CPAN package vulnerabilities in relevant indices (our own, or CVE, or other). Possibly register as a CVE Numbering Authority.
 
+=======
+### Security Outreach & Information
+
+
+Note:
+
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
+### Vulnerability Index
+
+Note:
+
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 ### CPAN Provenance & Supply Chain Security
+=======
+### Provenance & Supply Chain Security
+
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 👉 Establish a **trusted publishing infrastructure**
 
 Note:
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 Establish a trusted publishing infrastructure and tooling, with inspiration from `in-toto.io` and "Salsa" (`SLSA`). 
 
 
+=======
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
 ### CPAN Software Bills of Materials
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 👉 **SBOM** creation and verification
 
 Note:
 
 Support risk analysis and management by writing tooling for managing standard SBOM objects like OWASP CycloneDX or SPDX, and do this by using existing and new CPAN metadata.
 
+=======
+
+Note:
+
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
 ### CPAN Transparency Logs
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 👉 Tooling for **third-party monitoring** of&nbsp;package&nbsp;changes
+=======
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 Note:
-
-Write tooling for monitoring package updates and integrity checking of metadata using tools like `sigstore` or `sigsum`, or take inspiration from `transparency.dev`.
 
 
 </textarea></section>
@@ -111,11 +171,13 @@ Write tooling for monitoring package updates and integrity checking of metadata 
 
 ### CPAN Security Patch Tooling
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 👉 Tooling for CPAN Distro security patches to enable **high-priority updates**
+=======
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 Note:
 
-Enable high-priority updates of CPAN packages, by developing tooling for publishing and applying third-party security patches to CPAN distributions with non-responsive authors.
 
 
 </textarea></section>
@@ -123,11 +185,38 @@ Enable high-priority updates of CPAN packages, by developing tooling for publish
 
 ### CPAN Security Outreach & Information
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 👉 Security and **incident communication** through relevant&nbsp;media&nbsp;channels
 
 Note:
 
 Keep different information channels (websites, social media) up-to-date and relevant with info on incidents, best practices and other documentation.
+=======
+
+* #Ongoing – CPAN-SEC Reading List
+
+Note:
+
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Software Composition Analysis
+
+
+Note:
+
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Governance, Policy & Funding
+
+
+Note:
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 
 </textarea></section>
@@ -135,6 +224,7 @@ Keep different information channels (websites, social media) up-to-date and rele
 
 ### And more!
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 * 👉 Software Composition Analysis
 * 👉 CPAN-SEC Governance, Policy & Funding
 * 👉 Rich Metadata & Dependencies
@@ -149,6 +239,11 @@ And more!
 * Improve interoperability with non-CPAN package indices
 * Track legal and privacy issues around CPAN metadata, and compliance with regulations
 
+=======
+
+Note:
+
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 </textarea></section>
 </section>
@@ -156,6 +251,7 @@ And more!
 
 ## Why now?
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 * **Increased demands from upcoming laws** on supply chain security and metadata
     * US [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) _Improving the Nation’s Cybersecurity_
     * EU [NIS2 Directive](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) &amp; [Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)
@@ -182,10 +278,16 @@ US Executive Order 14028
 
 Also: Raise awareness on impact and responsibility around security on CPAN
 
+=======
+
+Note:
+
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 ### Who are we?
 
 **garu**, **haarg**, **ingy**, **klapperl**, **leont**, **oalders**, **reneeb**, **sam**, **sjn**, **stigo**, **timlegge**, **Tux**, …and others!
@@ -195,6 +297,11 @@ Note:
 
 Breno, Graham, Ingy, Andreas, Leon, Olaf, Renée, Sam, Salve, Stig, Tim, Merijn, …and others!
 
+=======
+
+Note:
+
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
@@ -204,6 +311,7 @@ Breno, Graham, Ingy, Andreas, Leon, Olaf, Renée, Sam, Salve, Stig, Tim, Merijn,
 ![Group picture showing stigo, ingy, sjn, leont, tux and garu](media/cpan-sec-group-picture-PTS2023.jpeg)
 
 Note:
+
 * Stig
 * Ingy
 * Salve
@@ -217,20 +325,18 @@ Note:
 
 ### Join us!
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 Do you…
 
 * …Work with & **care about security**?
 * …Have **tuits to spare**?
 * …Have a **security commons** aware employer?
 * …Enjoy getting your **ducks in a row**? 🦆🦆🦆🦆
+=======
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 Note:
 
-* Do you have a **security background** or care about the toolchain?
-* Do you have **time to volunteer**?
-* Is your employer willing to **dedicate a percentage of your time** to improve our security commons?
-
-We need volunteers!
 
 
 </textarea></section>
@@ -238,16 +344,18 @@ We need volunteers!
 
 ### Find us!
 
+<<<<<<< Updated upstream:presentations/fosdem2024-cpan-sec-presentation/index.html
 ircs://irc.perl.org#cpan-security
 
 https://security.metacpan.org/
 
 mailto:cpan-security@perl.org
 
+=======
+>>>>>>> Stashed changes:presentations/fosdem2024-sbom-in-open-source-ecosystems-talk/index.html
 
 Note:
 
-We're on the web, IRC, mail and eventually on other places.
 
 
 </textarea></section>
@@ -257,7 +365,7 @@ We're on the web, IRC, mail and eventually on other places.
 
 * Salve J. Nilsen
 
-🦆🦆🦆🦆🦆🦆
+🦆🦆
 
 
 Note:

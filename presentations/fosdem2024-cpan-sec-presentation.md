@@ -61,13 +61,10 @@ Here are some of the things we care about!
 
 👉 Facilitating **responsible/coordinated disclosure** between authors, reporters and users.
 
-* We register CVEs and notify stakeholders
-* We coordinate and triage vuln reports
-* We help authors and reporters, so vulns dont get ignored
-
+* We register CVEs and **notify** stakeholders; **coordinate** and triage vuln reports; **help** authors and reporters, so **vulns don't get ignored**
 * CVE-2023-7101 **Spreadsheet::ParseExcel** (RCE affecting Barracuda Email Appliances)
 * CVE-2024-23525 & CVE-2024-22368 **Spreadsheet::ParseXLSX**
-* Pre-release coordination via our mailing list cpan-security@perl.org, and other tools like CC/VINCE
+* Pre-release coordination via cpan-security@perl.org, and tools like CC/VINCE
 
 
 Note:
@@ -315,6 +312,10 @@ Note:
 
 We're on the web, IRC, mail and eventually on other places.
 
+
+[comment]: # (!!!)
+
+# Questions & Comments
 
 [comment]: # (!!!)
 

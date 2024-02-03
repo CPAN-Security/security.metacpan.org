@@ -102,7 +102,7 @@ If an Author has upstream (reverse) dependencies, the Author is also considered 
 See below).
 
 ### Steward
-An type of Author with reduced responsibilities.
+A type of Author with reduced responsibilities.
 Ensures the ongoing quality of the code.
 Typically only works on security issues and bugfixes.
 Usually doesn't work on new features.

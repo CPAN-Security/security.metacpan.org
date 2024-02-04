@@ -26,28 +26,14 @@ Hei! I'm <NAME> and I'm here to introduce the CPAN Security Working Group to you
 
 [comment]: # (!!!)
 
-## About me
+## CPAN-SEC
 
-<<<<<<< HEAD:presentations/fosdem2024-cpan-sec-presentation.md
-* Salve J. Nilsen, from Oslo, Norway
-* Developer, 25+ years with the Perl and CPAN ecosystems & communities
-* Currently volunteering for the **CPAN Security Working Group**
-* Offering a **Supply Chain** perspective
-=======
 * Est. at **Perl Toolchain Summit** 2023 in Lyon 🇫🇷
 * Work & care for **Security on CPAN**!
->>>>>>> main:presentations/fosdem2024-cpan-sec-talk.md
 
 Note:
 
-
-[comment]: # (|||)
-
-### Why ask the question?
-
-- Get an end-to-end overview of provenance
-- Reduce false positives in downstream security tooling
-- Ensure actionable information is available
+Established in April last year at the Perl Toolchain Summit in Lyon, France
 
 [comment]: # (|||)
 
@@ -57,8 +43,6 @@ Note:
 
 Note:
 
-<<<<<<< HEAD:presentations/fosdem2024-cpan-sec-presentation.md
-=======
 * (Almost) everyone at the 2023 Perl Toolchain Summit
 
 
@@ -169,93 +153,101 @@ Write tooling for monitoring package updates and integrity checking of metadata 
 Note:
 
 Enable high-priority updates of CPAN packages, by developing tooling for publishing and applying third-party security patches to CPAN distributions with non-responsive authors.
->>>>>>> main:presentations/fosdem2024-cpan-sec-talk.md
 
 
 [comment]: # (|||)
 
 ### Privacy and Compliance
 
-<<<<<<< HEAD:presentations/fosdem2024-cpan-sec-presentation.md
+👉 Share information around CPAN metadata, GDPR, CRA, PLD, and NIS2 compliance guides and other relevant regulations.
+
+* #Ongoing – CPAN-SEC Reading List
 
 Note:
 
-
-[comment]: # (|||)
-
-### Vulnerability Index
-
-Note:
-
-
-[comment]: # (|||)
-
-### Provenance & Supply Chain Security
-
-
-Note:
-
-[comment]: # (|||)
-
-### Metadata & Software Bills of Materials
-
-
-Note:
-
-
-[comment]: # (|||)
-
-### Transparency Logs
-
-
-Note:
-
-
-[comment]: # (|||)
-
-### Security Patch Tooling
-
-
-Note:
-
-
-
-[comment]: # (|||)
-
-### Security Outreach & Information
-
-
-
-Note:
-
+Still lots to do!
 
 
 [comment]: # (|||)
 
 ### Software Composition Analysis
 
+👉 Promote and create tooling for detecting known vulnerabilities.
+
+* #TODO
 
 Note:
+
+* Analyze dependencies for known vulnerabilities
 
 
 [comment]: # (|||)
 
 ### Governance, Policy & Funding
 
+👉 Governance, Policy & Funding
+
+* Pre-Release Disclosure Agreement
+* #Ongoing – Charter
+* #Ongoing – CPAN Supply chain overview
 
 Note:
+
+* Establish constructive rules, playbooks, governance, policy, and funding channels for security work that is needed.
 
 
 [comment]: # (|||)
 
+### And more!
 
+👉The security landscape is evolving, so must CPAN!
+
+* Perl and CPAN is in use **everywhere**
+* New security demands from authorities
+* Old "workarounds" and "conveniences" are not acceptable any more
+* Interoperability across ecosystem boundraries
 
 Note:
+
+And more!
+
+Let's have an organization in place that can help improve our security landscape as we discover new vulnerabilities and issues!
+Sometimes, response time is of the essence, and that means someone has to be there to respond.
+
+Interoperability – Perl and CPAN is part of a larger Open Source landscape!
+
 
 [comment]: # (!!!)
 
 ## New security demands
 
+* **Increased demands from upcoming laws** on supply chain security and metadata
+    * US [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) _Improving the Nation’s Cybersecurity_
+    * EU [NIS2 Directive](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) &amp; [Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)
+* **Raise community awareness** on security topics
+* **Show** that CPAN authors are **getting their ducks in&nbsp;a&nbsp;row**&nbsp;🦆🦆🦆🦆
+
+Note:
+
+Why?
+* Increased demand from upcoming laws
+
+EU NIS2 Directive 2022/2555
+* Applies to producers of software used by EU institutions that manage **critical infrastructure**
+* To be implemented in local law by October 2024
+
+EU Cyber Resilience Act
+* CE certification of software used in and with **internet-connected devices**
+* Expected to be implemented by July 2025
+
+US Executive Order 14028
+* "on Improving the Nation’s Cybersecurity"
+* For anyone working with or selling to the US federal government
+* In effect as of May 2021
+
+Also: Raise awareness on impact and responsibility around security on CPAN
+
+Also: This is a massive trust-building exercise!
 
 [comment]: # (!!!)
 
@@ -271,17 +263,13 @@ With varying levels of involvement, we're…
 Breno, Graham, Ingy, José, Andreas, Leon, Olaf, Pete, Renée, Sam, Salve, Stig, Tim, Merijn, …and others!
 
 
-
 [comment]: # (!!!)
-
-
 
 ### CPAN-SEC WG
 
 ![Group picture showing stigo, ingy, sjn, leont, tux and garu](media/cpan-sec-group-picture-PTS2023.jpeg)
 
 Note:
-
 * Stig
 * Ingy
 * Salve
@@ -293,26 +281,36 @@ Note:
 
 ### Join us!
 
+Do you…
+
+* …Work with & **care about security**?
+* …Have **spare tuits**?
+* …Have a **security commons** aware employer?
+* …Enjoy getting your **ducks in a row**? 🦆🦆🦆🦆
+
 Note:
 
+* Do you have a **security background** or care about the toolchain?
+* Do you have **time to volunteer**?
+* Is your employer willing to **dedicate a percentage of your time** to improve our security commons?
+
+We need volunteers!
 
 
 [comment]: # (!!!)
 
 ### Find us!
 
-<<<<<<< HEAD:presentations/fosdem2024-cpan-sec-presentation.md
-=======
 ircs://ssl.irc.perl.org:7062/#cpan-security
 
 https://security.metacpan.org/
 
 mailto:cpan-security@perl.org
 
->>>>>>> main:presentations/fosdem2024-cpan-sec-talk.md
 
 Note:
 
+We're on the web, IRC, mail and eventually on other places.
 
 
 [comment]: # (!!!)
@@ -326,7 +324,7 @@ Note:
 * Salve J. Nilsen
 * Mastodon: @sjn@chaos.social
 
-🦆🦆
+🦆🦆🦆🦆🦆🦆
 
 
 Note:

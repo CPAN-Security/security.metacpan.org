@@ -29,6 +29,17 @@ stateDiagram-v2
 		Publishes Open Source
 	end note
 
+	%%note left of ecosystem_author
+	%%	Name
+	%%	Version
+	%%	Download_location
+	%%	Unique_id (PURL)
+	%%	Code_repo
+	%%	Code_revision
+	%%	SBOM_type
+	%%	Vuln_vers_and_locs
+	%%end note
+
     state "Language Ecosystem" as ecosystem_lang {
     	[*] --> distributor_lang
     }
@@ -61,23 +72,23 @@ stateDiagram-v2
 
 	state "Developer Environment" as ecosystem_developer {
 		[*] --> developer
-    	deployer --> auditor_internal
 	}
 
 	note right of ecosystem_developer
 		Does NOT publish Open Source
 	end note
 
+	developer --> auditor_internal
     developer --> ecosystem_prod
     developer --> [*]
 
 	state "Production Environment" as ecosystem_prod {
 		[*] --> deployer
     	deployer --> scanner
-    	deployer --> auditor_external
 	}
 
     deployer --> consumer
+    deployer --> auditor_external
 
 ```
 
@@ -95,7 +106,7 @@ Has the legal owership rights for the dist (e.g a business, or the author). May 
 ## Author
 
 The initial and/or main creator of the component in question.
- Typically works on all aspects of the code, including features, bugfixes, tests and security issues.
+Typically works on all aspects of the code, including features, bugfixes, tests and security issues.
 Has the final say on the original contents of the package.
 The Author _can_ be a group of people, though a single point of responsibility is common.
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective.

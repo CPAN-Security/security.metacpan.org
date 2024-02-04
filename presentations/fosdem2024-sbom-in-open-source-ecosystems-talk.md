@@ -15,7 +15,7 @@
 [comment]: # (controlsBackArrows: "true")
 
 
-# Can SBOMs become first-class citizens in Open Source ecosystems?
+### Can SBOMs become first-class citizens in Open Source ecosystems?
 
 Salve J. Nilsen
 
@@ -27,304 +27,171 @@ Note:
 
 [comment]: # (!!!)
 
-## 
+### Who am I?
+
+* Salve J. Nilsen, from Oslo, Norway
+
+* **CPAN Security Working Group**
+
+* My offer: **Open Source Supply Chain perspective**
 
 
-Note:
+
+[comment]: # (!!!)
+
+## Why ask this question?
 
 
-[comment]: # (|||)
+[comment]: # (!!!)
 
-### 
+- End users **obliged** comply to new laws
+
+- Authoritative + up-to-date **metadata must be made available**, to…
+    - All the good things!
+
+
+[comment]: # (!!!)
+
+### What many think SW development looks like
+
+![](media/Software-supply-chain-NIST-Appendix-F-Figure-2.png)
+
+Source: [NIST Software Supply Chain Security Guidance](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains-software-1)
+
+
+[comment]: # (!!!)
+
+### What's wrong?
+
+* No supply chain!
+* "Third party software"
+* No Open Source communities & processes
+
+
+[comment]: # (!!!)
+
+### What's the response?
+
+"Why should I care?"
+
+"This is not my problem"
+
+
+
+[comment]: # (!!!)
+
+### A simplified supply chain I
+
+![](media/supply-chain-1.png)
+
+
+[comment]: # (!!!)
+
+### A simplified supply chain I
+
+![](media/supply-chain-1b.png)
+
+
+[comment]: # (!!!)
+
+### A simplified supply chain II
+
+![](media/supply-chain-2.png)
+
+[comment]: # (!!!)
+
+### A simplified supply chain II
+
+![](media/supply-chain-2b.png)
+
+[comment]: # (!!!)
+
+### A simplified supply chain II
+
+![](media/supply-chain-2c.png)
+
+
+[comment]: # (!!!)
+
+### A simplified supply chain III
+
+![](media/supply-chain-3.png)
+
+[comment]: # (!!!)
+
+### A simplified supply chain III
+
+![](media/supply-chain-3b.png)
+
+
+[comment]: # (!!!)
+
+![](media/Software-supply-chain-NIST-Appendix-F-Figure-2b.png)
+
+[comment]: # (!!!)
+
+### Second-party software
+
+
+[comment]: # (!!!)
 
 ![Group picture showing PTS 2023 pariticipants](media/pts-group-picture-PTS2023.jpeg)
 
-Note:
 
-*  the 2023 Perl Toolchain Summit
+[comment]: # (!!!)
+
+### Who are these people?
 
 
 [comment]: # (!!!)
 
-## In-Scope Security Topics
+### Who are these people?
 
-Note:
-
-Here are some of the things we care about!
-
-
-[comment]: # (|||)
-
-### Security Outreach & Information
-
-👉 Facilitating **responsible/coordinated disclosure** between authors, reporters and users.
-
-* We register CVEs and **notify** stakeholders; **coordinate** and triage vuln reports; **help** authors and reporters, so **vulns don't get ignored**
-* CVE-2023-7101 **Spreadsheet::ParseExcel** (RCE affecting Barracuda Email Appliances)
-* CVE-2024-23525 & CVE-2024-22368 **Spreadsheet::ParseXLSX**
-* Pre-release coordination via cpan-security@perl.org, and tools like CC/VINCE
-
-
-Note:
-
-Keep different information channels (websites, social media) up-to-date and relevant with info on incidents, best practices and other documentation.
-
-VINCE – Vulnerability Information and Coordination Environment
-
-Topics not under embargo are discussed on IRC
-
-
-[comment]: # (|||)
-
-### Vulnerability Index
-
-👉 **Audit** and track vulnerabilities
-
-* #TODO
-
-Note:
-
-Improve security awareness by standardizing and publishing CPAN package vulnerabilities in relevant indices (our own, or CVE, or other).
-
-
-[comment]: # (|||)
-
-### Provenance & Supply Chain Security
-
-👉 Establish a Secure CPAN Downloads
-
-* TLS support in all CPAN clients (cpanpm, cpanm, etc)
-* Implementing "The Update Framework" in CPAN
-    * Repository signatures (yes this is from CPAN)
-    * Author signatures (yes this is from AUTHOR)
-
-
-Note:
-
-We want to make TLS in cpan clients on by default, with cert verfiicaton on
-
-Looking at getting The Update Framework (pypi has some implementation of this) as a supported, this is in addition to TLS
-
-The TUF spec supports repo and author signing
-
-TUF mitigates attacks that the current PGP signed CHECKSUMS implemetation is vulnerable to, like replay attacks and downgrade attacks,
-
-
-[comment]: # (|||)
-
-### Metadata & Software Bills of Materials
-
-👉 **SBOM** creation and verification
-
-* #Ongoing – CPAN PackageURL in spec
-* #TODO – PackageURL-enabled CPAN tooling
-* #TODO – SBOM-enabled CPAN tooling
-
-Note:
-
-Support risk analysis and management by writing tooling for managing standard SBOM objects like OWASP CycloneDX or SPDX, and do this by using existing and new CPAN metadata.
-
-Improve interoperability with non-CPAN package indices
-
-
-[comment]: # (|||)
-
-### Transparency Logs
-
-👉 Tooling for **third-party monitoring** of&nbsp;package&nbsp;changes
-
-* #TODO – Sigstore for CPAN
-
-Note:
-
-Write tooling for monitoring package updates and integrity checking of metadata using tools like `sigstore` or `sigsum`, or take inspiration from `transparency.dev`.
-
-
-[comment]: # (|||)
-
-### Security Patch Tooling
-
-👉 Tooling for CPAN Distro security patches to enable high-priority updates
-
-* #TODO
-
-Note:
-
-Enable high-priority updates of CPAN packages, by developing tooling for publishing and applying third-party security patches to CPAN distributions with non-responsive authors.
-
-
-[comment]: # (|||)
-
-### Privacy and Compliance
-
-👉 Share information around CPAN metadata, GDPR, CRA, PLD, and NIS2 compliance guides and other relevant regulations.
-
-* #Ongoing – CPAN-SEC Reading List
-
-Note:
-
-Still lots to do!
-
-
-[comment]: # (|||)
-
-### Software Composition Analysis
-
-👉 Promote and create tooling for detecting known vulnerabilities.
-
-* #TODO
-
-Note:
-
-* Analyze dependencies for known vulnerabilities
-
-
-[comment]: # (|||)
-
-### Governance, Policy & Funding
-
-👉 Governance, Policy & Funding
-
-* Pre-Release Disclosure Agreement
-* #Ongoing – Charter
-* #Ongoing – CPAN Supply chain overview
-
-Note:
-
-* Establish constructive rules, playbooks, governance, policy, and funding channels for security work that is needed.
-
-
-[comment]: # (|||)
-
-### And more!
-
-👉The security landscape is evolving, so must CPAN!
-
-* Perl and CPAN is in use **everywhere**
-* New security demands from authorities
-* Old "workarounds" and "conveniences" are not acceptable any more
-* Interoperability across ecosystem boundraries
-
-Note:
-
-And more!
-
-Let's have an organization in place that can help improve our security landscape as we discover new vulnerabilities and issues!
-Sometimes, response time is of the essence, and that means someone has to be there to respond.
-
-Interoperability – Perl and CPAN is part of a larger Open Source landscape!
+* Your Open Source **Colleagues**
 
 
 [comment]: # (!!!)
 
-## New security demands
+### Who are these people?
 
-* **Increased demands from upcoming laws** on supply chain security and metadata
-    * US [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) _Improving the Nation’s Cybersecurity_
-    * EU [NIS2 Directive](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) &amp; [Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)
-* **Raise community awareness** on security topics
-* **Show** that CPAN authors are **getting their ducks in&nbsp;a&nbsp;row**&nbsp;🦆🦆🦆🦆
-
-Note:
-
-Why?
-* Increased demand from upcoming laws
-
-EU NIS2 Directive 2022/2555
-* Applies to producers of software used by EU institutions that manage **critical infrastructure**
-* To be implemented in local law by October 2024
-
-EU Cyber Resilience Act
-* CE certification of software used in and with **internet-connected devices**
-* Expected to be implemented by July 2025
-
-US Executive Order 14028
-* "on Improving the Nation’s Cybersecurity"
-* For anyone working with or selling to the US federal government
-* In effect as of May 2021
-
-Also: Raise awareness on impact and responsibility around security on CPAN
-
-Also: This is a massive trust-building exercise!
-
-[comment]: # (!!!)
-
-### Who are we?
-
-**garu**, **haarg**, **ingy**, **jjatria**, **klapperl**, **leont**, **oalders**, **petek**, **reneeb**, **sam**, **sjn**, **stigo**, **timlegge**, **Tux**, …and others!
-
-
-Note:
-
-With varying levels of involvement, we're…
-
-Breno, Graham, Ingy, José, Andreas, Leon, Olaf, Pete, Renée, Sam, Salve, Stig, Tim, Merijn, …and others!
+* Your **Unpaid** Open Source **Colleagues**
 
 
 [comment]: # (!!!)
 
-### CPAN-SEC WG
-
-![Group picture showing stigo, ingy, sjn, leont, tux and garu](media/cpan-sec-group-picture-PTS2023.jpeg)
-
-Note:
-* Stig
-* Ingy
-* Salve
-* Leon
-* Merijn
-* Breno
-
-[comment]: # (!!!)
-
-### Join us!
-
-Do you…
-
-* …Work with & **care about security**?
-* …Have **spare tuits**?
-* …Have a **security commons** aware employer?
-* …Enjoy getting your **ducks in a row**? 🦆🦆🦆🦆
-
-Note:
-
-* Do you have a **security background** or care about the toolchain?
-* Do you have **time to volunteer**?
-* Is your employer willing to **dedicate a percentage of your time** to improve our security commons?
-
-We need volunteers!
+## How to make SBOMs become first-class citizens in Open Source ecosystems
 
 
 [comment]: # (!!!)
 
-### Find us!
+### How to make SBOMs become first-class citizens in Open Source ecosystems
 
-ircs://ssl.irc.perl.org:7062/#cpan-security
+[comment]: # (!!!)
 
-https://security.metacpan.org/
+* Treat Open Source ecosystems as a first-class citizen in the SBOM ecosystems!
 
-mailto:cpan-security@perl.org
+[comment]: # (!!!)
 
+* Do NOT relegate them to the "Third party software" category — They are your **partners**, caring about **your** Open Source infrastructure and foundation!
 
-Note:
+[comment]: # (!!!)
 
-We're on the web, IRC, mail and eventually on other places.
+* Become a partner that teaches downstream users how Open Source works, without "simplifying away" people
+
+* Upsteam devs are your partners, colleagues and friends – if you treat them so!
 
 
 [comment]: # (!!!)
 
-# Questions & Comments
+## Questions & Comments
 
 [comment]: # (!!!)
 
-# Thanks!
+## Thanks!
 
 * Salve J. Nilsen
 * Mastodon: @sjn@chaos.social
 
-🦆🦆🦆🦆🦆🦆
+🦆 https://security.metacpan.org
 
 
-Note:
-
-Thanks!

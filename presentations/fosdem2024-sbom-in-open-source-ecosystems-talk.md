@@ -85,43 +85,43 @@ Source: [NIST Software Supply Chain Security Guidance](https://www.nist.gov/itl/
 
 ### A simplified supply chain
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ![](media/supply-chain-1.png)
 
-
-[comment]: # (|||)
+[comment]: # (||| data-transition="fade-out")
 
 ![](media/supply-chain-1b.png)
 
-
-[comment]: # (|||)
+[comment]: # (||| data-transition="fade-in slide-out")
 
 ![](media/supply-chain-2.png)
 
-[comment]: # (|||)
+[comment]: # (||| data-transition="slide-in none-out")
 
 ![](media/supply-chain-2b.png)
 
-[comment]: # (|||)
+[comment]: # (||| data-transition="fade-in none-out")
 
 ![](media/supply-chain-2c.png)
 
-[comment]: # (|||)
+[comment]: # (||| data-transition="fade-in slide-out")
 
 ![](media/supply-chain-3.png)
 
-[comment]: # (|||)
-
+[comment]: # (||| data-transition="slide-in fade-out")
 
 ![](media/supply-chain-3b.png)
 
+[comment]: # (!!! data-transition="fade-in slide-out")
 
-[comment]: # (!!!)
+![](media/Software-supply-chain-NIST-Appendix-F-Figure-2.png)
+
+[comment]: # (!!! data-transition="slide-in none-out")
 
 ![](media/Software-supply-chain-NIST-Appendix-F-Figure-2b.png)
 
-[comment]: # (!!!)
+[comment]: # (!!! data-transition="fade-in slide-out")
 
 ### Second-party software
 

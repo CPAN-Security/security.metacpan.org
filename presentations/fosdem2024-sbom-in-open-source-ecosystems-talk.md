@@ -36,23 +36,36 @@ Note:
 * My offer: **Open Source Supply Chain perspective**
 
 
-
 [comment]: # (!!!)
 
-## Why ask this question?
+### "Supply-chain" Developers say…
 
+"Why should I care about SBOMs?"
 
-[comment]: # (!!!)
+"This is not my problem"
 
-- End users **obliged** comply to new laws
-
-- Authoritative + up-to-date **metadata must be made available**, to…
-    - All the good things!
+"Maybe if you pay me"
 
 
 [comment]: # (!!!)
 
-### What many think SW development looks like
+## Reality arrives…
+
+[comment]: # (!!!)
+
+- End users are **obliged** comply to new regulation and demands
+    - …or get fined
+
+- They **require authoritative + up-to-date metadata**, to…
+    - Do all the good things! (Pedigree, provenance, etc. etc.)
+
+
+[comment]: # (!!!)
+
+### What does SW development look like?
+
+
+[comment]: # (!!!)
 
 ![](media/Software-supply-chain-NIST-Appendix-F-Figure-2.png)
 
@@ -65,61 +78,41 @@ Source: [NIST Software Supply Chain Security Guidance](https://www.nist.gov/itl/
 
 * No supply chain!
 * "Third party software"
-* No Open Source communities & processes
+* No FOSS **Communities** or **Processes**
 
 
 [comment]: # (!!!)
 
-### What's the response?
-
-"Why should I care?"
-
-"This is not my problem"
-
-
+### A simplified supply chain
 
 [comment]: # (!!!)
-
-### A simplified supply chain I
 
 ![](media/supply-chain-1.png)
 
 
-[comment]: # (!!!)
-
-### A simplified supply chain I
+[comment]: # (|||)
 
 ![](media/supply-chain-1b.png)
 
 
-[comment]: # (!!!)
-
-### A simplified supply chain II
+[comment]: # (|||)
 
 ![](media/supply-chain-2.png)
 
-[comment]: # (!!!)
-
-### A simplified supply chain II
+[comment]: # (|||)
 
 ![](media/supply-chain-2b.png)
 
-[comment]: # (!!!)
-
-### A simplified supply chain II
+[comment]: # (|||)
 
 ![](media/supply-chain-2c.png)
 
-
-[comment]: # (!!!)
-
-### A simplified supply chain III
+[comment]: # (|||)
 
 ![](media/supply-chain-3.png)
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
-### A simplified supply chain III
 
 ![](media/supply-chain-3b.png)
 

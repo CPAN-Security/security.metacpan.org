@@ -112,12 +112,6 @@ The Author _can_ be a group of people, though a single point of responsibility i
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective.
 See below).
 
-### Steward
-A type of Author with reduced responsibilities.
-Ensures the ongoing quality of the code.
-Typically only works on security issues and bugfixes.
-Usually doesn't work on new features.
-Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.
 
 ### Custodian
 A type of Steward with reduced responsibilities.
@@ -138,16 +132,35 @@ Works mainly with the Packager, and is downstream of the Author.
 This task is only necessary if upstream (Author, Steward or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g.
 when backporting of fixes are needed due to downstream version pinning).
 
+> Patchers (which is a role that usually is held by the same person as the Packager), may select and apply patches before building.
+> These patches may include backports of features, security fixes or other accommodations necessary for distributing multiple releases of the same upstream project, but within publishing constraints of the distribution (e.g. LTS releases, or whatever).
+> A packager can both be working in-house (e.g. your business) or for the ecosystem provider (e.g. Debian).
+
+
 ## Packager
 Builds and creates native packages from a dist received from upstream, optionally with patches applied from the Patcher.
 Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
+
+> Packagers take upstream components from upstream source (e.g. Authors repositories, or Custodian's if an project is dormant), and build and install them into a custom environment for producing objects in their own packaging ecosystem.
+> E.g. someone in the #debian-perl group downloads, builds, tests and installs something from CPAN, but instead of doing a regular install, they us tooling like `dh-make-perl` to produce a custom installation directory that can be incorporated into a .deb archive.
+> They may want to store build environment metadata in the accompanying SBOM file.
+
 
 ## Curator
 Selects or pins which releases are suitable for use within an organization.
 Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bugfixes and security updates.
 
+> Curators may select which built package is distributed where.
+> Curators may exist both in-house, in order to keep an eye on what is being automatically installed there, or they may make the decisions that happen on the ecosystem provider side.
+> The Curator role can by executed by individuals who do other tasks too.
+
+
 ## Distributor
 Ensures the availability of packages, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
+
+> Distributors take what Packagers, Patchers and Curators produce, and ensure they are made available in a reliable way for downstream users (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or whatever).
+> If SBOM objects are made available in parallell with the packages in question, they make sure this happens.
+
 
 ## Developer
 Uses packages and components as dependencies in their own project or product.
@@ -166,6 +179,14 @@ The software in use in production, by a user.
 ## Auditor / Compliance
 Verifies that all necessary metadata is available, up-to-date and made use of.
 
+# Other terms
+
+## Steward
+~~A type of Author with reduced responsibilities.
+Ensures the ongoing quality of the code.
+Typically only works on security issues and bugfixes.
+Usually doesn't work on new features.
+Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.~~
 
 # License
 

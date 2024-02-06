@@ -152,16 +152,12 @@ Source: [NIST Software Supply Chain Security Guidance](https://www.nist.gov/itl/
 
 [comment]: # (!!!)
 
-## How to make SBOMs become first-class citizens in Open Source ecosystems
-
-
-[comment]: # (!!!)
-
 ### How to make SBOMs become first-class citizens in Open Source ecosystems
 
+
 [comment]: # (!!!)
 
-* Treat Open Source ecosystems as a first-class citizen in the SBOM ecosystems!
+### Make Open Source ecosystems first-class citizens in the SBOM communities!
 
 [comment]: # (!!!)
 

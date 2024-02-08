@@ -17,8 +17,9 @@ Corrections or improvements to this text can be filed in the [security.metacpan.
 
 For this check-list, we take inspiration from the following sources.
 
-* https://opensource.com/article/22/11/community-metrics
-* http://neilb.org/2013/08/07/adoptme.html
+* [CHAOSS Community metrics](https://opensource.com/article/22/11/community-metrics)
+* [PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) with [commentary](http://neilb.org/2013/08/07/adoptme.html)
+* The [Deming Principles](https://www.uthsc.edu/its/business-productivity-solutions/lean-uthsc/deming.php) on managing quality.
 * …
 
 
@@ -54,8 +55,24 @@ These items apply to all dependencies that use CPAN as a publishing and/or distr
 ### Project infrastructure
 
 1. Relevant, well-developed and functional test-suite
-2. …
+2. Active use of Software Composition Analysis tools
+3. …
 
+### Coding practices
+
+1. Correct and updated dependency list, that takes known vulnerabilities into account
+    * Author
+    * Build
+    * Test
+    * Runtime
+2. Avoid compiled code from untrusted sources
+3. Avoid code generation at build time, test time or runtime
+    * Code generators can be exploited too
+4. Avoid build and test plugins
+    * Plugins may be enabled unintentionally, and thereby create difficult-to-detect attack vectors
+5. Developer focus on code understandability
+    * Obscure or difficult-to-understand code makes exploit detection more difficult, and therefore a better target for attackers
+6. …
 
 ## Options for risk mitigation
 

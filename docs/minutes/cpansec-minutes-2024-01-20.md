@@ -1,6 +1,11 @@
-# Minutes
+---
+layout: page
+---
 
-Fill in during meeting, to save time.
+# Minutes 2024-01-20
+
+Meeting was on Saturday January 20th 2024, at 12:00 UTC.
+
 
 ### Attendees & regrets
 

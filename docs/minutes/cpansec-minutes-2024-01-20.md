@@ -22,7 +22,6 @@ Meeting was on Saturday January 20th 2024, at 12:00 UTC.
 - @sjn; PackageURL ready to move forward to spec
 - @stigtsp; Transparancy logs work ongoing
 - @stigtsp; Vulnerability index work ongoing. Sepratate conversation with @garu wanted
-- @sjn, @tux; Initial thoughts ongoing;
 - @sjn; CPAN year of Secure by Default: Text in progress
 - @stigtsp; Other work: Securing Mojolicious
 - @stigtsp; Other work: Looking for insecure dependencies on CPAN, with CVEs

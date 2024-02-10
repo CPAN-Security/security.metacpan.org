@@ -6,6 +6,7 @@ description: >-
 baseurl: ""
 url: "https://security.metacpan.org"
 domain: security.metacpan.org
+show_excerpts: true
 
 header_pages:
   - docs/report.md

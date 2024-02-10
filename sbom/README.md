@@ -39,65 +39,78 @@ stateDiagram-v2
     state "Auditor – Internal" as auditor_internal
     state "Auditor – External" as auditor_external
 
-	[*] --> ecosystem_author
+    [*] --> ecosystem_author
 
-	state "Author Environment" as ecosystem_author {
-    	[*] --> author
+    state "Author Environment" as ecosystem_author {
+        [*] --> author
     }
 
     author --> ecosystem_repo
     author --> ecosystem_lang
 
-	note right of ecosystem_author
-		Publishes Open Source
-	end note
+    note right of ecosystem_author
+        Publishes Open Source
+        Has a project development lifecycle
+    end note
 
     state "Language Ecosystem" as ecosystem_lang {
-    	[*] --> distributor_lang
+        [*] --> distributor_lang
     }
 
-	distributor_lang --> ecosystem_developer
-	distributor_lang --> ecosystem_package
+    distributor_lang --> ecosystem_developer
+    distributor_lang --> ecosystem_package
 
-	state "Collaboration Ecosystem" as ecosystem_repo {
-		[*] --> distributor_repo
-	}
+    note right of ecosystem_lang
+        CPAN, PyPI,
+        NPM, etc.
+    end note
 
-   	distributor_repo --> ecosystem_package
+    state "Collaboration Ecosystem" as ecosystem_repo {
+        [*] --> distributor_repo
+    }
+
+    distributor_repo --> ecosystem_package
     distributor_repo --> ecosystem_developer
 
-	state "Package Ecosystem" as ecosystem_package {
-		[*] --> patcher
-		[*] --> packager
-    	patcher --> packager
-    	packager --> curator
-    	packager --> distributor_package
-    	curator --> distributor_package
-	}
+    note right of ecosystem_repo
+        Github, Gitlab, Codeberg,
+        Bitbucket etc.
+    end note
 
-	note right of ecosystem_package
-		May have downstream
-		package ecosystems
-	end note
+    state "Package Ecosystem" as ecosystem_package {
+        [*] --> patcher
+        [*] --> packager
+        patcher --> packager
+        packager --> curator
+        packager --> distributor_package
+        curator --> distributor_package
+    }
+
+    note right of ecosystem_package
+        May have downstream
+        package ecosystems
+    end note
 
     distributor_package --> ecosystem_developer
 
-	state "Developer Environment" as ecosystem_developer {
-		[*] --> developer
-	}
+    state "Developer Environment" as ecosystem_developer {
+        [*] --> developer
+    }
 
-	note right of ecosystem_developer
-		Does NOT publish Open Source
-	end note
+    note right of ecosystem_developer
+        Does NOT publish Open Source
+        Has a project development lifecycle
 
-	developer --> auditor_internal
+    end note
+
+    developer --> auditor_internal
     developer --> ecosystem_prod
     developer --> [*]
 
-	state "Production Environment" as ecosystem_prod {
-		[*] --> deployer
-    	deployer --> scanner
-	}
+    state "Production Environment" as ecosystem_prod {
+        [*] --> deployer
+        deployer --> scanner
+    }
 
     deployer --> consumer
     deployer --> auditor_external
@@ -227,8 +240,10 @@ Typically only works on security issues and bugfixes.
 Usually doesn't work on new features.
 Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.~~
 
+> NOTE: Steward gets a specific defined meaning in the Cyber Resilience Act, so until this defenition is established, we'll avoid using the term.
+
 # License
 
-This is © Salve J.  Nilsen <sjn@cpan.org>.
+This is © Salve J. Nilsen <sjn@cpan.org>.
 Some rights reserved.
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.

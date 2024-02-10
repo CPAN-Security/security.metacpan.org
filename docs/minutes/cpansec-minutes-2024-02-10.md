@@ -47,7 +47,11 @@ Meeting was on Saturday February 10th 2024, at 15:00 UTC.
 
 ### Upcoming events and deadlines
 
-1. …
+
+1. TPRF Community Representatives meeting 2023-02-16 @ 17:30 UTC on TPRF Slack
+2. PTS 2024 (TBD)
+3. German Sovereign Tech Fund, Application deadline in Q2 2024
+4. …
 
 ### Next meeting organizer & secretary
 

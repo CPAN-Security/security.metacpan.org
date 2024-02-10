@@ -4,7 +4,6 @@ title: Report Security Issue
 toc: true
 ---
 
-
 ## I've found a vulnerability in Perl
 
 The Perl project takes security issues seriously. Please refer to the [Perl
@@ -22,13 +21,14 @@ Please contact our security team on
 [cpan-security@perl.org](mailto:cpan-security@perl.org) privately, with the
 following information:
 
-- Distribution name, version, and package URL
+- Distribution name, version, and download URL
 - Description of malicious behavior
 - Relevant logs, packet capture, code lines, screenshots or other context
 
 Examples of malware reports include: typo squatting, dependency confusion,
 exfiltration of private data, code obfuscation, outbound connections to
 malicious command and control servers, etc.
+
 
 ## I've found a vulnerability in a distribution on CPAN
 
@@ -49,12 +49,13 @@ Please provide a detailed description of the steps required to reproduce the
 vulnerability.
 
 The following information is useful:
-- Distribution name, version and package URL
+- Distribution name, version and download URL (required)
 - Proof of concept code, or a description on how to reproduce
 - Logs, code lines, screenshots and other context if relevant
 
 Also consider proposing a date for public disclosure, this is usually 30 days or
 longer.
+
 
 ### Step 2: Contact the Author
 
@@ -71,7 +72,7 @@ When authors receive a vulnerability reports, they will usually need some time
 to:
 
 - Confirm the problem and assess severity
-- Check the code to find any potential similar problems.
+- Check the code to find any potential similar problems
 - Prepare fixes and coordinate a release
 
 Please allow for some time for authors and potential downstream distributions to
@@ -79,6 +80,7 @@ coordinate fixes before going public. It is not unusual for
 authors to request extentions to any proposed disclosure date.
 
 
+#### If the Author is unresponsive
 
 > If the author is unresponsive, or you are concerned that the issue is not being
 > handled, or for other reasons, then please send the report to
@@ -97,7 +99,4 @@ following actions:
 
 1. Add a public record to CPAN vulnerability databases
 2. Register a CVE number, if relevant
-
-
-
 

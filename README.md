@@ -1,12 +1,14 @@
 Welcome to the [CPAN Security Working Group](https://security.metacpan.org/).
 This is a community effort for supporting and responding to security incidents on CPAN – the Comprehensive Perl Archive Network.
 
-This group also cares about security-related topics around CPAN distributions, the CPAN/PAUSE infrastructure, and about tooling and the ecosystem in general. Over time, we aim to improve supply chain security, make CPAN a more secure and trustworthy publishing platform, and more.
+This group also cares about security-related topics around CPAN distributions, the CPAN/PAUSE infrastructure, and about tooling and the ecosystem in general.
+Over time, we aim to improve supply chain security, make CPAN a more secure and trustworthy publishing platform, and more.
 
 
 ## Contact us
 
-On CPAN, improving security is a volunteer-driven collaborative effort. If you care and would like to make a contribution, you can…
+On CPAN, improving security is a volunteer-driven collaborative effort.
+If you care and would like to make a contribution, you can…
 
 * Join us in our IRC channel [#cpan-security](ircs://irc.perl.org/#cpan-security) on irc.perl.org
 * Send a mail to &lt;cpan-security&#64;perl.org&gt;

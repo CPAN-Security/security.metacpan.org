@@ -13,16 +13,16 @@ header_pages:
   - docs/README.md
   - presentations/README.md
 
-paginate: 10
+paginate: 4
 paginate_path: "/news/all/page:num"
-
-
 
 # Build settings
 theme: minima
 
 minima:
   skin: classic
+  date_format: "%Y-%m-%d %H:%M"
+
 
 plugins:
   - jekyll-seo-tag
@@ -32,8 +32,6 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-titles-from-headings
-
-#  - jekyll-feed
 
 social_links:
   - { platform: github,     user_url: "https://github.com/CPAN-Security" }

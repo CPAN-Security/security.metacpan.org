@@ -1,6 +1,8 @@
 ---
 Title: CPAN Security Group
-layout: page
+layout: home
+list_title: CPAN Security News
+toc: false
 ---
 Welcome to the [CPAN Security Working Group](https://security.metacpan.org/).
 This is a community effort for supporting and responding to security incidents on CPAN – the Comprehensive Perl Archive Network.

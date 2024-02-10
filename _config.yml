@@ -2,7 +2,7 @@ title: CPAN-SEC
 author: CPAN Security Outreach & Information Project
 #email: cpan-security@perl.org
 description: >-
-  CPAN Security Working Group (CPAN-SEC)
+  CPAN Security Group (CPANSec)
 baseurl: ""
 url: "https://security.metacpan.org"
 domain: security.metacpan.org

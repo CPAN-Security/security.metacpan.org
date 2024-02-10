@@ -3,7 +3,7 @@ layout: page
 title: Contributing
 ---
 
-If you're giving a presentation that is related to the CPAN-SEC WG, please add it to the README.md file.
+If you're giving a presentation that is related to CPANSec, please add it to the README.md file.
 
 You may also write your slides in a markdown file (see examples in this directory), and have it updated when running `make` here.
 

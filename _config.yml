@@ -1,8 +1,8 @@
-title: CPAN-SEC
+title: CPANSec
 author: CPAN Security Outreach & Information Project
 #email: cpan-security@perl.org
 description: >-
-  CPAN Security Working Group (CPAN-SEC)
+  CPAN Security Group (CPANSec)
 baseurl: ""
 url: "https://security.metacpan.org"
 domain: security.metacpan.org
@@ -13,6 +13,11 @@ header_pages:
   - docs/README.md
   - presentations/README.md
 
+paginate: 10
+paginate_path: "/news/all/page:num"
+
+
+
 # Build settings
 theme: minima
 
@@ -21,6 +26,13 @@ minima:
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-titles-from-headings
+
 #  - jekyll-feed
 
 social_links:

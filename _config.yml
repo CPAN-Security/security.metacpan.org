@@ -22,7 +22,7 @@ theme: minima
 
 minima:
   skin: classic
-  date_format: "%Y-%m-%d %H:%M"
+#  date_format: "%Y-%m-%d %H:%M"
 
 
 plugins:

@@ -10,6 +10,7 @@ excerpt: Between Dec 2023 and Jan 2024, vulnerabilities in Spreadsheet::ParseExc
 Between Dec 2023 and Jan 2024, vulnerabilities in Spreadsheet::ParseExcel and Spreadsheet::ParseXLSX were reported to the CPAN Security Group (CPANSec).
 This document describes the timeline and analysis of events.
 
+
 ### CVE-2023-7101: Spreadsheet::ParseExcel arbitrary code execution vulnerability
 
 Đình Hải Lê discovered an arbitrary code execution (ACE) vulnerability in the Perl module Spreadsheet::ParseExcel, version 0.65 and earlier.
@@ -34,6 +35,7 @@ A detailed write up of the vulnerability and PoC is available at https://github.
 
 It is not known whether this vulnerability was used to cause a denial of service on a production server.
 
+
 ### CVE-2024-23525: Spreadsheet::ParseXLSX XML external entity attack vulnerability
 
 An Pham discovered a XML external entity injection (XXE) vulnerability in Spreadsheet::ParseXLSX version 0.29 and earlier, enabling an attacker to interact with the system 
@@ -43,7 +45,8 @@ The PoC also includes an example that would cause a DoS.
 
 Configuring an XML parser to allow loading external entities is dangerous and should never be the default.
 
-A detailed write up of the vulnerability and PoC is available at ttps://gist.github.com/phvietan/d1c95a88ab6e17047b0248d6bf9eac4a
+A detailed write up of the vulnerability and PoC is available at https://gist.github.com/phvietan/d1c95a88ab6e17047b0248d6bf9eac4a
+
 
 ## Timeline
 
@@ -71,6 +74,7 @@ On June 21st, the PoC published by Đình Hải Lê was referenced by a huntr.co
 Unfortunately, there is no indication that the owners of either the Spreadsheet::ParseExcel git repository or the Spreadsheet::ParseXLSX git repository saw either of the issues.
 
 In addition, there were no issues logged at https://github.com/runrig/spreadsheet-parseexcel, which was the GitHub repository referenced in version 0.65 of the Spreadsheet::ParseExcel module on MetaCPAN, nor were any issues logged on Request Tracker, the traditional issue tracker for Perl modules, https://rt.cpan.org/Dist/Display.html?Queue=Spreadsheet-ParseExcel or https://rt.cpan.org/Public/Dist/Display.html?Name=Spreadsheet-ParseXLSX.
+
 
 ### December 2023
 
@@ -115,7 +119,9 @@ On January 18th, CPANSec notifies oss-security mailing list and Michael Daum rel
 Based on the information provided by Đình Hải Lê, and publicly available information, it appears that Đình Hải Lê and/or other parties followed a responsible disclosure process.
 Attempts to contact the previous maintainers were followed by a reasonable waiting period before the PoC was published.
 After the PoC was published huntr.com also attempted to contact the previous maintainers.
-Resolution
+
+
+## Resolution
 
 After CVE-2023-7101 was issued, a patch to fix the vulnerability was written by Daniel Ruoso (https://github.com/ruoso) and submitted as a pull request to the GitHub repository.
 Often, in the case of modules with absent or unresponsive maintainers (Appendix A), a patch could languish requiring a user to apply the patch manually.
@@ -150,6 +156,7 @@ To that end, the CPANSec is attempting to increase its profile so that reporters
 
 CPANSec can be found at https://security.metacpan.org/.
 
+
 ### CPAN Module Maintainers
 
 #### FIRSTCOME
@@ -162,6 +169,7 @@ Only the FIRSTCOME permission allows an author to transfer ownership or grant pe
 #### COMAINT
 
 The COMAINT permission allows a CPAN author to issue a release of the module.
+
 
 ### Absent/Unresponsive Maintainers
 

@@ -1,5 +1,5 @@
 ---
-Title: CPAN Security Group
+title: CPAN Security Group
 layout: home
 list_title: CPAN Security News
 toc: false

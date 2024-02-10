@@ -4,9 +4,10 @@ published: True
 toc: true
 title: Vulnerable Spreadsheet Parsing modules
 tags: cve timeline report
+excerpt: Between Dec 2023 and Jan 2024, vulnerabilities in Spreadsheet::ParseExcel and Spreadsheet::ParseXLSX were reported to the CPAN Security Group (CPANSec). This document describes the timeline and analysis of events.
 ---
 
-Between Dec 2023 and Jan 2024, vulnerabilities in Spreadsheet::ParseExcel and Spreadsheet::ParseXLSX were reported to the CPAN Security Working Group (CPANSec).
+Between Dec 2023 and Jan 2024, vulnerabilities in Spreadsheet::ParseExcel and Spreadsheet::ParseXLSX were reported to the CPAN Security Group (CPANSec).
 This document describes the timeline and analysis of events.
 
 ### CVE-2023-7101: Spreadsheet::ParseExcel arbitrary code execution vulnerability
@@ -46,7 +47,7 @@ A detailed write up of the vulnerability and PoC is available at ttps://gist.git
 
 ## Timeline
 
-### October 2022 to June 2023
+### October 2022 to November 2023
 
 On October 23rd, Đình Hải Lê (https://github.com/haile01) started to investigate the Spreadsheet::ParseExcel module after noticing that `eval` was called in the source code.
 
@@ -85,7 +86,7 @@ On December 24th, Mandiant (a Google owned Incident Response company) issued CVE
 
 On December 27th, the Cybersecurity and Infrastructure Security Agency (CISA) emailed all prior maintainers of the Spreadsheet::ParseExcel module.
 
-On December 28th, the CISA forwarded the email to the CPAN Security Working Group mailing list.
+On December 28th, the CISA forwarded the email to the CPAN Security Group mailing list.
 CPANSec then took the following steps during the next 24 hours:
 
 * CPANSec reached out to a former maintainer, John McNamara, who still had primary permissions (FIRSTCOME) which would allow him to release an updated version.

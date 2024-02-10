@@ -1,8 +1,31 @@
-# A Simplified Open Source Supply Chain
+---
+layout: page
+title: SBOM Supply-chain Roles
+description: Roles in a supply-chain, that care about SBOM metadata
+toc: true
+---
+# A Simplified Open Source Supply Chain with SBOMs
+
+## Document status: ⚠️  DRAFT
+
+What you see here is a DRAFT for the SBOM topic, used by the CPAN Security Working Group (CPAN-SEC). Until published by a founding member, all of the points and ideas below are suggested, and open to revision, deletion or amending.
+
+Discussion on IRC: ircs://irc.perl.org/#cpan-security
+
+
+# SBOM Roles
+
+What roles and purposes do SBOMs have in the supply chain?
+
+In a supply chain, we can expect to meet many people filling distinct roles.
+Here is a list of them, where we try to distinguish clearly between the different roles.
+Any given person can be expected to have one or more roles, and switch between them as needed.
+Common for all roles, is that they have some need for SBOM documents - either to ensure they are correct (create, update), passed on (distribute) or ensure that they match the accompanying software (verify).
+
 
 ```mermaid
 stateDiagram-v2
-    state "Author\nCustodian\nSteward\nPublisher" as author
+    state "Author\nCustodian\nPublisher" as author
     state "Distributor — Repository" as distributor_repo 
     state "Distributor — Language" as distributor_lang 
     state "Distributor — Package" as distributor_package
@@ -28,17 +51,6 @@ stateDiagram-v2
 	note right of ecosystem_author
 		Publishes Open Source
 	end note
-
-	%%note left of ecosystem_author
-	%%	Name
-	%%	Version
-	%%	Download_location
-	%%	Unique_id (PURL)
-	%%	Code_repo
-	%%	Code_revision
-	%%	SBOM_type
-	%%	Vuln_vers_and_locs
-	%%end note
 
     state "Language Ecosystem" as ecosystem_lang {
     	[*] --> distributor_lang
@@ -92,13 +104,6 @@ stateDiagram-v2
 
 ```
 
-# SBOM::Roles
-
-In a supply chain, we can expect to meet many people filling distinct roles.
-Here is a list of them, where we try to distinguish clearly between the different roles.
-Any given person can be expected to have one or more roles, and switch between them as needed.
-Common for all roles, is that they have some need for SBOM documents - either to ensure they are correct (create, update), passed on (distribute) or ensure that they match the accompanying software (verify).
-
 ## Owner
 
 Has the legal owership rights for the dist (e.g a business, or the author). May decide the name of the project, or other parameters for (or on behalf of) the Author.
@@ -112,6 +117,13 @@ The Author _can_ be a group of people, though a single point of responsibility i
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective.
 See below).
 
+    Name
+    Version
+    Unique_id (PURL)
+    Code_repo
+    Code_revision
+    SBOM_type
+    Vuln_vers_and_locs
 
 ### Custodian
 A type of Steward with reduced responsibilities.
@@ -122,9 +134,6 @@ Works with the Author primarily, and may take responsibility on their behalf whe
 ### Publisher
 Places the component on an ecosystem publishing platform, on behalf of the Author, Steward or Custodian.
 Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.
-
-## RepositoryHost (?)
-Someone that offers a public repository to Authors, so they may cooperate and share ongoing work in public.
 
 ## Patcher
 Applies security and bugfixes to distributed native packages.
@@ -161,11 +170,41 @@ Ensures the availability of packages, that they are indexed correctly, and that 
 > Distributors take what Packagers, Patchers and Curators produce, and ensure they are made available in a reliable way for downstream users (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or whatever).
 > If SBOM objects are made available in parallell with the packages in question, they make sure this happens.
 
+### Language Ecosystem
+
+A language ecosystem hosts, indexes and distributes compontnents specific for a programming language.
+Examples include CPAN (Perl), PyPI (Python), NPM (Node/JS) and others.
+
+    Download_location
+
+### Collaboration Ecosystem
+
+A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
+Examples for this include github.com, gitlab.com, codeberg.org, gitea.com and others.
+
+    Download_location
+
+### Package Ecosystem
+
+A service that makes components repackaged for a specific OS distribution available for easy download and use.
+Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, RedHat, SuSE), Ports (FreeBSD, OpenBSD) and others.
+
+    Download_location
+
 
 ## Developer
 Uses packages and components as dependencies in their own project or product.
 A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
 The main difference from an Author is that a Developer doesn't publish their work as Open Source.
+
+    Name
+    Version
+    Unique_id (PURL)
+    Code_repo
+    Code_revision
+    SBOM_type
+    Vuln_vers_and_locs
+
 
 ## Deployer
 Final preparation and installation of the software into production environment.

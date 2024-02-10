@@ -49,7 +49,7 @@ Meeting was on Saturday February 10th 2024, at 15:00 UTC.
 
 
 1. TPRF Community Representatives meeting 2023-02-16 @ 17:30 UTC on TPRF Slack
-2. PTS 2024 (TBD)
+2. PTS 2024 ([April 25-28 2024 in Lisbon, Portugal](https://blogs.perl.org/users/book/2024/02/announcing-the-perl-toolchain-summit-in-2024.html), organized by @garu, @book, @elbeho and @neilb)
 3. German Sovereign Tech Fund, Application deadline in Q2 2024
 4. …
 

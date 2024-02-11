@@ -6,7 +6,10 @@ toc: true
 
 ## Document status: ⚠️  DRAFT
 
-Please contribute to this document by joining our IRC channel to offer feedback!
+What you see here is a DRAFT of the Glossary used by the CPAN Security Group (CPANSec).
+Until published by a founding member, all of the points and ideas below are suggested, and open to revision, deletion or amending.
+
+Discussion on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 
 ## Glossary
 

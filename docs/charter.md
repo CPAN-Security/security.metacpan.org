@@ -5,14 +5,12 @@ description: CPAN Security Group Charter
 toc: true
 ---
 
-**Document status:** ⚠️  DRAFT
----------------------------------
+## Document status: ⚠️  DRAFT
 
-What you see here is a **DRAFT** for the charter of a CPAN Security Group (_CPANSec_), to be set up in 2023. Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
+What you see here is a **DRAFT** for the charter of a CPAN Security Group (_CPANSec_), to be set up in 2023.
+Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
 
-Discussion on IRC: [ircs://irc.perl.org/#cpan-security](ircs://irc.perl.org/#cpan-security)
-
----------------------------------
+Discussion on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 
 
 ## Purpose

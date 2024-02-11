@@ -302,7 +302,7 @@ We need volunteers!
 
 ### Find us!
 
-ircs://ssl.irc.perl.org:7062/#cpan-security
+[ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 
 https://security.metacpan.org/
 

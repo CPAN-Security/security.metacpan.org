@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SBOM Supply-chain Roles
-description: Roles in a supply-chain, that care about SBOM metadata
+description: Roles in a supply-chain that care about SBOM metadata
 toc: true
 ---
 # A Simplified Open Source Supply Chain with SBOMs
@@ -244,6 +244,6 @@ Works with the Author primarily, and may take responsiblity on their behalf when
 
 # License
 
-This is © Salve J. Nilsen <sjn@cpan.org>.
+This document is © Salve J. Nilsen <sjn@cpan.org>.
 Some rights reserved.
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.

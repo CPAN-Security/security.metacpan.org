@@ -27,17 +27,18 @@ Discussion on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.
 > The general classification of a software components architecture.
 > Examples of component types include libraries, frameworks, applications, containers, and operating systems.
 
-### CycloneDX
+### CycloneDX ⚠️
 
 > An OWASP managed software bill of materials specification designed to be lightweight and security-focused.
 
-### Direct dependency
+### Direct dependency ⚠️
 
 > A software component that is referenced by a program itself.
+> For indirect dependenceis, see [Transitive dependency](#transitive-dependency).
 
-### Package manager
+### Package manager ⚠️
 
-> A distribution mechanism that makes software artifacts discoverable by requesters.
+> A distribution mechanism that makes software artifacts discoverable by ~~requesters~~ users of a specific package ecosystem.
 
 ### Package URL (PURL)
 
@@ -47,14 +48,15 @@ Discussion on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.
 
 > Data which describes the lineage and/or process for which software has been created or altered.
 
-### Point of origin
+### Point of origin ⚠️
 
 > The supplier and associated metadata from which a software component has been procured, transmitted, or received.
-> Package repositories, release distribution platforms, and version control history are examples of various points of origin.
+> ~~Package repositories, release distribution platforms, and version control history are examples of various points of origin.~~
 
-### Procurement
+### Procurement ⚠️
 
 > The process of agreeing to terms and acquiring software or services for later use.
+> This includes agreeing to Open Source licenses.
 
 ### Provenance
 
@@ -73,17 +75,18 @@ Discussion on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.
 
 > A Linux Foundation project which produces a software bill of materials specification and a standardized list of open source licenses.
 
-### Third-party component
+### Third-party component ⚠️
 
 > ~~Any software component not directly created including open source, "source available", and commercial or proprietary software.~~
 
 > Any software component not directly created, including "source available", commercial or proprietary software.
 > Open Source software is closer to a "second-party component" as the developer in fact has a legal relationship with the FOSS component project by accepting the project license.
 
-### Transitive dependency
+### Transitive dependency ⚠️
 
 > A software component that is indirectly used by a program by means of being a dependency of a dependency.
 > Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
+> See also [Direct dependency](#direct-dependency).
 
 
 ## License and terms

@@ -1,14 +1,14 @@
 ﻿---
 layout: page
 title: Charter
-description: CPAN Security WG Charter
+description: CPAN Security Group Charter
 toc: true
 ---
 
 **Document status:** ⚠️  DRAFT
 ---------------------------------
 
-What you see here is a **DRAFT** for the charter of a CPAN Security Working Group (_CPAN-SEC_), to be set up in 2023. Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
+What you see here is a **DRAFT** for the charter of a CPAN Security Group (_CPANSec_), to be set up in 2023. Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
 
 Discussion on IRC: [ircs://irc.perl.org/#cpan-security](ircs://irc.perl.org/#cpan-security)
 
@@ -17,7 +17,7 @@ Discussion on IRC: [ircs://irc.perl.org/#cpan-security](ircs://irc.perl.org/#cpa
 
 ## Purpose
 
-This charter lays out the background, intentions, mandate, scope, means and methods for the CPAN Security Working Group (CPAN-SEC, until a name is decided).
+This charter lays out the background, intentions, mandate, scope, means and methods for the CPAN Security Group (CPANSec).
 This document also explicitly acknowledges a few related organizations and communitites, and spell out responsibility demarcation lines between these, if any.
 
 
@@ -37,7 +37,7 @@ This list has been subject for discussions and revisioning, and the resulting ta
 
 ## Goals and Intentions
 
-The _CPAN-SEC_ intends to be a forum for coordinating and assisting in resolving security issues found on CPAN. This may include:
+The _CPANSec_ intends to be a forum for coordinating and assisting in resolving security issues found on CPAN. This may include:
 
 - Assist authors and third-party developers in dealing with vulnerabilities and general security advisories related to distributions indexed on Perl's package manager, CPAN;
 - Be a contact point for reporters of potential vulnerabilities when authors are unresponsive;
@@ -59,7 +59,7 @@ The _CPAN-SEC_ intends to be a forum for coordinating and assisting in resolving
 
 ### In-scope
 
-The _CPAN-SEC_ concerns itself with a limited domain:
+The _CPANSec_ concerns itself with a limited domain:
 
 - Distributions published on CPAN, including dual-life core modules;
 - Supply chain security, including CPAN/MetaCPAN and PAUSE
@@ -94,7 +94,7 @@ The _CPAN-SEC_ concerns itself with a limited domain:
 
 ### Relations with CPAN Authors and Distributions
 
-The _CPAN-SEC_ has **no power, agency or special privileges over CPAN distributions or their authors**, except for those releases done by the team itself.
+The _CPANSec_ has **no power, agency or special privileges over CPAN distributions or their authors**, except for those releases done by the team itself.
 
 The working group publishes information, advisories and recommendations, but cannot force anyone to follow them.
 Our goal is to facilitate in-good-faith productive and security-focused discussions, with the intention to assist in resolving any issues in a responsible and timely manner.
@@ -102,9 +102,9 @@ Our goal is to facilitate in-good-faith productive and security-focused discussi
 
 ### Relations with commercial, governmental and other non-volunteering entities
 
-_CPAN-SEC_ is a forum to assist in resolving technical issues.
+_CPANSec_ is a forum to assist in resolving technical issues.
 It should be regarded as a contact point for technical staff.
-The _CPAN-SEC_ is not directly associated with any third party and does not do contract work for third parties, nor provides non-technical assistance.
+The _CPANSec_ is not directly associated with any third party and does not do contract work for third parties, nor provides non-technical assistance.
 
 If you represent the management or legal department at your business and/or need to address non-technical issues, we probably cannot help you.
 
@@ -113,8 +113,8 @@ If you represent the management or legal department at your business and/or need
 
 ## Responsibilities and Mandates
 
-While the _CPAN-SEC_ has no formal mandate or responsibilities, it may still seek and accept public statements of support or acknowledgement from the following relevant community stakeholders.
-In addition, the _CPAN-SEC_ may ask for formal mandates from _delegating authorities_ (DA):
+While the _CPANSec_ has no formal mandate or responsibilities, it may still seek and accept public statements of support or acknowledgement from the following relevant community stakeholders.
+In addition, the _CPANSec_ may ask for formal mandates from _delegating authorities_ (DA):
 
 - The Perl Steering Council (DA)
 - The PAUSE core team (DA)
@@ -130,31 +130,31 @@ Public statements of support should not be considered more than an acknowledgmen
 
 Formal mandates, on the other hand are intended to establish clear lines of responsibility and accountability, and with this, function as meaningful steps to establish legitimacy.
 
-If the _CPAN-SEC_ asks for a formal mandate from a delegating authority (DA), the _CPAN-SEC_ members acknowledge that delegating authority may withdraw their mandate at any time if they decide the _CPAN-SEC_ is incapable or unwilling to fulfil its mandate, or in case the CPAN-SEC decides to delegate any received responsibilities to a third party.
+If the _CPANSec_ asks for a formal mandate from a delegating authority (DA), the _CPANSec_ members acknowledge that delegating authority may withdraw their mandate at any time if they decide the _CPANSec_ is incapable or unwilling to fulfil its mandate, or in case the CPANSec decides to delegate any received responsibilities to a third party.
 
-In the unfortunate situation when a delegating authority is disbanded, becomes unresponsive, or transfers/loses its autority to delegate responsibilities to us, the CPAN-SEC members may ask for a formal mandate from a replacing authority.
+In the unfortunate situation when a delegating authority is disbanded, becomes unresponsive, or transfers/loses its autority to delegate responsibilities to us, the CPANSec members may ask for a formal mandate from a replacing authority.
 
 
 ### Formal Mandates
 
-The _CPAN-SEC_ currently has no formal mandates.
+The _CPANSec_ currently has no formal mandates.
 
 
 ### Volunteer participation and Guarantees
 
-The _CPAN-SEC_ consists of volunteers, and while we enter and engage in this forum with good intentions and willingness to assist in constructive dialogue, we reserve the right to withhold assistance to any individuals or institutions who do not conduct themselves in a like-minded manner.
+The _CPANSec_ consists of volunteers, and while we enter and engage in this forum with good intentions and willingness to assist in constructive dialogue, we reserve the right to withhold assistance to any individuals or institutions who do not conduct themselves in a like-minded manner.
 
 This means that the products of our work should be considered _best effort_, and be accepted _AS IS_. We do not offer indemnification, insurance or guarantees.
 
 
-### Joining the _CPAN-SEC_
+### Joining the _CPANSec_
 
-The _CPAN-SEC_ forum itself is moderated and for invited volunteers. To join it, please reach out to our mailing list. (**FIXME**). 
+The _CPANSec_ forum itself is moderated and for invited volunteers. To join it, please reach out to our mailing list. (**FIXME**). 
 
 
 ## Example Means and Methods
 
-The _CPAN-SEC_ activities may include a number of efforts, ongoing activities, security projects, tooling development and managing of publication channels and other resources.
+The _CPANSec_ activities may include a number of efforts, ongoing activities, security projects, tooling development and managing of publication channels and other resources.
 
 Examples of these may include…
 

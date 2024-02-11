@@ -4,7 +4,7 @@ title: Reading List
 toc: true
 ---
 
-This is The CPAN Security Working Group recommended reading list. If you have any additions or improvements, please [open an issue](https://github.com/CPAN-Security/security.metacpan.org/issues), citing this page.
+This is The CPAN Security Group recommended reading list. If you have any additions or improvements, please [open an issue](https://github.com/CPAN-Security/security.metacpan.org/issues), citing this page.
 
 
 ## Software Bills of Materials (SBOM)

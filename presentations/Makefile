@@ -8,9 +8,7 @@ perlkohacon-cpan-sec-lightning-talk/index.html: perlkohacon-cpan-sec-lightning-t
 	mdslides perlkohacon-cpan-sec-lightning-talk.md --include ../media
 
 fosdem2024-sbom-in-open-source-ecosystems-talk/index.html: fosdem2024-sbom-in-open-source-ecosystems-talk.md
-	@echo ––– Slides not published yet –––
 	mdslides fosdem2024-sbom-in-open-source-ecosystems-talk.md --include ../media
-	@echo ––– Slides not published yet –––
 
 fosdem2024-cpan-sec-talk/index.html: fosdem2024-cpan-sec-talk.md
 	mdslides fosdem2024-cpan-sec-talk.md --include ../media

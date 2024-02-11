@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Reading List
+title: Glossary of Terms
 toc: true
 ---
 

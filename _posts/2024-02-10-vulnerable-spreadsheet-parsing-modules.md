@@ -31,7 +31,7 @@ It was allegedly used by UNC4841, a China-backed threat actor, to compromise Bar
 
 Basically, an attacker could create a spreadsheet file and set a merged cell to include all possible cells in the spreadsheet.
 Because of the way vulnerable versions of Spreadsheet::ParseXLSX parsed the file, it would allocate huge amounts of ram to track the merged cell.
-Simply uploading a simple spreadsheet to a web application using the vulnerable module would cause a denial of service as all memory on the server was used. 
+Simply uploading a simple spreadsheet to a web application using the vulnerable module would cause a denial of service as all memory on the server was used.
 
 A detailed write up of the vulnerability and PoC is available at [https://github.com/haile01/perl_spreadsheet_excel_rce_poc/blob/main/parse_xlsx_bomb.md](https://github.com/haile01/perl_spreadsheet_excel_rce_poc/blob/main/parse_xlsx_bomb.md).
 
@@ -70,8 +70,8 @@ huntr follows a responsible disclosure program as documented at [https://huntr.c
 
 On June 21st, the PoC published by Đình Hải Lê was referenced by a huntr.com representative in an issue logged in two Github repositories (Spreadsheet::ParseExcel and Spreadsheet::ParseXLSX) as:
 
-    [https://github.com/doy/spreadsheet-parsexlsx/issues/103](https://github.com/doy/spreadsheet-parsexlsx/issues/103)
-    [https://github.com/jmcnamara/spreadsheet-parseexcel/issues/7](https://github.com/jmcnamara/spreadsheet-parseexcel/issues/7)
+* [https://github.com/doy/spreadsheet-parsexlsx/issues/103](https://github.com/doy/spreadsheet-parsexlsx/issues/103)
+* [https://github.com/jmcnamara/spreadsheet-parseexcel/issues/7](https://github.com/jmcnamara/spreadsheet-parseexcel/issues/7)
 
 Unfortunately, there is no indication that the owners of either the Spreadsheet::ParseExcel git repository or the Spreadsheet::ParseXLSX git repository saw either of the issues.
 
@@ -87,7 +87,7 @@ On December 21st, Barracuda pushed patches to all Barracuda Email Security Gatew
 
 On December 22nd, Barracuda pushed patches to previously compromised ESGs ([https://www.barracuda.com/company/legal/esg-vulnerability](https://www.barracuda.com/company/legal/esg-vulnerability)).
 
-On December 24th, Mandiant (a Google owned Incident Response company) issued CVE-2023-7101 and published a related disclosure, MNDT-2023-0019. ([https://github.com/mandiant/Vulnerability-Disclosures/blame/master/2023/MNDT-2023-0019.md](https://github.com/mandiant/Vulnerability-Disclosures/blame/master/2023/MNDT-2023-0019.md)).
+On December 24th, Mandiant (a Google owned Incident Response company) issued CVE-2023-7101 and published a related disclosure, MNDT-2023-0019 ([https://github.com/mandiant/Vulnerability-Disclosures/blame/master/2023/MNDT-2023-0019.md](https://github.com/mandiant/Vulnerability-Disclosures/blame/master/2023/MNDT-2023-0019.md)).
 
 On December 27th, the Cybersecurity and Infrastructure Security Agency (CISA) emailed all prior maintainers of the Spreadsheet::ParseExcel module.
 
@@ -109,7 +109,8 @@ On January 9th, MITRE publishes their analysis of CVE-2024-22368
 
 On January 10th, CPANSec notifies the oss-security mailing list
 
-On January 17th, Michael Daum released another update to Spreadsheet::ParseXLSX version 0.30 with fixes for a XXE attack vulnerability CVE-XXX. CPANSec requests a CVE identifier.
+On January 17th, Michael Daum released another update to Spreadsheet::ParseXLSX version 0.30 with fixes for a XXE attack vulnerability.
+CPANSec requests a CVE identifier.
 CVE-2024-23525 was issued on January 17th, 2024 for the XXE vulnerability.
 
 On January 18th, CPANSec notifies oss-security mailing list and Michael Daum released Spreadsheet::ParseXLSX version 0.31 which referenced CVE-2024-23525 which had been fixed in version 0.30.

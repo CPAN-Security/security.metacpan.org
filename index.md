@@ -11,12 +11,12 @@ This group also cares about security-related topics around CPAN distributions, t
 Over time, we aim to improve supply chain security, make CPAN a more secure and trustworthy publishing platform, and more.
 
 
-## Contact us
+## Learn more & Contribute
 
 On CPAN, improving security is a volunteer-driven collaborative effort.
 If you care and would like to make a contribution, you can…
 
-* Check out [our main website](https://security.metacpan.org/)
+* Explore [our main website](https://security.metacpan.org/)
 * Join us in our IRC channel [#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security) on irc.perl.org
 * Send a mail to &lt;cpan-security&#64;perl.org&gt;
 * Subscribe to [@cpan_security@perl.social](https://perl.social/profile/cpan_security) on the Fediverse

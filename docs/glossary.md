@@ -4,6 +4,10 @@ title: Glossary of Terms
 toc: true
 ---
 
+## Document status: ⚠️  DRAFT
+
+Please contribute to this document by joining our IRC channel to offer feedback!
+
 ## Glossary
 
 ### Chain of custody

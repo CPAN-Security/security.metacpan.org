@@ -1,3 +1,5 @@
+# CPAN Security Group (CPANSec)
+
 Welcome to the [CPAN Security Group](https://security.metacpan.org/).
 This is a community effort for supporting and responding to security incidents on CPAN – the Comprehensive Perl Archive Network.
 

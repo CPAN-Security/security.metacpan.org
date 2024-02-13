@@ -8,7 +8,8 @@ toc: true
 
 ## Document status: ⚠️  DRAFT
 
-What you see here is a DRAFT for the SBOM topic, used by the CPAN Security Working Group (CPAN-SEC). Until published by a founding member, all of the points and ideas below are suggested, and open to revision, deletion or amending.
+What you see here is a DRAFT for the SBOM topic, used by the CPAN Security Group (CPANSec).
+Until published by a founding member, all of the points and ideas below are suggested, and open to revision, deletion or amending.
 
 Discussion on IRC: ircs://irc.perl.org/#cpan-security
 
@@ -46,6 +47,7 @@ stateDiagram-v2
     }
 
     author --> ecosystem_repo
+    ecosystem_repo --> author
     author --> ecosystem_lang
 
     note right of ecosystem_author
@@ -61,11 +63,11 @@ stateDiagram-v2
     distributor_lang --> ecosystem_package
 
     note right of ecosystem_lang
-        CPAN, PyPI,
-        NPM, etc.
+        Example: CPAN, PyPI, NPM, etc.
+        May be Public or Private
     end note
 
-    state "Collaboration Ecosystem" as ecosystem_repo {
+    state "Public Collaboration Ecosystem" as ecosystem_repo {
         [*] --> distributor_repo
     }
 
@@ -87,8 +89,8 @@ stateDiagram-v2
     }
 
     note right of ecosystem_package
-        May have downstream
-        package ecosystems
+        May have downstream package ecosystems
+        May be Public or Private
     end note
 
     distributor_package --> ecosystem_developer
@@ -100,7 +102,6 @@ stateDiagram-v2
     note right of ecosystem_developer
         Does NOT publish Open Source
         Has a project development lifecycle
-
     end note
 
     developer --> auditor_internal
@@ -119,7 +120,9 @@ stateDiagram-v2
 
 ## Owner
 
-Has the legal owership rights for the dist (e.g a business, or the author). May decide the name of the project, or other parameters for (or on behalf of) the Author.
+Has the legal owership rights for the dist (e.g a business, or the Author).
+May decide the name of the project, or other parameters for (or on behalf of) the Author.
+
 
 ## Author
 
@@ -130,13 +133,15 @@ The Author _can_ be a group of people, though a single point of responsibility i
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective.
 See below).
 
-    Name
-    Version
-    Unique_id (PURL)
-    Code_repo
-    Code_revision
-    SBOM_type
-    Vuln_vers_and_locs
+| Field            | CycloneDX | SPDX |
+| :--------------: | --------- | ---- |
+| Name             |  |  |
+| Version          |  |  |
+| Unique ID (pURL) |  |  |
+| Code repo        |  |  |
+| Code revision    |  |  |
+| SBOM Type        |  |  |
+| Vulnerable versions w/locs |  |  |
 
 ### Custodian
 A type of Steward with reduced responsibilities.
@@ -147,6 +152,7 @@ Works with the Author primarily, and may take responsibility on their behalf whe
 ### Publisher
 Places the component on an ecosystem publishing platform, on behalf of the Author, Steward or Custodian.
 Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.
+
 
 ## Patcher
 Applies security and bugfixes to distributed native packages.
@@ -183,26 +189,36 @@ Ensures the availability of packages, that they are indexed correctly, and that 
 > Distributors take what Packagers, Patchers and Curators produce, and ensure they are made available in a reliable way for downstream users (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or whatever).
 > If SBOM objects are made available in parallell with the packages in question, they make sure this happens.
 
+
 ### Language Ecosystem
 
 A language ecosystem hosts, indexes and distributes compontnents specific for a programming language.
 Examples include CPAN (Perl), PyPI (Python), NPM (Node/JS) and others.
 
-    Download_location
+| Field         | CycloneDX | SPDX |
+| :-----------: | --------- | ---- |
+| Download location |  |  |
+
 
 ### Collaboration Ecosystem
 
 A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
 Examples for this include github.com, gitlab.com, codeberg.org, gitea.com and others.
 
-    Download_location
+| Field         | CycloneDX | SPDX |
+| :-----------: | --------- | ---- |
+| Download location |  |  |
+
 
 ### Package Ecosystem
 
 A service that makes components repackaged for a specific OS distribution available for easy download and use.
 Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, RedHat, SuSE), Ports (FreeBSD, OpenBSD) and others.
 
-    Download_location
+
+| Field         | CycloneDX | SPDX |
+| :-----------: | --------- | ---- |
+| Download location |  |  |
 
 
 ## Developer
@@ -210,26 +226,32 @@ Uses packages and components as dependencies in their own project or product.
 A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
 The main difference from an Author is that a Developer doesn't publish their work as Open Source.
 
-    Name
-    Version
-    Unique_id (PURL)
-    Code_repo
-    Code_revision
-    SBOM_type
-    Vuln_vers_and_locs
+| Field            | CycloneDX | SPDX |
+| :--------------: | --------- | ---- |
+| Name             |  |  |
+| Version          |  |  |
+| Unique ID (pURL) |  |  |
+| Code repo        |  |  |
+| Code revision    |  |  |
+| SBOM Type        |  |  |
+| Vulnerable versions w/locs |  |  |
 
 
 ## Deployer
 Final preparation and installation of the software into production environment.
 
+
 ## Scanner
 Runtime and static security checks; Vulnerability monitoring, etc.
+
 
 ## Consumer
 The software in use in production, by a user.
 
+
 ## Auditor / Compliance
 Verifies that all necessary metadata is available, up-to-date and made use of.
+
 
 # Other terms
 
@@ -241,6 +263,7 @@ Usually doesn't work on new features.
 Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.~~
 
 > NOTE: Steward gets a specific defined meaning in the Cyber Resilience Act, so until this defenition is established, we'll avoid using the term.
+
 
 # License
 

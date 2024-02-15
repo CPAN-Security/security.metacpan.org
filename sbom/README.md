@@ -143,18 +143,23 @@ See below).
 | SBOM Type        |  |  |
 | Vulnerable versions w/locs |  |  |
 
+
 ### Custodian
+
 A type of Steward with reduced responsibilities.
 Cares about the ongoing security of the code.
 Typically only conserned with updating dependencies or applying security fixes.
 Works with the Author primarily, and may take responsibility on their behalf when it comes to security concerns.
 
+
 ### Publisher
+
 Places the component on an ecosystem publishing platform, on behalf of the Author, Steward or Custodian.
 Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.
 
 
 ## Patcher
+
 Applies security and bugfixes to distributed native packages.
 Works mainly with the Packager, and is downstream of the Author.
 This task is only necessary if upstream (Author, Steward or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g.
@@ -166,6 +171,7 @@ when backporting of fixes are needed due to downstream version pinning).
 
 
 ## Packager
+
 Builds and creates native packages from a dist received from upstream, optionally with patches applied from the Patcher.
 Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
 
@@ -175,6 +181,7 @@ Concerns themselves with correct package format and structure, and that package 
 
 
 ## Curator
+
 Selects or pins which releases are suitable for use within an organization.
 Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bugfixes and security updates.
 
@@ -184,6 +191,7 @@ Concerns themselves with both the stability and predictability of components, an
 
 
 ## Distributor
+
 Ensures the availability of packages, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 > Distributors take what Packagers, Patchers and Curators produce, and ensure they are made available in a reliable way for downstream users (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or whatever).
@@ -213,7 +221,7 @@ Examples for this include github.com, gitlab.com, codeberg.org, gitea.com and ot
 ### Package Ecosystem
 
 A service that makes components repackaged for a specific OS distribution available for easy download and use.
-Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, RedHat, SuSE), Ports (FreeBSD, OpenBSD) and others.
+Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD) and others.
 
 
 | Field         | CycloneDX | SPDX |
@@ -222,6 +230,7 @@ Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, RedHat, SuSE), Ports (Fre
 
 
 ## Developer
+
 Uses packages and components as dependencies in their own project or product.
 A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
 The main difference from an Author is that a Developer doesn't publish their work as Open Source.
@@ -238,24 +247,29 @@ The main difference from an Author is that a Developer doesn't publish their wor
 
 
 ## Deployer
+
 Final preparation and installation of the software into production environment.
 
 
 ## Scanner
+
 Runtime and static security checks; Vulnerability monitoring, etc.
 
 
 ## Consumer
+
 The software in use in production, by a user.
 
 
 ## Auditor / Compliance
+
 Verifies that all necessary metadata is available, up-to-date and made use of.
 
 
 # Other terms
 
 ## Steward
+
 ~~A type of Author with reduced responsibilities.
 Ensures the ongoing quality of the code.
 Typically only works on security issues and bugfixes.

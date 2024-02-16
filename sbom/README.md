@@ -6,22 +6,23 @@ toc: true
 ---
 # A Simplified Open Source Supply Chain with SBOMs
 
-## Document status: ⚠️  DRAFT
+> [!CAUTION]
+> ## Document status: :warning: DRAFT
+> What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilites overview, used by the CPAN Security Group (CPANSec).
+> As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
+>
+> - Contribute on Github: https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom
+> - Discuss on IRC: ircs://ssl.irc.perl.org:7063/#cpan-security
 
-What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilites overview, used by the CPAN Security Group (CPANSec).
-As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 
-Discussion on IRC: ircs://ssl.irc.perl.org:7063/#cpan-security
+# Roles
 
-
-# SBOM Roles
-
-What roles and purposes do SBOMs have in the supply chain?
+What roles and responsibilities exist in an open source supplychain, and what do each care about in an SBOM?
 
 In a supply chain, we can expect to meet many people filling distinct roles.
-Here is a list of them, where we try to distinguish clearly between the different roles.
-Any given person can be expected to have one or more roles, and switch between them as needed.
-Common for all roles, is that they have some need for SBOM documents - either to ensure they are correct (create, update), passed on (distribute) or ensure that they match the accompanying software (verify).
+Here is a list where we try to distinguish clearly between them.
+Any single person can be expected to have one or more roles, and switch between them as needed.
+Common for all roles, is that they have some need for SBOM documents - either to ensure they are correct (create, update, rename, delete, assemble), passed on (distribute) or ensure that they are correct, and match the accompanying software (verify).
 
 
 ```mermaid

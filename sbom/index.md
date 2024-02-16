@@ -6,32 +6,36 @@ toc: true
 ---
 # A Simplified Open Source Supply Chain with SBOMs
 
-## Document status: ⚠️  DRAFT
+> [!CAUTION]
+> ## Document status: :warning: DRAFT
+> What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilites overview, used by the CPAN Security Group (CPANSec).
+> As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
+>
+> - Contribute on Github: https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom
+> - Discuss on IRC: ircs://ssl.irc.perl.org:7063/#cpan-security
 
-What you see here is a DRAFT for the SBOM topic, used by the CPAN Security Working Group (CPAN-SEC). Until published by a founding member, all of the points and ideas below are suggested, and open to revision, deletion or amending.
 
-Discussion on IRC: ircs://irc.perl.org/#cpan-security
+# Roles
 
-
-# SBOM Roles
-
-What roles and purposes do SBOMs have in the supply chain?
+What roles and responsibilities exist in an open source supplychain, and what do each care about in an SBOM?
 
 In a supply chain, we can expect to meet many people filling distinct roles.
-Here is a list of them, where we try to distinguish clearly between the different roles.
-Any given person can be expected to have one or more roles, and switch between them as needed.
-Common for all roles, is that they have some need for SBOM documents - either to ensure they are correct (create, update), passed on (distribute) or ensure that they match the accompanying software (verify).
+Here is a list where we try to distinguish clearly between them.
+Any single person can be expected to have one or more roles, and switch between them as needed.
+Common for all roles, is that they have some need for SBOM documents - either to ensure they are correct (create, update, rename, delete, assemble), passed on (distribute) or ensure that they are correct, and match the accompanying software (verify).
 
 
 ```mermaid
 stateDiagram-v2
     state "Author\nCustodian\nPublisher" as author
-    state "Distributor — Repository" as distributor_repo 
-    state "Distributor — Language" as distributor_lang 
-    state "Distributor — Package" as distributor_package
-    state "Patcher" as patcher
-    state "Packager" as packager
-    state "Curator" as curator
+    state "Repository – Distributor" as repo_distributor
+    state "Language — Packager" as language_packager
+    state "Language – Curator" as language_curator
+    state "Language – Distributor" as language_distributor
+    state "Package – Patcher" as package_patcher
+    state "Package — Packager" as package_packager
+    state "Package – Curator" as package_curator
+    state "Package – Distributor" as package_distributor
     state "Developer" as developer
     state "Deployer" as deployer
     state "Scanner\nSecOps\nPentester" as scanner
@@ -43,10 +47,12 @@ stateDiagram-v2
 
     state "Author Environment" as ecosystem_author {
         [*] --> author
+        author --> language_packager
     }
 
     author --> ecosystem_repo
-    author --> ecosystem_lang
+    ecosystem_repo --> author
+    language_packager --> ecosystem_lang
 
     note right of ecosystem_author
         Publishes Open Source
@@ -54,23 +60,26 @@ stateDiagram-v2
     end note
 
     state "Language Ecosystem" as ecosystem_lang {
-        [*] --> distributor_lang
+        [*] --> language_distributor
+        [*] --> language_curator
+        language_curator --> language_distributor
     }
 
-    distributor_lang --> ecosystem_developer
-    distributor_lang --> ecosystem_package
+    language_distributor --> ecosystem_developer
+    language_distributor --> ecosystem_package
 
     note right of ecosystem_lang
-        CPAN, PyPI,
-        NPM, etc.
+        CPAN, PyPI, NPM, etc.
+        May have down-/upstream language ecosystems
+        May be Public or Private
     end note
 
-    state "Collaboration Ecosystem" as ecosystem_repo {
-        [*] --> distributor_repo
+    state "Public Collaboration Ecosystem" as ecosystem_repo {
+        [*] --> repo_distributor
     }
 
-    distributor_repo --> ecosystem_package
-    distributor_repo --> ecosystem_developer
+    repo_distributor --> ecosystem_package
+    repo_distributor --> ecosystem_developer
 
     note right of ecosystem_repo
         Github, Gitlab, Codeberg,
@@ -78,20 +87,20 @@ stateDiagram-v2
     end note
 
     state "Package Ecosystem" as ecosystem_package {
-        [*] --> patcher
-        [*] --> packager
-        patcher --> packager
-        packager --> curator
-        packager --> distributor_package
-        curator --> distributor_package
+        [*] --> package_patcher
+        [*] --> package_packager
+        package_patcher --> package_packager
+        package_packager --> package_curator
+        package_packager --> package_distributor
+        package_curator --> package_distributor
     }
 
     note right of ecosystem_package
-        May have downstream
-        package ecosystems
+        May have downstream package ecosystems
+        May be Public or Private
     end note
 
-    distributor_package --> ecosystem_developer
+    package_distributor --> ecosystem_developer
 
     state "Developer Environment" as ecosystem_developer {
         [*] --> developer
@@ -100,7 +109,6 @@ stateDiagram-v2
     note right of ecosystem_developer
         Does NOT publish Open Source
         Has a project development lifecycle
-
     end note
 
     developer --> auditor_internal
@@ -119,7 +127,9 @@ stateDiagram-v2
 
 ## Owner
 
-Has the legal owership rights for the dist (e.g a business, or the author). May decide the name of the project, or other parameters for (or on behalf of) the Author.
+Has the legal owership rights for the dist (e.g a business, or the Author).
+May decide the name of the project, or other parameters for (or on behalf of) the Author.
+
 
 ## Author
 
@@ -130,25 +140,33 @@ The Author _can_ be a group of people, though a single point of responsibility i
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective.
 See below).
 
-    Name
-    Version
-    Unique_id (PURL)
-    Code_repo
-    Code_revision
-    SBOM_type
-    Vuln_vers_and_locs
+| Field            | CycloneDX | SPDX |
+| :--------------: | --------- | ---- |
+| Name             |  |  |
+| Version          |  |  |
+| Unique ID (pURL) |  |  |
+| Code repo        |  |  |
+| Code revision    |  |  |
+| SBOM Type        |  |  |
+| Vulnerable versions w/locs |  |  |
+
 
 ### Custodian
+
 A type of Steward with reduced responsibilities.
 Cares about the ongoing security of the code.
 Typically only conserned with updating dependencies or applying security fixes.
 Works with the Author primarily, and may take responsibility on their behalf when it comes to security concerns.
 
+
 ### Publisher
+
 Places the component on an ecosystem publishing platform, on behalf of the Author, Steward or Custodian.
 Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.
 
+
 ## Patcher
+
 Applies security and bugfixes to distributed native packages.
 Works mainly with the Packager, and is downstream of the Author.
 This task is only necessary if upstream (Author, Steward or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g.
@@ -160,6 +178,7 @@ when backporting of fixes are needed due to downstream version pinning).
 
 
 ## Packager
+
 Builds and creates native packages from a dist received from upstream, optionally with patches applied from the Patcher.
 Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
 
@@ -169,6 +188,7 @@ Concerns themselves with correct package format and structure, and that package 
 
 
 ## Curator
+
 Selects or pins which releases are suitable for use within an organization.
 Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bugfixes and security updates.
 
@@ -178,62 +198,85 @@ Concerns themselves with both the stability and predictability of components, an
 
 
 ## Distributor
+
 Ensures the availability of packages, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 > Distributors take what Packagers, Patchers and Curators produce, and ensure they are made available in a reliable way for downstream users (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or whatever).
 > If SBOM objects are made available in parallell with the packages in question, they make sure this happens.
+
 
 ### Language Ecosystem
 
 A language ecosystem hosts, indexes and distributes compontnents specific for a programming language.
 Examples include CPAN (Perl), PyPI (Python), NPM (Node/JS) and others.
 
-    Download_location
+| Field         | CycloneDX | SPDX |
+| :-----------: | --------- | ---- |
+| Download location |  |  |
+
 
 ### Collaboration Ecosystem
 
 A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
 Examples for this include github.com, gitlab.com, codeberg.org, gitea.com and others.
 
-    Download_location
+| Field         | CycloneDX | SPDX |
+| :-----------: | --------- | ---- |
+| Download location |  |  |
+
 
 ### Package Ecosystem
 
 A service that makes components repackaged for a specific OS distribution available for easy download and use.
-Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, RedHat, SuSE), Ports (FreeBSD, OpenBSD) and others.
+Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD) and others.
 
-    Download_location
+
+| Field         | CycloneDX | SPDX |
+| :-----------: | --------- | ---- |
+| Download location |  |  |
 
 
 ## Developer
+
 Uses packages and components as dependencies in their own project or product.
 A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
 The main difference from an Author is that a Developer doesn't publish their work as Open Source.
 
-    Name
-    Version
-    Unique_id (PURL)
-    Code_repo
-    Code_revision
-    SBOM_type
-    Vuln_vers_and_locs
+| Field            | CycloneDX | SPDX |
+| :--------------: | --------- | ---- |
+| Name             |  |  |
+| Version          |  |  |
+| Unique ID (pURL) |  |  |
+| Code repo        |  |  |
+| Code revision    |  |  |
+| SBOM Type        |  |  |
+| Vulnerable versions w/locs |  |  |
 
 
 ## Deployer
+
 Final preparation and installation of the software into production environment.
 
+
 ## Scanner
+
 Runtime and static security checks; Vulnerability monitoring, etc.
 
+
 ## Consumer
+
 The software in use in production, by a user.
 
+
 ## Auditor / Compliance
+
 Verifies that all necessary metadata is available, up-to-date and made use of.
+
 
 # Other terms
 
 ## Steward
+
 ~~A type of Author with reduced responsibilities.
 Ensures the ongoing quality of the code.
 Typically only works on security issues and bugfixes.
@@ -241,6 +284,7 @@ Usually doesn't work on new features.
 Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.~~
 
 > NOTE: Steward gets a specific defined meaning in the Cyber Resilience Act, so until this defenition is established, we'll avoid using the term.
+
 
 # License
 

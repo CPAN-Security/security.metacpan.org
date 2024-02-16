@@ -8,10 +8,10 @@ toc: true
 
 ## Document status: ⚠️  DRAFT
 
-What you see here is a DRAFT for the SBOM topic, used by the CPAN Security Group (CPANSec).
-Until published by a founding member, all of the points and ideas below are suggested, and open to revision, deletion or amending.
+What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilites overview, used by the CPAN Security Group (CPANSec).
+As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 
-Discussion on IRC: ircs://irc.perl.org/#cpan-security
+Discussion on IRC: ircs://ssl.irc.perl.org:7063/#cpan-security
 
 
 # SBOM Roles
@@ -27,12 +27,14 @@ Common for all roles, is that they have some need for SBOM documents - either to
 ```mermaid
 stateDiagram-v2
     state "Author\nCustodian\nPublisher" as author
-    state "Distributor — Repository" as distributor_repo 
-    state "Distributor — Language" as distributor_lang 
-    state "Distributor — Package" as distributor_package
-    state "Patcher" as patcher
-    state "Packager" as packager
-    state "Curator" as curator
+    state "Repository – Distributor" as repo_distributor
+    state "Language — Packager" as language_packager
+    state "Language – Curator" as language_curator
+    state "Language – Distributor" as language_distributor
+    state "Package – Patcher" as package_patcher
+    state "Package — Packager" as package_packager
+    state "Package – Curator" as package_curator
+    state "Package – Distributor" as package_distributor
     state "Developer" as developer
     state "Deployer" as deployer
     state "Scanner\nSecOps\nPentester" as scanner
@@ -44,11 +46,12 @@ stateDiagram-v2
 
     state "Author Environment" as ecosystem_author {
         [*] --> author
+        author --> language_packager
     }
 
     author --> ecosystem_repo
     ecosystem_repo --> author
-    author --> ecosystem_lang
+    language_packager --> ecosystem_lang
 
     note right of ecosystem_author
         Publishes Open Source
@@ -56,23 +59,26 @@ stateDiagram-v2
     end note
 
     state "Language Ecosystem" as ecosystem_lang {
-        [*] --> distributor_lang
+        [*] --> language_distributor
+        [*] --> language_curator
+        language_curator --> language_distributor
     }
 
-    distributor_lang --> ecosystem_developer
-    distributor_lang --> ecosystem_package
+    language_distributor --> ecosystem_developer
+    language_distributor --> ecosystem_package
 
     note right of ecosystem_lang
-        Example: CPAN, PyPI, NPM, etc.
+        CPAN, PyPI, NPM, etc.
+        May have down-/upstream language ecosystems
         May be Public or Private
     end note
 
     state "Public Collaboration Ecosystem" as ecosystem_repo {
-        [*] --> distributor_repo
+        [*] --> repo_distributor
     }
 
-    distributor_repo --> ecosystem_package
-    distributor_repo --> ecosystem_developer
+    repo_distributor --> ecosystem_package
+    repo_distributor --> ecosystem_developer
 
     note right of ecosystem_repo
         Github, Gitlab, Codeberg,
@@ -80,12 +86,12 @@ stateDiagram-v2
     end note
 
     state "Package Ecosystem" as ecosystem_package {
-        [*] --> patcher
-        [*] --> packager
-        patcher --> packager
-        packager --> curator
-        packager --> distributor_package
-        curator --> distributor_package
+        [*] --> package_patcher
+        [*] --> package_packager
+        package_patcher --> package_packager
+        package_packager --> package_curator
+        package_packager --> package_distributor
+        package_curator --> package_distributor
     }
 
     note right of ecosystem_package
@@ -93,7 +99,7 @@ stateDiagram-v2
         May be Public or Private
     end note
 
-    distributor_package --> ecosystem_developer
+    package_distributor --> ecosystem_developer
 
     state "Developer Environment" as ecosystem_developer {
         [*] --> developer

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SBOM Supply-chain Roles
-description: Roles in a supply-chain that care about SBOM metadata
+title: Supply-chain SBOM roles
+description: Roles in a supply-chain who care about SBOM metadata
 toc: true
 ---
 # A Simplified Open Source Supply Chain with SBOMs
@@ -15,25 +15,25 @@ toc: true
 > - Discuss on IRC: ircs://ssl.irc.perl.org:7063/#cpan-security
 
 
-# Roles
+## Roles in a supply chain
 
-What roles and responsibilities exist in an open source supplychain, and what do each care about in an SBOM?
+What roles and responsibilities exist in an Open Source supply-chain, and what does each role care about in an SBOM?
 
-In a supply chain, we can expect to meet many people filling distinct roles.
-Here is a list where we try to distinguish clearly between them.
-Any single person can be expected to have one or more roles, and switch between them as needed.
-Common for all roles, is that they have some need for SBOM documents - either to ensure they are correct (create, update, rename, delete, assemble), passed on (distribute) or ensure that they are correct, and match the accompanying software (verify).
+In any software supply chain we find many people filling distinct roles.
+This diagram and acompanying list offers an overview of clearly distinguished roles and how they are related.
+Any single person may have one or more roles, and switch between them as needed.
+Common for all roles is they care about SBOM data for some purpose – either to ensure they are correct (create, update, rename, delete, assemble), passed on (distribute), or ensure the data is correct and matches the accompanying software component (verify).
 
 
 ```mermaid
 stateDiagram-v2
     state "Author\nCustodian\nPublisher" as author
-    state "Repository – Distributor" as repo_distributor
-    state "Language — Packager" as language_packager
+    state "Repository – Distributor" as repository_distributor
+    state "Language – Packager" as language_packager
     state "Language – Curator" as language_curator
     state "Language – Distributor" as language_distributor
     state "Package – Patcher" as package_patcher
-    state "Package — Packager" as package_packager
+    state "Package – Packager" as package_packager
     state "Package – Curator" as package_curator
     state "Package – Distributor" as package_distributor
     state "Developer" as developer
@@ -70,19 +70,20 @@ stateDiagram-v2
 
     note right of ecosystem_lang
         CPAN, PyPI, NPM, etc.
-        May have down-/upstream language ecosystems
+        May have upstream language ecosystems
+        May have downstream language ecosystems
         May be Public or Private
     end note
 
     state "Public Collaboration Ecosystem" as ecosystem_repo {
-        [*] --> repo_distributor
+        [*] --> repository_distributor
     }
 
-    repo_distributor --> ecosystem_package
-    repo_distributor --> ecosystem_developer
+    repository_distributor --> ecosystem_package
+    repository_distributor --> ecosystem_developer
 
     note right of ecosystem_repo
-        Github, Gitlab, Codeberg,
+        Github, Codeberg,
         Bitbucket etc.
     end note
 
@@ -125,11 +126,20 @@ stateDiagram-v2
 
 ```
 
+# Supply-chain roles
+
 ## Owner
 
 Has the legal owership rights for the dist (e.g a business, or the Author).
-May decide the name of the project, or other parameters for (or on behalf of) the Author.
+May decide the name of the project, or other project parameters for (or on behalf of) the Author.
 
+> [!IMPORTANT]
+> | Field name      | Required | Data type | CycloneDX | SPDX |
+> | :-------------- | :------- | :-------- | --------- | ---- |
+> | Name            | Yes      |           |           |      |
+> | Licenses        | Yes      |           |           |      |
+> | Code repo       | Yes      |           |           |      |
+> | SBOM Type       | Yes      |           |           | N/A  |
 
 ## Author
 
@@ -140,15 +150,17 @@ The Author _can_ be a group of people, though a single point of responsibility i
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective.
 See below).
 
-| Field            | CycloneDX | SPDX |
-| :--------------: | --------- | ---- |
-| Name             |  |  |
-| Version          |  |  |
-| Unique ID (pURL) |  |  |
-| Code repo        |  |  |
-| Code revision    |  |  |
-| SBOM Type        |  |  |
-| Vulnerable versions w/locs |  |  |
+> [!IMPORTANT]
+> | Field name          | Required | Data type | CycloneDX | SPDX |
+> | :------------------ | :------- | :-------- | --------- | ---- |
+> | Name                | Yes      |           |           |      |
+> | Version             | Yes      |           |           |      |
+> | Licenses            | Yes      |           |           |      |
+> | Unique ID (pURL)    | Yes      |           |           |      |
+> | Code repo           | Yes      |           |           |      |
+> | Code revision       | No       |           |           |      |
+> | SBOM Type           | Yes      |           |           | N/A  |
+> | Vuln. versions/locs | No       |           |           |      |
 
 
 ### Custodian
@@ -169,22 +181,28 @@ Typically this role is done by the same people, but in some cases a separate acc
 
 Applies security and bugfixes to distributed native packages.
 Works mainly with the Packager, and is downstream of the Author.
-This task is only necessary if upstream (Author, Steward or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g.
-when backporting of fixes are needed due to downstream version pinning).
+This role should only be necessary if upstream (Author or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g. when backporting of fixes are needed due to downstream version pinning).
 
-> Patchers (which is a role that usually is held by the same person as the Packager), may select and apply patches before building.
-> These patches may include backports of features, security fixes or other accommodations necessary for distributing multiple releases of the same upstream project, but within publishing constraints of the distribution (e.g. LTS releases, or whatever).
-> A packager can both be working in-house (e.g. your business) or for the ecosystem provider (e.g. Debian).
+> [!NOTE]
+> * Patchers (a role that often is held by the same person as the Packager), may select and apply patches before building.
+> * These patches may include backports of features, security fixes or other accommodations necessary for distributing multiple releases of the same upstream project, but within publishing constraints decided by the Curator of the Ecosystem (e.g. LTS releases, support contracts, etc.).
+> * A packager can both be found in-house (e.g. a business who uses a company-internal package mirror), for a Package Ecosystem provider (e.g. Debian), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
 
-## Packager
+## Builder — Packager
 
 Builds and creates native packages from a dist received from upstream, optionally with patches applied from the Patcher.
 Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
 
-> Packagers take upstream components from upstream source (e.g. Authors repositories, or Custodian's if an project is dormant), and build and install them into a custom environment for producing objects in their own packaging ecosystem.
-> E.g. someone in the #debian-perl group downloads, builds, tests and installs something from CPAN, but instead of doing a regular install, they us tooling like `dh-make-perl` to produce a custom installation directory that can be incorporated into a .deb archive.
-> They may want to store build environment metadata in the accompanying SBOM file.
+> [!NOTE]
+> * Packagers take upstream components from an upstream source  and build and install them into a custom environment for producing system packages for their native packaging ecosystem (e.g. APT).
+> * Upstream sources may be…
+>     * Author's repository, or a Custodian's if a project is dormant (e.g. a repository on Codeberg).
+>     * Language-specific packages distributed by a Language Ecosystem (e.g. CPAN).
+> * E.g. someone in the #debian-perl group downloads, builds, tests and installs something from CPAN, but instead of doing a regular install, they us tooling like `dh-make-perl` to produce a custom installation directory that can be incorporated into a .deb archive.
+
+> [!IMPORTANT]
+> Packagers should add build environment metadata (including resolved dependences) in an accompanying SBOM file.
 
 
 ## Curator
@@ -192,37 +210,35 @@ Concerns themselves with correct package format and structure, and that package 
 Selects or pins which releases are suitable for use within an organization.
 Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bugfixes and security updates.
 
-> Curators may select which built package is distributed where.
-> Curators may exist both in-house, in order to keep an eye on what is being automatically installed there, or they may make the decisions that happen on the ecosystem provider side.
-> The Curator role can by executed by individuals who do other tasks too.
+> [!NOTE]
+> * Curators may decide both whether and where the output of a Packager is distributed.
+> * Curators may operate both in-house, in order to keep an eye on what is being automatically installed there, or they may make the decisions that happen on the Package or Language Ecosystem provider side.
+> * Typically, a curator may consider LTS status, support contract terms or other reasons for distributing a package.
 
 
 ## Distributor
 
 Ensures the availability of packages, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
-> Distributors take what Packagers, Patchers and Curators produce, and ensure they are made available in a reliable way for downstream users (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or whatever).
-> If SBOM objects are made available in parallell with the packages in question, they make sure this happens.
+> [!NOTE]
+> * Distributors take what Packagers, Patchers and Curators produce, and ensure they are made available in a reliable way for downstream users (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or whatever).
+> If SBOM metadata is expected to accompany the packages in question, the Distributor makes sure this happens.
 
+> [!IMPORTANT]
+> | Field name          | Required | Data type | CycloneDX | SPDX |
+> | :------------------ | :------- | :-------- | --------- | ---- |
+> | Download location   | Yes      |           |           |      |
 
 ### Language Ecosystem
 
 A language ecosystem hosts, indexes and distributes compontnents specific for a programming language.
 Examples include CPAN (Perl), PyPI (Python), NPM (Node/JS) and others.
 
-| Field         | CycloneDX | SPDX |
-| :-----------: | --------- | ---- |
-| Download location |  |  |
-
 
 ### Collaboration Ecosystem
 
 A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
 Examples for this include github.com, gitlab.com, codeberg.org, gitea.com and others.
-
-| Field         | CycloneDX | SPDX |
-| :-----------: | --------- | ---- |
-| Download location |  |  |
 
 
 ### Package Ecosystem
@@ -231,29 +247,26 @@ A service that makes components repackaged for a specific OS distribution availa
 Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD) and others.
 
 
-| Field         | CycloneDX | SPDX |
-| :-----------: | --------- | ---- |
-| Download location |  |  |
-
-
 ## Developer
 
 Uses packages and components as dependencies in their own project or product.
 A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
 The main difference from an Author is that a Developer doesn't publish their work as Open Source.
 
-| Field            | CycloneDX | SPDX |
-| :--------------: | --------- | ---- |
-| Name             |  |  |
-| Version          |  |  |
-| Unique ID (pURL) |  |  |
-| Code repo        |  |  |
-| Code revision    |  |  |
-| SBOM Type        |  |  |
-| Vulnerable versions w/locs |  |  |
+> [!IMPORTANT]
+> | Field name          | Required | Data type | CycloneDX | SPDX |
+> | :------------------ | :------- | :-------- | --------- | ---- |
+> | Name                | Yes      |           |           |      |
+> | Version             | Yes      |           |           |      |
+> | Licenses            | Yes      |           |           |      |
+> | Unique ID (pURL)    | Yes      |           |           |      |
+> | Code repo           | Yes      |           |           |      |
+> | Code revision       | No       |           |           |      |
+> | SBOM Type           | Yes      |           |           | N/A  |
+> | Vuln. versions/locs | No       |           |           |      |
 
 
-## Deployer
+## Builder — Deployer
 
 Final preparation and installation of the software into production environment.
 

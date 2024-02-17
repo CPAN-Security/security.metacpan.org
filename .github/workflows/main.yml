@@ -40,7 +40,7 @@ jobs:
           port: ${{ env.port }}
           nickname: cpansec-push
           message: |-
-            ${{ env.color_orange }}${{ github.actor }}${{ env.color_clear }} pushed to branch ${{ env.color_green }}${{ env.ref }}${{ env.color_clear }}
+            ${{ env.color_orange }}${{ github.actor }}${{ env.color_clear }} pushed to ${{ github.repository }} branch ${{ env.color_green }}${{ env.ref }}${{ env.color_clear }}
             ${{ join(github.event.commits.*.message) }}
 
       - name: IRC message on open pull request

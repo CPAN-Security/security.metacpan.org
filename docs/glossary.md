@@ -18,64 +18,134 @@ toc: true
 ### Chain of custody
 
 > Auditable documentation of point of origin as well as the method of transfer from point of origin to point of destination and the identity of the transfer agent.
+>
+> ([Ref](#references-and-terms): SCVS 2020)
 
 ### Component function
 
 > The purpose for which a software component exists.
 > Examples of component functions include parsers, database persistence, and authentication providers.
+>
+> ([Ref](#references-and-terms): SCVS 2020)
 
 ### Component type
 
 > The general classification of a software components architecture.
 > Examples of component types include libraries, frameworks, applications, containers, and operating systems.
+>
+> ([Ref](#references-and-terms): SCVS 2020)
 
 ### CycloneDX :writing_hand:
 
 > An OWASP managed software bill of materials specification designed to be lightweight and security-focused.
+>
+> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 ### Direct dependency :writing_hand:
 
 > A software component that is referenced by a program itself.
 > For indirect dependencies, see [Transitive dependency](#transitive-dependency).
+>
+> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 ### Package manager :writing_hand:
 
 > A distribution mechanism that makes software artifacts discoverable by ~~requesters~~ users of a specific package ecosystem.
+>
+> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 ### Package URL (PURL)
 
 > An ecosystem-agnostic specification which standardizes the syntax and location information of software components.
+>
+> ([Ref](#references-and-terms): SCVS 2020)
 
 ### Pedigree
 
 > Data which describes the lineage and/or process for which software has been created or altered.
+>
+> ([Ref](#references-and-terms): SCVS 2020)
 
 ### Point of origin :writing_hand:
 
 > The supplier and associated metadata from which a software component has been procured, transmitted, or received.
 > ~~Package repositories, release distribution platforms, and version control history are examples of various points of origin.~~
+>
+> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 ### Procurement :writing_hand:
 
 > The process of agreeing to terms and acquiring software or services for later use.
 > This includes agreeing to Open Source licenses.
+>
+> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 ### Provenance
 
 > The chain of custody and origin of a software component.
 > Provenance incorporates the point of origin through distribution as well as derivatives in the case of software that has been modified.
+>
+> ([Ref](#references-and-terms): SCVS 2020)
 
 ### Software bill of materials (SBOM)
 
 > A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software.
+>
+> ([Ref](#references-and-terms): SCVS 2020)
+
+### SBOM Types
+
+#### Design SBOM (Type)
+
+> SBOM of intended, planned software project or product with included components (some of which may not yet exist) for a new software artifact.
+>
+> ([Ref](#references-and-terms): CISA 2023)
+
+#### Source SBOM (Type)
+
+> SBOM created directly from the development environment, source files, and included dependencies used to build an product artifact.
+>
+> ([Ref](#references-and-terms): CISA 2023)
+
+#### Build SBOM (Type)
+
+> SBOM generated as part of the process of building the software to create a releasable artifact (e.g., executable or package) from data such as source files, dependencies, built components, build process ephemeral data, and other SBOMs.
+>
+> ([Ref](#references-and-terms): CISA 2023)
+
+#### Analyzed SBOM (Type)
+
+> SBOM generated through analysis of artifacts (e.g., executables, packages, containers, and virtual machine images) after its build.
+> Such analysis generally requires a variety of heuristics.
+> In some contexts, this may also be referred to as a “3rd party” SBOM.
+>
+> ([Ref](#references-and-terms): CISA 2023)
+
+#### Deployed SBOM (Type)
+
+> SBOM provides an inventory of software that is present on a system.
+> This may be an assembly of other SBOMs that combines analysis of configuration options, and examination of execution behavior in a (potentially simulated) deployment environment.
+>
+> ([Ref](#references-and-terms): CISA 2023)
+
+#### Runtime SBOM (Type)
+
+> SBOM generated through instrumenting the system running the software, to capture only components present in the system, as well as external call-outs or dynamically loaded components.
+> In some contexts, this may also be referred to as an “Instrumented” or “Dynamic” SBOM.
+>
+> ([Ref](#references-and-terms): CISA 2023)
 
 ### Software Identification (SWID)
 
 > An ISO standard that formalizes how software is tagged.
+>
+> ([Ref](#references-and-terms): SCVS 2020)
 
 ### Software Package Data Exchange (SPDX)
 
 > A Linux Foundation project which produces a software bill of materials specification and a standardized list of open source licenses.
+>
+> ([Ref](#references-and-terms): SCVS 2020)
 
 ### Third-party component :writing_hand:
 
@@ -83,17 +153,21 @@ toc: true
 
 > Any software component not directly created, including "source available", commercial or proprietary software.
 > Open Source software is closer to a "second-party component" as the developer in fact has a legal relationship with the FOSS component project by accepting the project license.
+>
+> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 ### Transitive dependency :writing_hand:
 
 > A software component that is indirectly used by a program by means of being a dependency of a dependency.
 > Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
 > See also [Direct dependency](#direct-dependency).
+>
+> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
-
-## References, licenses and terms
+## References and terms
 
 This glossary is partly based on
 
+- (CISA 2023) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (Public Domain)
+- (CPANSec 2024) CPAN Security Group improvements marked with :writing_hand: (CC-BY-SA-4.0)
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
-- (CPANSec 2024) Misc. improvements marked with :writing_hand: (CC-BY-SA-4.0)

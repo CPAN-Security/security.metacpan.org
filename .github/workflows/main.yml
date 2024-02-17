@@ -24,16 +24,16 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
 
-      - name: setup branch env name
+      - name: Setup branch env name
+        env:
+          github_ref: ${{ github.event.ref }}
         run: |
           ref="${github_ref/refs\/heads\//}"
           echo "ref=$ref" >> $GITHUB_ENV
-        env:
-          github_ref: ${{ github.event.ref }}
 
-      - name: irc push
+      - name: IRC message on push
         uses: rectalogic/notify-irc@v2
-        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        if: github.event_name == 'push'
         with:
           channel: ${{ env.channel }}
           server: ${{ env.server }}
@@ -43,7 +43,7 @@ jobs:
             ${{ env.color_orange }}${{ github.actor }}${{ env.color_clear }} pushed to branch ${{ env.color_green }}${{ env.ref }}${{ env.color_clear }}
             ${{ join(github.event.commits.*.message) }}
 
-      - name: irc open pull request
+      - name: IRC message on open pull request
         uses: rectalogic/notify-irc@v2
         if: github.event_name == 'pull_request' && github.event.action == 'opened'
         with:
@@ -55,7 +55,7 @@ jobs:
             ${{ env.color_orange }}${{ github.actor }}${{ env.color_clear }} opened PR #${{ github.event.pull_request.number }}
             ${{ github.event.pull_request.html_url }}
 
-      - name: irc merged pull request
+      - name: IRC message on merged pull request
         uses: rectalogic/notify-irc@v2
         if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
         with:
@@ -67,7 +67,7 @@ jobs:
             ${{ env.color_orange }}${{ github.actor }}${{ env.color_clear }} merged PR #${{ github.event.pull_request.number }}
             ${{ github.event.pull_request.html_url }}
 
-      - name: irc closed pull request
+      - name: IRC message on closed pull request
         uses: rectalogic/notify-irc@v2
         if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == false
         with:
@@ -79,13 +79,13 @@ jobs:
             ${{ env.color_orange }}${{ github.actor }}${{ env.color_clear }} closed PR #${{ github.event.pull_request.number }}
             ${{ github.event.pull_request.html_url }}
 
-      - name: irc tag created
+      - name: IRC message on tag created
         uses: rectalogic/notify-irc@v2
         if: github.event_name == 'create' && github.event.ref_type == 'tag'
         with:
           server: ${{ env.server }}
           port: ${{ env.port }}
           channel: ${{ env.channel }}
-          nickname: cpanse-tag
+          nickname: cpansec-new-tag
           message: |-
             ${{ env.color_orange }}${{ github.actor }}${{ env.color_clear }} tagged ${{ github.repository }} ${{ github.event.ref }}

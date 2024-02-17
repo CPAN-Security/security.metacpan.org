@@ -15,6 +15,28 @@ toc: true
 
 ## Glossary
 
+### Artifact
+
+> An immutable blob of data; primarily refers to software, but SLSA can be used for any artifact.
+> E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
+>
+> ([Ref](#references-and-terms): SLSA 2023)
+
+### Attestation
+
+> An authenticated statement (metadata) about a software artifact or collection of software artifacts.
+> E.g. a signed SLSA Provenance file.
+>
+> ([Ref](#references-and-terms): SLSA 2023)
+
+### Build
+
+> Process that transforms a set of input artifacts into a set of output artifacts.
+> The inputs may be sources, dependencies, or ephemeral build outputs.
+> E.g. .travis.yml (process) run by Travis CI (platform).
+>
+> ([Ref](#references-and-terms): SLSA 2023)
+
 ### Chain of custody
 
 > Auditable documentation of point of origin as well as the method of transfer from point of origin to point of destination and the identity of the transfer agent.
@@ -41,12 +63,29 @@ toc: true
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
+### Dependency :writing_hand: :warning:
+
+> [Artifact](#artifact) that is an input to a build process but that is not a source.
+> In the SLSA model, it is always a package.
+> E.g. an Alpine package ([package](#package)) distributed on Alpine Linux ([platform](#platform)).
+>
+> ([Ref](#references-and-terms): SLSA 2023)
+
 ### Direct dependency :writing_hand:
 
 > A software component that is referenced by a program itself.
 > For indirect dependencies, see [Transitive dependency](#transitive-dependency).
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
+
+### Package :writing_hand: :warning:
+
+> Artifact that is ~~“published”~~ for use by others.
+> In the model, it is always the output of a build process, though that build process can be a no-op.
+> E.g. a Docker image (package) distributed on DockerHub (platform).
+> E:g. a ZIP file containing source code is a package, not a source, because it is built from some other source, such as a git commit.
+>
+> ([Ref](#references-and-terms): SLSA 2023, CPANSec 2024)
 
 ### Package manager :writing_hand:
 
@@ -87,13 +126,9 @@ toc: true
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
-### Software bill of materials (SBOM)
-
-> A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software.
->
-> ([Ref](#references-and-terms): SCVS 2020)
-
 ### SBOM Types
+
+[Software Bill of Materials](#software-bill-of-materials--sbom-) types, produced under certain circumstances.
 
 #### Design SBOM (Type)
 
@@ -135,6 +170,12 @@ toc: true
 >
 > ([Ref](#references-and-terms): CISA 2023)
 
+### Software bill of materials (SBOM)
+
+> A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software.
+>
+> ([Ref](#references-and-terms): SCVS 2020)
+
 ### Software Identification (SWID)
 
 > An ISO standard that formalizes how software is tagged.
@@ -146,6 +187,14 @@ toc: true
 > A Linux Foundation project which produces a software bill of materials specification and a standardized list of open source licenses.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
+
+### Source :writing_hand: :warning:
+
+> Artifact that was directly authored or reviewed by persons, without modification.
+> It is the beginning of the supply chain; we do not trace the provenance back any further.
+> E.g. a git commit (source) hosted on GitHub ([platform](#platform)).
+>
+> ([Ref](#references-and-terms): SLSA 2023, CPANSec 2024)
 
 ### Third-party component :writing_hand:
 
@@ -171,3 +220,4 @@ This glossary is partly based on
 - (CISA 2023) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (Public Domain)
 - (CPANSec 2024) CPAN Security Group improvements marked with :writing_hand: (CC-BY-SA-4.0)
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
+- (SLSA 2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)

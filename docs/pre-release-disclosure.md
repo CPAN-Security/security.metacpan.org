@@ -46,6 +46,7 @@ The CPAN Security Group <[cpan-security@perl.org](cpan-security@perl.org)> (CPAN
 * [oalders](https://github.com/oalders)
 * [garu](https://github.com/garu)
 * [mickey](https://github.com/mickeyn)
+* [leont](https://github.com/leont)
 
 ------------------
 

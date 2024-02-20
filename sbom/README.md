@@ -27,8 +27,11 @@ Common for all roles is they care about SBOM data for some purpose – either to
 
 ```mermaid
 stateDiagram-v2
+    accTitle: An idealized Open Source supply chain
+
     state "Author\nCustodian\nPublisher" as author
     state "Repository – Distributor" as repository_distributor
+    state "Contributor" as contributor
     state "Language – Packager" as language_packager
     state "Language – Curator" as language_curator
     state "Language – Distributor" as language_distributor
@@ -42,6 +45,9 @@ stateDiagram-v2
     state "Consumer\nUser" as consumer
     state "Auditor – Internal" as auditor_internal
     state "Auditor – External" as auditor_external
+
+    classDef createsSBOM fill:orange;
+    classDef updatesSBOM fill:yellow;
 
     [*] --> ecosystem_author
 
@@ -65,7 +71,7 @@ stateDiagram-v2
         language_curator --> language_distributor
     }
 
-    language_distributor --> ecosystem_developer
+    language_distributor --> ecosystem_integrator
     language_distributor --> ecosystem_package
 
     note right of ecosystem_lang
@@ -79,8 +85,11 @@ stateDiagram-v2
         [*] --> repository_distributor
     }
 
+    repository_distributor --> contributor
+    contributor --> repository_distributor
+
     repository_distributor --> ecosystem_package
-    repository_distributor --> ecosystem_developer
+    repository_distributor --> ecosystem_integrator
 
     note right of ecosystem_repo
         Github, Codeberg,
@@ -101,13 +110,13 @@ stateDiagram-v2
         May be Public or Private
     end note
 
-    package_distributor --> ecosystem_developer
+    package_distributor --> ecosystem_integrator
 
-    state "Developer Environment" as ecosystem_developer {
+    state "Integrator Environment" as ecosystem_integrator {
         [*] --> developer
     }
 
-    note right of ecosystem_developer
+    note right of ecosystem_integrator
         Does NOT publish Open Source
         Has a project development lifecycle
     end note
@@ -175,6 +184,11 @@ Works with the Author primarily, and may take responsibility on their behalf whe
 
 Places the component on an ecosystem publishing platform, on behalf of the Author, Steward or Custodian.
 Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.
+
+### Contributor
+
+Interacts with component with bug reports, feedback, quality assurance, testing, patches or pull requests.
+May or may not have repository commit privileges.
 
 
 ## Patcher
@@ -247,11 +261,11 @@ A service that makes components repackaged for a specific OS distribution availa
 Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD) and others.
 
 
-## Developer
+## Integrator Environment
 
-Uses packages and components as dependencies in their own project or product.
-A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
-The main difference from an Author is that a Developer doesn't publish their work as Open Source.
+A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
+Managment is expected to ensure that this assembled SBOM document describes the application as required by law.
+
 
 > [!IMPORTANT]
 > | Field name          | Required | Data type | CycloneDX | SPDX |
@@ -266,9 +280,17 @@ The main difference from an Author is that a Developer doesn't publish their wor
 > | Vuln. versions/locs | No       |           |           |      |
 
 
+
+### Developer
+
+Uses packages and components as dependencies in their own project or product.
+A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
+The main difference from an Author is that a Developer doesn't publish their work as Open Source.
+
+
 ## Builder — Deployer
 
-Final preparation and installation of the software into production environment.
+Final preparation and installation of the software into a CI/CD or Production Environment.
 
 
 ## Scanner

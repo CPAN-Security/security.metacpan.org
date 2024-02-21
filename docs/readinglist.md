@@ -14,7 +14,7 @@ This is The CPAN Security Group recommended reading list. If you have any additi
 * (NTIA) [Survey of Existing SBOM Formats and Standards](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) (2021)
 
 
-### Project documentation
+### SBOM use cases
 
 * (CDX) [CycloneDX Use Cases](https://cyclonedx.org/use-cases/)
 * (SPDX) [A Practical Guide to SPDX](https://fossa.com/learn/spdx)
@@ -24,13 +24,18 @@ This is The CPAN Security Group recommended reading list. If you have any additi
 
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
     * Section 4
-* (EU) [Network and Information Systems directive II](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive) (NIS2)
-* (EU) [Cyber Resilience Act](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-proposal-for-cybersecurity-regulation) (CRA)
-    * [Annex II](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CONSIL:ST_17000_2023_INIT)
-    * Recital 10a
-    * Recital 18a
-    * Article 14
-    * Article 17a
+* (EU) [Directive 2022/2555](https://eur-lex.europa.eu/eli/dir/2022/2555) (NIS 2 Directive)
+    * Article 6, Definitions for "manufacturer", "provider"
+    * Recitals (58), (62), (85), (89), (90), (91)
+    * Chapter II, 2 (a)
+    * Chapter IV, Article 21(2) and (3)
+* (EU) Directive 2020/1828/EC ([Cyber Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52022PC0454)) (CRA)
+    * In the [CRA 2023-12-20 update](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT)
+        * Annex II
+            * Recitals (8), (**10a-h**), (18a), (21)
+            * Chapter I, Article 3 (Definitions)
+            * Chapter II, Article 14 (Obligations of distributors)
+            * Chapter II, Article 17a (Obligations of open-source software stewards)
 * (EU) [Product Liability Directive](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive) (PLD)
 
 

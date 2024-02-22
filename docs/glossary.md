@@ -37,6 +37,12 @@ toc: true
 >
 > ([Ref](#references-and-terms): SLSA 2023)
 
+### CE Marking :warning:
+
+> A marking by which a manufacturer indicates that a product with digital elements and the processes put in place by the manufacturer are in conformity with the essential requirements set out in [EU Cyber Resilience Act, Annex I](#references-and-terms) and other applicable European Union harmonisation legislation providing for its affixing.
+>
+> ([Ref](#references-and-terms): CRA 2024 I, CRA 2024 II (21))
+
 ### Chain of custody
 
 > Auditable documentation of point of origin as well as the method of transfer from point of origin to point of destination and the identity of the transfer agent.
@@ -77,6 +83,36 @@ toc: true
 > For indirect dependencies, see [Transitive dependency](#transitive-dependency).
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
+
+
+### Distributor (EU) :warning:
+
+> [!WARNING]
+> The Cyber Resilience Act defines a distributor as someone who **does not** change a package/component. This means if a distributor applies a patch, they should be treated as a [manufacturer](#manufacturer) or [Open-Source software steward](#open-source-software-steward), including the consequences this entails.
+>
+> TODO: Check with lawyer after final version of CRA is adopted.
+
+> Any natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the European Union market without affecting its properties.
+>
+> ([Ref](#references-and-terms): CRA 2024 II (21))
+
+
+### Open-source software steward :warning:
+
+> [!NOTE]
+> TODO: This is an addition that was added 2023-12-20, which may mean this defenition may change in the final version of the CRA.
+
+> Any legal person, other than a [manufacturer](#manufacturer), which has the purpose or objective to systematically provide support on a sustained basis for the development of specific products with digital elements qualifying as free and open-source software that are intended for commercial activities, and ensures the viability of those products.
+>
+> ([Ref](#references-and-terms): CRA 2024 II (18a))
+
+
+### Manufacturer
+
+> Any natural or legal person who develops or manufactures products with digital elements or has products with digital elements designed, developed or manufactured, and markets them under his or her name or trademark, whether for payment, monetisation or free of charge.
+>
+> ([Ref](#references-and-terms): CRA 2024 II (18))
+
 
 ### Package :writing_hand: :warning:
 
@@ -221,3 +257,5 @@ This glossary is partly based on
 - (CPANSec 2024) CPAN Security Group improvements marked with :writing_hand: (CC-BY-SA-4.0)
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
 - (SLSA 2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)
+- (CRA 2024 I 2023-09-15) EU [Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/resource.html?uri=cellar:864f472b-34e9-11ed-9c68-01aa75ed71a1.0001.02/DOC_2&format=PDF)
+- (CRA 2024 II 2023-12-20 update) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT)

@@ -150,7 +150,7 @@ This means that the products of our work should be considered _best effort_, and
 
 ### Joining the _CPANSec_
 
-The _CPANSec_ forum itself is moderated and for invited volunteers. To join it, please reach out to our mailing list, or our IRC chat for an informal conversation. (**FIXME**). 
+The _CPANSec_ forum itself is moderated and for invited volunteers. To join, please reach out through one of our [public contact points](#public-contact-points).
 
 
 ### Projects
@@ -180,7 +180,6 @@ The _CPANSec_ forum itself is moderated and for invited volunteers. To join it, 
 
 ### Public contact points
 
-- Main website: [https://security.metacpan.org/](https://security.metacpan.org/)
 - Chat (IRC): [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 - Fediverse: [@cpan_security@perl.social](https://perl.social/profile/cpan_security)
 - Email: &lt;cpan-security&#64;perl.org&gt;
@@ -188,6 +187,7 @@ The _CPANSec_ forum itself is moderated and for invited volunteers. To join it, 
 
 ### Public resources, feeds & channels
 
+- Main website: [https://security.metacpan.org/](https://security.metacpan.org/)
 - [CPANSec News RSS feed](https://security.metacpan.org/feed.xml).
 - Github group: [https://github.com/CPAN-Security](https://github.com/CPAN-Security)
 

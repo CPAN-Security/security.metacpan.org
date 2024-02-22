@@ -62,10 +62,10 @@ The _CPANSec_ intends to be a forum for coordinating and assisting in resolving 
 The _CPANSec_ concerns itself with a limited domain:
 
 - Distributions published on CPAN, not including dual-life core modules;
-- Improve various aspects of CPAN supply chain security, including the Perl/CPAN toolchains, CPAN/MetaCPAN itself and PAUSE;
-- Address and resolve issues around CPAN distribution metadata and how these are communicated;
-- Explore avenues for emergency security updates on CPAN;
-- Improve the security culture in CPAN and communities in general;
+- CPAN supply chain security, Chain-of-Trust infrastructure, and security around the Perl/CPAN toolchain, CPAN/MetaCPAN itself and PAUSE;
+- CPAN distribution metadata and how these are communicated;
+- Emergency security updates on CPAN;
+- The security culture in CPAN and communities in general;
 
 For details, please consult the [Projects](#projects) list below.
 
@@ -178,11 +178,6 @@ The _CPANSec_ forum itself is moderated and for invited volunteers. To join it, 
   - Raise funds for CPAN Security Group projects.
 
 
-### Tools
-
-- TODO
-
-
 ### Public contact points
 
 - Main website: [https://security.metacpan.org/](https://security.metacpan.org/)
@@ -195,7 +190,6 @@ The _CPANSec_ forum itself is moderated and for invited volunteers. To join it, 
 
 - [CPANSec News RSS feed](https://security.metacpan.org/feed.xml).
 - Github group: [https://github.com/CPAN-Security](https://github.com/CPAN-Security)
-- TODO: RSS/Atom feed with advisories
 
 
 ## Acknowledgements

@@ -6,7 +6,7 @@ toc: true
 ---
 
 > [!CAUTION]
-> ## Document status: :warning: DRAFT
+> ## Document status: ⚠️  DRAFT
 > What you see here is a DRAFT of the Glossary used by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
@@ -37,7 +37,7 @@ toc: true
 >
 > ([Ref](#references-and-terms): SLSA 2023)
 
-### CE Marking :warning:
+### CE Marking ⚠️
 
 > A marking by which a manufacturer indicates that a product with digital elements and the processes put in place by the manufacturer are in conformity with the essential requirements set out in [EU Cyber Resilience Act, Annex I](#references-and-terms) and other applicable European Union harmonisation legislation providing for its affixing.
 >
@@ -63,13 +63,13 @@ toc: true
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
-### CycloneDX :writing_hand:
+### CycloneDX ✍️
 
 > An OWASP managed software bill of materials specification designed to be lightweight and security-focused.
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
-### Dependency :writing_hand: :warning:
+### Dependency ✍️  ⚠️
 
 > [Artifact](#artifact) that is an input to a build process but that is not a source.
 > In the SLSA model, it is always a package.
@@ -77,7 +77,7 @@ toc: true
 >
 > ([Ref](#references-and-terms): SLSA 2023)
 
-### Direct dependency :writing_hand:
+### Direct dependency ✍️
 
 > A software component that is referenced by a program itself.
 > For indirect dependencies, see [Transitive dependency](#transitive-dependency).
@@ -85,7 +85,7 @@ toc: true
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 
-### Distributor (EU) :warning:
+### Distributor (EU) ⚠️
 
 > [!WARNING]
 > The Cyber Resilience Act defines a distributor as someone who **does not** change a package/component. This means if a distributor applies a patch, they should be treated as a [manufacturer](#manufacturer) or [Open-Source software steward](#open-source-software-steward), including the consequences this entails.
@@ -97,7 +97,7 @@ toc: true
 > ([Ref](#references-and-terms): CRA 2024 II (21))
 
 
-### Open-source software steward :warning:
+### Open-source software steward ⚠️
 
 > [!NOTE]
 > TODO: This is an addition that was added 2023-12-20, which may mean this defenition may change in the final version of the CRA.
@@ -114,7 +114,7 @@ toc: true
 > ([Ref](#references-and-terms): CRA 2024 II (18))
 
 
-### Package :writing_hand: :warning:
+### Package ✍️  ⚠️
 
 > Artifact that is ~~“published”~~ for use by others.
 > In the model, it is always the output of a build process, though that build process can be a no-op.
@@ -123,7 +123,7 @@ toc: true
 >
 > ([Ref](#references-and-terms): SLSA 2023, CPANSec 2024)
 
-### Package manager :writing_hand:
+### Package manager ✍️
 
 > A distribution mechanism that makes software artifacts discoverable by ~~requesters~~ users of a specific package ecosystem.
 >
@@ -141,14 +141,14 @@ toc: true
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
-### Point of origin :writing_hand:
+### Point of origin ✍️
 
 > The supplier and associated metadata from which a software component has been procured, transmitted, or received.
 > ~~Package repositories, release distribution platforms, and version control history are examples of various points of origin.~~
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
-### Procurement :writing_hand:
+### Procurement ✍️
 
 > The process of agreeing to terms and acquiring software or services for later use.
 > This includes agreeing to Open Source licenses.
@@ -224,7 +224,7 @@ toc: true
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
-### Source :writing_hand: :warning:
+### Source ✍️  ⚠️
 
 > Artifact that was directly authored or reviewed by persons, without modification.
 > It is the beginning of the supply chain; we do not trace the provenance back any further.
@@ -232,7 +232,7 @@ toc: true
 >
 > ([Ref](#references-and-terms): SLSA 2023, CPANSec 2024)
 
-### Third-party component :writing_hand:
+### Third-party component ✍️
 
 > ~~Any software component not directly created including open source, "source available", and commercial or proprietary software.~~
 
@@ -241,7 +241,7 @@ toc: true
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
-### Transitive dependency :writing_hand:
+### Transitive dependency ✍️
 
 > A software component that is indirectly used by a program by means of being a dependency of a dependency.
 > Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
@@ -254,7 +254,7 @@ toc: true
 This glossary is partly based on
 
 - (CISA 2023) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (Public Domain)
-- (CPANSec 2024) CPAN Security Group improvements marked with :writing_hand: (CC-BY-SA-4.0)
+- (CPANSec 2024) CPAN Security Group improvements marked with ✍️  (CC-BY-SA-4.0)
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
 - (SLSA 2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)
 - (CRA 2024 I 2023-09-15) EU [Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/resource.html?uri=cellar:864f472b-34e9-11ed-9c68-01aa75ed71a1.0001.02/DOC_2&format=PDF)

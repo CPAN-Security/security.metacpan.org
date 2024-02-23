@@ -7,7 +7,7 @@ toc: true
 
 ## Document status: ⚠️  DRAFT
 
-What you see here is a **DRAFT** for the charter of a CPAN Security Group (_CPANSec_), to be set up in 2023.
+What you see here is a **DRAFT** for the charter of a CPAN Security Group (_CPANSec_).
 Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
 
 Discussion on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
@@ -19,9 +19,14 @@ This charter lays out the background, intentions, mandate, scope, means and meth
 This document also explicitly acknowledges a few related organizations and communitites, and spell out responsibility demarcation lines between these, if any.
 
 
+## Name
+
+The full name of the group is **CPAN Security Group**. Valid abbreviations are **CPANSec**.
+
+
 ## Background
 
-The group was established at the Perl Toolchain Summit 2023 in Lyon, France, with the purpose of establishing a forum for discussing:
+The group was established at the Perl Toolchain Summit 2023 in Lyon, France, with the purpose of establishing a forum for discussing and improving:
 
 - Author/repo signing
 - Vulnerability databases + MetaCPAN
@@ -30,14 +35,14 @@ The group was established at the Perl Toolchain Summit 2023 in Lyon, France, wit
 - Supply-chain security
 - etc.
 
-This list has been subject for discussions and revisioning, and the resulting tasks and topics are laid out under the subject lines below.
+This list was subject for discussions and revisioning, and the resulting projects, tasks and topics are laid out under the subject lines below.
 
 
 ## Goals and Intentions
 
 The _CPANSec_ intends to be a forum for coordinating and assisting in resolving security issues found on CPAN. This may include:
 
-- Assist authors and third-party developers in dealing with vulnerabilities and general security advisories related to distributions indexed on Perl's package manager, CPAN;
+- Assist authors and third-party developers in dealing with vulnerabilities and general security advisories related to distributions indexed on Perl's package ecosystem, CPAN;
 - Be a contact point for reporters of potential vulnerabilities when authors are unresponsive;
 - Assist in determining the validity and severity of vulnerabilities, if appropriate and needed;
 - Offer help in contacting authors;
@@ -46,25 +51,23 @@ The _CPANSec_ intends to be a forum for coordinating and assisting in resolving 
 - Share and document best security practices to authors and users;
 - Raise awareness to security threats and mitigations in Perl applications that rely on the CPAN ecosystem;
 - Act as a trusted intermediator for reporting potential security vulnerabilities to distributions, including managing and responsible disclosure of embargoed security information for a reasonable amount of time pertaining non-core distributions on CPAN, and communication with package managers and distribution channels;
-  - ~~In what ways / For how long? (e.g. max 14 days?) /  explain!~~
-    - Rationale: Let's keep specific embargo durations out of the charter, so we don't have to re-publish the charter when this changes. (garu)
 - Provide a forum for discussing and coordinating around supply chain security, integrity, metadata and the communication of these, including but not limited to:
-  - SBOM and other ways for tracking and communicating software changes, including interaction with external tooling and sources of security advisories;
+  - SBOM and other ways for tracking and communicating software and metadata changes, including interaction with external tooling and sources of security advisories;
   - The Update Framework (TUF) integration;
   - Third-party vulnerability scanning support;
-
 
 
 ### In-scope
 
 The _CPANSec_ concerns itself with a limited domain:
 
-- Distributions published on CPAN, including dual-life core modules;
-- Supply chain security, including CPAN/MetaCPAN and PAUSE
-  - [Artifact Transparency Logs](https://transparency.dev) like sigstore or sigsum
-  - Tooling and infrastructure for establishing chain-of-trust
-  - Tooling for downstream verification of chain-of-trust
-  - Tooling for the creation and verification of SBOM objects commonly in use
+- Distributions published on CPAN, not including dual-life core modules;
+- CPAN supply chain security, Chain-of-Trust infrastructure, and security around the Perl/CPAN toolchain, CPAN/MetaCPAN itself and PAUSE;
+- CPAN distribution metadata and how these are communicated;
+- Emergency security updates on CPAN;
+- The security culture in CPAN and communities in general;
+
+For details, please consult the [Projects](#projects) list below.
 
 
 ### Out-of-scope
@@ -115,7 +118,7 @@ While the _CPANSec_ has no formal mandate or responsibilities, it may still seek
 In addition, the _CPANSec_ may ask for formal mandates from _delegating authorities_ (DA):
 
 - The Perl Steering Council (DA)
-- The PAUSE core team (DA)
+- The PAUSE team (DA)
 - The MetaCPAN team (DA)
 - The Perl Security list (DA)
 - Perl NOC
@@ -135,7 +138,7 @@ In the unfortunate situation when a delegating authority is disbanded, becomes u
 
 ### Formal Mandates
 
-The _CPANSec_ currently has no formal mandates.
+The _CPANSec_ has currently **no formal mandates**.
 
 
 ### Volunteer participation and Guarantees
@@ -147,58 +150,46 @@ This means that the products of our work should be considered _best effort_, and
 
 ### Joining the _CPANSec_
 
-The _CPANSec_ forum itself is moderated and for invited volunteers. To join it, please reach out to our mailing list. (**FIXME**). 
-
-
-## Example Means and Methods
-
-The _CPANSec_ activities may include a number of efforts, ongoing activities, security projects, tooling development and managing of publication channels and other resources.
-
-Examples of these may include…
-
-
-### Ongoing activities
-
-- Gathering of security-relevant statistics, metrics and metadata
-- Publish CPAN advisories
-- Apply for CVE numbers
-- …
+The _CPANSec_ forum itself is moderated and for invited volunteers. To join, please reach out through one of our [public contact points](#public-contact-points).
 
 
 ### Projects
 
-- [CPAN Provenance & Supply Chain Security](https://github.com/orgs/CPAN-Security/projects/3) – Tooling for signing of CPAN artifacts
-- [CPAN Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10) – Collect and publish vulnerabilities in CPAN distributions, including creating & managing infrastructure for showing vulnerability info on MetaCPAN. (`CPANSEC` or `CPAN-VULN`)
-- [CPAN Software Bills of Materials](https://github.com/orgs/CPAN-Security/projects/1) – Tooling for creating and verifying Software Bills of Materials for CPAN distributions
-- [CPAN Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11) – High-priority updates to CPAN packages
-- …and [other projects](https://github.com/orgs/CPAN-Security/projects)
-- ~~Registering as a CVE Numbering Authority~~
-  - **FIXME**: Probably not useful? Please share your thoughts.
-- …
-
-
-### Tools
-
-- TBD
+- [Artifact Transparency Logs](https://github.com/orgs/CPAN-Security/projects/2)
+  - Introduce sigstore or sigsum to CPAN, possibly based on guidelines from [transparency.dev](https://transparency.dev)
+- [Provenance and Supply Chain Security](https://github.com/orgs/CPAN-Security/projects/3)
+  - Introduce tooling and infrastructure for establishing provenance, chain-of-trust and chain-of-custody
+  - Introduce tooling for downstream verification of provenance, chain-of-trust and chain-of-custody
+- [Metadata and Software Bill of Materials](https://github.com/orgs/CPAN-Security/projects/1)
+  - Tooling for the creation and verification of SBOM objects commonly used to communicate the composition and pedigree of CPAN dependencies, even when these dependencies cross ecosystem boundraries.
+  - Update CPAN package metadata to enable end-users to comply with legislative obligations.
+- [Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
+  - Standardization and publishing of CPAN package vulnerabilities in relevant indexes (our own, CPANSA, CVE or whatever), to ensure that common (including third-party) tooling for Software Composition Analysis or vulnerability assessment work with CPAN dependencies.
+- [Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
+  - Improve or create user-interfacing tooling used for analyzing dependencies for known vulnerabilities.
+- [Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11)
+  - Develop tooling for publishing and applying third-party security patches to CPAN distributions that have non-responsive authors, to enable high-priority updates to CPAN packages.
+  - Explore opportunities for simplifying downstream fixes to reach upstream authors.
+- [Security Outreach & Information](https://github.com/orgs/CPAN-Security/projects/12)
+  - Establish a website and social media presence for outreach and information sharing, and keep these up to date.
+- [CPANSec Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
+  - Establish procedures for responsible disclosure, communication and other related mechanisms, including documentation on how vulnerabilities and malicious code incidents are handled.
+  - Create a group charter and accountability procedures.
+  - Raise funds for CPAN Security Group projects.
 
 
 ### Public contact points
 
-- TBD
-- https://security.metacpan.org/
-- ircs://irc.perl.org/#cpan-security
-- &lt;cpan-security@perl.org&gt; (mailing list)
-- Presence on Mastodon, Twitter, etc.
-- …
+- Chat (IRC): [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
+- Fediverse: [@cpan_security@perl.social](https://perl.social/profile/cpan_security)
+- Email: &lt;cpan-security&#64;perl.org&gt;
 
 
 ### Public resources, feeds & channels
 
-- TBD
-- RSS/Atom feed with advisories
-- Blog under a well-known domain (e.g. security.metacpan.org)
-- Github group: https://github.com/CPAN-Security
-- …
+- Main website: [https://security.metacpan.org/](https://security.metacpan.org/)
+- [CPANSec News RSS feed](https://security.metacpan.org/feed.xml).
+- Github group: [https://github.com/CPAN-Security](https://github.com/CPAN-Security)
 
 
 ## Acknowledgements
@@ -235,4 +226,4 @@ From left to right,
 
 ## Version
 
-v0.6.6
+v0.6.7

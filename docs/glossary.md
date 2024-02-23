@@ -102,7 +102,7 @@ toc: true
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
-### Distributor (EU) ⚠️
+### Distributor ⚠️
 
 > [!WARNING]
 > The Cyber Resilience Act defines a distributor as someone who **does not** change a package/component. This means if a distributor applies a patch, they should be treated as a [manufacturer](#manufacturer) or [Open-Source software steward](#open-source-software-steward), including any consequences this may entail.

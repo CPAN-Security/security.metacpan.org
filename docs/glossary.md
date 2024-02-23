@@ -71,6 +71,13 @@ toc: true
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
+#### Component, second-party ✍️
+
+> 1. Any software component created through the interaction with a second party, including Open Source, "source available", and proprietary software where the source is made available for building. (CPANSec)
+>     * Open Source software is considered "second-party" as the developer both has a legal relationship with the FOSS component project by accepting the project license, and the source available for building, in addition to use, inspection and modification.
+>
+> (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
+
 #### Component, third-party ✍️
 
 > 1. ~~Any software component not directly created including open source, "source available", and commercial or proprietary software.~~ (SCVS)
@@ -212,6 +219,10 @@ toc: true
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
+### Second-party component ✍️
+
+> See [Component, second-party](#component-second-party).
+
 ### SBOM (Software Bill of Materials)
 
 > 1. A formal record containing details and supply chain relationships of components included in the software elements of a product with digital elements. (CRA 2024)
@@ -303,7 +314,7 @@ toc: true
 
 > See [Software Identification (SWID)](#software-identification-swid).
 
-### Component, third-party ✍️
+### Third-party component ✍️
 
 > See [Component, third-party](#component-third-party).
 

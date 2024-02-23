@@ -10,7 +10,7 @@ toc: true
 > What you see here is a DRAFT of the Glossary used by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom](https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md](https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 
 > [!NOTE]

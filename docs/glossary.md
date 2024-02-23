@@ -16,7 +16,8 @@ toc: true
 > [!NOTE]
 > ### Legend
 > * ✍️  — Changes have been made to the original definition, mostly for clarity or consistency.
-> * ⚠️  — Definition has problems or errors, or may be confusing and therefor requires additional commentary.
+> * ⚠️  — Definition has problems or errors or may be confusing, and therefore requires correction or additional explanation.
+
 
 ## Glossary
 
@@ -69,6 +70,14 @@ toc: true
 >     * Examples of component functions include parsers, database persistence, and authentication providers.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
+
+#### Component, third-party ✍️
+
+> 1. ~~Any software component not directly created including open source, "source available", and commercial or proprietary software.~~ (SCVS)
+> 2. Any software component not directly created, including "source available", commercial or proprietary software. (CPANSec)
+>     * Open Source software is closer to a "second-party component" as the developer in fact has a legal relationship with the FOSS component project by accepting the project license.
+>
+> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 #### Component type
 
@@ -294,13 +303,10 @@ toc: true
 
 > See [Software Identification (SWID)](#software-identification-swid).
 
-### Third-party component ✍️
+### Component, third-party ✍️
 
-> 1. ~~Any software component not directly created including open source, "source available", and commercial or proprietary software.~~ (SCVS)
-> 2. Any software component not directly created, including "source available", commercial or proprietary software. (CPANSec)
->     * Open Source software is closer to a "second-party component" as the developer in fact has a legal relationship with the FOSS component project by accepting the project license.
->
-> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
+> See [Component, third-party](#component-third-party).
+
 
 ## References and terms
 
@@ -311,6 +317,7 @@ This glossary is partly based on
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
 - (SLSA 2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)
 - (CRA 2024) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT), page 75, published 2023-12-20.
+
 
 ## Other supporting matter
 

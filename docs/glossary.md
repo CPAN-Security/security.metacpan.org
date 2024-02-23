@@ -15,19 +15,23 @@ toc: true
 
 > [!NOTE]
 > ### Legend
+> * ⚠️  — The definition has problems or errors or may be confusing, and therefore requires correction or additional explanation.
 > * ✍️  — Changes have been made to the original definition, mostly for clarity or consistency.
-> * ⚠️  — Definition has problems or errors or may be confusing, and therefore requires correction or additional explanation.
 
 
 ## Glossary
 
 ### Artifact ✍️
 
+> [!NOTE]
+> Component and Artifact seem to have overlapping definitions.
+> We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec)
+
 > 1. An immutable blob of data; primarily refers to [software](#software), but SLSA can be used for any artifact.
-> E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
-> 2. See also [Component](#component).
+>     * E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
+> 2. See also [Component](#component-).
 >
-> (Ref: [SLSA 2023](#references-and-terms))
+> (Ref: [SLSA 2023](#references-and-terms), CPANSec 2024)
 
 ### Attestation
 
@@ -59,8 +63,11 @@ toc: true
 ### Component ✍️
 
 > [!NOTE]
+> Component and Artifact seem to have overlapping definitions.
+> We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec)
+
 > 1. Software or hardware intended for integration into an [electronic information system](#electronic-information-system).
-> 2. See also [Artifact](#artifact).
+> 2. See also [Artifact](#artifact-).
 >
 > (Ref: [CRA 2024](#references-and-terms), CPANSec 2024)
 
@@ -99,11 +106,11 @@ toc: true
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
-### Dependency ✍️  ⚠️
+### Dependency ⚠️  ✍️
 
 > 1. [Artifact](#artifact) that is an input to a build process but that is not a source.
 >     * In the SLSA model, it is always a package.
->     * E.g. an Alpine package ([package](#package)) distributed on Alpine Linux ([platform](#platform)).
+>     * E.g. an Alpine package ([package](#package---)) distributed on Alpine Linux ([platform](#platform)).
 >
 > (Ref: [SLSA 2023](#references-and-terms))
 
@@ -111,7 +118,7 @@ toc: true
 
 > 1. A software component that is referenced by a ~~program~~ [software](#software) itself.
 >
-> For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive).
+> For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive-).
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
@@ -119,14 +126,14 @@ toc: true
 
 > 1. A software component that is indirectly used by a program by means of being a dependency of a dependency.
 >     * Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
-> 2. See also [Dependency (Direct)](#dependency-direct).
+> 2. See also [Dependency (Direct)](#dependency-direct-).
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 ### Distributor ⚠️
 
 > [!WARNING]
-> The Cyber Resilience Act defines a distributor as someone who **does not** change a package/component. This means if a distributor applies a patch, they should be treated as a [manufacturer](#manufacturer) or [Open-Source software steward](#open-source-software-steward), including any consequences this may entail.
+> The Cyber Resilience Act defines a distributor as someone who **does not** change a package/component. This means if a distributor applies a patch, they should be treated as a [manufacturer](#manufacturer) or [Open-Source software steward](#open-source-software-steward-), including any consequences this may entail.
 >
 > TODO: Check with lawyer after final version of CRA is adopted.
 
@@ -161,9 +168,9 @@ toc: true
 >
 > (Ref: [CRA 2024](#references-and-terms))
 
-### Package ✍️  ⚠️
+### Package ⚠️  ✍️
 
-> 1. [Artifact](#artifact) that is ~~“published”~~ for use by others.
+> 1. [Artifact](#artifact-) that is ~~“published”~~ for use by others.
 >     * In the model, it is always the output of a build process, though that build process can be a no-op.
 >     * E.g. a Docker image (package) distributed on DockerHub (platform).
 >     * E:g. a ZIP file containing source code is a package, not a source, because it is built from some other source, such as a git commit.
@@ -191,7 +198,7 @@ toc: true
 ### Point of origin ✍️
 
 > [!WARNING]
-> Discouraged term. Confusing definiton, having common meaning with [Source](#source). (CPANSec)
+> Discouraged term. Confusing definiton, having common meaning with both [Source](#source---), [Manufacturer](#manufacturer) and [Distrubutor](#distrubutor-). (CPANSec)
 
 > 1. The supplier and associated metadata from which a software component has been procured, transmitted, or received. (SCVS)
 >     * ~~Package repositories, release distribution platforms, and version control history are examples of various points of origin.~~
@@ -215,13 +222,13 @@ toc: true
 ### Provenance ✍️
 
 > 1. The [chain of custody](#chain-of-custody) and origin of a software component.
->     * Provenance incorporates the [point of origin](#point-of-origin) through ~~distribution~~  [distributor](#distributor) as well as derivatives in the case of software that has been modified.
+>     * Provenance incorporates the [point of origin](#point-of-origin-) through ~~distribution~~  [distributor](#distributor-) as well as derivatives in the case of software that has been modified.
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
 ### Second-party component ✍️
 
-> See [Component, second-party](#component-second-party).
+> See [Component, second-party](#component-second-party-).
 
 ### SBOM (Software Bill of Materials)
 
@@ -298,7 +305,7 @@ toc: true
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
-### Source ✍️  ⚠️
+### Source ⚠️  ✍️
 
 > 1. An [artifact](#artifact) that was directly authored ~~or reviewed~~ by persons, without modification.
 >     * It is the beginning of the supply chain; we do not trace the provenance back any further.
@@ -316,7 +323,7 @@ toc: true
 
 ### Third-party component ✍️
 
-> See [Component, third-party](#component-third-party).
+> See [Component, third-party](#component-third-party-).
 
 
 ## References and terms

@@ -27,14 +27,14 @@ toc: true
 > E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
 > 2. See also [Component](#component).
 >
-> ([Ref](#references-and-terms): SLSA 2023)
+> (Ref: [SLSA 2023](#references-and-terms))
 
 ### Attestation
 
 > 1. An authenticated statement (metadata) about a software artifact or collection of software artifacts.
 >     * E.g. a signed SLSA Provenance file.
 >
-> ([Ref](#references-and-terms): SLSA 2023)
+> (Ref: [SLSA 2023](#references-and-terms))
 
 ### Build
 
@@ -42,19 +42,19 @@ toc: true
 >     * The inputs may be sources, dependencies, or ephemeral build outputs.
 >     * E.g. .travis.yml (process) run by Travis CI (platform).
 >
-> ([Ref](#references-and-terms): SLSA 2023)
+> (Ref: [SLSA 2023](#references-and-terms))
 
 ### CE Marking ⚠️
 
 > 1. A marking by which a manufacturer indicates that a product with digital elements and the processes put in place by the manufacturer are in conformity with the essential requirements set out in [EU Cyber Resilience Act, Annex I](#other-supporting-matter) and other applicable European Union harmonisation legislation providing for its affixing.
 >
-> ([Ref](#references-and-terms): CRA 2024)
+> (Ref: [CRA 2024](#references-and-terms))
 
 ### Chain of custody
 
 > 1. Auditable documentation of point of origin as well as the method of transfer from point of origin to point of destination and the identity of the transfer agent.
 >
-> ([Ref](#references-and-terms): SCVS 2020)
+> (Ref: [SCVS 2020](#references-and-terms))
 
 ### Component ✍️
 
@@ -62,14 +62,14 @@ toc: true
 > 1. Software or hardware intended for integration into an [electronic information system](#electronic-information-system).
 > 2. See also [Artifact](#artifact).
 >
-> ([Ref](#references-and-terms): CRA 2024 II, CPANSec 2024)
+> (Ref: [CRA 2024](#references-and-terms), CPANSec 2024)
 
 #### Component function
 
 > 1. The purpose for which a software component exists.
 >     * Examples of component functions include parsers, database persistence, and authentication providers.
 >
-> ([Ref](#references-and-terms): SCVS 2020)
+> (Ref: [SCVS 2020](#references-and-terms))
 
 #### Component, third-party ✍️
 
@@ -77,20 +77,20 @@ toc: true
 > 2. Any software component not directly created, including "source available", commercial or proprietary software. (CPANSec)
 >     * Open Source software is closer to a "second-party component" as the developer in fact has a legal relationship with the FOSS component project by accepting the project license.
 >
-> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
+> (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 #### Component type
 
 > 1. The general classification of a software components architecture.
 >     * Examples of component types include libraries, frameworks, applications, containers, and operating systems.
 >
-> ([Ref](#references-and-terms): SCVS 2020)
+> (Ref: [SCVS 2020](#references-and-terms))
 
 ### CycloneDX ✍️
 
 > 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused.
 >
-> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
+> (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 ### Dependency ✍️  ⚠️
 
@@ -98,7 +98,7 @@ toc: true
 >     * In the SLSA model, it is always a package.
 >     * E.g. an Alpine package ([package](#package)) distributed on Alpine Linux ([platform](#platform)).
 >
-> ([Ref](#references-and-terms): SLSA 2023)
+> (Ref: [SLSA 2023](#references-and-terms))
 
 #### Dependency (Direct) ✍️
 
@@ -106,7 +106,7 @@ toc: true
 >
 > For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive).
 >
-> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
+> (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 #### Dependency (Transitive) ✍️
 
@@ -114,7 +114,7 @@ toc: true
 >     * Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
 > 2. See also [Dependency (Direct)](#dependency-direct).
 >
-> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
+> (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 ### Distributor ⚠️
 
@@ -125,25 +125,25 @@ toc: true
 
 > 1. Any natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the European Union market without affecting its properties.
 >
-> ([Ref](#references-and-terms): CRA 2024)
+> (Ref: [CRA 2024](#references-and-terms))
 
 ### Electronic information system
 
 > 1. Any system, including electrical or electronic equipment, capable of processing, storing or transmitting digital data.
 >
-> ([Ref](#references-and-terms): CRA 2024)
+> (Ref: [CRA 2024](#references-and-terms))
 
 ### Hardware
 
 > 1. A physical electronic information system, or parts thereof capable of processing, storing or transmitting of digital data.
 >
-> ([Ref](#references-and-terms): CRA 2024)
+> (Ref: [CRA 2024](#references-and-terms))
 
 ### Manufacturer
 
 > 1. Any natural or legal person who develops or manufactures products with digital elements or has products with digital elements designed, developed or manufactured, and markets them under his or her name or trademark, whether for payment, monetisation or free of charge.
 >
-> ([Ref](#references-and-terms): CRA 2024)
+> (Ref: [CRA 2024](#references-and-terms))
 
 ### Open-source software steward ⚠️
 
@@ -152,7 +152,7 @@ toc: true
 
 > 1. Any legal person, other than a [manufacturer](#manufacturer), which has the purpose or objective to systematically provide support on a sustained basis for the development of specific products with digital elements qualifying as free and open-source software that are intended for commercial activities, and ensures the viability of those products.
 >
-> ([Ref](#references-and-terms): CRA 2024)
+> (Ref: [CRA 2024](#references-and-terms))
 
 ### Package ✍️  ⚠️
 
@@ -161,25 +161,25 @@ toc: true
 >     * E.g. a Docker image (package) distributed on DockerHub (platform).
 >     * E:g. a ZIP file containing source code is a package, not a source, because it is built from some other source, such as a git commit.
 >
-> ([Ref](#references-and-terms): SLSA 2023, CPANSec 2024)
+> (Ref: [SLSA 2023](#references-and-terms), CPANSec 2024)
 
 ### Package manager ✍️
 
 > 1. A distribution mechanism that makes software artifacts discoverable by ~~requesters~~ users of a specific package ecosystem.
 >
-> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
+> (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 ### Package URL (PURL)
 
 > 1. An ecosystem-agnostic specification which standardizes the syntax and location information of software components.
 >
-> ([Ref](#references-and-terms): SCVS 2020)
+> (Ref: [SCVS 2020](#references-and-terms))
 
 ### Pedigree
 
 > 1. Data which describes the lineage and/or process for which software has been created or altered.
 >
-> ([Ref](#references-and-terms): SCVS 2020)
+> (Ref: [SCVS 2020](#references-and-terms))
 
 ### Point of origin ✍️
 
@@ -189,7 +189,7 @@ toc: true
 > 1. The supplier and associated metadata from which a software component has been procured, transmitted, or received. (SCVS)
 >     * ~~Package repositories, release distribution platforms, and version control history are examples of various points of origin.~~
 >
-> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
+> (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 ### Procurement ✍️
 
@@ -197,51 +197,51 @@ toc: true
 >
 > This includes agreeing to Open Source licenses. (CPANSec)
 >
-> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
+> (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 ### Product with digital elements
 
 > 1. Any software or hardware product and its remote data processing solutions, including software or hardware components to be placed on the market separately.
 >
-> ([Ref](#references-and-terms): CRA 2024)
+> (Ref: [CRA 2024](#references-and-terms))
 
 ### Provenance ✍️
 
 > 1. The [chain of custody](#chain-of-custody) and origin of a software component.
 >     * Provenance incorporates the [point of origin](#point-of-origin) through ~~distribution~~  [distributor](#distributor) as well as derivatives in the case of software that has been modified.
 >
-> ([Ref](#references-and-terms): SCVS 2020)
+> (Ref: [SCVS 2020](#references-and-terms))
 
 ### SBOM (Software Bill of Materials)
 
 > 1. A formal record containing details and supply chain relationships of components included in the software elements of a product with digital elements. (CRA 2024)
 > 2. A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software. (SCVS 2020)
 >
-> ([Ref](#references-and-terms): CRA 2024, SCVS 2020)
+> (Ref: [CRA 2024](#references-and-terms), SCVS 2020)
 
 ### SBOM Types
 
 > 1. [Software Bill of Materials](#sbom-software-bill-of-materials) variations, produced under certain circumstances.
 >
-> ([Ref](#references-and-terms): CPANSec 2024)
+> (Ref: [CPANSec 2024](#references-and-terms))
 
 #### Design SBOM (Type)
 
 > 1. SBOM of intended, planned software project or product with included components (some of which may not yet exist) for a new software artifact.
 >
-> ([Ref](#references-and-terms): CISA 2023)
+> (Ref: [CISA 2023](#references-and-terms))
 
 #### Source SBOM (Type)
 
 > 1. SBOM created directly from the development environment, source files, and included dependencies used to build an product artifact.
 >
-> ([Ref](#references-and-terms): CISA 2023)
+> (Ref: [CISA 2023](#references-and-terms))
 
 #### Build SBOM (Type)
 
 > 1. SBOM generated as part of the process of building the software to create a releasable artifact (e.g., executable or package) from data such as source files, dependencies, built components, build process ephemeral data, and other SBOMs.
 >
-> ([Ref](#references-and-terms): CISA 2023)
+> (Ref: [CISA 2023](#references-and-terms))
 
 #### Analyzed SBOM (Type)
 
@@ -249,27 +249,27 @@ toc: true
 >     * Such analysis generally requires a variety of heuristics.
 >     * In some contexts, this may also be referred to as a “3rd party” SBOM.
 >
-> ([Ref](#references-and-terms): CISA 2023)
+> (Ref: [CISA 2023](#references-and-terms))
 
 #### Deployed SBOM (Type)
 
 > 1. SBOM provides an inventory of software that is present on a system.
 >     * This may be an assembly of other SBOMs that combines analysis of configuration options, and examination of execution behavior in a (potentially simulated) deployment environment.
 >
-> ([Ref](#references-and-terms): CISA 2023)
+> (Ref: [CISA 2023](#references-and-terms))
 
 #### Runtime SBOM (Type)
 
 > 1. SBOM generated through instrumenting the system running the software, to capture only components present in the system, as well as external call-outs or dynamically loaded components.
 >    *  In some contexts, this may also be referred to as an “Instrumented” or “Dynamic” SBOM.
 >
-> ([Ref](#references-and-terms): CISA 2023)
+> (Ref: [CISA 2023](#references-and-terms))
 
 ### Software
 
 > 1. The part of an electronic information system which consists of computer code.
 >
-> ([Ref](#references-and-terms): CRA 2024)
+> (Ref: [CRA 2024](#references-and-terms))
 
 ### Software Bill of Materials (SBOM)
 
@@ -279,13 +279,13 @@ toc: true
 
 > 1. An ISO standard that formalizes how software is tagged.
 >
-> ([Ref](#references-and-terms): SCVS 2020)
+> (Ref: [SCVS 2020](#references-and-terms))
 
 ### Software Package Data Exchange (SPDX)
 
 > 1. A Linux Foundation project which produces a [software bill of materials](#sbom-software-bill-of-materials) specification and a standardized list of open source licenses.
 >
-> ([Ref](#references-and-terms): SCVS 2020)
+> (Ref: [SCVS 2020](#references-and-terms))
 
 ### Source ✍️  ⚠️
 
@@ -293,7 +293,7 @@ toc: true
 >     * It is the beginning of the supply chain; we do not trace the provenance back any further.
 >     * E.g. a git commit (source) hosted on GitHub ([platform](#platform)).
 >
-> ([Ref](#references-and-terms): SLSA 2023, CPANSec 2024)
+> (Ref: [SLSA 2023](#references-and-terms), CPANSec 2024)
 
 ### SPDX (Software Package Data Exchange)
 

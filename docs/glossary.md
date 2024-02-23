@@ -33,8 +33,8 @@ toc: true
 ### Build
 
 > 1. Process that transforms a set of input artifacts into a set of output artifacts.
-> The inputs may be sources, dependencies, or ephemeral build outputs.
-> E.g. .travis.yml (process) run by Travis CI (platform).
+>     * The inputs may be sources, dependencies, or ephemeral build outputs.
+>     * E.g. .travis.yml (process) run by Travis CI (platform).
 >
 > ([Ref](#references-and-terms): SLSA 2023)
 
@@ -42,7 +42,7 @@ toc: true
 
 > 1. A marking by which a manufacturer indicates that a product with digital elements and the processes put in place by the manufacturer are in conformity with the essential requirements set out in [EU Cyber Resilience Act, Annex I](#other-supporting-matter) and other applicable European Union harmonisation legislation providing for its affixing.
 >
-> ([Ref](#references-and-terms): CRA 2024 II (21))
+> ([Ref](#references-and-terms): CRA 2024)
 
 ### Chain of custody
 
@@ -60,28 +60,29 @@ toc: true
 
 #### Component function
 
-> The purpose for which a software component exists.
-> Examples of component functions include parsers, database persistence, and authentication providers.
+> 1. The purpose for which a software component exists.
+>     * Examples of component functions include parsers, database persistence, and authentication providers.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
 #### Component type
-> The general classification of a software components architecture.
-> Examples of component types include libraries, frameworks, applications, containers, and operating systems.
+
+> 1. The general classification of a software components architecture.
+>     * Examples of component types include libraries, frameworks, applications, containers, and operating systems.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
 ### CycloneDX ✍️
 
-> An OWASP managed software bill of materials specification designed to be lightweight and security-focused.
+> 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused.
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 ### Dependency ✍️  ⚠️
 
-> [Artifact](#artifact) that is an input to a build process but that is not a source.
-> In the SLSA model, it is always a package.
-> E.g. an Alpine package ([package](#package)) distributed on Alpine Linux ([platform](#platform)).
+> 1. [Artifact](#artifact) that is an input to a build process but that is not a source.
+>     * In the SLSA model, it is always a package.
+>     * E.g. an Alpine package ([package](#package)) distributed on Alpine Linux ([platform](#platform)).
 >
 > ([Ref](#references-and-terms): SLSA 2023)
 
@@ -89,14 +90,14 @@ toc: true
 
 > 1. A software component that is referenced by a ~~program~~ [software](#software) itself.
 >
-> For indirect dependencies, see [Dependency (Transitive)](#dependency--transitive-).
+> For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive).
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 #### Dependency (Transitive) ✍️
 
 > 1. A software component that is indirectly used by a program by means of being a dependency of a dependency.
->    * Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
+>     * Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
 > 2. See also [Dependency (Direct)](#dependency-direct).
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
@@ -120,7 +121,7 @@ toc: true
 
 ### Hardware
 
-> A physical electronic information system, or parts thereof capable of processing, storing or transmitting of digital data.
+> 1. A physical electronic information system, or parts thereof capable of processing, storing or transmitting of digital data.
 >
 > ([Ref](#references-and-terms): CRA 2024)
 
@@ -190,7 +191,7 @@ toc: true
 >
 > ([Ref](#references-and-terms): CRA 2024)
 
-## Provenance ✍️
+### Provenance ✍️
 
 > 1. The [chain of custody](#chain-of-custody) and origin of a software component.
 >     * Provenance incorporates the [point of origin](#point-of-origin) through ~~distribution~~  [distributor](#distributor) as well as derivatives in the case of software that has been modified.
@@ -206,59 +207,59 @@ toc: true
 
 ### SBOM Types
 
-> [Software Bill of Materials](#sbom--software-bill-of-materials-) types, produced under certain circumstances.
+> 1. [Software Bill of Materials](#sbom-software-bill-of-materials) variations, produced under certain circumstances.
 >
 > ([Ref](#references-and-terms): CPANSec 2024)
 
 #### Design SBOM (Type)
 
-> SBOM of intended, planned software project or product with included components (some of which may not yet exist) for a new software artifact.
+> 1. SBOM of intended, planned software project or product with included components (some of which may not yet exist) for a new software artifact.
 >
 > ([Ref](#references-and-terms): CISA 2023)
 
 #### Source SBOM (Type)
 
-> SBOM created directly from the development environment, source files, and included dependencies used to build an product artifact.
+> 1. SBOM created directly from the development environment, source files, and included dependencies used to build an product artifact.
 >
 > ([Ref](#references-and-terms): CISA 2023)
 
 #### Build SBOM (Type)
 
-> SBOM generated as part of the process of building the software to create a releasable artifact (e.g., executable or package) from data such as source files, dependencies, built components, build process ephemeral data, and other SBOMs.
+> 1. SBOM generated as part of the process of building the software to create a releasable artifact (e.g., executable or package) from data such as source files, dependencies, built components, build process ephemeral data, and other SBOMs.
 >
 > ([Ref](#references-and-terms): CISA 2023)
 
 #### Analyzed SBOM (Type)
 
-> SBOM generated through analysis of artifacts (e.g., executables, packages, containers, and virtual machine images) after its build.
-> Such analysis generally requires a variety of heuristics.
-> In some contexts, this may also be referred to as a “3rd party” SBOM.
+> 1. SBOM generated through analysis of artifacts (e.g., executables, packages, containers, and virtual machine images) after its build.
+>     * Such analysis generally requires a variety of heuristics.
+>     * In some contexts, this may also be referred to as a “3rd party” SBOM.
 >
 > ([Ref](#references-and-terms): CISA 2023)
 
 #### Deployed SBOM (Type)
 
-> SBOM provides an inventory of software that is present on a system.
-> This may be an assembly of other SBOMs that combines analysis of configuration options, and examination of execution behavior in a (potentially simulated) deployment environment.
+> 1. SBOM provides an inventory of software that is present on a system.
+>     * This may be an assembly of other SBOMs that combines analysis of configuration options, and examination of execution behavior in a (potentially simulated) deployment environment.
 >
 > ([Ref](#references-and-terms): CISA 2023)
 
 #### Runtime SBOM (Type)
 
-> SBOM generated through instrumenting the system running the software, to capture only components present in the system, as well as external call-outs or dynamically loaded components.
-> In some contexts, this may also be referred to as an “Instrumented” or “Dynamic” SBOM.
+> 1. SBOM generated through instrumenting the system running the software, to capture only components present in the system, as well as external call-outs or dynamically loaded components.
+>    *  In some contexts, this may also be referred to as an “Instrumented” or “Dynamic” SBOM.
 >
 > ([Ref](#references-and-terms): CISA 2023)
 
 ### Software
 
-> The part of an electronic information system which consists of computer code.
+> 1. The part of an electronic information system which consists of computer code.
 >
 > ([Ref](#references-and-terms): CRA 2024)
 
 ### Software Bill of Materials (SBOM)
 
-> 1. See [SBOM (Software Bill of Materials](#sbom--software-bill-of-materials-).
+> 1. See [SBOM (Software Bill of Materials](#sbom-software-bill-of-materials).
 
 ### Software Identification (SWID)
 
@@ -268,7 +269,7 @@ toc: true
 
 ### Software Package Data Exchange (SPDX)
 
-> A Linux Foundation project which produces a software bill of materials specification and a standardized list of open source licenses.
+> 1. A Linux Foundation project which produces a [software bill of materials](#sbom-software-bill-of-materials) specification and a standardized list of open source licenses.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
@@ -282,17 +283,16 @@ toc: true
 
 ### SPDX (Software Package Data Exchange)
 
-> See [Software Package Data Exchange (SPDX)](#software-package-data-exchange--spdx-).
+> See [Software Package Data Exchange (SPDX)](#software-package-data-exchange-spdx).
 
 ### SWID (Software Identification)
 
-> See [Software Identification (SWID)](#software-identification--swid-).
+> See [Software Identification (SWID)](#software-identification-swid).
 
 ### Third-party component ✍️
 
-> ~~Any software component not directly created including open source, "source available", and commercial or proprietary software.~~
-
-> 1. Any software component not directly created, including "source available", commercial or proprietary software.
+> 1. ~~Any software component not directly created including open source, "source available", and commercial or proprietary software.~~ (SCVS)
+> 2. Any software component not directly created, including "source available", commercial or proprietary software. (CPANSec)
 >     * Open Source software is closer to a "second-party component" as the developer in fact has a legal relationship with the FOSS component project by accepting the project license.
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)

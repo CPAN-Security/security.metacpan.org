@@ -15,23 +15,24 @@ toc: true
 
 ## Glossary
 
-### Artifact
+### Artifact ✍️
 
-> An immutable blob of data; primarily refers to software, but SLSA can be used for any artifact.
+> 1. An immutable blob of data; primarily refers to [software](#software), but SLSA can be used for any artifact.
 > E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
+> 2. See also [Component](#component).
 >
 > ([Ref](#references-and-terms): SLSA 2023)
 
 ### Attestation
 
-> An authenticated statement (metadata) about a software artifact or collection of software artifacts.
-> E.g. a signed SLSA Provenance file.
+> 1. An authenticated statement (metadata) about a software artifact or collection of software artifacts.
+>     * E.g. a signed SLSA Provenance file.
 >
 > ([Ref](#references-and-terms): SLSA 2023)
 
 ### Build
 
-> Process that transforms a set of input artifacts into a set of output artifacts.
+> 1. Process that transforms a set of input artifacts into a set of output artifacts.
 > The inputs may be sources, dependencies, or ephemeral build outputs.
 > E.g. .travis.yml (process) run by Travis CI (platform).
 >
@@ -39,25 +40,32 @@ toc: true
 
 ### CE Marking ⚠️
 
-> A marking by which a manufacturer indicates that a product with digital elements and the processes put in place by the manufacturer are in conformity with the essential requirements set out in [EU Cyber Resilience Act, Annex I](#references-and-terms) and other applicable European Union harmonisation legislation providing for its affixing.
+> 1. A marking by which a manufacturer indicates that a product with digital elements and the processes put in place by the manufacturer are in conformity with the essential requirements set out in [EU Cyber Resilience Act, Annex I](#other-supporting-matter) and other applicable European Union harmonisation legislation providing for its affixing.
 >
-> ([Ref](#references-and-terms): CRA 2024 I, CRA 2024 II (21))
+> ([Ref](#references-and-terms): CRA 2024 II (21))
 
 ### Chain of custody
 
-> Auditable documentation of point of origin as well as the method of transfer from point of origin to point of destination and the identity of the transfer agent.
+> 1. Auditable documentation of point of origin as well as the method of transfer from point of origin to point of destination and the identity of the transfer agent.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
-### Component function
+### Component ✍️
+
+> [!NOTE]
+> 1. Software or hardware intended for integration into an [electronic information system](#electronic-information-system).
+> 2. See also [Artifact](#artifact).
+>
+> ([Ref](#references-and-terms): CRA 2024 II, CPANSec 2024)
+
+#### Component function
 
 > The purpose for which a software component exists.
 > Examples of component functions include parsers, database persistence, and authentication providers.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
-### Component type
-
+#### Component type
 > The general classification of a software components architecture.
 > Examples of component types include libraries, frameworks, applications, containers, and operating systems.
 >
@@ -77,94 +85,130 @@ toc: true
 >
 > ([Ref](#references-and-terms): SLSA 2023)
 
-### Direct dependency ✍️
+#### Dependency (Direct) ✍️
 
-> A software component that is referenced by a program itself.
-> For indirect dependencies, see [Transitive dependency](#transitive-dependency).
+> 1. A software component that is referenced by a ~~program~~ [software](#software) itself.
+>
+> For indirect dependencies, see [Dependency (Transitive)](#dependency--transitive-).
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
+#### Dependency (Transitive) ✍️
+
+> 1. A software component that is indirectly used by a program by means of being a dependency of a dependency.
+>    * Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
+> 2. See also [Dependency (Direct)](#dependency-direct).
+>
+> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 ### Distributor (EU) ⚠️
 
 > [!WARNING]
-> The Cyber Resilience Act defines a distributor as someone who **does not** change a package/component. This means if a distributor applies a patch, they should be treated as a [manufacturer](#manufacturer) or [Open-Source software steward](#open-source-software-steward), including the consequences this entails.
+> The Cyber Resilience Act defines a distributor as someone who **does not** change a package/component. This means if a distributor applies a patch, they should be treated as a [manufacturer](#manufacturer) or [Open-Source software steward](#open-source-software-steward), including any consequences this may entail.
 >
 > TODO: Check with lawyer after final version of CRA is adopted.
 
-> Any natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the European Union market without affecting its properties.
+> 1. Any natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the European Union market without affecting its properties.
 >
-> ([Ref](#references-and-terms): CRA 2024 II (21))
+> ([Ref](#references-and-terms): CRA 2024)
 
+### Electronic information system
+
+> 1. Any system, including electrical or electronic equipment, capable of processing, storing or transmitting digital data.
+>
+> ([Ref](#references-and-terms): CRA 2024)
+
+### Hardware
+
+> A physical electronic information system, or parts thereof capable of processing, storing or transmitting of digital data.
+>
+> ([Ref](#references-and-terms): CRA 2024)
+
+### Manufacturer
+
+> 1. Any natural or legal person who develops or manufactures products with digital elements or has products with digital elements designed, developed or manufactured, and markets them under his or her name or trademark, whether for payment, monetisation or free of charge.
+>
+> ([Ref](#references-and-terms): CRA 2024)
 
 ### Open-source software steward ⚠️
 
 > [!NOTE]
-> TODO: This is an addition that was added 2023-12-20, which may mean this defenition may change in the final version of the CRA.
+> TODO: This is a definition that was added to the CRA on 2023-12-20, meaning it may change in the final version of the regulation.
 
-> Any legal person, other than a [manufacturer](#manufacturer), which has the purpose or objective to systematically provide support on a sustained basis for the development of specific products with digital elements qualifying as free and open-source software that are intended for commercial activities, and ensures the viability of those products.
+> 1. Any legal person, other than a [manufacturer](#manufacturer), which has the purpose or objective to systematically provide support on a sustained basis for the development of specific products with digital elements qualifying as free and open-source software that are intended for commercial activities, and ensures the viability of those products.
 >
-> ([Ref](#references-and-terms): CRA 2024 II (18a))
-
-
-### Manufacturer
-
-> Any natural or legal person who develops or manufactures products with digital elements or has products with digital elements designed, developed or manufactured, and markets them under his or her name or trademark, whether for payment, monetisation or free of charge.
->
-> ([Ref](#references-and-terms): CRA 2024 II (18))
-
+> ([Ref](#references-and-terms): CRA 2024)
 
 ### Package ✍️  ⚠️
 
-> Artifact that is ~~“published”~~ for use by others.
-> In the model, it is always the output of a build process, though that build process can be a no-op.
-> E.g. a Docker image (package) distributed on DockerHub (platform).
-> E:g. a ZIP file containing source code is a package, not a source, because it is built from some other source, such as a git commit.
+> 1. [Artifact](#artifact) that is ~~“published”~~ for use by others.
+>     * In the model, it is always the output of a build process, though that build process can be a no-op.
+>     * E.g. a Docker image (package) distributed on DockerHub (platform).
+>     * E:g. a ZIP file containing source code is a package, not a source, because it is built from some other source, such as a git commit.
 >
 > ([Ref](#references-and-terms): SLSA 2023, CPANSec 2024)
 
 ### Package manager ✍️
 
-> A distribution mechanism that makes software artifacts discoverable by ~~requesters~~ users of a specific package ecosystem.
+> 1. A distribution mechanism that makes software artifacts discoverable by ~~requesters~~ users of a specific package ecosystem.
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 ### Package URL (PURL)
 
-> An ecosystem-agnostic specification which standardizes the syntax and location information of software components.
+> 1. An ecosystem-agnostic specification which standardizes the syntax and location information of software components.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
 ### Pedigree
 
-> Data which describes the lineage and/or process for which software has been created or altered.
+> 1. Data which describes the lineage and/or process for which software has been created or altered.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
 ### Point of origin ✍️
 
-> The supplier and associated metadata from which a software component has been procured, transmitted, or received.
-> ~~Package repositories, release distribution platforms, and version control history are examples of various points of origin.~~
+> [!WARNING]
+> Discouraged term. Confusing definiton, having common meaning with [Source](#source). (CPANSec)
+
+> 1. The supplier and associated metadata from which a software component has been procured, transmitted, or received. (SCVS)
+>     * ~~Package repositories, release distribution platforms, and version control history are examples of various points of origin.~~
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
 ### Procurement ✍️
 
-> The process of agreeing to terms and acquiring software or services for later use.
-> This includes agreeing to Open Source licenses.
+> 1. The process of agreeing to terms and acquiring software or services for later use. (SCVS)
+>
+> This includes agreeing to Open Source licenses. (CPANSec)
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
-### Provenance
+### Product with digital elements
 
-> The chain of custody and origin of a software component.
-> Provenance incorporates the point of origin through distribution as well as derivatives in the case of software that has been modified.
+> 1. Any software or hardware product and its remote data processing solutions, including software or hardware components to be placed on the market separately.
+>
+> ([Ref](#references-and-terms): CRA 2024)
+
+## Provenance ✍️
+
+> 1. The [chain of custody](#chain-of-custody) and origin of a software component.
+>     * Provenance incorporates the [point of origin](#point-of-origin) through ~~distribution~~  [distributor](#distributor) as well as derivatives in the case of software that has been modified.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
+### SBOM (Software Bill of Materials)
+
+> 1. A formal record containing details and supply chain relationships of components included in the software elements of a product with digital elements. (CRA 2024)
+> 2. A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software. (SCVS 2020)
+>
+> ([Ref](#references-and-terms): CRA 2024, SCVS 2020)
+
 ### SBOM Types
 
-[Software Bill of Materials](#software-bill-of-materials--sbom-) types, produced under certain circumstances.
+> [Software Bill of Materials](#sbom--software-bill-of-materials-) types, produced under certain circumstances.
+>
+> ([Ref](#references-and-terms): CPANSec 2024)
 
 #### Design SBOM (Type)
 
@@ -206,15 +250,19 @@ toc: true
 >
 > ([Ref](#references-and-terms): CISA 2023)
 
-### Software bill of materials (SBOM)
+### Software
 
-> A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software.
+> The part of an electronic information system which consists of computer code.
 >
-> ([Ref](#references-and-terms): SCVS 2020)
+> ([Ref](#references-and-terms): CRA 2024)
+
+### Software Bill of Materials (SBOM)
+
+> 1. See [SBOM (Software Bill of Materials](#sbom--software-bill-of-materials-).
 
 ### Software Identification (SWID)
 
-> An ISO standard that formalizes how software is tagged.
+> 1. An ISO standard that formalizes how software is tagged.
 >
 > ([Ref](#references-and-terms): SCVS 2020)
 
@@ -226,26 +274,26 @@ toc: true
 
 ### Source ✍️  ⚠️
 
-> Artifact that was directly authored or reviewed by persons, without modification.
-> It is the beginning of the supply chain; we do not trace the provenance back any further.
-> E.g. a git commit (source) hosted on GitHub ([platform](#platform)).
+> 1. An [artifact](#artifact) that was directly authored ~~or reviewed~~ by persons, without modification.
+>     * It is the beginning of the supply chain; we do not trace the provenance back any further.
+>     * E.g. a git commit (source) hosted on GitHub ([platform](#platform)).
 >
 > ([Ref](#references-and-terms): SLSA 2023, CPANSec 2024)
+
+### SPDX (Software Package Data Exchange)
+
+> See [Software Package Data Exchange (SPDX)](#software-package-data-exchange--spdx-).
+
+### SWID (Software Identification)
+
+> See [Software Identification (SWID)](#software-identification--swid-).
 
 ### Third-party component ✍️
 
 > ~~Any software component not directly created including open source, "source available", and commercial or proprietary software.~~
 
-> Any software component not directly created, including "source available", commercial or proprietary software.
-> Open Source software is closer to a "second-party component" as the developer in fact has a legal relationship with the FOSS component project by accepting the project license.
->
-> ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
-
-### Transitive dependency ✍️
-
-> A software component that is indirectly used by a program by means of being a dependency of a dependency.
-> Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
-> See also [Direct dependency](#direct-dependency).
+> 1. Any software component not directly created, including "source available", commercial or proprietary software.
+>     * Open Source software is closer to a "second-party component" as the developer in fact has a legal relationship with the FOSS component project by accepting the project license.
 >
 > ([Ref](#references-and-terms): SCVS 2020, CPANSec 2024)
 
@@ -257,5 +305,8 @@ This glossary is partly based on
 - (CPANSec 2024) CPAN Security Group improvements marked with ✍️  (CC-BY-SA-4.0)
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
 - (SLSA 2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)
-- (CRA 2024 I 2023-09-15) EU [Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/resource.html?uri=cellar:864f472b-34e9-11ed-9c68-01aa75ed71a1.0001.02/DOC_2&format=PDF)
-- (CRA 2024 II 2023-12-20 update) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT)
+- (CRA 2024) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT), page 75, published 2023-12-20.
+
+### Other supporting matter
+
+- (CRA 2023) EU [Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/resource.html?uri=cellar:864f472b-34e9-11ed-9c68-01aa75ed71a1.0001.02/DOC_2&format=PDF), published 2023-09-15.

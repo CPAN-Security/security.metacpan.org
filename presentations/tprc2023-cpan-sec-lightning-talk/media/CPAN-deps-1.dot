@@ -1,0 +1,41 @@
+strict digraph CPAN_Dependencies {
+
+  subgraph cluster_backpan {
+    style=filled;
+    color="grey65";
+    node [shape=component,style=filled,color=white];
+    label = "BackPAN";
+    
+    "BackPAN::d" -> "BackPAN::h";
+  }
+
+  subgraph cluster_cpan {
+    style=filled;
+    color="grey90";
+    node [shape=component,style=filled,color=white];
+    label = "CPAN";
+
+    "CPAN::a" -> "CPAN::b" -> "CPAN::c";
+    "CPAN::d" -> "CPAN::g";
+  }
+
+  subgraph cluster_darkpan {
+    style=filled;
+    color="grey80";
+    node [shape=component,style=filled,color=white];
+    label = "DarkPAN";
+
+    "MyCorp::e" -> "MyCorp::f";
+  }
+
+  "CPAN::d" -> "CPAN::b";
+  "CPAN::g" -> "MyCorp::f";
+  "/usr/bin/d" -> "BackPAN::d";
+  "/usr/bin/d" -> "CPAN::d";
+  "CPAN::c" -> "MyCorp::App";
+  "liba-0.1.1.so" -> "CPAN::a";
+  "BackPAN::h" -> "MyCorp::App";
+  "MyCorp::f" -> "MyCorp::App";
+  
+   "MyCorp::App" [shape=Msquare];
+}

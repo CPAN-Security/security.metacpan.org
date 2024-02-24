@@ -224,7 +224,7 @@ US Department of Commerce published a list of minimum required fields in an SBOM
 | Other Unique Identifiers | yes  | no   |
 | Dependency Relationship  | yes  | yes  |
 | Author of SBOM Data      | yes  | no   |
-| Timestamp                | yes  | no   |
+| Time-stamp               | yes  | no   |
 
 
 [comment]: # (!!!)
@@ -661,7 +661,7 @@ US Department of Commerce published a list of minimum required fields in an SBOM
 [comment]: # (!!! data-auto-animate)
 
 ## Describe component Pedigree
-(ancestors, decendants, variants)
+(ancestors, descendants, variants)
 
 ```json
 {
@@ -1145,7 +1145,7 @@ Join the CPAN Security WG!
 
 Note:
 
-* Do you have a **security background** or care about the toolchain?
+* Do you have a **security background** or care about the Toolchain?
 * Do you have **time to volunteer**?
 * Is your employer willing to **dedicate a percentage of your time** to improve our security commons?
 

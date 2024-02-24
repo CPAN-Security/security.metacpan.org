@@ -49,17 +49,17 @@ This is The CPAN Security Group recommended reading list. If you have any additi
 * (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
 
 
-## Software identification
+## Software identification (naming & versioning)
 
 * [PURL Specification](https://github.com/package-url/purl-spec)
 * (CPAN) [URI::PackageURL](https://github.com/giterlizzi/perl-URI-PackageURL)
 * (CPAN) [CPAN::DistnameInfo](https://github.com/Perl-Toolchain-Gang/CPAN-DistnameInfo)
 
 
-### Useful articles and papers
+### Useful articles, papers and resources
 
 * (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis) (October 2023)
-
+* (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
 
 ## Provenance & Supply Chain Security
 

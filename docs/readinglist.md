@@ -36,6 +36,7 @@ This is The CPAN Security Group recommended reading list. If you have any additi
             * Chapter I, Article 3 (Definitions)
             * Chapter II, Article 14 (Obligations of distributors)
             * Chapter II, Article 17a (Obligations of open-source software stewards)
+    * [CRA Legislative Procedure](https://eur-lex.europa.eu/procedure/EN/2022_272) Status page
 * (EU) [Product Liability Directive](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive) (PLD)
 
 

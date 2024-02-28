@@ -13,19 +13,19 @@ This guide is *INFORMATIONAL* and should be considered as a continuously develop
 Corrections or improvements to this text can be filed in the [security.metacpan.org issue tracker](https://github.com/CPAN-Security/security.metacpan.org/issues). Pull requests are also welcome.
 
 
-## Recommended methodology
-
-For this check-list, we take inspiration from the following sources.
+## Methodology and Reading materials
 
 * [CHAOSS Community metrics](https://opensource.com/article/22/11/community-metrics)
 * [PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) with [commentary](http://neilb.org/2013/08/07/adoptme.html)
 * The [Deming Principles](https://www.uthsc.edu/its/business-productivity-solutions/lean-uthsc/deming.php) on managing quality.
+* The [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework), and related [Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations](https://csrc.nist.gov/pubs/sp/800/161/r1/final) guidelines.
+* The EO14028 [Software Security in Supply Chains](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains) guide
 * …
 
 
-## Recommended check-list
+## Assessment recommendations
 
-These items apply to all dependencies that use CPAN as a publishing and/or distribution channel. This also applies to modules that are re-packaged for other native packaging ecosystems (e.g. Debian APT or RedHat RPM), though some recommendations may be different for packages that are distributed there.
+These items apply to all dependencies that use CPAN as a publishing and/or distribution channel. This also applies to modules that are re-packaged for other native packaging ecosystems (e.g. Debian DPKG or AlmaLinux RPM), though some recommendations may be different for packages that are distributed there.
 
 ### Security
 
@@ -58,6 +58,7 @@ These items apply to all dependencies that use CPAN as a publishing and/or distr
 2. Active use of Software Composition Analysis tools
 3. …
 
+
 ### Coding practices
 
 1. Correct and updated dependency list, that takes known vulnerabilities into account
@@ -73,6 +74,7 @@ These items apply to all dependencies that use CPAN as a publishing and/or distr
 5. Developer focus on code understandability
     * Obscure or difficult-to-understand code makes exploit detection more difficult, and therefore a better target for attackers
 6. …
+
 
 ## Options for risk mitigation
 

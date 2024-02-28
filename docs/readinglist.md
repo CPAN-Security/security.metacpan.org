@@ -25,17 +25,20 @@ This is The CPAN Security Group recommended reading list. If you have any additi
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
     * Section 4
 * (EU) [Directive 2022/2555](https://eur-lex.europa.eu/eli/dir/2022/2555) (NIS 2 Directive)
-    * Article 6, Definitions for "manufacturer", "provider"
     * Recitals (58), (62), (85), (89), (90), (91)
-    * Chapter II, 2 (a)
-    * Chapter IV, Article 21(2) and (3)
+    * Chapter I, Article 6, Definitions
+    * Chapter II, Article 7, 2 (a)
+    * Chapter IV, Article 21, 1, 2 and 3
 * (EU) Directive 2020/1828/EC ([Cyber Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52022PC0454)) (CRA)
-    * In the [CRA 2023-12-20 update](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT)
-        * Annex II
-            * Recitals (8), (**10a-h**), (18a), (21)
-            * Chapter I, Article 3 (Definitions)
-            * Chapter II, Article 14 (Obligations of distributors)
-            * Chapter II, Article 17a (Obligations of open-source software stewards)
+    * In [CRA 2022-09-15 proposal, Document 1](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022PC0454)
+        * Chapter I, Article 3 (Definitions)
+        * Chapter II, Articles 10, 11, 13, 14, 15, 16 (Obligations for manufacturers, importers and distributors)
+        * Chapter II, Article 17a (Obligations of open-source software stewards)
+        * Chapter III, Articles 20, 22 (Conformity and CE marking)
+    * In [CRA 2022-09-15 proposal, Document 2](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022PC0454)
+        * Annex I (Essential Cybersecurity Requirements)
+    * In [CRA 2023-12-20 update to Annex II](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT)
+        * Recitals (8), (**10a-h**), (18a), (21)
     * [CRA Legislative Procedure](https://eur-lex.europa.eu/procedure/EN/2022_272) Status page
 * (EU) [Product Liability Directive](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive) (PLD)
 

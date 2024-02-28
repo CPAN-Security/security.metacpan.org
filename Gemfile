@@ -5,13 +5,16 @@ source "https://rubygems.org"
 #
 #     bundle exec jekyll serve
 #
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
+# This is the default theme for new Jekyll sites. You may change this
+# to anything you like.
+#
+# Github-pages dependencies: https://pages.github.com/versions/
 gem "minima", "~> 2.5"
 gem "github-pages", "~> 228", group: :jekyll_plugins
 gem "webrick"
 
 group :jekyll_plugins do
-#  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-mermaid", ">= 1"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

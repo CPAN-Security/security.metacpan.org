@@ -8,21 +8,28 @@ toc: true
 
 > [!CAUTION]
 > ## Document status: :warning: DRAFT
-> What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilites overview, used by the CPAN Security Group (CPANSec).
+> What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilities overview, used by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom
-> - Discuss on IRC: ircs://ssl.irc.perl.org:7063/#cpan-security
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom](https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom)
+> - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 
 
 ## Roles in a supply chain
 
-What roles and responsibilities exist in an Open Source supply-chain, and what does each role care about in an SBOM?
+What roles and responsibilities exist in typical Open Source supply-chain, and what does each role care about in an SBOM?
 
-In any software supply chain we find many people filling distinct roles.
-This diagram and acompanying list offers an overview of clearly distinguished roles and how they are related.
-Any single person may have one or more roles, and switch between them as needed.
-Common for all roles is they care about SBOM data for some purpose – either to ensure they are correct (create, update, rename, delete, assemble), passed on (distribute), or ensure the data is correct and matches the accompanying software component (verify).
+In all software supply chains, we find many people filling distinct roles.
+This diagram and accompanying glossary offers an overview of clearly distinguishable roles involved in common supply chains, and how they are related.
+
+### Basic assumptions
+
+- Any single person may have one or more roles, and switch between them as needed.
+- Common for all these roles, is _they care about metadata_ for some purpose – Including…
+    - Availability (create, sign)
+    - Correctness (update, annotate, rename, delete)
+    - Availability (distribute, assemble, index)
+    - Matches the accompanying software component (verify).
 
 
 ```mermaid
@@ -139,7 +146,7 @@ stateDiagram-v2
 
 ## Owner
 
-Has the legal owership rights for the dist (e.g a business, or the Author).
+Has the legal ownership rights for the dist (e.g a business, or the Author).
 May decide the name of the project, or other project parameters for (or on behalf of) the Author.
 
 > [!IMPORTANT]
@@ -153,7 +160,7 @@ May decide the name of the project, or other project parameters for (or on behal
 ## Author
 
 The initial and/or main creator of the component in question.
-Typically works on all aspects of the code, including features, bugfixes, tests and security issues.
+Typically works on all aspects of the code, including features, bug fixes, tests and security issues.
 Has the final say on the original contents of the package.
 The Author _can_ be a group of people, though a single point of responsibility is common.
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective.
@@ -176,7 +183,7 @@ See below).
 
 A type of Steward with reduced responsibilities.
 Cares about the ongoing security of the code.
-Typically only conserned with updating dependencies or applying security fixes.
+Typically only concerned with updating dependencies or applying security fixes.
 Works with the Author primarily, and may take responsibility on their behalf when it comes to security concerns.
 
 
@@ -193,7 +200,7 @@ May or may not have repository commit privileges.
 
 ## Patcher
 
-Applies security and bugfixes to distributed native packages.
+Applies security and bug fixes to distributed native packages.
 Works mainly with the Packager, and is downstream of the Author.
 This role should only be necessary if upstream (Author or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g. when backporting of fixes are needed due to downstream version pinning).
 
@@ -216,13 +223,13 @@ Concerns themselves with correct package format and structure, and that package 
 > * E.g. someone in the #debian-perl group downloads, builds, tests and installs something from CPAN, but instead of doing a regular install, they us tooling like `dh-make-perl` to produce a custom installation directory that can be incorporated into a .deb archive.
 
 > [!IMPORTANT]
-> Packagers should add build environment metadata (including resolved dependences) in an accompanying SBOM file.
+> Packagers should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
 
 
 ## Curator
 
 Selects or pins which releases are suitable for use within an organization.
-Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bugfixes and security updates.
+Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bug fixes and security updates.
 
 > [!NOTE]
 > * Curators may decide both whether and where the output of a Packager is distributed.
@@ -245,7 +252,7 @@ Ensures the availability of packages, that they are indexed correctly, and that 
 
 ### Language Ecosystem
 
-A language ecosystem hosts, indexes and distributes compontnents specific for a programming language.
+A language ecosystem hosts, indexes and distributes components specific for a programming language.
 Examples include CPAN (Perl), PyPI (Python), NPM (Node/JS) and others.
 
 
@@ -264,7 +271,7 @@ Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, Op
 ## Integrator Environment
 
 A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
-Managment is expected to ensure that this assembled SBOM document describes the application as required by law.
+Management is expected to ensure that this assembled SBOM document describes the application as required by law.
 
 
 > [!IMPORTANT]
@@ -318,7 +325,7 @@ Typically only works on security issues and bugfixes.
 Usually doesn't work on new features.
 Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.~~
 
-> NOTE: Steward gets a specific defined meaning in the Cyber Resilience Act, so until this defenition is established, we'll avoid using the term.
+> NOTE: Steward gets a specific defined meaning in the Cyber Resilience Act, so until this definition is established, we'll avoid using the term.
 
 
 # License

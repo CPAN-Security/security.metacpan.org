@@ -17,16 +17,15 @@ toc: true
 
 ## Roles in a supply chain
 
-What roles and responsibilities exist in typical Open Source supply-chain, and what does each role care about in an SBOM?
+In all Open Source Software supply chains, we find people filling distinct roles that each care about some metadata or tasks in SBOMs.
 
-In all software supply chains, we find many people filling distinct roles.
-This diagram and accompanying glossary offers an overview of clearly distinguishable roles involved in common supply chains, and how they are related.
+With this diagram we'll attempt to offer an overview of these roles, how they are related, and what they do and care about.
 
 ### Basic assumptions
 
 - Any single person may have one or more roles, and switch between them as needed.
-- Common for all these roles, is _they care about metadata_ for some purpose – Including…
-    - Availability (create, sign)
+- Tasks they may care about include…
+    - Exists (create, sign)
     - Correctness (update, annotate, rename, delete)
     - Availability (distribute, assemble, index)
     - Matches the accompanying software component (verify).
@@ -150,12 +149,12 @@ Has the legal ownership rights for the dist (e.g a business, or the Author).
 May decide the name of the project, or other project parameters for (or on behalf of) the Author.
 
 > [!IMPORTANT]
-> | Field name      | Required | Data type | CycloneDX | SPDX |
-> | :-------------- | :------- | :-------- | --------- | ---- |
-> | Name            | Yes      |           |           |      |
-> | Licenses        | Yes      |           |           |      |
-> | Code repo       | Yes      |           |           |      |
-> | SBOM Type       | Yes      |           |           | N/A  |
+> | Field name          | Required | Data type | CycloneDX | SPDX | Legislation |
+> | :------------------ | :------- | :-------- | --------- | ---- | ----------- |
+> | Name                | Yes      | Text      |           |      | CRA AII.1   |
+> | Licenses            | Yes      |           |           |      |
+> | Code repo           | Yes      |           |           |      |
+> | SBOM Type           | Yes      |           |           | N/A  |
 
 ## Author
 
@@ -167,16 +166,24 @@ If an Author has upstream (reverse) dependencies, the Author is also considered 
 See below).
 
 > [!IMPORTANT]
-> | Field name          | Required | Data type | CycloneDX | SPDX |
-> | :------------------ | :------- | :-------- | --------- | ---- |
-> | Name                | Yes      |           |           |      |
-> | Version             | Yes      |           |           |      |
-> | Licenses            | Yes      |           |           |      |
-> | Unique ID (pURL)    | Yes      |           |           |      |
-> | Code repo           | Yes      |           |           |      |
-> | Code revision       | No       |           |           |      |
-> | SBOM Type           | Yes      |           |           | N/A  |
-> | Vuln. versions/locs | No       |           |           |      |
+> | Field name          | Required | Data type    | CycloneDX | SPDX | Legislation   |
+> | :------------------ | :------- | :----------- | --------- | ---- | ------------- |
+> | Manufacturer Name   | Yes      | Text         |           |      | CRA AII.1     |
+> | Security contact    | Yes      | URL          |           |      | CRA AII.2     |
+> | Unique ID           | Yes      | PURL         |           |      | CRA AII.3     |
+> | Purpose             | Yes      | Text         |           |      | CRA AII.4     |
+
+> | Version             | Yes      | Text         |           |      | CRA AII.3     |
+> | Intended Use        | Yes      | Text         |           |      | CRA AII.4     |
+> | Licenses            | Yes      | SPDX License |           |      | 
+> | Code repo           | Yes      |              |           |      | 
+> | Code revision       | No       |              |           |      | 
+> | SBOM Type           | Yes      |              |           | N/A  | 
+> | CE Declaration      | No       | URL          |           |      | CRA AII.7     |
+> | CE Support End Date | No       | URL          |           |      | CRA AII.8     |
+> | CE Declaration      | No       | URL          |           |      | CRA AII.7     |
+> | SBOM Location       | No       | URL          |           |      | CRA AII.10    |
+> | Vuln. versions/locs | No       |              |           |      | 
 
 
 ### Custodian
@@ -191,6 +198,7 @@ Works with the Author primarily, and may take responsibility on their behalf whe
 
 Places the component on an ecosystem publishing platform, on behalf of the Author, Steward or Custodian.
 Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.
+
 
 ### Contributor
 
@@ -210,7 +218,7 @@ This role should only be necessary if upstream (Author or Custodian) roles are n
 > * A packager can both be found in-house (e.g. a business who uses a company-internal package mirror), for a Package Ecosystem provider (e.g. Debian), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
 
-## Builder — Packager
+## Builder - Packager
 
 Builds and creates native packages from a dist received from upstream, optionally with patches applied from the Patcher.
 Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
@@ -275,17 +283,16 @@ Management is expected to ensure that this assembled SBOM document describes the
 
 
 > [!IMPORTANT]
-> | Field name          | Required | Data type | CycloneDX | SPDX |
-> | :------------------ | :------- | :-------- | --------- | ---- |
-> | Name                | Yes      |           |           |      |
-> | Version             | Yes      |           |           |      |
-> | Licenses            | Yes      |           |           |      |
-> | Unique ID (pURL)    | Yes      |           |           |      |
-> | Code repo           | Yes      |           |           |      |
-> | Code revision       | No       |           |           |      |
-> | SBOM Type           | Yes      |           |           | N/A  |
-> | Vuln. versions/locs | No       |           |           |      |
-
+> | Field name          | Required | Data type | CycloneDX | SPDX | Legislation |
+> | :------------------ | :------- | :-------- | --------- | ---- | ----------- |
+> | Name                | Yes      |           |           |      | CRA AII.1   |
+> | Version             | Yes      |           |           |      | CRA AII.3   |
+> | Licenses            | Yes      |           |           |      | 
+> | Unique ID (pURL)    | Yes      |           |           |      | 
+> | Code repo           | Yes      |           |           |      | 
+> | Code revision       | No       |           |           |      | 
+> | SBOM Type           | Yes      |           |           | N/A  | 
+> | Vuln. versions/locs | No       |           |           |      | 
 
 
 ### Developer

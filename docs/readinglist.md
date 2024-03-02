@@ -29,13 +29,14 @@ This is The CPAN Security Group recommended reading list. If you have any additi
     * Recitals (58), (62), (85), (89), (90), (91)
     * Chapter II, 2 (a)
     * Chapter IV, Article 21(2) and (3)
-* (EU) Directive 2020/1828/EC ([Cyber Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52022PC0454)) (CRA)
-    * In the [CRA 2023-12-20 update](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT)
-        * Annex II
-            * Recitals (8), (**10a-h**), (18a), (21)
-            * Chapter I, Article 3 (Definitions)
-            * Chapter II, Article 14 (Obligations of distributors)
-            * Chapter II, Article 17a (Obligations of open-source software stewards)
+* (EU) Directive 2020/1828/EC [Cyber Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT) (CRA, 2023-12-20 update)
+    * Annex I (Pages 164-167)
+        * Essential Cybersecurity Requirements
+    * Annex II (Pages 168-169)
+        * Recitals (8), (**10a-h**), (18a), (21)
+        * Chapter I, Article 3 (Definitions)
+        * Chapter II, Article 14 (Obligations of distributors)
+        * Chapter II, Article 17a (Obligations of open-source software stewards)
 * (EU) [Product Liability Directive](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive) (PLD)
 
 

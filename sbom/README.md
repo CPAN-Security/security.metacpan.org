@@ -166,24 +166,27 @@ If an Author has upstream (reverse) dependencies, the Author is also considered 
 See below).
 
 > [!IMPORTANT]
-> | Field name          | Required | Data type    | CycloneDX | SPDX | Legislation   |
-> | :------------------ | :------- | :----------- | --------- | ---- | ------------- |
-> | Manufacturer Name   | Yes      | Text         |           |      | CRA AII.1     |
-> | Security contact    | Yes      | URL          |           |      | CRA AII.2     |
-> | Unique ID           | Yes      | PURL         |           |      | CRA AII.3     |
-> | Purpose             | Yes      | Text         |           |      | CRA AII.4     |
-
-> | Version             | Yes      | Text         |           |      | CRA AII.3     |
-> | Intended Use        | Yes      | Text         |           |      | CRA AII.4     |
-> | Licenses            | Yes      | SPDX License |           |      | 
-> | Code repo           | Yes      |              |           |      | 
-> | Code revision       | No       |              |           |      | 
-> | SBOM Type           | Yes      |              |           | N/A  | 
-> | CE Declaration      | No       | URL          |           |      | CRA AII.7     |
-> | CE Support End Date | No       | URL          |           |      | CRA AII.8     |
-> | CE Declaration      | No       | URL          |           |      | CRA AII.7     |
-> | SBOM Location       | No       | URL          |           |      | CRA AII.10    |
-> | Vuln. versions/locs | No       |              |           |      | 
+> | Field name                 | Required | Data type    | CycloneDX | SPDX | Legislation          |
+> | :------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
+> | Manufacturer/Supplier Name | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
+> | Component Name             | Yes      | Text         |           |      | NTIA-SBOM            |
+> | Version                    | Yes      | Text         |           |      | NTIA-SBOM            |
+> | Dependencies               | Yes      |              |           |      | NTIA-SBOM            |
+> | Security contact           | Yes      | URL          |           |      | CRA AII.2            |
+> | Unique ID                  | Yes      | PURL         |           |      | CRA AII.3, NTIA-SBOM |
+> | Purpose                    | Yes      | Text         |           |      | CRA AII.4            |
+> | Intended Use               | Yes      | Text         |           |      | CRA AII.4            |
+> | Licenses                   | Yes      | SPDX License |           |      | 
+> | Code repo                  | Yes      |              |           |      | 
+> | Code revision              | No       |              |           |      | 
+> | SBOM Type                  | Yes      |              |           | N/A  | 
+> | CE Declaration             | No       | URL          |           |      | CRA AII.7            |
+> | CE Support End Date        | No       | URL          |           |      | CRA AII.8            |
+> | CE Instructions            | No       | URL          |           |      | CRA AII.9            |
+> | SBOM Author                | No       | Text         |           |      | NTIA-SBOM            |
+> | SBOM Creation Timestamp    | No       | DateTime     |           |      | NTIA-SBOM            |
+> | SBOM Location              | No       | URL          |           |      | CRA AII.10           |
+> | Vuln. versions/locs        | No       |              |           |      | 
 
 
 ### Custodian
@@ -334,6 +337,10 @@ Works with the Author primarily, and may take responsiblity on their behalf when
 
 > NOTE: Steward gets a specific defined meaning in the Cyber Resilience Act, so until this definition is established, we'll avoid using the term.
 
+# References
+
+* CRA AII: [Cyber Resilience Act, Annex II](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=168), Draft dated 2023-12-20
+* NTIA SBOM: [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
 
 # License
 

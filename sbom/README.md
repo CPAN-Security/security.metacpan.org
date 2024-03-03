@@ -7,7 +7,7 @@ toc: true
 # A Simplified Open Source Supply Chain with SBOMs
 
 > [!CAUTION]
-> ## Document status: :warning: DRAFT
+> ## Document status: ⚠️  DRAFT
 > What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilities overview, used by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >

@@ -13,6 +13,9 @@ This guide is *INFORMATIONAL* and should be considered as a continuously develop
 Corrections or improvements to this text can be filed in the [security.metacpan.org issue tracker](https://github.com/CPAN-Security/security.metacpan.org/issues). Pull requests are also welcome.
 
 
+# Assessing risk in the CPAN ecosystem
+
+
 ## Methodology and Reading materials
 
 * [CHAOSS Community metrics](https://opensource.com/article/22/11/community-metrics)
@@ -36,7 +39,7 @@ These items apply to all dependencies that use CPAN as a publishing and/or distr
 
 ### Sustainability
 
-1. Project completeness — Look for signs of documents and other artefacts that are commonly expected in open source projects. E.g.: `README`, `LICENSE`, `Changes` and `CONTRIBUTING` files; A public source code repository; A public bugtracker; A community communications channel.
+1. Project completeness — Look for signs of documents and other artefacts that are commonly expected in open source projects. E.g.: `README`, `LICENSE`, `Changes` and `CONTRIBUTING` files; A public source code repository; A public bug tracker; A community communications channel.
 2. Upstream placement in the [River of CPAN](https://neilb.org/2015/04/20/river-of-cpan.html) — An indication of this can be found on MetaCPAN's reverse dependency list ([example](https://metacpan.org/dist/Test-Simple/requires)).
 3. Bus-factor — How many active developers with indexing permissions exist? You can find this out on MetaCPAN ([example](https://metacpan.org/dist/Test-Simple) in left column).
 4. Advocacy visibility — Is the project (or one of it's reverse dependencies) actively mentioned in social media or common community channels?
@@ -78,9 +81,14 @@ These items apply to all dependencies that use CPAN as a publishing and/or distr
 
 ## Options for risk mitigation
 
-1. Consider availability for adoption when owner is unresponsive and distribution is made available for adoption via the [ADOPTME](https://metacpan.org/author/ADOPTME) facility on PAUSE/CPAN
-2. Consider availability for assisting when owner is looking for co-maintainer support, via the [NEEDHELP](https://metacpan.org/author/NEEDHELP) facility on PAUSE/CPAN
-3. Consider the availability for handoff when owner is looking for someone to take over the distribution, via the [HANDOFF](https://metacpan.org/author/HANDOFF) facility on PAUSE/CPAN
+* For component projects published on CPAN
+    1. Consider availability for adoption when owner is unresponsive and distribution is made available for adoption via the [ADOPTME](https://metacpan.org/author/ADOPTME) facility on PAUSE/CPAN
+    2. Consider availability for assisting when owner is looking for co-maintainer support, via the [NEEDHELP](https://metacpan.org/author/NEEDHELP) facility on PAUSE/CPAN
+    3. Consider the availability for handoff when owner is looking for someone to take over the distribution, via the [HANDOFF](https://metacpan.org/author/HANDOFF) facility on PAUSE/CPAN
+* For CPAN ecosystems themselves, including PAUSE, MetaCPAN and any other supporting systems.
+    1. Fund ongoing security improvement work, via CPANSec or the Perl and Raku Foundation.
+
+
 
 
 ## See Also
@@ -89,3 +97,14 @@ These items apply to all dependencies that use CPAN as a publishing and/or distr
 if you are open for taking responsibility beyond your direct dependency requirements.
 2. [How to adopt a CPAN distribution](https://metacpan.org/about/faq#howtoadoptadistribution)
 3. [The PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model)
+4. Blog post: [How will NIS2 affect the supply chain security approach?](https://www.ey.com/en_pl/law/nis2-supply-chain-security)
+
+# Legislative background
+
+## NIS2
+
+* Article 21(2)(d); (⚠️  unconfirmed)
+* Article 22; (⚠️  unconfirmed)
+    * Recitals (90), (91); (⚠️  unconfirmed)
+* For internal risk assessments
+    * Recital (85); (⚠️  unconfirmed)

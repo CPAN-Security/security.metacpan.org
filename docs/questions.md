@@ -5,7 +5,7 @@
 
 ## Dependencies
 
-* Does the CRA make demands about _all_ transitive dependencies, at any arbitrary depth? (Assumpltion: YES, 85%)
+* Does the CRA make demands about _all_ transitive dependencies, at any arbitrary depth? (Assumption: YES, 85%)
     - e.g. If a transitive dependency of a "product with digital components" the CRA applies to depends on something supplied by the OS packaging system (e.g. a cryptographic library like libopenssl), do we continue looking down the dependency rabbit-hole even further? (Assumption: YES, )
     - How about other types of dependencies?
         - Author (development environment)
@@ -35,7 +35,7 @@
 ## Liability
 
 * What does the liability picture for someone who has to do a vulnerability assessment of a product that contains _thousands_ of Open Source components look like?
-* To which extent can compontent distributors or authors "accept" some of the liabilty?
+* To which extent can component distributors or authors "accept" some of the liability?
 
 ## Metadata
 

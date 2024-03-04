@@ -22,7 +22,7 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
 
 * @sjn welcomed all in @oalders absence
 * @timlegge took minutes
-* Attendees: @stigo, @tux, @sjn, @ingy, @timlegge, Tina Müller
+* Attendees: stigo, @tux, @sjn, @ingy, @timlegge, Tina Müller
 * Regrets: @oalders
 
 ### cd Approve previous meeting minutes
@@ -47,7 +47,7 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
         * [openSUSE devel:languages:perl](https://build.opensuse.org/project/show/devel:languages:perl)
         * [All CPAN packages starting with A](https://build.opensuse.org/project/show/devel:languages:perl:CPAN-A) 
     * @sjn: get metadata from a CPAN package to get the dependencies for use in determining dependencies, etc. 
-    * @stigo: are distro packaging details in scope for SBOM security for us?
+    * stigo: are distro packaging details in scope for SBOM security for us?
         * @sjn yes becasue the packageurl is necessary to allow us to find the items.
 5. [CPAN Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11)
 6. [CPAN Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
@@ -64,7 +64,7 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
     - @sjn volunteered to provide a session to demonstrate/discuss what is required in an SBOM file
 2. Moving to cpan-security-advisory YAML format v2 (brian d foy email)
     - @tux had a discussion with brian regarding the use of his Test module.  
-    - @stigo question on how to consume the data - 
+    - stigo question on how to consume the data - 
     - @tux is open to changing the module to an api versus the data direct from brian's repo.  
     - @tux is looking ta the RedHat advisory and the formats of the data - it is a work in progress.  
     - @tux would like to read the info and give back the information is a standard format in the future.  Net::CVE gives you everything you need to interact.
@@ -74,20 +74,21 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
     - Should we change the group name back.
     - Table it till the next meeting.
 4. Adding CVEs to CPANSA- vulns that are missing them
-    - @stigo gone through the CPANSA database registered 2 CVEs for old vulnerabilities - Debian follows the CVE database.  3 Mojolicious vulnerabilities and others that need CVEs (until 2020, should maybe also include 2018).
+    - stigo gone through the CPANSA database registered 2 CVEs for old vulnerabilities - Debian follows the CVE database.  3 Mojolicious vulnerabilities and others that need CVEs (until 2020, should maybe also include 2018).
     - Deciding if we should have our own vuln identifiers or use CVEs
-    - @stigo initial discussion was to have our own ID - thinking we simply use the CVE database for everything we know.  
+    - stigo - initial discussion was to have our own ID - thinking we simply use the CVE database for everything we know.  
     - Possibly a temp ID?  The IDs int he CPANSA ids have been changing over time.  
     - CVEs are the well known identifier.
     - Go forward with CVE untill we need something else?
 5. Checking if we can get crypto functions into core
-    - @stigo what is the status - does anyone know?  Getting the verification functions would be ideal
+    - stigo - does anyone know if this has been proposed?  Getting the verification functions would be ideal for TUF and similar
 6. CVE advisories to MetaCPAN pages for distributions
-    - @stigo - nothing new but hope to get some things added to the pages
+    - stigo - nothing new but hope to get some things added to the pages
 7. Discuss the TUF implementation briefly
-    - @stigo - tuf implements repo and author signing - proper signing with attack mitigations - started looking at it but no progress - we need a CPAN implementation - for pause to do repo signing and possibly author. is CycloneDX related?
+    - stigo - tuf implements repo and author signing - proper signing with attack mitigations - started looking at it but no progress - we need a CPAN implementation - for pause to do repo signing and possibly author. 
+    - sjn: is CycloneDX related?
     - @ingy - high level implementation is not large (maybe) - increases the profile and credibility of Perl and would be a good thing.
-    - @sjn - can @ingy and @stigo put together something in a project for what we need to do - will be very important for funding, etc.
+    - @sjn - can @ingy and stigo put together something in a project for what we need to do - will be very important for funding, etc.
 
 ### Ongoing vulnerabilities
 
@@ -97,7 +98,7 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
 ### Operating changes
 
 1. Proposal to use CC-BY-SA-4.0 as a content license in CPANSec for general web site content
-    - @timlegge, @stigo, @sjn vote to use CC-BY-SA-4.0 
+    - @timlegge, stigo, @sjn vote to use CC-BY-SA-4.0 
     - ingy abstain
     - motion carried
     - @stigo - clarified that we need to exclude vulnerability info as it needs to be public info

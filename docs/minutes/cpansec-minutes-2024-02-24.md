@@ -32,31 +32,30 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
 ### Quick summary of current work
 
 1. [CPAN Metadata & Software Bills of Materials](https://github.com/orgs/CPAN-Security/projects/1)
-    - @sjn update - work related to package url spec - owasp channel specific - upcoming version extension for version ranges.
-    - We can use to specify depends and requirements (including outside cpan).  
+    - @sjn update - CPAN package url merged in spec - owasp channel for packageurl discussions created - upcoming spec extension for version ranges.
+    - Soon we can use it to specify depends and requirements (including outside cpan).  
     - pkgurl is necessary for SBOMs to refer to depends in a standard way.
-    - @sjn would like to see something in a cpan module prior to toolchain summit.
     - Question from @ingy regarding SBOM and alien - @sjn yes you can specify external dependencies - including github releases but not general things like DNS service
-    - @tux discussed reporting on generated SBOM - people need to see example outputs for understanding how to get there
+    - @tux discussed reporting on generated SBOM - people need to see example outputs for understanding how to get there – @sjn docs are WIP
 2. [CPAN Privacy and Compliance](https://github.com/orgs/CPAN-Security/projects/9)
 3. [CPAN Provenance & Supply Chain Security](https://github.com/orgs/CPAN-Security/projects/3)
 4. [CPAN Security Outreach & Information](https://github.com/orgs/CPAN-Security/projects/12)
-    * @sjn update - SBOM draft branch is describing SBOM information as a WIP.
-    * @sjn looking at the language that other groups are using and the terms in use. Proposing some new naratives. Eg 3rd party components should be 2nd party for opensource components
+    * @sjn SBOM draft branch is describing SBOM information as a WIP.
+    * @sjn looking at the language that other groups are using and the terms in use. Proposing some new naratives. Eg "3rd party components" should be called "2nd party" for opensource components
     * @tux - advise to end users about the issues, you might be vulnerable - how SBOM helps, how to fix software, give users a path
-    * @tina muller maintains a script to extract data from a package at suse
-    * [openSUSE devel:languages:perl](https://build.opensuse.org/project/show/devel:languages:perl)
-    * [All CPAN packages starting with A](https://build.opensuse.org/project/show/devel:languages:perl:CPAN-A) 
+    * @tina muller maintains a script to extract SBOM data from a package at suse
+        * [openSUSE devel:languages:perl](https://build.opensuse.org/project/show/devel:languages:perl)
+        * [All CPAN packages starting with A](https://build.opensuse.org/project/show/devel:languages:perl:CPAN-A) 
     * @sjn: get metadata from a CPAN package to get the dependencies for use in determining dependencies, etc. 
     * @stigo: are distro packaging details in scope for SBOM security for us?
-    * @sjn yes becasue the packageurl is necessary to allow us to find the items.
+        * @sjn yes becasue the packageurl is necessary to allow us to find the items.
 5. [CPAN Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11)
 6. [CPAN Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
 7. [CPAN Transparency Logs](https://github.com/orgs/CPAN-Security/projects/2)
 8. [CPAN Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
 9. [CPAN-SEC Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
-    - @sjn update: If you are interested in the discussion of the decisions and charter
-    - simple majority for most things, charter changes require more agreement (add particulars) 
+    - @sjn reach out if you are interested in the discussion of the decisions and charter
+        - @sjn WIP: simple majority for most things, charter changes require more agreement (add particulars) 
 
 ### Ongoing Discussions
 
@@ -97,8 +96,8 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
 
 ### Operating changes
 
-1. Proposal to use CC-BY-SA-4.0 as a content license in CPANSec
-    - @timlegge, @stigo, @sjn vote to use CC-BY-SA-4.0 for general web site content
+1. Proposal to use CC-BY-SA-4.0 as a content license in CPANSec for general web site content
+    - @timlegge, @stigo, @sjn vote to use CC-BY-SA-4.0 
     - ingy abstain
     - motion carried
     - @stigo - clarified that we need to exclude vulnerability info as it needs to be public info
@@ -121,4 +120,5 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
 2. If you're a newcomer, please hang out a little extra if you have any questions or concerns!
 3. Feedback on meeting execution. Should something be improved for the next one?
 4. Next meeting's organizer (or their secretary) sends the invitation email!
-## 16:30 UTC – En
+
+## 16:30 UTC – End

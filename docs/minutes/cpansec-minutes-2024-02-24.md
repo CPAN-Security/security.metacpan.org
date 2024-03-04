@@ -101,7 +101,7 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
     - @timlegge, stigo, @sjn vote to use CC-BY-SA-4.0 
     - ingy abstain
     - motion carried
-    - @stigo - clarified that we need to exclude vulnerability info as it needs to be public info
+    - stigo - we should scheck that CC-BY-SA-4.0 is compatible for vulnerability info
 2. Vince Portal Access
     - Requesters need to have signed the pre-release-disclosure.md
     - One current requester who has not signed

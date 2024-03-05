@@ -30,7 +30,7 @@ Meeting was on Saturday February 10th 2024, at 15:00 UTC, on the TPRF Slack serv
     - @stigtsp – Reported on his conversation with Mickey. Work on exposing CVE data on MetaCPAN is ongoing. An API endpoint is already up (created at PTS 2023).
     - @stigtsp – Github actions not available not for converting CPAN::Audit vulns to @garu's new format; Looking for alternatives
     - @stigtsp – Registering CVE identifiers for older unpublished vulnerabilities, to communicate security updates that may haven't been applied downstream
-9. [CPAN-SEC Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
+9. [CPANSec Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
     - @sjn – TPRF is looking for someone to lead the application project. @sjn and @oalders have been contacted.
 
 ## Ongoing vulnerabilities

@@ -52,7 +52,7 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
 6. [CPAN Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
 7. [CPAN Transparency Logs](https://github.com/orgs/CPAN-Security/projects/2)
 8. [CPAN Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
-9. [CPAN-SEC Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
+9. [CPANSec Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
     - @sjn reach out if you are interested in the discussion of the decisions and charter
         - @sjn WIP: simple majority for most things, charter changes require more agreement (add particulars)
 

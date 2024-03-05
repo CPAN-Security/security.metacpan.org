@@ -2,26 +2,35 @@
 layout: page
 ---
 
-# Minutes 2024-
+# Minutes 2024-FIXME
 
-Meeting was on Saturday FIXME at 15:00 UTC.
+* **Time**: on FIXME, at 15:00 UTC. ([Other timezones](https://www.timeanddate.com/worldclock/meetingdetails.html?year=2024&month=2&day=10&hour=15&min=0&sec=0&p1=187&p2=233&p3=250), and [iCal download](https://www.timeanddate.com/scripts/ics.php?type=meet&p1=187&p2=233&p3=250&year=2024&month=2&day=10&hour=15&min=0&sec=0))
+* **Duration**: 1 hour, timeboxed. We start 30min earlier for introductions/socializing.
+* **Location**: On TPRF's Slack server, in #cpan-security, w/video.
 
-## Welcome – 
+## 14:30 UTC – Pre-meeting socializing
 
-### Attendees, absents & regrets – 
+## 15:00 UTC – Meeting start
+
+### Welcome
+
+- Meeting chair: 
+- Meeting secretary: 
+
+### Attendees, absents & regrets
 
 - Attendees
     - 
-- Absents
-    - 
 - Regrets
+    - 
+- Absents
     - 
 
 ### Approve previous meeting minutes
 
 - 
 
-## Quick summary of current work
+### Quick summary of current work
 
 1. [CPAN Metadata & Software Bills of Materials](https://github.com/orgs/CPAN-Security/projects/1)
     - 
@@ -42,21 +51,28 @@ Meeting was on Saturday FIXME at 15:00 UTC.
 9. [CPAN-SEC Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
     - 
 
-## Ongoing vulnerabilities
+### Ongoing vulnerabilities
 
 - 
 
-## Operating changes
+### Operating changes
 
 - 
 
-## Upcoming events and deadlines
+### Upcoming events and deadlines
 
 1. 
 
-## Next meeting organizer and secretary
+### Next meeting organizer and secretary
 
 - Meeting organizer: 
 - Secretary: 
 
 ### Next meeting date, time and location
+
+- Next meeting is FIXME @ 17:00UTC on TPRF Slack.
+
+
+## 16:00 UTC – Meeting end
+
+## 16:30 UTC – End

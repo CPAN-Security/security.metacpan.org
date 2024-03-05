@@ -15,7 +15,7 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
 1. No agenda :-)
 2. If you're a newcomer, please come early so you can introduce yourself, and we ourselves!
 
-## 15:00 UTC – Meeting begin (~~timeboxed~~)
+## 15:00 UTC – Meeting begin
 
 ### Welcome – @sjn
 
@@ -116,7 +116,7 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
 
 Next meeting is Wed March 13th @ 17:00UTC on TPRF Slack.
 
-## 16:30 UTC – Meeting end (~~timeboxed~~)
+## 16:30 UTC – Meeting end
 
 1. Post-meeting hangout :-)
 2. If you're a newcomer, please hang out a little extra if you have any questions or concerns!

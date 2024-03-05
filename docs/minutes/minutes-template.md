@@ -54,7 +54,9 @@ Meeting was on Saturday FIXME at 15:00 UTC.
 
 1. 
 
-## Next meeting organizer & secretary
+## Next meeting organizer and secretary
 
 - Meeting organizer: 
 - Secretary: 
+
+### Next meeting date, time and location

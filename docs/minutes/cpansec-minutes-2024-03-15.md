@@ -4,7 +4,7 @@ layout: page
 
 # Minutes 2024-03-13
 
-* **Time**: on March 13th 2024, at 17:00 UTC. ([Other timezones](https://www.timeanddate.com/worldclock/meetingdetails.html?year=2024&month=3&day=13&hour=17&min=0&sec=0&p1=187&p2=233&p3=250), and [iCal download](https://www.timeanddate.com/scripts/ics.php?type=meet&p1=187&p2=233&p3=250&year=2024&month=3&day=13&hour=17&min=0&sec=0))
+* **Time**: on March 13th 2024, at 17:00 UTC. ([Other timezones](https://www.timeanddate.com/worldclock/meetingdetails.html?year=2024&month=3&day=13&hour=17&min=0&sec=0&p1=187&p2=233&p3=250&p4=1129&p5=256), and [iCal download](https://www.timeanddate.com/scripts/ics.php?type=meet&p1=187&p2=233&p3=250&p4=1129&p5=256&year=2024&month=3&day=13&hour=17&min=0&sec=0))
 * **Duration**: 1 hour, timeboxed. We start 30min earlier for introductions/socializing.
 * **Location**: On TPRF's Slack server, in #cpan-security, w/video.
 

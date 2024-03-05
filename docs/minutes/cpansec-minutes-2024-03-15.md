@@ -2,20 +2,20 @@
 layout: page
 ---
 
-# Minutes 2024-FIXME
+# Minutes 2024-03-13
 
-* **Time**: on FIXME, at 15:00 UTC. ([Other timezones](https://www.timeanddate.com/worldclock/meetingdetails.html?year=2024&month=2&day=10&hour=15&min=0&sec=0&p1=187&p2=233&p3=250), and [iCal download](https://www.timeanddate.com/scripts/ics.php?type=meet&p1=187&p2=233&p3=250&year=2024&month=2&day=10&hour=15&min=0&sec=0))
+* **Time**: on March 13th 2024, at 17:00 UTC. ([Other timezones](https://www.timeanddate.com/worldclock/meetingdetails.html?year=2024&month=3&day=13&hour=17&min=0&sec=0&p1=187&p2=233&p3=250), and [iCal download](https://www.timeanddate.com/scripts/ics.php?type=meet&p1=187&p2=233&p3=250&year=2024&month=3&day=13&hour=17&min=0&sec=0))
 * **Duration**: 1 hour, timeboxed. We start 30min earlier for introductions/socializing.
 * **Location**: On TPRF's Slack server, in #cpan-security, w/video.
 
-## 14:30 UTC – Pre-meeting socializing
+## 16:30 UTC – Pre-meeting socializing
 
-## 15:00 UTC – Meeting start
+## 17:00 UTC – Meeting start
 
 ### Welcome
 
-- Meeting chair: 
-- Meeting secretary: 
+- Meeting chair: @sjn
+- Meeting secretary: @timlegge
 
 ### Attendees, absents & regrets
 
@@ -28,7 +28,10 @@ layout: page
 
 ### Approve previous meeting minutes
 
-- 
+- [cpansec-minutes-2024-01-06](cpansec-minutes-2024-02-06.md)
+- [cpansec-minutes-2024-01-20](cpansec-minutes-2024-01-20.md)
+- [cpansec-minutes-2024-02-10](cpansec-minutes-2024-02-10.md)
+- [cpansec-minutes-2024-02-24](cpansec-minutes-2024-02-24.md)
 
 ### Quick summary of current work
 
@@ -65,14 +68,14 @@ layout: page
 
 ### Elect next meeting chair and secretary
 
-- Chair: 
-- Secretary: 
+- Next meeting chair: 
+- Next meeting secretary: 
 
 ### Next meeting date, time and location
 
-- Next meeting is FIXME @ 17:00UTC in #cpan-security on TPRF Slack.
+- Next meeting is FIXME @ 17:00UTC on TPRF Slack.
 
 
-## 16:00 UTC – Meeting end
+## 18:00 UTC – Meeting end
 
-## 16:30 UTC – End
+## 18:30 UTC – End

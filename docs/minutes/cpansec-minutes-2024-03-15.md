@@ -52,7 +52,7 @@ layout: page
 8. [CPAN Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
     - 
 9. [CPAN-SEC Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
-    - 
+    - @sjn: German Sovereign Tech fund are [open for applications](https://www.sovereigntechfund.de/programs/applications). Minimum amount to apply for is €150k. Check out their [example application form](https://www.sovereigntechfund.de/public/files/stf_blank_application_form.pdf) to see what they need from us.
 
 ### Ongoing vulnerabilities
 
@@ -64,7 +64,8 @@ layout: page
 
 ### Upcoming events and deadlines
 
-1. 
+1. [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) in Lisbon, Portugal – April 25-28.
+2. German Tech Sovereignity Fund application deadline is TBA (“Spring 2024”)
 
 ### Elect next meeting chair and secretary
 

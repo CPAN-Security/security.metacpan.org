@@ -20,11 +20,11 @@ layout: page
 ### Attendees, absents & regrets
 
 - Attendees
-    - 
+    - …
 - Regrets
-    - 
+    - …
 - Absents
-    - 
+    - …
 
 ### Approve previous meeting minutes
 
@@ -33,40 +33,40 @@ layout: page
 ### Quick summary of current work
 
 1. [CPAN Metadata & Software Bills of Materials](https://github.com/orgs/CPAN-Security/projects/1)
-    - 
+    - …
 2. [CPAN Privacy and Compliance](https://github.com/orgs/CPAN-Security/projects/9)
-    - 
+    - …
 3. [CPAN Provenance & Supply Chain Security](https://github.com/orgs/CPAN-Security/projects/3)
-    - 
+    - …
 4. [CPAN Security Outreach & Information](https://github.com/orgs/CPAN-Security/projects/12)
-    - 
+    - …
 5. [CPAN Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11)
-    - 
+    - …
 6. [CPAN Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
-    - 
+    - …
 7. [CPAN Transparency Logs](https://github.com/orgs/CPAN-Security/projects/2)
-    - 
+    - …
 8. [CPAN Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
-    - 
+    - …
 9. [CPAN-SEC Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
-    - 
+    - …
 
 ### Ongoing vulnerabilities
 
-- 
+- …
 
 ### Operating changes
 
-- 
+- …
 
 ### Upcoming events and deadlines
 
-1. 
+1. …
 
 ### Elect next meeting chair and secretary
 
-- Chair: 
-- Secretary: 
+- Chair: …
+- Secretary: …
 
 ### Next meeting date, time and location
 

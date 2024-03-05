@@ -19,12 +19,12 @@ layout: page
 
 ### Attendees, absents & regrets
 
-- Attendees
-    - 
-- Regrets
-    - 
-- Absents
-    - 
+* Attendees
+  - …
+* Regrets
+  - …
+* Absents
+  - …
 
 ### Approve previous meeting minutes
 
@@ -36,21 +36,21 @@ layout: page
 ### Quick summary of current work
 
 1. [CPAN Metadata & Software Bills of Materials](https://github.com/orgs/CPAN-Security/projects/1)
-    - 
+    - …
 2. [CPAN Privacy and Compliance](https://github.com/orgs/CPAN-Security/projects/9)
-    - 
+    - …
 3. [CPAN Provenance & Supply Chain Security](https://github.com/orgs/CPAN-Security/projects/3)
-    - 
+    - …
 4. [CPAN Security Outreach & Information](https://github.com/orgs/CPAN-Security/projects/12)
-    - 
+    - …
 5. [CPAN Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11)
-    - 
+    - …
 6. [CPAN Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
-    - 
+    - …
 7. [CPAN Transparency Logs](https://github.com/orgs/CPAN-Security/projects/2)
-    - 
+    - …
 8. [CPAN Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
-    - 
+    - …
 9. [CPAN-SEC Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
     - @sjn: German Sovereign Tech fund are [open for applications](https://www.sovereigntechfund.de/programs/applications). Minimum amount to apply for is €150k. Check out their [example application form](https://www.sovereigntechfund.de/public/files/stf_blank_application_form.pdf) to see what they need from us.
 

@@ -8,10 +8,10 @@ toc: true
 
 > [!CAUTION]
 > ## Document status: ⚠️  DRAFT
-> What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilities overview, used by the CPAN Security Group (CPANSec).
+> What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom](https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom](https://github.com/CPAN-Security/security.metacpan.org/tree/main/docs/supplychain-sbom.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 
 
@@ -85,6 +85,7 @@ stateDiagram-v2
 
     language_distributor --> ecosystem_integrator
     language_distributor --> ecosystem_package
+    ecosystem_lang --> ecosystem_lang
 
     state "Public Collaboration Ecosystem" as ecosystem_repo {
         [*] --> repository_distributor
@@ -103,8 +104,9 @@ stateDiagram-v2
     }
 
     package_distributor --> ecosystem_integrator
+    ecosystem_package --> ecosystem_package
 
-    state "Integrator Environment" as ecosystem_integrator {
+    state "Manufacturer Environment" as ecosystem_integrator {
         [*] --> developer
     }
 
@@ -119,41 +121,55 @@ stateDiagram-v2
 
     deployer --> consumer
     deployer --> auditor_external
-
 ```
 
-# Supply-chain Ecosystems
+# Supply-chain Ecosystems and Environments
 
-## Author
+## Author Environment
 
-    Publishes Open Source
-    Has a project development lifecycle
+One or more developers that publish an Open Source component.
 
-
-## Integrator / Commercial
-
-    Does NOT publish Open Source
-    Has a project development lifecycle
+* Publishes Open Source
+* May have a project development lifecycle
 
 
-## Language
+## Manufacturer Environment
+### Integrator Environment
 
-    CPAN, PyPI, NPM, etc.
-    May have upstream language ecosystems
-    May have downstream language ecosystems
-    May be Public or Private
+A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
+Management is expected to ensure that this assembled SBOM document describes the application as required by law.
 
-
-## Package
-
-    May have downstream package ecosystems
-    May be Public or Private
+* Does NOT publish Open Source
+* Has a project development lifecycle
 
 
-## Repository / Collaboration
+## Language Ecosystem
 
-    Github, Codeberg,
-    Bitbucket etc.
+A language ecosystem hosts, indexes and distributes components specific for a programming language
+
+* Examples: CPAN (Perl), PyPI (Python), NPM (Node/JS)
+* May have upstream language ecosystems
+* May have downstream language ecosystems
+* May be Public or Private
+
+
+## Package Ecosystem
+
+A service that makes components repackaged for a specific OS distribution available for easy download and use.
+
+* Examples: APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD)
+* May have upstream package ecosystems
+* May have downstream package ecosystems
+* May be Public or Private
+
+
+## Public Collaboration Ecosystem
+### Repository Ecosystem
+
+A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
+Examples for this include github.com, gitlab.com, codeberg.org, gitea.com and others.
+
+* Examples: Github, Codeberg, Bitbucket.
 
 
 # Supply-chain Roles
@@ -276,29 +292,12 @@ Ensures the availability of packages, that they are indexed correctly, and that 
 > | :------------------ | :------- | :-------- | --------- | ---- |
 > | Download location   | Yes      |           |           |      |
 
-### Language Ecosystem
 
-A language ecosystem hosts, indexes and distributes components specific for a programming language.
-Examples include CPAN (Perl), PyPI (Python), NPM (Node/JS) and others.
+### Developer
 
-
-### Collaboration Ecosystem
-
-A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
-Examples for this include github.com, gitlab.com, codeberg.org, gitea.com and others.
-
-
-### Package Ecosystem
-
-A service that makes components repackaged for a specific OS distribution available for easy download and use.
-Examples include APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD) and others.
-
-
-## Integrator Environment
-
-A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
-Management is expected to ensure that this assembled SBOM document describes the application as required by law.
-
+Uses packages and components as dependencies in their own project or product.
+A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
+The main difference from an Author is that a Developer doesn't publish their work as Open Source.
 
 > [!IMPORTANT]
 > | Field name          | Required | Data type | CycloneDX | SPDX | Legislation |
@@ -311,13 +310,6 @@ Management is expected to ensure that this assembled SBOM document describes the
 > | Code revision       | No       |           |           |      | 
 > | SBOM Type           | Yes      |           |           | N/A  | 
 > | Vuln. versions/locs | No       |           |           |      | 
-
-
-### Developer
-
-Uses packages and components as dependencies in their own project or product.
-A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
-The main difference from an Author is that a Developer doesn't publish their work as Open Source.
 
 
 ## Builder — Deployer

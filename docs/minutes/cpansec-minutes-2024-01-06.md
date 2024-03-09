@@ -24,7 +24,7 @@ Meeting was on Saturday January 6th, 2024, at 12:00 UTC.
     - @sjn – Outreach to #debian-perl (WIP)
 5. [CPAN Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
     - No activity
-6. [CPAN-SEC Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
+6. [CPANSec Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
     - @sjn – [Charter](https://security.metacpan.org/docs/charter.html)
         - Ongoing work
     - @stigsp – [Pre-Release Disclosure](https://security.metacpan.org/docs/pre-release-disclosure.html)

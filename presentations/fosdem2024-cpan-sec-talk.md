@@ -39,7 +39,7 @@ Established in April last year at the Perl Toolchain Summit in Lyon, France
 
 ### PTS 2023
 
-![Group picture showing PTS 2023 pariticipants](media/pts-group-picture-PTS2023.jpeg)
+![Group picture showing PTS 2023 participants](media/pts-group-picture-PTS2023.jpeg)
 
 Note:
 
@@ -95,21 +95,22 @@ Improve security awareness by standardizing and publishing CPAN package vulnerab
 
 👉 Establish a Secure CPAN Downloads
 
-* #TODO – TLS support in all CPAN clients (cpanpm, cpanm, etc)
-* #TODO – Implementing "The Update Framework" in CPAN
+* #TODO – TLS support in all CPAN clients
+    * CPAN.pm, cpanm, etc.
+* #TODO – Implement "The Update Framework" in CPAN
     * Repository signatures (yes this is from CPAN)
     * Author signatures (yes this is from AUTHOR)
 
 
 Note:
 
-We want to make TLS in cpan clients on by default, with cert verfiicaton on
+We want to make TLS in cpan clients on by default, with cert verification on
 
 Looking at getting The Update Framework (pypi has some implementation of this) as a supported, this is in addition to TLS
 
 The TUF spec supports repo and author signing
 
-TUF mitigates attacks that the current PGP signed CHECKSUMS implemetation is vulnerable to, like replay attacks and downgrade attacks,
+TUF mitigates attacks that the current PGP signed CHECKSUMS implementation is vulnerable to, like replay attacks and downgrade attacks,
 
 
 [comment]: # (|||)
@@ -205,7 +206,7 @@ Note:
 * Perl and CPAN is in use **everywhere**
 * New security demands from authorities
 * Old "workarounds" and "conveniences" are not acceptable any more
-* Interoperability across ecosystem boundraries
+* Interoperability across ecosystem boundaries
 
 Note:
 
@@ -290,7 +291,7 @@ Do you…
 
 Note:
 
-* Do you have a **security background** or care about the toolchain?
+* Do you have a **security background** or care about the Toolchain?
 * Do you have **time to volunteer**?
 * Is your employer willing to **dedicate a percentage of your time** to improve our security commons?
 
@@ -301,7 +302,7 @@ We need volunteers!
 
 ### Find us!
 
-ircs://ssl.irc.perl.org:7062/#cpan-security
+[ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 
 https://security.metacpan.org/
 

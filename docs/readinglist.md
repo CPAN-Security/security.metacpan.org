@@ -4,7 +4,7 @@ title: Reading List
 toc: true
 ---
 
-This is The CPAN Security Working Group recommended reading list. If you have any additions or improvements, please [open an issue](https://github.com/CPAN-Security/security.metacpan.org/issues), citing this page.
+This is The CPAN Security Group recommended reading list. If you have any additions or improvements, please [open an issue](https://github.com/CPAN-Security/security.metacpan.org/issues), citing this page.
 
 
 ## Software Bills of Materials (SBOM)
@@ -13,23 +13,35 @@ This is The CPAN Security Working Group recommended reading list. If you have an
 * (NSA, ODNI, CISA) [Securing the Software Supply Chain: Recommended Practices for Managing OSS and SBOMs](https://media.defense.gov/2023/Dec/11/2003355557/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN%20RECOMMENDED%20PRACTICES%20FOR%20MANAGING%20OPEN%20SOURCE%20SOFTWARE%20AND%20SOFTWARE%20BILL%20OF%20MATERIALS.PDF) (December 2023)
 * (NTIA) [Survey of Existing SBOM Formats and Standards](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) (2021)
 
-### Project documentation
+
+### SBOM use cases
 
 * (CDX) [CycloneDX Use Cases](https://cyclonedx.org/use-cases/)
 * (SPDX) [A Practical Guide to SPDX](https://fossa.com/learn/spdx)
+
 
 ### Related regulations, etc.
 
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/)
     * Section 4
-* (EU) [Network and Information Systems directive II](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive) (NIS2)
-* (EU) [Cyber Resilience Act](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-proposal-for-cybersecurity-regulation) (CRA)
-    * [Annex II](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CONSIL:ST_17000_2023_INIT)
-    * Recital 10a
-    * Recital 18a
-    * Article 14
-    * Article 17a
+* (EU) [Directive 2022/2555](https://eur-lex.europa.eu/eli/dir/2022/2555) (NIS 2 Directive)
+    * Recitals (58), (62), (85), (89), (90), (91)
+    * Chapter I, Article 6, Definitions
+    * Chapter II, Article 7, 2 (a)
+    * Chapter IV, Article 21, 1, 2 and 3
+* (EU) Directive 2020/1828/EC ([Cyber Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52022PC0454)) (CRA)
+    * In [CRA 2022-09-15 proposal, Document 1](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022PC0454)
+        * Chapter I, Article 3 (Definitions)
+        * Chapter II, Articles 10, 11, 13, 14, 15, 16 (Obligations for manufacturers, importers and distributors)
+        * Chapter II, Article 17a (Obligations of open-source software stewards)
+        * Chapter III, Articles 20, 22 (Conformity and CE marking)
+    * In [CRA 2022-09-15 proposal, Document 2](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022PC0454)
+        * Annex I (Essential Cybersecurity Requirements)
+    * In [CRA 2023-12-20 update to Annex II](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT)
+        * Recitals (8), (**10a-h**), (18a), (21)
+    * [CRA Legislative Procedure](https://eur-lex.europa.eu/procedure/EN/2022_272) Status page
 * (EU) [Product Liability Directive](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive) (PLD)
+
 
 ### Useful articles and papers
 
@@ -40,12 +52,23 @@ This is The CPAN Security Working Group recommended reading list. If you have an
 * (Lawfare Media) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards) (July 2022)
 * (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
 
-## Software identification
+
+## Software identification (naming & versioning)
 
 * [PURL Specification](https://github.com/package-url/purl-spec)
 * (CPAN) [URI::PackageURL](https://github.com/giterlizzi/perl-URI-PackageURL)
 * (CPAN) [CPAN::DistnameInfo](https://github.com/Perl-Toolchain-Gang/CPAN-DistnameInfo)
 
-### Useful articles and papers
+
+### Useful articles, papers and resources
 
 * (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis) (October 2023)
+* (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
+
+## Provenance & Supply Chain Security
+
+* (OpenSSF) [Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security) (Feb 2024)
+* (SLSA) [SLSA v1.0 Guiding Priciples](https://slsa.dev/spec/v1.0/principles)
+* (SLSA) [SLSA v1.0 Terminology](https://slsa.dev/spec/v1.0/terminologye)
+* (SLSA) [SLSA v1.0 Developer's quick-start guide](https://slsa.dev/get-started)
+* (SLSA) [SLSA v1.0 Infrastructure provider's quick-start guide](https://slsa.dev/how-to-infra)

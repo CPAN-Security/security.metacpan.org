@@ -33,11 +33,11 @@ With this diagram we'll attempt to offer an overview of these roles, how they ar
 
 ```mermaid
 stateDiagram-v2
+    direction TB
     accTitle: An idealized Open Source supply chain
 
     state "Author\nCustodian\nPublisher" as author
     state "Repository – Distributor" as repository_distributor
-    state "Contributor" as contributor
     state "Language – Packager" as language_packager
     state "Language – Curator" as language_curator
     state "Language – Distributor" as language_distributor
@@ -52,8 +52,19 @@ stateDiagram-v2
     state "Auditor – Internal" as auditor_internal
     state "Auditor – External" as auditor_external
 
-    classDef createsSBOM fill:orange;
-    classDef updatesSBOM fill:yellow;
+    classDef createsSBOM stroke:red,stroke-width:2px;
+    classDef updatesSBOM stroke:orange,stroke-width:2px;
+    classDef assemblesSBOM stroke:cyan,stroke-width:2px;
+    classDef verifiesSBOM stroke:green,stroke-width:2px;
+
+    class author createsSBOM
+    class package_patcher updatesSBOM
+    class package_packager updatesSBOM
+    class package_distributor updatesSBOM
+    class language_distributor updatesSBOM
+    class developer assemblesSBOM
+    class auditor_internal verifiesSBOM
+    class auditor_external verifiesSBOM
 
     [*] --> ecosystem_author
 
@@ -90,9 +101,6 @@ stateDiagram-v2
     state "Public Collaboration Ecosystem" as ecosystem_repo {
         [*] --> repository_distributor
     }
-
-    repository_distributor --> contributor
-    contributor --> repository_distributor
 
     repository_distributor --> ecosystem_package
     repository_distributor --> ecosystem_integrator
@@ -176,17 +184,17 @@ See below).
 > | Unique ID                  | Yes      | PURL         |           |      | CRA AII.3, NTIA-SBOM |
 > | Purpose                    | Yes      | Text         |           |      | CRA AII.4            |
 > | Intended Use               | Yes      | Text         |           |      | CRA AII.4            |
-> | Licenses                   | Yes      | SPDX License |           |      | 
-> | Code repo                  | Yes      |              |           |      | 
-> | Code revision              | No       |              |           |      | 
-> | SBOM Type                  | Yes      |              |           | N/A  | 
+> | Licenses                   | Yes      | SPDX License |           |      | |
+> | Code repo                  | Yes      |              |           |      | |
+> | Code revision              | No       |              |           |      | |
+> | SBOM Type                  | Yes      |              |           |      | |
 > | CE Declaration             | No       | URL          |           |      | CRA AII.7            |
 > | CE Support End Date        | No       | URL          |           |      | CRA AII.8            |
 > | CE Instructions            | No       | URL          |           |      | CRA AII.9            |
 > | SBOM Author                | No       | Text         |           |      | NTIA-SBOM            |
 > | SBOM Creation Timestamp    | No       | DateTime     |           |      | NTIA-SBOM            |
 > | SBOM Location              | No       | URL          |           |      | CRA AII.10           |
-> | Vuln. versions/locs        | No       |              |           |      | 
+> | Vuln. versions/locs        | No       |              |           |      | |
 
 
 ### Custodian

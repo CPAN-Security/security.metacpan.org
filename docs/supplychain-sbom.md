@@ -77,11 +77,6 @@ stateDiagram-v2
     ecosystem_repo --> author
     language_packager --> ecosystem_lang
 
-    note right of ecosystem_author
-        Publishes Open Source
-        Has a project development lifecycle
-    end note
-
     state "Language Ecosystem" as ecosystem_lang {
         [*] --> language_distributor
         [*] --> language_curator
@@ -91,24 +86,12 @@ stateDiagram-v2
     language_distributor --> ecosystem_integrator
     language_distributor --> ecosystem_package
 
-    note right of ecosystem_lang
-        CPAN, PyPI, NPM, etc.
-        May have upstream language ecosystems
-        May have downstream language ecosystems
-        May be Public or Private
-    end note
-
     state "Public Collaboration Ecosystem" as ecosystem_repo {
         [*] --> repository_distributor
     }
 
     repository_distributor --> ecosystem_package
     repository_distributor --> ecosystem_integrator
-
-    note right of ecosystem_repo
-        Github, Codeberg,
-        Bitbucket etc.
-    end note
 
     state "Package Ecosystem" as ecosystem_package {
         [*] --> package_patcher
@@ -119,21 +102,11 @@ stateDiagram-v2
         package_curator --> package_distributor
     }
 
-    note right of ecosystem_package
-        May have downstream package ecosystems
-        May be Public or Private
-    end note
-
     package_distributor --> ecosystem_integrator
 
     state "Integrator Environment" as ecosystem_integrator {
         [*] --> developer
     }
-
-    note right of ecosystem_integrator
-        Does NOT publish Open Source
-        Has a project development lifecycle
-    end note
 
     developer --> auditor_internal
     developer --> ecosystem_prod
@@ -149,7 +122,41 @@ stateDiagram-v2
 
 ```
 
-# Supply-chain roles
+# Supply-chain Ecosystems
+
+## Author
+
+    Publishes Open Source
+    Has a project development lifecycle
+
+
+## Integrator / Commercial
+
+    Does NOT publish Open Source
+    Has a project development lifecycle
+
+
+## Language
+
+    CPAN, PyPI, NPM, etc.
+    May have upstream language ecosystems
+    May have downstream language ecosystems
+    May be Public or Private
+
+
+## Package
+
+    May have downstream package ecosystems
+    May be Public or Private
+
+
+## Repository / Collaboration
+
+    Github, Codeberg,
+    Bitbucket etc.
+
+
+# Supply-chain Roles
 
 ## Owner
 
@@ -162,7 +169,7 @@ May decide the name of the project, or other project parameters for (or on behal
 > | Name                | Yes      | Text      |           |      | CRA AII.1   |
 > | Licenses            | Yes      |           |           |      |
 > | Code repo           | Yes      |           |           |      |
-> | SBOM Type           | Yes      |           |           | N/A  |
+> | SBOM Type           | Yes      |           |           |      |
 
 ## Author
 
@@ -174,27 +181,27 @@ If an Author has upstream (reverse) dependencies, the Author is also considered 
 See below).
 
 > [!IMPORTANT]
-> | Field name                 | Required | Data type    | CycloneDX | SPDX | Legislation          |
-> | :------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-> | Manufacturer/Supplier Name | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
-> | Component Name             | Yes      | Text         |           |      | NTIA-SBOM            |
-> | Version                    | Yes      | Text         |           |      | NTIA-SBOM            |
-> | Dependencies               | Yes      |              |           |      | NTIA-SBOM            |
-> | Security contact           | Yes      | URL          |           |      | CRA AII.2            |
-> | Unique ID                  | Yes      | PURL         |           |      | CRA AII.3, NTIA-SBOM |
-> | Purpose                    | Yes      | Text         |           |      | CRA AII.4            |
-> | Intended Use               | Yes      | Text         |           |      | CRA AII.4            |
-> | Licenses                   | Yes      | SPDX License |           |      | |
-> | Code repo                  | Yes      |              |           |      | |
-> | Code revision              | No       |              |           |      | |
-> | SBOM Type                  | Yes      |              |           |      | |
-> | CE Declaration             | No       | URL          |           |      | CRA AII.7            |
-> | CE Support End Date        | No       | URL          |           |      | CRA AII.8            |
-> | CE Instructions            | No       | URL          |           |      | CRA AII.9            |
-> | SBOM Author                | No       | Text         |           |      | NTIA-SBOM            |
-> | SBOM Creation Timestamp    | No       | DateTime     |           |      | NTIA-SBOM            |
-> | SBOM Location              | No       | URL          |           |      | CRA AII.10           |
-> | Vuln. versions/locs        | No       |              |           |      | |
+> | Field name                  | Required | Data type    | CycloneDX | SPDX | Legislation          |
+> | :-------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
+> | Manufacturer\nSupplier Name | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
+> | Component Name              | Yes      | Text         |           |      | NTIA-SBOM            |
+> | Version                     | Yes      | Text         |           |      | NTIA-SBOM            |
+> | Dependencies                | Yes      |              |           |      | NTIA-SBOM            |
+> | Security contact            | Yes      | URL          |           |      | CRA AII.2            |
+> | Unique ID                   | Yes      | PURL         |           |      | CRA AII.3, NTIA-SBOM |
+> | Purpose                     | Yes      | Text         |           |      | CRA AII.4            |
+> | Intended Use                | Yes      | Text         |           |      | CRA AII.4            |
+> | Licenses                    | Yes      | SPDX License |           |      | |
+> | Code repo                   | Yes      |              |           |      | |
+> | Code revision               | No       |              |           |      | |
+> | SBOM Type                   | Yes      |              |           |      | |
+> | CE Declaration              | No       | URL          |           |      | CRA AII.7            |
+> | CE Support End Date         | No       | URL          |           |      | CRA AII.8            |
+> | CE Instructions             | No       | URL          |           |      | CRA AII.9            |
+> | SBOM Author                 | No       | Text         |           |      | NTIA-SBOM            |
+> | SBOM Creation Timestamp     | No       | DateTime     |           |      | NTIA-SBOM            |
+> | SBOM Location               | No       | URL          |           |      | CRA AII.10           |
+> | Vuln. versions/locs         | No       |              |           |      | |
 
 
 ### Custodian
@@ -344,6 +351,12 @@ Usually doesn't work on new features.
 Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.~~
 
 > NOTE: Steward gets a specific defined meaning in the Cyber Resilience Act, so until this definition is established, we'll avoid using the term.
+
+## Manufacturer (CRA)
+
+
+## Open Source Steward (CRA)
+
 
 # References
 

@@ -73,3 +73,10 @@ This is The CPAN Security Group recommended reading list. If you have any additi
 * (SLSA) [SLSA v1.0 Terminology](https://slsa.dev/spec/v1.0/terminologye)
 * (SLSA) [SLSA v1.0 Developer's quick-start guide](https://slsa.dev/get-started)
 * (SLSA) [SLSA v1.0 Infrastructure provider's quick-start guide](https://slsa.dev/how-to-infra)
+
+
+## Transparency Logs
+
+* (OpenSSF) [Sigstore home](https://openssf.org/community/sigstore/)
+* (OpenSSF) [Sigstore: Simplifying Code Signing for Open Source Ecosystems](https://openssf.org/blog/2023/11/21/sigstore-simplifying-code-signing-for-open-source-ecosystems/)
+* (Chainguard.dev) [Life of a Sigstore signature](https://www.chainguard.dev/unchained/life-of-a-sigstore-signature)

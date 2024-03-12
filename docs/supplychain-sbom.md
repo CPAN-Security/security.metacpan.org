@@ -183,9 +183,9 @@ May decide the name of the project, or other project parameters for (or on behal
 > | Field name          | Required | Data type | CycloneDX | SPDX | Legislation |
 > | :------------------ | :------- | :-------- | --------- | ---- | ----------- |
 > | Name                | Yes      | Text      |           |      | CRA AII.1   |
-> | Licenses            | Yes      |           |           |      |
-> | Code repo           | Yes      |           |           |      |
-> | SBOM Type           | Yes      |           |           |      |
+> | Licenses            | Yes      |           |           |      | |
+> | Code repo           | Yes      |           |           |      | |
+> | SBOM Type           | Yes      |           |           |      | |
 
 ## Author
 

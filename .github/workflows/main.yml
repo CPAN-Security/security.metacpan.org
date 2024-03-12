@@ -33,7 +33,7 @@ jobs:
 
       - name: IRC message on push
         uses: rectalogic/notify-irc@v2
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && env.ref == 'main'
         with:
           channel: ${{ env.channel }}
           server: ${{ env.server }}

@@ -15,6 +15,7 @@ toc: true
 ## Learn the basics
 
 * Read the [perlsec](https://perldoc.perl.org/perlsec) page to familiarize yourself with Perl's security features
+* Read the OpenSSF [Open Source Best Practices Badge](https://www.bestpractices.dev/en) program, and try to at least achieve a [passing badge](https://www.bestpractices.dev/en/criteria/0). (You can also see how well [other Perl projects](https://www.bestpractices.dev/en/projects?q=perl) do in this regard!)
 
 ## Keep your security metadata up-to-date
 
@@ -23,7 +24,7 @@ toc: true
 ## Share your security metadata
 
 * Add a [security.txt](https://securitytxt.org/) file to your project website
-* Add a [security policy](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository#adding-a-security-policy-to-your-repository) to your github project
+* Add a [security policy](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository#adding-a-security-policy-to-your-repository) to your Github project
 
 
 ## Add security tests to your code

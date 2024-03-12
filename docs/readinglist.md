@@ -68,7 +68,8 @@ This is The CPAN Security Group recommended reading list. If you have any additi
 ## Provenance & Supply Chain Security
 
 * (OpenSSF) [Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security) (Feb 2024)
-* (SLSA) [SLSA v1.0 Guiding Priciples](https://slsa.dev/spec/v1.0/principles)
+* (OpenSSF) [Build Provenance for All Package Registries](https://repos.openssf.org/build-provenance-for-all-package-registries)
+* (SLSA) [SLSA v1.0 Guiding Principles](https://slsa.dev/spec/v1.0/principles)
 * (SLSA) [SLSA v1.0 Terminology](https://slsa.dev/spec/v1.0/terminologye)
 * (SLSA) [SLSA v1.0 Developer's quick-start guide](https://slsa.dev/get-started)
 * (SLSA) [SLSA v1.0 Infrastructure provider's quick-start guide](https://slsa.dev/how-to-infra)

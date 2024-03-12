@@ -199,14 +199,13 @@ See below).
 > [!IMPORTANT]
 > | Field name                  | Required | Data type    | CycloneDX | SPDX | Legislation          |
 > | :-------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-> | Manufacturer\nSupplier Name | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
+> | Manufacturer, Supplier Name | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
 > | Component Name              | Yes      | Text         |           |      | NTIA-SBOM            |
 > | Version                     | Yes      | Text         |           |      | NTIA-SBOM            |
 > | Dependencies                | Yes      |              |           |      | NTIA-SBOM            |
 > | Security contact            | Yes      | URL          |           |      | CRA AII.2            |
-> | Unique ID                   | Yes      | PURL         |           |      | CRA AII.3, NTIA-SBOM |
-> | Purpose                     | Yes      | Text         |           |      | CRA AII.4            |
-> | Intended Use                | Yes      | Text         |           |      | CRA AII.4            |
+> | Unique ID, Product ID       | Yes      | PURL         |           |      | CRA AII.3, NTIA-SBOM |
+> | Purpose, Intended Use       | Yes      | Text         |           |      | CRA AII.4            |
 > | Licenses                    | Yes      | SPDX License |           |      | |
 > | Code repo                   | Yes      |              |           |      | |
 > | Code revision               | No       |              |           |      | |

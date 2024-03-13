@@ -134,13 +134,16 @@ One or more developers that publish an Open Source component.
 
 
 ## Manufacturer Environment
-### Integrator Environment
 
 A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
 Management is expected to ensure that this assembled SBOM document describes the application as required by law.
 
 * Does NOT publish Open Source
 * Has a project development lifecycle
+
+### Integrator Environment
+
+* See [Manufacturer Environment](#manufacturer-environment).
 
 
 ## Language Ecosystem
@@ -164,12 +167,14 @@ A service that makes components repackaged for a specific OS distribution availa
 
 
 ## Public Collaboration Ecosystem
-### Repository Ecosystem
 
 A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
-Examples for this include github.com, gitlab.com, codeberg.org, gitea.com and others.
 
-* Examples: Github, Codeberg, Bitbucket.
+* Examples: Github, Codeberg, Bitbucket, Gitlab, Gitea and others.
+
+### Repository Ecosystem
+
+* See [Public Collaboration Ecosystem](#public-collaboration-ecosystem).
 
 
 # Supply-chain Roles
@@ -197,26 +202,27 @@ If an Author has upstream (reverse) dependencies, the Author is also considered 
 See below).
 
 > [!IMPORTANT]
-> | Field name                  | Required | Data type    | CycloneDX | SPDX | Legislation          |
-> | :-------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-> | Manufacturer, Supplier Name | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
-> | Component Name              | Yes      | Text         |           |      | NTIA-SBOM            |
-> | Version                     | Yes      | Text         |           |      | NTIA-SBOM            |
-> | Dependencies                | Yes      |              |           |      | NTIA-SBOM            |
-> | Security contact            | Yes      | URL          |           |      | CRA AII.2            |
-> | Unique ID, Product ID       | Yes      | PURL         |           |      | CRA AII.3, NTIA-SBOM |
-> | Purpose, Intended Use       | Yes      | Text         |           |      | CRA AII.4            |
-> | Licenses                    | Yes      | SPDX License |           |      | |
-> | Code repo                   | Yes      |              |           |      | |
-> | Code revision               | No       |              |           |      | |
-> | SBOM Type                   | Yes      |              |           |      | |
-> | CE Declaration              | No       | URL          |           |      | CRA AII.7            |
-> | CE Support End Date         | No       | URL          |           |      | CRA AII.8            |
-> | CE Instructions             | No       | URL          |           |      | CRA AII.9            |
-> | SBOM Author                 | No       | Text         |           |      | NTIA-SBOM            |
-> | SBOM Creation Timestamp     | No       | DateTime     |           |      | NTIA-SBOM            |
-> | SBOM Location               | No       | URL          |           |      | CRA AII.10           |
-> | Vuln. versions/locs         | No       |              |           |      | |
+> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
+> | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
+> | Manufacturer, Supplier Name   | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
+> | Component Name                | Yes      | Text         |           |      | NTIA-SBOM            |
+> | Version                       | Yes      | Text         |           |      | NTIA-SBOM            |
+> | Dependencies                  | Yes      |              |           |      | NTIA-SBOM            |
+> | Security contact              | Yes      | URL          |           |      | CRA AII.2            |
+> | Unique ID, Product ID         | Yes      | PURL         |           |      | CRA AII.3, NTIA-SBOM |
+> | Purpose, Intended Use         | Yes      | Text         |           |      | CRA AII.4            |
+> | Licenses                      | Yes      | SPDX License |           |      | |
+> | Code Repository               | Yes      |              |           |      | |
+> | Code Commit Revision          | No       |              |           |      | |
+> | SBOM Type                     | Yes      |              |           |      | |
+> | CE Declaration                | No       | URL          |           |      | CRA AII.7            |
+> | CE Support End Date           | No       | URL          |           |      | CRA AII.8            |
+> | CE Instructions               | No       | URL          |           |      | CRA AII.9            |
+> | CE Conformity Assessment Body | No       | URL          |           |      | CRA Article 47.1     |
+> | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM            |
+> | SBOM Creation Timestamp       | No       | DateTime     |           |      | NTIA-SBOM            |
+> | SBOM Location                 | No       | URL          |           |      | CRA AII.10           |
+> | Vulnerable versions/locations | No       |              |           |      | |
 
 
 ### Custodian
@@ -299,16 +305,7 @@ A Developer is considered to be identical to an Author from the upstream (Author
 The main difference from an Author is that a Developer doesn't publish their work as Open Source.
 
 > [!IMPORTANT]
-> | Field name          | Required | Data type | CycloneDX | SPDX | Legislation |
-> | :------------------ | :------- | :-------- | --------- | ---- | ----------- |
-> | Name                | Yes      |           |           |      | CRA AII.1   |
-> | Version             | Yes      |           |           |      | CRA AII.3   |
-> | Licenses            | Yes      |           |           |      | 
-> | Unique ID (pURL)    | Yes      |           |           |      | 
-> | Code repo           | Yes      |           |           |      | 
-> | Code revision       | No       |           |           |      | 
-> | SBOM Type           | Yes      |           |           | N/A  | 
-> | Vuln. versions/locs | No       |           |           |      | 
+> See [Author](#Author) section
 
 
 ## Builder — Deployer

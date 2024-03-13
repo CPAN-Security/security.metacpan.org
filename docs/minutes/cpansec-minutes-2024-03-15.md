@@ -22,7 +22,7 @@ layout: page
 * Attendees
   - …
 * Regrets
-  - …
+  - @stigtsp
 * Absents
   - …
 
@@ -65,7 +65,7 @@ layout: page
 ### Upcoming events and deadlines
 
 1. [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) in Lisbon, Portugal – April 25-28.
-2. German Tech Sovereignity Fund application deadline is TBA (“Spring 2024”)
+2. German Sovereign Tech Fund is open for applications now (deadline is “Spring 2024”)
 
 ### Elect next meeting chair and secretary
 

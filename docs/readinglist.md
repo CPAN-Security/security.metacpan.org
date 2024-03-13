@@ -69,7 +69,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) (EO 14028, 2021-05-12)
     * Section 4: Enhancing Software Supply Chain Security
 
-### European Union and EEA – NIS2
+### EU and EEA – NIS2
 
 [Directive 2022/2555, Network and Information Security Directive 2](https://eur-lex.europa.eu/eli/dir/2022/2555) (NIS2)
 
@@ -87,7 +87,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
     * Articles 21, points 1, 2 and 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
 
-### European Union and EEA – CRA
+### EU and EEA – CRA
 
 (EU) [Directive 2020/1828/EC, the Cyber Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL%3AST_17000_2023_INIT&qid=1710309054521) (CRA, updated 2023-12-20)
 
@@ -118,15 +118,14 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Essential Cybersecurity Requirements (pages 164-167)
 * In [CRA Annex II](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=168)
     * Information and Instructions to the User (pages 168-169)
-* [CRA Legislative Procedure](https://eur-lex.europa.eu/procedure/EN/2022_272) Status page
 
-### European Union and EEA – PLD
+### EU and EEA – PLD
 
-(EU) [Product Liability Directive](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive) (PLD)
+(EU) Product Liability Directive (PLD)
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive)
 
-### European Union and EEA – DORA
+### EU and EEA – DORA
 
 (EU) [Digital Operational Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554&qid=1710317679922): Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations (DORA, 2022-12-14)
 

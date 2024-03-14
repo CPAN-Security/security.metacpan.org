@@ -4,6 +4,7 @@ title: Supply-chain SBOM roles
 description: Roles in a supply-chain who care about SBOM metadata
 toc: true
 ---
+
 # A Simplified Open Source Supply Chain with SBOMs
 
 > [!CAUTION]
@@ -17,18 +18,18 @@ toc: true
 
 ## Roles in a supply chain
 
-In all Open Source Software supply chains, we find people filling distinct roles that each care about some metadata or tasks in SBOMs.
+In Open Source Software supply chains, we find people filling distinct roles that each care about some metadata or tasks in SBOMs.
 
 With this diagram we'll attempt to offer an overview of these roles, how they are related, and what they do and care about.
 
-### Basic assumptions
+### Role assumptions
 
 - Any single person may have one or more roles, and switch between them as needed.
-- Tasks they may care about include…
-    - Exists (create, sign)
-    - Correctness (update, annotate, rename, delete)
-    - Availability (distribute, assemble, index)
-    - Matches the accompanying software component (verify).
+- Each role cares that a specific SBOM metadata and accompanying artifacts…
+    - Exist (created, signed)
+    - Is complete (assembled, updated, annotated, renamed, deleted)
+    - Is available (indexed, distributed)
+    - Is correct and compliant (verified).
 
 
 ```mermaid
@@ -36,7 +37,7 @@ stateDiagram-v2
     direction TB
     accTitle: An idealized Open Source supply chain
 
-    state "Open Source Steward\nOwner" as author_owner
+    state "Owner\nOpen Source Steward" as author_owner
     state "Author\nCustodian" as author
     state "Distributor" as repository_distributor
     state "Packager" as language_packager
@@ -44,12 +45,12 @@ stateDiagram-v2
     state "Distributor" as language_distributor
     state "Contributor" as contributor
     state "Patcher" as package_patcher
-    state "Packager\nBuilder" as package_packager
+    state "Builder\nPackager" as package_packager
     state "Curator" as package_curator
     state "Distributor" as package_distributor
-    state "Manufacturer\nOwner" as integrator_owner
+    state "Owner\nManufacturer" as integrator_owner
     state "Developer" as developer
-    state "Deployer\nBuilder" as deployer
+    state "Builder\nDeployer" as deployer
     state "Scanner\nSecOps\nPentester" as scanner
     state "Consumer\nUser" as consumer
     state "Auditor" as auditor_internal
@@ -62,11 +63,12 @@ stateDiagram-v2
 
     class author_owner createsSBOM
     class manufacturer_owner createsSBOM
-    class author createsSBOM
+    class author assemblesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
     class package_distributor updatesSBOM
     class language_distributor updatesSBOM
+    class integrator_owner createsSBOM
     class developer assemblesSBOM
     class deployer assemblesSBOM
     class auditor_internal verifiesSBOM
@@ -204,7 +206,26 @@ The environment and systems where a product or service is executed by a customer
 
 # Supply-chain Roles
 
-## Open Source Steward
+## Owner
+
+Operates in an [Author Environment](#author-environment) or [Integrator Environment](#integrator-environment).
+Has the legal ownership rights and liabilities for the component.
+Is usually the [Author](#author), a business or some other type of legal entity.
+May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
+
+> [!IMPORTANT]
+> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
+> | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
+> | Manufacturer, Supplier Name   | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
+> | Licenses                      | Yes      | SPDX License |           |      | |
+> | Code Repository               | Yes      |              |           |      | |
+> | SBOM Type                     | Yes      |              |           |      | |
+> | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM            |
+> | SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM            |
+
+* See also [Manufacturer](#manufacturer), [Open Source Steward](#open-source-steward).
+
+### Open Source Steward
 
 Within an [Author Environment](#author-environment), has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
 
@@ -212,8 +233,7 @@ Within an [Author Environment](#author-environment), has the duty to ensure that
 
 * See also [Owner](#owner)
 
-
-## Manufacturer
+### Manufacturer
 
 Is a role within an [Integrator Environment](#integrator-environment).
 When doing business within the European Economic Area (EEA), has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
@@ -234,24 +254,6 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 > [!NOTE]
 > Manufacturer has a specific defined meaning in the Cyber Resilience Act, so until this definition is established, be careful when using the term.
 
-## Owner
-
-Operates in an [Author Environment](#author-environment) or [Integrator Environment](#integrator-environment).
-Has the legal ownership rights and liabilities for the component.
-Is usually the [Author](#author), a business or some other type of legal entity.
-May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
-
-> [!IMPORTANT]
-> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
-> | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-> | Manufacturer, Supplier Name   | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
-> | Licenses                      | Yes      | SPDX License |           |      | |
-> | Code Repository               | Yes      |              |           |      | |
-> | SBOM Type                     | Yes      |              |           |      | |
-> | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM            |
-> | SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM            |
-
-* See also [Manufacturer](#manufacturer), [Open Source Steward](#open-source-steward).
 
 ### Supplier
 
@@ -291,7 +293,6 @@ See below).
 > | SBOM Location                 | No       | URL          |           |      | CRA AII.10           |
 > | Vulnerable versions/locations | No       |              |           |      | |
 
-
 ### Custodian
 
 Operates within an [Author Environment](#author-environment).
@@ -300,7 +301,6 @@ Cares about the ongoing security of the code.
 Typically only concerned with updating dependencies or applying security fixes.
 Works with the Author primarily, and may take responsibility on their behalf when it comes to security concerns.
 May work on behalf of the author if they are unavailable or unresponsive.
-
 
 ### Contributor
 
@@ -327,7 +327,14 @@ This role is necessary when...
 > * A Packager can both be found in-house (e.g. a business who uses a company-internal package mirror), for a Package Ecosystem provider (e.g. Debian), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
 
-## Packager
+## Builder
+
+> [!IMPORTANT]
+> Builders should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
+
+* See also [Packager](#packager), [Deployer](#packager).
+
+### Packager
 
 Operates within a [Package Ecosystem](#package-ecosystem) or an [Author Environment](#author-environment).
 Within a package ecosystem, builds and creates packages from components received from an upstream source, optionally with patches applied from the [Patcher](#patcher).
@@ -341,12 +348,11 @@ Concerns themselves with correct package format and structure, and that package 
 >     * Language-specific packages distributed by a Language Ecosystem (e.g. CPAN).
 > * E.g. someone in the #debian-perl group downloads, builds, tests and installs something from CPAN, but instead of doing a regular install, they us tooling like `dh-make-perl` to produce a custom installation directory that can be incorporated into a .deb archive.
 
-> [!IMPORTANT]
-> Packagers should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
+### Deployer
 
-### Builder
+Operates within a [Production Environment](#production-environment).
+Final preparation and installation of the software into a CI/CD or [Production Environment](#production-environment).
 
-* See [Packager](#packager)
 
 
 ## Curator
@@ -385,13 +391,9 @@ A Developer is in many ways identical to an [Author](#author) from the upstream 
 A Developer that publishes their software as Open Source, is called an [Author](#author).
 
 > [!IMPORTANT]
-> * See also [Author](#Author).
+>
 
-
-### Deployer
-
-Operates within a [Production Environment](#production-environment).
-Final preparation and installation of the software into a CI/CD or [Production Environment](#production-environment).
+* See also [Author](#Author).
 
 
 ## Scanner
@@ -430,11 +432,11 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 # Other terms
 
-~~## Publisher
+## ~~Publisher~~
 
-Operates within an [Author Environment](#author-environment).
-Places the component on an ecosystem publishing platform, on behalf of the Author or Custodian.
-Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.~~
+~~Operates within an [Author Environment](#author-environment).~~
+~~Places the component on an ecosystem publishing platform, on behalf of the Author or Custodian.~~
+~~Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.~~
 
 
 # References

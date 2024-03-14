@@ -51,8 +51,8 @@ stateDiagram-v2
     state "Deployer" as deployer
     state "Scanner\nSecOps\nPentester" as scanner
     state "Consumer\nUser" as consumer
-    state "Auditor – Internal" as auditor_internal
-    state "Auditor – External" as auditor_external
+    state "Auditor" as auditor_internal
+    state "Auditor" as auditor_external
 
     classDef createsSBOM stroke:red,stroke-width:2px;
     classDef updatesSBOM stroke:orange,stroke-width:2px;
@@ -72,6 +72,7 @@ stateDiagram-v2
 
     state "Author Environment" as ecosystem_author {
         [*] --> author
+        author_owner --> author
         author --> language_packager
     }
 
@@ -110,6 +111,7 @@ stateDiagram-v2
 
     state "Manufacturer Environment" as ecosystem_integrator {
         [*] --> developer
+        integrator_owner --> developer
     }
 
     developer --> auditor_internal
@@ -155,7 +157,7 @@ A language ecosystem hosts, indexes and distributes components specific for a pr
 * Examples: CPAN (Perl), PyPI (Python), NPM (Node/JS)
 * May have upstream language ecosystems
 * May have downstream language ecosystems
-* May have automated patcher
+* May have automated Patcher
 * May be Public or Private
 
 
@@ -178,6 +180,19 @@ A website or tool that offers a public collaboration repository to Authors, so t
 ### Repository Ecosystem
 
 * See [Public Collaboration Ecosystem](#public-collaboration-ecosystem).
+
+
+## Production Environment
+
+The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
+
+* See also [Customer Environment](#customer-environment).
+
+### Customer Environment
+
+The environment and systems where a product or service is executed by a customer and thereby made available to their users.
+
+* See also [Production Environment](#production-environment)
 
 
 # Supply-chain Roles
@@ -366,24 +381,44 @@ A Developer that publishes their software as Open Source, is called an [Author](
 > * See also [Author](#Author).
 
 
-### Builder — Deployer
+### Deployer
 
-Final preparation and installation of the software into a CI/CD or Production Environment.
+Operates within a [Production Environment](#production-environment).
+Final preparation and installation of the software into a CI/CD or [Production Environment](#production-environment).
 
 
 ## Scanner
 
-Runtime and static security checks; Vulnerability monitoring, etc.
+May operate within a [Production Environment](#production-environment) or an [Integrator Environment](#integrator-environment).
+Responsible for security checks, including runtime, dynamic and static checks, vulnerability monitoring, etc.
+Communicates any issues or findings to any number of upstream roles, including the component [Deployer](#deployer), [Developer](#developer) or [Author](#author).
+
+### SecOps
+
+* See [Scanner](#scanner).
+
+### Pentester
+
+* See [Scanner](#scanner).
 
 
 ## Consumer
 
-The software in use in production, by a user.
+The software in use, in production, by a user.
+
+### User
+
+* See [Consumer](#consumer).
 
 
-## Auditor / Compliance
+## Auditor
 
 Verifies that all necessary metadata is available, up-to-date and made use of.
+
+
+### Compliance
+
+* See [Auditor](#auditor).
 
 
 # Other terms

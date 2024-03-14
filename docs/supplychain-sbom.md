@@ -11,7 +11,7 @@ toc: true
 > What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/sbom-draft/sbom](https://github.com/CPAN-Security/security.metacpan.org/tree/main/docs/supplychain-sbom.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/main/docs/supplychain-sbom.md](https://github.com/CPAN-Security/security.metacpan.org/tree/main/docs/supplychain-sbom.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 
 
@@ -42,13 +42,14 @@ stateDiagram-v2
     state "Packager" as language_packager
     state "Curator" as language_curator
     state "Distributor" as language_distributor
+    state "Contributor" as contributor
     state "Patcher" as package_patcher
-    state "Packager\Builder" as package_packager
+    state "Packager\nBuilder" as package_packager
     state "Curator" as package_curator
     state "Distributor" as package_distributor
     state "Manufacturer\nOwner" as integrator_owner
     state "Developer" as developer
-    state "Deployer" as deployer
+    state "Deployer\nBuilder" as deployer
     state "Scanner\nSecOps\nPentester" as scanner
     state "Consumer\nUser" as consumer
     state "Auditor" as auditor_internal
@@ -59,12 +60,15 @@ stateDiagram-v2
     classDef assemblesSBOM stroke:cyan,stroke-width:2px;
     classDef verifiesSBOM stroke:green,stroke-width:2px;
 
+    class author_owner createsSBOM
+    class manufacturer_owner createsSBOM
     class author createsSBOM
     class package_patcher updatesSBOM
-    class package_packager updatesSBOM
+    class package_packager assemblesSBOM
     class package_distributor updatesSBOM
     class language_distributor updatesSBOM
     class developer assemblesSBOM
+    class deployer assemblesSBOM
     class auditor_internal verifiesSBOM
     class auditor_external verifiesSBOM
 
@@ -93,6 +97,9 @@ stateDiagram-v2
     state "Public Collaboration Ecosystem" as ecosystem_repo {
         [*] --> repository_distributor
     }
+
+    repository_distributor --> contributor
+    contributor --> repository_distributor
 
     repository_distributor --> ecosystem_package
     repository_distributor --> ecosystem_integrator

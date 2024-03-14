@@ -36,15 +36,17 @@ stateDiagram-v2
     direction TB
     accTitle: An idealized Open Source supply chain
 
-    state "Author\nCustodian\nPublisher" as author
-    state "Repository – Distributor" as repository_distributor
-    state "Language – Packager" as language_packager
-    state "Language – Curator" as language_curator
-    state "Language – Distributor" as language_distributor
-    state "Package – Patcher" as package_patcher
-    state "Package – Packager" as package_packager
-    state "Package – Curator" as package_curator
-    state "Package – Distributor" as package_distributor
+    state "Open Source Steward\nOwner" as author_owner
+    state "Author\nCustodian" as author
+    state "Distributor" as repository_distributor
+    state "Packager" as language_packager
+    state "Curator" as language_curator
+    state "Distributor" as language_distributor
+    state "Patcher" as package_patcher
+    state "Packager\Builder" as package_packager
+    state "Curator" as package_curator
+    state "Distributor" as package_distributor
+    state "Manufacturer\nOwner" as integrator_owner
     state "Developer" as developer
     state "Deployer" as deployer
     state "Scanner\nSecOps\nPentester" as scanner
@@ -130,20 +132,20 @@ stateDiagram-v2
 One or more developers that publish an Open Source component.
 
 * Publishes Open Source
-* May have a project development lifecycle
+* May have a project development life-cycle
 
 
-## Manufacturer Environment
+## Integrator Environment
 
 A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
 Management is expected to ensure that this assembled SBOM document describes the application as required by law.
 
 * Does NOT publish Open Source
-* Has a project development lifecycle
+* Has a project development life-cycle
 
-### Integrator Environment
+### Manufacturer Environment
 
-* See [Manufacturer Environment](#manufacturer-environment).
+* See [Integrator Environment](#integrator-environment).
 
 
 ## Language Ecosystem
@@ -153,12 +155,13 @@ A language ecosystem hosts, indexes and distributes components specific for a pr
 * Examples: CPAN (Perl), PyPI (Python), NPM (Node/JS)
 * May have upstream language ecosystems
 * May have downstream language ecosystems
+* May have automated patcher
 * May be Public or Private
 
 
 ## Package Ecosystem
 
-A service that makes components repackaged for a specific OS distribution available for easy download and use.
+A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#curator), [indexes and hosts](#distributor) components for a specific OS distribution making packages available for easy download and use.
 
 * Examples: APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD)
 * May have upstream package ecosystems
@@ -179,21 +182,66 @@ A website or tool that offers a public collaboration repository to Authors, so t
 
 # Supply-chain Roles
 
-## Owner
+## Open Source Steward
 
-Has the legal ownership rights for the dist (e.g a business, or the Author).
-May decide the name of the project, or other project parameters for (or on behalf of) the Author.
+Within an [Author Environment](#author-environment), has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
+
+> NOTE: Steward gets a specific defined meaning in the Cyber Resilience Act, so until this definition is established, we'll avoid using the term.
+
+* See also [Owner](#owner)
+
+
+## Manufacturer
+
+Is a role within an [Integrator Environment](#integrator-environment).
+When doing business within the European Economic Area (EEA), has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
+
+* See also [Owner](#owner)
 
 > [!IMPORTANT]
-> | Field name          | Required | Data type | CycloneDX | SPDX | Legislation |
-> | :------------------ | :------- | :-------- | --------- | ---- | ----------- |
-> | Name                | Yes      | Text      |           |      | CRA AII.1   |
-> | Licenses            | Yes      |           |           |      | |
-> | Code repo           | Yes      |           |           |      | |
-> | SBOM Type           | Yes      |           |           |      | |
+> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
+> | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
+> | CE Declaration                | No       | URL          |           |      | CRA AII.7            |
+> | CE Support End Date           | No       | URL          |           |      | CRA AII.8            |
+> | CE Instructions               | No       | URL          |           |      | CRA AII.9            |
+> | CE Conformity Assessment Body | No       | URL          |           |      | CRA Article 47.1     |
+> | SBOM Type                     | Yes      |              |           |      | |
+> | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM            |
+> | SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM            |
+
+> [!NOTE]
+> Manufacturer has a specific defined meaning in the Cyber Resilience Act, so until this definition is established, be careful when using the term.
+
+## Owner
+
+Operates in an [Author Environment](#author-environment) or [Integrator Environment](#integrator-environment).
+Has the legal ownership rights and liabilities for the component.
+Is usually the [Author](#author), a business or some other type of legal entity.
+May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
+
+> [!IMPORTANT]
+> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
+> | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
+> | Manufacturer, Supplier Name   | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
+> | Licenses                      | Yes      | SPDX License |           |      | |
+> | Code Repository               | Yes      |              |           |      | |
+> | SBOM Type                     | Yes      |              |           |      | |
+> | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM            |
+> | SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM            |
+
+* See also [Manufacturer](#manufacturer), [Open Source Steward](#open-source-steward).
+
+### Supplier
+
+Is a role within an [Integrator Environment](#integrator-environment).
+The term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
+
+* See also [Manufacturer](#manufacturer), [Owner](#owner).
+
 
 ## Author
 
+Operates within an [Author Environment](#author-environment).
 The initial and/or main creator of the component in question.
 Typically works on all aspects of the code, including features, bug fixes, tests and security issues.
 Has the final say on the original contents of the package.
@@ -207,59 +255,61 @@ See below).
 > | Manufacturer, Supplier Name   | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
 > | Component Name                | Yes      | Text         |           |      | NTIA-SBOM            |
 > | Version                       | Yes      | Text         |           |      | NTIA-SBOM            |
-> | Dependencies                  | Yes      |              |           |      | NTIA-SBOM            |
+> | Dependencies                  | Yes      | List         |           |      | NTIA-SBOM            |
 > | Security contact              | Yes      | URL          |           |      | CRA AII.2            |
 > | Unique ID, Product ID         | Yes      | PURL         |           |      | CRA AII.3, NTIA-SBOM |
 > | Purpose, Intended Use         | Yes      | Text         |           |      | CRA AII.4            |
 > | Licenses                      | Yes      | SPDX License |           |      | |
-> | Code Repository               | Yes      |              |           |      | |
 > | Code Commit Revision          | No       |              |           |      | |
-> | SBOM Type                     | Yes      |              |           |      | |
+> | Code Repository               | Yes      |              |           |      | |
 > | CE Declaration                | No       | URL          |           |      | CRA AII.7            |
-> | CE Support End Date           | No       | URL          |           |      | CRA AII.8            |
-> | CE Instructions               | No       | URL          |           |      | CRA AII.9            |
-> | CE Conformity Assessment Body | No       | URL          |           |      | CRA Article 47.1     |
+> | SBOM Type                     | Yes      |              |           |      | |
 > | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM            |
-> | SBOM Creation Timestamp       | No       | DateTime     |           |      | NTIA-SBOM            |
+> | SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM            |
 > | SBOM Location                 | No       | URL          |           |      | CRA AII.10           |
 > | Vulnerable versions/locations | No       |              |           |      | |
 
 
 ### Custodian
 
-A type of Steward with reduced responsibilities.
+Operates within an [Author Environment](#author-environment).
+A type of [Author](#author) with reduced responsibilities, working on behalf of the actual author.
 Cares about the ongoing security of the code.
 Typically only concerned with updating dependencies or applying security fixes.
 Works with the Author primarily, and may take responsibility on their behalf when it comes to security concerns.
-
-
-### Publisher
-
-Places the component on an ecosystem publishing platform, on behalf of the Author, Steward or Custodian.
-Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.
+May work on behalf of the author if they are unavailable or unresponsive.
 
 
 ### Contributor
 
+Operates independently, but through a [Public Collaboration Ecosystem](#public-collaboration-ecosystem).
 Interacts with component with bug reports, feedback, quality assurance, testing, patches or pull requests.
 May or may not have repository commit privileges.
+May also have additional roles, including being a downstream [Developer](#developer), [Patcher](#patcher) or [Author](#author).
 
 
 ## Patcher
 
-Applies security and bug fixes to distributed native packages.
-Works mainly with the Packager, and is downstream of the Author.
-This role should only be necessary if upstream (Author or Custodian) roles are not responsive or available, or when downstream constraints requirements call for it (e.g. when backporting of fixes are needed due to downstream version pinning).
+Operates within a [Package Ecosystem](#package-ecosystem).
+Applies security and/or bug fixes to packages before building and packaging.
+Works mainly with a downstream [Packager](#packager), and has [Author](#author)'s downstream ecosystems as upstream.
+
+This role is necessary when...
+
+* Upstream Author roles are not responsive or available, and thereby security fixes aren't applied there.
+* When downstream constraints and requirements call for it – e.g. when back-porting of fixes are needed due to downstream LTS requirements.
 
 > [!NOTE]
 > * Patchers (a role that often is held by the same person as the Packager), may select and apply patches before building.
-> * These patches may include backports of features, security fixes or other accommodations necessary for distributing multiple releases of the same upstream project, but within publishing constraints decided by the Curator of the Ecosystem (e.g. LTS releases, support contracts, etc.).
-> * A packager can both be found in-house (e.g. a business who uses a company-internal package mirror), for a Package Ecosystem provider (e.g. Debian), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
+> * These patches may include back-ports of features, security fixes or other accommodations necessary for distributing multiple releases of the same upstream project, but within publishing constraints decided by the Curator of the Ecosystem (e.g. LTS releases, support contracts, etc.).
+> * A Packager can both be found in-house (e.g. a business who uses a company-internal package mirror), for a Package Ecosystem provider (e.g. Debian), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
 
-## Builder - Packager
+## Packager
 
-Builds and creates native packages from a dist received from upstream, optionally with patches applied from the Patcher.
+Operates within a [Package Ecosystem](#package-ecosystem) or an [Author Environment](#author-environment).
+Within a package ecosystem, builds and creates packages from components received from an upstream source, optionally with patches applied from the [Patcher](#patcher).
+Within an author environment, creates packages from their own project in preparation for publication in a downstream [Language Ecosystem](#language-ecosystem) (e.g. create a CPAN package for uploading to CPAN using the PAUSE interface).
 Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
 
 > [!NOTE]
@@ -272,10 +322,16 @@ Concerns themselves with correct package format and structure, and that package 
 > [!IMPORTANT]
 > Packagers should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
 
+### Builder
+
+* See [Packager](#packager)
+
 
 ## Curator
 
-Selects or pins which releases are suitable for use within an organization.
+Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
+Selects or pins which components are suitable for use downstream of the package ecosystem.
+Works mainly with the [Distributor](#distributor) role.
 Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bug fixes and security updates.
 
 > [!NOTE]
@@ -286,29 +342,31 @@ Concerns themselves with both the stability and predictability of components, an
 
 ## Distributor
 
+Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
 Ensures the availability of packages, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 > [!NOTE]
-> * Distributors take what Packagers, Patchers and Curators produce, and ensure they are made available in a reliable way for downstream users (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or whatever).
+> * Distributors take packages that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or similar).
 > If SBOM metadata is expected to accompany the packages in question, the Distributor makes sure this happens.
 
 > [!IMPORTANT]
-> | Field name          | Required | Data type | CycloneDX | SPDX |
-> | :------------------ | :------- | :-------- | --------- | ---- |
-> | Download location   | Yes      |           |           |      |
+> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
+> | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
+> | Download location             | Yes      |              |           |      |                      |
 
 
-### Developer
+## Developer
 
-Uses packages and components as dependencies in their own project or product.
-A Developer is considered to be identical to an Author from the upstream (Author's) perspective.
-The main difference from an Author is that a Developer doesn't publish their work as Open Source.
+Operates within an [Integrator Environment](#integrator-environment).
+Uses packages and components as dependencies in their own project, product or component.
+A Developer is in many ways identical to an [Author](#author) from the upstream Author's perspective, with the main difference being that a Developer doesn't publish their work as Open Source.
+A Developer that publishes their software as Open Source, is called an [Author](#author).
 
 > [!IMPORTANT]
-> See [Author](#Author) section
+> * See also [Author](#Author).
 
 
-## Builder — Deployer
+### Builder — Deployer
 
 Final preparation and installation of the software into a CI/CD or Production Environment.
 
@@ -330,20 +388,11 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 # Other terms
 
-## Steward
+~~## Publisher
 
-~~A type of Author with reduced responsibilities.
-Ensures the ongoing quality of the code.
-Typically only works on security issues and bugfixes.
-Usually doesn't work on new features.
-Works with the Author primarily, and may take responsiblity on their behalf when security and bugs are concerned.~~
-
-> NOTE: Steward gets a specific defined meaning in the Cyber Resilience Act, so until this definition is established, we'll avoid using the term.
-
-## Manufacturer (CRA)
-
-
-## Open Source Steward (CRA)
+Operates within an [Author Environment](#author-environment).
+Places the component on an ecosystem publishing platform, on behalf of the Author or Custodian.
+Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.~~
 
 
 # References

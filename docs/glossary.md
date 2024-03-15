@@ -50,7 +50,7 @@ toc: true
 
 ### CE Marking ⚠️
 
-> 1. A marking by which a manufacturer indicates that a product with digital elements and the processes put in place by the manufacturer are in conformity with the essential requirements set out in [EU Cyber Resilience Act, Annex I](#other-supporting-matter) and other applicable European Union harmonisation legislation providing for its affixing.
+> 1. A marking by which a manufacturer indicates that a product with digital elements and the processes put in place by the manufacturer are in conformity with the essential requirements set out in [EU Cyber Resilience Act, Annex I](#other-supporting-matter) and other applicable European Union harmonization legislation providing for its affixing.
 >
 > (Ref: [CRA 2024](#references-and-terms))
 
@@ -198,7 +198,7 @@ toc: true
 ### Point of origin ✍️
 
 > [!WARNING]
-> Discouraged term. Confusing definiton, having common meaning with both [Source](#source---), [Manufacturer](#manufacturer) and [Distrubutor](#distrubutor-). (CPANSec)
+> Discouraged term. Confusing definition, having common meaning with both [Source](#source---), [Manufacturer](#manufacturer) and [Distributor](#distrubutor-). (CPANSec)
 
 > 1. The supplier and associated metadata from which a software component has been procured, transmitted, or received. (SCVS)
 >     * ~~Package repositories, release distribution platforms, and version control history are examples of various points of origin.~~
@@ -335,6 +335,7 @@ This glossary is partly based on
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
 - (SLSA 2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)
 - (CRA 2024) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT), page 75, published 2023-12-20.
+- (CPAN 2015) [CPAN Glossary](http://neilb.org/2015/09/05/cpan-glossary.html) by Neil Bowers, published 2015-09-05.
 
 
 ## Other supporting matter

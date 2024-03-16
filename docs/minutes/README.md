@@ -10,3 +10,4 @@ CPAN Security Group meeting minutes.
 * [2024-01-20](cpansec-minutes-2024-01-20.md)
 * [2024-02-10](cpansec-minutes-2024-02-10.md)
 * [2024-02-24](cpansec-minutes-2024-02-24.md)
+* [2024-03-13](cpansec-minutes-2024-03-13.md)

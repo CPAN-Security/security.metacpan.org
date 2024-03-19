@@ -52,7 +52,7 @@ toc: true
 
 > 1. A marking by which a manufacturer indicates that a product with digital elements and the processes put in place by the manufacturer are in conformity with the essential requirements set out in [EU Cyber Resilience Act, Annex I](#other-supporting-matter) and other applicable European Union harmonization legislation providing for its affixing.
 >
-> (Ref: [CRA 2024](#references-and-terms))
+> (Ref: [CRA 2024-03](#references-and-terms))
 
 ### Chain of custody
 
@@ -66,10 +66,10 @@ toc: true
 > Component and Artifact seem to have overlapping definitions.
 > We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec)
 
-> 1. Software or hardware intended for integration into an [electronic information system](#electronic-information-system).
+> 1. Software or hardware intended for integration into an [electronic information system](#electronic-information-system). (CRA 2024-03)
 > 2. See also [Artifact](#artifact-).
 >
-> (Ref: [CRA 2024](#references-and-terms), CPANSec 2024)
+> (Ref: [CRA 2024-03](#references-and-terms), CPANSec 2024)
 
 #### Component function
 
@@ -80,16 +80,16 @@ toc: true
 
 #### Component, second-party ✍️
 
-> 1. Any software component created through the interaction with a second party, including Open Source, "source available", and proprietary software where the source is made available for building. (CPANSec)
->     * Open Source software is considered "second-party" as the developer both has a legal relationship with the FOSS component project by accepting the project license, and the source available for building, in addition to use, inspection and modification.
+> 1. Any software component created through the interaction with a second party, including open source, "source available", and proprietary software where the source is made available for either inspection, use, modification, building or sharing. (CPANSec)
+>     * Open Source software components that are dependencies should be considered as "second-party components", since the user of these components have an ongoing legal relationship with the FOSS component project, by the fact that the user has accepted the project license.
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 #### Component, third-party ✍️
 
-> 1. ~~Any software component not directly created including open source, "source available", and commercial or proprietary software.~~ (SCVS)
-> 2. Any software component not directly created, including "source available", commercial or proprietary software. (CPANSec)
->     * Open Source software is closer to a "second-party component" as the developer in fact has a legal relationship with the FOSS component project by accepting the project license.
+> 1. Any software component not directly created including open source, "source available", and commercial or proprietary software. (SCVS 2020)
+> 2. Any software component not directly created including "source available", commercial or proprietary software. (CPANSec 2024)
+>     * Open Source software components that are dependencies should be considered as "second-party components", since the user of these components have an ongoing legal relationship with the FOSS component project, by the fact that the user has accepted the project license.
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
@@ -124,8 +124,8 @@ toc: true
 
 #### Dependency (Transitive) ✍️
 
-> 1. A software component that is indirectly used by a program by means of being a dependency of a dependency.
->     * Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
+> 1. A software component that is indirectly used by a program by means of being a dependency of a dependency. (SCVS 2020)
+>     * Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!). (CPANSec 2024)
 > 2. See also [Dependency (Direct)](#dependency-direct-).
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
@@ -137,27 +137,27 @@ toc: true
 >
 > TODO: Check with lawyer after final version of CRA is adopted.
 
-> 1. Any natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the European Union market without affecting its properties.
+> 1. Any natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the European Union market without affecting its properties. (CRA 2024-03)
 >
-> (Ref: [CRA 2024](#references-and-terms))
+> (Ref: [CRA 2024-03](#references-and-terms))
 
 ### Electronic information system
 
-> 1. Any system, including electrical or electronic equipment, capable of processing, storing or transmitting digital data.
+> 1. A system, including electrical or electronic equipment, capable of processing, storing or transmitting digital data. (CRA 2024-03)
 >
-> (Ref: [CRA 2024](#references-and-terms))
+> (Ref: [CRA 2024-03](#references-and-terms))
 
 ### Hardware
 
-> 1. A physical electronic information system, or parts thereof capable of processing, storing or transmitting of digital data.
+> 1. A physical electronic information system, or parts thereof capable of processing, storing or transmitting digital data. (CRA 2024-03)
 >
-> (Ref: [CRA 2024](#references-and-terms))
+> (Ref: [CRA 2024-03](#references-and-terms))
 
 ### Manufacturer
 
 > 1. Any natural or legal person who develops or manufactures products with digital elements or has products with digital elements designed, developed or manufactured, and markets them under his or her name or trademark, whether for payment, monetisation or free of charge.
 >
-> (Ref: [CRA 2024](#references-and-terms))
+> (Ref: [CRA 2024-03](#references-and-terms))
 
 ### Open-source software steward ⚠️
 
@@ -166,7 +166,7 @@ toc: true
 
 > 1. Any legal person, other than a [manufacturer](#manufacturer), which has the purpose or objective to systematically provide support on a sustained basis for the development of specific products with digital elements qualifying as free and open-source software that are intended for commercial activities, and ensures the viability of those products.
 >
-> (Ref: [CRA 2024](#references-and-terms))
+> (Ref: [CRA 2024-03](#references-and-terms))
 
 ### Package ⚠️  ✍️
 
@@ -215,9 +215,9 @@ toc: true
 
 ### Product with digital elements
 
-> 1. Any software or hardware product and its remote data processing solutions, including software or hardware components to be placed on the market separately.
+> 1. A software or hardware product and its [Remote Data Processing](#remote-data-processing) solutions, including software or hardware components being placed on the market separately.
 >
-> (Ref: [CRA 2024](#references-and-terms))
+> (Ref: [CRA 2024-03](#references-and-terms))
 
 ### Provenance ✍️
 
@@ -225,6 +225,13 @@ toc: true
 >     * Provenance incorporates the [point of origin](#point-of-origin-) through ~~distribution~~  [distributor](#distributor-) as well as derivatives in the case of software that has been modified.
 >
 > (Ref: [SCVS 2020](#references-and-terms))
+
+### Remote Data Processing
+
+> 1. Data processing at a distance the software for which is designed and developed by the manufacturer, or under the responsibility of the manufacturer, and the absence of which would prevent the product with digital elements from performing one of its functions. (CRA 2024-03)
+>
+> (Ref: [CRA 2024-03](#references-and-terms))
+
 
 ### Second-party component ✍️
 
@@ -235,7 +242,7 @@ toc: true
 > 1. A formal record containing details and supply chain relationships of components included in the software elements of a product with digital elements. (CRA 2024)
 > 2. A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software. (SCVS 2020)
 >
-> (Ref: [CRA 2024](#references-and-terms), SCVS 2020)
+> (Ref: [CRA 2024-03](#references-and-terms), SCVS 2020)
 
 ### SBOM Types
 
@@ -285,9 +292,9 @@ toc: true
 
 ### Software
 
-> 1. The part of an electronic information system which consists of computer code.
+> 1. The part of an electronic information system which consists of computer code. (CRA 2024-03)
 >
-> (Ref: [CRA 2024](#references-and-terms))
+> (Ref: [CRA 2024-03](#references-and-terms))
 
 ### Software Bill of Materials (SBOM)
 
@@ -334,10 +341,11 @@ This glossary is partly based on
 - (CPANSec 2024) CPAN Security Group improvements marked with ✍️  (CC-BY-SA-4.0)
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
 - (SLSA 2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)
-- (CRA 2024) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT), page 75, published 2023-12-20.
+- (CRA 2024-03) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136), pages 136-146, published 2024-03-12.
 - (CPAN 2015) [CPAN Glossary](http://neilb.org/2015/09/05/cpan-glossary.html) by Neil Bowers, published 2015-09-05.
 
 
 ## Other supporting matter
 
-- (CRA 2023) EU [Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/resource.html?uri=cellar:864f472b-34e9-11ed-9c68-01aa75ed71a1.0001.02/DOC_2&format=PDF), published 2023-09-15.
+- (CRA 2023-12) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT), page 75, published 2023-12-20.
+- (CRA 2023-09) EU [Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/resource.html?uri=cellar:864f472b-34e9-11ed-9c68-01aa75ed71a1.0001.02/DOC_2&format=PDF), published 2023-09-15.

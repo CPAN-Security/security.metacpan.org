@@ -61,7 +61,7 @@ When authors receive a vulnerability reports, they will usually need some time t
 - Prepare fixes and coordinate a release
 
 Please allow for some time for authors and potential downstream distributions to coordinate fixes before going public.
-It is not unusual for authors to request extentions to any proposed disclosure date.
+It is not unusual for authors to request extensions to any proposed disclosure date.
 
 
 #### If the Author is unresponsive

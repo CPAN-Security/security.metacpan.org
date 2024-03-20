@@ -1,8 +1,8 @@
 ---
 layout: page
 toc: true
-meeting_time: March 27th, 2024 17:00 UTC FIXME
-title: Minutes FIXME
+meeting_time: March 27th, 2024 17:00 UTC
+title: Minutes 2024-03-27
 ---
 
 ## Meeting details
@@ -17,21 +17,21 @@ title: Minutes FIXME
 
 ### Welcome
 
-- Meeting chair: FIXME
-- Meeting secretary: FIXME
+- Meeting chair: @oalders
+- Meeting secretary: @sjn
 
 ### Attendees, absents & regrets
 
-- Attendees
-    - …
-- Regrets
-    - …
-- Absents
-    - …
+* Attendees
+  - …
+* Regrets
+  - …
+* Absents
+  - …
 
 ### Approve previous meeting minutes
 
-- Previous meeting minutes was approved in PR# FIXME by FIXME
+- Previous meeting minutes was approved in PR#55 by @garu, @oalders and @sjn
 
 
 ### Quick summary of current work

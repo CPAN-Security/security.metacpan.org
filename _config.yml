@@ -7,6 +7,7 @@ baseurl: ""
 url: "https://security.metacpan.org"
 domain: security.metacpan.org
 show_excerpts: true
+mermaid: true
 
 header_pages:
   - docs/report.md

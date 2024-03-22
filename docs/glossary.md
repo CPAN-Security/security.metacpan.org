@@ -332,6 +332,10 @@ toc: true
 
 > See [Component, third-party](#component-third-party-).
 
+### Vendor
+
+> See [Manufacturer](#manufacturer) or [Author](#author).
+
 
 ## References and terms
 

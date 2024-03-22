@@ -26,10 +26,10 @@ With this diagram we'll attempt to offer an overview of these roles, how they ar
 
 - Any single person may have one or more roles, and switch between them as needed.
 - Each role cares that a specific SBOM metadata and accompanying artifacts…
-    - Exist (created, signed)
-    - Is complete (assembled, updated, annotated, renamed, deleted)
-    - Is available (indexed, distributed)
-    - Is correct and compliant (verified).
+    - 🟥 Exist (created, signed)
+    - 🟨 Complete (assembled, updated, annotated)
+    - 🟩 Available (indexed, curated, distributed)
+    - 🟦 Correct (verified, compliant)
 
 
 ```mermaid
@@ -37,39 +37,49 @@ stateDiagram-v2
     direction TB
     accTitle: An idealized Open Source supply chain
 
-    state "Owner\nOpen Source Steward" as author_owner
-    state "Author\nCustodian" as author
-    state "Distributor" as repository_distributor
-    state "Packager" as language_packager
-    state "Curator" as language_curator
-    state "Distributor" as language_distributor
-    state "Contributor" as contributor
-    state "Patcher" as package_patcher
-    state "Builder\nPackager" as package_packager
-    state "Curator" as package_curator
-    state "Distributor" as package_distributor
-    state "Owner\nManufacturer" as integrator_owner
-    state "Developer" as developer
-    state "Builder\nDeployer" as deployer
-    state "Scanner\nSecOps\nPentester" as scanner
-    state "Consumer\nUser" as consumer
-    state "Auditor" as auditor_internal
-    state "Auditor" as auditor_external
+    state "🟥 Owner\n🟨 Open Source Steward" as author_owner
+    state "🟥🟨 Author\n🟨 Custodian" as author
+    state "🟩 Distributor" as repository_distributor
+    state "🟨🟦 Packager" as language_packager
+    state "🟨 Curator" as language_curator
+    state "🟩 Distributor" as language_distributor
+    state "🟦 Contributor" as contributor
+    state "🟨 Patcher" as package_patcher
+    state "🟨🟦 Builder\n🟨 Packager" as package_packager
+    state "🟨 Curator" as package_curator
+    state "🟩 Distributor" as package_distributor
+    state "🟥 Owner\n🟥 Manufacturer" as integrator_owner
+    state "🟥🟨🟦 Developer" as integrator_developer
+    state "🟩 Publisher" as integrator_publisher
+    state "🟨🟦 Builder" as integrator_builder
+    state "🟨 Deployer" as deployer
+    state "🟦Vuln. Checker" as integrator_checker
+    state "🟦 Consumer\n🟦 User" as consumer
+    state "🟦 Auditor" as auditor_internal
+    state "🟦 Auditor" as auditor_external
 
-    classDef createsSBOM stroke:red,stroke-width:2px;
-    classDef updatesSBOM stroke:orange,stroke-width:2px;
-    classDef assemblesSBOM stroke:cyan,stroke-width:2px;
-    classDef verifiesSBOM stroke:green,stroke-width:2px;
+    classDef createsSBOM stroke:red,stroke-width:3px;
+    classDef updatesSBOM stroke:yellow,stroke-width:3px;
+    classDef assemblesSBOM stroke:yellow,stroke-width:3px;
+    classDef distributesSBOM stroke:green,stroke-width:3px;
+    classDef verifiesSBOM stroke:#07f,stroke-width:3px;
 
     class author_owner createsSBOM
     class manufacturer_owner createsSBOM
     class author assemblesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
-    class package_distributor updatesSBOM
-    class language_distributor updatesSBOM
+    class package_curator distributesSBOM
+    class package_distributor distributesSBOM
+    class language_packager assemblesSBOM
+    class language_curator distributesSBOM
+    class language_distributor distributesSBOM
+    class repository_distributor distributesSBOM
     class integrator_owner createsSBOM
-    class developer assemblesSBOM
+    class integrator_developer assemblesSBOM
+    class integrator_publisher distributesSBOM
+    class integrator_builder assemblesSBOM
+    class integrator_checker verifiesSBOM
     class deployer assemblesSBOM
     class auditor_internal verifiesSBOM
     class auditor_external verifiesSBOM
@@ -118,18 +128,22 @@ stateDiagram-v2
     package_distributor --> ecosystem_integrator
     ecosystem_package --> ecosystem_package
 
-    state "Manufacturer Environment" as ecosystem_integrator {
-        [*] --> developer
-        integrator_owner --> developer
+    state "Integrator Environment" as ecosystem_integrator {
+        [*] --> integrator_developer
+        integrator_owner --> integrator_developer
+        integrator_builder --> integrator_publisher
+        integrator_developer --> integrator_checker
+        integrator_checker --> integrator_developer
+        auditor_internal --> integrator_developer
+        integrator_developer --> auditor_internal
+        integrator_developer --> integrator_builder
     }
 
-    developer --> auditor_internal
-    developer --> ecosystem_prod
-    developer --> [*]
+    integrator_publisher --> [*]
+    integrator_publisher --> ecosystem_prod
 
     state "Production Environment" as ecosystem_prod {
         [*] --> deployer
-        deployer --> scanner
     }
 
     deployer --> consumer
@@ -151,7 +165,8 @@ One or more developers that publish an Open Source component.
 A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
 Management is expected to ensure that this assembled SBOM document describes the application as required by law.
 
-* Does NOT publish Open Source
+* Operates commercially
+* May publish Open Source
 * Has a project development life-cycle
 
 ### Manufacturer Environment
@@ -396,20 +411,24 @@ A Developer that publishes their software as Open Source, is called an [Author](
 * See also [Author](#Author).
 
 
-## Scanner
+## Vuln. Checker
 
+Vulnerability checker.
 May operate within a [Production Environment](#production-environment) or an [Integrator Environment](#integrator-environment).
 Responsible for security checks, including runtime, dynamic and static checks, vulnerability monitoring, etc.
 Communicates any issues or findings to any number of upstream roles, including the component [Deployer](#deployer), [Developer](#developer) or [Author](#author).
 
 ### SecOps
 
-* See [Scanner](#scanner).
+* See [checker](#checker).
 
 ### Pentester
 
-* See [Scanner](#scanner).
+* See [checker](#checker).
 
+### Scanner
+
+* See [checker](#checker).
 
 ## Consumer
 
@@ -443,6 +462,7 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 * CRA AII: [Cyber Resilience Act, Annex II](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=168), Draft dated 2023-12-20
 * NTIA SBOM: [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
+
 
 # License
 

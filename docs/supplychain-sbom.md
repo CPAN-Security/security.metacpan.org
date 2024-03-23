@@ -87,17 +87,13 @@ stateDiagram-v2
     class auditor_internal verifiesSBOM
     class auditor_external verifiesSBOM
 
-    [*] --> ecosystem_author
-
     state "Author Environment" as ecosystem_author {
         [*] --> author
         author_owner --> author
-        author --> language_packager
+        author       --> language_packager
     }
 
-    author --> ecosystem_repo
-    ecosystem_repo --> author
-    language_packager --> ecosystem_lang
+    [*] --> ecosystem_author
 
     state "Language Ecosystem" as ecosystem_lang {
         [*] --> language_distributor
@@ -105,49 +101,55 @@ stateDiagram-v2
         language_curator --> language_distributor
     }
 
-    language_distributor --> ecosystem_integrator
-    language_distributor --> ecosystem_package
-    ecosystem_lang --> ecosystem_lang
+    language_packager --> ecosystem_lang
+    ecosystem_lang    --> ecosystem_lang
 
     state "Public Collaboration Ecosystem" as ecosystem_repo {
         [*] --> repository_distributor
     }
 
-    repository_distributor --> contributor
-    contributor --> repository_distributor
+    author         --> ecosystem_repo
+    ecosystem_repo --> author
 
-    repository_distributor --> ecosystem_package
-    repository_distributor --> ecosystem_integrator
+    repository_distributor --> contributor
+    contributor            --> repository_distributor
 
     state "Package Ecosystem" as ecosystem_package {
         [*] --> package_patcher
         [*] --> package_packager
-        package_patcher --> package_packager
+        package_patcher  --> package_packager
         package_packager --> package_curator
         package_packager --> package_distributor
-        package_curator --> package_distributor
+        package_curator  --> package_distributor
     }
 
-    package_distributor --> ecosystem_integrator
-    ecosystem_package --> ecosystem_package
+    repository_distributor --> ecosystem_package
+    language_distributor   --> ecosystem_package
+    ecosystem_package      --> ecosystem_package
 
     state "Integrator Environment" as ecosystem_integrator {
         [*] --> integrator_developer
-        integrator_owner --> integrator_developer
-        integrator_builder --> integrator_publisher
+        integrator_owner     --> integrator_developer
+        integrator_builder   --> integrator_publisher
         integrator_developer --> integrator_checker
-        integrator_checker --> integrator_developer
-        auditor_internal --> integrator_developer
-        integrator_developer --> auditor_internal
+        integrator_checker   --> integrator_developer
+        auditor_internal     --> integrator_developer
         integrator_developer --> integrator_builder
+        integrator_developer --> auditor_internal
     }
 
-    integrator_publisher --> [*]
-    integrator_publisher --> ecosystem_prod
+    repository_distributor --> ecosystem_integrator
+    language_distributor   --> ecosystem_integrator
+    package_distributor    --> ecosystem_integrator
 
     state "Production Environment" as ecosystem_prod {
         [*] --> deployer
     }
+
+    integrator_publisher --> [*]
+    integrator_developer --> ecosystem_prod
+    integrator_builder   --> ecosystem_prod
+    integrator_publisher --> ecosystem_prod
 
     deployer --> consumer
     deployer --> auditor_external

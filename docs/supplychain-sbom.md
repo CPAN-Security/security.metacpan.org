@@ -22,14 +22,14 @@ In Open Source Software supply chains, we find people filling distinct roles tha
 
 With this diagram we'll attempt to offer an overview of these roles, how they are related, and what they do and care about.
 
-### Role assumptions
+### SBOM Role tasks
 
 - Any single person may have one or more roles, and switch between them as needed.
-- Each role cares that a specific SBOM metadata and accompanying artifacts…
-    - 🟥 Exist (created, signed)
-    - 🟨 Complete (assembled, updated, annotated)
-    - 🟩 Available (indexed, curated, distributed)
-    - 🟦 Correct (verified, compliant)
+- Each role cares about some specific SBOM metadata and their accompanying artifacts…
+    - 🟥 Metadata **Exists** (created, signed)
+    - 🟨 Metadata is **Complete** (assembled, updated, annotated)
+    - 🟩 Metadata is made **Available** (indexed, curated, distributed)
+    - 🟦 Metadata is **Correct** (verified, compliant)
 
 
 ```mermaid
@@ -37,6 +37,7 @@ stateDiagram-v2
     direction TB
     accTitle: An idealized Open Source supply chain
 
+    %%
     state "🟥 Owner\n🟨 Open Source Steward" as author_owner
     state "🟥🟨 Author\n🟨 Custodian" as author
     state "🟩 Distributor" as repository_distributor
@@ -58,12 +59,14 @@ stateDiagram-v2
     state "🟦 Auditor" as auditor_internal
     state "🟦 Auditor" as auditor_external
 
+    %% 
     classDef createsSBOM stroke:red,stroke-width:3px;
     classDef updatesSBOM stroke:yellow,stroke-width:3px;
     classDef assemblesSBOM stroke:yellow,stroke-width:3px;
     classDef distributesSBOM stroke:green,stroke-width:3px;
     classDef verifiesSBOM stroke:#07f,stroke-width:3px;
 
+    %% 
     class author_owner createsSBOM
     class manufacturer_owner createsSBOM
     class author assemblesSBOM

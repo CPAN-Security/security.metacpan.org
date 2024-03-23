@@ -234,14 +234,12 @@ Is usually the [Author](#author), a business or some other type of legal entity.
 May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
 
 > [!IMPORTANT]
-> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
-> | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-> | Manufacturer, Supplier Name   | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
-> | Licenses                      | Yes      | SPDX License |           |      | |
-> | Code Repository               | Yes      |              |           |      | |
-> | SBOM Type                     | Yes      |              |           |      | |
-> | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM            |
-> | SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM            |
+> | Field name                             | Required   | Data type    | CycloneDX | SPDX | Legislation                       |
+> | :------------------------------------- | :--------- | :----------- | --------- | ---- | --------------------------------- |
+> | Manufacturer, Supplier Name            | Yes        | Email, URL   |           |      | CRA-AII.1, NTIA-SBOM, DE-TR.5.2.2 |
+> | SBOM Type                              | Yes        |              |           |      | |
+> | SBOM Author                            | Yes        | Text         |           |      | NTIA-SBOM, DE-TR.5.2.1            |
+> | SBOM Creation Time-stamp               | Yes        | DateTime     |           |      | NTIA-SBOM, DE-TR.5.2.1            |
 
 * See also [Manufacturer](#manufacturer), [Open Source Steward](#open-source-steward).
 
@@ -249,7 +247,9 @@ May decide the name of the project and other project parameters for (or on behal
 
 Within an [Author Environment](#author-environment), has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
 
-> NOTE: Steward gets a specific defined meaning in the Cyber Resilience Act, so until this definition is established, we'll avoid using the term.
+> [!IMPORTANT]
+> | Field name                                       | Required | Data type    | CycloneDX | SPDX | Legislation                       |
+> | :----------------------------------------------- | :------- | :----------- | --------- | ---- | --------------------------------- |
 
 * See also [Owner](#owner)
 
@@ -263,16 +263,14 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 > [!IMPORTANT]
 > | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
 > | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-> | CE Declaration                | No       | URL          |           |      | CRA AII.7            |
-> | CE Support End Date           | No       | URL          |           |      | CRA AII.8            |
-> | CE Instructions               | No       | URL          |           |      | CRA AII.9            |
+> | CE Declaration                | No       | URL          |           |      | CRA-AII.7            |
+> | CE Support End Date           | No       | URL          |           |      | CRA-AII.8            |
+> | CE Instructions               | No       | URL          |           |      | CRA-AII.9            |
 > | CE Conformity Assessment Body | No       | URL          |           |      | CRA Article 47.1     |
-> | SBOM Type                     | Yes      |              |           |      | |
-> | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM            |
-> | SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM            |
 
 > [!NOTE]
 > Manufacturer has a specific defined meaning in the Cyber Resilience Act, so until this definition is established, be careful when using the term.
+> These fields are in addition to the fields listed under [Owner](#owner).
 
 
 ### Supplier
@@ -290,27 +288,26 @@ The initial and/or main creator of the component in question.
 Typically works on all aspects of the code, including features, bug fixes, tests and security issues.
 Has the final say on the original contents of the package.
 The Author _can_ be a group of people, though a single point of responsibility is common.
-If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective.
-See below).
+If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective; See below).
 
 > [!IMPORTANT]
-> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
-> | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-> | Manufacturer, Supplier Name   | Yes      | Text         |           |      | CRA AII.1, NTIA-SBOM |
-> | Component Name                | Yes      | Text         |           |      | NTIA-SBOM            |
-> | Version                       | Yes      | Text         |           |      | NTIA-SBOM            |
-> | Dependencies                  | Yes      | List         |           |      | NTIA-SBOM            |
-> | Security contact              | Yes      | URL          |           |      | CRA AII.2            |
-> | Unique ID, Product ID         | Yes      | PURL         |           |      | CRA AII.3, NTIA-SBOM |
-> | Purpose, Intended Use         | Yes      | Text         |           |      | CRA AII.4            |
+> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation            |
+> | :---------------------------- | :------- | :----------- | --------- | ---- | ---------------------- |
+> | Component Name                | Yes      | Text         |           |      | NTIA-SBOM, DE-TR.5.2.2 |
+> | Version                       | Yes      | Text         |           |      | NTIA-SBOM, DE-TR.5.2.2 |
+> | Dependencies                  | Yes      | List         |           |      | NTIA-SBOM              |
+> | Security contact              | Yes      | URL          |           |      | CRA-AII.2              |
+> | Unique ID, Product ID         | Yes      | PURL         |           |      | CRA-AII.3, NTIA-SBOM   |
+> | Purpose, Intended Use         | Yes      | Text         |           |      | CRA-AII.4              |
 > | Licenses                      | Yes      | SPDX License |           |      | |
+> | Public Code Repository        | Yes      |              |           |      | |
 > | Code Commit Revision          | No       |              |           |      | |
 > | Code Repository               | Yes      |              |           |      | |
-> | CE Declaration                | No       | URL          |           |      | CRA AII.7            |
+> | CE Declaration                | No       | URL          |           |      | CRA-AII.7              |
 > | SBOM Type                     | Yes      |              |           |      | |
-> | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM            |
-> | SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM            |
-> | SBOM Location                 | No       | URL          |           |      | CRA AII.10           |
+> | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM              |
+> | SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM              |
+> | SBOM Location                 | No       | URL          |           |      | CRA-AII.10             |
 > | Vulnerable versions/locations | No       |              |           |      | |
 
 ### Custodian
@@ -328,6 +325,11 @@ Operates independently, but through a [Public Collaboration Ecosystem](#public-c
 Interacts with component with bug reports, feedback, quality assurance, testing, patches or pull requests.
 May or may not have repository commit privileges.
 May also have additional roles, including being a downstream [Developer](#developer), [Patcher](#patcher) or [Author](#author).
+
+### Steward
+
+> [!NOTE]
+> Steward has a specific defined meaning in the Cyber Resilience Act, so it's better to avoid using the term.
 
 
 ## Patcher
@@ -465,8 +467,10 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 # References
 
-* CRA AII: [Cyber Resilience Act, Annex II](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=168), Draft dated 2023-12-20
-* NTIA SBOM: [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
+* CRA-AII: [Cyber Resilience Act, Annex II](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=168), Draft dated 2023-12-20
+* NTIA-SBOM: [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
+* DE-TR: German Technical Requirement [TR-03183 Cyber Resilience Requirements for
+Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 1.1, published 2023-11-28.
 
 
 # License

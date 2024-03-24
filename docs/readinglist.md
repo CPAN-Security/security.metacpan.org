@@ -66,8 +66,6 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 #### EU and EEA – CRA
 
-~~(EU) [Directive 2020/1828/EC, the Cyber Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL%3AST_17000_2023_INIT&qid=1710309054521) (CRA, updated 2023-12-20)~~
-
 (EU) [Cyber Resilience Act](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html) (CRA, updated 2024-03-12)
 
 * In the [CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11)
@@ -90,12 +88,12 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Chapter I, Article 3: Definitions (pages 136-146)
     * Chapter I, Article 9, Point 1. (b-c): Stakeholder consultation (pages 155-156)
     * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
-        * Article 13, Obligations of manufaActurers (pages 161-175)
+        * Article 13, Obligations of Manufacturers (pages 161-175)
         * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
         * **Article 15**, Voluntary reporting (pages 185-186)
         * Article 16, Establishment of a single reporting platform (pages 187-192)
         * Article 17, Other provisions related to reporting (pages 193-195)
-        * Article 18, Authorised representatives (pages 195-196)
+        * Article 18, Authorized representatives (pages 195-196)
         * Article 19, Obligations of importers (pages 197-201)
         * Article 20, Obligations of distributors (pages 202-205)
         * Article 21, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
@@ -109,6 +107,8 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
         * Article 28, EU declaration of conformity (pages 218-219)
         * Article 29, General principles of the CE marking (page 219)
         * Article 30, Rules and conditions for affixing the CE marking (pages 220-222)
+    * Chapter V — Market Surveillance and Enforcement
+        * Article 58, Formal non-compliance (pages 276)
 * In [CRA Annex I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
     * Essential Cybersecurity Requirements (pages 297-302)
         * Part I — Cybersecurity requirements relating to the properties of products with digital elements (pages 297-300)

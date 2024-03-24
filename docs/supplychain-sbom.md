@@ -234,13 +234,12 @@ Has the legal ownership rights and liabilities for the component.
 Is usually the [Author](#author), a business or some other type of legal entity.
 May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
 
-> [!IMPORTANT]
-> | Field name                             | Required   | Data type    | CycloneDX | SPDX | Legislation                       |
-> | :------------------------------------- | :--------- | :----------- | --------- | ---- | --------------------------------- |
-> | Manufacturer, Supplier Name            | Yes        | Email, URL   |           |      | CRA-AII.1, NTIA-SBOM, DE-TR.5.2.2 |
-> | SBOM Type                              | Yes        |              |           |      | |
-> | SBOM Author                            | Yes        | Text         |           |      | NTIA-SBOM, DE-TR.5.2.1            |
-> | SBOM Creation Time-stamp               | Yes        | DateTime     |           |      | NTIA-SBOM, DE-TR.5.2.1            |
+| Field name                             | Required   | Data type    | CycloneDX | SPDX | Legislation                       |
+| :------------------------------------- | :--------- | :----------- | --------- | ---- | --------------------------------- |
+| Manufacturer, Supplier Name            | Yes        | Email, URL   |           |      | CRA-AII.1, NTIA-SBOM, DE-TR.5.2.2 |
+| SBOM Type                              | Yes        |              |           |      | |
+| SBOM Author                            | Yes        | Text         |           |      | NTIA-SBOM, DE-TR.5.2.1            |
+| SBOM Creation Time-stamp               | Yes        | DateTime     |           |      | NTIA-SBOM, DE-TR.5.2.1            |
 
 * See also [Manufacturer](#manufacturer), [Open Source Steward](#open-source-steward).
 
@@ -248,9 +247,9 @@ May decide the name of the project and other project parameters for (or on behal
 
 Within an [Author Environment](#author-environment), has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
 
-> [!IMPORTANT]
-> | Field name                                       | Required | Data type    | CycloneDX | SPDX | Legislation                       |
-> | :----------------------------------------------- | :------- | :----------- | --------- | ---- | --------------------------------- |
+| Field name                                       | Required | Data type    | CycloneDX | SPDX | Legislation                       |
+| :----------------------------------------------- | :------- | :----------- | --------- | ---- | --------------------------------- |
+| | | | | | |
 
 * See also [Owner](#owner)
 
@@ -261,13 +260,12 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 * See also [Owner](#owner)
 
-> [!IMPORTANT]
-> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
-> | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-> | CE Declaration                | No       | URL          |           |      | CRA-AII.7            |
-> | CE Support End Date           | No       | URL          |           |      | CRA-AII.8            |
-> | CE Instructions               | No       | URL          |           |      | CRA-AII.9            |
-> | CE Conformity Assessment Body | No       | URL          |           |      | CRA Article 47.1     |
+| Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
+| :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
+| CE Declaration                | No       | URL          |           |      | CRA-AII.7            |
+| CE Support End Date           | No       | URL          |           |      | CRA-AII.8            |
+| CE Instructions               | No       | URL          |           |      | CRA-AII.9            |
+| CE Conformity Assessment Body | No       | URL          |           |      | CRA Article 47.1     |
 
 > [!NOTE]
 > Manufacturer has a specific defined meaning in the Cyber Resilience Act, so until this definition is established, be careful when using the term.
@@ -291,25 +289,24 @@ Has the final say on the original contents of the package.
 The Author _can_ be a group of people, though a single point of responsibility is common.
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective; See below).
 
-> [!IMPORTANT]
-> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation            |
-> | :---------------------------- | :------- | :----------- | --------- | ---- | ---------------------- |
-> | Component Name                | Yes      | Text         |           |      | NTIA-SBOM, DE-TR.5.2.2 |
-> | Version                       | Yes      | Text         |           |      | NTIA-SBOM, DE-TR.5.2.2 |
-> | Dependencies                  | Yes      | List         |           |      | NTIA-SBOM              |
-> | Security contact              | Yes      | URL          |           |      | CRA-AII.2              |
-> | Unique ID, Product ID         | Yes      | PURL         |           |      | CRA-AII.3, NTIA-SBOM   |
-> | Purpose, Intended Use         | Yes      | Text         |           |      | CRA-AII.4              |
-> | Licenses                      | Yes      | SPDX License |           |      | |
-> | Public Code Repository        | Yes      |              |           |      | |
-> | Code Commit Revision          | No       |              |           |      | |
-> | Code Repository               | Yes      |              |           |      | |
-> | CE Declaration                | No       | URL          |           |      | CRA-AII.7              |
-> | SBOM Type                     | Yes      |              |           |      | |
-> | SBOM Author                   | No       | Text         |           |      | NTIA-SBOM              |
-> | SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM              |
-> | SBOM Location                 | No       | URL          |           |      | CRA-AII.10             |
-> | Vulnerable versions/locations | No       |              |           |      | |
+| Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation            |
+| :---------------------------- | :------- | :----------- | --------- | ---- | ---------------------- |
+| Component Name                | Yes      | Text         |           |      | NTIA-SBOM, DE-TR.5.2.2 |
+| Version                       | Yes      | Text         |           |      | NTIA-SBOM, DE-TR.5.2.2 |
+| Dependencies                  | Yes      | List         |           |      | NTIA-SBOM              |
+| Security contact              | Yes      | URL          |           |      | CRA-AII.2              |
+| Unique ID, Product ID         | Yes      | PURL         |           |      | CRA-AII.3, NTIA-SBOM   |
+| Purpose, Intended Use         | Yes      | Text         |           |      | CRA-AII.4              |
+| Licenses                      | Yes      | SPDX License |           |      | |
+| Public Code Repository        | Yes      |              |           |      | |
+| Code Commit Revision          | No       |              |           |      | |
+| Code Repository               | Yes      |              |           |      | |
+| CE Declaration                | No       | URL          |           |      | CRA-AII.7              |
+| SBOM Type                     | Yes      |              |           |      | |
+| SBOM Author                   | No       | Text         |           |      | NTIA-SBOM              |
+| SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM              |
+| SBOM Location                 | No       | URL          |           |      | CRA-AII.10             |
+| Vulnerable versions/locations | No       |              |           |      | |
 
 ### Custodian
 
@@ -400,10 +397,9 @@ Ensures the availability of packages, that they are indexed correctly, and that 
 > * Distributors take packages that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or similar).
 > If SBOM metadata is expected to accompany the packages in question, the Distributor makes sure this happens.
 
-> [!IMPORTANT]
-> | Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
-> | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-> | Download location             | Yes      |              |           |      |                      |
+| Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
+| :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
+| Download location             | Yes      |              |           |      |                      |
 
 
 ## Developer
@@ -412,9 +408,6 @@ Operates within an [Integrator Environment](#integrator-environment).
 Uses packages and components as dependencies in their own project, product or component.
 A Developer is in many ways identical to an [Author](#author) from the upstream Author's perspective, with the main difference being that a Developer doesn't publish their work as Open Source.
 A Developer that publishes their software as Open Source, is called an [Author](#author).
-
-> [!IMPORTANT]
->
 
 * See also [Author](#Author).
 

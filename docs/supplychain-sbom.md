@@ -3,6 +3,7 @@ layout: page
 title: Supply-chain SBOM roles
 description: Roles in a supply-chain who care about SBOM metadata
 toc: true
+mermaid: true
 ---
 
 # A Simplified Open Source Supply Chain with SBOMs
@@ -54,7 +55,7 @@ stateDiagram-v2
     state "🟩 Publisher" as integrator_publisher
     state "🟨🟦 Builder" as integrator_builder
     state "🟨 Deployer" as deployer
-    state "🟦Vuln. Checker" as integrator_checker
+    state "🟦 Vuln. Checker" as integrator_checker
     state "🟦 Consumer\n🟦 User" as consumer
     state "🟦 Auditor" as auditor_internal
     state "🟦 Auditor" as auditor_external

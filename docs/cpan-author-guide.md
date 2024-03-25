@@ -30,3 +30,8 @@ toc: true
 ## Add security tests to your code
 
 * Add [tests for taintedness](https://metacpan.org/pod/Test::Taint) to your codebase
+
+
+# Relevant documentation and guides
+
+* [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)

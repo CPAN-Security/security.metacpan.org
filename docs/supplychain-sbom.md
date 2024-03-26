@@ -23,14 +23,14 @@ In Open Source Software supply chains, we find people filling distinct roles tha
 
 With this diagram we'll attempt to offer an overview of these roles, how they are related, and what they do and care about.
 
-### SBOM Role tasks
+### SBOM Role activities
 
 - Any single person may have one or more roles, and switch between them as needed.
 - Each role cares about some specific SBOM metadata and their accompanying artifacts…
-    - 🟥 Metadata **Exists** (created, signed)
-    - 🟨 Metadata is **Complete** (assembled, updated, annotated)
-    - 🟩 Metadata is made **Available** (indexed, curated, distributed)
-    - 🟦 Metadata is **Correct** (verified, compliant)
+    - 🟥 Create, define, sign (Metadata **Exists**)
+    - 🟨 Assemble, update, annotate (Metadata is **Complete**)
+    - 🟩 Index, curate, distribute (Metadata is made **Available**)
+    - 🟦 Verify (Metadata is **Correct** or **Compliant**)
 
 
 ```mermaid
@@ -154,6 +154,9 @@ stateDiagram-v2
 
     deployer --> consumer
     deployer --> auditor_external
+
+    %% Copyright 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
 # Supply-chain Ecosystems and Environments
@@ -234,12 +237,12 @@ Has the legal ownership rights and liabilities for the component.
 Is usually the [Author](#author), a business or some other type of legal entity.
 May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
 
-| Field name                             | Required   | Data type    | CycloneDX | SPDX | Legislation                       |
-| :------------------------------------- | :--------- | :----------- | --------- | ---- | --------------------------------- |
-| Manufacturer, Supplier Name            | Yes        | Email, URL   |           |      | CRA-AII.1, NTIA-SBOM, DE-TR.5.2.2 |
-| SBOM Type                              | Yes        |              |           |      | |
-| SBOM Author                            | Yes        | Text         |           |      | NTIA-SBOM, DE-TR.5.2.1            |
-| SBOM Creation Time-stamp               | Yes        | DateTime     |           |      | NTIA-SBOM, DE-TR.5.2.1            |
+| Field name                             | Required   | Data type    | CycloneDX                                        | SPDX | Required by                       |
+| :------------------------------------- | :--------- | :----------- | ------------------------------------------------ | ---- | --------------------------------- |
+| Manufacturer, Supplier Name            | Yes        | Email, URL   | bom.metadata.supplier, bom.components[].supplier |      | CRA-AII.1, NTIA-SBOM, DE-TR.5.2.2 |
+| SBOM Type                              | Yes        |              |                                                  |      | |
+| SBOM Author                            | Yes        | Text         |                                                  |      | NTIA-SBOM, DE-TR.5.2.1            |
+| SBOM Creation Time-stamp               | Yes        | DateTime     |                                                  |      | NTIA-SBOM, DE-TR.5.2.1            |
 
 * See also [Manufacturer](#manufacturer), [Open Source Steward](#open-source-steward).
 
@@ -247,9 +250,9 @@ May decide the name of the project and other project parameters for (or on behal
 
 Within an [Author Environment](#author-environment), has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
 
-| Field name                                       | Required | Data type    | CycloneDX | SPDX | Legislation                       |
+| Field name                                       | Required | Data type    | CycloneDX | SPDX | Required by                       |
 | :----------------------------------------------- | :------- | :----------- | --------- | ---- | --------------------------------- |
-| | | | | | |
+| | | | | | Required by
 
 * See also [Owner](#owner)
 
@@ -260,7 +263,7 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 * See also [Owner](#owner)
 
-| Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
+| Field name                    | Required | Data type    | CycloneDX | SPDX | Required by          |
 | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
 | CE Declaration                | No       | URL          |           |      | CRA-AII.7            |
 | CE Support End Date           | No       | URL          |           |      | CRA-AII.8            |
@@ -289,24 +292,25 @@ Has the final say on the original contents of the package.
 The Author _can_ be a group of people, though a single point of responsibility is common.
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective; See below).
 
-| Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation            |
-| :---------------------------- | :------- | :----------- | --------- | ---- | ---------------------- |
-| Component Name                | Yes      | Text         |           |      | NTIA-SBOM, DE-TR.5.2.2 |
-| Version                       | Yes      | Text         |           |      | NTIA-SBOM, DE-TR.5.2.2 |
-| Dependencies                  | Yes      | List         |           |      | NTIA-SBOM              |
-| Security contact              | Yes      | URL          |           |      | CRA-AII.2              |
-| Unique ID, Product ID         | Yes      | PURL         |           |      | CRA-AII.3, NTIA-SBOM   |
-| Purpose, Intended Use         | Yes      | Text         |           |      | CRA-AII.4              |
-| Licenses                      | Yes      | SPDX License |           |      | |
-| Public Code Repository        | Yes      |              |           |      | |
-| Code Commit Revision          | No       |              |           |      | |
-| Code Repository               | Yes      |              |           |      | |
-| CE Declaration                | No       | URL          |           |      | CRA-AII.7              |
-| SBOM Type                     | Yes      |              |           |      | |
-| SBOM Author                   | No       | Text         |           |      | NTIA-SBOM              |
-| SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM              |
-| SBOM Location                 | No       | URL          |           |      | CRA-AII.10             |
-| Vulnerable versions/locations | No       |              |           |      | |
+| Field name                    | Required | Data type    | CycloneDX                                              | SPDX | Required by            |
+| :---------------------------- | :------- | :----------- | :----------------------------------------------------- | ---- | ---------------------- |
+| Component Name                | Yes      | Text         | bom.components[].name                                  |      | NTIA-SBOM, DE-TR.5.2.2 |
+| Version                       | Yes      | Text         | bom.components[].version                               |      | NTIA-SBOM, DE-TR.5.2.2 |
+| Dependencies                  | Yes      | List         | bom.dependencies[]                                     |      | NTIA-SBOM              |
+| Security contact              | Yes      | URL          | bom.components[].externalReferences[].security-contact |      | CRA-AII.2              |
+| Unique ID, Product ID         | Yes      | PURL         | bom.components[].purl                                  |      | CRA-AII.3, NTIA-SBOM   |
+| Purpose, Intended Use         | Yes      | Text         |                                                        |      | CRA-AII.4              |
+| Licenses                      | Yes      | SPDX License | bom.components[].licenses[]                            |      | |
+| Public Code Repository        | Yes      |              |                                                        |      | |
+| Code Commit Revision          | No       |              |                                                        |      | |
+| Code Repository               | Yes      |              | bom.components[].externalReferences[].vcs              |      | |
+| SBOM Type                     | Yes      |              |                                                        |      | |
+| SBOM Serial Number            | Yes      | UUID         | bom.metadata.serialNumber                              |      | |
+| SBOM Author                   | No       | Text         | bom.metadata.author                                    |      | NTIA-SBOM              |
+| SBOM Creation Time-stamp      | No       | DateTime     | bom.metadata.timestamp                                 |      | NTIA-SBOM              |
+| SBOM Location                 | No       | URL          |                                                        |      | CRA-AII.10             |
+| SBOM Generation Tools         | No       | List         | bom.metadata.tools[]                                   |      | |
+| Vulnerable versions/locations | No       |              |                                                        |      | |
 
 ### Custodian
 
@@ -397,7 +401,7 @@ Ensures the availability of packages, that they are indexed correctly, and that 
 > * Distributors take packages that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or similar).
 > If SBOM metadata is expected to accompany the packages in question, the Distributor makes sure this happens.
 
-| Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
+| Field name                    | Required | Data type    | CycloneDX | SPDX | Required by          |
 | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
 | Download location             | Yes      |              |           |      |                      |
 

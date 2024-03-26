@@ -29,7 +29,8 @@ toc: true
 
 > 1. An immutable blob of data; primarily refers to [software](#software), but SLSA can be used for any artifact.
 >     * E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
-> 2. See also [Component](#component-).
+>
+> See also: [Component](#component-).
 >
 > (Ref: [SLSA 2023](#references-and-terms), CPANSec 2024)
 
@@ -38,7 +39,7 @@ toc: true
 > 1. An entity that creates an SBOM. When [author](#author) and [supplier](#supplier) are different, this indicates that one entity (the author) is making claims about components created or included by a different entity (the supplier). (NTIA 2021)
 > 2. A developer that publishes something as Open Source software. (CPANSec 2024)
 >
-> See also: [Author](sbom-supplychain#author)
+> See also: [Author](supplychain-sbom#author) in the Supplychain SBOM Roles document.
 >
 > (Ref: [NTIA 2021](#references-and-terms), CPANSec 2024)
 
@@ -79,7 +80,7 @@ toc: true
 > 1. Software or hardware intended for integration into an [electronic information system](#electronic-information-system). (CRA 2024-03)
 > 2. A unit of software defined by a supplier at the time the component is built, packaged, or delivered. Many components contain subcomponents. Examples of components include a software product, a device, a library, or a single file. (NTIA 2021)
 >
-> See also [Artifact](#artifact-).
+> See also: [Artifact](#artifact-).
 >
 > (Ref: [CRA 2024-03](#references-and-terms), NTIA 2021, CPANSec 2024)
 
@@ -155,7 +156,7 @@ toc: true
 >
 >> NOTE: Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!). (CPANSec 2024)
 >
-> See also [Dependency (Direct)](#dependency-direct-).
+> See also: [Dependency (Direct)](#dependency-direct-).
 >
 > (Ref: [SCVS 2020](#references-and-terms), NTIA 2021, CPANSec 2024)
 

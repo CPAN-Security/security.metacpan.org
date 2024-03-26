@@ -33,6 +33,16 @@ toc: true
 >
 > (Ref: [SLSA 2023](#references-and-terms), CPANSec 2024)
 
+### Author
+
+> 1. An entity that creates an SBOM. When [author](#author) and [supplier](#supplier) are different, this indicates that one entity (the author) is making claims about components created or included by a different entity (the supplier). (NTIA 2021)
+> 2. A developer that publishes something as Open Source software. (CPANSec 2024)
+>
+> See also: [Author](sbom-supplychain#author)
+>
+> (Ref: [NTIA 2021](#references-and-terms), CPANSec 2024)
+
+
 ### Attestation
 
 > 1. An authenticated statement (metadata) about a software artifact or collection of software artifacts.
@@ -67,9 +77,11 @@ toc: true
 > We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec)
 
 > 1. Software or hardware intended for integration into an [electronic information system](#electronic-information-system). (CRA 2024-03)
-> 2. See also [Artifact](#artifact-).
+> 2. A unit of software defined by a supplier at the time the component is built, packaged, or delivered. Many components contain subcomponents. Examples of components include a software product, a device, a library, or a single file. (NTIA 2021)
 >
-> (Ref: [CRA 2024-03](#references-and-terms), CPANSec 2024)
+> See also [Artifact](#artifact-).
+>
+> (Ref: [CRA 2024-03](#references-and-terms), NTIA 2021, CPANSec 2024)
 
 #### Component function
 
@@ -100,6 +112,15 @@ toc: true
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
+### Consumer
+
+> 1. Entity that obtains SBOMs. (NTIA 2021)
+>     * An entity can be both a supplier and consumer, using components with SBOM data in its own software, which is then passed downstream.
+>     * An “end-user” consumer (that is not also a supplier) may also be called an operator or a leaf entity.
+>
+> (Ref: [NTIA 2021](#references-and-terms))
+
+
 ### CycloneDX ✍️
 
 > 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused.
@@ -108,15 +129,20 @@ toc: true
 
 ### Dependency ⚠️  ✍️
 
-> 1. [Artifact](#artifact) that is an input to a build process but that is not a source.
+> 1. An [Artifact](#artifact) that is an input to a build process but that is not a source. (SLSA 2023)
 >     * In the SLSA model, it is always a package.
 >     * E.g. an Alpine package ([package](#package---)) distributed on Alpine Linux ([platform](#platform)).
+> 2. Characterizing the relationship that an upstream component X is ~~included~~ in software Y. (NTIA 2021) ⚠️
 >
-> (Ref: [SLSA 2023](#references-and-terms))
+>> NOTE: Dependencies may be referenced, included, development/build/test/deploy/runtime phase-specific, dynamic, static, unresolved, resolved, direct or transitive. Yay! (CPANSec 2024)
+>
+> (Ref: [SLSA 2023](#references-and-terms), NTIA 2021, CPANSec 2024)
 
 #### Dependency (Direct) ✍️
 
-> 1. A software component that is referenced by a ~~program~~ [software](#software) itself.
+> 1. A software component that is referenced by a ~~program~~ [software](#software) itself. (SCVS 2020)
+>
+>> NOTE: A program, library, plugin, or component. (CPANSec 2024)
 >
 > For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive-).
 >
@@ -125,21 +151,31 @@ toc: true
 #### Dependency (Transitive) ✍️
 
 > 1. A software component that is indirectly used by a program by means of being a dependency of a dependency. (SCVS 2020)
->     * Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!). (CPANSec 2024)
-> 2. See also [Dependency (Direct)](#dependency-direct-).
+> 2. Characterizing the relationship that if an upstream component X is included in software Y and component Z is included in component X then component Z is included in software Y. (NTIA 2021)
 >
-> (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
+>> NOTE: Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!). (CPANSec 2024)
+>
+> See also [Dependency (Direct)](#dependency-direct-).
+>
+> (Ref: [SCVS 2020](#references-and-terms), NTIA 2021, CPANSec 2024)
 
 ### Distributor ⚠️
 
 > [!WARNING]
-> The Cyber Resilience Act defines a distributor as someone who **does not** change a package/component. This means if a distributor applies a patch, they should be treated as a [manufacturer](#manufacturer) or [Open-Source software steward](#open-source-software-steward-), including any consequences this may entail.
+> The Cyber Resilience Act defines a distributor as someone who **does not** change a package/component.
+> This means if a distributor applies a patch, they should be treated as a [manufacturer](#manufacturer) or [Open-Source software steward](#open-source-software-steward-), including any consequences this may entail.
 >
 > TODO: Check with lawyer after final version of CRA is adopted.
 
 > 1. Any natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the European Union market without affecting its properties. (CRA 2024-03)
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
+
+### Downstream
+
+> 1. Referring to how a component is subsequently used in other pieces of software at a later stage in the supply chain. (NTIA 2021)
+>
+> (Ref: [NTIA 2021](#references-and-terms))
 
 ### Electronic information system
 
@@ -153,11 +189,23 @@ toc: true
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
 
+### Lifecycle Phase
+
+> 1. The stage in the software lifecycle where an SBOM is generated (e.g. from source, at the time of build or packaging, or from a built executable). (NTIA 2021)
+>
+> (Ref: [NTIA 2021](#references-and-terms))
+
 ### Manufacturer
 
 > 1. Any natural or legal person who develops or manufactures products with digital elements or has products with digital elements designed, developed or manufactured, and markets them under his or her name or trademark, whether for payment, monetisation or free of charge.
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
+
+### Open-source software
+
+> 1. Software that can be accessed, used, modified, and shared by anyone. (NTIA 2021)
+>
+> (Ref: [NTIA 2021](#references-and-terms))
 
 ### Open-source software steward ⚠️
 
@@ -191,9 +239,10 @@ toc: true
 
 ### Pedigree
 
-> 1. Data which describes the lineage and/or process for which software has been created or altered.
+> 1. Data which describes the lineage and/or process for which software has been created or altered. (SCVS 2020)
+> 2. Data on the origins of components that have come together to make a piece of software and the process under which they came together. This could include data beyond the minimum elements, such as compiler details and settings. (NTIA 2021)
 >
-> (Ref: [SCVS 2020](#references-and-terms))
+> (Ref: [SCVS 2020](#references-and-terms), NTIA 2021)
 
 ### Point of origin ✍️
 
@@ -222,9 +271,10 @@ toc: true
 ### Provenance ✍️
 
 > 1. The [chain of custody](#chain-of-custody) and origin of a software component.
->     * Provenance incorporates the [point of origin](#point-of-origin-) through ~~distribution~~  [distributor](#distributor-) as well as derivatives in the case of software that has been modified.
+>     * Provenance incorporates the [point of origin](#point-of-origin-) through ~~distribution~~ [distributor](#distributor-) as well as derivatives in the case of software that has been modified. (SCVS 2020)
+> 2. Data about the chain of custody of the software and all of the constituent components, potentially including data about the authors and locations from where the components were obtained. (NTIA 2021)
 >
-> (Ref: [SCVS 2020](#references-and-terms))
+> (Ref: [SCVS 2020](#references-and-terms), NTIA 2021, CPANSec 2024)
 
 ### Remote Data Processing
 
@@ -241,8 +291,11 @@ toc: true
 
 > 1. A formal record containing details and supply chain relationships of components included in the software elements of a product with digital elements. (CRA 2024)
 > 2. A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software. (SCVS 2020)
+> 3. A formal record containing the details and supply chain relationships of various components used in building software. (NTIA 2021)
+>     * Software developers and vendors often create products by assembling existing open source and commercial software components.
+>     * The SBOM enumerates these components in a product.
 >
-> (Ref: [CRA 2024-03](#references-and-terms), SCVS 2020)
+> (Ref: [CRA 2024-03](#references-and-terms), SCVS 2020, NTIA 2021)
 
 ### SBOM Types
 
@@ -324,6 +377,16 @@ toc: true
 
 > See [Software Package Data Exchange (SPDX)](#software-package-data-exchange-spdx).
 
+### Supplier
+
+> 1. An entity that creates, defines, and identifies components and produces associated SBOMs. (NTIA 2021)
+>     * A supplier may also be known as a manufacturer, vendor, developer, integrator, maintainer, or provider.
+>     * Ideally, all suppliers are also authors of SBOMs for the suppliers’ components.
+>     * Most suppliers are also consumers.
+>     * A supplier with no included upstream components is a root entity.
+>
+> (Ref: [NTIA 2021](#references-and-terms))
+
 ### SWID (Software Identification)
 
 > See [Software Identification (SWID)](#software-identification-swid).
@@ -332,6 +395,10 @@ toc: true
 
 > See [Component, third-party](#component-third-party-).
 
+### Transitive Dependency
+
+> See [Dependecny (Transitive)](#dependency--transitive-)
+
 ### Vendor
 
 > See [Manufacturer](#manufacturer) or [Author](#author).
@@ -339,18 +406,18 @@ toc: true
 
 ## References and terms
 
-This glossary is partly based on
+This glossary is partly based on terms from the following sources.
 
 - (CISA 2023) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (Public Domain)
-- (CPANSec 2024) CPAN Security Group improvements marked with ✍️  (CC-BY-SA-4.0)
+- (CPANSec 2024) CPAN Security Group improvements and commentary, marked with ✍️ (CC-BY-SA-4.0)
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
 - (SLSA 2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)
 - (CRA 2024-03) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136), pages 136-146, published 2024-03-12.
 - (CPAN 2015) [CPAN Glossary](http://neilb.org/2015/09/05/cpan-glossary.html) by Neil Bowers, published 2015-09-05.
 - (SBOMit 2024) [SBOM on in-toto Terminology](https://github.com/SBOMit/specification/blob/main/specification.md#15-terminology)
-
+- (NTIA 2021) [NTIA The Minimum Elements for an SBOM, Glossary](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=25), pages 25-27, published 2021-07-12.
 
 ## Other supporting matter
 
-- (CRA 2023-12) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT), page 75, published 2023-12-20.
-- (CRA 2023-09) EU [Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/resource.html?uri=cellar:864f472b-34e9-11ed-9c68-01aa75ed71a1.0001.02/DOC_2&format=PDF), published 2023-09-15.
+- ~~(CRA 2023-12) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT), page 75, published 2023-12-20.~~
+- ~~(CRA 2023-09) EU [Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/resource.html?uri=cellar:864f472b-34e9-11ed-9c68-01aa75ed71a1.0001.02/DOC_2&format=PDF), published 2023-09-15.~~

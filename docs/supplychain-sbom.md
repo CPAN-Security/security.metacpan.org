@@ -292,6 +292,8 @@ Has the final say on the original contents of the package.
 The Author _can_ be a group of people, though a single point of responsibility is common.
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective; See below).
 
+* See also [Author](glossary#author) in the Glossary.
+
 | Field name                    | Required | Data type    | CycloneDX                                              | SPDX | Required by            |
 | :---------------------------- | :------- | :----------- | :----------------------------------------------------- | ---- | ---------------------- |
 | Component Name                | Yes      | Text         | bom.components[].name                                  |      | NTIA-SBOM, DE-TR.5.2.2 |

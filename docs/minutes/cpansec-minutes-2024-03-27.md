@@ -82,7 +82,7 @@ title: Minutes 2024-03-27
 
 ### Next meeting date, time and location
 
-*   Next meeting is March 10, 2024 at 17:00UTC in #cpan-security on TPRF Slack.
+*   Next meeting is April 10th 2024, 17:00 UTC in #cpan-security on TPRF Slack.
 
 ## 18:00 UTC – Meeting end
 

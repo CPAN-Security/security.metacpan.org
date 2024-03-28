@@ -44,7 +44,7 @@ This also applies to modules that are re-packaged for other native packaging eco
 2. Upstream placement in the [River of CPAN](https://neilb.org/2015/04/20/river-of-cpan.html) — An indication of this can be found on MetaCPAN's reverse dependency list ([example](https://metacpan.org/dist/Test-Simple/requires)).
 3. Bus-factor — How many active developers with indexing permissions exist? You can find this out on MetaCPAN ([example](https://metacpan.org/dist/Test-Simple) in left column).
 4. Advocacy visibility — Is the project (or one of it's reverse dependencies) actively mentioned in social media or common community channels?
-5. Funding options — Does the project offer low-effort ways for users to donate to it?E.g. [Ko-fi](https://ko-fi.com/) or [Paypal](https://www.paypal.com/donate/buttons) donation links, or maybe even ~~[Github Sponsors](https://github.com/sponsors)~~, or ~~[Tidelift](https://tidelift.com/)~~
+5. Funding options — Does the project offer low-effort ways for users to donate to it? E.g. [Ko-fi](https://ko-fi.com/) or [Paypal](https://www.paypal.com/donate/buttons) donation links, or maybe even ~~[Github Sponsors](https://github.com/sponsors)~~, or ~~[Tidelift](https://tidelift.com/)~~
 6. Collaboration metrics — Forum activity; Issue triage and responsiveness; Merge requests.
 
 

@@ -26,6 +26,7 @@ Please see our [CPAN Risk Assessment Guide](risk-assessment-guide.md).
 2. Consider availability for assisting when owner is looking for co-maintainer support, via the [NEEDHELP](https://metacpan.org/author/NEEDHELP) facility on PAUSE/CPAN
 3. Consider the availability for hand-off when owner is looking for someone to take over the distribution, via the [HANDOFF](https://metacpan.org/author/HANDOFF) facility on PAUSE/CPAN
 4. Look for funding options for the projects in question
+5. Update the required version for dependencies when included modules implement security fixes
 
 
 ## For CPAN ecosystems themselves, including PAUSE, MetaCPAN and any other supporting systems.

@@ -124,7 +124,7 @@ toc: true
 
 ### CycloneDX ✍️
 
-> 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused.
+> 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused. (SCVS 2020)
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 

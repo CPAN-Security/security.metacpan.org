@@ -237,12 +237,12 @@ Has the legal ownership rights and liabilities for the component.
 Is usually the [Author](#author), a business or some other type of legal entity.
 May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
 
-| Field name                             | Required   | Data type    | CycloneDX                                        | SPDX | Required by                       |
-| :------------------------------------- | :--------- | :----------- | ------------------------------------------------ | ---- | --------------------------------- |
-| Manufacturer, Supplier Name            | Yes        | Email, URL   | bom.metadata.supplier, bom.components[].supplier |      | CRA-AII.1, NTIA-SBOM, DE-TR.5.2.2 |
+| Field name                             | Required   | Data type    | CycloneDX                                        | SPDX | Required by                        |
+| :------------------------------------- | :--------- | :----------- | :----------------------------------------------- | ---- | :--------------------------------- |
+| Manufacturer, Supplier Name            | Yes        | Email, URL   | bom.metadata.supplier, bom.components[].supplier |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
 | SBOM Type                              | Yes        |              |                                                  |      | |
-| SBOM Author                            | Yes        | Text         |                                                  |      | NTIA-SBOM, DE-TR.5.2.1            |
-| SBOM Creation Time-stamp               | Yes        | DateTime     |                                                  |      | NTIA-SBOM, DE-TR.5.2.1            |
+| SBOM Author                            | Yes        | Text         |                                                  |      | NTIA-SBOM, DE-TR.5.2.1             |
+| SBOM Creation Time-stamp               | Yes        | DateTime     |                                                  |      | NTIA-SBOM, DE-TR.5.2.1             |
 
 * See also [Manufacturer](#manufacturer), [Open Source Steward](#open-source-steward).
 
@@ -265,9 +265,9 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 | Field name                    | Required | Data type    | CycloneDX | SPDX | Required by          |
 | :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-| CE Declaration                | No       | URL          |           |      | CRA-AII.7            |
-| CE Support End Date           | No       | URL          |           |      | CRA-AII.8            |
-| CE Instructions               | No       | URL          |           |      | CRA-AII.9            |
+| CE Declaration of Conformity  | No       | URL          |           |      | CRA-AII(6)           |
+| CE Support End Date           | No       | URL          |           |      | CRA-AII(7)           |
+| CE Instructions               | No       | URL          |           |      | CRA-AII(8)           |
 | CE Conformity Assessment Body | No       | URL          |           |      | CRA Article 47.1     |
 
 > [!NOTE]
@@ -299,9 +299,9 @@ If an Author has upstream (reverse) dependencies, the Author is also considered 
 | Component Name                | Yes      | Text         | bom.components[].name                                  |      | NTIA-SBOM, DE-TR.5.2.2 |
 | Version                       | Yes      | Text         | bom.components[].version                               |      | NTIA-SBOM, DE-TR.5.2.2 |
 | Dependencies                  | Yes      | List         | bom.dependencies[]                                     |      | NTIA-SBOM              |
-| Security contact              | Yes      | URL          | bom.components[].externalReferences[].security-contact |      | CRA-AII.2              |
-| Unique ID, Product ID         | Yes      | PURL         | bom.components[].purl                                  |      | CRA-AII.3, NTIA-SBOM   |
-| Purpose, Intended Use         | Yes      | Text         |                                                        |      | CRA-AII.4              |
+| Security contact              | Yes      | URL          | bom.components[].externalReferences[].security-contact |      | CRA-AII(2)             |
+| Unique ID, Product ID         | Yes      | PURL         | bom.components[].purl                                  |      | CRA-AII(3), NTIA-SBOM  |
+| Purpose, Intended Use         | Yes      | Text         |                                                        |      | CRA-AII(4)             |
 | Licenses                      | Yes      | SPDX License | bom.components[].licenses[]                            |      | |
 | Public Code Repository        | Yes      |              |                                                        |      | |
 | Code Commit Revision          | No       |              |                                                        |      | |
@@ -310,7 +310,7 @@ If an Author has upstream (reverse) dependencies, the Author is also considered 
 | SBOM Serial Number            | Yes      | UUID         | bom.metadata.serialNumber                              |      | |
 | SBOM Author                   | No       | Text         | bom.metadata.author                                    |      | NTIA-SBOM              |
 | SBOM Creation Time-stamp      | No       | DateTime     | bom.metadata.timestamp                                 |      | NTIA-SBOM              |
-| SBOM Location                 | No       | URL          |                                                        |      | CRA-AII.10             |
+| SBOM Location                 | No       | URL          |                                                        |      | CRA-AII(9)             |
 | SBOM Generation Tools         | No       | List         | bom.metadata.tools[]                                   |      | |
 | Vulnerable versions/locations | No       |              |                                                        |      | |
 
@@ -467,7 +467,7 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 # References
 
-* CRA-AII: [Cyber Resilience Act, Annex II](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=168), Draft dated 2023-12-20
+* CRA-AII: [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303), Dated 2024-03-12
 * NTIA-SBOM: [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
 * DE-TR: German Technical Requirement [TR-03183 Cyber Resilience Requirements for
 Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 1.1, published 2023-11-28.

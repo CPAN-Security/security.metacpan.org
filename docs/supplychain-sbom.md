@@ -23,7 +23,7 @@ In Open Source Software supply chains, we find people filling distinct roles tha
 
 With this diagram we'll attempt to offer an overview of these roles, how they are related, and what they do and care about.
 
-### SBOM Role activities
+### SBOM Author (Role) Activities
 
 - Any single person may have one or more roles, and switch between them as needed.
 - Each role cares about some specific SBOM metadata and their accompanying artifacts…
@@ -31,7 +31,7 @@ With this diagram we'll attempt to offer an overview of these roles, how they ar
     - 🟨 Assemble, update, annotate (Metadata is **Complete**)
     - 🟩 Index, curate, distribute (Metadata is made **Available**)
     - 🟦 Verify (Metadata is **Correct** or **Compliant**)
-
+- When a role interacts with an SBOM, we call them an SBOM Author.
 
 ```mermaid
 stateDiagram-v2
@@ -168,6 +168,10 @@ One or more developers that publish an Open Source component.
 * Publishes Open Source
 * May have a project development life-cycle
 
+### Open Source Steward Environment
+
+FIXME - take text from CRA.
+
 
 ## Integrator Environment
 
@@ -180,6 +184,7 @@ Management is expected to ensure that this assembled SBOM document describes the
 
 ### Manufacturer Environment
 
+* Used specifically in the context of the EU Cyber Resilience Act, to mean a commercial entity that places a product with digital elements on the EU market. FIXME
 * See [Integrator Environment](#integrator-environment).
 
 
@@ -204,17 +209,6 @@ A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#cur
 * May be Public or Private
 
 
-## Public Collaboration Ecosystem
-
-A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
-
-* Examples: Github, Codeberg, Bitbucket, Gitlab, Gitea and others.
-
-### Repository Ecosystem
-
-* See [Public Collaboration Ecosystem](#public-collaboration-ecosystem).
-
-
 ## Production Environment
 
 The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
@@ -228,7 +222,24 @@ The environment and systems where a product or service is executed by a customer
 * See also [Production Environment](#production-environment)
 
 
+## Public Collaboration Ecosystem
+
+A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
+
+* Examples: Github, Codeberg, Bitbucket, Gitlab, Gitea and others.
+
+### Repository Ecosystem
+
+* See [Public Collaboration Ecosystem](#public-collaboration-ecosystem).
+
+
+
 # Supply-chain Roles
+
+## SBOM Author
+
+Common for all roles, is that they care about some aspect of SBOMs.
+
 
 ## Owner
 
@@ -313,6 +324,10 @@ If an Author has upstream (reverse) dependencies, the Author is also considered 
 | SBOM Location                 | No       | URL          |                                                        |      | CRA-AII.10             |
 | SBOM Generation Tools         | No       | List         | bom.metadata.tools[]                                   |      | |
 | Vulnerable versions/locations | No       |              |                                                        |      | |
+
+### Author (SBOM)
+
+See [SBOM Author](#sbom-author)
 
 ### Custodian
 
@@ -418,6 +433,12 @@ A Developer that publishes their software as Open Source, is called an [Author](
 * See also [Author](#Author).
 
 
+## Publisher
+
+Operates within an [Integrator Environment](#integrator-environment) or a [Manufacturer Environment](#manufacturer-environment).
+Makes available a component or product on a market on behalf of the Integrator or Manufacturer.
+
+
 ## Vuln. Checker
 
 Vulnerability checker.
@@ -436,6 +457,7 @@ Communicates any issues or findings to any number of upstream roles, including t
 ### Scanner
 
 * See [checker](#checker).
+
 
 ## Consumer
 
@@ -457,12 +479,6 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 
 # Other terms
-
-## ~~Publisher~~
-
-~~Operates within an [Author Environment](#author-environment).~~
-~~Places the component on an ecosystem publishing platform, on behalf of the Author or Custodian.~~
-~~Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.~~
 
 
 # References

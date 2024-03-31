@@ -54,8 +54,23 @@ title: Minutes 2024-04-10
 9.  [CPANSec Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
     *   …
 
-### Ongoing vulnerabilities
+### Ongoing and updated vulnerabilities
 
+*   CVE-2013-4184
+*   CVE-2013-4407
+*   CVE-2013-7488
+*   CVE-2014-3230
+*   CVE-2018-25099
+*   CVE-2018-25100
+*   CVE-2019-6977
+*   CVE-2020-36827
+*   CVE-2021-47154
+*   CVE-2021-47155
+*   CVE-2021-47156
+*   CVE-2021-47157
+*   CVE-2022-48623
+*   CVE-2023-52431
+*   CVE-2024-29148
 *   …
 
 ### Operating changes

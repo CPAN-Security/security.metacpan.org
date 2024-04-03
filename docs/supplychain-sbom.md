@@ -6,7 +6,7 @@ toc: true
 mermaid: true
 ---
 
-# A Simplified Open Source Supply Chain with SBOMs
+# A Simplified Open-Source Supply Chain with SBOMs
 
 > [!CAUTION]
 > ## Document status: ⚠️  DRAFT
@@ -19,19 +19,19 @@ mermaid: true
 
 ## Roles in a supply chain
 
-In Open Source Software supply chains, we find people filling distinct roles that each care about some metadata or tasks in SBOMs.
+In [Open-Source Software](glossary.md#open-source-software) supply chains, we find people filling distinct roles that each care about some metadata or tasks in SBOMs.
 
 With this diagram we'll attempt to offer an overview of these roles, how they are related, and what they do and care about.
 
-### SBOM Role activities
+### SBOM Author (Role) Activities
 
 - Any single person may have one or more roles, and switch between them as needed.
 - Each role cares about some specific SBOM metadata and their accompanying artifacts…
     - 🟥 Create, define, sign (Metadata **Exists**)
-    - 🟨 Assemble, update, annotate (Metadata is **Complete**)
-    - 🟩 Index, curate, distribute (Metadata is made **Available**)
-    - 🟦 Verify (Metadata is **Correct** or **Compliant**)
-
+    - 🟨 Assemble, update, annotate (Metadata is **Current**)
+    - 🟩 Index, curate, distribute (Metadata is **Available** to others)
+    - 🟦 Verify (Metadata and Artifacts are **Complete**, **Correct** or **Compliant**)
+- When a role interacts with an SBOM, we call them an SBOM Author.
 
 ```mermaid
 stateDiagram-v2
@@ -39,17 +39,21 @@ stateDiagram-v2
     accTitle: An idealized Open Source supply chain
 
     %%
-    state "🟥 Owner\n🟨 Open Source Steward" as author_owner
+    state "🟦 Importer" as author_importer
+    state "🟥 Owner\n🟨 Open-Source Software Steward" as author_owner
     state "🟥🟨 Author\n🟨 Custodian" as author
     state "🟩 Distributor" as repository_distributor
+    state "🟦 Importer" as language_importer
     state "🟨🟦 Packager" as language_packager
     state "🟨 Curator" as language_curator
     state "🟩 Distributor" as language_distributor
     state "🟦 Contributor" as contributor
+    state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨 Packager" as package_packager
     state "🟨 Curator" as package_curator
     state "🟩 Distributor" as package_distributor
+    state "🟦 Importer" as integrator_importer
     state "🟥 Owner\n🟥 Manufacturer" as integrator_owner
     state "🟥🟨🟦 Developer" as integrator_developer
     state "🟩 Publisher" as integrator_publisher
@@ -68,17 +72,21 @@ stateDiagram-v2
     classDef verifiesSBOM stroke:#07f,stroke-width:3px;
 
     %% 
+    class author_importer verifiesSBOM
     class author_owner createsSBOM
     class manufacturer_owner createsSBOM
     class author assemblesSBOM
+    class package_importer verifiesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
     class package_curator distributesSBOM
     class package_distributor distributesSBOM
+    class language_importer verifiesSBOM
     class language_packager assemblesSBOM
     class language_curator distributesSBOM
     class language_distributor distributesSBOM
     class repository_distributor distributesSBOM
+    class integrator_importer verifiesSBOM
     class integrator_owner createsSBOM
     class integrator_developer assemblesSBOM
     class integrator_publisher distributesSBOM
@@ -89,7 +97,9 @@ stateDiagram-v2
     class auditor_external verifiesSBOM
 
     state "Author Environment" as ecosystem_author {
+        [*] --> author_importer
         [*] --> author
+        author_importer --> author
         author_owner --> author
         author       --> language_packager
     }
@@ -97,8 +107,11 @@ stateDiagram-v2
     [*] --> ecosystem_author
 
     state "Language Ecosystem" as ecosystem_lang {
-        [*] --> language_distributor
+        [*] --> language_importer
         [*] --> language_curator
+        [*] --> language_distributor
+        language_importer --> language_distributor
+        language_importer --> language_curator
         language_curator --> language_distributor
     }
 
@@ -116,8 +129,11 @@ stateDiagram-v2
     contributor            --> repository_distributor
 
     state "Package Ecosystem" as ecosystem_package {
-        [*] --> package_patcher
+        [*] --> package_importer
         [*] --> package_packager
+        [*] --> package_patcher
+        package_importer --> package_patcher
+        package_importer --> package_packager
         package_patcher  --> package_packager
         package_packager --> package_curator
         package_packager --> package_distributor
@@ -129,7 +145,9 @@ stateDiagram-v2
     ecosystem_package      --> ecosystem_package
 
     state "Integrator Environment" as ecosystem_integrator {
+        [*] --> integrator_importer
         [*] --> integrator_developer
+        integrator_importer  --> integrator_developer
         integrator_owner     --> integrator_developer
         integrator_builder   --> integrator_publisher
         integrator_developer --> integrator_checker
@@ -163,11 +181,10 @@ stateDiagram-v2
 
 ## Author Environment
 
-One or more developers that publish an Open Source component.
+One or more developers that publish an Open-Source component.
 
-* Publishes Open Source
+* Publishes [Open-Source Software](glossary.md#open-source-software)
 * May have a project development life-cycle
-
 
 ## Integrator Environment
 
@@ -175,11 +192,12 @@ A business or institution that is responsible for developing and building the ap
 Management is expected to ensure that this assembled SBOM document describes the application as required by law.
 
 * Operates commercially
-* May publish Open Source
+* May publish [Open-Source Software](glossary.md#open-source-software)
 * Has a project development life-cycle
 
 ### Manufacturer Environment
 
+* Used specifically in the context of the EU Cyber Resilience Act, to mean a commercial entity that places a product with digital elements on the EU market. FIXME
 * See [Integrator Environment](#integrator-environment).
 
 
@@ -204,17 +222,6 @@ A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#cur
 * May be Public or Private
 
 
-## Public Collaboration Ecosystem
-
-A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
-
-* Examples: Github, Codeberg, Bitbucket, Gitlab, Gitea and others.
-
-### Repository Ecosystem
-
-* See [Public Collaboration Ecosystem](#public-collaboration-ecosystem).
-
-
 ## Production Environment
 
 The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
@@ -228,7 +235,29 @@ The environment and systems where a product or service is executed by a customer
 * See also [Production Environment](#production-environment)
 
 
+## Public Collaboration Ecosystem
+
+A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
+
+* Examples: Github, Codeberg, Bitbucket, Gitlab, Gitea and others.
+
+### Repository Ecosystem
+
+* See [Public Collaboration Ecosystem](#public-collaboration-ecosystem).
+
+
+
 # Supply-chain Roles
+
+## SBOM Author
+
+Common for all roles, is that they care about some aspect of SBOMs.
+
+| Field name                             | Required   | Data type    | CycloneDX                                        | SPDX | Required by                       |
+| :------------------------------------- | :--------- | :----------- | ------------------------------------------------ | ---- | --------------------------------- |
+| SBOM Type                              | Yes        |              |                                                  |      | |
+| SBOM Author                            | Yes        | Text         |                                                  |      | NTIA-SBOM, DE-TR.5.2.1            |
+| SBOM Creation Time-stamp               | Yes        | DateTime     |                                                  |      | NTIA-SBOM, DE-TR.5.2.1            |
 
 ## Owner
 
@@ -240,21 +269,18 @@ May decide the name of the project and other project parameters for (or on behal
 | Field name                             | Required   | Data type    | CycloneDX                                        | SPDX | Required by                        |
 | :------------------------------------- | :--------- | :----------- | :----------------------------------------------- | ---- | :--------------------------------- |
 | Manufacturer, Supplier Name            | Yes        | Email, URL   | bom.metadata.supplier, bom.components[].supplier |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
-| SBOM Type                              | Yes        |              |                                                  |      | |
-| SBOM Author                            | Yes        | Text         |                                                  |      | NTIA-SBOM, DE-TR.5.2.1             |
-| SBOM Creation Time-stamp               | Yes        | DateTime     |                                                  |      | NTIA-SBOM, DE-TR.5.2.1             |
 
-* See also [Manufacturer](#manufacturer), [Open Source Steward](#open-source-steward).
+* See also [Manufacturer](#manufacturer), [Open-Source Software Steward](glossary.md#open-source-software-steward-) in the glossary.
 
-### Open Source Steward
+### Open-Source Software Steward
 
-Within an [Author Environment](#author-environment), has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
+Within an [Author Environment](#author-environment), has the duty to ensure that the obligations in the EU Cyber Resilience Act Articles 14, 15 and  are met.
 
 | Field name                                       | Required | Data type    | CycloneDX | SPDX | Required by                       |
 | :----------------------------------------------- | :------- | :----------- | --------- | ---- | --------------------------------- |
-| | | | | | Required by
+| | | | | | |
 
-* See also [Owner](#owner)
+* See also [Owner](#owner), [Open-Source Software Steward](glossary.md#open-source-software-steward-) in the glossary.
 
 ### Manufacturer
 
@@ -280,7 +306,7 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 Is a role within an [Integrator Environment](#integrator-environment).
 The term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
 
-* See also [Manufacturer](#manufacturer), [Owner](#owner).
+* See also [Manufacturer](#manufacturer), [Owner](#owner), [Supplier](glossary.md#supplier) in the glossary.
 
 
 ## Author
@@ -312,7 +338,6 @@ If an Author has upstream (reverse) dependencies, the Author is also considered 
 | SBOM Creation Time-stamp      | No       | DateTime     | bom.metadata.timestamp                                 |      | NTIA-SBOM              |
 | SBOM Location                 | No       | URL          |                                                        |      | CRA-AII(9)             |
 | SBOM Generation Tools         | No       | List         | bom.metadata.tools[]                                   |      | |
-| Vulnerable versions/locations | No       |              |                                                        |      | |
 
 ### Custodian
 
@@ -334,6 +359,19 @@ May also have additional roles, including being a downstream [Developer](#develo
 
 > [!NOTE]
 > Steward has a specific defined meaning in the Cyber Resilience Act, so it's better to avoid using the term.
+
+### Author (SBOM)
+
+See [SBOM Author](#sbom-author)
+
+
+## Importer
+
+May operate in any ecosystem or environment.
+A role specifically used when a EU entity makes available software on the EU market,
+Is required to verify that the imported software is compliant with the EU Cyber Resilience Act according to it's Article 19.
+
+See also [Importer](#glossary.md#importer) defenition in the glossary.
 
 
 ## Patcher
@@ -380,7 +418,6 @@ Operates within a [Production Environment](#production-environment).
 Final preparation and installation of the software into a CI/CD or [Production Environment](#production-environment).
 
 
-
 ## Curator
 
 Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
@@ -398,6 +435,7 @@ Concerns themselves with both the stability and predictability of components, an
 
 Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
 Ensures the availability of packages, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
+With regard to the EU Cyber Resilience Act Article 20, that the software is compliant with it's regulation.
 
 > [!NOTE]
 > * Distributors take packages that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or similar).
@@ -412,10 +450,17 @@ Ensures the availability of packages, that they are indexed correctly, and that 
 
 Operates within an [Integrator Environment](#integrator-environment).
 Uses packages and components as dependencies in their own project, product or component.
-A Developer is in many ways identical to an [Author](#author) from the upstream Author's perspective, with the main difference being that a Developer doesn't publish their work as Open Source.
-A Developer that publishes their software as Open Source, is called an [Author](#author).
+A Developer is in many ways identical to an [Author](#author) from the upstream Author's perspective, with the main difference being that a Developer doesn't publish their work as [Open-Source Software](glossary.md#open-source-software).
+A Developer that publishes their software as [Open-Source Software](glossary.md#open-source-software), is called an [Author](#author).
 
 * See also [Author](#Author).
+
+
+## Publisher
+
+Operates within an [Integrator Environment](#integrator-environment) or a [Manufacturer Environment](#manufacturer-environment).
+Makes available a component or product on a market on behalf of the Integrator or Manufacturer.
+With regard to the EU Cyber Resilience Act, a Publisher is the same as a [Distributor](#distributor).
 
 
 ## Vuln. Checker
@@ -437,6 +482,7 @@ Communicates any issues or findings to any number of upstream roles, including t
 
 * See [checker](#checker).
 
+
 ## Consumer
 
 The software in use, in production, by a user.
@@ -457,12 +503,6 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 
 # Other terms
-
-## ~~Publisher~~
-
-~~Operates within an [Author Environment](#author-environment).~~
-~~Places the component on an ecosystem publishing platform, on behalf of the Author or Custodian.~~
-~~Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.~~
 
 
 # References

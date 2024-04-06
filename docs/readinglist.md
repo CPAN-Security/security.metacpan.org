@@ -117,6 +117,8 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
         * Part II — Vulnerability handling requirements (pages 300-302)
 * In [CRA Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303)
     * Information and Instructions to the User (pages 303-305)
+* In [CRA, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314), Dated 2024-03-12
+    * Requirements to Technical Documentation content (pages 314-316)
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-european-cyber-resilience-act)
 
 #### EU and EEA – PLD

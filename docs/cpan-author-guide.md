@@ -1,11 +1,13 @@
 ----
 layout: page
 title: CPAN Author's Security Guide
+description: A security guide for CPAN Distribution Authors
 toc: true
 ----
 
+## Document status: ⚠️  DRAFT
+
 > [!CAUTION]
-> ## Document status: ⚠️  DRAFT
 > What you see here is a DRAFT of the `CPAN Author's Security Guide` by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are open to revision, deletion or amending – by you!
 >
@@ -34,11 +36,9 @@ toc: true
 
 * Add a co-maintainer in PAUSE
 
-
 ## Have a succession plan
 
 * Describe who among your co-maintainers will take over your project if you become unavailable
-
 
 ## Select an appropriate Open Source license
 
@@ -48,3 +48,10 @@ toc: true
 # Relevant documentation and guides
 
 * [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
+
+
+# About this document
+
+Version: 0.5.0
+License: CC-BY-SA-4.0
+Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.

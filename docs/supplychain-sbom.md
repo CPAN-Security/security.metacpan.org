@@ -1,55 +1,72 @@
 ---
 layout: page
-title: Supply-chain SBOM roles
-description: Roles in a supply-chain who care about SBOM metadata
+title: SBOM Roles in a supply-chain
+description: An overview of roles in a supply-chain who care about SBOM metadata
 toc: true
 mermaid: true
 ---
 
-# A Simplified Open Source Supply Chain with SBOMs
+## Document status: ⚠️  DRAFT
 
 > [!CAUTION]
-> ## Document status: ⚠️  DRAFT
 > What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/main/docs/supplychain-sbom.md](https://github.com/CPAN-Security/security.metacpan.org/tree/main/docs/supplychain-sbom.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 
+# SBOM Roles in a supply-chain
 
-## Roles in a supply chain
+In [Open-Source Software](glossary.md#open-source-software) supply chains, we find people filling distinct roles that each care about some metadata or tasks in SBOMs.
 
-In Open Source Software supply chains, we find people filling distinct roles that each care about some metadata or tasks in SBOMs.
+This document attempts to offer an overview of these roles, how they are related, and hat each role cares about.
 
-With this diagram we'll attempt to offer an overview of these roles, how they are related, and what they do and care about.
+## Supply-chain roles or SBOM Roles?
 
-### SBOM Role tasks
+- Any single person working within a supply-chain may have one or more roles, and switch between them as needed.
+- Each supply-chain role described in this document _MAY_ care about some specific SBOM metadata and their accompanying artifacts.
+- Each SBOM role described in this document _MUST_ also have a supply-chain role.
+- If a supply-chain role cares about some SBOM metadata, they have one or more of the following SBOM roles.
+    - When a supply-chain role creates or updates an SBOM, we call them an [SBOM Author](glossary#sbom-author--role-).
+    - When a supply-chain role distributes an SBOM, we call them an [SBOM Distributor](glossary#sbom-distributor--role-).
+    - When a supply-chain role consumes an SBOM, we call them an [SBOM Consumer](glossary#sbom-consumer--role-)
+- SBOM Authors may also be differentiated by the fact that they produce original (authoritative) metadata fields, or just assemble or update existing ones.
 
-- Any single person may have one or more roles, and switch between them as needed.
-- Each role cares about some specific SBOM metadata and their accompanying artifacts…
-    - 🟥 Metadata **Exists** (created, signed)
-    - 🟨 Metadata is **Complete** (assembled, updated, annotated)
-    - 🟩 Metadata is made **Available** (indexed, curated, distributed)
-    - 🟦 Metadata is **Correct** (verified, compliant)
 
+### Legend
+
+The color-coding is used in this document to help illustrate different SBOM activities.
+
+> [!NOTE]
+> * 🟥 Create, define, sign SBOM metadata — **SBOM Author** makes sure it and related artifacts **Exist**.
+> * 🟨 Assemble, update, annotate SBOM metadata — **SBOM Author** makes sure it and related artifacts are **Current**.
+> * 🟩 Distribute, curate, index SBOM metadata — **SBOM Distributor** makes sure it and related artifacts are made **Available** to others.
+> * 🟦 Consume, verify SBOM metadata — **SBOM Consumer** makes sure it and related artifacts are **Complete**, **Correct** or **Compliant**.
+
+
+# An idealized Open Source supply-chain graph
 
 ```mermaid
 stateDiagram-v2
     direction TB
-    accTitle: An idealized Open Source supply chain
+    accTitle: An idealized Open Source supply-chain graph
 
     %%
-    state "🟥 Owner\n🟨 Open Source Steward" as author_owner
+    state "🟦 Importer" as author_importer
+    state "🟥 Owner\n🟨 Open-Source Software Steward" as author_owner
     state "🟥🟨 Author\n🟨 Custodian" as author
     state "🟩 Distributor" as repository_distributor
+    state "🟦 Importer" as language_importer
     state "🟨🟦 Packager" as language_packager
     state "🟨 Curator" as language_curator
     state "🟩 Distributor" as language_distributor
     state "🟦 Contributor" as contributor
+    state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨 Packager" as package_packager
     state "🟨 Curator" as package_curator
     state "🟩 Distributor" as package_distributor
+    state "🟦 Importer" as integrator_importer
     state "🟥 Owner\n🟥 Manufacturer" as integrator_owner
     state "🟥🟨🟦 Developer" as integrator_developer
     state "🟩 Publisher" as integrator_publisher
@@ -68,17 +85,21 @@ stateDiagram-v2
     classDef verifiesSBOM stroke:#07f,stroke-width:3px;
 
     %% 
+    class author_importer verifiesSBOM
     class author_owner createsSBOM
     class manufacturer_owner createsSBOM
     class author assemblesSBOM
+    class package_importer verifiesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
     class package_curator distributesSBOM
     class package_distributor distributesSBOM
+    class language_importer verifiesSBOM
     class language_packager assemblesSBOM
     class language_curator distributesSBOM
     class language_distributor distributesSBOM
     class repository_distributor distributesSBOM
+    class integrator_importer verifiesSBOM
     class integrator_owner createsSBOM
     class integrator_developer assemblesSBOM
     class integrator_publisher distributesSBOM
@@ -89,7 +110,9 @@ stateDiagram-v2
     class auditor_external verifiesSBOM
 
     state "Author Environment" as ecosystem_author {
+        [*] --> author_importer
         [*] --> author
+        author_importer --> author
         author_owner --> author
         author       --> language_packager
     }
@@ -97,8 +120,11 @@ stateDiagram-v2
     [*] --> ecosystem_author
 
     state "Language Ecosystem" as ecosystem_lang {
-        [*] --> language_distributor
+        [*] --> language_importer
         [*] --> language_curator
+        [*] --> language_distributor
+        language_importer --> language_distributor
+        language_importer --> language_curator
         language_curator --> language_distributor
     }
 
@@ -116,8 +142,11 @@ stateDiagram-v2
     contributor            --> repository_distributor
 
     state "Package Ecosystem" as ecosystem_package {
-        [*] --> package_patcher
+        [*] --> package_importer
         [*] --> package_packager
+        [*] --> package_patcher
+        package_importer --> package_patcher
+        package_importer --> package_packager
         package_patcher  --> package_packager
         package_packager --> package_curator
         package_packager --> package_distributor
@@ -129,7 +158,9 @@ stateDiagram-v2
     ecosystem_package      --> ecosystem_package
 
     state "Integrator Environment" as ecosystem_integrator {
+        [*] --> integrator_importer
         [*] --> integrator_developer
+        integrator_importer  --> integrator_developer
         integrator_owner     --> integrator_developer
         integrator_builder   --> integrator_publisher
         integrator_developer --> integrator_checker
@@ -154,17 +185,51 @@ stateDiagram-v2
 
     deployer --> consumer
     deployer --> auditor_external
+
+    %% Copyright 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
+
+# Supply-chain Roles
+
+## SBOM Author
+
+SBOM Author roles care about metadata fields as laid out in the different supply-chain roles below. In addition to these fields, they care about the following common ones.
+
+| Do | Field name                             | Required   | Data type    | CycloneDX                                        | SPDX | Required by                       |
+| -- | :------------------------------------- | :--------- | :----------- | ------------------------------------------------ | ---- | --------------------------------- |
+| 🟥 | SBOM Type                              | Yes        |              |                                                  |      |                                   |
+| 🟥 | SBOM Author                            | Yes        | Text         |                                                  |      | NTIA-SBOM, DE-TR.5.2.1            |
+| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     |                                                  |      | NTIA-SBOM, DE-TR.5.2.1            |
+| 🟥 | SBOM Generation Tool                   | No         | List         | $.metadata.tools[]                               |      |                                   |
+| 🟥 | CycloneDX bomFormat                    | Yes        | Enum         | $.properties.bomFormat                           |      | CycloneDX                         |
+| 🟥 | CycloneDX specVersion                  | Yes        | Int          | $.properties.specVersion                         |      | CycloneDX                         |
+
+
+## SBOM Distributor
+
+SBOM Distributor roles don't have any specific metadata fields that are commonly used across the different supply-chain distributor roles.
+
+> [!NOTE]
+> FIXME – Check if the above is correct
+
+
+## SBOM Consumer
+
+SBOM Consumer roles don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles.
+
+> [!NOTE]
+> FIXME – Check if the above is correct
+
 
 # Supply-chain Ecosystems and Environments
 
 ## Author Environment
 
-One or more developers that publish an Open Source component.
+One or more developers that publish an Open-Source component.
 
-* Publishes Open Source
+* Publishes [Open-Source Software](glossary.md#open-source-software)
 * May have a project development life-cycle
-
 
 ## Integrator Environment
 
@@ -172,11 +237,12 @@ A business or institution that is responsible for developing and building the ap
 Management is expected to ensure that this assembled SBOM document describes the application as required by law.
 
 * Operates commercially
-* May publish Open Source
+* May publish [Open-Source Software](glossary.md#open-source-software)
 * Has a project development life-cycle
 
 ### Manufacturer Environment
 
+* Used specifically in the context of the EU Cyber Resilience Act, to mean a commercial entity that places a product with digital elements on the EU market. FIXME
 * See [Integrator Environment](#integrator-environment).
 
 
@@ -201,17 +267,6 @@ A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#cur
 * May be Public or Private
 
 
-## Public Collaboration Ecosystem
-
-A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
-
-* Examples: Github, Codeberg, Bitbucket, Gitlab, Gitea and others.
-
-### Repository Ecosystem
-
-* See [Public Collaboration Ecosystem](#public-collaboration-ecosystem).
-
-
 ## Production Environment
 
 The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
@@ -225,7 +280,19 @@ The environment and systems where a product or service is executed by a customer
 * See also [Production Environment](#production-environment)
 
 
-# Supply-chain Roles
+## Public Collaboration Ecosystem
+
+A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
+
+* Examples: Github, Codeberg, Bitbucket, Gitlab, Gitea and others.
+
+### Repository Ecosystem
+
+* See [Public Collaboration Ecosystem](#public-collaboration-ecosystem).
+
+
+
+# Supply-chain roles and metadata
 
 ## Owner
 
@@ -234,24 +301,24 @@ Has the legal ownership rights and liabilities for the component.
 Is usually the [Author](#author), a business or some other type of legal entity.
 May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
 
-| Field name                             | Required   | Data type    | CycloneDX | SPDX | Legislation                       |
-| :------------------------------------- | :--------- | :----------- | --------- | ---- | --------------------------------- |
-| Manufacturer, Supplier Name            | Yes        | Email, URL   |           |      | CRA-AII.1, NTIA-SBOM, DE-TR.5.2.2 |
-| SBOM Type                              | Yes        |              |           |      | |
-| SBOM Author                            | Yes        | Text         |           |      | NTIA-SBOM, DE-TR.5.2.1            |
-| SBOM Creation Time-stamp               | Yes        | DateTime     |           |      | NTIA-SBOM, DE-TR.5.2.1            |
+| Do | Field name                             | Required   | Data type    | CycloneDX                                        | SPDX | Required by                        |
+| -- | :------------------------------------- | :--------- | :----------- | :----------------------------------------------- | ---- | :--------------------------------- |
+| 🟥 | Manufacturer (Supplier) Name           | Yes        | Text, URL    | $.metadata.supplier, $.components[].supplier     |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
 
-* See also [Manufacturer](#manufacturer), [Open Source Steward](#open-source-steward).
+* See also [Manufacturer](#manufacturer), [Open-Source Software Steward](glossary.md#open-source-software-steward-) in the glossary.
 
-### Open Source Steward
+### Open-Source Software Steward
 
-Within an [Author Environment](#author-environment), has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
+Within an [Author Environment](#author-environment), has the duty to ensure that the obligations in the EU Cyber Resilience Act Articles 14, 15 and  are met.
 
-| Field name                                       | Required | Data type    | CycloneDX | SPDX | Legislation                       |
-| :----------------------------------------------- | :------- | :----------- | --------- | ---- | --------------------------------- |
-| | | | | | |
+| Do | Field name                     | Required | Data type    | CycloneDX                                              | SPDX | Required by           |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+| 🟦 |                                |          |              |                                                        |      |                       |
 
-* See also [Owner](#owner)
+> [!NOTE]
+> FIXME – Not done
+
+* See also [Owner](#owner), [Open-Source Software Steward](glossary.md#open-source-software-steward-) in the glossary.
 
 ### Manufacturer
 
@@ -260,12 +327,12 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 * See also [Owner](#owner)
 
-| Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
-| :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-| CE Declaration                | No       | URL          |           |      | CRA-AII.7            |
-| CE Support End Date           | No       | URL          |           |      | CRA-AII.8            |
-| CE Instructions               | No       | URL          |           |      | CRA-AII.9            |
-| CE Conformity Assessment Body | No       | URL          |           |      | CRA Article 47.1     |
+| Do | Field name                      | Required | Data type    | CycloneDX         | SPDX | Required by          |
+| -- | :------------------------------ | :------- | :----------- | :---------------- | ---- | -------------------- |
+| 🟥 | CE Declaration of Conformity    | No       | URL          |                   |      | CRA-AII(6)           |
+| 🟥 | CE Support End Date             | No       | URL          |                   |      | CRA-AII(7)           |
+| 🟥 | CE Technical Documentation      | Yes      | URL          |                   |      | CRA-AII(8), CRA-AVII |
+| 🟥 | CE Conformity Assessment Body   | No       | URL          |                   |      | CRA Article 47.1     |
 
 > [!NOTE]
 > Manufacturer has a specific defined meaning in the Cyber Resilience Act, so until this definition is established, be careful when using the term.
@@ -277,7 +344,7 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 Is a role within an [Integrator Environment](#integrator-environment).
 The term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
 
-* See also [Manufacturer](#manufacturer), [Owner](#owner).
+* See also [Manufacturer](#manufacturer), [Owner](#owner), [Open-Source Software Steward](#open-source-software-steward), [Supplier](glossary.md#supplier) in the glossary.
 
 
 ## Author
@@ -288,25 +355,27 @@ Typically works on all aspects of the code, including features, bug fixes, tests
 Has the final say on the original contents of the package.
 The Author _can_ be a group of people, though a single point of responsibility is common.
 If an Author has upstream (reverse) dependencies, the Author is also considered to be a Developer (as seen from the upstream Author's perspective; See below).
+Not to be confused with the [SBOM Author](#sbom-author--role-) role.
 
-| Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation            |
-| :---------------------------- | :------- | :----------- | --------- | ---- | ---------------------- |
-| Component Name                | Yes      | Text         |           |      | NTIA-SBOM, DE-TR.5.2.2 |
-| Version                       | Yes      | Text         |           |      | NTIA-SBOM, DE-TR.5.2.2 |
-| Dependencies                  | Yes      | List         |           |      | NTIA-SBOM              |
-| Security contact              | Yes      | URL          |           |      | CRA-AII.2              |
-| Unique ID, Product ID         | Yes      | PURL         |           |      | CRA-AII.3, NTIA-SBOM   |
-| Purpose, Intended Use         | Yes      | Text         |           |      | CRA-AII.4              |
-| Licenses                      | Yes      | SPDX License |           |      | |
-| Public Code Repository        | Yes      |              |           |      | |
-| Code Commit Revision          | No       |              |           |      | |
-| Code Repository               | Yes      |              |           |      | |
-| CE Declaration                | No       | URL          |           |      | CRA-AII.7              |
-| SBOM Type                     | Yes      |              |           |      | |
-| SBOM Author                   | No       | Text         |           |      | NTIA-SBOM              |
-| SBOM Creation Time-stamp      | No       | DateTime     |           |      | NTIA-SBOM              |
-| SBOM Location                 | No       | URL          |           |      | CRA-AII.10             |
-| Vulnerable versions/locations | No       |              |           |      | |
+* See also [Author](glossary#author) in the Glossary.
+
+| Do | Field name                     | Required | Data type    | CycloneDX                                              | SPDX | Required by            |
+| -- | :----------------------------- | :------- | :----------- | :----------------------------------------------------- | ---- | ---------------------- |
+| 🟥 | Component Name                 | Yes      | Text         | $.components[].name                                    |      | NTIA-SBOM, DE-TR.5.2.2 |
+| 🟥 | Version                        | Yes      | Text         | $.components[].version                                 |      | NTIA-SBOM, DE-TR.5.2.2 |
+| 🟥 | Dependencies                   | Yes      | List         | $.dependencies[]                                       |      | CRA-AII(5), NTIA-SBOM  |
+| 🟨 | Security contact               | Yes      | URL          | $.components[].externalReferences[].security-contact   |      | CRA-AII(2)             |
+| 🟥 | Unique ID, Product ID          | Yes      | PURL         | $.components[].purl                                    |      | CRA-AII(3), NTIA-SBOM  |
+| 🟥 | Purpose, Intended Use          | Yes      | Text         |                                                        |      | CRA-AII(4)             |
+| 🟨 | Licenses                       | Yes      | SPDX License | $.components[].licenses[]                              |      |                        |
+| 🟨 | Public Code Repository         | Yes      |              |                                                        |      |                        |
+| 🟥 | Code Commit Revision           | No       |              |                                                        |      |                        |
+| 🟨 | Code Repository                | Yes      |              | $.components[].externalReferences[].vcs                |      |                        |
+| 🟨 | SBOM Type                      | Yes      |              |                                                        |      |                        |
+| 🟥 | SBOM Serial Number             | Yes      | UUID         | $.metadata.serialNumber                                |      |                        |
+| 🟥 | SBOM Author                    | No       | Text         | $.metadata.author                                      |      | NTIA-SBOM              |
+| 🟥 | SBOM Creation Time-stamp       | No       | DateTime     | $.metadata.timestamp                                   |      | NTIA-SBOM              |
+| 🟨 | SBOM Location                  | No       | URL          |                                                        |      | CRA-AII(9)             |
 
 ### Custodian
 
@@ -329,6 +398,31 @@ May also have additional roles, including being a downstream [Developer](#develo
 > [!NOTE]
 > Steward has a specific defined meaning in the Cyber Resilience Act, so it's better to avoid using the term.
 
+### Author (SBOM)
+
+See [SBOM Author](#sbom-author)
+
+
+## Importer
+
+May operate in any ecosystem or environment.
+A role specifically used when a EU entity makes available software on the EU market,
+Is required to verify that the imported software is compliant with the EU Cyber Resilience Act according to it's Article 19.
+
+See also [Importer](#glossary.md#importer) definition in the glossary.
+
+| Do | Field name                      | Required | Data type    | CycloneDX                                              | SPDX | Required by           |
+| -- | :------------------------------ | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+| 🟦 | Security contact                | Yes      | URL          | $.components[].externalReferences[].security-contact   |      | CRA-AII(2)            |
+| 🟦 | Unique ID, Product ID           | Yes      | PURL         | $.components[].purl                                    |      | CRA-AII(3), NTIA-SBOM |
+| 🟦 | Purpose, Intended Use           | Yes      | Text         |                                                        |      | CRA-AII(4)            |
+| 🟦 | SBOM Location                   | No       | URL          |                                                        |      | CRA-AII(9)            |
+| 🟦 | CE Declaration of Conformity    | No       | URL          |                                                        |      | CRA-AII(6)            |
+| 🟦 | CE Support End Date             | No       | URL          |                                                        |      | CRA-AII(7)            |
+| 🟦 | CE Instructions (Documentation) | No       | URL          |                                                        |      | CRA-AII(8)            |
+| 🟦 | CE Conformity Assessment Body   | No       | URL          |                                                        |      | CRA Article 47.1      |
+| 🟦 | Download location               | Yes      |              |                                                        |      |                       |
+
 
 ## Patcher
 
@@ -346,6 +440,12 @@ This role is necessary when...
 > * These patches may include back-ports of features, security fixes or other accommodations necessary for distributing multiple releases of the same upstream project, but within publishing constraints decided by the Curator of the Ecosystem (e.g. LTS releases, support contracts, etc.).
 > * A Packager can both be found in-house (e.g. a business who uses a company-internal package mirror), for a Package Ecosystem provider (e.g. Debian), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
+| Do | Field name                     | Required | Data type    | CycloneDX                                              | SPDX | Required by           |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+| 🟥 |                                |          |              |                                                        |      |                       |
+
+> [!WARNING]
+> FIXME – Not done
 
 ## Builder
 
@@ -368,11 +468,22 @@ Concerns themselves with correct package format and structure, and that package 
 >     * Language-specific packages distributed by a Language Ecosystem (e.g. CPAN).
 > * E.g. someone in the #debian-perl group downloads, builds, tests and installs something from CPAN, but instead of doing a regular install, they us tooling like `dh-make-perl` to produce a custom installation directory that can be incorporated into a .deb archive.
 
+| Do | Field name                     | Required | Data type    | CycloneDX                                              | SPDX | Required by           |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+| 🟨 | Dependencies                   | Yes      |              |                                                        |      |                       |
+
+
 ### Deployer
 
 Operates within a [Production Environment](#production-environment).
 Final preparation and installation of the software into a CI/CD or [Production Environment](#production-environment).
 
+| Do | Field name                     | Required | Data type    | CycloneDX                                              | SPDX | Required by           |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+| 🟥 |                                |          |              |                                                        |      |                       |
+
+> [!WARNING]
+> FIXME – Not done
 
 
 ## Curator
@@ -387,6 +498,13 @@ Concerns themselves with both the stability and predictability of components, an
 > * Curators may operate both in-house, in order to keep an eye on what is being automatically installed there, or they may make the decisions that happen on the Package or Language Ecosystem provider side.
 > * Typically, a curator may consider LTS status, support contract terms or other reasons for distributing a package.
 
+| Do | Field name                     | Required | Data type    | CycloneDX                                              | SPDX | Required by           |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+| 🟥 |                                |          |              |                                                        |      |                       |
+
+> [!WARNING]
+> FIXME – Not done
+
 
 ## Distributor
 
@@ -395,21 +513,50 @@ Ensures the availability of packages, that they are indexed correctly, and that 
 
 > [!NOTE]
 > * Distributors take packages that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or similar).
-> If SBOM metadata is expected to accompany the packages in question, the Distributor makes sure this happens.
+> * If SBOM metadata is expected to accompany the packages in question, the Distributor makes sure this happens.
+> * Distributors have additional requirements and considerations laid out in CISA-2024.
+> * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
 
-| Field name                    | Required | Data type    | CycloneDX | SPDX | Legislation          |
-| :---------------------------- | :------- | :----------- | --------- | ---- | -------------------- |
-| Download location             | Yes      |              |           |      |                      |
+* See also
+    * [CISA SBOM Sharing Roles and Considerations](#references) (CISA-2024)
+    * [CRA Article 20](#references) (CRA-Art-20)
+
+| Do | Field name                     | Required | Data type    | CycloneDX                                              | SPDX | Required by           |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+| 🟥 |                                |          |              |                                                        |      |                       |
+
+> [!WARNING]
+> FIXME – Not done
 
 
 ## Developer
 
 Operates within an [Integrator Environment](#integrator-environment).
 Uses packages and components as dependencies in their own project, product or component.
-A Developer is in many ways identical to an [Author](#author) from the upstream Author's perspective, with the main difference being that a Developer doesn't publish their work as Open Source.
-A Developer that publishes their software as Open Source, is called an [Author](#author).
+A Developer is in many ways identical to an [Author](#author) from the upstream Author's perspective, with the main difference being that a Developer doesn't publish their work as [Open-Source Software](glossary.md#open-source-software).
+A Developer that publishes their software as [Open-Source Software](glossary.md#open-source-software), is called an [Author](#author).
 
 * See also [Author](#Author).
+
+| Do | Field name                     | Required | Data type    | CycloneDX                                              | SPDX | Required by           |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+|    |                                |          |              |                                                        |      |                       |
+
+> [!WARNING]
+> FIXME – Not done
+
+### Integrator
+
+Used in the EU Cyber Resilience Act.
+
+* See [Developer](#developer).
+
+
+## Publisher
+
+Operates within an [Integrator Environment](#integrator-environment) or a [Manufacturer Environment](#manufacturer-environment).
+Makes available a component or product on a market on behalf of the Integrator or Manufacturer.
+With regard to the EU Cyber Resilience Act, a Publisher is the same as a [Distributor](#distributor).
 
 
 ## Vuln. Checker
@@ -418,6 +565,14 @@ Vulnerability checker.
 May operate within a [Production Environment](#production-environment) or an [Integrator Environment](#integrator-environment).
 Responsible for security checks, including runtime, dynamic and static checks, vulnerability monitoring, etc.
 Communicates any issues or findings to any number of upstream roles, including the component [Deployer](#deployer), [Developer](#developer) or [Author](#author).
+
+| Do | Field name                     | Required | Data type    | CycloneDX                                              | SPDX | Required by           |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+|    |                                |          |              |                                                        |      |                       |
+
+> [!WARNING]
+> FIXME – Not done
+
 
 ### SecOps
 
@@ -430,6 +585,7 @@ Communicates any issues or findings to any number of upstream roles, including t
 ### Scanner
 
 * See [checker](#checker).
+
 
 ## Consumer
 
@@ -444,6 +600,18 @@ The software in use, in production, by a user.
 
 Verifies that all necessary metadata is available, up-to-date and made use of.
 
+| Do | Field name                     | Required | Data type    | CycloneDX                                              | SPDX | Required by           |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+| 🟦 | Security contact               | Yes      | URL          | $.components[].externalReferences[].security-contact   |      | CRA-AII(2)            |
+| 🟦 | Unique ID, Product ID          | Yes      | PURL         | $.components[].purl                                    |      | CRA-AII(3), NTIA-SBOM |
+| 🟦 | Purpose, Intended Use          | Yes      | Text         |                                                        |      | CRA-AII(4)            |
+| 🟦 | SBOM Location                  | No       | URL          |                                                        |      | CRA-AII(9)            |
+| 🟦 | CE Declaration of Conformity   | No       | URL          |                                                        |      | CRA-AII(6)            |
+| 🟦 | CE Support End Date            | No       | URL          |                                                        |      | CRA-AII(7)            |
+| 🟦 | CE Instructions                | No       | URL          |                                                        |      | CRA-AII(8)            |
+| 🟦 | CE Conformity Assessment Body  | No       | URL          |                                                        |      | CRA-Art-47(1)         |
+| 🟦 | Download location              | Yes      |              |                                                        |      |                       |
+
 
 ### Compliance
 
@@ -452,23 +620,24 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 # Other terms
 
-## ~~Publisher~~
-
-~~Operates within an [Author Environment](#author-environment).~~
-~~Places the component on an ecosystem publishing platform, on behalf of the Author or Custodian.~~
-~~Typically this role is done by the same people, but in some cases a separate account may be used; e.g. a business or organization account.~~
-
 
 # References
 
-* CRA-AII: [Cyber Resilience Act, Annex II](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=168), Draft dated 2023-12-20
-* NTIA-SBOM: [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
-* DE-TR: German Technical Requirement [TR-03183 Cyber Resilience Requirements for
+* (CRA-AII) [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303), Dated 2024-03-12
+* (CRA-AVII) [Cyber Resilience Act, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314), Dated 2024-03-12
+* (CRA-Art-20) [Cyber Resilience Act, Article 20](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314), Dated 2024-03-12
+* (CRA-Art-47) [Cyber Resilience Act, Article 47](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314), Dated 2024-03-12
+
+* (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
+* (DE-TR) German Technical Requirement [TR-03183 Cyber Resilience Requirements for
 Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 1.1, published 2023-11-28.
+* (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28.
 
 
-# License
+# About this document
 
-This document is © Salve J. Nilsen <sjn@cpan.org>.
-Some rights reserved.
+Version: 0.5.0
+License: CC-BY-SA-4.0
+Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
+
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.

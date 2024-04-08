@@ -1,0 +1,5 @@
+# For explanation of this file, see https://securitytxt.org/
+Contact: mailto:cpan-security@perl.org
+Expires: 2026-12-31T22:59:00.000Z
+Preferred-Languages: en
+Canonical: https://security.metacpan.org/.well-known/security.txt

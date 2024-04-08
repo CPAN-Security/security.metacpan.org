@@ -9,7 +9,7 @@ toc: true
 > What you see here is a DRAFT of the `CPAN Author's Security Guide` by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md](https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/cpan-author-guide.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/cpan-author-guide.md](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/cpan-author-guide.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 
 ## Learn the basics
@@ -26,10 +26,23 @@ toc: true
 * Add a [security.txt](https://securitytxt.org/) file to your project website
 * Add a [security policy](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository#adding-a-security-policy-to-your-repository) to your Github project
 
-
 ## Add security tests to your code
 
 * Add [tests for taintedness](https://metacpan.org/pod/Test::Taint) to your codebase
+
+## Ensure you have trusted co-maintainers
+
+* Add a co-maintainer in PAUSE
+
+
+## Have a succession plan
+
+* Describe who among your co-maintainers will take over your project if you become unavailable
+
+
+## Select an appropriate Open Source license
+
+* Pick an OSI-approved Open Source license, and add it both to your project repo and other metadata.
 
 
 # Relevant documentation and guides

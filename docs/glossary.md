@@ -5,16 +5,18 @@ description: List of terms used throughout CPANSec projects
 toc: true
 ---
 
+## Document status: ⚠️  DRAFT
+
 > [!CAUTION]
-> ## Document status: ⚠️  DRAFT
 > What you see here is a DRAFT of the Glossary used by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md](https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 
+### Legend
+
 > [!NOTE]
-> ### Legend
 > * ⚠️  — The definition has problems or errors or may be confusing, and therefore requires correction or additional explanation.
 > * ✍️  — Changes have been made to the original definition, mostly for clarity or consistency.
 
@@ -39,7 +41,7 @@ toc: true
 > 1. An entity that creates an SBOM. When [author](#author) and [supplier](#supplier) are different, this indicates that one entity (the author) is making claims about components created or included by a different entity (the supplier). (NTIA 2021)
 > 2. A developer that publishes something as Open Source software. (CPANSec 2024)
 >
-> See also: [Author](supplychain-sbom#author) in the Supplychain SBOM Roles document.
+> See also: [Author](supplychain-sbom#author) in the Supply-chain SBOM Roles document.
 >
 > (Ref: [NTIA 2021](#references-and-terms), CPANSec 2024)
 
@@ -78,7 +80,7 @@ toc: true
 > We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec)
 
 > 1. Software or hardware intended for integration into an [electronic information system](#electronic-information-system). (CRA 2024-03)
-> 2. A unit of software defined by a supplier at the time the component is built, packaged, or delivered. Many components contain subcomponents. Examples of components include a software product, a device, a library, or a single file. (NTIA 2021)
+> 2. A unit of software defined by a supplier at the time the component is built, packaged, or delivered. Many components contain sub-components. Examples of components include a software product, a device, a library, or a single file. (NTIA 2021)
 >
 > See also: [Artifact](#artifact-).
 >
@@ -124,7 +126,7 @@ toc: true
 
 ### CycloneDX ✍️
 
-> 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused.
+> 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused. (SCVS 2020)
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
@@ -163,12 +165,12 @@ toc: true
 ### Distributor ⚠️
 
 > [!WARNING]
-> The Cyber Resilience Act defines a distributor as someone who **does not** change a package/component.
-> This means if a distributor applies a patch, they should be treated as a [manufacturer](#manufacturer) or [Open-Source software steward](#open-source-software-steward-), including any consequences this may entail.
+> The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
+> This means if an [Importer](#importer) or distributor applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail. (CRA 2024-03 Article 21, 22)
 >
-> TODO: Check with lawyer after final version of CRA is adopted.
+> TODO: Confirm with lawyer after final version of CRA is adopted.
 
-> 1. Any natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the European Union market without affecting its properties. (CRA 2024-03)
+> 1. A natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the Union market without affecting its properties. (2024-03)
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
 
@@ -190,11 +192,23 @@ toc: true
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
 
-### Lifecycle Phase
+### Importer
 
-> 1. The stage in the software lifecycle where an SBOM is generated (e.g. from source, at the time of build or packaging, or from a built executable). (NTIA 2021)
+> 1. A natural or legal person established in the Union who places on the market a product with digital elements that bears the name or trademark of a natural or legal person established outside the European Union. (CRA 2024-03)
+>
+> (Ref: [CRA 2024-03](#references-and-terms))
+
+### Life-cycle Phase
+
+> 1. The stage in the software life-cycle where an SBOM is generated (e.g. from source, at the time of build or packaging, or from a built executable). (NTIA 2021)
 >
 > (Ref: [NTIA 2021](#references-and-terms))
+
+### Making available on the market
+
+> The supply of a product with digital elements for distribution or use on the European Union market in the course of a commercial activity, whether in return for payment or free of charge. (CRA 2024-03)
+>
+> (Ref: [CRA 2024-03](#references-and-terms))
 
 ### Manufacturer
 
@@ -244,6 +258,13 @@ toc: true
 > 2. Data on the origins of components that have come together to make a piece of software and the process under which they came together. This could include data beyond the minimum elements, such as compiler details and settings. (NTIA 2021)
 >
 > (Ref: [SCVS 2020](#references-and-terms), NTIA 2021)
+
+### Placing on the market
+
+> 1. The first making available of a product with digital elements on the Union market. (CRA 2024-03)
+>
+> (Ref: [CRA 2024-03](#references-and-terms))
+
 
 ### Point of origin ✍️
 
@@ -297,6 +318,33 @@ toc: true
 >     * The SBOM enumerates these components in a product.
 >
 > (Ref: [CRA 2024-03](#references-and-terms), SCVS 2020, NTIA 2021)
+
+### SBOM Roles
+
+> "Data is only good if it is in the hands of the right people." (CISA 2024)
+>
+> (Ref: [CISA 2024](#references-and-terms))
+
+
+#### SBOM Author (Role)
+
+> 1. The creator of an SBOM. (CISA 2024)
+>
+> (Ref: [CISA 2024](#references-and-terms))
+
+#### SBOM Distributor (Role)
+
+> 1. Receives SBOMs for the purpose of sharing them with [SBOM Consumers](#sbom-consumer--role-) or other Distributors. (CISA 2024)
+>
+> (Ref: [CISA 2024](#references-and-terms))
+
+#### SBOM Consumer (Role)
+
+> 1. Receives the transferred SBOM. (CISA 2024)
+>      * This could include roles such as third parties, authors, integrators, and end users.
+>
+> (Ref: [CISA 2024](#references-and-terms))
+
 
 ### SBOM Types
 
@@ -378,6 +426,13 @@ toc: true
 
 > See [Software Package Data Exchange (SPDX)](#software-package-data-exchange-spdx).
 
+### Substantial Modification
+
+> A change to the product with digital elements following its placing on the market, which affects the compliance of the product with digital elements with the essential requirements set out in the EU Cyber Resilience Act, Annex I, Part I, or which results in a modification to the intended purpose for which the product with digital elements has been assessed. (CRA 2024-03)
+>
+> (Ref: [CRA 2024-03](#references-and-terms))
+
+
 ### Supplier
 
 > 1. An entity that creates, defines, and identifies components and produces associated SBOMs. (NTIA 2021)
@@ -398,14 +453,14 @@ toc: true
 
 ### Transitive Dependency
 
-> See [Dependecny (Transitive)](#dependency--transitive-)
+> See [Dependency (Transitive)](#dependency--transitive-)
 
 ### Vendor
 
 > See [Manufacturer](#manufacturer) or [Author](#author).
 
 
-## References and terms
+# References and terms
 
 This glossary is partly based on terms from the following sources.
 
@@ -417,8 +472,13 @@ This glossary is partly based on terms from the following sources.
 - (CPAN 2015) [CPAN Glossary](http://neilb.org/2015/09/05/cpan-glossary.html) by Neil Bowers, published 2015-09-05.
 - (SBOMit 2024) [SBOM on in-toto Terminology](https://github.com/SBOMit/specification/blob/main/specification.md#15-terminology)
 - (NTIA 2021) [NTIA The Minimum Elements for an SBOM, Glossary](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=25), pages 25-27, published 2021-07-12.
+- (CISA 2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
 
-## Other supporting matter
 
-- ~~(CRA 2023-12) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CONSIL:ST_17000_2023_INIT), page 75, published 2023-12-20.~~
-- ~~(CRA 2023-09) EU [Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/resource.html?uri=cellar:864f472b-34e9-11ed-9c68-01aa75ed71a1.0001.02/DOC_2&format=PDF), published 2023-09-15.~~
+# About this document
+
+Version: 0.5.0
+License: CC-BY-SA-4.0
+Copyright: Salve J. Nilsen <sjn at cpan.org>
+
+You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.

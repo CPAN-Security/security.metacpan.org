@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Reading List
+title: Reading list
+description: Reading list for CPANSec contributors
 toc: true
 ---
 
@@ -32,6 +33,7 @@ toc: true
 * (NTIA) [Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.ntia.gov/files/ntia/publications/ntia_sbom_framing_2nd_edition_20211021.pdf) (October 2021)
 * (Lawfare Media) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards) (July 2022)
 * (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
+* (CISA) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations) (March 2024)
 
 ### Regulations, directives and laws
 
@@ -44,13 +46,12 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 #### USA — H. R. 2617
 
-* FDA (Food and Drug Administration) demands for SBOMs accompaning new medical devices – [H. R. 2617](https://www.congress.gov/117/bills/hr2617/BILLS-117hr2617enr.pdf#page=1374) Section 3305
+* FDA (Food and Drug Administration) demands for SBOMs accompanying new medical devices – [H. R. 2617](https://www.congress.gov/117/bills/hr2617/BILLS-117hr2617enr.pdf#page=1374) Section 3305
 
 #### EU and EEA – NIS2
 
 [Directive 2022/2555, Network and Information Security Directive 2](https://eur-lex.europa.eu/eli/dir/2022/2555) (NIS2)
 
-* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 * In the [NIS2 Recitals](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=12)
     * Recital (58): On the handling of discovered vulnerabilities (page 12)
     * Recital (62): Access to correct and timely information about vulnerabilities (page 13)
@@ -63,6 +64,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Article 7, point 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
     * Articles 21, points 1, 2 and 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
+* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 
 #### EU and EEA – CRA
 
@@ -94,10 +96,10 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
         * Article 16, Establishment of a single reporting platform (pages 187-192)
         * Article 17, Other provisions related to reporting (pages 193-195)
         * Article 18, Authorized representatives (pages 195-196)
-        * Article 19, Obligations of importers (pages 197-201)
-        * Article 20, Obligations of distributors (pages 202-205)
-        * Article 21, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
-        * Article 22, Other cases in which obligations of manufacturers apply (page 206)
+        * **Article 19**, Obligations of importers (pages 197-201)
+        * **Article 20**, Obligations of distributors (pages 202-205)
+        * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
+        * **Article 22**, Other cases in which obligations of manufacturers apply (page 206)
         * Article 23, Identification of economic operators (page 207)
     * Chapter II – Obligations of open-source software stewards
         * **Article 24**, Obligations of open-source software stewards (pages 208-209)
@@ -108,13 +110,15 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
         * Article 29, General principles of the CE marking (page 219)
         * Article 30, Rules and conditions for affixing the CE marking (pages 220-222)
     * Chapter V — Market Surveillance and Enforcement
-        * Article 58, Formal non-compliance (pages 276)
+        * **Article 58**, Formal non-compliance (pages 276)
 * In [CRA Annex I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
     * Essential Cybersecurity Requirements (pages 297-302)
         * Part I — Cybersecurity requirements relating to the properties of products with digital elements (pages 297-300)
         * Part II — Vulnerability handling requirements (pages 300-302)
 * In [CRA Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303)
     * Information and Instructions to the User (pages 303-305)
+* In [CRA, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314), Dated 2024-03-12
+    * Requirements to Technical Documentation content (pages 314-316)
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-european-cyber-resilience-act)
 
 #### EU and EEA – PLD
@@ -162,3 +166,4 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 ## Other articles and guides
 
 * (Checkmarx) [Preparing for Europe’s Most Extensive Cybersecurity Directive, NIS2 – What AppSec teams need to know](https://checkmarx.com/blog/preparing-for-europes-most-extensive-cybersecurity-directive-nis2-what-appsec-teams-need-to-know/)
+* (CPAN) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html) – describing the different personas or roles involved in the life-cycle of a CPAN distribution.

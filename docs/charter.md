@@ -16,7 +16,7 @@ Discussion on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.
 ## Purpose
 
 This charter lays out the background, intentions, mandate, scope, means and methods for the CPAN Security Group (CPANSec).
-This document also explicitly acknowledges a few related organizations and communitites, and spell out responsibility demarcation lines between these, if any.
+This document also explicitly acknowledges a few related organizations and communities, and spell out responsibility demarcation lines between these, if any.
 
 
 ## Name
@@ -35,7 +35,7 @@ The group was established at the Perl Toolchain Summit 2023 in Lyon, France, wit
 - Supply-chain security
 - etc.
 
-This list was subject for discussions and revisioning, and the resulting projects, tasks and topics are laid out under the subject lines below.
+This list was subject for discussions and revision, and the resulting projects, tasks and topics are laid out under the subject lines below.
 
 
 ## Goals and Intentions
@@ -62,7 +62,7 @@ The _CPANSec_ intends to be a forum for coordinating and assisting in resolving 
 The _CPANSec_ concerns itself with a limited domain:
 
 - Distributions published on CPAN, not including dual-life core modules;
-- CPAN supply chain security, Chain-of-Trust infrastructure, and security around the Perl/CPAN toolchain, CPAN/MetaCPAN itself and PAUSE;
+- CPAN supply chain security, Chain-of-Trust infrastructure, and security around the Perl/CPAN tool-chain, CPAN/MetaCPAN itself and PAUSE;
 - CPAN distribution metadata and how these are communicated;
 - Emergency security updates on CPAN;
 - The security culture in CPAN and communities in general;
@@ -76,20 +76,20 @@ For details, please consult the [Projects](#projects) list below.
   - The perl interpreter itself
   - Perl Core modules managed by &lt;perl5-porters@perl.org&gt;
 - Supply-chain issues that are found outside of CPAN, for example:
-  - Downstream security issues related to repackaging or patching of CPAN distros by third party packaging system (e.g. Debian's apt, Redhat's rpm, etc).
+  - Downstream security issues related to repackaging or patching of CPAN distros by third party packaging system (e.g. Debian's apt, RedHat's rpm, etc).
 - Third party libraries, files and services linked to or used by CPAN distributions (unless the library is packaged with the affected CPAN distribution);
 - ~~CPAN distributions that function as shims (wrappers) for non-CPAN projects or resources.~~ Examples:
   - ~~CPAN Distributions that are pure wrappers around compiled libraries (e.g. XS modules wrapping `libxml2` or `sqlite3`)~~
     - **Rationale**: XS modules are _in scope_ until tooling for warning about upstream vulnerabilities is in place. (sjn)
   - ~~CPAN Distributions (outside the `Alien::` namespace) that embed or use third-party (non-CPAN) projects or APIs directly.~~
-    - **Rationale**: Shims/wrappers/api modules on CPAN are _in scope_, but we cannot address issues related to the third-party (external) libraries or APIs they link to or use. So for example if `XML::LibXML` contains a vulnerability, it's in scope, but if libxml2 (which it links to) has a vulnerability, we have nothing to do with it, as it is not directly related to code *on* CPAN. (garu)
+    - **Rationale**: Shims/wrappers/API modules on CPAN are _in scope_, but we cannot address issues related to the third-party (external) libraries or APIs they link to or use. So for example if `XML::LibXML` contains a vulnerability, it's in scope, but if libxml2 (which it links to) has a vulnerability, we have nothing to do with it, as it is not directly related to code *on* CPAN. (garu)
   - ~~The `Alien::` distribution namespace~~
     - **Rationale**: `Alien::` distributions are _in scope_ until tooling for warning about upstream vulnerabilities is in place. (stigo)
   - ~~Mozilla::CA~~
     - **Rationale**: `Mozilla::CA` is _in scope_ until the module is either phased out/deprecated or kept automatically in sync with upstream CA. (stigo); Furthermore, Mozilla::CA is apparently about to be auto-updated sometime soon?
 - MetaCPAN
-  - **FIXME**: Offloading managment of MetaCPAN security issues depends on getting an agreement with the MetaCPAN folks, which we don't have as of 2023-06-17. Also - is this necessary and desirable? Please share why we should (not) do this.
-- Perl software published outside of CPAN (e.g. via github download links, or with private hosting).
+  - **FIXME**: Offloading management of MetaCPAN security issues depends on getting an agreement with the MetaCPAN folks, which we don't have as of 2023-06-17. Also - is this necessary and desirable? Please share why we should (not) do this.
+- Perl software published outside of CPAN (e.g. via Github download links, or with private hosting).
 - …
 
 
@@ -131,9 +131,9 @@ Public statements of support should not be considered more than an acknowledgmen
 
 Formal mandates, on the other hand are intended to establish clear lines of responsibility and accountability, and with this, function as meaningful steps to establish legitimacy.
 
-If the _CPANSec_ asks for a formal mandate from a delegating authority (DA), the _CPANSec_ members acknowledge that delegating authority may withdraw their mandate at any time if they decide the _CPANSec_ is incapable or unwilling to fulfil its mandate, or in case the CPANSec decides to delegate any received responsibilities to a third party.
+If the _CPANSec_ asks for a formal mandate from a delegating authority (DA), the _CPANSec_ members acknowledge that delegating authority may withdraw their mandate at any time if they decide the _CPANSec_ is incapable or unwilling to fulfill its mandate, or in case the CPANSec decides to delegate any received responsibilities to a third party.
 
-In the unfortunate situation when a delegating authority is disbanded, becomes unresponsive, or transfers/loses its autority to delegate responsibilities to us, the CPANSec members may ask for a formal mandate from a replacing authority.
+In the unfortunate situation when a delegating authority is disbanded, becomes unresponsive, or transfers/loses its authority to delegate responsibilities to us, the CPANSec members may ask for a formal mandate from a replacing authority.
 
 
 ### Formal Mandates
@@ -161,7 +161,7 @@ The _CPANSec_ forum itself is moderated and for invited volunteers. To join, ple
   - Introduce tooling and infrastructure for establishing provenance, chain-of-trust and chain-of-custody
   - Introduce tooling for downstream verification of provenance, chain-of-trust and chain-of-custody
 - [Metadata and Software Bill of Materials](https://github.com/orgs/CPAN-Security/projects/1)
-  - Tooling for the creation and verification of SBOM objects commonly used to communicate the composition and pedigree of CPAN dependencies, even when these dependencies cross ecosystem boundraries.
+  - Tooling for the creation and verification of SBOM objects commonly used to communicate the composition and pedigree of CPAN dependencies, even when these dependencies cross ecosystem boundaries.
   - Update CPAN package metadata to enable end-users to comply with legislative obligations.
 - [Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
   - Standardization and publishing of CPAN package vulnerabilities in relevant indexes (our own, CPANSA, CVE or whatever), to ensure that common (including third-party) tooling for Software Composition Analysis or vulnerability assessment work with CPAN dependencies.
@@ -224,6 +224,7 @@ From left to right,
 - …
 
 
-## Version
+## About this document
 
-v0.6.7
+Version: v0.6.7
+License: CC-BY-SA-4.0

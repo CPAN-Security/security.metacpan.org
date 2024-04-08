@@ -24,6 +24,14 @@ Please contact our security team on [cpan-security@perl.org](mailto:cpan-securit
 Examples of malware reports include: typo squatting, dependency confusion, exfiltration of private data, code obfuscation, outbound connections to malicious command and control servers, etc.
 
 
+## I've found signs of a compromised account on CPAN
+
+Please contact the PAUSE admins on [pause-admin@perl.org](mailto:pause-admin@perl.org) privately, with the following information:
+
+- CPAN id (PAUSE login)
+- Any evidence of the account being compromised
+
+
 ## I've found a vulnerability in a distribution on CPAN
 
 If you believe you have found a security vulnerability in a distribution on CPAN, please follow the [Coordinated vulnerability disclosure](https://en.wikipedia.org/wiki/Coordinated_vulnerability_disclosure) model.
@@ -61,7 +69,7 @@ When authors receive a vulnerability reports, they will usually need some time t
 - Prepare fixes and coordinate a release
 
 Please allow for some time for authors and potential downstream distributions to coordinate fixes before going public.
-It is not unusual for authors to request extentions to any proposed disclosure date.
+It is not unusual for authors to request extensions to any proposed disclosure date.
 
 
 #### If the Author is unresponsive

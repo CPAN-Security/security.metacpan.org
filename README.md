@@ -12,15 +12,15 @@ Over time, we aim to improve supply chain security, make CPAN a more secure and 
 On CPAN, improving security is a volunteer-driven collaborative effort.
 If you care and would like to make a contribution, you can…
 
-* Check out and explore [our main website](https://security.metacpan.org/)
-* Join us in our IRC channel [#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security) on irc.perl.org
+* Join us in our [IRC channel](ircs://ssl.irc.perl.org:7062/#cpan-security), #cpan-security on irc.perl.org
 * Send a mail to &lt;cpan-security&#64;perl.org&gt;
 * Subscribe to [@cpan_security@perl.social](https://perl.social/profile/cpan_security) on the Fediverse
 
 
 ## Resources
 
-* [IRC channel](ircs://ssl.irc.perl.org:7062/#cpan-security)
+* [Our main website](https://security.metacpan.org/)
+* [IRC channel](ircs://ssl.irc.perl.org:7062/#cpan-security) ([web client](https://kiwiirc.com/nextclient/#ircs://ssl.irc.perl.org:7062/#cpan-security))
 * [Github organization](https://github.com/orgs/CPAN-Security)
 * [Projects](https://github.com/orgs/CPAN-Security/projects)
 * [Documents](docs/)

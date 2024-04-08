@@ -62,7 +62,7 @@ The _CPANSec_ intends to be a forum for coordinating and assisting in resolving 
 The _CPANSec_ concerns itself with a limited domain:
 
 - Distributions published on CPAN, not including dual-life core modules;
-- CPAN supply chain security, Chain-of-Trust infrastructure, and security around the Perl/CPAN tool-chain, CPAN/MetaCPAN itself and PAUSE;
+- CPAN supply chain security, Chain-of-Trust infrastructure, and security around the Perl/CPAN Toolchain, CPAN/MetaCPAN itself and PAUSE;
 - CPAN distribution metadata and how these are communicated;
 - Emergency security updates on CPAN;
 - The security culture in CPAN and communities in general;
@@ -226,5 +226,5 @@ From left to right,
 
 ## About this document
 
-Version: v0.6.7
+Version: v0.6.8
 License: CC-BY-SA-4.0

@@ -128,7 +128,7 @@ Source: [NIST Software Supply Chain Security Guidance](https://www.nist.gov/itl/
 
 [comment]: # (!!!)
 
-![Group picture showing PTS 2023 pariticipants](media/pts-group-picture-PTS2023.jpeg)
+![Group picture showing PTS 2023 participants](media/pts-group-picture-PTS2023.jpeg)
 
 
 [comment]: # (!!!)
@@ -167,7 +167,7 @@ Source: [NIST Software Supply Chain Security Guidance](https://www.nist.gov/itl/
 
 * Become a partner that teaches downstream users how Open Source works, without "simplifying away" people
 
-* Upsteam devs are your partners, colleagues and friends – if you treat them so!
+* Upstream devs are your partners, colleagues and friends – if you treat them so!
 
 
 [comment]: # (!!!)

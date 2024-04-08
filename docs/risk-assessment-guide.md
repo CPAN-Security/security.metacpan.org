@@ -21,7 +21,7 @@ Corrections or improvements to this text can be filed in the [security.metacpan.
 * [PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) with [commentary](http://neilb.org/2013/08/07/adoptme.html)
 * The [Deming Principles](https://www.uthsc.edu/its/business-productivity-solutions/lean-uthsc/deming.php) on managing quality.
 * The [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework), and related [Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations](https://csrc.nist.gov/pubs/sp/800/161/r1/final) guidelines.
-* The EO14028 [Software Security in Supply Chains](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains) guide
+* The EO 14028 [Software Security in Supply Chains](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains) guide
 * …
 
 

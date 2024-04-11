@@ -34,6 +34,8 @@ toc: true
 * (Lawfare Media) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards) (July 2022)
 * (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
 
+See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
+
 
 ## Software identification (naming & versioning)
 

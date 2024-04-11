@@ -555,7 +555,8 @@ A Developer that publishes their software as [Open-Source Software](glossary.md#
 
 #### Integrator
 
-Used in the EU Cyber Resilience Act.
+Used in the EU Cyber Resilience Act Annex II to denote someone who integrates *a product with digital elements intended for integration* into other
+products with digital elements.
 
 * See [Developer](#developer).
 

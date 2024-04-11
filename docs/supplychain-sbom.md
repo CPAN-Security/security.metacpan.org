@@ -625,9 +625,6 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 * See [Auditor](#auditor).
 
 
-## Other terms
-
-
 ## References
 
 * (CRA-AII) [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303), Dated 2024-03-12
@@ -640,10 +637,18 @@ Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 
 * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28.
 
 
-## About this document
+## License and use of this document
 
 Version: 0.5.0
 License: CC-BY-SA-4.0
 Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.
+
+
+### Acknowledgements
+
+Several people have been involved in the development of this document
+
+* Salve J. Nilsen (main author)
+* Stian Kristoffersen

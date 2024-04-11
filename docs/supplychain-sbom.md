@@ -33,15 +33,36 @@ This document attempts to offer an overview of these roles, how they are related
     - When a supply-chain role distributes an SBOM, we call them an [SBOM Distributor](glossary#sbom-distributor--role-).
     - When a supply-chain role consumes an SBOM, we call them an [SBOM Consumer](glossary#sbom-consumer--role-)
 - SBOM Authors may also be differentiated by the fact that they produce original (authoritative) metadata fields, or just assemble or update existing ones.
+    - When an SBOM Role is the authoritative source of some metadata, they are an SBOM Author.
+    - When an SBOM Role is gathering SBOM metadata from different dependencies, they are an SBOM Assembler.
 
+
+```mermaid
+stateDiagram-v2
+    direction TB
+
+    state "🟥 SBOM Author" as sbom_author
+    state "🟨 SBOM Assembler" as sbom_assembler
+    state "🟩 SBOM Distributor" as sbom_distributor
+    state "🟦 SBOM Consumer" as sbom_consumer
+
+    [*] --> sbom_author
+    sbom_author --> sbom_assembler
+    sbom_assembler --> sbom_distributor
+    sbom_assembler --> sbom_author
+    sbom_distributor --> sbom_consumer
+    sbom_distributor --> sbom_assembler
+    sbom_consumer --> [*]
+
+```
 
 ### SBOM Role color-coding legend
 
 The color-coding is used in this document to help illustrate different SBOM activities.
 
 * 🟥 Create, define, sign SBOM metadata — _**SBOM Author** makes sure it and related artifacts **Exist**_.
-* 🟨 Assemble, update, annotate SBOM metadata — _**SBOM Author** makes sure it and related artifacts are **Current**_.
-* 🟩 Distribute, curate, index SBOM metadata — _**SBOM Distributor** makes sure it and related artifacts are made **Available** to others_.
+* 🟨 Assemble, update, annotate SBOM metadata — _**SBOM Assembler** makes sure it and related artifacts are **Current**_.
+* 🟩 Distribute, curate, index SBOM metadata — _**SBOM Distributor** makes sure it and related artifacts are made **Available** to others_.
 * 🟦 Consume, verify SBOM metadata — _**SBOM Consumer** makes sure it and related artifacts are **Complete**, **Correct** or **Compliant**_.
 
 

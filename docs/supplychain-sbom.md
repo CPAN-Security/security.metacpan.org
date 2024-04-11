@@ -29,12 +29,12 @@ This document attempts to offer an overview of these roles, how they are related
 - Each supply-chain role described in this document _MAY_ care about some specific SBOM metadata and their accompanying artifacts.
 - Each SBOM role described in this document _MUST_ also have a supply-chain role.
 - If a supply-chain role cares about some SBOM metadata, they have one or more of the following SBOM roles.
-    - When a supply-chain role creates or updates an SBOM, we call them an [SBOM Author](glossary#sbom-author--role-).
-    - When a supply-chain role distributes an SBOM, we call them an [SBOM Distributor](glossary#sbom-distributor--role-).
-    - When a supply-chain role consumes an SBOM, we call them an [SBOM Consumer](glossary#sbom-consumer--role-)
+    - When a Supply-chain Role creates or updates an SBOM, we call them an [SBOM Author](glossary#sbom-author--role-).
+    - When a Supply-chain Role distributes an SBOM, we call them an [SBOM Distributor](glossary#sbom-distributor--role-).
+    - When a Supply-chain Role consumes an SBOM, we call them an [SBOM Consumer](glossary#sbom-consumer--role-)
 - SBOM Authors may also be differentiated by the fact that they produce original (authoritative) metadata fields, or just assemble or update existing ones.
-    - When an SBOM Role is the authoritative source of some metadata, they are an SBOM Author.
-    - When an SBOM Role is gathering SBOM metadata from different dependencies, they are an SBOM Assembler.
+    - When an SBOM Role is the authoritative source of some metadata, they are an [SBOM Author](glossary#sbom-author--role-).
+    - When an SBOM Role is gathering SBOM metadata from different dependencies, they are an [SBOM Assembler](glossary#sbom-assembler--role---).
 
 
 ```mermaid
@@ -58,7 +58,7 @@ stateDiagram-v2
 
 ```
 
-### SBOM Role color-coding legend
+### Color-coding legend for SBOM Roles
 
 The color-coding is used in this document to help illustrate different SBOM activities.
 

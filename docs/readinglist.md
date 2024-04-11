@@ -144,3 +144,18 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 * (Checkmarx) [Preparing for Europe’s Most Extensive Cybersecurity Directive, NIS2 – What AppSec teams need to know](https://checkmarx.com/blog/preparing-for-europes-most-extensive-cybersecurity-directive-nis2-what-appsec-teams-need-to-know/)
 * (CPAN) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html) – describing the different personas or roles involved in the life-cycle of a CPAN distribution.
+
+
+## License and use of this document
+
+Version: 0.5.0
+License: CC-BY-SA-4.0
+Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
+
+You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.
+
+### Acknowledgements
+
+People have been involved in the development of this document
+
+* Salve J. Nilsen (main author)

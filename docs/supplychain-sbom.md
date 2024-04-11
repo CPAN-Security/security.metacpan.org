@@ -271,8 +271,13 @@ Management is expected to ensure that this assembled SBOM document describes the
 
 #### Manufacturer Environment
 
-* Used specifically in the context of the EU Cyber Resilience Act, to mean a commercial entity that places a product with digital elements on the EU market. FIXME
+* Used specifically in the context of the EU Cyber Resilience Act, to mean a commercial entity that places a product with digital elements on the EU market.
 * See [Integrator Environment](#integrator-environment).
+
+> [!WARNING]
+>
+> * FIXME - Much more to add!
+>   * e.g. from https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
 
 
 ### Language Ecosystem
@@ -511,7 +516,7 @@ Concerns themselves with correct package format and structure, and that package 
 #### Deployer
 
 Operates within a [Production Environment](#production-environment).
-Final preparation and installation of the software into a CI/CD or [Production Environment](#production-environment).
+Final preparation and installation of the software into a CI/CD or other deployment method an [Integrator](#integrator-environment) or [Production Environment](#production-environment).
 
 | Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by           |
 | -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |

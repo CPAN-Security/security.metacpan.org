@@ -77,7 +77,7 @@ stateDiagram-v2
 
     %%
     state "🟦 Importer" as author_importer
-    state "🟥 Owner\n🟨 Open-Source Software Steward" as author_owner
+    state "🟥 Owner\n🟨🟩 Open-Source Software Steward" as author_owner
     state "🟥🟨 Author\n🟨 Custodian" as author
     state "🟩 Distributor" as repository_distributor
     state "🟦 Importer" as language_importer
@@ -210,7 +210,7 @@ stateDiagram-v2
     deployer --> consumer
     deployer --> auditor_external
 
-    %% Copyright 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
@@ -250,7 +250,6 @@ SBOM Consumer roles don't have any specific metadata fields that are commonly us
 
 
 ## Supply-chain Ecosystems and Environments
-
 
 ### Author Environment
 
@@ -658,6 +657,61 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 #### Compliance
 
 * See [Auditor](#auditor).
+
+
+## Are you… a Manufacturer, Steward or Author?
+
+```mermaid
+stateDiagram-v2
+    direction TB
+    accTitle: Are you…
+
+    %% End states.
+    state "This chart is not relevant for you" as is_proprietary_provider
+    state "CRA is out-of-scope for you" as cra_out_of_scope
+    state "CRA Open-Source Steward" as cra_oss_steward
+    state "CRA Manufacturer" as cra_manufacturer
+
+    %% Decisions. "Are you...."
+    state "Involved with OSS products?" as is_oss_involved
+    state "Contributing unpaid to OSS?" as is_oss_contributor
+    state "Monetizing the product?" as is_product_monetised
+    state "…a legal person, but not a natural one?" as is_legal_entity
+    state "Is your product intended for commerial use?" as product_is_intended_for_commercial_use
+    state "Providing support for these products?" as is_product_supporter
+
+    [*] --> is_oss_involved
+
+    is_oss_involved --> is_oss_contributor : Yes
+    is_oss_involved --> is_proprietary_provider : No
+
+    is_oss_contributor --> cra_out_of_scope : Yes
+    is_oss_contributor --> is_product_monetised : No
+
+    is_product_monetised --> cra_manufacturer : Yes
+    is_product_monetised --> is_legal_entity : No
+
+    is_legal_entity --> cra_out_of_scope : No
+    is_legal_entity --> product_is_intended_for_commercial_use : Yes
+
+    product_is_intended_for_commercial_use --> cra_out_of_scope : No
+    product_is_intended_for_commercial_use --> is_product_supporter : Yes
+
+    is_product_supporter --> cra_oss_steward : Yes
+    is_product_supporter --> cra_out_of_scope : No
+
+    cra_out_of_scope --> [*]
+    cra_oss_steward --> [*]
+    cra_manufacturer --> [*]
+
+    %% Based on the flowchart made by Maarten Aertsen (NLNetLabs) found at
+    %% https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
+
+    %% Original flowchart © Maarten Aertsen <maarten@nlnetlabs.nl>
+    %% License: CC0 1.0 Universal
+    %%
+    %% Adapted to Mermaid and modified by Salve J. Nilsen <sjn@oslo.pm>
+```
 
 
 ## References

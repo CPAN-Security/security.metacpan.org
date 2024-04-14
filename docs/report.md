@@ -24,7 +24,7 @@ Please contact our security team on [cpan-security@perl.org](mailto:cpan-securit
 Examples of malware reports include: typo squatting, dependency confusion, exfiltration of private data, code obfuscation, outbound connections to malicious command and control servers, etc.
 
 
-## I've found signs of a compromised account on CPAN
+## I've found signs of a compromised CPAN account
 
 Please contact the PAUSE admins on [pause-admin@perl.org](mailto:pause-admin@perl.org) privately, with the following information:
 

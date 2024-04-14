@@ -77,7 +77,7 @@ stateDiagram-v2
 
     %%
     state "🟦 Importer" as author_importer
-    state "🟥 Owner\n🟨 Open-Source Software Steward" as author_owner
+    state "🟥 Owner\n🟨🟩 Open-Source Software Steward" as author_owner
     state "🟥🟨 Author\n🟨 Custodian" as author
     state "🟩 Distributor" as repository_distributor
     state "🟦 Importer" as language_importer
@@ -210,7 +210,7 @@ stateDiagram-v2
     deployer --> consumer
     deployer --> auditor_external
 
-    %% Copyright 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
@@ -250,7 +250,6 @@ SBOM Consumer roles don't have any specific metadata fields that are commonly us
 
 
 ## Supply-chain Ecosystems and Environments
-
 
 ### Author Environment
 
@@ -658,6 +657,33 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 #### Compliance
 
 * See [Auditor](#auditor).
+
+
+## Are you… a Manufacturer, Steward or Author?
+
+```mermaid
+graph TB
+    start-here(Start here) --> involved{Involved<br>with OSS<br>products?}
+    involved  -->|No| not-relevant-for-you(This chart isn't<br>relevant for you)
+    involved -->|Yes| contributing{Contributing<br>unpaid to OSS?}
+    contributing  -->|No| monetised{Monetizing<br>the product?}
+    contributing -->|Yes| cra-is-out-of-scope(CRA is out-of-scope)
+    monetised -->|Yes| cra-manufacturer(CRA Manufacturer)
+    monetised -->|No| is-legal-entity{legal person,<br> but not a natural<br>person?}
+    is-legal-entity -->|Yes| intended-commercial-use{Is product<br>intended for<br>commerial use?}
+    is-legal-entity -->|No| cra-is-out-of-scope
+    intended-commercial-use -->|No| cra-is-out-of-scope
+    intended-commercial-use -->|Yes| product-supporter{Providing<br>support for OSS<br>products?}
+    product-supporter -->|Yes| cra-oss-steward(CRA Open-Source Steward)
+    product-supporter -->|No| cra-is-out-of-scope
+
+    %% Based on the flowchart made by Maarten Aertsen (NLNetLabs) found at
+    %% https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
+
+    %% Original flowchart © Maarten Aertsen <maarten@nlnetlabs.nl>
+    %% License: CC0 1.0 Universal
+    %% Adapted to Mermaid and modified by Salve J. Nilsen <sjn@oslo.pm>
+```
 
 
 ## References

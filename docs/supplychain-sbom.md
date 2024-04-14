@@ -662,54 +662,26 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 ## Are you… a Manufacturer, Steward or Author?
 
 ```mermaid
-stateDiagram-v2
-    direction TB
-    accTitle: Are you…
-
-    %% End states.
-    state "This chart is not relevant for you" as is_proprietary_provider
-    state "CRA is out-of-scope for you" as cra_out_of_scope
-    state "CRA Open-Source Steward" as cra_oss_steward
-    state "CRA Manufacturer" as cra_manufacturer
-
-    %% Decisions. "Are you...."
-    state "Involved with OSS products?" as is_oss_involved
-    state "Contributing unpaid to OSS?" as is_oss_contributor
-    state "Monetizing the product?" as is_product_monetised
-    state "…a legal person, but not a natural one?" as is_legal_entity
-    state "Is your product intended for commerial use?" as product_is_intended_for_commercial_use
-    state "Providing support for these products?" as is_product_supporter
-
-    [*] --> is_oss_involved
-
-    is_oss_involved --> is_oss_contributor : Yes
-    is_oss_involved --> is_proprietary_provider : No
-
-    is_oss_contributor --> cra_out_of_scope : Yes
-    is_oss_contributor --> is_product_monetised : No
-
-    is_product_monetised --> cra_manufacturer : Yes
-    is_product_monetised --> is_legal_entity : No
-
-    is_legal_entity --> cra_out_of_scope : No
-    is_legal_entity --> product_is_intended_for_commercial_use : Yes
-
-    product_is_intended_for_commercial_use --> cra_out_of_scope : No
-    product_is_intended_for_commercial_use --> is_product_supporter : Yes
-
-    is_product_supporter --> cra_oss_steward : Yes
-    is_product_supporter --> cra_out_of_scope : No
-
-    cra_out_of_scope --> [*]
-    cra_oss_steward --> [*]
-    cra_manufacturer --> [*]
+graph TB
+    start-here(Start here) --> involved{Involved<br>with OSS<br>products?}
+    involved  -->|No| not-relevant-for-you(This chart isn't<br>relevant for you)
+    involved -->|Yes| contributing{Contributing<br>unpaid to OSS?}
+    contributing  -->|No| monetised{Monetizing<br>the product?}
+    contributing -->|Yes| cra-is-out-of-scope(CRA is out-of-scope)
+    monetised -->|Yes| cra-manufacturer(CRA Manufacturer)
+    monetised -->|No| is-legal-entity{legal person,<br> but not a natural<br>person?}
+    is-legal-entity -->|Yes| intended-commercial-use{Is product<br>intended for<br>commerial use?}
+    is-legal-entity -->|No| cra-is-out-of-scope
+    intended-commercial-use -->|No| cra-is-out-of-scope
+    intended-commercial-use -->|Yes| product-supporter{Providing<br>support for OSS<br>products?}
+    product-supporter -->|Yes| cra-oss-steward(CRA Open-Source Steward)
+    product-supporter -->|No| cra-is-out-of-scope
 
     %% Based on the flowchart made by Maarten Aertsen (NLNetLabs) found at
     %% https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
 
     %% Original flowchart © Maarten Aertsen <maarten@nlnetlabs.nl>
     %% License: CC0 1.0 Universal
-    %%
     %% Adapted to Mermaid and modified by Salve J. Nilsen <sjn@oslo.pm>
 ```
 

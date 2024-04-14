@@ -25,7 +25,7 @@ title: Minutes 2024-04-10
 ### Attendees, absents & regrets
 
 *   Attendees
-    *   @oalders, @sjn, @ingydotnet, @stigtsp
+    *   @oalders, @sjn, @ingydotnet, @stigtsp, @timlegge
 *   Regrets
     *   @perlpunk, tmode
 *   Absents

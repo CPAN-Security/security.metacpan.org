@@ -99,32 +99,55 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 (EU) [Cyber Resilience Act](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html) (CRA, updated 2024-03-12)
 
-* In the [CRA Recitals](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=7)
-    * Recital (8): CRA relevance for supply chains (page 7)
-    * Recitals (10a-b): CRA relevance for Open Source projects (page 10-11)
-    * Recital (**10c**): Open Source Software Contributors (page 12)
-    * Recital (**10d**): Open Source Software Stewards, light-touch regulatory regime, and CE mark implications (page 13)
-    * Recital (**10e**): Open Source package managers considerations as "distributors" (page 14)
-    * Recitals (10f): Voluntary security attestation programs for Open Source projects (page 14)
-    * Recitals (10g): Submission of SBOMs for Open Source projects (page 14)
-    * Recital (11): CRA relevance for the NIS2 directive (page 16)
-    * Recital (16): Manufacturer's liability due to lack of security updates (page 21)
-    * Recital (18a): Due diligence when integrating third-party components (page 23)
-    * Recital (21): Software for testing purposes, alphas, betas (page 24)
-    * Recital (22b): Continued security updates (page 27)
-    * Recitals (33a-c): Support period (page 38-39)
-    * Recital (33e): Point of contact (page 40)
-    * Recital (33f): Secure by default (page 40)
-* In the [CRA Chapters](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=75)
-    * Chapter I, Article 3: Definitions (pages 75-80)
-    * Chapter I, Article 6 (b-c): Stakeholder consultation (pages 86-87)
-    * Chapter II, Articles 10, 11, 13, 14, 15, 16: Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software (pages 90-113)
-    * Chapter II, Articles 17 (a-c): Obligations of open-source software stewards (pages 113-115)
-    * Chapter III, Articles 20, 21, 22: EU declaration of conformity (pages 119-121)
-* In [CRA Annex I](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=164)
-    * Essential Cybersecurity Requirements (pages 164-167)
-* In [CRA Annex II](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=168)
-    * Information and Instructions to the User (pages 168-169)
+* In the [CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11)
+    * Recital (10): CRA relevance for supply chains (page 11)
+    * Recitals (16-17): CRA relevance for Open Source projects (page 18-19)
+    * Recital (**18**): Open Source Software Contributors (page 20)
+    * Recital (**19**): Open Source Software Stewards, light-touch regulatory regime, and CE mark implications (page 22)
+    * Recital (**20**): Open Source package managers considerations as "distributors" (page 24)
+    * Recitals (21): Voluntary security attestation programs for Open Source projects (page 25)
+    * Recitals (22): Submission of SBOMs for Open Source projects (page 26)
+    * Recital (24): CRA relevance for the NIS2 directive (page 29)
+    * Recital (31): Manufacturer's liability due to lack of security updates (page 36)
+    * Recital (34): Due diligence when integrating third-party components (page 39)
+    * Recital (37): Software for testing purposes, alphas, betas (page 42)
+    * Recital (39): Continued security updates (page 44)
+    * Recitals (60-62): Support period (page 69-71)
+    * Recital (64): Point of contact (page 73)
+    * Recital (65): Secure by default (page 73)
+* In the [CRA Chapters](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136)
+    * Chapter I, Article 3: Definitions (pages 136-146)
+    * Chapter I, Article 9, Point 1. (b-c): Stakeholder consultation (pages 155-156)
+    * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
+        * Article 13, Obligations of Manufacturers (pages 161-175)
+        * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
+        * **Article 15**, Voluntary reporting (pages 185-186)
+        * Article 16, Establishment of a single reporting platform (pages 187-192)
+        * Article 17, Other provisions related to reporting (pages 193-195)
+        * Article 18, Authorized representatives (pages 195-196)
+        * **Article 19**, Obligations of importers (pages 197-201)
+        * **Article 20**, Obligations of distributors (pages 202-205)
+        * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
+        * **Article 22**, Other cases in which obligations of manufacturers apply (page 206)
+        * Article 23, Identification of economic operators (page 207)
+    * Chapter II – Obligations of open-source software stewards
+        * **Article 24**, Obligations of open-source software stewards (pages 208-209)
+        * Article 25, Security attestation of free and open-source software (page 210)
+        * Article 26, Guidance (pages 211-212)
+    * Chapter III — Conformity of the product with digital elements
+        * Article 28, EU declaration of conformity (pages 218-219)
+        * Article 29, General principles of the CE marking (page 219)
+        * Article 30, Rules and conditions for affixing the CE marking (pages 220-222)
+    * Chapter V — Market Surveillance and Enforcement
+        * **Article 58**, Formal non-compliance (pages 276)
+* In [CRA Annex I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
+    * Essential Cybersecurity Requirements (pages 297-302)
+        * Part I — Cybersecurity requirements relating to the properties of products with digital elements (pages 297-300)
+        * Part II — Vulnerability handling requirements (pages 300-302)
+* In [CRA Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303)
+    * Information and Instructions to the User (pages 303-305)
+* In [CRA, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314), Dated 2024-03-12
+    * Requirements to Technical Documentation content (pages 314-316)
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-european-cyber-resilience-act)
 
 ### EU and EEA – PLD
@@ -148,9 +171,9 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 ## License and use of this document
 
-Version: 0.5.0
-License: CC-BY-SA-4.0
-Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
+* Version: 0.5.0
+* License: CC-BY-SA-4.0
+* Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.
 

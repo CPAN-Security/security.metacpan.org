@@ -278,9 +278,8 @@ toc: true
 
 ### Procurement ✍️
 
-> 1. The process of agreeing to terms and acquiring software or services for later use. (SCVS)
->
-> This includes agreeing to Open Source licenses. (CPANSec)
+> 1. The process of agreeing to terms and acquiring software or services for later use. (SCVS 2020)
+>     * This includes agreeing to Open Source licenses. (CPANSec 2024)
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
@@ -330,7 +329,7 @@ toc: true
 
 > 1. Someone that gathers and assembles SBOMs from different sources into a new SBOM. (CPANSec 2024)
 >
-> (Ref: CPANSec)
+> (Ref: CPANSec 2024)
 
 
 #### SBOM Author (Role)
@@ -435,7 +434,9 @@ toc: true
 
 ### Substantial Modification
 
-> A change to the product with digital elements following its placing on the market, which affects the compliance of the product with digital elements with the essential requirements set out in the EU Cyber Resilience Act, Annex I, Part I, or which results in a modification to the intended purpose for which the product with digital elements has been assessed. (CRA 2024-03)
+> 1. A change to the product with digital elements following its placing on the market, which affects the compliance of the product with digital elements with the essential requirements set out in the EU Cyber Resilience Act, Annex I, Part I, or which results in a modification to the intended purpose for which the product with digital elements has been assessed. (CRA 2024-03)
+>     * Where products with digital elements are subsequently modified, by physical or digital means, in a way that is not foreseen by the manufacturer [...], the modification should be considered as substantial. (CRA 2024-03 Recital 38)
+>     * Security updates are not Substantial Modifications. (CRA 2024-03 Recital 39)
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
 
@@ -471,6 +472,7 @@ toc: true
 
 This glossary is partly based on terms from the following sources.
 
+- (CPANSec 2024) – These are commentary and proposed improvements made by the author(s) of this document.
 - (CISA 2023) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (Public Domain)
 - (CPANSec 2024) CPAN Security Group improvements and commentary, marked with ✍️ (CC-BY-SA-4.0)
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))

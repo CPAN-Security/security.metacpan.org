@@ -1,3 +1,19 @@
+----
+----
+
+## Open Source project life-cycle stages
+
+1. (default)
+2. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development (bus factor is too low)
+3. HANDOFF – The project owner is looking for someone to take over the project (bus factor is 1 and about to become 0)
+4. ADOPTME – The project is abandoned, or the owner has been confirmed to be unresponsive, so the project is now available for adoption (bus factor is 0)
+5. NOXFER – The project is prevented from being transferred to new owners
+6. CUSTODY – Under custodianship
+7. DONE – The project is considered "Done", and while it is staffed, no further development is needed or expected.
+8. DEPRECATED – The project owner recommends that this project is not to be used. Please look for alternatives.
+9. FORK – This project is an API-compatible fork of another project.
+
+
 
 
 

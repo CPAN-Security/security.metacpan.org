@@ -29,10 +29,6 @@ toc: true
 > Component and Artifact seem to have overlapping definitions.
 > We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec)
 
-<!---
-This is possibly one of the most overused terms in this space. I wouldn't complain if you created a sensible standard for CPAN, then we could encourage others to adopt it.
---->
-
 > 1. An immutable blob of data; primarily refers to [software](#software), but SLSA can be used for any artifact.
 >     * E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
 >
@@ -102,12 +98,6 @@ This is possibly one of the most overused terms in this space. I wouldn't compla
 
 > 1. Any software component created through the interaction with a second party, including open source, "source available", and proprietary software where the source is made available for either inspection, use, modification, building or sharing. (CPANSec)
 >     * Open Source software components that are dependencies should be considered as "second-party components", since the user of these components have an ongoing legal relationship with the FOSS component project, by the fact that the user has accepted the project license.
-
-<!--
-The above is a unique view of open source. I think it might be a new way to describe the relationship between consumers and producers of open source. Further exploration of this topic is probably a good idea
-
-The definition of "third-party" below is how the industry accepts open source today
--->
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
@@ -137,24 +127,20 @@ The definition of "third-party" below is how the industry accepts open source to
 
 ### CycloneDX ✍️
 
-> 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused. CycloneDX is considered to be one of the three SBOM formats. (SCVS 2020)
+> 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused. (SCVS 2020)
+>     * CycloneDX is considered to be one of the three [SBOM](#sbom--software-bill-of-materials-) formats, together with [SWID](#software-identification--swid-) and [SPDX](#software-package-data-exchange--spdx-).
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 ### Dependency ⚠️  ✍️
 
-<!--
-This term is much more squishy outside fo SLSA. In many instances a dependency can mean a thing you depend on and pull into your system. For example a container will have your direct dependencies (things you declare you need to run), and transitive dependencies (the things needed by the things you declared)
-
-This section probably needs to be filled in after finding additional references
--->
-
 > 1. An [Artifact](#artifact) that is an input to a build process but that is not a source. (SLSA 2023)
 >     * In the SLSA model, it is always a package.
 >     * E.g. an Alpine package ([package](#package---)) distributed on Alpine Linux ([platform](#platform)).
 > 2. Characterizing the relationship that an upstream component X is ~~included~~ in software Y. (NTIA 2021) ⚠️
->
->> NOTE: Dependencies may be referenced, included, development/build/test/deploy/runtime phase-specific, dynamic, static, unresolved, resolved, direct or transitive. Yay! (CPANSec 2024)
+
+> [!NOTE]
+> * Dependencies may be referenced, included, development/build/test/deploy/runtime phase-specific, dynamic, static, unresolved, resolved, embedded, direct or transitive. The definition above is, in this sense, entirely insufficient. (CPANSec 2024)
 >
 > (Ref: [SLSA 2023](#references-and-terms), NTIA 2021, CPANSec 2024)
 
@@ -178,6 +164,22 @@ This section probably needs to be filled in after finding additional references
 > See also: [Dependency (Direct)](#dependency-direct-).
 >
 > (Ref: [SCVS 2020](#references-and-terms), NTIA 2021, CPANSec 2024)
+
+#### Dependency (Embedded) ✍️
+
+> TODO
+
+#### Dependency (Required, Unresolved) ✍️
+
+> TODO
+
+#### Dependency (Resolved) ✍️
+
+> TODO
+
+#### Dependency (Pinned) ✍️
+
+> TODO
 
 ### Distributor ⚠️
 
@@ -223,13 +225,11 @@ This section probably needs to be filled in after finding additional references
 
 ### Making available on the market
 
-<!--
-This will change for open source in the near future. I can't find the latest text, but according ot various writing of those in the know, there is now a concept of an "open source steward" that will change how many of these terms are defined for open source projects (open source steward is defined below)
--->
-
 > The supply of a product with digital elements for distribution or use on the European Union market in the course of a commercial activity, whether in return for payment or free of charge. (CRA 2024-03)
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
+
+> TODO: Add some clarification regarding Manufacturers, Importers, Distributors and Open Source Stewards.
 
 ### Manufacturer
 
@@ -254,14 +254,12 @@ This will change for open source in the near future. I can't find the latest tex
 
 ### Package ⚠️  ✍️
 
-<!--
-I find the SLSA usage of "Artifact" to be very loose. Nobody really has a reasonable definition. It may be a meaningless term now (in fact it's also defined up in the dependency section)
--->
-
-> 1. [Artifact](#artifact-) that is ~~“published”~~ for use by others.
+> 1. [An] [Artifact](#artifact-) that is “published” for use by others. (SLSA 2023)
 >     * In the model, it is always the output of a build process, though that build process can be a no-op.
 >     * E.g. a Docker image (package) distributed on DockerHub (platform).
 >     * E:g. a ZIP file containing source code is a package, not a source, because it is built from some other source, such as a git commit.
+> 2. An identifiable unit of software intended for distribution, ambiguously meaning either an “artifact” or a “package name”. (SLSA 2023)
+>     * Only use this term when the ambiguity is acceptable or desirable.
 >
 > (Ref: [SLSA 2023](#references-and-terms), CPANSec 2024)
 
@@ -310,7 +308,7 @@ I find the SLSA usage of "Artifact" to be very loose. Nobody really has a reason
 
 ### Product with digital elements
 
-> 1. A software or hardware product and its [Remote Data Processing](#remote-data-processing) solutions, including software or hardware components being placed on the market separately.
+> 1. A software or hardware product and its [Remote Data Processing](#remote-data-processing) solutions, including software or hardware components being placed on the market separately. (CRA 2024-03)
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
 
@@ -431,25 +429,25 @@ I find the SLSA usage of "Artifact" to be very loose. Nobody really has a reason
 
 ### Software Bill of Materials (SBOM)
 
-> 1. See [SBOM (Software Bill of Materials](#sbom-software-bill-of-materials).
+> 1. See [SBOM (Software Bill of Materials](#sbom--software-bill-of-materials-).
 
 ### Software Identification (SWID)
 
-> 1. An ISO standard that formalizes how software is tagged. SWID is considered to be one of three SBOM formats.
+> 1. An ISO standard that formalizes how software is tagged.
+>    * SWID is considered to be one of three [SBOM](#sbom--software-bill-of-materials-) formats, together with [CycloneDX](#cyclonedx--) and [SPDX](#software-package-data-exchange--spdx-).
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
 ### Software Package Data Exchange (SPDX)
 
-> 1. A Linux Foundation project which produces a [software bill of materials](#sbom-software-bill-of-materials) specification and a standardized list of open source licenses. SPDX is considered to be one of three SBOM formats.
+> 1. A Linux Foundation project which produces a [software bill of materials](#sbom-software-bill-of-materials) specification and a standardized list of open source licenses. (SCVS 2020)
+>     * SPDX is considered to be one of three [SBOM](#sbom--software-bill-of-materials-) formats, together with [CycloneDX](#cyclonedx--) and [SWID](#software-identification--swid-).
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
 ### Source ⚠️  ✍️
-<!--
-I thinks this is one of those overused terms, and SLSA doesn't define it very well.
--->
-> 1. An [artifact](#artifact) that was directly authored ~~or reviewed~~ by persons, without modification.
+
+> 1. An [artifact](#artifact) that was directly authored ~~or reviewed~~ by persons, without modification. (SLSA 2023)
 >     * It is the beginning of the supply chain; we do not trace the provenance back any further.
 >     * E.g. a git commit (source) hosted on GitHub ([platform](#platform)).
 >
@@ -457,7 +455,7 @@ I thinks this is one of those overused terms, and SLSA doesn't define it very we
 
 ### SPDX (Software Package Data Exchange)
 
-> See [Software Package Data Exchange (SPDX)](#software-package-data-exchange-spdx).
+> See [Software Package Data Exchange (SPDX)](#software-package-data-exchange--spdx-).
 
 ### Substantial Modification
 
@@ -480,7 +478,7 @@ I thinks this is one of those overused terms, and SLSA doesn't define it very we
 
 ### SWID (Software Identification)
 
-> See [Software Identification (SWID)](#software-identification-swid).
+> See [Software Identification (SWID)](#software-identification--swid-).
 
 ### Third-party component ✍️
 
@@ -495,7 +493,7 @@ I thinks this is one of those overused terms, and SLSA doesn't define it very we
 > See [Manufacturer](#manufacturer) or [Author](#author).
 
 
-# References and terms
+## References and terms
 
 This glossary is partly based on terms from the following sources.
 
@@ -511,10 +509,18 @@ This glossary is partly based on terms from the following sources.
 - (CISA 2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
 
 
-# About this document
+## About this document
 
 Version: 0.5.0
-License: CC-BY-SA-4.0
-Copyright: Salve J. Nilsen <sjn at cpan.org>
+License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
+Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
-You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.
+You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.
+
+
+### Acknowledgements
+
+Several people have been involved in the development of this document
+
+* Salve J. Nilsen (main author)
+* Josh Bressers

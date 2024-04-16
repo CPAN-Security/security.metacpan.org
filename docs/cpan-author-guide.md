@@ -32,6 +32,14 @@ toc: true
 
 * Add [tests for taintedness](https://metacpan.org/pod/Test::Taint) to your codebase
 
+## Practice symbol import discipline
+
+* Use [App::perlimports](https://www.olafalders.com/2024/04/15/getting-started-with-perlimports/) to get a better idea of what symbols you are using.
+
+## Reduce the amount transitive dependencies
+
+* The more modules you depend on, the larger the attack surface you'll have to defend.
+
 ## Ensure you have trusted co-maintainers
 
 * Add a co-maintainer in PAUSE

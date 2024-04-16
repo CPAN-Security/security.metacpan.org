@@ -59,7 +59,6 @@ title: Minutes 2024-04-10
 9.  [CPANSec Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
     *   @sjn – Budget draft at [https://cryptpad.fr/sheet/#/2/sheet/edit/mEL6BAfL7I7ptOzMlx6q4NiI/](https://cryptpad.fr/sheet/#/2/sheet/edit/mEL6BAfL7I7ptOzMlx6q4NiI/)
     *   @sjn – Clarity around tasks and mandate. @sjn proposes a discussion on this at PTS
-    *   @oalders – had a meeting with TPRF on this. No progress.
 
 
 ### Ongoing and updated vulnerabilities

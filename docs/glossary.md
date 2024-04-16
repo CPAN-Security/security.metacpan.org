@@ -29,6 +29,10 @@ toc: true
 > Component and Artifact seem to have overlapping definitions.
 > We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec)
 
+<!---
+This is possibly one of the most overused terms in this space. I wouldn't complain if you created a sensible standard for CPAN, then we could encourage others to adopt it.
+--->
+
 > 1. An immutable blob of data; primarily refers to [software](#software), but SLSA can be used for any artifact.
 >     * E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
 >
@@ -38,7 +42,8 @@ toc: true
 
 ### Author
 
-> 1. An entity that creates an SBOM. When [author](#author) and [supplier](#supplier) are different, this indicates that one entity (the author) is making claims about components created or included by a different entity (the supplier). (NTIA 2021)
+> 1. An entity that creates an SBOM.
+> > 1. [author](#author) and [supplier](#supplier) will often be different. In the case of SBOMs, the author creates the SBOM. The supplier is the provider of the software included in the SBOM (NTIA 2021)
 > 2. A developer that publishes something as Open Source software. (CPANSec 2024)
 >
 > See also: [Author](supplychain-sbom#author) in the Supply-chain SBOM Roles document.
@@ -97,6 +102,12 @@ toc: true
 
 > 1. Any software component created through the interaction with a second party, including open source, "source available", and proprietary software where the source is made available for either inspection, use, modification, building or sharing. (CPANSec)
 >     * Open Source software components that are dependencies should be considered as "second-party components", since the user of these components have an ongoing legal relationship with the FOSS component project, by the fact that the user has accepted the project license.
+
+<!--
+The above is a unique view of open source. I think it might be a new way to describe the relationship between consumers and producers of open source. Further exploration of this topic is probably a good idea
+
+The definition of "third-party" below is how the industry accepts open source today
+-->
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
@@ -126,11 +137,17 @@ toc: true
 
 ### CycloneDX ✍️
 
-> 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused. (SCVS 2020)
+> 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused. CycloneDX is considered to be one of the three SBOM formats. (SCVS 2020)
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 ### Dependency ⚠️  ✍️
+
+<!--
+This term is much more squishy outside fo SLSA. In many instances a dependency can mean a thing you depend on and pull into your system. For example a container will have your direct dependencies (things you declare you need to run), and transitive dependencies (the things needed by the things you declared)
+
+This section probably needs to be filled in after finding additional references
+-->
 
 > 1. An [Artifact](#artifact) that is an input to a build process but that is not a source. (SLSA 2023)
 >     * In the SLSA model, it is always a package.
@@ -206,6 +223,10 @@ toc: true
 
 ### Making available on the market
 
+<!--
+This will change for open source in the near future. I can't find the latest text, but according ot various writing of those in the know, there is now a concept of an "open source steward" that will change how many of these terms are defined for open source projects (open source steward is defined below)
+-->
+
 > The supply of a product with digital elements for distribution or use on the European Union market in the course of a commercial activity, whether in return for payment or free of charge. (CRA 2024-03)
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
@@ -233,6 +254,10 @@ toc: true
 
 ### Package ⚠️  ✍️
 
+<!--
+I find the SLSA usage of "Artifact" to be very loose. Nobody really has a reasonable definition. It may be a meaningless term now (in fact it's also defined up in the dependency section)
+-->
+
 > 1. [Artifact](#artifact-) that is ~~“published”~~ for use by others.
 >     * In the model, it is always the output of a build process, though that build process can be a no-op.
 >     * E.g. a Docker image (package) distributed on DockerHub (platform).
@@ -248,7 +273,7 @@ toc: true
 
 ### Package URL (PURL)
 
-> 1. An ecosystem-agnostic specification which standardizes the syntax and location information of software components.
+> 1. An ecosystem-agnostic specification which standardizes the syntax and location information of software components. The PURL spec can be found in [GitHub](https://github.com/package-url/purl-spec). As it is an open source project it is constantly evolving.
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
@@ -410,18 +435,20 @@ toc: true
 
 ### Software Identification (SWID)
 
-> 1. An ISO standard that formalizes how software is tagged.
+> 1. An ISO standard that formalizes how software is tagged. SWID is considered to be one of three SBOM formats.
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
 ### Software Package Data Exchange (SPDX)
 
-> 1. A Linux Foundation project which produces a [software bill of materials](#sbom-software-bill-of-materials) specification and a standardized list of open source licenses.
+> 1. A Linux Foundation project which produces a [software bill of materials](#sbom-software-bill-of-materials) specification and a standardized list of open source licenses. SPDX is considered to be one of three SBOM formats.
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
 ### Source ⚠️  ✍️
-
+<!--
+I thinks this is one of those overused terms, and SLSA doesn't define it very well.
+-->
 > 1. An [artifact](#artifact) that was directly authored ~~or reviewed~~ by persons, without modification.
 >     * It is the beginning of the supply chain; we do not trace the provenance back any further.
 >     * E.g. a git commit (source) hosted on GitHub ([platform](#platform)).

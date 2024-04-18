@@ -40,7 +40,7 @@ This document attempts to offer an overview of these roles, how they are related
 ## SBOM Roles
 
 It may be useful to distinguish between roles that are focused on the SBOM documents themselves, from roles that are involved in a supply-chain activity.
-For further reading, please see CISA's "SBOM Sharing Roles and Considerations" document ([CISA-2024](#references)).
+For further reading, please see CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)).
 
 
 ```mermaid
@@ -64,10 +64,21 @@ stateDiagram-v2
 
 ```
 
-### 🟥 SBOM Author
+
+## Color-coding legend for SBOM Roles
+
+The color-coding is used in this document to help illustrate different SBOM activities.
+
+* 🟥 Create, define, sign SBOM metadata — _**SBOM Author** makes sure it and related artifacts **Exist**_.
+* 🟨 Assemble, update, annotate SBOM metadata — _**SBOM Assembler** makes sure it and related artifacts are **Current**_.
+* 🟩 Distribute, curate, index SBOM metadata — _**SBOM Distributor** makes sure it and related artifacts are made **Available** to others_.
+* 🟦 Consume, aggregate, verify SBOM metadata — _**SBOM Consumer** makes sure it and related artifacts are **Complete**, **Correct** or **Compliant**_.
+
+
+### SBOM Author
 
 SBOM Authors create, define or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_.
-This mostly means authoritative metadata fields as laid out in the different [supply-chain roles](#supply-chain-roles-and-metadata) below.
+This mostly means authoritative metadata fields as laid out in the different [Supply-chain Roles](#supply-chain-roles-and-metadata) below.
 In addition to these fields, they care about the following common ones.
 
 | Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
@@ -80,12 +91,14 @@ In addition to these fields, they care about the following common ones.
 | 🟥 | CycloneDX bomFormat                    | Yes        | Enum         | $.properties.bomFormat                                            | N/A  | CycloneDX 1.6           |
 | 🟥 | CycloneDX specVersion                  | Yes        | Int          | $.properties.specVersion                                          | N/A  | CycloneDX 1.6           |
 
-#### NTIA Definition
+#### CISA Definition
 
 > Creates an SBOM.
 > This document assumes that each SBOM created is available for sharing. 
+>
+> (Ref: [CISA-2024](#references))
 
-### 🟨 SBOM Assembler
+### SBOM Assembler
 
 SBOM Assemblers collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_.
 This role is very similar to SBOM Author roles, but while an SBOM Author mainly concerns themselves with the creation of authoritative meta fields, the SBOM Assembler ensures they are complete and correct.
@@ -103,7 +116,8 @@ This role is very similar to SBOM Author roles, but while an SBOM Author mainly 
 > [!NOTE]
 > FIXME – Check if the above is sane.
 
-### 🟩 SBOM Distributor
+
+### SBOM Distributor
 
 > [!NOTE]
 > FIXME – Check if this is sane.
@@ -111,7 +125,7 @@ This role is very similar to SBOM Author roles, but while an SBOM Author mainly 
 SBOM Distributor roles distribute, curate, or index SBOM metadata — _They make sure the metadata and related artifacts are made **Available** to others_.
 They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
 
-#### NTIA Definition
+#### CISA Definition
 
 > Receives SBOMs for the purpose of sharing them with SBOM Consumers or other Distributors.
 >
@@ -119,8 +133,11 @@ They don't have any specific metadata fields that are commonly used across the d
 > * Discovery: Mechanism used by the consumer to know the SBOM exists and how to access it.
 > * Access: Access control mechanisms used by the author or provider to regulate who can view or use an SBOM.
 > * Transport: Mechanism provided by the author or distributor to transfer an SBOM.  Also, the action of the consumer receiving an SBOM.
+>
+> (Ref: [CISA-2024](#references))
 
-### 🟦 SBOM Consumer
+
+### SBOM Consumer
 
 > [!NOTE]
 > FIXME – Check if this is sane.
@@ -128,23 +145,15 @@ They don't have any specific metadata fields that are commonly used across the d
 SBOM Consumer roles consume, aggregate or verify SBOM metadata — _They make sure metadata and related artifacts are **Complete**, **Correct** or **Compliant**_.
 They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles.
 
-#### NTIA Definition
+#### CISA Definition
 
 > Receives the transferred SBOM.
 > This could include roles such as third parties, authors, integrators, and end users.
 >
 > The role of the SBOM Distributor is a new addition to the SBOM sharing discussion.
 > The role is introduced to capture the role of organizations that neither produce SBOMs nor make use of SBOM data.
-
-
-## Color-coding legend for SBOM Roles
-
-The color-coding is used in this document to help illustrate different SBOM activities.
-
-* 🟥 Create, define, sign SBOM metadata — _**SBOM Author** makes sure it and related artifacts **Exist**_.
-* 🟨 Assemble, update, annotate SBOM metadata — _**SBOM Assembler** makes sure it and related artifacts are **Current**_.
-* 🟩 Distribute, curate, index SBOM metadata — _**SBOM Distributor** makes sure it and related artifacts are made **Available** to others_.
-* 🟦 Consume, aggregate, verify SBOM metadata — _**SBOM Consumer** makes sure it and related artifacts are **Complete**, **Correct** or **Compliant**_.
+>
+> (Ref: [CISA-2024](#references))
 
 
 ## An idealized Open Source supply-chain graph
@@ -753,7 +762,7 @@ graph TB
 * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28.
 
 
-## Commentary and TODO/FIXME points
+## Commentary and TODO/FIXME points (TODO: remove when done)
 
 1. Open Source... Author -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor -> Importer
 2. Open Source... Author -> Author w/Steward -> Manufacturer
@@ -761,9 +770,9 @@ graph TB
 
 ## License and use of this document
 
-Version: 0.5.1
-License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
-Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
+* Version: 0.5.1
+* License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
+* Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.
 

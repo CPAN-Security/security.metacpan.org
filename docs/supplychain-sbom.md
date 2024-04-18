@@ -37,6 +37,12 @@ This document attempts to offer an overview of these roles, how they are related
     - When an SBOM Role is gathering SBOM metadata from different dependencies, they are an [SBOM Assembler](glossary#sbom-assembler--role---).
 
 
+## SBOM Roles
+
+It may be useful to distinguish between roles that are focused on the SBOM documents themselves, from roles that are involved in a supply-chain activity.
+For further reading, please see CISA's "SBOM Sharing Roles and Considerations" document ([CISA-2024](#references)).
+
+
 ```mermaid
 stateDiagram-v2
     direction LR
@@ -58,14 +64,87 @@ stateDiagram-v2
 
 ```
 
-### Color-coding legend for SBOM Roles
+### 🟥 SBOM Author
+
+SBOM Authors create, define or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_.
+This mostly means authoritative metadata fields as laid out in the different [supply-chain roles](#supply-chain-roles-and-metadata) below.
+In addition to these fields, they care about the following common ones.
+
+| Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
+| -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
+| 🟥 | SBOM Type                              | No         |              |                                                                   |      |                         |
+| 🟥 | SBOM Author                            | Yes        | Text         | $.metadata.author                                                 |      | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | $.metadata.timestamp                                              |      | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟥 | SBOM Generation Tool                   | No         | List         | $.metadata.tools[]                                                |      |                         |
+| 🟥 | SBOM Serial Number                     | Yes        | UUID         | $.metadata.serialNumber                                           |      |                         |
+| 🟥 | CycloneDX bomFormat                    | Yes        | Enum         | $.properties.bomFormat                                            | N/A  | CycloneDX 1.6           |
+| 🟥 | CycloneDX specVersion                  | Yes        | Int          | $.properties.specVersion                                          | N/A  | CycloneDX 1.6           |
+
+#### NTIA Definition
+
+> Creates an SBOM.
+> This document assumes that each SBOM created is available for sharing. 
+
+### 🟨 SBOM Assembler
+
+SBOM Assemblers collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_.
+This role is very similar to SBOM Author roles, but while an SBOM Author mainly concerns themselves with the creation of authoritative meta fields, the SBOM Assembler ensures they are complete and correct.
+
+| Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
+| -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
+| 🟨 | SBOM Type                              | No         |              |                                                                   |      |                         |
+| 🟥 | SBOM Author                            | Yes        | Text         | $.metadata.author                                                 |      | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | $.metadata.timestamp                                              |      | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟨 | SBOM Generation Tool                   | No         | List         | $.metadata.tools[]                                                |      |                         |
+| 🟥 | SBOM Serial Number                     | Yes        | UUID         | $.metadata.serialNumber                                           |      |                         |
+| 🟨 | CycloneDX bomFormat                    | Yes        | Enum         | $.properties.bomFormat                                            | N/A  | CycloneDX 1.6           |
+| 🟨 | CycloneDX specVersion                  | Yes        | Int          | $.properties.specVersion                                          | N/A  | CycloneDX 1.6           |
+
+> [!NOTE]
+> FIXME – Check if the above is sane.
+
+### 🟩 SBOM Distributor
+
+> [!NOTE]
+> FIXME – Check if this is sane.
+
+SBOM Distributor roles distribute, curate, or index SBOM metadata — _They make sure the metadata and related artifacts are made **Available** to others_.
+They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
+
+#### NTIA Definition
+
+> Receives SBOMs for the purpose of sharing them with SBOM Consumers or other Distributors.
+>
+> The SBOM sharing lifecycle phases are borrowed from the SBOM Sharing Lifecycle Report.
+> * Discovery: Mechanism used by the consumer to know the SBOM exists and how to access it.
+> * Access: Access control mechanisms used by the author or provider to regulate who can view or use an SBOM.
+> * Transport: Mechanism provided by the author or distributor to transfer an SBOM.  Also, the action of the consumer receiving an SBOM.
+
+### 🟦 SBOM Consumer
+
+> [!NOTE]
+> FIXME – Check if this is sane.
+
+SBOM Consumer roles consume, aggregate or verify SBOM metadata — _They make sure metadata and related artifacts are **Complete**, **Correct** or **Compliant**_.
+They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles.
+
+#### NTIA Definition
+
+> Receives the transferred SBOM.
+> This could include roles such as third parties, authors, integrators, and end users.
+>
+> The role of the SBOM Distributor is a new addition to the SBOM sharing discussion.
+> The role is introduced to capture the role of organizations that neither produce SBOMs nor make use of SBOM data.
+
+
+## Color-coding legend for SBOM Roles
 
 The color-coding is used in this document to help illustrate different SBOM activities.
 
 * 🟥 Create, define, sign SBOM metadata — _**SBOM Author** makes sure it and related artifacts **Exist**_.
 * 🟨 Assemble, update, annotate SBOM metadata — _**SBOM Assembler** makes sure it and related artifacts are **Current**_.
 * 🟩 Distribute, curate, index SBOM metadata — _**SBOM Distributor** makes sure it and related artifacts are made **Available** to others_.
-* 🟦 Consume, verify SBOM metadata — _**SBOM Consumer** makes sure it and related artifacts are **Complete**, **Correct** or **Compliant**_.
+* 🟦 Consume, aggregate, verify SBOM metadata — _**SBOM Consumer** makes sure it and related artifacts are **Complete**, **Correct** or **Compliant**_.
 
 
 ## An idealized Open Source supply-chain graph
@@ -215,41 +294,8 @@ stateDiagram-v2
 ```
 
 
-## SBOM Roles
-
-
-### SBOM Author
-
-SBOM Author roles care about metadata fields as laid out in the different supply-chain roles below. In addition to these fields, they care about the following common ones.
-
-| Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
-| -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
-| 🟥 | SBOM Type                              | Yes        |              |                                                                   |      |                         |
-| 🟥 | SBOM Author                            | Yes        | Text         | $.metadata.author                                                 |      | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | $.metadata.timestamp                                              |      | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟥 | SBOM Generation Tool                   | No         | List         | $.metadata.tools[]                                                |      |                         |
-| 🟥 | SBOM Serial Number                     | Yes        | UUID         | $.metadata.serialNumber                                           |      |                         |
-| 🟥 | CycloneDX bomFormat                    | Yes        | Enum         | $.properties.bomFormat                                            | N/A  | CycloneDX 1.6           |
-| 🟥 | CycloneDX specVersion                  | Yes        | Int          | $.properties.specVersion                                          | N/A  | CycloneDX 1.6           |
-
-
-### SBOM Distributor
-
-SBOM Distributor roles don't have any specific metadata fields that are commonly used across the different supply-chain distributor roles.
-
-> [!NOTE]
-> FIXME – Check if the above is correct
-
-
-### SBOM Consumer
-
-SBOM Consumer roles don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles.
-
-> [!NOTE]
-> FIXME – Check if the above is correct
-
-
 ## Supply-chain Ecosystems and Environments
+
 
 ### Author Environment
 
@@ -325,7 +371,6 @@ A website or tool that offers a public collaboration repository to Authors, so t
 
 
 ## Supply-chain roles and metadata
-
 
 ### Owner
 

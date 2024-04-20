@@ -18,23 +18,29 @@ mermaid: true
 
 ## About this document
 
-In [Open-Source Software](glossary.md#open-source-software) supply chains, we find people filling distinct roles that each care about some metadata or tasks in SBOMs.
+* In [Open-Source Software](glossary.md#open-source-software) supply chains, we find people filling distinct roles that each care about some metadata or tasks in SBOMs.
+* This document attempts to offer an overview of these roles, how they are related, and what each role cares about.
+* The rationale behind this document lays in the document author's perceiving that there were no good sources that described how SBOMs should (or could!) be used throughout an Open Source Software supply-chain.
+    * Much of existing documentation focused heavily on SBOMs from the perspective of a software suppliers (businesses) or consumers.
+    * Frustration with the lack of a clear Open Source perspective, lead the author to the SBOM devroom at FOSDEM 2024 to offer [a rant]() about what he perceived as a miserable state of affairs.
+* This document is in large part the author's attempt at taking notes while figuring out what the state of the art in SBOM is, all while swearing and cursing at the mess in front of them. :-)
+* Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation, taking incremental steps toward more transparent and accountable Open Source supply-chains.
 
-This document attempts to offer an overview of these roles, how they are related, and hat each role cares about.
+For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
 
 ## The relation between Supply-chain Roles and SBOM Roles
 
-- Any single person working within a supply-chain may have one or more roles, and switch between them as needed.
-- Each supply-chain role described in this document _MAY_ care about some specific SBOM metadata and their accompanying artifacts.
-- Each SBOM role described in this document _MUST_ also have a supply-chain role.
-- If a supply-chain role cares about some SBOM metadata, they have one or more of the following SBOM roles.
-    - When a Supply-chain Role creates or updates an SBOM, we call them an [SBOM Author](glossary#sbom-author--role-).
-    - When a Supply-chain Role distributes an SBOM, we call them an [SBOM Distributor](glossary#sbom-distributor--role-).
-    - When a Supply-chain Role consumes an SBOM, we call them an [SBOM Consumer](glossary#sbom-consumer--role-)
-- SBOM Authors may also be differentiated by the fact that they produce original (authoritative) metadata fields, or just assemble or update existing ones.
-    - When an SBOM Role is the authoritative source of some metadata, they are an [SBOM Author](glossary#sbom-author--role-).
-    - When an SBOM Role is gathering SBOM metadata from different dependencies, they are an [SBOM Assembler](glossary#sbom-assembler--role---).
+* Any single person working within a supply-chain may have one or more roles, and switch between them as needed.
+* Each supply-chain role described in this document _MAY_ care about some specific SBOM metadata and their accompanying artifacts.
+* Each SBOM role described in this document _MUST_ also have a supply-chain role.
+* If a supply-chain role cares about some SBOM metadata, they have one or more of the following SBOM roles.
+    * When a Supply-chain Role creates or updates an SBOM, we call them an [SBOM Author](glossary#sbom-author--role-).
+    * When a Supply-chain Role distributes an SBOM, we call them an [SBOM Distributor](glossary#sbom-distributor--role-).
+    * When a Supply-chain Role consumes an SBOM, we call them an [SBOM Consumer](glossary#sbom-consumer--role-)
+* SBOM Authors may also be differentiated by the fact that they produce original (authoritative) metadata fields, or just assemble or update existing ones.
+    * When an SBOM Role is the authoritative source of some metadata, they are an [SBOM Author](glossary#sbom-author--role-).
+    * When an SBOM Role is gathering SBOM metadata from different dependencies, they are an [SBOM Assembler](glossary#sbom-assembler--role---).
 
 
 ## SBOM Roles
@@ -77,9 +83,15 @@ The color-coding is used in this document to help illustrate different SBOM acti
 
 ### SBOM Author
 
-SBOM Authors create, define or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_.
-This mostly means authoritative metadata fields as laid out in the different [Supply-chain Roles](#supply-chain-roles-and-metadata) below.
-In addition to these fields, they care about the following common ones.
+> [!NOTE]
+> FIXME – Check if this is sane.
+
+* SBOM Authors create, define or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_. (CPANSec-2024)
+    * This mostly means authoritative metadata fields as laid out in the different [Supply-chain Roles](#supply-chain-roles-and-metadata) below.
+    * In addition to fields encountered throughout the supply-chain, they care about the fields listed in the table below.
+* They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
+* Creates an SBOM. (CISA-2024)
+    *  This document assumes that each SBOM created is available for sharing. 
 
 | Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
 | -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
@@ -91,17 +103,17 @@ In addition to these fields, they care about the following common ones.
 | 🟥 | CycloneDX bomFormat                    | Yes        | Enum         | $.properties.bomFormat                                            | N/A  | CycloneDX 1.6           |
 | 🟥 | CycloneDX specVersion                  | Yes        | Int          | $.properties.specVersion                                          | N/A  | CycloneDX 1.6           |
 
-#### CISA Definition
+(Ref: [CISA-2024](#references), [NTIA-2021](#references), [CPANSec-2024](#references))
 
-> Creates an SBOM.
-> This document assumes that each SBOM created is available for sharing. 
->
-> (Ref: [CISA-2024](#references))
 
 ### SBOM Assembler
 
-SBOM Assemblers collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_.
-This role is very similar to SBOM Author roles, but while an SBOM Author mainly concerns themselves with the creation of authoritative meta fields, the SBOM Assembler ensures they are complete and correct.
+> [!NOTE]
+> FIXME – Check if this is sane.
+
+* SBOM Assemblers collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_. (CPANSec-2024)
+    * This role is very similar to SBOM Author roles, but while an SBOM Author mainly concerns themselves with the creation of authoritative meta fields, the SBOM Assembler ensures they are complete and correct.
+* They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased) 
 
 | Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
 | -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
@@ -113,8 +125,7 @@ This role is very similar to SBOM Author roles, but while an SBOM Author mainly 
 | 🟨 | CycloneDX bomFormat                    | Yes        | Enum         | $.properties.bomFormat                                            | N/A  | CycloneDX 1.6           |
 | 🟨 | CycloneDX specVersion                  | Yes        | Int          | $.properties.specVersion                                          | N/A  | CycloneDX 1.6           |
 
-> [!NOTE]
-> FIXME – Check if the above is sane.
+(Ref: [NTIA-2021](#references), [CPANSec-2024](#references))
 
 
 ### SBOM Distributor
@@ -122,19 +133,15 @@ This role is very similar to SBOM Author roles, but while an SBOM Author mainly 
 > [!NOTE]
 > FIXME – Check if this is sane.
 
-SBOM Distributor roles distribute, curate, or index SBOM metadata — _They make sure the metadata and related artifacts are made **Available** to others_.
-They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
+* SBOM Distributor roles distribute, curate, or index SBOM metadata — _They make sure the metadata and related artifacts are made **Available** to others_. (CPANSec-2024)
+    * They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
+* Receives SBOMs for the purpose of sharing them with SBOM Consumers or other Distributors. (CISA-2024)
+* Additionally, an SBOM Distributor may care about the following activities. (CISA-2023)
+    * Discovery: Mechanism used by the consumer to know the SBOM exists and how to access it.
+    * Access: Access control mechanisms used by the author or provider to regulate who can view or use an SBOM.
+    * Transport: Mechanism provided by the author or distributor to transfer an SBOM.  Also, the action of the consumer receiving an SBOM.
 
-#### CISA Definition
-
-> Receives SBOMs for the purpose of sharing them with SBOM Consumers or other Distributors.
->
-> The SBOM sharing lifecycle phases are borrowed from the SBOM Sharing Lifecycle Report.
-> * Discovery: Mechanism used by the consumer to know the SBOM exists and how to access it.
-> * Access: Access control mechanisms used by the author or provider to regulate who can view or use an SBOM.
-> * Transport: Mechanism provided by the author or distributor to transfer an SBOM.  Also, the action of the consumer receiving an SBOM.
->
-> (Ref: [CISA-2024](#references))
+(Ref: [CISA-2023](#references), [CISA-2024](#references), [CPANSec-2024](#references))
 
 
 ### SBOM Consumer
@@ -142,18 +149,13 @@ They don't have any specific metadata fields that are commonly used across the d
 > [!NOTE]
 > FIXME – Check if this is sane.
 
-SBOM Consumer roles consume, aggregate or verify SBOM metadata — _They make sure metadata and related artifacts are **Complete**, **Correct** or **Compliant**_.
-They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles.
+* SBOM Consumer roles gather, inspect, analyze, aggregate or verify SBOM metadata — _They make sure metadata and related artifacts are **Useful**, **Complete**, **Correct** or **Compliant**_. (CPANSec-2024)
+    * They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles.
+* They may view SBOM files to understand the contents, and use this information to support decision making & business processes, or to compare and contrast SBOMs to discover significant changes or vulnerabilities. (NTIA-2021, "Consume" category)
+* Receives the transferred SBOM. (CISA-2024)
+    * This could include roles such as third parties, authors, integrators, and end users.
 
-#### CISA Definition
-
-> Receives the transferred SBOM.
-> This could include roles such as third parties, authors, integrators, and end users.
->
-> The role of the SBOM Distributor is a new addition to the SBOM sharing discussion.
-> The role is introduced to capture the role of organizations that neither produce SBOMs nor make use of SBOM data.
->
-> (Ref: [CISA-2024](#references))
+(Ref: [CISA-2024](#references), [NTIA-2021](#references), [CPANSec-2024](#references))
 
 
 ## An idealized Open Source supply-chain graph
@@ -749,17 +751,20 @@ graph TB
 
 ## References
 
-* (CRA-Rec-15) [Cyber Resilience Act, Recital (15)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17) Economic operators, Dated 2024-03-12
-* (CRA-Rec-15) [Cyber Resilience Act, Recital (18)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20) Open Source Software Contributors, Dated 2024-03-12
-* (CRA-Rec-15) [Cyber Resilience Act, Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Stewards, Dated 2024-03-12
-* (CRA-Art-20) [Cyber Resilience Act, Article 20](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=202) Obligations of distributors, Dated 2024-03-12
-* (CRA-Art-47) [Cyber Resilience Act, Article 47](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=249) Operational obligations of notified bodies, Dated 2024-03-12
+* (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28.
 * (CRA-AII) [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303) Information and Instructions to the User, Dated 2024-03-12
 * (CRA-AV) [Cyber Resilience Act, Annex V](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=311) EU Declaration of Conformity, Dated 2024-03-12
 * (CRA-AVII) [Cyber Resilience Act, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314) Contents of the Technical Documentation, Dated 2024-03-12
-* (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
+* (CRA-Art-20) [Cyber Resilience Act, Article 20](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=202) Obligations of distributors, Dated 2024-03-12
+* (CRA-Art-47) [Cyber Resilience Act, Article 47](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=249) Operational obligations of notified bodies, Dated 2024-03-12
+* (CRA-Rec-15) [Cyber Resilience Act, Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17) Economic operators, Dated 2024-03-12
+* (CRA-Rec-15) [Cyber Resilience Act, Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20) Open Source Software Contributors, Dated 2024-03-12
+* (CRA-Rec-15) [Cyber Resilience Act, Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Stewards, Dated 2024-03-12
 * (DE-TR) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 1.1, published 2023-11-28.
-* (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28.
+* (NTIA-2021) [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30.
+* (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
+
+* (CPANSec-2024) CPAN Security Group commentary by Author.
 
 
 ## Commentary and TODO/FIXME points (TODO: remove when done)

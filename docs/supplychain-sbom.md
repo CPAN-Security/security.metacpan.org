@@ -71,7 +71,7 @@ The color-coding is used in this document to help illustrate different SBOM acti
 
 * 🟥 Create, define, sign SBOM metadata — _**SBOM Author** makes sure it and related artifacts **Exist**_.
 * 🟨 Assemble, update, annotate SBOM metadata — _**SBOM Assembler** makes sure it and related artifacts are **Current**_.
-* 🟩 Distribute, curate, index SBOM metadata — _**SBOM Distributor** makes sure it and related artifacts are made **Available** to others_.
+* 🟩 Distribute, curate, attest, index SBOM metadata — _**SBOM Distributor** makes sure it and related artifacts are made **Available** to others_.
 * 🟦 Consume, aggregate, verify SBOM metadata — _**SBOM Consumer** makes sure it and related artifacts are **Complete**, **Correct** or **Compliant**_.
 
 
@@ -418,7 +418,7 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 | Do | Field name                    | Required | Data type | CycloneDX (PRE-PROPOSAL; UNSUPPORTED)                      | SPDX | Required by                        |
 | -- | :---------------------------- | :------- | :-------- | :--------------------------------------------------------- | ---- | ---------------------------------- |
-| 🟥 | Owner Name (Manufacturer)     | Yes      | Text, URL | $.metadata[supplier,manufacturer], $.components[].supplier |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
+| 🟥 | Owner Name (Manufacturer)     | Yes      | Text, URL | \$.metadata[supplier,manufacturer], \$.components[].supplier |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
 | 🟥 | CE Declaration of Conformity  | Yes      | URL       | $.externalReferences[?(@.conformity-declaration)]          |      | CRA-AII(6), CRA-AV                 |
 | 🟥 | CE Support End Date           | Yes      | DateTime  | $.externalReferences[?(@.support-horizon)]                 |      | CRA-AII(7)                         |
 | 🟥 | CE Technical Documentation    | Yes      | URL       | $.externalReferences[?(@.documentation)]                   |      | CRA-AII(8), CRA-AVII               |
@@ -457,7 +457,7 @@ Not to be confused with the [SBOM Author](#sbom-author--role-) role.
 | -- | :----------------------------- | :------- | :----------- | :---------------------------------------------------------------- | ---- | ------------------------------------------ |
 | 🟥 | Component Name                 | Yes      | Text         | $.components[].name                                               |      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |
 | 🟥 | Version                        | Yes      | Text         | $.components[].version                                            |      | NTIA-SBOM, DE-TR.5.2.2                     |
-| 🟥 | Dependencies                   | Yes      | List         | $components[], $.dependencies[]                                   |      | CRA-AII(5), NTIA-SBOM                      |
+| 🟥 | Dependencies                   | Yes      | List         | $.components[], $.dependencies[]                                  |      | CRA-AII(5), NTIA-SBOM                      |
 | 🟥 | Security contact               | Yes      | URL          | $.externalReferences[].security-contact                           |      | CRA-AII(2)                                 |
 | 🟥 | Unique ID, Product ID          | Yes      | PURL         | $.components[].purl                                               |      | CRA-AII(3), NTIA-SBOM, CRA-AV              |
 | 🟥 | Purpose, Intended Use          | Yes      | Text         | $.components[].description                                        |      | CRA-AII(4)                                 |
@@ -567,7 +567,7 @@ Concerns themselves with correct package format and structure, and that package 
 
 | Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by                        |
 | -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | ---------------------------------- |
-| 🟨 | Dependencies                   | Yes      | List         | $components[], $.dependencies[]                        |      | CRA-AII(5), NTIA-SBOM              |
+| 🟨 | Dependencies                   | Yes      | List         | $.components[], $.dependencies[]                       |      | CRA-AII(5), NTIA-SBOM              |
 | 🟨 | Download location              | No       | URL          |                                                        |      |                                    |
 | 🟨 | SBOM Location                  | No       | URL          | $.components.externalReferences[].bom                  |      | CRA-AII(9)                         |
 

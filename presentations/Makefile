@@ -19,5 +19,5 @@ perlkohacon-cpan-sbom-talk/index.html: perlkohacon-cpan-sbom-talk.md
 pts2023-nis2-cra-intro/index.html: pts2023-nis2-cra-intro.md
 	mdslides pts2023-nis2-cra-intro.md --include ../media
 
-pts2024-cra-intro/index.html: pts2024-cra-intro.md
-	mdslides pts2024-cra-intro.md --include ../media
+pts2024-cra-update/index.html: pts2024-cra-update.md
+	mdslides pts2024-cra-update.md --include ../media

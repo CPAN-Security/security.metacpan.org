@@ -772,7 +772,7 @@ graph TB
 
 1. Open Source... Author -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor -> Importer
 2. Open Source... Author -> Author w/Steward -> Manufacturer
-
+3. Add graph/description on build steps, to illustrate how different SBOM files may be found, sourced, generated, assembled and installed for later use or analysis.
 
 ## License and use of this document
 

@@ -6,6 +6,7 @@ permalink: /presentations/
 
 This directory contains presentations relevant to CPANSec given at conferences and other events. For now, the following have been published:
 
+* Perl Toolchain Summit 2023 in Lyon, France – Introduction to NIS2 and CRA ([Video](https://www.youtube.com/watch?v=7RjIh0b7fsI), [Slides](nis2-cra-intro/), [Blog post](https://code.foo.no/2023/05/05/can-nis2-and-cra-save-open-source/))
 * TPRC 2023 in Toronto, Canada – Lightning talk [Video](https://www.youtube.com/watch?v=_lOiXFXZv3I), [Slides](tprc2023-cpan-sec-lightning-talk/)
 * Perl & Koha con 2023 in Helsinki, Finland – Lightning talk [Slides](perlkohacon-cpan-sec-lightning-talk/)
 * Perl & Koha con 2023 in Helsinki, Finland – SBOM Introduction [Slides](perlkohacon-cpan-sbom-talk/)

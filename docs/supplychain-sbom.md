@@ -22,8 +22,8 @@ mermaid: true
 * This document attempts to offer an overview of these roles, how they are related, and what each role cares about.
 * The rationale behind this document lays in the document author's perceiving that there were no good sources that described how SBOMs should (or could!) be used throughout an Open Source Software supply-chain.
     * Much of existing documentation focused heavily on SBOMs from the perspective of a software suppliers (businesses) or consumers.
-    * Frustration with the lack of a clear Open Source perspective, lead the author to the SBOM devroom at FOSDEM 2024 to offer [a rant]() about what he perceived as a miserable state of affairs.
-* This document is in large part the author's attempt at taking notes while figuring out what the state of the art in SBOM is, all while swearing and cursing at the mess in front of them. :-)
+    * Frustration with the lack of a clear Open Source perspective brought the author to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
+* This document exists in large part due to the author's attempt at taking notes while figuring out what the state of the art in SBOM.
 * Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation, taking incremental steps toward more transparent and accountable Open Source supply-chains.
 
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
@@ -113,7 +113,7 @@ The color-coding is used in this document to help illustrate different SBOM acti
 
 * SBOM Assemblers collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_. (CPANSec-2024)
     * This role is very similar to SBOM Author roles, but while an SBOM Author mainly concerns themselves with the creation of authoritative meta fields, the SBOM Assembler ensures they are complete and correct.
-* They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased) 
+* They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
 
 | Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
 | -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
@@ -772,7 +772,7 @@ graph TB
 
 1. Open Source... Author -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor -> Importer
 2. Open Source... Author -> Author w/Steward -> Manufacturer
-3. Add graph/description on build steps, to illustrate how different SBOM files may be found, sourced, generated, assembled and installed for later use or analysis.
+3. Add graph/description on build steps, to illustrate how different SBOM files may be found, sourced, generated, assembled, installed and shared for later verification or analysis.
 
 ## License and use of this document
 

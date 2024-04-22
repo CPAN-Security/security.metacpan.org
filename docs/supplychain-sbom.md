@@ -28,6 +28,10 @@ mermaid: true
 
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
+### Purpose TL;DR
+
+In this document we're trying to identify and expose all places and roles in an Open Source supply chain where someone cares about some metadata (and it's associated code) that someone downstream needs for detecting and mitigating vulnerabilities.
+
 
 ## The relation between Supply-chain Roles and SBOM Roles
 

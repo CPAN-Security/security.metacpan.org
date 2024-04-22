@@ -167,19 +167,19 @@ toc: true
 
 #### Dependency (Embedded) ✍️
 
-> TODO
+> FIXME
 
 #### Dependency (Required, Unresolved) ✍️
 
-> TODO
+> FIXME
 
 #### Dependency (Resolved) ✍️
 
-> TODO
+> FIXME
 
 #### Dependency (Pinned) ✍️
 
-> TODO
+> FIXME
 
 ### Distributor ⚠️
 
@@ -187,7 +187,7 @@ toc: true
 > The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
 > This means if an [Importer](#importer) or distributor applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail. (CRA 2024-03 Article 21, 22)
 >
-> TODO: Confirm with lawyer after final version of CRA is adopted.
+> FIXME: Confirm with lawyer after final version of CRA is adopted.
 
 > 1. A natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the Union market without affecting its properties. (2024-03)
 >
@@ -229,7 +229,7 @@ toc: true
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
 
-> TODO: Add some clarification regarding Manufacturers, Importers, Distributors and Open Source Stewards.
+> FIXME: Add some clarification regarding Manufacturers, Importers, Distributors and Open Source Stewards.
 
 ### Manufacturer
 
@@ -246,7 +246,7 @@ toc: true
 ### Open-source software steward ⚠️
 
 > [!NOTE]
-> TODO: This is a definition that was added to the CRA on 2023-12-20, meaning it may change in the final version of the regulation.
+> FIXME: This is a definition that was added to the CRA on 2023-12-20, meaning it may change in the final version of the regulation.
 
 > 1. Any legal person, other than a [manufacturer](#manufacturer), which has the purpose or objective to systematically provide support on a sustained basis for the development of specific products with digital elements qualifying as free and open-source software that are intended for commercial activities, and ensures the viability of those products.
 >

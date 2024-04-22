@@ -768,11 +768,19 @@ graph TB
 * (CPANSec-2024) CPAN Security Group commentary by Author.
 
 
-## Commentary and TODO/FIXME points (TODO: remove when done)
+## Commentary and FIXME points (FIXME: remove when done)
 
-1. Open Source... Author -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor -> Importer
-2. Open Source... Author -> Author w/Steward -> Manufacturer
+1. Open Source in CRA... Author -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor -> Importer
+2. Open Source in CRA (simplified)... Hobbyist -> Author -> Author w/Steward -> Manufacturer
 3. Add graph/description on build steps, to illustrate how different SBOM files may be found, sourced, generated, assembled, installed and shared for later verification or analysis.
+4. Clearer distinction between "Author", "SBOM Author", "Developer", and "Integrator". Should "Author" strictly be about SBOM production, and an Open Source Developer be called a "Developer"? In that case, someone who doesn't publish as Open Source, would have to be called "Integrator". Is that OK?
+5. Possible inclusion of "Config Ecosystems" or "Data Ecosystems" to take into account vulnerabilities/malware found in plugins, AI models or other shared data.
+6. Enumerate what distinguishes the different environments
+    * Language: Not built, not deployed, Is source code, No execution environment
+    * Distro/package: Built, Deployed, Is object, No execution environment
+    * Model/plugin: Built, Not deployed, Is data, No execution environment (FIXME: unsure)
+    * Image/container: Built, Deployed, Is object, Has execution environment
+
 
 ## License and use of this document
 

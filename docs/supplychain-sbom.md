@@ -784,6 +784,7 @@ graph TB
     * Distro/package: Built, Deployed, Is object, No execution environment
     * Model/plugin: Built, Not deployed, Is data, No execution environment (FIXME: unsure)
     * Image/container: Built, Deployed, Is object, Has execution environment
+7. Enumerate the different dependency types; Author/develop, configure, build, test, runtime, resolved, required/unresolved, embedded, post-deploy (plugin/dynamic), cross-ecosystem vs. in-ecosystem, up-river vs. down-river, upstream vs. downstream, reverse, assumed/implied vs. stated/explicit, patch deps, system deps, environment deps, ecosystem deps
 
 
 ## License and use of this document

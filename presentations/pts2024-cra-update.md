@@ -16,7 +16,7 @@
 [comment]: # (controlsBackArrows: "true")
 
 
-## Software Bill of Materials
+## Cyber Resilience Act, SBOMs and CPAN
 
 PTS 2024
 
@@ -42,76 +42,99 @@ Note:
 
 [comment]: # (!!!)
 
-### What is & why SBOM?
+## About this session
 
-Imagine…
+* Let's pretend we're "scouts" on a fact-finding mission
+* We have discovered there has been changes to the landscape
+* Our maps need updating!
 
-A serious vulnerability just got announced!
 
 Note:
 
-Imagine an announcement...
+Inspiration from Julia Galef's "The Scout Mindset" book (2021)
 
 
 [comment]: # (!!!)
 
-### A new vulnerability!
+## EU Cyber Resilience Act
 
-(previous examples)
+* Law was approved by the EU Parliament March 12th 2024 [1]
+* Final translations/fixes ongoing
+* Law is adopted when EU Council gives final approval
+* Three year implementation period
+* Law takes effect in Q2 2027
 
-* [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed) – OpenSSL, April 2014
-* [Solarwinds](https://en.wikipedia.org/wiki/2020_United_States_federal_government_data_breach) – US Gov't data breach, March 2020
-* [Log4Shell](https://en.wikipedia.org/wiki/Log4Shell) – Java logging library, December 2021
+
+[1] [Resolution T9-0130/2024](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html)
 
 Note:
 
-* These are the large well-known ones in recent years.
-* There are more, and many that only affect a few of us.
+Law is expected to be approved by the Council in April 2024!
 
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (!!!)
 
-### A new vulnerability!
+## CRA Applies to...
 
-* Do you know if **any** of your software **anywhere** in your organization is affected?
+* All Manufacturers that wish to place "Products with Digital Elements" on the EU market.
 
+> * Product with Digital Elements: CRA-Art-3 (1), (4), (6), (7)
+> * Placing on the market: CRA-Art-3 (21), (22)
 
-[comment]: # (!!! data-auto-animate)
+Note:
 
-### A new vulnerability!
-
-* Do you know if **any** of your software **anywhere** in your organization is affected?
-* Can you **quickly** show where it is used?
-
-
-[comment]: # (!!! data-auto-animate)
-
-### A new vulnerability!
-
-* Do you know if **any** of your software **anywhere** in your organization is affected?
-* Can you **quickly** show where it is used?
-* Even if it's in your transitive (indirect) dependencies?
+Devices, components, routers, toys, etc. Anything which has software may be affected!
 
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (!!!)
 
-### A new vulnerability!
+## Manufacturer
 
-* Do you know if **any** of your software **anywhere** in your organization is affected?
-* Can you **quickly** show where it is used?
-* Even if it's in your transitive (indirect) dependencies?
-* Even if it's an **Open Source** dependency outside your control?
+* A natural or legal person who
+    * develops or manufactures products with digital elements
+    * or has products with digital elements designed, developed or manufactured,
+    * and markets them under its name or trademark,
+    * whether for payment, monetisation or free of charge
+
+> * CRA-Art-3 (12)
+
+[comment]: # (!!!)
+
+## Requirements to Manufacturers
+
+* Place a CE mark on their products
+* Determine the product support period (10 years)
+
+![CE Mark](media/280px-Conformité_Européenne.png)
 
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (!!!)
+
+## Requirements to Manufacturers
+
+* Have **no known vulnerabilities** in their products
+* Make security updates available to customers
+* Set up a single point of contact
+
+
+[comment]: # (!!!)
+
+## Requirements to Manufacturers
+
+* Take part in the EU early warning notification regime for responding to actively exploited vulnerabilities
+    * Submit early warning within 24h after exploit discovery
+    * Submit vulnerability notification within 72h, including corrective measures
+    * Submit a final report no later than 14 days after discovery
+* Reports must be submitted to a common EU reporting platform
+
+> * CRA-Art-14 (1), (2), (3), (4), etc.
+
+
+[comment]: # (!!!)
+
 
 ## Regulators and lawmakers step in
 
-* US [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) _Improving the Nation’s Cybersecurity_
-* EU [NIS2 Directive](https://digital-strategy.ec.europa.eu/en/policies/nis2-directive) 
-* EU [Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)
-
-![CE Mark](media/280px-Conformité_Européenne.png)
 
 
 Note:
@@ -127,7 +150,7 @@ Note:
 * CRA
     * Cyber Resilience Act
     * CE certification of software used in and with **internet-connected devices**
-    * Must be implemented by July 2025 (estimated)
+    * Must be implemented by July 2027 (estimated)
 
 
 

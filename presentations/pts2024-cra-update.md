@@ -30,8 +30,6 @@ Note:
 
 * Presentation from 2023 is still _mostly correct_ (80-90%), and many of the concerns and worries laid out there are **still relevant**
 
-* CRA updated March 12th 2024, accepted by EU Parliament vote.
-* Becomes EU law when finalized text to be signed. This is likely to happen very soon (as of April 22, 2024)
 
 * A new role was specified in December 2023 – the Open Source Software **Steward**
     * The purpose of this role is to help FOSS communities become an active part in the new security landscape without having to worry about the liability risks
@@ -48,6 +46,7 @@ Note:
 * We have discovered there has been changes to the landscape
 * Our maps need updating!
 
+* To help, I've added references and confidence %
 
 Note:
 
@@ -64,8 +63,7 @@ Inspiration from Julia Galef's "The Scout Mindset" book (2021)
 * Three year implementation period
 * Law takes effect in Q2 2027
 
-
-[1] [Resolution T9-0130/2024](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html)
+> * [1] [Resolution T9-0130/2024](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html)
 
 Note:
 
@@ -96,7 +94,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
     * and markets them under its name or trademark,
     * whether for payment, monetisation or free of charge
 
-> * CRA-Art-3 (12)
+> * CRA Article 3 (12)
 
 [comment]: # (!!!)
 
@@ -116,6 +114,8 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 * Make security updates available to customers
 * Set up a single point of contact
 
+> * CRA Article 13
+> * CRA Annex I, Part I
 
 [comment]: # (!!!)
 
@@ -127,7 +127,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
     * Submit a final report no later than 14 days after discovery
 * Reports must be submitted to a common EU reporting platform
 
-> * CRA-Art-14 (1), (2), (3), (4), etc.
+> * CRA Article 14 (1), (2), (3), (4), etc.
 
 
 [comment]: # (!!!)

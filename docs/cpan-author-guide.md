@@ -55,6 +55,7 @@ toc: true
 
 # Relevant documentation and guides
 
+* SEI CERT Secure Perl Coding Standard https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard
 * [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
 
 

@@ -5,12 +5,13 @@ description: Reading list for CPANSec contributors
 toc: true
 ---
 
+## Document status: ⚠️  DRAFT
+
 > [!CAUTION]
-> ## Document status: ⚠️  DRAFT
 > This is The CPAN Security Group recommended reading list.
 > If you have any additions or improvements, please [open an issue](https://github.com/CPAN-Security/security.metacpan.org/issues), citing this page.
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/readinglist.md](https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/readinglist.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/readinglist/docs/readinglist.md](https://github.com/CPAN-Security/security.metacpan.org/blob/readinglist/docs/readinglist.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 
 
@@ -35,23 +36,52 @@ toc: true
 * (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
 * (CISA) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations) (March 2024)
 
-### Regulations, directives and laws
+See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
+
+
+## Software identification (naming & versioning)
+
+* [PURL Specification](https://github.com/package-url/purl-spec)
+* (CPAN) [URI::PackageURL](https://github.com/giterlizzi/perl-URI-PackageURL)
+* (CPAN) [CPAN::DistnameInfo](https://github.com/Perl-Toolchain-Gang/CPAN-DistnameInfo)
+
+### Useful articles, papers and resources
+
+* (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis) (October 2023)
+* (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
+
+
+## Provenance & Supply Chain Security
+
+* (OpenSSF) [Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security) (Feb 2024)
+* (OpenSSF) [Build Provenance for All Package Registries](https://repos.openssf.org/build-provenance-for-all-package-registries) (July 2023)
+* (SLSA) [SLSA v1.0 Guiding Principles](https://slsa.dev/spec/v1.0/principles)
+* (SLSA) [SLSA v1.0 Terminology](https://slsa.dev/spec/v1.0/terminologye)
+* (SLSA) [SLSA v1.0 Developer's quick-start guide](https://slsa.dev/get-started)
+* (SLSA) [SLSA v1.0 Infrastructure provider's quick-start guide](https://slsa.dev/how-to-infra)
+
+
+## Transparency Logs
+
+* (OpenSSF) [Sigstore home](https://openssf.org/community/sigstore/)
+* (OpenSSF) [Sigstore: Simplifying Code Signing for Open Source Ecosystems](https://openssf.org/blog/2023/11/21/sigstore-simplifying-code-signing-for-open-source-ecosystems/)
+* (Chainguard.dev) [Life of a Sigstore signature](https://www.chainguard.dev/unchained/life-of-a-sigstore-signature)
+
+
+## Regulations, directives and laws
 
 There are several relevant legislation regarding cybersecurity in Open Source ecosystems and supply chains.
 
-#### USA – EO 14028
+### USA – EO 14028
 
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) (EO 14028, 2021-05-12)
     * Section 4: Enhancing Software Supply Chain Security
 
-#### USA — H. R. 2617
-
-* FDA (Food and Drug Administration) demands for SBOMs accompanying new medical devices – [H. R. 2617](https://www.congress.gov/117/bills/hr2617/BILLS-117hr2617enr.pdf#page=1374) Section 3305
-
-#### EU and EEA – NIS2
+### EU and EEA – NIS2
 
 [Directive 2022/2555, Network and Information Security Directive 2](https://eur-lex.europa.eu/eli/dir/2022/2555) (NIS2)
 
+* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 * In the [NIS2 Recitals](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=12)
     * Recital (58): On the handling of discovered vulnerabilities (page 12)
     * Recital (62): Access to correct and timely information about vulnerabilities (page 13)
@@ -64,9 +94,8 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Article 7, point 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
     * Articles 21, points 1, 2 and 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
-* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 
-#### EU and EEA – CRA
+### EU and EEA – CRA
 
 (EU) [Cyber Resilience Act](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html) (CRA, updated 2024-03-12)
 
@@ -121,49 +150,35 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Requirements to Technical Documentation content (pages 314-316)
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-european-cyber-resilience-act)
 
-#### EU and EEA – PLD
+### EU and EEA – PLD
 
 (EU) Product Liability Directive (PLD)
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive)
 
-#### EU and EEA – DORA
+### EU and EEA – DORA
 
 (EU) [Digital Operational Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554&qid=1710317679922): Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations (DORA, 2022-12-14)
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-cross-sectoral-financial-services-act-1)
 
 
-## Software identification (naming & versioning)
-
-* [PURL Specification](https://github.com/package-url/purl-spec)
-* (CPAN) [URI::PackageURL](https://github.com/giterlizzi/perl-URI-PackageURL)
-* (CPAN) [CPAN::DistnameInfo](https://github.com/Perl-Toolchain-Gang/CPAN-DistnameInfo)
-
-### Useful articles, papers and resources
-
-* (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis) (October 2023)
-* (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
-
-
-## Provenance & Supply Chain Security
-
-* (OpenSSF) [Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security) (Feb 2024)
-* (OpenSSF) [Build Provenance for All Package Registries](https://repos.openssf.org/build-provenance-for-all-package-registries) (July 2023)
-* (SLSA) [SLSA v1.0 Guiding Principles](https://slsa.dev/spec/v1.0/principles)
-* (SLSA) [SLSA v1.0 Terminology](https://slsa.dev/spec/v1.0/terminologye)
-* (SLSA) [SLSA v1.0 Developer's quick-start guide](https://slsa.dev/get-started)
-* (SLSA) [SLSA v1.0 Infrastructure provider's quick-start guide](https://slsa.dev/how-to-infra)
-
-
-## Transparency Logs
-
-* (OpenSSF) [Sigstore home](https://openssf.org/community/sigstore/)
-* (OpenSSF) [Sigstore: Simplifying Code Signing for Open Source Ecosystems](https://openssf.org/blog/2023/11/21/sigstore-simplifying-code-signing-for-open-source-ecosystems/)
-* (Chainguard.dev) [Life of a Sigstore signature](https://www.chainguard.dev/unchained/life-of-a-sigstore-signature)
-
-
 ## Other articles and guides
 
 * (Checkmarx) [Preparing for Europe’s Most Extensive Cybersecurity Directive, NIS2 – What AppSec teams need to know](https://checkmarx.com/blog/preparing-for-europes-most-extensive-cybersecurity-directive-nis2-what-appsec-teams-need-to-know/)
 * (CPAN) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html) – describing the different personas or roles involved in the life-cycle of a CPAN distribution.
+
+
+## License and use of this document
+
+* Version: 0.5.0
+* License: CC-BY-SA-4.0
+* Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
+
+You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.
+
+### Acknowledgements
+
+People have been involved in the development of this document
+
+* Salve J. Nilsen (main author)

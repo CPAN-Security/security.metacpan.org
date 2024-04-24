@@ -326,6 +326,13 @@ toc: true
 > (Ref: [CISA 2024](#references-and-terms))
 
 
+#### SBOM Assembler (Role) ✍️
+
+> 1. Someone that gathers and assembles SBOMs from different sources into a new SBOM. (CPANSec 2024)
+>
+> (Ref: CPANSec)
+
+
 #### SBOM Author (Role)
 
 > 1. The creator of an SBOM. (CISA 2024)

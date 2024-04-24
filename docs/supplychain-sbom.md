@@ -80,8 +80,8 @@ stateDiagram-v2
 The color-coding is used in this document to help illustrate different SBOM activities.
 
 * 🟥 Create, define, sign SBOM metadata — _**SBOM Author** makes sure the metadata and related artifacts **Exist**_.
-* 🟨 Assemble, update, annotate SBOM metadata — _**SBOM Assembler** makes sure the metadata and related artifacts are **Current**_.
-* 🟩 Distribute, curate, attest, index SBOM metadata — _**SBOM Distributor** makes sure the metadata and related artifacts are made **Available** to others_.
+* 🟨 Assemble, update, attest, annotate SBOM metadata — _**SBOM Assembler** makes sure the metadata and related artifacts are **Current**_.
+* 🟩 Distribute, curate, index SBOM metadata — _**SBOM Distributor** makes sure the metadata and related artifacts are made **Available** to others_.
 * 🟦 Consume, aggregate, verify, report SBOM metadata — _**SBOM Consumer** makes sure the metadata and related artifacts are **Complete**, **Correct** or **Compliant**_.
 
 
@@ -176,7 +176,7 @@ stateDiagram-v2
     state "🟩 Distributor" as repository_distributor
     state "🟦 Importer" as language_importer
     state "🟦🟨 Packager" as language_packager
-    state "🟦🟩 OSS Steward" as language_steward
+    state "🟦🟨 OSS Steward" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Distributor" as language_distributor
     state "🟦 Contributor" as contributor
@@ -215,7 +215,7 @@ stateDiagram-v2
     class package_distributor distributesSBOM
     class language_importer verifiesSBOM
     class language_packager assemblesSBOM
-    class language_steward createsSBOM
+    class language_steward updatesSBOM
     class language_curator distributesSBOM
     class language_distributor distributesSBOM
     class repository_distributor distributesSBOM

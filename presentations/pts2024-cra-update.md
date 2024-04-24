@@ -133,24 +133,22 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 [comment]: # (!!!)
 
 
-## Regulators and lawmakers step in
+## Requirements to Open Source Stewards
+
+* Must create cybersecurity policy and documentation for it's community, that fosters...
+    * Development of secure products (Art. 24.1)
+    * Effective handling of vulnerabilities (Art. 24.1)
+    * Voluntary vulnerability reporting
+* Must cooperate with market surveillance authorities in...
+    * Mitigating risks (Art. 24.2)
+    * Provide above documentation upon request (Art. 24.2)
+    * Notify of exploited vulnerability discoveries (Art. 14.1)
+    * Informing users of the impact of active exploited vulnerabilities or severe incidents (Art. 14.8)
 
 
-
-Note:
-
-* EO 14028
-    * Executive Order on Improving the Nation’s Cybersecurity
-    * Issued May 12, 2021
-    * All federal agencies, businesses or contractors that work with or sell to the US federal government
-* NIS2
-    * Directive (EU) 2022/2555 (NIS2)
-    * Software used by EU institutions that manage **critical infrastructure**
-    * Must be implemented by 17 October 2024
-* CRA
-    * Cyber Resilience Act
-    * CE certification of software used in and with **internet-connected devices**
-    * Must be implemented by July 2027 (estimated)
+> * CRA Article 24 (1)
+> * CRA Article 14 (1) (8)
+> * CRA Article 15
 
 
 

@@ -37,13 +37,16 @@ Note:
 
 * Presentation from 2023 is still _mostly correct_ (80-90%), and many of the concerns and worries laid out there are **still relevant**
 
-* CRA updated March 12th 2024, accepted by EU Parliament vote.
-* Becomes EU law when finalized text to be signed. This is likely to happen very soon (as of April 22, 2024)
 
 * A new role was specified in December 2023 – the Open Source Software **Steward**
     * The purpose of this role is to help FOSS communities become an active part in the new security landscape without having to worry about the liability risks
 
 |  | Author | Steward | Manufacturer | Importer | Distributor |
+
+
+- Unescapable new **legislative requirements**
+- Get an end-to-end correct and up-to-date provenance
+- Reduce false positives in security tooling
 
 
 
@@ -56,6 +59,7 @@ Note:
 * We have discovered there has been changes to the landscape
 * Our maps need updating!
 
+* To help, I've added references and confidence %
 
 Note:
 
@@ -73,8 +77,7 @@ Inspiration from Julia Galef's "The Scout Mindset" book (2021)
 * Three year implementation period
 * Law takes effect in Q2 2027
 
-
-[1] [Resolution T9-0130/2024](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html)
+> * [1] [Resolution T9-0130/2024](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html)
 
 Note:
 
@@ -99,81 +102,155 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
+## Five "Roles"
+
+* Manufacturer
+* Distributor
+* Importer
+* Open-Source Software Steward
+* Open-Source Developers & Contributors
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
 ## Manufacturer
 
-* A natural or legal person who
+* A natural or legal person who (Article 3 (12))
     * develops or manufactures products with digital elements
     * or has products with digital elements designed, developed or manufactured,
     * and markets them under its name or trademark,
     * whether for payment, monetisation or free of charge
 
-> * CRA Article 3 (12)
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Requirements to Manufacturers
+## Requirements to Manufacturers I
 
-* Place a CE mark on their products
-* Determine the product support period (10 years)
+* Place a CE mark on their products (Article 28)
+* Determine the product support period. Default is 10 years. (Recital 118)
+* Security fixes must remain available for 10 years afted publishing (Article 13.9)
+* Set up a single point of contact (Annex II point 2)
+* Create a unique identification of their product (Annex II point 3)
+* Describe how their product is put together (Annex VII point 2 (a))
+* Be able to identify and document vulnerabilities and components contained in products (Annex I, Part II (1))
+
 
 ![CE Mark](media/280px-Conformité_Européenne.png)
 
+<div style="font-size: 1em;">
+> * Article 13
+> * Annex I, Part I
+> * Recital 118
+> * Annex II
+> * Annex I, Part II
+</div>
+
+* See also: The German Federal Office for Information Security's [Technical Guideline TR-03183](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03183/BSI-TR-03183-2.pdf) version 1.1 (published 2023-11-28)
+
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Requirements to Manufacturers
+## Requirements to Manufacturers II
 
-* Have **no known vulnerabilities** in their products
-* Make security updates available to customers
-* Set up a single point of contact
+* Product has **no known vulnerabilities** in their products (Article 13.1; Annex I part I (2 (a)))
+* Product is **secure by default**
+* Exercise due diligence when integrating third party components to avoid they compromise security (Article 13.5)
+* Make security updates available to customers effectively for the duration of the support period (Aricle 13.8, Annex I part II)
+* Ensure vulnerabilities can be addressed through security updates (Annex I, Part I (2 (c)))
+    * In a timely manner (Annex I, Part I (8))
 
+<div style="font-size: 1em;">
 > * CRA Article 13
 > * CRA Annex I, Part I
+</div>
+
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Requirements to Manufacturers
+## Requirements to Manufacturers III
 
-* Take part in the EU early warning notification regime for responding to actively exploited vulnerabilities
+* Take part in the EU early warning notification regime for responding to actively exploited vulnerabilities (Article 13.6)
     * Submit early warning within 24h after exploit discovery
     * Submit vulnerability notification within 72h, including corrective measures
     * Submit a final report no later than 14 days after discovery
-* Reports must be submitted to a common EU reporting platform
+* Incident reports must be submitted to a common EU reporting platform
 
+<div style="font-size: 1em;">
 > * CRA Article 14 (1), (2), (3), (4), etc.
+</div>
 
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
+## Open Source Steward
 
-## Regulators and lawmakers step in
+* A legal person, but not natural person, who...
+    * must be a non-profit
+    * provides support for OSS projects that are intended for commercial activities (Recital 18)
+    * may provide voluntary security attestation
+
+<div style="font-size: 1em;">
+> * CRA Recital 14, 18
+> * CRA Recital 21
+</div>
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 
+## Requirements to Open Source Stewards I
 
-Note:
+* Must create cybersecurity policy and documentation for it's community, that fosters...
+    * Development of secure products (Art. 24.1)
+    * Effective handling and information sharing around vulnerabilities (Art. 24.1)
+    * Voluntary vulnerability reporting
 
-* EO 14028
-    * Executive Order on Improving the Nation’s Cybersecurity
-    * Issued May 12, 2021
-    * All federal agencies, businesses or contractors that work with or sell to the US federal government
-* NIS2
-    * Directive (EU) 2022/2555 (NIS2)
-    * Software used by EU institutions that manage **critical infrastructure**
-    * Must be implemented by 17 October 2024
-* CRA
-    * Cyber Resilience Act
-    * CE certification of software used in and with **internet-connected devices**
-    * Must be implemented by July 2027 (estimated)
-
+<div style="font-size: 1em;">
+> * CRA Article 24.1
+</div>
 
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
+## Requirements to Open Source Stewards II
+
+* Must cooperate with market surveillance authorities in...
+    * Mitigating risks (Art. 24.2)
+    * Provide above documentation upon request (Art. 24.2)
+    * Notify of exploited vulnerability discoveries (Art. 14.1)
+    * Informing users of the impact of active exploited vulnerabilities or severe incidents (Art. 14.8)
+
+<div style="font-size: 1em;">
+> * CRA Article 24.2
+> * CRA Article 14.1, 14.8
+> * CRA Article 15
+</div>
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Requirements to Open Source Stewards II
+
+
+
+
+
+
+
+
+
+
+
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ### Keep track of dependencies
 

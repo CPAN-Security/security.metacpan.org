@@ -37,6 +37,11 @@ Note:
 |  | Author | Steward | Manufacturer | Importer | Distributor |
 
 
+- Unescapable new **legislative requirements**
+- Get an end-to-end correct and up-to-date provenance
+- Reduce false positives in security tooling
+
+
 
 [comment]: # (!!!)
 
@@ -86,74 +91,146 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (!!!)
 
+## Five "Roles"
+
+* Manufacturer
+* Distributor
+* Importer
+* Open-Source Software Steward
+* Open-Source Developers & Contributors
+
+
+[comment]: # (!!!)
+
 ## Manufacturer
 
-* A natural or legal person who
+* A natural or legal person who (Article 3 (12))
     * develops or manufactures products with digital elements
     * or has products with digital elements designed, developed or manufactured,
     * and markets them under its name or trademark,
     * whether for payment, monetisation or free of charge
 
-> * CRA Article 3 (12)
 
 [comment]: # (!!!)
 
-## Requirements to Manufacturers
+## Requirements to Manufacturers I
 
-* Place a CE mark on their products
-* Determine the product support period (10 years)
+* Place a CE mark on their products (Article 28)
+* Determine the product support period. Default is 10 years. (Recital 118)
+* Security fixes must remain available for 10 years afted publishing (Article 13.9)
+* Set up a single point of contact (Annex II point 2)
+* Create a unique identification of their product (Annex II point 3)
+* Describe how their product is put together (Annex VII point 2 (a))
+* Be able to identify and document vulnerabilities and components contained in products (Annex I, Part II (1))
+
 
 ![CE Mark](media/280px-Conformité_Européenne.png)
 
+<div style="font-size: 1em;">
+> * Article 13
+> * Annex I, Part I
+> * Recital 118
+> * Annex II
+> * Annex I, Part II
+</div>
+
+* See also: The German Federal Office for Information Security's [Technical Guideline TR-03183](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03183/BSI-TR-03183-2.pdf) version 1.1 (published 2023-11-28)
+
 
 [comment]: # (!!!)
 
-## Requirements to Manufacturers
+## Requirements to Manufacturers II
 
-* Have **no known vulnerabilities** in their products
-* Make security updates available to customers
-* Set up a single point of contact
+* Product has **no known vulnerabilities** in their products (Article 13.1; Annex I part I (2 (a)))
+* Product is **secure by default**
+* Exercise due diligence when integrating third party components to avoid they compromise security (Article 13.5)
+* Make security updates available to customers effectively for the duration of the support period (Aricle 13.8, Annex I part II)
+* Ensure vulnerabilities can be addressed through security updates (Annex I, Part I (2 (c)))
+    * In a timely manner (Annex I, Part I (8))
 
+<div style="font-size: 1em;">
 > * CRA Article 13
 > * CRA Annex I, Part I
+</div>
+
 
 [comment]: # (!!!)
 
-## Requirements to Manufacturers
+## Requirements to Manufacturers III
 
-* Take part in the EU early warning notification regime for responding to actively exploited vulnerabilities
+* Take part in the EU early warning notification regime for responding to actively exploited vulnerabilities (Article 13.6)
     * Submit early warning within 24h after exploit discovery
     * Submit vulnerability notification within 72h, including corrective measures
     * Submit a final report no later than 14 days after discovery
-* Reports must be submitted to a common EU reporting platform
+* Incident reports must be submitted to a common EU reporting platform
 
+<div style="font-size: 1em;">
 > * CRA Article 14 (1), (2), (3), (4), etc.
+</div>
 
 
 [comment]: # (!!!)
 
+## Open Source Steward
 
-## Requirements to Open Source Stewards
+* A legal person, but not natural person, who...
+    * must be a non-profit
+    * provides support for OSS projects that are intended for commercial activities (Recital 18)
+    * may provide voluntary security attestation
+
+<div style="font-size: 1em;">
+> * CRA Recital 14, 18
+> * CRA Recital 21
+</div>
+
+[comment]: # (!!!)
+
+
+## Requirements to Open Source Stewards I
 
 * Must create cybersecurity policy and documentation for it's community, that fosters...
     * Development of secure products (Art. 24.1)
-    * Effective handling of vulnerabilities (Art. 24.1)
+    * Effective handling and information sharing around vulnerabilities (Art. 24.1)
     * Voluntary vulnerability reporting
+
+<div style="font-size: 1em;">
+> * CRA Article 24.1
+</div>
+
+
+[comment]: # (!!!)
+
+## Requirements to Open Source Stewards II
+
 * Must cooperate with market surveillance authorities in...
     * Mitigating risks (Art. 24.2)
     * Provide above documentation upon request (Art. 24.2)
     * Notify of exploited vulnerability discoveries (Art. 14.1)
     * Informing users of the impact of active exploited vulnerabilities or severe incidents (Art. 14.8)
 
-
-> * CRA Article 24 (1)
-> * CRA Article 14 (1) (8)
+<div style="font-size: 1em;">
+> * CRA Article 24.2
+> * CRA Article 14.1, 14.8
 > * CRA Article 15
+</div>
+
+[comment]: # (!!!)
+
+## Requirements to Open Source Stewards II
+
+
+
+
+
+
+
+
+
+
 
 
 
 [comment]: # (!!!)
-
 
 ### Keep track of dependencies
 

@@ -27,21 +27,19 @@
 
 PTS 2024
 
+Salve J. Nilsen
+
+Mastodon: @sjn\@chaos.social
 
 Note:
-
-* Intro: Scout vs. Soldier mindset
-* Goal: Explore and learn the landscape, so we can update our maps
-* Method: List sources; Share confidence %
-* Priorities: Facts from law, then consequences, then our responses
 
 * Presentation from 2023 is still _mostly correct_ (80-90%), and many of the concerns and worries laid out there are **still relevant**
 
 
 * A new role was specified in December 2023 – the Open Source Software **Steward**
-    * The purpose of this role is to help FOSS communities become an active part in the new security landscape without having to worry about the liability risks
+* The purpose of this role is to help FOSS communities become an active part in the new security landscape without having to worry about the liability risks
 
-|  | Author | Steward | Manufacturer | Importer | Distributor |
+| Author | Steward | Manufacturer | Importer | Distributor |
 
 
 - Unescapable new **legislative requirements**
@@ -49,17 +47,16 @@ Note:
 - Reduce false positives in security tooling
 
 
-
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## About this session
+## Our mission
 
-* Let's pretend we're "scouts" on a fact-finding mission
-* We have discovered there has been changes to the landscape
-* Our maps need updating!
+* There are substantial changes to the landscape – Our maps need updating!
+* Let's pretend we're **scouts on a fact-finding mission**
 
-* To help, I've added references and confidence %
+* Focus – questions, facts, references
+    * otherwise – we state our confidence (0-100%)
 
 Note:
 
@@ -71,13 +68,17 @@ Inspiration from Julia Galef's "The Scout Mindset" book (2021)
 
 ## EU Cyber Resilience Act
 
-* Law was approved by the EU Parliament March 12th 2024 [1]
+* Law was approved by the EU Parliament March 12th 2024
 * Final translations/fixes ongoing
 * Law is adopted when EU Council gives final approval
 * Three year implementation period
 * Law takes effect in Q2 2027
 
-> * [1] [Resolution T9-0130/2024](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html)
+<div style="font-size: large;">
+
+> * Parliament resolution [T9-0130/2024](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html)
+
+</div>
 
 Note:
 
@@ -91,8 +92,12 @@ Law is expected to be approved by the Council in April 2024!
 
 * All Manufacturers that wish to place "Products with Digital Elements" on the EU market.
 
-> * Product with Digital Elements: CRA Article 3 (1), (4), (6), (7)
-> * Placing on the market: CRA Article 3 (21), (22)
+<div style="font-size: large;">
+
+> * Product with Digital Elements: [Article 3 (1), (4), (6), (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136)
+> * Placing on the market: [Article 3 (21)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=140)
+
+</div>
 
 Note:
 
@@ -104,141 +109,217 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ## Five "Roles"
 
-* Manufacturer
-* Distributor
-* Importer
-* Open-Source Software Steward
-* Open-Source Developers & Contributors
+* Manufacturer 👈
+* Distributor (not relevant)
+* Importer (not relevant)
+* Open-Source Software Steward (NEW!) 👈
+* Open-Source Developers & Contributors 👈
 
 
 </textarea></section>
+<section>
 <section data-markdown  ><textarea data-template>
 
 ## Manufacturer
 
-* A natural or legal person who (Article 3 (12))
-    * develops or manufactures products with digital elements
-    * or has products with digital elements designed, developed or manufactured,
-    * and markets them under its name or trademark,
+* A natural or legal person who 
+    * **develops** or manufactures products with digital elements
+    * or **has products** with digital elements **designed**, developed or manufactured,
+    * and **markets them under its name** or trademark,
     * whether for payment, monetisation or free of charge
 
+<div style="font-size: large;">
+
+> * [Article 3 (12), (13)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=138)
+
+</div>
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Requirements to Manufacturers I
+## Obligations of Manufacturers – Conformance
 
 ![CE Mark](media/280px-Conformité_Européenne.png)
 
-* Place a CE mark on their products (Article 28)
 * Place a CE mark on their products ([Article 28](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=218))
-* Determine the product support period. Default is 10 years. (Recital 118)
-* Determine the product support period. Default is 10 years. ([Recital 118](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=120))
-* Security fixes must remain available for 10 years afted publishing (Article 13 point 9)
-* Security fixes must remain available for 10 years afted publishing ([Article 13 point 9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=167))
-* Set up a single point of contact (Annex II point 2)
-* Set up a single point of contact ([Annex II point 2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
-* Create a unique identification of their product (Annex II point 3)
-* Create a unique identification of their product ([Annex II point 3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
-* Describe how their product is put together (Annex VII point 2 (a))
-* Describe how their product is put together ([Annex VII point 2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314))
-* Be able to identify and document vulnerabilities and components contained in products (Annex I, Part II (1))
-* Be able to identify and document vulnerabilities and components contained in products ([Annex I, Part II (1)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297))
 
-<div style="font-size: 1em;">
-> * Article 13
-> * Annex I, Part I
-> * Recital 118
-> * Annex II
-> * Annex I, Part II
+<div style="font-size: large;">
+
+> * Automating this (on MetaCPAN) may be an awesome way to help the sustainability of FOSS projects! (50%)
+
 </div>
 
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Obligations of Manufacturers – Support period
+
+* Determine the product support period. Default is 10 years. ([Recital 118](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=120))
+* Security fixes must remain available for 10 years afted publishing ([Article 13 point 9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=167))
+
+<div style="font-size: large;">
+
+> * Period length may be different per product (40%)
+
+</div>
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Obligations of Manufacturers – Point of Contact
+
+* Set up a single point of contact ([Annex II point 2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
+
+<div style="font-size: large;">
+
+> May require confirmation (60%)
+
+</div>
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Obligations of Manufacturers — Unique ID
+
+* Create a unique identification of their product ([Annex II point 3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
+
+<div style="font-size: large;">
+
+> PackageURL can solve this! (85%)
+
+</div>
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Obligations of Manufacturers – Build & Dependencies
+
+* Be able to identify and document vulnerabilities and components contained in products ([Annex I, Part II (1)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297))
+* Describe how the product is put together ([Annex VII point 2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314))
+
+<div style="font-size: large;">
+
+> Match Unique ID to vulnerability databases (90%)
+
+</div>
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Obligations of Manufacturers – Produce SBOMs
+
+* Produce SBOMs upon request by regulators ([Recital 22](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=26))
+    * At minimum, top level dependencies ([Annex I, Part II (1)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300))
 * See also: The German Federal Office for Information Security's [Technical Guideline TR-03183](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03183/BSI-TR-03183-2.pdf) version 1.1 (published 2023-11-28)
 
+<div style="font-size: large;">
 
-</textarea></section>
-<section data-markdown  ><textarea data-template>
+> * Requries ways to refer to both embedded and cross-ecosystem dependencies (95%)
+> * Transitive dependencies are implied to be produced (70%)
 
-## Requirements to Manufacturers II
-
-* Product has **no known vulnerabilities** in their products (Article 13.1; Annex I part I (2 (a)))
-* Product is **secure by default**
-* Exercise due diligence when integrating third party components to avoid they compromise security (Article 13.5)
-* Make security updates available to customers effectively for the duration of the support period (Aricle 13.8, Annex I part II)
-* Ensure vulnerabilities can be addressed through security updates (Annex I, Part I (2 (c)))
-    * In a timely manner (Annex I, Part I (8))
-
-<div style="font-size: 1em;">
-> * CRA Article 13
-> * CRA Annex I, Part I
 </div>
 
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Obligations of Manufacturers – No Vulnerabilities
+
+* Product has **no known vulnerabilities** in their products ([Article 13 point 1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161); [Annex I, Part I (2 (a))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297))
+* Product is **secure by default** ([Recital 65] https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=73))
+* Exercise due diligence when integrating third party components to avoid they compromise security ([Article 13 point 5](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163))
+* Report vulnerabilities to the Manufacturer or Open Source maintainer ([Article 13 point 6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164))
+
+<div style="font-size: large;">
+
+> * Implies they have a complete picture of dependencies (95%)
+> * Though the minimum is "top level dependencies" ([Annex I, Part II, (1)]())
+
+</div>
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Requirements to Manufacturers III
+## Obligations of Manufacturers – Offer timely security updates
 
-* Take part in the EU early warning notification regime for responding to actively exploited vulnerabilities (Article 13.6)
-    * Submit early warning within 24h after exploit discovery
-    * Submit vulnerability notification within 72h, including corrective measures
-    * Submit a final report no later than 14 days after discovery
+* Make security updates available to customers effectively for the duration of the support period ([Article 13 point 8](); [Annex I part II]())
+* Ensure vulnerabilities can be addressed through security updates ([Annex I, Part I (2 (c))]())
+    * In a timely manner ([Annex I, Part I (8)]())
+
+<div style="font-size: large;">
+
+> This means they must have updateable products! No more servers running RHEL6.
+
+</div>
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Obligations of Manufacturers – Early warning system
+
+* Take part in the EU early warning notification regime for responding to actively exploited vulnerabilities ([Article 13 Point 6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164); [Article 14 point 1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176))
+    * Submit early warning within 24h after exploit discovery ([Article 14 point 2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177))
+    * Submit vulnerability notification within 72h, including corrective measures ([Article 14 point 2 (b)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177))
+    * Submit a final report no later than 14 days after discovery ([Article 14 point 2 (c)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=178))
 * Incident reports must be submitted to a common EU reporting platform
 
-<div style="font-size: 1em;">
-> * CRA Article 14 (1), (2), (3), (4), etc.
-</div>
-
 
 </textarea></section>
+</section>
+<section>
 <section data-markdown  ><textarea data-template>
 
 ## Open Source Steward
 
 * A legal person, but not natural person, who...
-    * must be a non-profit
-    * provides support for OSS projects that are intended for commercial activities (Recital 18)
-    * may provide voluntary security attestation
+    * must be a non-profit ([Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17))
+    * provides support for OSS projects that are intended for commercial activities ([Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
+    * may provide voluntary security attestation ([Recital 21]())
 
 <div style="font-size: 1em;">
+
 > * CRA Recital 14, 18
 > * CRA Recital 21
+
 </div>
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-
-## Requirements to Open Source Stewards I
+## Requirements to Open Source Stewards – Community Policy
 
 * Must create cybersecurity policy and documentation for it's community, that fosters...
-    * Development of secure products (Art. 24.1)
-    * Effective handling and information sharing around vulnerabilities (Art. 24.1)
+    * Development of secure products (Article 24 point 1)
+    * Effective handling and information sharing around vulnerabilities (Article 24 point 1)
     * Voluntary vulnerability reporting
 
 <div style="font-size: 1em;">
-> * CRA Article 24.1
+
+> V
+
 </div>
 
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Requirements to Open Source Stewards II
+## Requirements to Open Source Stewards – Cooperation
 
 * Must cooperate with market surveillance authorities in...
-    * Mitigating risks (Art. 24.2)
-    * Provide above documentation upon request (Art. 24.2)
-    * Notify of exploited vulnerability discoveries (Art. 14.1)
-    * Informing users of the impact of active exploited vulnerabilities or severe incidents (Art. 14.8)
+    * Mitigating risks (Article 24 point 2)
+    * Provide above documentation upon request (Article 24 point 2)
+    * Notify of exploited vulnerability discoveries (Article 14 point 1)
+    * Informing users of the impact of active exploited vulnerabilities or severe incidents (Article 14 point 8)
 
 <div style="font-size: 1em;">
+
 > * CRA Article 24.2
 > * CRA Article 14.1, 14.8
 > * CRA Article 15
+
 </div>
 
 </textarea></section>
+</section>
 <section data-markdown  ><textarea data-template>
 
 ## Requirements to Open Source Stewards II
@@ -250,6 +331,27 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 
 
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Distributor
+
+* A natural or legal person in the supply chain, other than the manufacturer or the importer
+    * that makes a product with digital elements available on the Union market
+    * without affecting its properties
+
+<div style="font-size: 1em;">
+
+> * Distributor: [Article 3 (17)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=139)
+> * Making available on the market [Article 3 (22)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=140)
+
+</div>
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Requirements to Distributors
 
 
 

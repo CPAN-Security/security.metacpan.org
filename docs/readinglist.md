@@ -127,7 +127,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
         * Article 16, Establishment of a single reporting platform (pages 187-192)
         * Article 17, Other provisions related to reporting (pages 193-195)
         * Article 18, Authorized representatives (pages 195-196)
-        * **Article 19**, Obligations of importers (pages 197-201)
+        * Article 19, Obligations of importers (pages 197-201)
         * **Article 20**, Obligations of distributors (pages 202-205)
         * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
         * **Article 22**, Other cases in which obligations of manufacturers apply (page 206)

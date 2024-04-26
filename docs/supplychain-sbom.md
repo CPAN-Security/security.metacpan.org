@@ -79,10 +79,10 @@ stateDiagram-v2
 
 The color-coding is used in this document to help illustrate different SBOM activities.
 
-* 🟥 Create, define, sign SBOM metadata — _**SBOM Author** makes sure it and related artifacts **Exist**_.
-* 🟨 Assemble, update, annotate SBOM metadata — _**SBOM Assembler** makes sure it and related artifacts are **Current**_.
-* 🟩 Distribute, curate, attest, index SBOM metadata — _**SBOM Distributor** makes sure it and related artifacts are made **Available** to others_.
-* 🟦 Consume, aggregate, verify SBOM metadata — _**SBOM Consumer** makes sure it and related artifacts are **Complete**, **Correct** or **Compliant**_.
+* 🟥 Create, define, sign SBOM metadata — _**SBOM Author** makes sure the metadata and related artifacts **Exist**_.
+* 🟨 Assemble, update, attest, annotate SBOM metadata — _**SBOM Assembler** makes sure the metadata and related artifacts are **Current**_.
+* 🟩 Distribute, curate, index SBOM metadata — _**SBOM Distributor** makes sure the metadata and related artifacts are made **Available** to others_.
+* 🟦 Consume, aggregate, verify, report SBOM metadata — _**SBOM Consumer** makes sure the metadata and related artifacts are **Complete**, **Correct** or **Compliant**_.
 
 
 ### SBOM Author
@@ -100,12 +100,12 @@ The color-coding is used in this document to help illustrate different SBOM acti
 | Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
 | -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
 | 🟥 | SBOM Type                              | No         |              |                                                                   |      |                         |
-| 🟥 | SBOM Author                            | Yes        | Text         | $.metadata.author                                                 |      | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | $.metadata.timestamp                                              |      | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟥 | SBOM Generation Tool                   | No         | List         | $.metadata.tools[]                                                |      |                         |
-| 🟥 | SBOM Serial Number                     | Yes        | UUID         | $.metadata.serialNumber                                           |      |                         |
-| 🟥 | CycloneDX bomFormat                    | Yes        | Enum         | $.properties.bomFormat                                            | N/A  | CycloneDX 1.6           |
-| 🟥 | CycloneDX specVersion                  | Yes        | Int          | $.properties.specVersion                                          | N/A  | CycloneDX 1.6           |
+| 🟥 | SBOM Author                            | Yes        | Text         | bom.metadata.author                                               |      | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | bom.metadata.timestamp                                            |      | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟥 | SBOM Generation Tool                   | No         | List         | bom.metadata.tools[]                                              |      |                         |
+| 🟥 | SBOM Serial Number                     | Yes        | UUID         | bom.metadata.serialNumber                                         |      |                         |
+| 🟥 | CycloneDX bomFormat                    | Yes        | Enum         | bom.properties.bomFormat                                          | N/A  | CycloneDX 1.6           |
+| 🟥 | CycloneDX specVersion                  | Yes        | Int          | bom.properties.specVersion                                        | N/A  | CycloneDX 1.6           |
 
 (Ref: [CISA-2024](#references), [NTIA-2021](#references), [CPANSec-2024](#references))
 
@@ -122,12 +122,12 @@ The color-coding is used in this document to help illustrate different SBOM acti
 | Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
 | -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
 | 🟨 | SBOM Type                              | No         |              |                                                                   |      |                         |
-| 🟥 | SBOM Author                            | Yes        | Text         | $.metadata.author                                                 |      | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | $.metadata.timestamp                                              |      | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟨 | SBOM Generation Tool                   | No         | List         | $.metadata.tools[]                                                |      |                         |
-| 🟥 | SBOM Serial Number                     | Yes        | UUID         | $.metadata.serialNumber                                           |      |                         |
-| 🟨 | CycloneDX bomFormat                    | Yes        | Enum         | $.properties.bomFormat                                            | N/A  | CycloneDX 1.6           |
-| 🟨 | CycloneDX specVersion                  | Yes        | Int          | $.properties.specVersion                                          | N/A  | CycloneDX 1.6           |
+| 🟥 | SBOM Author                            | Yes        | Text         | bom.metadata.author                                               |      | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | bom.metadata.timestamp                                            |      | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟨 | SBOM Generation Tool                   | No         | List         | bom.metadata.tools[]                                              |      |                         |
+| 🟥 | SBOM Serial Number                     | Yes        | UUID         | bom.metadata.serialNumber                                         |      |                         |
+| 🟨 | CycloneDX bomFormat                    | Yes        | Enum         | bom.properties.bomFormat                                          | N/A  | CycloneDX 1.6           |
+| 🟨 | CycloneDX specVersion                  | Yes        | Int          | bom.properties.specVersion                                        | N/A  | CycloneDX 1.6           |
 
 (Ref: [NTIA-2021](#references), [CPANSec-2024](#references))
 
@@ -171,11 +171,12 @@ stateDiagram-v2
 
     %%
     state "🟦 Importer" as author_importer
-    state "🟥 Owner\n🟨🟩 Open-Source Software Steward" as author_owner
-    state "🟥🟨 Author\n🟨 Custodian" as author
+    state "🟥 Owner" as author_owner
+    state "🟨🟥 Author\n🟨 Custodian" as author
     state "🟩 Distributor" as repository_distributor
     state "🟦 Importer" as language_importer
-    state "🟨🟦 Packager" as language_packager
+    state "🟦🟨 Packager" as language_packager
+    state "🟦🟨 OSS Steward" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Distributor" as language_distributor
     state "🟦 Contributor" as contributor
@@ -186,10 +187,10 @@ stateDiagram-v2
     state "🟩 Distributor" as package_distributor
     state "🟦 Importer" as integrator_importer
     state "🟥 Owner\n🟥 Manufacturer" as integrator_owner
-    state "🟥🟨🟦 Integrator\n🟥🟨🟦 Developer" as integrator_developer
+    state "🟦🟨🟥 Integrator\n🟦🟨🟥 Developer" as integrator_developer
     state "🟩 Publisher" as integrator_publisher
-    state "🟨🟦 Builder" as integrator_builder
     state "🟨 Deployer\n🟨 Installer" as deployer
+    state "🟦🟨 Builder" as integrator_builder
     state "🟦 Vuln. Checker" as integrator_checker
     state "🟦 Consumer\n🟦 User" as consumer
     state "🟦 Auditor" as auditor_internal
@@ -214,6 +215,7 @@ stateDiagram-v2
     class package_distributor distributesSBOM
     class language_importer verifiesSBOM
     class language_packager assemblesSBOM
+    class language_steward updatesSBOM
     class language_curator distributesSBOM
     class language_distributor distributesSBOM
     class repository_distributor distributesSBOM
@@ -239,10 +241,12 @@ stateDiagram-v2
 
     state "Language Ecosystem" as ecosystem_lang {
         [*] --> language_importer
+        [*] --> language_steward
         [*] --> language_curator
         [*] --> language_distributor
         language_importer --> language_distributor
         language_importer --> language_curator
+        language_steward --> language_curator
         language_curator --> language_distributor
     }
 
@@ -394,26 +398,11 @@ Has the legal ownership rights and liabilities for the component.
 Is usually the [Author](#author), a business or some other type of legal entity.
 May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
 
-| Do | Field name                     | Required   | Data type | CycloneDX 1.6                                                     | SPDX | Required by                        |
-| -- | :----------------------------- | :--------- | :-------- | :---------------------------------------------------------------- | ---- | :--------------------------------- |
-| 🟥 | Owner Name                     | Yes        | Text, URL | $.metadata[supplier,manufacturer,author], $.components[].supplier |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
+| Do | Field name                     | Required   | Data type | CycloneDX 1.6                                                         | SPDX | Required by                        |
+| -- | :----------------------------- | :--------- | :-------- | :-------------------------------------------------------------------- | ---- | :--------------------------------- |
+| 🟥 | Owner Name                     | Yes        | Text, URL | bom.metadata[supplier,manufacturer,author], bom.components[].supplier |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
 
-* See also [Manufacturer](#manufacturer), [Open-Source Software Steward](glossary.md#open-source-software-steward-) in the glossary.
-
-#### Open-Source Software Steward
-
-Within an [Author Environment](#author-environment), has the duty to ensure that the obligations in the EU Cyber Resilience Act Articles 14, 15 and  are met.
-
-| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by            |
-| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | ---------------------- |
-| 🟦 | Open Source Steward            | Yes      | URL          |                                                        |      | CRA-Rec-19             |
-| 🟦 | Intended for Commercial Use    | Yes      | Boolean      |                                                        |      | CRA-Rec-15, CRA-Rec-18 |
-| 🟥 | Security Attestation           | Yes      | URL          |                                                        |      | CRA-Rec-21             |
-
-> [!NOTE]
-> FIXME – Not done
-
-* See also [Owner](#owner), [Open-Source Software Steward](glossary.md#open-source-software-steward-) in the glossary.
+* See also [Manufacturer](#manufacturer)
 
 #### Manufacturer
 
@@ -422,13 +411,13 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 * See also [Owner](#owner)
 
-| Do | Field name                    | Required | Data type | CycloneDX (PRE-PROPOSAL; UNSUPPORTED)                      | SPDX | Required by                        |
-| -- | :---------------------------- | :------- | :-------- | :--------------------------------------------------------- | ---- | ---------------------------------- |
-| 🟥 | Owner Name (Manufacturer)     | Yes      | Text, URL | \$.metadata[supplier,manufacturer], \$.components[].supplier |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
-| 🟥 | CE Declaration of Conformity  | Yes      | URL       | $.externalReferences[?(@.conformity-declaration)]          |      | CRA-AII(6), CRA-AV                 |
-| 🟥 | CE Support End Date           | Yes      | DateTime  | $.externalReferences[?(@.support-horizon)]                 |      | CRA-AII(7)                         |
-| 🟥 | CE Technical Documentation    | Yes      | URL       | $.externalReferences[?(@.documentation)]                   |      | CRA-AII(8), CRA-AVII               |
-| 🟥 | CE Conformity Assessment Body | Yes      | URL       | $.externalReferences[?(@.conformity-body)]                 |      | CRA Article 47.1, CRA-AV           |
+| Do | Field name                    | Required | Data type | CycloneDX (PRE-PROPOSAL; UNSUPPORTED)                          | SPDX | Required by                        |
+| -- | :---------------------------- | :------- | :-------- | :------------------------------------------------------------- | ---- | ---------------------------------- |
+| 🟥 | Owner Name (Manufacturer)     | Yes      | Text, URL | bom.metadata[supplier,manufacturer], bom.components[].supplier |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
+| 🟥 | CE Declaration of Conformity  | Yes      | URL       | bom.externalReferences[?(@.conformity-declaration)]            |      | CRA-AII(6), CRA-AV                 |
+| 🟥 | CE Support End Date           | Yes      | DateTime  | bom.externalReferences[?(@.support-horizon)]                   |      | CRA-AII(7)                         |
+| 🟥 | CE Technical Documentation    | Yes      | URL       | bom.externalReferences[?(@.documentation)]                     |      | CRA-AII(8), CRA-AVII               |
+| 🟥 | CE Conformity Assessment Body | Yes      | URL       | bom.externalReferences[?(@.conformity-body)]                   |      | CRA Article 47.1, CRA-AV           |
 
 > [!NOTE]
 > Manufacturer has a specific defined meaning in the Cyber Resilience Act, so until this definition is established, be careful when using the term.
@@ -436,15 +425,15 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 #### Supplier
 
-Is a role within an [Integrator Environment](#integrator-environment).
-The term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
+* Is a role within an [Integrator Environment](#integrator-environment).
+* The term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
 
-* See also [Manufacturer](#manufacturer), [Owner](#owner), [Open-Source Software Steward](#open-source-software-steward), [Supplier](glossary.md#supplier) in the glossary.
+* See [Manufacturer](#manufacturer), [Owner](#owner), [Open-Source Software Steward](#open-source-software-steward), [Supplier](glossary.md#supplier) in the glossary.
 
 
 ### Author (SBOM)
 
-See [SBOM Author](#sbom-author)
+* See [SBOM Author](#sbom-author)
 
 
 ### Author
@@ -459,27 +448,27 @@ Not to be confused with the [SBOM Author](#sbom-author--role-) role.
 
 * See also [Author](glossary#author) in the Glossary.
 
-| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                                     | SPDX | Required by                                |
-| -- | :----------------------------- | :------- | :----------- | :---------------------------------------------------------------- | ---- | ------------------------------------------ |
-| 🟥 | Component Name                 | Yes      | Text         | $.components[].name                                               |      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |
-| 🟥 | Version                        | Yes      | Text         | $.components[].version                                            |      | NTIA-SBOM, DE-TR.5.2.2                     |
-| 🟥 | Dependencies                   | Yes      | List         | $.components[], $.dependencies[]                                  |      | CRA-AII(5), NTIA-SBOM                      |
-| 🟥 | Security contact               | Yes      | URL          | $.externalReferences[].security-contact                           |      | CRA-AII(2)                                 |
-| 🟥 | Unique ID, Product ID          | Yes      | PURL         | $.components[].purl                                               |      | CRA-AII(3), NTIA-SBOM, CRA-AV              |
-| 🟥 | Purpose, Intended Use          | Yes      | Text         | $.components[].description                                        |      | CRA-AII(4)                                 |
-| 🟨 | Licenses                       | Yes      | SPDX License | $.components[].licenses[]                                         |      |                                            |
-| 🟥 | Public Code Repository         | Yes      |              | $.metadata.component.externalReferences[].vcs                     |      |                                            |
-| 🟥 | Intended for Commercial Use    | No       | Boolean      |                                                                   |      | CRA-Rec-15                                 |
-| 🟥 | Open Source Steward            | No       | URL          |                                                                   |      | CRA                                        |
-| 🟥 | Code Commit Revision           | No       |              |                                                                   |      |                                            |
-| 🟨 | Code Repository                | Yes      |              | $.components[].externalReferences[].vcs                           |      |                                            |
-| 🟨 | Owner Name (Author)            | Yes      | Text, URL    | $.components[].supplier                                           |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |
-| 🟨 | SBOM Location                  | No       | URL          | $.externalReferences[].bom, $.components.externalReferences[].bom |      | CRA-AII(9)                                 |
-| 🟨 | SBOM Type                      | Yes      |              |                                                                   |      |                                            |
-| 🟨 | SBOM Author                    | Yes      | Text         | $.metadata.author                                                 |      | NTIA-SBOM, DE-TR.5.2.1                     |
-| 🟨 | SBOM Creation Time-stamp       | Yes      | DateTime     | $.metadata.timestamp                                              |      | NTIA-SBOM, DE-TR.5.2.1                     |
-| 🟨 | SBOM Generation Tool           | No       | List         | $.metadata.tools[]                                                |      |                                            |
-| 🟨 | SBOM Serial Number             | Yes      | UUID         | $.metadata.serialNumber                                           |      |                                            |
+| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                                         | SPDX | Required by                                |
+| -- | :----------------------------- | :------- | :----------- | :-------------------------------------------------------------------- | ---- | ------------------------------------------ |
+| 🟥 | Component Name                 | Yes      | Text         | bom.components[].name                                                 |      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |
+| 🟥 | Version                        | Yes      | Text         | bom.components[].version                                              |      | NTIA-SBOM, DE-TR.5.2.2                     |
+| 🟥 | Dependencies                   | Yes      | List         | bom.components[], bom.dependencies[]                                  |      | CRA-AII(5), NTIA-SBOM                      |
+| 🟥 | Security contact               | Yes      | URL          | bom.externalReferences[].security-contact                             |      | CRA-AII(2)                                 |
+| 🟥 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl                                                 |      | CRA-AII(3), NTIA-SBOM, CRA-AV              |
+| 🟥 | Purpose, Intended Use          | Yes      | Text         | bom.components[].description                                          |      | CRA-AII(4)                                 |
+| 🟨 | Licenses                       | Yes      | SPDX License | bom.components[].licenses[]                                           |      |                                            |
+| 🟥 | Public Code Repository         | Yes      |              | bom.metadata.component.externalReferences[].vcs                       |      |                                            |
+| 🟥 | Intended for Commercial Use    | No       | Boolean      |                                                                       |      | CRA-Rec-15                                 |
+| 🟥 | Open-Source Software Steward   | No       | URL          |                                                                       |      | CRA                                        |
+| 🟥 | Code Commit Revision           | No       |              |                                                                       |      |                                            |
+| 🟨 | Code Repository                | Yes      |              | bom.components[].externalReferences[].vcs                             |      |                                            |
+| 🟨 | Owner Name (Author)            | Yes      | Text, URL    | bom.components[].supplier                                             |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |
+| 🟨 | SBOM Location                  | No       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |      | CRA-AII(9)                                 |
+| 🟨 | SBOM Type                      | Yes      |              |                                                                       |      |                                            |
+| 🟨 | SBOM Author                    | Yes      | Text         | bom.metadata.author                                                   |      | NTIA-SBOM, DE-TR.5.2.1                     |
+| 🟨 | SBOM Creation Time-stamp       | Yes      | DateTime     | bom.metadata.timestamp                                                |      | NTIA-SBOM, DE-TR.5.2.1                     |
+| 🟨 | SBOM Generation Tool           | No       | List         | bom.metadata.tools[]                                                  |      |                                            |
+| 🟨 | SBOM Serial Number             | Yes      | UUID         | bom.metadata.serialNumber                                             |      |                                            |
 
 #### Custodian
 
@@ -500,7 +489,8 @@ May also have additional roles, including being a downstream [Developer](#develo
 #### Steward
 
 > [!NOTE]
-> Steward has a specific defined meaning in the EU Cyber Resilience Act, so it's better to avoid using the term as a synonym for [Custodian](#custodian).
+> * Steward has a specific defined meaning in the EU Cyber Resilience Act, so it's better to avoid using the term as a synonym for [Custodian](#custodian).
+> * See also [Open Source Software Steward](#open-source-software-steward) 
 
 
 ### Importer
@@ -511,18 +501,18 @@ Is required to verify that the imported software is compliant with the EU Cyber 
 
 See also [Importer](#glossary.md#importer) definition in the glossary.
 
-| Do | Field name                      | Required | Data type    | CycloneDX 1.6                                                     | SPDX | Required by           |
-| -- | :------------------------------ | :------- | :----------- | ----------------------------------------------------------------- | ---- | --------------------- |
-| 🟦 | Security contact                | Yes      | URL          | $.metadata.[supplier,manufacturer,author].contact.email           |      | CRA-AII(2)            |
-| 🟦 | Unique ID, Product ID           | Yes      | PURL         | $.components[].purl                                               |      | CRA-AII(3), NTIA-SBOM |
-| 🟦 | Purpose, Intended Use           | Yes      | Text         |                                                                   |      | CRA-AII(4)            |
-| 🟦 | SBOM Location                   | No       | URL          | $.externalReferences[].bom, $.components.externalReferences[].bom |      | CRA-AII(9)            |
-| 🟦 | Licenses                        | Yes      | SPDX License | $.metadata.licenses[], $.components[].licenses[]                  |      |                       |
-| 🟦 | CE Declaration of Conformity    | No       | URL          | (unsupported)                                                     |      | CRA-AII(6)            |
-| 🟦 | CE Support End Date             | No       | URL          | (unsupported)                                                     |      | CRA-AII(7)            |
-| 🟦 | CE Instructions (Documentation) | No       | URL          | (unsupported)                                                     |      | CRA-AII(8)            |
-| 🟦 | CE Conformity Assessment Body   | No       | URL          | (unsupported)                                                     |      | CRA Article 47.1      |
-| 🟦 | Download location               | Yes      |              |                                                                   |      |                       |
+| Do | Field name                      | Required | Data type    | CycloneDX 1.6                                                         | SPDX | Required by              |
+| -- | :------------------------------ | :------- | :----------- | --------------------------------------------------------------------- | ---- | ------------------------ |
+| 🟦 | Security contact                | Yes      | URL          | bom.metadata.[supplier,manufacturer,author].contact.email             |      | CRA-AII(2)               |
+| 🟦 | Unique ID, Product ID           | Yes      | PURL         | bom.components[].purl                                                 |      | CRA-AII(3), NTIA-SBOM    |
+| 🟦 | Purpose, Intended Use           | Yes      | Text         |                                                                       |      | CRA-AII(4)               |
+| 🟦 | SBOM Location                   | No       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |      | CRA-AII(9)               |
+| 🟦 | Licenses                        | Yes      | SPDX License | bom.metadata.licenses[], bom.components[].licenses[]                  |      |                          |
+| 🟦 | CE Declaration of Conformity    | No       | URL          | (unsupported)                                                         |      | CRA-AII(6), CRA-AV       |
+| 🟦 | CE Support End Date             | No       | URL          | (unsupported)                                                         |      | CRA-AII(7)               |
+| 🟦 | CE Instructions (Documentation) | No       | URL          | (unsupported)                                                         |      | CRA-AII(8)               |
+| 🟦 | CE Conformity Assessment Body   | No       | URL          | (unsupported)                                                         |      | CRA Article 47.1, CRA-AV |
+| 🟦 | Download location               | Yes      |              |                                                                       |      |                          |
 
 
 ### Patcher
@@ -543,8 +533,8 @@ This role is necessary when...
 
 | Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by                        |
 | -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | ---------------------------------- |
-| 🟨 | Version                        | Yes      | Text         | $.components[].version                                 |      | NTIA-SBOM, DE-TR.5.2.2             |
-| 🟨 | Unique ID, Product ID          | Yes      | PURL         | $.components[].purl                                    |      | CRA-AII(3), NTIA-SBOM              |
+| 🟨 | Version                        | Yes      | Text         | bom.components[].version                               |      | NTIA-SBOM, DE-TR.5.2.2             |
+| 🟨 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl                                  |      | CRA-AII(3), NTIA-SBOM              |
 
 > [!WARNING]
 > FIXME – Not done
@@ -573,9 +563,9 @@ Concerns themselves with correct package format and structure, and that package 
 
 | Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by                        |
 | -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | ---------------------------------- |
-| 🟨 | Dependencies                   | Yes      | List         | $.components[], $.dependencies[]                       |      | CRA-AII(5), NTIA-SBOM              |
+| 🟨 | Dependencies                   | Yes      | List         | bom.components[], bom.dependencies[]                   |      | CRA-AII(5), NTIA-SBOM              |
 | 🟨 | Download location              | No       | URL          |                                                        |      |                                    |
-| 🟨 | SBOM Location                  | No       | URL          | $.components.externalReferences[].bom                  |      | CRA-AII(9)                         |
+| 🟨 | SBOM Location                  | No       | URL          | bom.components.externalReferences[].bom                |      | CRA-AII(9)                         |
 
 #### Deployer
 
@@ -597,6 +587,22 @@ Final preparation and installation of the software into a CI/CD or other deploym
 * See [Deployer](#deployer)
 
 
+### Open-Source Software Steward
+
+Within a [Language Environment](#language-environment), the OSS Steward has the duty to ensure that the obligations in the EU Cyber Resilience Act Articles 14, 15 and FIXME are met.
+
+| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by            |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | ---------------------- |
+| 🟦 | Open-Source Software Steward   | Yes      | URL          |                                                        |      | CRA-Rec-19             |
+| 🟦 | Intended for Commercial Use    | Yes      | Boolean      |                                                        |      | CRA-Rec-15, CRA-Rec-18 |
+| 🟥 | Security Attestation           | Yes      | URL          |                                                        |      | CRA-Rec-21             |
+
+> [!NOTE]
+> FIXME – Not done
+
+* See also [Author](#author), [Open-Source Software Steward](glossary.md#open-source-software-steward-) in the glossary.
+
+
 ### Curator
 
 Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
@@ -612,7 +618,7 @@ Concerns themselves with both the stability and predictability of components, an
 | Do | Field name                     | Required | Data type    | CycloneDX 1.6                                                     | SPDX | Required by           |
 | -- | :----------------------------- | :------- | :----------- | ----------------------------------------------------------------- | ---- | --------------------- |
 | 🟥 | Download location              | No       | URL          |                                                                   |      |                       |
-| 🟥 | SBOM Location                  | No       | URL          | $.externalReferences[].bom                                        |      | CRA-AII(9)            |
+| 🟥 | SBOM Location                  | No       | URL          | bom.externalReferences[].bom                                      |      | CRA-AII(9)            |
 
 > [!WARNING]
 > FIXME – Not done
@@ -633,10 +639,10 @@ Ensures the availability of packages, that they are indexed correctly, and that 
     * [CISA SBOM Sharing Roles and Considerations](#references) (CISA-2024)
     * [CRA Article 20](#references) (CRA-Art-20)
 
-| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                                     | SPDX | Required by           |
-| -- | :----------------------------- | :------- | :----------- | ----------------------------------------------------------------- | ---- | --------------------- |
-| 🟨 | Download location              | Yes      | URL          |                                                                   |      |                       |
-| 🟨 | SBOM Location                  | No       | URL          | $.externalReferences[].bom, $.components.externalReferences[].bom |      | CRA-AII(9)            |
+| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                                         | SPDX | Required by           |
+| -- | :----------------------------- | :------- | :----------- | --------------------------------------------------------------------- | ---- | --------------------- |
+| 🟨 | Download location              | Yes      | URL          |                                                                       |      |                       |
+| 🟨 | SBOM Location                  | No       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |      | CRA-AII(9)            |
 
 > [!WARNING]
 > FIXME – Not done
@@ -682,7 +688,7 @@ Communicates any issues or findings to any number of upstream roles, including t
 
 | Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by           |
 | -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
-| 🟦 | Unique ID, Product ID          | Yes      | PURL         | $.components[].purl                                    |      | CRA-AII(3), NTIA-SBOM |
+| 🟦 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl                                  |      | CRA-AII(3), NTIA-SBOM |
 
 
 > [!WARNING]
@@ -718,14 +724,14 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 | Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by           |
 | -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
-| 🟦 | Security contact               | Yes      | URL          | $.components[].externalReferences[].security-contact   |      | CRA-AII(2)            |
-| 🟦 | Unique ID, Product ID          | Yes      | PURL         | $.components[].purl                                    |      | CRA-AII(3), NTIA-SBOM |
+| 🟦 | Security contact               | Yes      | URL          | bom.components[].externalReferences[].security-contact |      | CRA-AII(2)            |
+| 🟦 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl                                  |      | CRA-AII(3), NTIA-SBOM |
 | 🟦 | Purpose, Intended Use          | Yes      | Text         |                                                        |      | CRA-AII(4)            |
 | 🟦 | SBOM Location                  | No       | URL          |                                                        |      | CRA-AII(9)            |
-| 🟦 | CE Declaration of Conformity   | No       | URL          |                                                        |      | CRA-AII(6)            |
-| 🟦 | CE Support End Date            | No       | URL          |                                                        |      | CRA-AII(7), CRA-Rec- |
+| 🟦 | CE Declaration of Conformity   | No       | URL          |                                                        |      | CRA-AII(6), CRA-AV    |
+| 🟦 | CE Support End Date            | No       | URL          |                                                        |      | CRA-AII(7)            |
 | 🟦 | CE Instructions                | No       | URL          |                                                        |      | CRA-AII(8)            |
-| 🟦 | CE Conformity Assessment Body  | No       | URL          |                                                        |      | CRA-Art-47(1)         |
+| 🟦 | CE Conformity Assessment Body  | No       | URL          |                                                        |      | CRA-Art-47(1), CRA-AV |
 | 🟦 | Download location              | Yes      |              |                                                        |      |                       |
 
 #### Compliance
@@ -737,18 +743,18 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 ```mermaid
 graph TB
-    start-here(Start here) --> involved{"Involved<br>with OSS products?<br><a href="#references">CRA Recital (18)</a>"}
+    start-here(Start here) --> involved{"Involved<br>with OSS products?<br>CRA Recital (18)"}
     involved  -->|No| not-relevant-for-you("This chart isn't<br>relevant for you")
-    involved -->|Yes| contributing{"Contributing<br>unpaid to OSS?<br><a href="#references">CRA Recital (18)</a>"}
-    contributing  -->|No| monetised{"Monetizing<br>the product?<br><a href="#references">CRA Recital (18)</a>"}
+    involved -->|Yes| contributing{"Contributing<br>unpaid to OSS?<br>CRA Recital (18)"}
+    contributing  -->|No| monetised{"Monetizing<br>the product?<br>CRA Recital (18)"}
     contributing -->|Yes| cra-is-out-of-scope(CRA is out-of-scope)
-    monetised -->|Yes| cra-manufacturer("CRA is in-scope<br>You are a Manufacturer<br><a href="#references">CRA Recital (18), (15)</a>")
-    monetised -->|No| is-legal-entity{"Legal person,<br> but not natural person?<br><a href="#references">CRA Recital (19)</a>"}
-    is-legal-entity -->|Yes| intended-commercial-use{"Is product<br>intended for<br>commerial use?<br><a href="#references">CRA Recital (19)</a>"}
+    monetised -->|Yes| cra-manufacturer("CRA is in-scope<br>You are a Manufacturer<br>CRA Recital (18), (15)")
+    monetised -->|No| is-legal-entity{"Legal person,<br> but not natural person?<br>CRA Recital (19)"}
+    is-legal-entity -->|Yes| intended-commercial-use{"Is product<br>intended for<br>commerial use?<br>CRA Recital (19)"}
     is-legal-entity -->|No| cra-is-out-of-scope
     intended-commercial-use -->|No| cra-is-out-of-scope
-    intended-commercial-use -->|Yes| product-supporter{"Providing<br>support for OSS<br>products?<br><a href="#references">CRA Recital (18)</a>"}
-    product-supporter -->|Yes| cra-oss-steward("CRA in-scope<br>You are an Open-Source Steward<br><a href="#references">CRA Article 3 (14)</a>")
+    intended-commercial-use -->|Yes| product-supporter{"Providing<br>support for OSS<br>products?<br>CRA Recital (18)"}
+    product-supporter -->|Yes| cra-oss-steward("CRA in-scope<br>You are an Open-Source Software Steward<br>CRA Article 3 (14)")
     product-supporter -->|No| cra-is-out-of-scope
 
     %% Based on the flowchart made by Maarten Aertsen (NLNetLabs) found at

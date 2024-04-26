@@ -25,6 +25,8 @@ toc: true
 
 * (CDX) [CycloneDX Use Cases](https://cyclonedx.org/use-cases/)
 * (SPDX) [A Practical Guide to SPDX](https://fossa.com/learn/spdx)
+* (SPDX) [How To Use SPDX 2.3 in Different Scenarios](https://spdx.github.io/spdx-spec/v2.3/how-to-use/)
+
 
 ### Useful articles and papers
 
@@ -35,6 +37,8 @@ toc: true
 * (Lawfare Media) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards) (July 2022)
 * (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
 * (CISA) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations) (March 2024)
+* (SPDX) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 2.3)
+* (SPDX) [Satisfying NTIA Minimum Elements for an SBOM using SPDX](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 3.0)
 
 See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
 

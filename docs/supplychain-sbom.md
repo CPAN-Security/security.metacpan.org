@@ -189,7 +189,7 @@ stateDiagram-v2
     state "🟥🟨🟦 Integrator\n🟥🟨🟦 Developer" as integrator_developer
     state "🟩 Publisher" as integrator_publisher
     state "🟨🟦 Builder" as integrator_builder
-    state "🟨 Deployer" as deployer
+    state "🟨 Deployer\n🟨 Installer" as deployer
     state "🟦 Vuln. Checker" as integrator_checker
     state "🟦 Consumer\n🟦 User" as consumer
     state "🟦 Auditor" as auditor_internal
@@ -588,6 +588,13 @@ Final preparation and installation of the software into a CI/CD or other deploym
 
 > [!WARNING]
 > FIXME – Not done
+
+#### Installer
+
+> [!NOTE]
+> Mentioned once in the EU Cyber Resilience Act.
+
+* See [Deployer](#deployer)
 
 
 ### Curator

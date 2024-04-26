@@ -424,39 +424,46 @@ A Open Source Software Steward to assist them in improving their product's secur
 
 [comment]: # (||| data-auto-animate)
 
-## Metadata tasks...
+## Metadata
 
 * Update CPAN::Meta::Spec
-    * CRA compliance fields
-    * Project sustainability fields
- 
+    * Add CRA compliance fields
+    * Add project sustainability fields
+    * Who would like to make this happen? ✋
+
+
 [comment]: # (|||)
 
-## SBOM tasks...
+## SBOM
 
-* Support SBOMs in the toolchain
+* Support Software Bill of Materials in the toolchain
     * PackageURL for helping with out-of-ecosystem dependencies and requirements
     * SBOM-aware PAUSE
     * SBOM discovery API on MetaCPAN
- 
+    * Who would like to make this work? ✋
+
+
 [comment]: # (|||)
 
-## Documentation tasks...
+## Documentation
 
 * Create an overview of roles, metadata, responsibilities and terminology
+    * Who needs the metadata required by CRA?
+    * Where does it come from?
     * **LOTS done!**
     * See https://security.metacpan.org/docs/
 
+
 [comment]: # (|||)
 
-## Supply-chain SBOM intro
+## CPANSec's supply-chain SBOM overview
 
 Let's take a look!
 
 
 [comment]: # (!!!)
 
-## Further work
+## Further work in CPANSec
 
 * Let's coordinate on #cpan-security on irc.perl.org! 😍
 

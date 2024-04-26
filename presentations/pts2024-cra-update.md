@@ -22,37 +22,32 @@ PTS 2024
 
 Salve J. Nilsen
 
-Mastodon: @sjn\@chaos.social
+@sjn\@chaos.social
 
 Note:
 
 * Presentation from 2023 is still _mostly correct_ (80-90%), and many of the concerns and worries laid out there are **still relevant**
 
 
-* A new role was specified in December 2023 – the Open Source Software **Steward**
-* The purpose of this role is to help FOSS communities become an active part in the new security landscape without having to worry about the liability risks
-
-| Author | Steward | Manufacturer | Importer | Distributor |
-
-
-- Unescapable new **legislative requirements**
-- Get an end-to-end correct and up-to-date provenance
-- Reduce false positives in security tooling
-
-
 [comment]: # (!!!)
 
-## Our mission
+## Oh Noes!
 
-* There are substantial changes to the landscape – Our maps need updating!
-* Let's pretend we're **scouts on a fact-finding mission**
+* There are substantial changes to the landscape
+    * Our maps need updating!
 
-* Focus – questions, facts, references
-    * otherwise – we state our confidence (0-100%)
+* Let's play **scouts on a fact-finding mission**
+* Looking for facts, references, questions
+* Otherwise – state our confidence (0-100%)
 
 Note:
 
 Inspiration from Julia Galef's "The Scout Mindset" book (2021)
+
+
+[comment]: # (!!!)
+
+## (Obligatory IANALawyer)
 
 
 [comment]: # (!!!)
@@ -63,7 +58,7 @@ Inspiration from Julia Galef's "The Scout Mindset" book (2021)
 * Final translations/fixes ongoing
 * Law is adopted when EU Council gives final approval
 * Three year implementation period
-* Law takes effect in Q2 2027
+* **CRA expexted to take effect in Q2 2027**
 
 <div style="font-size: large;">
 
@@ -73,6 +68,7 @@ Inspiration from Julia Galef's "The Scout Mindset" book (2021)
 
 Note:
 
+Approved 6 weeks ago
 Law is expected to be approved by the Council in April 2024!
 
 
@@ -80,7 +76,11 @@ Law is expected to be approved by the Council in April 2024!
 
 ## CRA Applies to...
 
-* All Manufacturers that wish to place "Products with Digital Elements" on the EU market.
+* All Manufacturers that wish to place "Products with Digital Elements" on the EU market. ([Recital 9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=10))
+
+* Connected devices
+* Remote data processing solutions
+* Non-tangible digital products
 
 <div style="font-size: large;">
 
@@ -96,31 +96,39 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (!!!)
 
+## CRA does not apply to...
+
+* Software that is part of a service  ([Recital 12](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=13))
+* Though NIS2 applies if the services is considered critical infrastructure (70%)
+
+
+[comment]: # (!!!)
+
 ## Five "Roles"
 
 * Manufacturer
-* Distributor (not relevant)
-* Importer (not relevant)
-* Open-Source Software Steward (NEW!)
-* Open-Source Developers & Contributors
+* Distributor
+* Importer
+* Open-Source Software Steward
+* Open-Source Developers
 
 [comment]: # (!!! data-auto-animate)
 
 ## Five "Roles"
 
-* Manufacturer 👈
-* Distributor (not relevant)
-* Importer (not relevant)
-* Open-Source Software Steward (NEW!)
-* Open-Source Developers & Contributors
+* Manufacturer 🔍
+* Distributor
+* Importer
+* Open-Source Software Steward
+* Open-Source Developers
 
 [comment]: # (||| data-auto-animate)
 
 ## Manufacturer
 
 * A natural or legal person who 
-    * **develops** or manufactures products with digital elements
-    * or **has products** with digital elements **designed**, developed or manufactured,
+    * **develops** or manufactures **products with digital elements**
+    * or **has products with digital elements** designed, **developed** or manufactured,
     * and **markets them under its name** or trademark,
     * whether for payment, monetisation or free of charge
 
@@ -148,8 +156,9 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers – Support period
 
-* Determine the product support period. Default is 10 years. ([Recital 118](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=120))
-* Security fixes must remain available for 10 years afted publishing ([Article 13 point 9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=167))
+* Determine the product support period.
+    * Default is 10 years. ([Recital 118](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=120))
+* Security fixes must remain available for 10 years after publishing ([Article 13.9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=167))
 
 <div style="font-size: large;">
 
@@ -161,7 +170,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers – Point of Contact
 
-* Set up a single point of contact ([Annex II point 2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
+* Set up a single.of contact ([Annex II.2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
 
 <div style="font-size: large;">
 
@@ -173,7 +182,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers — Unique ID
 
-* Create a unique identification of their product ([Annex II point 3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
+* Create a unique identification of their product ([Annex II.3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
 
 <div style="font-size: large;">
 
@@ -186,7 +195,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ### Obligations of Manufacturers – Build & Dependencies
 
 * Be able to identify and document vulnerabilities and components contained in products ([Annex I, Part II (1)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297))
-* Describe how the product is put together ([Annex VII point 2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314))
+* Describe how the product is put together ([Annex VII.2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314))
 
 <div style="font-size: large;">
 
@@ -204,7 +213,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 <div style="font-size: large;">
 
-> * Requries ways to refer to both embedded and cross-ecosystem dependencies (95%)
+> * Requires ways to refer to both embedded and cross-ecosystem dependencies (95%)
 > * Transitive dependencies are implied to be produced (70%)
 
 </div>
@@ -213,10 +222,10 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers – No Vulnerabilities
 
-* Product has **no known vulnerabilities** in their products ([Article 13 point 1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161); [Annex I, Part I (2 (a))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297))
-* Product is **secure by default** ([Recital 65] https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=73))
-* Exercise due diligence when integrating third party components to avoid they compromise security ([Article 13 point 5](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163))
-* Report vulnerabilities to the Manufacturer or Open Source maintainer ([Article 13 point 6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164))
+* Product has **no known vulnerabilities** in their products ([Article 13.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161); [Annex I, Part I (2 (a))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297))
+* Product is **secure by default** ([Recital 65](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=73))
+* 😍 Exercise due diligence when integrating third party components to avoid they compromise security ([Article 13.5](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163))
+* Report vulnerabilities to the Manufacturer or Open Source maintainer ([Article 13.6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164))
 
 <div style="font-size: large;">
 
@@ -229,24 +238,19 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers – Offer timely security updates
 
-* Make security updates available to customers effectively for the duration of the support period ([Article 13 point 8](); [Annex I part II]())
-* Ensure vulnerabilities can be addressed through security updates ([Annex I, Part I (2 (c))]())
-    * In a timely manner ([Annex I, Part I (8)]())
+* Make security updates available to customers effectively for the duration of the support period ([Article 13.8](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=165); [Annex I part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300))
+* Ensure vulnerabilities can be addressed through security updates ([Annex I, Part I (2 (c))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=))
+    * In a timely manner ([Annex I, Part II (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=302))
 
-<div style="font-size: large;">
-
-> This means they must have updateable products! No more servers running RHEL6.
-
-</div>
 
 [comment]: # (|||)
 
 ### Obligations of Manufacturers – Early warning system
 
-* Take part in the EU early warning notification regime for responding to actively exploited vulnerabilities ([Article 13 Point 6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164); [Article 14 point 1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176))
-    * Submit early warning within 24h after exploit discovery ([Article 14 point 2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177))
-    * Submit vulnerability notification within 72h, including corrective measures ([Article 14 point 2 (b)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177))
-    * Submit a final report no later than 14 days after discovery ([Article 14 point 2 (c)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=178))
+* Take part in the EU early warning notification regime ([Article 13.6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164); [Article 14.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176))
+    * Submit early warning within 24h after exploit discovery ([Article 14.2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177))
+    * Submit vulnerability notification within 72h, incl. corrective measures ([Article 14.2 (b)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177))
+    * Submit a final report no later than 14 days after discovery ([Article 14.2 (c)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=178))
 * Incident reports must be submitted to a common EU reporting platform
 
 
@@ -255,10 +259,10 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ## Five "Roles"
 
 * Manufacturer ✅
-* Distributor (not relevant)
-* Importer (not relevant)
-* Open-Source Software Steward (NEW!)
-* Open-Source Developers & Contributors
+* Distributor
+* Importer
+* Open-Source Software Steward
+* Open-Source Developers
 
 
 [comment]: # (!!! data-auto-animate)
@@ -266,10 +270,10 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ## Five "Roles"
 
 * Manufacturer ✅
-* Distributor (not relevant) ❌
-* Importer (not relevant)
-* Open-Source Software Steward (NEW!)
-* Open-Source Developers & Contributors
+* Distributor ❌
+* Importer
+* Open-Source Software Steward
+* Open-Source Developers
 
 
 [comment]: # (!!! data-auto-animate)
@@ -277,10 +281,10 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ## Five "Roles"
 
 * Manufacturer ✅
-* Distributor (not relevant) ❌
-* Importer (not relevant) ❌
-* Open-Source Software Steward (NEW!)
-* Open-Source Developers & Contributors
+* Distributor ❌
+* Importer ❌
+* Open-Source Software Steward
+* Open-Source Developers
 
 
 [comment]: # (!!! data-auto-animate)
@@ -288,10 +292,10 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ## Five "Roles"
 
 * Manufacturer ✅
-* Distributor (not relevant) ❌
-* Importer (not relevant) ❌
-* Open-Source Software Steward (NEW!) 👈
-* Open-Source Developers & Contributors
+* Distributor ❌
+* Importer ❌
+* Open-Source Software Steward 🔍
+* Open-Source Developers
 
 
 [comment]: # (||| data-auto-animate)
@@ -309,34 +313,40 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ### Obligations of Open Source Stewards – Community Policy
 
 * Must create cybersecurity policy and documentation for it's community, that fosters...
-    * Development of secure products ([Article 24 point 1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=208))
-    * Effective handling and information sharing around vulnerabilities ([Article 24 point 1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=208))
-    * Voluntary vulnerability reporting
+    * Development of secure products ([Article 24.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=208))
+    * Effective handling and information sharing around vulnerabilities ([Article 24.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=208))
+    * Voluntary vulnerability reporting ([Article 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=185))
 
 
 [comment]: # (|||)
 
 ### Obligations of Open Source Stewards – Cooperation
 
-* Must cooperate with market surveillance authorities in...
-    * Mitigating risks ([Article 24 point 2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=209))
-    * Provide above documentation upon request ([Article 24 point 2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=209))
-    * Notify of exploited vulnerability discoveries ([Article 14 point 1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176))
-    * Informing users of the impact of active exploited vulnerabilities or severe incidents ([Article 14 point 8](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=183))
+* Must cooperate with market surveillance authorities in... ([Article 24.2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=209))
+    * Mitigating risks
+    * Provide above documentation upon request
+    * Notify of exploited vulnerability discoveries ([Article 14.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176))
+    * Informing users of the impact of active exploited vulnerabilities or severe incidents ([Article 14.8](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=183))
 
-<div style="font-size: 1em;">
+<div style="font-size: large;">
 
-> * The Steward's role seems to be about "adding value" for Manufacturers by offloading some of the due diligence tasks. This is valuable!
+> * Here, Stewards "add value" for Manufacturers by offloading some of the due diligence tasks. This is valuable!
 
 </div>
 
+
 [comment]: # (|||)
 
-### Obligations of Open Source Stewards II
+### Obligations of Open Source Stewards – Security Attestation
 
+* 😍 Facilitate Manufacturer's due diligence as laid out in [Article 13.5](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163) ([Article 25](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=210))
+* EU Commision is tasked to set up a security attestation programme to facilitate this ([Recital 21](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25))
 
+<div style="font-size: large;">
 
+> * Stewards "add value" for Manufacturers by providing a Security Attestation via. This is valuable!
 
+</div>
 
 
 [comment]: # (|||)
@@ -344,10 +354,10 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ## Five "Roles"
 
 * Manufacturer ✅
-* Distributor (not relevant) ❌
-* Importer (not relevant) ❌
-* Open-Source Software Steward (NEW!) ✅
-* Open-Source Developers & Contributors
+* Distributor ❌
+* Importer ❌
+* Open-Source Software Steward ✅
+* Open-Source Developers
 
 
 [comment]: # (!!! data-auto-animate)
@@ -355,83 +365,100 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ## Five "Roles"
 
 * Manufacturer ✅
-* Distributor (not relevant) ❌
-* Importer (not relevant) ❌
-* Open-Source Software Steward (NEW!) ✅
-* Open-Source Developers & Contributors 👈
-
+* Distributor ❌
+* Importer ❌
+* Open-Source Software Steward ✅
+* Open-Source Developers 🔍
 
 
 [comment]: # (||| data-auto-animate)
 
 ## Open Source Developers
 
-
-Note:
-
-SBOMs are for keeping track of important information across dependencies
+* CRA doesn't really talk about Open Source **Developers**
 
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
-![Example dependency tree](media/CPAN-deps-1.svg)
+### Obligations to Open Source Developers – Status Quo
 
-
-[comment]: # (!!!)
-
-## Software Bill of Materials
-
-
+* CRA **does not apply** to Developers if...
+    * they contribute code to projects they are **not responsible for** ([Recital (18)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
+    * they are **not monetising** their product ([Recital (18)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
+    * their product **is not ultimately** intended for commercial activities ([Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22))
 
 
-## Software identification
+[comment]: # (|||)
 
-* [PURL](https://github.com/package-url/purl-spec) – _Package URL_
-    * [URI::PackageURL](https://metacpan.org/pod/URI::PackageURL) by GTD
+### Obligations to Open Source Developers – With a FOSS Steward
 
-
-```txt
-pkg:cpan/SJN/Acme-Godot@0.1
-```
+* CRA **applies voluntarily** if the Developer decides...
+    * their product **is ultimately intended** for commercial activities ([Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22))
 
 
-[comment]: # (!!!)
+A Open Source Software Steward to assist them in improving their product's security posture.
 
 
-## What can go into an SBOM?
+[comment]: # (|||)
 
+## Five "Roles"
 
-
-[comment]: # (!!!)
-
-## The Minimum Elements For a Software Bill of Materials (SBOM)
-
-[Pursuant to Executive Order 14028 on Improving the Nation’s Cybersecurity](https://www.ntia.doc.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf)
-
-July 12, 2021
-
-
-Note:
-
-US Department of Commerce published a list of minimum required fields in an SBOM
-
-
-[comment]: # (!!!)
-
-| Data Field               | SBOM | CPAN |
-| ------------------------ | ---- | ---- |
-| Supplier Name            | yes  | yes  |
-| Component Name           | yes  | yes  |
-| Version of the Component | yes  | yes  |
-| Other Unique Identifiers | yes  | no   |
-| Dependency Relationship  | yes  | yes  |
-| Author of SBOM Data      | yes  | no   |
-| Time-stamp               | yes  | no   |
-
+* Manufacturer ✅
+* Distributor ❌
+* Importer ❌
+* Open-Source Software Steward ✅
+* Open-Source Developers ✅
 
 
 [comment]: # (!!! data-auto-animate)
 
+## Now what?
+
+
+[comment]: # (||| data-auto-animate)
+
+## Now what?
+
+* We can help our users comply with EU Law!
+
+
+[comment]: # (||| data-auto-animate)
+
+## Metadata tasks...
+
+* Update CPAN::Meta::Spec
+    * CRA compliance fields
+    * Project sustainability fields
+ 
+[comment]: # (|||)
+
+## SBOM tasks...
+
+* Support SBOMs in the toolchain
+    * PackageURL for helping with out-of-ecosystem dependencies and requirements
+    * SBOM-aware PAUSE
+    * SBOM discovery API on MetaCPAN
+ 
+[comment]: # (|||)
+
+## Documentation tasks...
+
+* Create an overview of roles, metadata, responsibilities and terminology
+    * **LOTS done!**
+    * See https://security.metacpan.org/docs/
+
+[comment]: # (|||)
+
+## Supply-chain SBOM intro
+
+Let's take a look!
+
+
+[comment]: # (!!!)
+
+## Further work
+
+* Let's coordinate on #cpan-security on irc.perl.org! 😍
 
 
 [comment]: # (!!!)
@@ -440,6 +467,6 @@ US Department of Commerce published a list of minimum required fields in an SBOM
 
 Salve J. Nilsen
 
-Mastodon: @sjn\@chaos.social
+@sjn\@chaos.social
 
 🦆🦆🦆

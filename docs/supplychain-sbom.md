@@ -97,13 +97,13 @@ The color-coding is used in this document to help illustrate different SBOM acti
 * Creates an SBOM. (CISA-2024)
     *  This document assumes that each SBOM created is available for sharing. 
 
-| Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
+| Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX 2.3 | Required by             |
 | -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
 | 🟥 | SBOM Type                              | No         |              |                                                                   |      |                         |
-| 🟥 | SBOM Author                            | Yes        | Text         | bom.metadata.author                                               |      | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | bom.metadata.timestamp                                            |      | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟥 | SBOM Author                            | Yes        | Text         | bom.metadata.author                                               | creationInfo.creators[]     | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | bom.metadata.timestamp                                            | creationInfo.created     | NTIA-SBOM, DE-TR.5.2.1  |
 | 🟥 | SBOM Generation Tool                   | No         | List         | bom.metadata.tools[]                                              |      |                         |
-| 🟥 | SBOM Serial Number                     | Yes        | UUID         | bom.metadata.serialNumber                                         |      |                         |
+| 🟥 | SBOM Serial Number                     | Yes        | UUID         | bom.metadata.serialNumber                                         | SPDXID     |                         |
 | 🟥 | CycloneDX bomFormat                    | Yes        | Enum         | bom.properties.bomFormat                                          | N/A  | CycloneDX 1.6           |
 | 🟥 | CycloneDX specVersion                  | Yes        | Int          | bom.properties.specVersion                                        | N/A  | CycloneDX 1.6           |
 
@@ -115,6 +115,11 @@ The color-coding is used in this document to help illustrate different SBOM acti
 > [!NOTE]
 > FIXME – Check if this is sane.
 
+<!-->
+Note from Josh
+I'm not entirely convinced an assembler should exist as a section. It might make more sense to just refer to this as an author then break it out someday if that makes more sense.
+<-->
+
 * SBOM Assemblers collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_. (CPANSec-2024)
     * This role is very similar to SBOM Author roles, but while an SBOM Author mainly concerns themselves with the creation of authoritative meta fields, the SBOM Assembler ensures they are complete and correct.
 * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
@@ -122,10 +127,10 @@ The color-coding is used in this document to help illustrate different SBOM acti
 | Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
 | -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
 | 🟨 | SBOM Type                              | No         |              |                                                                   |      |                         |
-| 🟥 | SBOM Author                            | Yes        | Text         | bom.metadata.author                                               |      | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | bom.metadata.timestamp                                            |      | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟥 | SBOM Author                            | Yes        | Text         | bom.metadata.author                                               | creationInfo.creators[]  | NTIA-SBOM, DE-TR.5.2.1  |
+| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | bom.metadata.timestamp                                            | creationInfo.created     | NTIA-SBOM, DE-TR.5.2.1  |
 | 🟨 | SBOM Generation Tool                   | No         | List         | bom.metadata.tools[]                                              |      |                         |
-| 🟥 | SBOM Serial Number                     | Yes        | UUID         | bom.metadata.serialNumber                                         |      |                         |
+| 🟥 | SBOM Serial Number                     | Yes        | UUID         | bom.metadata.serialNumber                                         | SPDXID     |                         |
 | 🟨 | CycloneDX bomFormat                    | Yes        | Enum         | bom.properties.bomFormat                                          | N/A  | CycloneDX 1.6           |
 | 🟨 | CycloneDX specVersion                  | Yes        | Int          | bom.properties.specVersion                                        | N/A  | CycloneDX 1.6           |
 

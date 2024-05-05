@@ -102,7 +102,7 @@ The color-coding is used in this document to help illustrate different SBOM acti
 | 🟥 | SBOM Type                              | No         |              |                                                                   |      |                         |
 | 🟥 | SBOM Author                            | Yes        | Text         | bom.metadata.author                                               | creationInfo.creators[]     | NTIA-SBOM, DE-TR.5.2.1  |
 | 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | bom.metadata.timestamp                                            | creationInfo.created     | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟥 | SBOM Generation Tool                   | No         | List         | bom.metadata.tools[]                                              |      |                         |
+| 🟥 | SBOM Generation Tool                   | No         | List         | bom.metadata.tools[]                                              | creationInfo.creators[] |                         |
 | 🟥 | SBOM Serial Number                     | Yes        | UUID         | bom.metadata.serialNumber                                         | SPDXID     |                         |
 | 🟥 | CycloneDX bomFormat                    | Yes        | Enum         | bom.properties.bomFormat                                          | N/A  | CycloneDX 1.6           |
 | 🟥 | CycloneDX specVersion                  | Yes        | Int          | bom.properties.specVersion                                        | N/A  | CycloneDX 1.6           |
@@ -129,7 +129,7 @@ I'm not entirely convinced an assembler should exist as a section. It might make
 | 🟨 | SBOM Type                              | No         |              |                                                                   |      |                         |
 | 🟥 | SBOM Author                            | Yes        | Text         | bom.metadata.author                                               | creationInfo.creators[]  | NTIA-SBOM, DE-TR.5.2.1  |
 | 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | bom.metadata.timestamp                                            | creationInfo.created     | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟨 | SBOM Generation Tool                   | No         | List         | bom.metadata.tools[]                                              |      |                         |
+| 🟨 | SBOM Generation Tool                   | No         | List         | bom.metadata.tools[]                                              | creationInfo.creators[] |                         |
 | 🟥 | SBOM Serial Number                     | Yes        | UUID         | bom.metadata.serialNumber                                         | SPDXID     |                         |
 | 🟨 | CycloneDX bomFormat                    | Yes        | Enum         | bom.properties.bomFormat                                          | N/A  | CycloneDX 1.6           |
 | 🟨 | CycloneDX specVersion                  | Yes        | Int          | bom.properties.specVersion                                        | N/A  | CycloneDX 1.6           |
@@ -403,9 +403,9 @@ Has the legal ownership rights and liabilities for the component.
 Is usually the [Author](#author), a business or some other type of legal entity.
 May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
 
-| Do | Field name                     | Required   | Data type | CycloneDX 1.6                                                         | SPDX | Required by                        |
+| Do | Field name                     | Required   | Data type | CycloneDX 1.6                                                         | SPDX 2.3 | Required by                        |
 | -- | :----------------------------- | :--------- | :-------- | :-------------------------------------------------------------------- | ---- | :--------------------------------- |
-| 🟥 | Owner Name                     | Yes        | Text, URL | bom.metadata[supplier,manufacturer,author], bom.components[].supplier |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
+| 🟥 | Owner Name                     | Yes        | Text, URL | bom.metadata[supplier,manufacturer,author], bom.components[].supplier | creationInfo.creators[], packages[].originator, packages[].supplier | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
 
 * See also [Manufacturer](#manufacturer)
 
@@ -416,9 +416,13 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 * See also [Owner](#owner)
 
-| Do | Field name                    | Required | Data type | CycloneDX (PRE-PROPOSAL; UNSUPPORTED)                          | SPDX | Required by                        |
+<!--
+SPDX 2.3 doesn't support the CE fields. SPDX 3.0 should be used at a future date
+-->
+
+| Do | Field name                    | Required | Data type | CycloneDX (PRE-PROPOSAL; UNSUPPORTED)                          | SPDX 2.3 | Required by                        |
 | -- | :---------------------------- | :------- | :-------- | :------------------------------------------------------------- | ---- | ---------------------------------- |
-| 🟥 | Owner Name (Manufacturer)     | Yes      | Text, URL | bom.metadata[supplier,manufacturer], bom.components[].supplier |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
+| 🟥 | Owner Name (Manufacturer)     | Yes      | Text, URL | bom.metadata[supplier,manufacturer], bom.components[].supplier | creationInfo.creators[], packages[].originator, packages[].supplier | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
 | 🟥 | CE Declaration of Conformity  | Yes      | URL       | bom.externalReferences[?(@.conformity-declaration)]            |      | CRA-AII(6), CRA-AV                 |
 | 🟥 | CE Support End Date           | Yes      | DateTime  | bom.externalReferences[?(@.support-horizon)]                   |      | CRA-AII(7)                         |
 | 🟥 | CE Technical Documentation    | Yes      | URL       | bom.externalReferences[?(@.documentation)]                     |      | CRA-AII(8), CRA-AVII               |
@@ -453,27 +457,27 @@ Not to be confused with the [SBOM Author](#sbom-author--role-) role.
 
 * See also [Author](glossary#author) in the Glossary.
 
-| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                                         | SPDX | Required by                                |
+| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                                         | SPDX 2.3 | Required by                                |
 | -- | :----------------------------- | :------- | :----------- | :-------------------------------------------------------------------- | ---- | ------------------------------------------ |
-| 🟥 | Component Name                 | Yes      | Text         | bom.components[].name                                                 |      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |
-| 🟥 | Version                        | Yes      | Text         | bom.components[].version                                              |      | NTIA-SBOM, DE-TR.5.2.2                     |
-| 🟥 | Dependencies                   | Yes      | List         | bom.components[], bom.dependencies[]                                  |      | CRA-AII(5), NTIA-SBOM                      |
+| 🟥 | Component Name                 | Yes      | Text         | bom.components[].name                                                 | packages[].name | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |
+| 🟥 | Version                        | Yes      | Text         | bom.components[].version                                              | packages[].versionInfo | NTIA-SBOM, DE-TR.5.2.2                     |
+| 🟥 | Dependencies                   | Yes      | List         | bom.components[], bom.dependencies[]                                  | relationships[].[spdxElementId,relatedSpdxElement,relatedSpdxElement] | CRA-AII(5), NTIA-SBOM                      |
 | 🟥 | Security contact               | Yes      | URL          | bom.externalReferences[].security-contact                             |      | CRA-AII(2)                                 |
-| 🟥 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl                                                 |      | CRA-AII(3), NTIA-SBOM, CRA-AV              |
-| 🟥 | Purpose, Intended Use          | Yes      | Text         | bom.components[].description                                          |      | CRA-AII(4)                                 |
-| 🟨 | Licenses                       | Yes      | SPDX License | bom.components[].licenses[]                                           |      |                                            |
-| 🟥 | Public Code Repository         | Yes      |              | bom.metadata.component.externalReferences[].vcs                       |      |                                            |
+| 🟥 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM, CRA-AV              |
+| 🟥 | Purpose, Intended Use          | Yes      | Text         | bom.components[].description                                          | packages[].comment | CRA-AII(4)                                 |
+| 🟨 | Licenses                       | Yes      | SPDX License | bom.components[].licenses[]                                           | packages[].licenseConcluded, packages[].licenseConcluded |                                            |
+| 🟥 | Public Code Repository         | Yes      |              | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |                                            |
 | 🟥 | Intended for Commercial Use    | No       | Boolean      |                                                                       |      | CRA-Rec-15                                 |
 | 🟥 | Open-Source Software Steward   | No       | URL          |                                                                       |      | CRA                                        |
 | 🟥 | Code Commit Revision           | No       |              |                                                                       |      |                                            |
-| 🟨 | Code Repository                | Yes      |              | bom.components[].externalReferences[].vcs                             |      |                                            |
-| 🟨 | Owner Name (Author)            | Yes      | Text, URL    | bom.components[].supplier                                             |      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |
+| 🟨 | Code Repository                | Yes      |              | bom.components[].externalReferences[].vcs                             | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |                                            |
+| 🟨 | Owner Name (Author)            | Yes      | Text, URL    | bom.components[].supplier                                             | creationInfo.creators[] | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |
 | 🟨 | SBOM Location                  | No       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |      | CRA-AII(9)                                 |
 | 🟨 | SBOM Type                      | Yes      |              |                                                                       |      |                                            |
-| 🟨 | SBOM Author                    | Yes      | Text         | bom.metadata.author                                                   |      | NTIA-SBOM, DE-TR.5.2.1                     |
-| 🟨 | SBOM Creation Time-stamp       | Yes      | DateTime     | bom.metadata.timestamp                                                |      | NTIA-SBOM, DE-TR.5.2.1                     |
-| 🟨 | SBOM Generation Tool           | No       | List         | bom.metadata.tools[]                                                  |      |                                            |
-| 🟨 | SBOM Serial Number             | Yes      | UUID         | bom.metadata.serialNumber                                             |      |                                            |
+| 🟨 | SBOM Author                    | Yes      | Text         | bom.metadata.author                                                   | creationInfo.creators[] | NTIA-SBOM, DE-TR.5.2.1                     |
+| 🟨 | SBOM Creation Time-stamp       | Yes      | DateTime     | bom.metadata.timestamp                                                | creationInfo.created | NTIA-SBOM, DE-TR.5.2.1                     |
+| 🟨 | SBOM Generation Tool           | No       | List         | bom.metadata.tools[]                                                  | creationInfo.creators[] |                                            |
+| 🟨 | SBOM Serial Number             | Yes      | UUID         | bom.metadata.serialNumber                                             | SPDXID |                                            |
 
 #### Custodian
 

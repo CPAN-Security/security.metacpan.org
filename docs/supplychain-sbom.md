@@ -513,10 +513,10 @@ See also [Importer](#glossary.md#importer) definition in the glossary.
 | Do | Field name                      | Required | Data type    | CycloneDX 1.6                                                         | SPDX | Required by              |
 | -- | :------------------------------ | :------- | :----------- | --------------------------------------------------------------------- | ---- | ------------------------ |
 | 🟦 | Security contact                | Yes      | URL          | bom.metadata.[supplier,manufacturer,author].contact.email             |      | CRA-AII(2)               |
-| 🟦 | Unique ID, Product ID           | Yes      | PURL         | bom.components[].purl                                                 |      | CRA-AII(3), NTIA-SBOM    |
+| 🟦 | Unique ID, Product ID           | Yes      | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM    |
 | 🟦 | Purpose, Intended Use           | Yes      | Text         |                                                                       |      | CRA-AII(4)               |
 | 🟦 | SBOM Location                   | No       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |      | CRA-AII(9)               |
-| 🟦 | Licenses                        | Yes      | SPDX License | bom.metadata.licenses[], bom.components[].licenses[]                  |      |                          |
+| 🟦 | Licenses                        | Yes      | SPDX License | bom.metadata.licenses[], bom.components[].licenses[]                  | packages[].licenseConcluded, packages[].licenseConcluded |                          |
 | 🟦 | CE Declaration of Conformity    | No       | URL          | (unsupported)                                                         |      | CRA-AII(6), CRA-AV       |
 | 🟦 | CE Support End Date             | No       | URL          | (unsupported)                                                         |      | CRA-AII(7)               |
 | 🟦 | CE Instructions (Documentation) | No       | URL          | (unsupported)                                                         |      | CRA-AII(8)               |
@@ -542,8 +542,8 @@ This role is necessary when...
 
 | Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by                        |
 | -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | ---------------------------------- |
-| 🟨 | Version                        | Yes      | Text         | bom.components[].version                               |      | NTIA-SBOM, DE-TR.5.2.2             |
-| 🟨 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl                                  |      | CRA-AII(3), NTIA-SBOM              |
+| 🟨 | Version                        | Yes      | Text         | bom.components[].version                               | packages[].versionInfo | NTIA-SBOM, DE-TR.5.2.2             |
+| 🟨 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl                                  | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM              |
 
 > [!WARNING]
 > FIXME – Not done

@@ -80,9 +80,9 @@ stateDiagram-v2
 The color-coding is used in this document to help illustrate different SBOM activities.
 
 * 🟥 Create, define, sign SBOM metadata — _**SBOM Author** makes sure the metadata and related artifacts **Exist**_.
-* 🟨 Assemble, update, attest, annotate SBOM metadata — _**SBOM Assembler** makes sure the metadata and related artifacts are **Current**_.
+* 🟨 Assemble, update, maintain, attest, annotate SBOM metadata — _**SBOM Assembler** makes sure the metadata and related artifacts are **Current**_.
 * 🟩 Distribute, curate, index SBOM metadata — _**SBOM Distributor** makes sure the metadata and related artifacts are made **Available** to others_.
-* 🟦 Consume, aggregate, verify, report SBOM metadata — _**SBOM Consumer** makes sure the metadata and related artifacts are **Complete**, **Correct** or **Compliant**_.
+* 🟦 Consume, aggregate, verify, validate, survey, analyze or report SBOM metadata — _**SBOM Consumer** makes sure the metadata and related artifacts are **Complete**, **Correct** or **Compliant**_.
 
 
 ### SBOM Author
@@ -115,7 +115,7 @@ The color-coding is used in this document to help illustrate different SBOM acti
 > [!NOTE]
 > FIXME – Check if this is sane.
 
-* SBOM Assemblers collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_. (CPANSec-2024)
+* SBOM Assemblers collect, combine, update, maintain, attest or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_. (CPANSec-2024)
     * This role is very similar to SBOM Author roles, but while an SBOM Author mainly concerns themselves with the creation of authoritative meta fields, the SBOM Assembler ensures they are complete and correct.
 * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
 
@@ -182,7 +182,7 @@ stateDiagram-v2
     state "🟦 Contributor" as contributor
     state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
-    state "🟨🟦 Builder\n🟨 Packager" as package_packager
+    state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Archivist" as package_packager
     state "🟨 Curator" as package_curator
     state "🟩 Distributor" as package_distributor
     state "🟦 Importer" as integrator_importer
@@ -352,17 +352,20 @@ A language ecosystem hosts, indexes and distributes components specific for a pr
 * May have upstream language ecosystems
 * May have downstream language ecosystems
 * May have automated Patcher
-* May be Public or Private
+* May be Public
+* May be Private
 
 
 ### Package Ecosystem
 
-A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#curator), [indexes and hosts](#distributor) components for a specific OS distribution making packages available for easy download and use.
+A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#curator), [indexes and hosts](#distributor) either components for a specific OS distributions, or [collections](#archivist) of components for use in container registries, available for easy download and use.
 
-* Examples: APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD)
+* Examples of package systems: APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD)
+* Examples of container systems: Docker
 * May have upstream package ecosystems
 * May have downstream package ecosystems
-* May be Public or Private
+* May be Public
+* May be Private
 
 
 ### Production Environment
@@ -545,7 +548,7 @@ This role is necessary when...
 > [!IMPORTANT]
 > Builders should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
 
-* See also [Packager](#packager), [Deployer](#packager).
+* See also [Packager](#packager), [Archivist](#archivist), [Deployer](#packager).
 
 #### Packager
 
@@ -560,6 +563,22 @@ Concerns themselves with correct package format and structure, and that package 
 >     * Author's repository, or a Custodian's if a project is dormant (e.g. a repository on Codeberg).
 >     * Language-specific packages distributed by a Language Ecosystem (e.g. CPAN).
 > * E.g. someone in the #debian-perl group downloads, builds, tests and installs something from CPAN, but instead of doing a regular install, they us tooling like `dh-make-perl` to produce a custom installation directory that can be incorporated into a .deb archive.
+
+| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by                        |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | ---------------------------------- |
+| 🟨 | Dependencies                   | Yes      | List         | bom.components[], bom.dependencies[]                   |      | CRA-AII(5), NTIA-SBOM              |
+| 🟨 | Download location              | No       | URL          |                                                        |      |                                    |
+| 🟨 | SBOM Location                  | No       | URL          | bom.components.externalReferences[].bom                |      | CRA-AII(9)                         |
+
+
+#### Archivist
+
+Operates within a [Package Ecosystem](#package-ecosystem), creating containers.
+Builds, installs package dependencies and creates container images from a base images.
+
+> [!NOTE]
+> * FIXME – "Archivist" isn't an obvious and descriptive name for the role that creates container images. If you have suggestions for a better single-word name for this role, that isn't ambiguous or obscure, then please reach out!
+> * FIXME – Flesh out details
 
 | Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by                        |
 | -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | ---------------------------------- |
@@ -620,11 +639,11 @@ Concerns themselves with both the stability and predictability of components, an
 ### Distributor
 
 Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
-Ensures the availability of packages, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
+Ensures the availability of packages or containers, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 > [!NOTE]
-> * Distributors take packages that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or similar).
-> * If SBOM metadata is expected to accompany the packages in question, the Distributor makes sure this happens.
+> * Distributors take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry,  or similar).
+> * If SBOM metadata is expected to accompany the packages or containers in question, the Distributor makes sure this happens.
 > * Distributors have additional requirements and considerations laid out in CISA-2024.
 > * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
 

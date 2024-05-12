@@ -350,16 +350,19 @@ toc: true
 
 #### SBOM Assembler (Role) ✍️
 
-> 1. Someone that gathers and assembles SBOMs from different sources into a new SBOM. (CPANSec 2024)
->
+> 1. Someone that gathers, assembles or updates SBOMs from different sources into a new SBOM. (CPANSec 2024)
+>     * This is a _proposed_ Role separate from "SBOM Author" for clarifying the responsibility when the Role intends to _gather_, _assemble_ or _update_ metadata fields, instead of being the authoritative source of a field.
+>     * This assumes some fields may be in need of updating as an SBOM is passed down a supply-chain – for example to correct upstream assumptions like 'Download location', add missing fields, or update the list of resolved dependencies.
+>     * The intention is to distinguish between "SBOM Author" and "SBOM Assembler" in the same way as one distinguishes between "Create" and "Update" in CRUD – to clarify responsibilities and expectations for who is the original source of some metadata fields.
 > (Ref: CPANSec 2024)
 
 
-#### SBOM Author (Role)
+#### SBOM Author (Role) ✍️
 
 > 1. The creator of an SBOM. (CISA 2024)
+> 2. The Authoritative source of an SBOM. (CPANSec 2024)
 >
-> (Ref: [CISA 2024](#references-and-terms))
+> (Ref: [CISA 2024](#references-and-terms), CPANSec 2024)
 
 #### SBOM Distributor (Role)
 

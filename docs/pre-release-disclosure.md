@@ -50,6 +50,7 @@ The CPAN Security Group <[cpan-security@perl.org](cpan-security@perl.org)> (CPAN
 * [tux](https://github.com/tux)
 * [ingy](https://github.com/ingydotnet)
 * [atoomic](https://github.com/atoomic)
+* [andk](https://github.com/andk)
 
 ------------------
 

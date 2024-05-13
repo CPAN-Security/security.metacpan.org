@@ -42,9 +42,6 @@ In this document we're trying to identify and expose all places and roles in an 
     * When a Supply-chain Role creates or updates an SBOM, we call them an [SBOM Author](glossary#sbom-author--role-).
     * When a Supply-chain Role distributes an SBOM, we call them an [SBOM Distributor](glossary#sbom-distributor--role-).
     * When a Supply-chain Role consumes an SBOM, we call them an [SBOM Consumer](glossary#sbom-consumer--role-)
-* SBOM Authors may also be differentiated by the fact that they produce original (authoritative) metadata fields, or just assemble or update existing ones.
-    * When an SBOM Role is the authoritative source of some metadata, they are an [SBOM Author](glossary#sbom-author--role-).
-    * When an SBOM Role is gathering SBOM metadata from different dependencies, they are an [SBOM Assembler](glossary#sbom-assembler--role---).
 
 
 ## SBOM Roles
@@ -57,8 +54,8 @@ For further reading, please see CISA's "SBOM Sharing Roles and Considerations" r
 stateDiagram-v2
     direction LR
 
-    state "🟥 SBOM Author" as sbom_author
-    state "🟨 SBOM Assembler" as sbom_assembler
+    state "🟥 SBOM Author (Authoritative)" as sbom_author
+    state "🟨 SBOM Author (Non-authoritative)" as sbom_assembler
     state "🟩 SBOM Distributor" as sbom_distributor
     state "🟦 SBOM Consumer" as sbom_consumer
 
@@ -77,12 +74,12 @@ stateDiagram-v2
 
 ## Color-coding legend for SBOM Roles
 
-The color-coding is used in this document to help illustrate different SBOM activities.
+The color-coding is used in this document to help illustrate different SBOM activities any role may perform.
 
-* 🟥 Create, define, sign SBOM metadata — _**SBOM Author** makes sure the metadata and related artifacts **Exist**_.
-* 🟨 Assemble, update, maintain, attest, annotate SBOM metadata — _**SBOM Assembler** makes sure the metadata and related artifacts are **Current**_.
-* 🟩 Distribute, curate, index SBOM metadata — _**SBOM Distributor** makes sure the metadata and related artifacts are made **Available** to others_.
-* 🟦 Consume, aggregate, verify, validate, survey, analyze or report SBOM metadata — _**SBOM Consumer** makes sure the metadata and related artifacts are **Complete**, **Correct** or **Compliant**_.
+* 🟥 Create, define, sign SBOM metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
+* 🟨 Assemble, update, maintain, attest, annotate SBOM metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated**_.
+* 🟩 Distribute, curate, index SBOM metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
+* 🟦 Consume, aggregate, verify, validate, survey, analyze or report SBOM metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Correct** or **Compliant**_.
 
 
 ### SBOM Author
@@ -90,12 +87,16 @@ The color-coding is used in this document to help illustrate different SBOM acti
 > [!NOTE]
 > FIXME – Check if this is sane.
 
+* Creates an SBOM. (CISA-2024)
+* An authoritative source of an SBOM, or an SBOM metadata field. (CPANSec-2024)
+    * See also [SBOM Author](glossary#sbom-author--role-) in the glossary.
 * SBOM Authors create, define or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_. (CPANSec-2024)
     * This mostly means authoritative metadata fields as laid out in the different [Supply-chain Roles](#supply-chain-roles-and-metadata) below.
     * In addition to fields encountered throughout the supply-chain, they care about the fields listed in the table below.
-* They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
-* Creates an SBOM. (CISA-2024)
-    *  This document assumes that each SBOM created is available for sharing. 
+    * They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
+* SBOM Authors who are not authoritative sources, but instead gather SBOM metadata from different dependencies, may be referred to as an [SBOM Assembler](glossary#sbom-assembler--role-). (CPANSec-2024)
+* SBOM Assemblers may collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_.
+    * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
 
 | Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
 | -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
@@ -112,24 +113,7 @@ The color-coding is used in this document to help illustrate different SBOM acti
 
 ### SBOM Assembler
 
-> [!NOTE]
-> FIXME – Check if this is sane.
-
-* SBOM Assemblers collect, combine, update, maintain, attest or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_. (CPANSec-2024)
-    * This role is very similar to SBOM Author roles, but while an SBOM Author mainly concerns themselves with the creation of authoritative meta fields, the SBOM Assembler ensures they are complete and correct.
-* They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
-
-| Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX | Required by             |
-| -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
-| 🟨 | SBOM Type                              | No         |              |                                                                   |      |                         |
-| 🟥 | SBOM Author                            | Yes        | Text         | bom.metadata.author                                               |      | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟥 | SBOM Creation Time-stamp               | Yes        | DateTime     | bom.metadata.timestamp                                            |      | NTIA-SBOM, DE-TR.5.2.1  |
-| 🟨 | SBOM Generation Tool                   | No         | List         | bom.metadata.tools[]                                              |      |                         |
-| 🟥 | SBOM Serial Number                     | Yes        | UUID         | bom.metadata.serialNumber                                         |      |                         |
-| 🟨 | CycloneDX bomFormat                    | Yes        | Enum         | bom.properties.bomFormat                                          | N/A  | CycloneDX 1.6           |
-| 🟨 | CycloneDX specVersion                  | Yes        | Int          | bom.properties.specVersion                                        | N/A  | CycloneDX 1.6           |
-
-(Ref: [NTIA-2021](#references), [CPANSec-2024](#references))
+* A non-authoritative [SBOM Author](#sbom-author)
 
 
 ### SBOM Distributor
@@ -182,7 +166,7 @@ stateDiagram-v2
     state "🟦 Contributor" as contributor
     state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
-    state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Archivist" as package_packager
+    state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Containerizer" as package_packager
     state "🟨 Curator" as package_curator
     state "🟩 Distributor" as package_distributor
     state "🟦 Importer" as integrator_importer
@@ -358,7 +342,7 @@ A language ecosystem hosts, indexes and distributes components specific for a pr
 
 ### Package Ecosystem
 
-A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#curator), [indexes and hosts](#distributor) either components for a specific OS distributions, or [collections](#archivist) of components for use in container registries, available for easy download and use.
+A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#curator), [indexes and hosts](#distributor) either components for a specific OS distributions, or [collections](#containerizer) of components for use in container registries, available for easy download and use.
 
 * Examples of package systems: APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD)
 * Examples of container systems: Docker
@@ -430,6 +414,7 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 * Is a role within an [Integrator Environment](#integrator-environment).
 * The term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
+* The name of an entity that creates, defines, and identifies components. (CycloneDX-1.6)
 
 * See [Manufacturer](#manufacturer), [Owner](#owner), [Open-Source Software Steward](#open-source-software-steward), [Supplier](glossary.md#supplier) in the glossary.
 
@@ -548,7 +533,7 @@ This role is necessary when...
 > [!IMPORTANT]
 > Builders should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
 
-* See also [Packager](#packager), [Archivist](#archivist), [Deployer](#packager).
+* See also [Packager](#packager), [Containerizer](#containerizer), [Deployer](#packager).
 
 #### Packager
 
@@ -571,13 +556,13 @@ Concerns themselves with correct package format and structure, and that package 
 | 🟨 | SBOM Location                  | No       | URL          | bom.components.externalReferences[].bom                |      | CRA-AII(9)                         |
 
 
-#### Archivist
+#### Containerizer
 
 Operates within a [Package Ecosystem](#package-ecosystem), creating containers.
 Builds, installs package dependencies and creates container images from a base images.
 
 > [!NOTE]
-> * FIXME – "Archivist" isn't an obvious and descriptive name for the role that creates container images. If you have suggestions for a better single-word name for this role, that isn't ambiguous or obscure, then please reach out!
+> * FIXME – "Containerizer" probably isn't the best name for the role that creates container images. If you have suggestions for a better single-word name for this role, that isn't ambiguous or obscure, then please reach out!
 > * FIXME – Flesh out details
 
 | Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX | Required by                        |
@@ -809,7 +794,13 @@ graph TB
     * Distro/package: Built, Deployed, Is object, No execution environment
     * Model/plugin: Built, Not deployed, Is data, No execution environment (FIXME: unsure)
     * Image/container: Built, Deployed, Is object, Has execution environment
-7. Enumerate the different dependency types; Author/develop, configure, build, test, runtime, resolved, required/unresolved, embedded, post-deploy (plugin/dynamic), cross-ecosystem vs. in-ecosystem, up-river vs. down-river, upstream vs. downstream, reverse, assumed/implied vs. stated/explicit, patch deps, system deps, environment deps, ecosystem deps
+7. Enumerate the different dependencies
+    * Stages; Author/develop, configure, build, test, install/deploy, packaging, containerization, post-deploy (plugin/dynamic), runtime.
+    * States; resolved, required/unresolved, embedded
+    * Types; component, patch, system resource, environment, ecosystem, service
+    * Descriptions; cross-ecosystem vs. in-ecosystem, up-river vs. down-river (within language ecosystem), upstream vs. downstream (outside language ecosystem), reverse, assumed/implied vs. stated/explicit
+8. Clearer distinction between Builder, Deployer, Packager, Containerizer
+9. Add example of a chain of edits to an SBOM document, as it is passed down the supply-chain
 
 
 ## License and use of this document

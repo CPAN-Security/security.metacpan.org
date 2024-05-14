@@ -153,27 +153,7 @@ The _CPANSec_ forum itself is moderated and for invited volunteers. To join, ple
 
 ### Projects
 
-- [Artifact Transparency Logs](https://github.com/orgs/CPAN-Security/projects/2)
-  - Introduce sigstore or sigsum to CPAN, possibly based on guidelines from [transparency.dev](https://transparency.dev)
-- [Provenance and Supply Chain Security](https://github.com/orgs/CPAN-Security/projects/3)
-  - Introduce tooling and infrastructure for establishing provenance, chain-of-trust and chain-of-custody
-  - Introduce tooling for downstream verification of provenance, chain-of-trust and chain-of-custody
-- [Metadata and Software Bill of Materials](https://github.com/orgs/CPAN-Security/projects/1)
-  - Tooling for the creation and verification of SBOM objects commonly used to communicate the composition and pedigree of CPAN dependencies, even when these dependencies cross ecosystem boundaries.
-  - Update CPAN package metadata to enable end-users to comply with legislative obligations.
-- [Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
-  - Standardization and publishing of CPAN package vulnerabilities in relevant indexes (our own, CPANSA, CVE or whatever), to ensure that common (including third-party) tooling for Software Composition Analysis or vulnerability assessment work with CPAN dependencies.
-- [Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
-  - Improve or create user-interfacing tooling used for analyzing dependencies for known vulnerabilities.
-- [Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11)
-  - Develop tooling for publishing and applying third-party security patches to CPAN distributions that have non-responsive authors, to enable high-priority updates to CPAN packages.
-  - Explore opportunities for simplifying downstream fixes to reach upstream authors.
-- [Security Outreach & Information](https://github.com/orgs/CPAN-Security/projects/12)
-  - Establish a website and social media presence for outreach and information sharing, and keep these up to date.
-- [CPANSec Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
-  - Establish procedures for responsible disclosure, communication and other related mechanisms, including documentation on how vulnerabilities and malicious code incidents are handled.
-  - Create a group charter and accountability procedures.
-  - Raise funds for CPAN Security Group projects.
+For an up-to-date list of projects, please consult the _CPANSec_ [Projects page](https://github.com/orgs/CPAN-Security/projects) on github.
 
 
 ### Public contact points

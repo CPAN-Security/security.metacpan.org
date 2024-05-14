@@ -16,13 +16,14 @@ Until published by a founding member, all of the points and ideas below are *sug
 
 ## Purpose
 
-This charter lays out the background, intentions, mandate, scope, means and methods for the CPAN Security Group (CPANSec).
+This charter lays out the background, intentions, mandate, scope, means and methods for the CPAN Security Group.
 This document also explicitly acknowledges a few related organizations and communities, and spell out responsibility demarcation lines between these, if any.
 
 
 ## Name
 
-The full name of the group is **CPAN Security Group**. Valid abbreviations are **CPANSec**.
+The full name of the group is **CPAN Security Group**.
+Valid abbreviations are **CPANSec**.
 
 
 ## Background
@@ -112,13 +113,12 @@ If you represent the management or legal department at your business and/or need
 
 ## Responsibilities and Mandates
 
-While the _CPANSec_ has no formal mandate or responsibilities, it may still seek and accept public statements of support or acknowledgement from the following relevant community stakeholders.
-In addition, the _CPANSec_ may ask for formal mandates from _delegating authorities_ (DA):
+While the _CPANSec_ has no formal mandate or responsibilities, it may still seek and accept public statements of support, acknowledgement or formal mandates from the following relevant community stakeholders.
 
-- The Perl Steering Council (DA)
-- The PAUSE team (DA)
-- The MetaCPAN team (DA)
-- The Perl Security list (DA)
+- The Perl Steering Council
+- The PAUSE team
+- The MetaCPAN team
+- The Perl Security list
 - Perl NOC
 - The Perl Modules list
 - The CPAN Workers list
@@ -129,9 +129,9 @@ Public statements of support should not be considered more than an acknowledgmen
 
 Formal mandates, on the other hand are intended to establish clear lines of responsibility and accountability, and with this, function as meaningful steps to establish legitimacy.
 
-If the _CPANSec_ asks for a formal mandate from a delegating authority (DA), the _CPANSec_ members acknowledge that delegating authority may withdraw their mandate at any time if they decide the _CPANSec_ is incapable or unwilling to fulfill its mandate, or in case the CPANSec decides to delegate any received responsibilities to a third party.
+If the _CPANSec_ receives _and accepts_ a formal mandate from a community stakeholder group, the _CPANSec_ members acknowledge that this group may withdraw their formal mandate at any time if they decide that _CPANSec_ is incapable or unwilling to fulfill this mandate, or in case the _CPANSec_ decides to delegate any received responsibilities to a third party.
 
-In the unfortunate situation when a delegating authority is disbanded, becomes unresponsive, or transfers/loses its authority to delegate responsibilities to us, the CPANSec members may ask for a formal mandate from a replacing authority.
+In the unfortunate situation when a stakeholder group _CPANSec_ has received a mandate from is disbanded, becomes unresponsive, or transfers it's responsibilities to a third party, the _CPANSec_ members may ask for a formal mandate from a replacing community stakeholder group.
 
 
 ### Formal Mandates
@@ -148,7 +148,8 @@ This means that the products of our work should be considered _best effort_, and
 
 ### Joining the _CPANSec_
 
-The _CPANSec_ forum itself is moderated and for invited volunteers. To join, please reach out through one of our [public contact points](#public-contact-points).
+The _CPANSec_ has several forums, but the ones that mange embargoed information is moderated and for invited volunteers.
+To join, please reach out through one of the _CPANSec_ [public contact points](#public-contact-points).
 
 
 ### Projects

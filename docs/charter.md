@@ -63,6 +63,8 @@ The _CPANSec_ intends to be a forum for coordinating and assisting in resolving 
 The _CPANSec_ concerns itself with a limited domain:
 
 - Distributions published on CPAN, not including dual-life core modules;
+- CPAN distributions that function as shims (wrappers) for non-CPAN projects or resources. Examples:
+  - CPAN Distributions that are pure wrappers around compiled libraries (e.g. XS modules wrapping `libxml2` or `sqlite3`)
 - CPAN supply chain security, Chain-of-Trust infrastructure, and security around the Perl/CPAN Toolchain, CPAN/MetaCPAN itself and PAUSE;
 - CPAN distribution metadata and how these are communicated;
 - Emergency security updates on CPAN;
@@ -80,8 +82,6 @@ For details, please consult the [Projects](#projects) list below.
   - Downstream security issues related to repackaging or patching of CPAN distros by third party packaging system (e.g. Debian's apt, RedHat's rpm, etc).
 - Third party libraries, files and services linked to or used by CPAN distributions (unless the library is packaged with the affected CPAN distribution);
 - ~~CPAN distributions that function as shims (wrappers) for non-CPAN projects or resources.~~ Examples:
-  - ~~CPAN Distributions that are pure wrappers around compiled libraries (e.g. XS modules wrapping `libxml2` or `sqlite3`)~~
-    - **Rationale**: XS modules are _in scope_ until tooling for warning about upstream vulnerabilities is in place. (sjn)
   - ~~CPAN Distributions (outside the `Alien::` namespace) that embed or use third-party (non-CPAN) projects or APIs directly.~~
     - **Rationale**: Shims/wrappers/API modules on CPAN are _in scope_, but we cannot address issues related to the third-party (external) libraries or APIs they link to or use. So for example if `XML::LibXML` contains a vulnerability, it's in scope, but if libxml2 (which it links to) has a vulnerability, we have nothing to do with it, as it is not directly related to code *on* CPAN. (garu)
   - ~~The `Alien::` distribution namespace~~

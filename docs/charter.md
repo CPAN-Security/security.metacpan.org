@@ -91,6 +91,9 @@ For details, please consult the [Projects](#projects) list below.
 - MetaCPAN
   - **FIXME**: Offloading management of MetaCPAN security issues depends on getting an agreement with the MetaCPAN folks, which we don't have as of 2023-06-17. Also - is this necessary and desirable? Please share why we should (not) do this.
 - Perl software published outside of CPAN (e.g. via Github download links, or with private hosting).
+- Security issues handled by &lt;pause-admin&#64;perl.org&gt;
+  - Compromised PAUSE accounts
+  - All other security issues regarding PAUSE
 - …
 
 
@@ -227,5 +230,5 @@ From left to right,
 
 ## About this document
 
-Version: v0.6.8
+Version: v0.7.0
 License: CC-BY-SA-4.0

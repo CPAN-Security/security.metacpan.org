@@ -67,6 +67,7 @@ The _CPANSec_ concerns itself with a limited domain:
   - CPAN Distributions that are pure wrappers around compiled libraries (e.g. XS modules wrapping `libxml2` or `sqlite3`)
   - CPAN Distributions (outside the `Alien::` namespace) that embed or use third-party (non-CPAN) projects or APIs directly.
   - The `Alien::` distribution namespace
+  - Mozilla::CA
 - CPAN supply chain security, Chain-of-Trust infrastructure, and security around the Perl/CPAN Toolchain, CPAN/MetaCPAN itself and PAUSE;
 - CPAN distribution metadata and how these are communicated;
 - Emergency security updates on CPAN;
@@ -83,9 +84,6 @@ For details, please consult the [Projects](#projects) list below.
 - Supply-chain issues that are found outside of CPAN, for example:
   - Downstream security issues related to repackaging or patching of CPAN distros by third party packaging system (e.g. Debian's apt, RedHat's rpm, etc).
 - Third party libraries, files and services linked to or used by CPAN distributions (unless the library is packaged with the affected CPAN distribution);
-- ~~CPAN distributions that function as shims (wrappers) for non-CPAN projects or resources.~~ Examples:
-  - ~~Mozilla::CA~~
-    - **Rationale**: `Mozilla::CA` is _in scope_ until the module is either phased out/deprecated or kept automatically in sync with upstream CA. (stigo); Furthermore, Mozilla::CA is apparently about to be auto-updated sometime soon?
 - MetaCPAN
   - **FIXME**: Offloading management of MetaCPAN security issues depends on getting an agreement with the MetaCPAN folks, which we don't have as of 2023-06-17. Also - is this necessary and desirable? Please share why we should (not) do this.
 - Perl software published outside of CPAN (e.g. via Github download links, or with private hosting).

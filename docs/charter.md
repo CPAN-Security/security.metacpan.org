@@ -85,12 +85,10 @@ For details, please consult the [Projects](#projects) list below.
   - Downstream security issues related to repackaging or patching of CPAN distros by third party packaging system (e.g. Debian's apt, RedHat's rpm, etc).
 - Third party libraries, files and services linked to or used by CPAN distributions (unless the library is packaged with the affected CPAN distribution);
 - MetaCPAN
-  - **FIXME**: Offloading management of MetaCPAN security issues depends on getting an agreement with the MetaCPAN folks, which we don't have as of 2023-06-17. Also - is this necessary and desirable? Please share why we should (not) do this.
 - Perl software published outside of CPAN (e.g. via Github download links, or with private hosting).
 - Security issues handled by &lt;pause-admin&#64;perl.org&gt;
   - Compromised PAUSE accounts
   - All other security issues regarding PAUSE
-- …
 
 
 ### Relations with CPAN Authors and Distributions

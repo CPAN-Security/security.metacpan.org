@@ -10,7 +10,8 @@ toc: true
 What you see here is a **DRAFT** for the charter of a CPAN Security Group (_CPANSec_).
 Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
 
-Discussion on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
+* Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/charter/docs/charter.md](https://github.com/CPAN-Security/security.metacpan.org/blob/charter/docs/charter.md)
+* Discussion on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 
 
 ## Purpose

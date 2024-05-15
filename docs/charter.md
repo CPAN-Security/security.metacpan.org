@@ -65,10 +65,9 @@ The _CPANSec_ concerns itself with a limited domain:
 
 - Distributions published on CPAN, not including dual-life core modules;
 - CPAN distributions that function as shims (wrappers) for non-CPAN projects or resources. Examples:
-  - CPAN Distributions that are pure wrappers around compiled libraries (e.g. XS modules wrapping `libxml2` or `sqlite3`)
-  - CPAN Distributions (outside the `Alien::` namespace) that embed or use third-party (non-CPAN) projects or APIs directly.
-  - The `Alien::` distribution namespace
-  - Mozilla::CA
+  - CPAN Distributions that are pure wrappers around compiled libraries (e.g. XS modules wrapping `libxml2` or `sqlite3`);
+  - CPAN Distributions (outside the `Alien::` namespace) that embed or use third-party (non-CPAN) projects or APIs directly;
+  - The `Alien::` distribution namespace;
 - CPAN supply chain security, Chain-of-Trust infrastructure, and security around the Perl/CPAN Toolchain, CPAN/MetaCPAN itself and PAUSE;
 - CPAN distribution metadata and how these are communicated;
 - Emergency security updates on CPAN;
@@ -86,6 +85,9 @@ For details, please consult the [Projects](#projects) list below.
   - Downstream security issues related to repackaging or patching of CPAN distros by third party packaging system (e.g. Debian's apt, RedHat's rpm, etc).
 - Third party libraries, files and services linked to or used by CPAN distributions (unless the library is packaged with the affected CPAN distribution);
 - MetaCPAN
+   - Handled by the MetaCPAN team.
+- Mozilla::CA
+   - Handled by the libwww-perl team, and semi-automatically updated.
 - Perl software published outside of CPAN (e.g. via Github download links, or with private hosting).
 - Security issues handled by &lt;pause-admin&#64;perl.org&gt;
   - Compromised PAUSE accounts

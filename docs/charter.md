@@ -150,13 +150,13 @@ This means that the products of our work should be considered _best effort_, and
 
 ### Joining the _CPANSec_
 
-The _CPANSec_ has several forums, but the ones that mange embargoed information is moderated and for invited volunteers.
+The _CPANSec_ has several forums, but the ones that manage embargoed information is moderated and for invited volunteers.
 To join, please reach out through one of the _CPANSec_ [public contact points](#public-contact-points).
 
 
 ### Projects
 
-For an up-to-date list of projects, please consult the _CPANSec_ [Projects page](https://github.com/orgs/CPAN-Security/projects) on github.
+For an up-to-date list of projects, please consult the _CPANSec_ [Projects page](https://github.com/orgs/CPAN-Security/projects) on Github.
 
 
 ### Public contact points

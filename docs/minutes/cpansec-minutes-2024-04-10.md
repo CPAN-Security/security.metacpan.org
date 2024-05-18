@@ -1,13 +1,13 @@
-﻿----
+---
 layout: page
 toc: true
-meeting_time: April 10th 2024, 17:00 UTC
+meeting_time: April 10th, 2024 17:00 UTC
 title: Minutes 2024-04-10
-----
+---
 
 ## Meeting details
 
-*   **Time**: on {{ page.meeting_time | date_to_string: "ordinal", "US" }}, at {{ page.meeting_time | date: "%H:%M %Z" }}. ([Other timezones](https://www.timeanddate.com/worldclock/meetingdetails.html?{{ page.meeting_time | date: "year=%Y&month=%m&day=%d&hour=%H&min=%M&sec=0" }}&p1=256&p2=233&p3=1129&p4=250&p5=187); [iCal download](https://www.timeanddate.com/scripts/ics.php?type=meet&p1=256&p2=233&p3=1129&p4=250&p5=187&{{ page.meeting_time | date: "year=%Y&month=%m&day=%d&hour=%H&min=%M&sec=0" }}))
+*   **Time**: on {{ page.meeting_time | date_to_string: "ordinal", "US" }}, at {{ page.meeting_time | date: "%H:%M %Z" }}. ([Other timezones](https://www.timeanddate.com/worldclock/meetingdetails.html?{{ page.meeting_time | date: "year=%Y&month=%m&day=%d&hour=%H&min=%M&sec=0" }}&p1=187&p2=233&p3=250&p4=1129&p5=256); [iCal download](https://www.timeanddate.com/scripts/ics.php?type=meet&p1=187&p2=233&p3=250&p4=1129&p5=256&{{ page.meeting_time | date: "year=%Y&month=%m&day=%d&hour=%H&min=%M&sec=0" }}))
 *   **Duration**: 1 hour, timeboxed. We start 30min earlier for introductions/socializing.
 *   **Location**: On TPRF's Slack server, in #cpan-security, w/video.
 
@@ -43,19 +43,12 @@ title: Minutes 2024-04-10
     *   @sjn – Had a chat with S. Springett about supplychain-sbom.md, glossary and reading list. Got a little feedback, and aim to continue the conversation after CDX 1.6 is out.
     *   @sjn – Attended two OpenSSF meetings to see what they work on.
 2.  [CPAN Privacy and Compliance](https://github.com/orgs/CPAN-Security/projects/9)
-    *   …
 3.  [CPAN Provenance & Supply Chain Security](https://github.com/orgs/CPAN-Security/projects/3)
-    *   …
 4.  [CPAN Security Outreach & Information](https://github.com/orgs/CPAN-Security/projects/12)
-    *   …
 5.  [CPAN Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11)
-    *   …
 6.  [CPAN Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
-    *   …
 7.  [CPAN Transparency Logs](https://github.com/orgs/CPAN-Security/projects/2)
-    *   …
 8.  [CPAN Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
-    *   …
 9.  [CPANSec Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
     *   @sjn – Budget draft at [https://cryptpad.fr/sheet/#/2/sheet/edit/mEL6BAfL7I7ptOzMlx6q4NiI/](https://cryptpad.fr/sheet/#/2/sheet/edit/mEL6BAfL7I7ptOzMlx6q4NiI/)
     *   @sjn – Clarity around tasks and mandate. @sjn proposes a discussion on this at PTS
@@ -66,7 +59,6 @@ title: Minutes 2024-04-10
 *   CVE-2013-4407 - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4407
     *   HTTP::Body::Multipart in the HTTP-Body 1.08, 1.17, and earlier module for Perl uses the part of the uploaded file's name after the first "." character as the suffix of a temporary file, which makes it easier for remote attackers to conduct attacks by leveraging subsequent behavior that may assume the suffix is well-formed.
     *   @stigtsp – This fix was thought to be real, but it wasn't. Some Linux distros (Debian, Gentoo) patched independently anyway, but many didn't. Version 1.23 has been fixed. Work ongoing for fixing confusion and communication breakdowns.
-
 *   @timlegge working on blog post laying out this work and why we're doing it.
 *   @stigtsp – Shared that he is looking into ongoing PAUSE issues, @andk intends to share info eventually.
 

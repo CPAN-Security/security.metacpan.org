@@ -1,8 +1,8 @@
 ---
 layout: page
 toc: true
-meeting_time: March 27th, 2024 17:00 UTC FIXME
-title: Minutes 2024-03-27 FIXME
+meeting_time: May 15th, 2024 17:00 UTC
+title: Minutes 2024-05-15
 ---
 
 ## Meeting details
@@ -18,7 +18,7 @@ title: Minutes 2024-03-27 FIXME
 ### Welcome
 
 *   Meeting chair: FIXME
-*   Meeting secretary: FIXME
+*   Meeting secretary: @sjn
 
 ### Attendees, absents & regrets
 

@@ -115,11 +115,6 @@ The color-coding is used in this document to help illustrate different SBOM acti
 > [!NOTE]
 > FIXME – Check if this is sane.
 
-<!--
-Note from Josh
-I'm not entirely convinced an assembler should exist as a section. It might make more sense to just refer to this as an author then break it out someday if that makes more sense.
--->
-
 * SBOM Assemblers collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_. (CPANSec-2024)
     * This role is very similar to SBOM Author roles, but while an SBOM Author mainly concerns themselves with the creation of authoritative meta fields, the SBOM Assembler ensures they are complete and correct.
 * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)

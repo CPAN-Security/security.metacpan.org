@@ -822,3 +822,4 @@ Several people have been involved in the development of this document
 
 * Salve J. Nilsen (main author)
 * Stian Kristoffersen
+* Josh Bressers

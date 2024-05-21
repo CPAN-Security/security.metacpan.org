@@ -55,7 +55,8 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 * (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis) (October 2023)
 * (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
-* (Blog) [aaa]()
+* (Blog) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) (Philippe Ombredanne, May, 2023)
+* (Video) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) (FOSDEM 2022, 15 minutes)
 
 
 ## Provenance & Supply Chain Security

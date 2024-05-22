@@ -803,8 +803,9 @@ graph TB
     * States; resolved, required/unresolved, embedded
     * Types; component, patch, system resource, environment, ecosystem, service
     * Descriptions; cross-ecosystem vs. in-ecosystem, up-river vs. down-river (within language ecosystem), upstream vs. downstream (outside language ecosystem), reverse, assumed/implied vs. stated/explicit
-8. Clearer distinction between Builder, Deployer, Packager, Containerizer
+8. Clearer distinction between Builder, Deployer, Packager, Containerizer, Integrator
 9. Add example of a chain of edits to an SBOM document, as it is passed down the supply-chain
+10. Distinguish between Dependencies (as resolved by the Builder, Packager or Integrator roles) and Requirements (unresolved, but as defined by the Author or Integrator roles).
 
 
 ## License and use of this document

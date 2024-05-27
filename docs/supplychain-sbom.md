@@ -806,6 +806,7 @@ graph TB
 8. Clearer distinction between Builder, Deployer, Packager, Containerizer, Integrator
 9. Add example of a chain of edits to an SBOM document, as it is passed down the supply-chain
 10. Distinguish between Dependencies (as resolved by the Builder, Packager or Integrator roles) and Requirements (unresolved, but as defined by the Author or Integrator roles).
+11. Distinguish in which SBOM stages fields are expected to be set, in order to help SBOM Authors produce and verify fields as needed.
 
 
 ## License and use of this document

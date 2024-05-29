@@ -57,6 +57,7 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 * (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
 * (Blog) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) (Philippe Ombredanne, May, 2023)
 * (Video) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) (FOSDEM 2022, 15 minutes)
+* (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) (S4 2023)
 
 
 ## Provenance & Supply Chain Security
@@ -193,4 +194,4 @@ You may use, modify and share this file under the terms of the CC-BY-SA-4.0 lice
 
 People have been involved in the development of this document
 
-* Salve J. Nilsen (main author)
+* Salve J. Nilsen (main authorAuthor)

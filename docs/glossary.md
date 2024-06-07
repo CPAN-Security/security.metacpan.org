@@ -165,13 +165,14 @@ toc: true
 >
 > (Ref: [SCVS 2020](#references-and-terms), NTIA 2021, CPANSec 2024)
 
-#### Dependency (Embedded) ✍️
+#### Dependency (Embedded, Included, Pre-resolved) ✍️
 
-> FIXME
+> 1. A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package. (CPANSec 2024)
 
-#### Dependency (Required, Unresolved) ✍️
+#### Dependency (Required, Unresolved, Requirement, Pre-requirement) ✍️
 
-> FIXME
+> 1. A dependency that is required to be resolved for a software component to function as expected. (CPANSec 2024)
+>     * Requirements are expected to be resolved by the Builder or Packager of the component.
 
 #### Dependency (Resolved) ✍️
 

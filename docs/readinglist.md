@@ -194,4 +194,4 @@ You may use, modify and share this file under the terms of the CC-BY-SA-4.0 lice
 
 People have been involved in the development of this document
 
-* Salve J. Nilsen (main authorAuthor)
+* Salve J. Nilsen (main author)

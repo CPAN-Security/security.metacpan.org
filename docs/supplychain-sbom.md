@@ -95,9 +95,11 @@ The color-coding is used in this document to help illustrate different SBOM acti
     * In addition to fields encountered throughout the supply-chain, they care about the fields listed in the table below.
     * They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
 * SBOM Authors who are not authoritative sources, but instead gather SBOM metadata from different dependencies, may be referred to as an [SBOM Assembler](glossary#sbom-assembler--role-). (CPANSec-2024)
-* SBOM Assemblers may collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_.
+* SBOM Authors may also collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_. (CPANSec-2024)
     * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
-* SBOM Authors who are tasked with removing (censoring) sensitive information from SBOM documents may be called [SBOM Redactor](glossary#sbom-redactor--role-)
+* An SBOM Author who is tasked with removing (censoring) sensitive information from SBOM documents may be called [SBOM Redactor](glossary#sbom-redactor--role-)
+* Creates an SBOM. (CISA-2024)
+    *  This document assumes that each SBOM created is available for sharing. 
 
 | Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX 2.3 | Required by             |
 | -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
@@ -119,7 +121,7 @@ The color-coding is used in this document to help illustrate different SBOM acti
 
 ### SBOM Redactor
 
-* An [SBOM Author](#sbom-author) that removes sensive data from an SBOM before distribution.
+* An [SBOM Author](#sbom-author) that removes sensitive data from an SBOM before distribution.
 
 
 ### SBOM Distributor

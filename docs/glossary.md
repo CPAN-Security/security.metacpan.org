@@ -191,6 +191,18 @@ toc: true
 
 > FIXME
 
+#### Dependency (Resolved at Source) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Build) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Deploy) ✍️
+
+> FIXME
+
 #### Dependency (Resolved at Runtime) ✍️
 
 > FIXME

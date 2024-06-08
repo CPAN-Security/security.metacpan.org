@@ -39,6 +39,11 @@ toc: true
 * (CISA) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations) (March 2024)
 * (SPDX) [Satisfying NTIA Minimum Elements for an SBOM using SPDX](https://spdx.github.io/spdx-spec/v2.3/how-to-use/#k22-mapping-ntia-minimum-elements-to-spdx-fields) (SPDX 2.3)
 * (SPDX) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 3.0)
+* (CISA) [SBOM Sharing Primer](https://www.cisa.gov/resources-tools/resources/sbom-sharing-primer)
+
+### SBOM Standards
+
+* (ISO/IEC 5962:2021) [SPDX® Specification V2.2.1](https://standards.iso.org/ittf/PubliclyAvailableStandards/c081870_ISO_IEC_5962_2021%28E%29.zip) (Source: ISO's [Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/index.html) list)
 
 See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
 
@@ -53,6 +58,9 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 * (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis) (October 2023)
 * (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
+* (Blog) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) (Philippe Ombredanne, May, 2023)
+* (Video) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) (FOSDEM 2022, 15 minutes)
+* (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) (S4 2023)
 
 
 ## Provenance & Supply Chain Security
@@ -117,7 +125,9 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Recital (37): Software for testing purposes, alphas, betas (page 42)
     * Recital (39): Continued security updates (page 44)
     * Recital (41): Substantial modifications requires a new conformity assessment to be done (page 47)
-    * Recital (43-45): Important products with digital elements (page 49-51)
+    * Recitals (43-45): Important products with digital elements (pages 49-51)
+    * Recital (**57**): On the download and installation of security updates, and notification of end of support (pages 66-67)
+    * Recital (**58**): On the requirement to be able to get security updates separately from functionality updates (page 67)
     * Recitals (60-62): Support period (page 69-71)
     * Recital (64): Point of contact (page 73)
     * Recital (65): Secure by default (page 73)

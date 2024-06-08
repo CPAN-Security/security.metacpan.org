@@ -420,7 +420,7 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 | Do | Field name                    | Required | Data type | CycloneDX (PRE-PROPOSAL; UNSUPPORTED)                          | SPDX 2.3 | Required by                        |
 | -- | :---------------------------- | :------- | :-------- | :------------------------------------------------------------- | ---- | ---------------------------------- |
-| 🟥 | Supplier Name (Manufacturer)  | Yes      | Text, URL | bom.metadata[supplier,manufacturer], bom.components[].supplier | creationInfo.creators[], packages[].originator, packages[].supplier | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
+| 🟥 | Owner Name (Manufacturer)     | Yes      | Text, URL | bom.metadata[supplier,manufacturer], bom.components[].supplier | creationInfo.creators[], packages[].originator, packages[].supplier | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |
 | 🟥 | CE Declaration of Conformity  | Yes      | URL       | bom.externalReferences[?(@.conformity-declaration)]            |      | CRA-AII(6), CRA-AV                 |
 | 🟥 | CE Support End Date           | Yes      | DateTime  | bom.externalReferences[?(@.support-horizon)]                   |      | CRA-AII(7)                         |
 | 🟥 | CE Technical Documentation    | Yes      | URL       | bom.externalReferences[?(@.documentation)]                     |      | CRA-AII(8), CRA-AVII               |
@@ -441,7 +441,7 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 
 ### Author
 
-Maintainer or developer of an Open Source project.
+Maintainer or developer of an Open Source component project.
 
 * Operates within an [Author Environment](#author-environment).
 * The initial and/or main creator of the component in question.
@@ -544,10 +544,10 @@ This role is necessary when...
 > * These patches may include back-ports of features, security fixes or other accommodations necessary for distributing multiple releases of the same upstream project, but within publishing constraints decided by the Curator of the Ecosystem (e.g. LTS releases, support contracts, etc.).
 > * A Patcher can both be found in-house (e.g. a business who uses a company-internal package mirror), working for a Package Ecosystem provider (e.g. applying backports of fixes in Debian packages), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
-| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX 2.3 | Required by                        |
-| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | ---------------------------------- |
-| 🟨 | Version                        | Yes      | Text         | bom.components[].version                               | packages[].versionInfo | NTIA-SBOM, DE-TR.5.2.2             |
-| 🟨 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl                                  | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM              |
+| Do | Field name                     | Required | Data type    | CycloneDX 1.6            | SPDX 2.3               | Required by                        |
+| -- | :----------------------------- | :------- | :----------- | ------------------------ | ---------------------- | ---------------------------------- |
+| 🟨 | Version                        | Yes      | Text         | bom.components[].version | packages[].versionInfo | NTIA-SBOM, DE-TR.5.2.2             |
+| 🟨 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl    | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM |
 
 > [!WARNING]
 > FIXME – Not done
@@ -601,6 +601,10 @@ Builds, installs package dependencies and creates container images from a base i
 
 Operates within a [Production Environment](#production-environment).
 Final preparation and installation of the software into a CI/CD or other deployment method an [Integrator](#integrator-environment) or [Production Environment](#production-environment).
+
+| Do | Field name                     | Required | Data type    | CycloneDX 1.6                                          | SPDX 2.3 | Required by           |
+| -- | :----------------------------- | :------- | :----------- | ------------------------------------------------------ | ---- | --------------------- |
+| 🟥 |                                |          |              |                                                        |      |                       |
 
 > [!WARNING]
 > FIXME – Not done

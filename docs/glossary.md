@@ -165,19 +165,49 @@ toc: true
 >
 > (Ref: [SCVS 2020](#references-and-terms), NTIA 2021, CPANSec 2024)
 
-#### Dependency (Embedded) ✍️
+
+#### Dependency (Detected during Analysis) ✍️
 
 > FIXME
 
-#### Dependency (Required, Unresolved) ✍️
+#### Dependency (Embedded, Included, Pre-resolved) ✍️
+
+> 1. A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package. (CPANSec 2024)
+
+#### Dependency (Required, Unresolved, Requirement, Pre-requirement) ✍️
+
+> 1. A dependency that is required to be resolved for a software component to function as expected. (CPANSec 2024)
+>     * Requirements are expected to be resolved by the Builder or Packager of the component.
+
+#### Dependency (Resolved at Source) ✍️
 
 > FIXME
 
-#### Dependency (Resolved) ✍️
+#### Dependency (Resolved at Build) ✍️
 
 > FIXME
 
-#### Dependency (Pinned) ✍️
+#### Dependency (Resolved at Deploy) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Source) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Build) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Deploy) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Runtime) ✍️
+
+> FIXME
+
+#### Dependency (Pinned at Source) ✍️
 
 > FIXME
 
@@ -377,7 +407,6 @@ toc: true
 >      * This could include roles such as third parties, authors, integrators, and end users.
 >
 > (Ref: [CISA 2024](#references-and-terms))
-
 
 ### SBOM Types
 

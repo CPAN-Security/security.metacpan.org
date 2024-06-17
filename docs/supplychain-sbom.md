@@ -354,7 +354,7 @@ A language ecosystem hosts, indexes and distributes components specific for a pr
 
 ### Package Ecosystem
 
-A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#curator), [indexes and hosts](#distributor) either components for a specific OS distributions, or [collections](#containerizer) of components for use in container registries, available for easy download and use.
+A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#curator), [indexes and hosts](#distributor) either components for a specific OS distributions, or [collections](#containerizer) of components for use in container registries, made available (published) for easy download and use.
 
 * Examples of package systems: APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD)
 * Examples of container systems: Docker

@@ -64,7 +64,7 @@ stateDiagram-v2
     state "🟨 Deployer" as deployer
     state "🟦 Vuln. Checker" as integrator_checker
     state "🟩🟨 SBOM Redactor" as redactor
-    state "Consumer\nUser" as consumer
+    state "🟦 Consumer\n🟦 User" as consumer
     state "🟦 Auditor" as auditor_internal
     state "🟦 Auditor" as auditor_external
 
@@ -314,34 +314,15 @@ The color-coding is used in this document to help illustrate different SBOM acti
 
 ```mermaid
 stateDiagram-v2
+    direction TB
 
-    %%
-    state "🟦 Importer" as author_importer
-    state "🟥 Supplier, Owner" as author_owner
-    state "🟨🟥 Author, Maintainer\n🟨 Custodian" as author
-    state "🟩 Distributor" as repository_distributor
-    state "🟦 Importer" as language_importer
-    state "🟦🟨 Packager" as language_packager
-    state "🟦🟨 OSS Steward" as language_steward
-    state "🟨 Curator" as language_curator
-    state "🟩 Distributor" as language_distributor
-    state "🟦 Contributor" as contributor
-    state "🟦 Importer" as package_importer
-    state "🟨 Patcher" as package_patcher
-    state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Containerizer" as package_packager
-    state "🟨 Curator" as package_curator
-    state "🟩 Distributor" as package_distributor
-    state "🟦 Importer" as integrator_importer
-    state "🟥 Supplier, Manufacturer, Owner" as integrator_owner
-    state "🟦🟨🟥 Integrator, Developer" as integrator_developer
-    state "🟩🟨 SBOM Redactor\n🟩 Publisher" as integrator_publisher
-    state "🟦🟨 Builder" as integrator_builder
-    state "🟨 Deployer\n🟨 Installer" as deployer
-    state "🟦 Vuln. Checker" as integrator_checker
-    state "🟩🟨 SBOM Redactor" as redactor
-    state "🟦 Consumer\n🟦 User" as consumer
-    state "🟦 Auditor" as auditor_internal
-    state "🟦 Auditor" as auditor_external
+    state "🟦🟥🟨 Maintainer"             as environment_maintainer
+    state "🟩 Collaboration Ecosystem"  as ecosystem_repo
+    state "🟨🟩 Language Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_lang
+    state "🟨🟩 Package Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_package
+    state "🟥🟨 Integrator Environment\n🟦🟥🟨 Manufacturer" as environment_integrator
+    state "🟦 Production Environment"   as environment_prod
+
 
     [*] --> environment_maintainer
     environment_maintainer --> ecosystem_repo

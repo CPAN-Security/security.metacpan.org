@@ -64,7 +64,7 @@ stateDiagram-v2
     state "🟨 Deployer" as deployer
     state "🟦 Vuln. Checker" as integrator_checker
     state "🟩🟨 SBOM Redactor" as redactor
-    state "🟦 Consumer\n🟦 User" as consumer
+    state "Consumer\nUser" as consumer
     state "🟦 Auditor" as auditor_internal
     state "🟦 Auditor" as auditor_external
 
@@ -136,7 +136,7 @@ stateDiagram-v2
     repository_distributor --> contributor
     contributor            --> repository_distributor
 
-    state "OS Package Ecosystem" as ecosystem_package {
+    state "Package Ecosystem" as ecosystem_package {
         [*] --> package_importer
         [*] --> package_packager
         [*] --> package_patcher
@@ -207,7 +207,8 @@ For further reading, please see CISA's "SBOM Sharing Roles and Considerations" r
 
 ```mermaid
 stateDiagram-v2
-    direction LR
+    direction TB
+    accTitle: SBOM Roles and Activities
 
     state "🟥 SBOM Author (Authoritative)" as sbom_author
     state "🟨 SBOM Author (Non-authoritative)" as sbom_assembler
@@ -311,8 +312,33 @@ The color-coding is used in this document to help illustrate different SBOM acti
 
 ## Supply-chain Ecosystems and Environments
 
+```mermaid
+stateDiagram-v2
 
-### Author Environment
+    state "🟦🟥🟨 Maintainer"             as environment_maintainer
+    state "🟩 Collaboration Ecosystem"  as ecosystem_repo
+    state "🟨🟩 Language Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_lang
+    state "🟨🟩 Package Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_package
+    state "🟥🟨 Integrator Environment\n🟦🟥🟨 Manufacturer" as environment_integrator
+    state "🟦 Production Environment"   as environment_prod
+
+    [*] --> environment_maintainer
+    environment_maintainer --> ecosystem_repo
+    environment_maintainer --> ecosystem_lang
+    ecosystem_repo --> environment_maintainer
+    ecosystem_lang --> ecosystem_package
+    ecosystem_lang --> environment_integrator
+    ecosystem_repo --> ecosystem_lang
+    ecosystem_repo --> ecosystem_package
+    ecosystem_repo --> environment_integrator
+    ecosystem_package --> environment_integrator
+    environment_integrator --> environment_prod
+    environment_prod --> [*]
+
+```
+
+
+### Maintainer Environment
 
 One or more developers that publish an Open-Source component.
 
@@ -388,7 +414,10 @@ A website or tool that offers a public collaboration repository to Authors, so t
 * See [Public Collaboration Ecosystem](#public-collaboration-ecosystem).
 
 
-## Supply-chain roles and metadata
+
+
+## Supply-chain Roles
+
 
 ### Supplier
 

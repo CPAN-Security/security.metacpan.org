@@ -109,60 +109,77 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 (EU) [Cyber Resilience Act](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html) (CRA, updated 2024-03-12)
 
-* In the [CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11)
-    * Recital (10): CRA relevance for supply chains (page 11)
-    * Recitals (16-17): CRA relevance for Open Source projects (page 18-19)
-    * Recital (**18**): Open Source Software Contributors (page 20)
-    * Recital (**19**): Open Source Software Stewards, light-touch regulatory regime, and CE mark implications (page 22)
-    * Recital (**20**): Open Source package managers considerations as "distributors" (page 24)
-    * Recital (21): Voluntary security attestation programs for Open Source projects (page 25)
-    * Recital (22): Submission of SBOMs for Open Source projects (page 26)
-    * Recital (24): CRA relevance for the NIS2 directive (page 29)
-    * Recital (31): Manufacturer's liability due to lack of security updates (page 36)
-    * Recital (34): Due diligence when integrating third-party components (page 39)
-    * Recital (37): Software for testing purposes, alphas, betas (page 42)
-    * Recital (39): Continued security updates (page 44)
-    * Recital (41): Substantial modifications requires a new conformity assessment to be done (page 47)
-    * Recitals (43-45): Important products with digital elements (pages 49-51)
-    * Recital (**57**): On the download and installation of security updates, and notification of end of support (pages 66-67)
-    * Recital (**58**): On the requirement to be able to get security updates separately from functionality updates (page 67)
-    * Recitals (60-62): Support period (page 69-71)
-    * Recital (64): Point of contact (page 73)
-    * Recital (65): Secure by default (page 73)
-* In the [CRA Chapters](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136)
-    * Chapter I, Article 3: Definitions (pages 136-146)
-    * Chapter I, Article 9, Point 1. (b-c): Stakeholder consultation (pages 155-156)
-    * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
-        * Article 13, Obligations of Manufacturers (pages 161-175)
-        * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
-        * **Article 15**, Voluntary reporting (pages 185-186)
-        * Article 16, Establishment of a single reporting platform (pages 187-192)
-        * Article 17, Other provisions related to reporting (pages 193-195)
-        * Article 18, Authorized representatives (pages 195-196)
-        * **Article 19**, Obligations of importers (pages 197-201)
-        * **Article 20**, Obligations of distributors (pages 202-205)
-        * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
-        * **Article 22**, Other cases in which obligations of manufacturers apply (page 206)
-        * Article 23, Identification of economic operators (page 207)
-    * Chapter II – Obligations of open-source software stewards
-        * **Article 24**, Obligations of open-source software stewards (pages 208-209)
-        * Article 25, Security attestation of free and open-source software (page 210)
-        * Article 26, Guidance (pages 211-212)
-    * Chapter III — Conformity of the product with digital elements
-        * Article 28, EU declaration of conformity (pages 218-219)
-        * Article 29, General principles of the CE marking (page 219)
-        * Article 30, Rules and conditions for affixing the CE marking (pages 220-222)
-    * Chapter V — Market Surveillance and Enforcement
-        * **Article 58**, Formal non-compliance (pages 276)
-* In [CRA Annex I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
+* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-european-cyber-resilience-act)
+
+#### CRA Recitals
+
+[CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11)
+* Recital (10): CRA relevance for supply chains (page 11)
+* Recitals (16-17): CRA relevance for Open Source projects (page 18-19)
+* Recital (**18**): Open Source Software Contributors (page 20)
+* Recital (**19**): Open Source Software Stewards, light-touch regulatory regime, and CE mark implications (page 22)
+* Recital (**20**): Open Source package managers considerations as "distributors" (page 24)
+* Recital (21): Voluntary security attestation programs for Open Source projects (page 25)
+* Recital (22): Submission of SBOMs for Open Source projects (page 26)
+* Recital (24): CRA relevance for the NIS2 directive (page 29)
+* Recital (31): Manufacturer's liability due to lack of security updates (page 36)
+* Recital (34): Due diligence when integrating third-party components (page 39)
+* Recital (37): Software for testing purposes, alphas, betas (page 42)
+* Recital (39): Continued security updates (page 44)
+* Recital (41): Substantial modifications requires a new conformity assessment to be done (page 47)
+* Recitals (43-45): Important products with digital elements (pages 49-51)
+* Recital (**57**): On the download and installation of security updates, and notification of end of support (pages 66-67)
+* Recital (**58**): On the requirement to be able to get security updates separately from functionality updates (page 67)
+* Recitals (60-62): Support period (page 69-71)
+* Recital (64): Point of contact (page 73)
+* Recital (65): Secure by default (page 73)
+
+#### CRA Chapters
+
+[CRA Chapters](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136)
+
+* Chapter I, Article 3: Definitions (pages 136-146)
+* Chapter I, Article 9, Point 1. (b-c): Stakeholder consultation (pages 155-156)
+* Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
+    * Article 13, Obligations of Manufacturers (pages 161-175)
+    * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
+    * **Article 15**, Voluntary reporting (pages 185-186)
+    * Article 16, Establishment of a single reporting platform (pages 187-192)
+    * Article 17, Other provisions related to reporting (pages 193-195)
+    * Article 18, Authorized representatives (pages 195-196)
+    * **Article 19**, Obligations of importers (pages 197-201)
+    * **Article 20**, Obligations of distributors (pages 202-205)
+    * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
+    * **Article 22**, Other cases in which obligations of manufacturers apply (page 206)
+    * Article 23, Identification of economic operators (page 207)
+* Chapter II – Obligations of open-source software stewards
+    * **Article 24**, Obligations of open-source software stewards (pages 208-209)
+    * Article 25, Security attestation of free and open-source software (page 210)
+    * Article 26, Guidance (pages 211-212)
+* Chapter III — Conformity of the product with digital elements
+    * Article 28, EU declaration of conformity (pages 218-219)
+    * Article 29, General principles of the CE marking (page 219)
+    * Article 30, Rules and conditions for affixing the CE marking (pages 220-222)
+* Chapter V — Market Surveillance and Enforcement
+    * **Article 58**, Formal non-compliance (pages 276)
+
+#### CRA Annexes
+
+* [CRA Annex I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
     * Essential Cybersecurity Requirements (pages 297-302)
         * Part I — Cybersecurity requirements relating to the properties of products with digital elements (pages 297-300)
         * Part II — Vulnerability handling requirements (pages 300-302)
-* In [CRA Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303)
+* [CRA Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303)
     * Information and Instructions to the User (pages 303-305)
-* In [CRA, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314), Dated 2024-03-12
+* [CRA, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314)
     * Requirements to Technical Documentation content (pages 314-316)
-* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-european-cyber-resilience-act)
+
+#### Other useful resources
+
+* Eclipse Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
+* Eclipse ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)
+* Eclipse ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
+
 
 ### EU and EEA – PLD
 

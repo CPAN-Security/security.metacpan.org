@@ -174,6 +174,10 @@ toc: true
 
 > 1. A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package. (CPANSec 2024)
 
+#### Dependency (Implied, Assumed) ✍️
+
+> FIXME
+
 #### Dependency (Required, Unresolved, Requirement, Pre-requirement) ✍️
 
 > 1. A dependency that is required to be resolved for a software component to function as expected. (CPANSec 2024)

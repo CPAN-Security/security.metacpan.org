@@ -46,7 +46,7 @@
     - Ease of implementation and technical elegance ("fun stuff") is much more important!
     - Double work is wasted work. Who wants two-tree standards for SBOMs? Whatever is blocking these communities from converging, MUST be removed. Any reasons for this blockage is insignificant against the need for lowering the bar of participation for volunteer communities out there.
         - This probably with establishing a comprehensive ontology (common terminology) for the whole SBOM field, and have each party commit to implement it in their standards.
-    - Open Source ecosystems must be shown – in obvious terms – that they are a core component for any software lifecycle that SBOMs intend to be used in. [Picture of a "life cycle" from CDX]
+    - Open Source ecosystems must be shown – in obvious terms – that they are a core component for any software life-cycle that SBOMs intend to be used in. [Picture of a "life cycle" from CDX]
         - From a roles perspective, these life cycles must include _all_ activities that are done in Open Source ecosystems: Owner, Author, Custodian, Packager, Patcher, Curator, Publisher, Developer, Tester, Builder, Deployer, SecOps, Consumer, and Auditor.
     - While having SBOMs for documenting dependency resolution, there is also the other side of this coin – way to specify dependencies! Many ecosystems are myopic in this regard too.
         - Using Package URLs for specifying service dependencies might be a step forward here? E.g. <pkg:service/ntp>, <pkg:service/smtp> can be enough for an OS provider to do service discovery and communicate it's resolution for use in a software build or deployment SBOM
@@ -151,3 +151,46 @@ SBOM standards convergence - NOW
 ## Can SBOM become a first class citizen in Open Source Ecosystems?
 
 
+
+# Tobie Langel's CRA Steward TODO
+
+## General topics
+
+- CRA reading group
+- Building support documentation (glossary, collecting references, etc.)
+- How to ensure effective participation in the EU standardization process
+- How to provide input to the EU Commission in general (and about product categorisation in particular)
+- CRA impact on Open Source Stewards / foundations
+- CRA impact on open source consumers (SMEs / enterprise / OSPOs)
+- CRA impact on single-vendor open source
+
+## Technical topics
+
+- Standards for identifiers (CPEs), version numbers, end-of-live status & dates, referencing (transitive) dependencies, etc
+- Standards for releases, recall, EOL
+- Secure by design
+- Open source supply chain security
+- Vulnerability handling
+- Software lifecycle; including post EOL vulnerabilities
+
+# Salve's additions
+
+## General topics
+
+- CRA reading group
+  - Suggestion: CPANSec's reading list: https://security.metacpan.org/docs/readinglist.html
+- Building support documentation (glossary, collecting references, etc.)
+  - Suggestion: CPANSec's glossary: https://security.metacpan.org/docs/glossary.html
+
+- CRA impact on Open Source Stewards / foundations
+  - Question: To what extent is "code-hosting" a requirement? The CRA's formulation seems to be somewhat allowing of different models of operation; And since the CPAN predates the Perl Foundation by several years (and has always been operating independently), I'm wondering if the "code-hosting" requirement for this forum is a bit too strict...
+
+- Addition: Fully and separately enumerate CRA impact on different entities having roles throughout the supply-chain; e.g. Language ecosystem providers; OS packaging providers; Container registries;
+- Addition: Clarify to which extent the "Importer" role in CRA applies to FOSS supply-chain entities
+- Addition: Clarify to which extent the "Distributor" role in the CRA applies to FOSS supply-chain entities
+- Addition: Clarify how and which of the 40 EU standardization bodies / processes affect OSS Stewards
+- Addition: Create an overview of existing communities that have created (or are in the process of creating) relevant standards, resources or guides.
+
+## Technical topics
+
+- Addition: How to ensure FOSS project sustainability information becomes a requirement, and is communicated throughout the supply-chain

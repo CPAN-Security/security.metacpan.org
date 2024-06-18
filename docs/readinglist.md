@@ -142,6 +142,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Chapter I, Article 9, Point 1. (b-c): Stakeholder consultation (pages 155-156)
 * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
     * Article 13, Obligations of Manufacturers (pages 161-175)
+        * Section 6, "[…] they shall share the relevant code or documentation […]"
     * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
     * **Article 15**, Voluntary reporting (pages 185-186)
     * Article 16, Establishment of a single reporting platform (pages 187-192)

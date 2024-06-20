@@ -798,33 +798,6 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 * See [Auditor](#auditor).
 
 
-## Are you… a Manufacturer, Steward or Author?
-
-```mermaid
-graph TB
-    start-here(Start here) --> involved{"Involved<br>with OSS products?<br>CRA Recital (18)"}
-    involved  -->|No| not-relevant-for-you("This chart isn't<br>relevant for you")
-    involved -->|Yes| contributing{"Contributing<br>unpaid to OSS?<br>CRA Recital (18)"}
-    contributing  -->|No| monetised{"Monetizing<br>the product?<br>CRA Recital (18)"}
-    contributing -->|Yes| cra-is-out-of-scope(CRA is out-of-scope)
-    monetised -->|Yes| cra-manufacturer("CRA is in-scope<br>You are a Manufacturer<br>CRA Recital (18), (15)")
-    monetised -->|No| is-legal-entity{"Legal person,<br> but not natural person?<br>CRA Recital (19)"}
-    is-legal-entity -->|Yes| intended-commercial-use{"Is product<br>intended for<br>commerial use?<br>CRA Recital (19)"}
-    is-legal-entity -->|No| cra-is-out-of-scope
-    intended-commercial-use -->|No| cra-is-out-of-scope
-    intended-commercial-use -->|Yes| product-supporter{"Providing<br>support for OSS<br>products?<br>CRA Recital (18)"}
-    product-supporter -->|Yes| cra-oss-steward("CRA in-scope<br>You are an Open-Source Software Steward<br>CRA Article 3 (14)")
-    product-supporter -->|No| cra-is-out-of-scope
-
-    %% Based on the flowchart made by Maarten Aertsen (NLNetLabs) found at
-    %% https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
-
-    %% Original flowchart © Maarten Aertsen <maarten@nlnetlabs.nl>
-    %% License: CC0 1.0 Universal
-    %% Adapted to Mermaid and modified by Salve J. Nilsen <sjn@oslo.pm>
-```
-
-
 ## References
 
 * (CISA-2024)  [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28.

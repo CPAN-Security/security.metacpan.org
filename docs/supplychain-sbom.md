@@ -87,6 +87,7 @@ We color-code these roles to help show what the expected SBOM activities any Sup
 * 🟨 Assemble, update, maintain, attest, annotate SBOM metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated**_.
 * 🟩 Distribute, curate, index SBOM metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
 * 🟦 Consume, aggregate, verify, validate, survey, analyze or report SBOM metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Correct** or **Compliant**_.
+* 🟪 Censor, redact, delete SBOM metadata — _**Redacting** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
 
 
 ```mermaid
@@ -98,16 +99,24 @@ stateDiagram-v2
     state "🟨 SBOM Author (Non-authoritative)" as sbom_assembler
     state "🟩 SBOM Distributor" as sbom_distributor
     state "🟦 SBOM Consumer" as sbom_consumer
+    state "🟪 SBOM Redactor" as sbom_redactor
 
-    [*] --> sbom_author
-    sbom_author --> sbom_assembler
-    sbom_author --> sbom_consumer
-    sbom_author --> sbom_distributor
-    sbom_assembler --> sbom_distributor
-    sbom_assembler --> sbom_consumer
-    sbom_distributor --> sbom_assembler
+    [*]              --> sbom_author
+%   sbom_distributor --> sbom_assembler
+%   sbom_redactor    --> sbom_assembler
+    sbom_author      --> sbom_assembler
+    sbom_assembler   --> sbom_redactor
+    sbom_author      --> sbom_redactor
+    sbom_author      --> sbom_distributor
+    sbom_assembler   --> sbom_distributor
+    sbom_redactor    --> sbom_distributor
+    sbom_author      --> sbom_consumer
+    sbom_assembler   --> sbom_consumer
     sbom_distributor --> sbom_consumer
-    sbom_consumer --> [*]
+    sbom_consumer    --> [*]
+
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
 
@@ -209,11 +218,11 @@ stateDiagram-v2
     state "🟦 Importer" as integrator_importer
     state "🟥 Supplier, Manufacturer, Owner" as integrator_owner
     state "🟦🟨🟥 Integrator, Developer" as integrator_developer
-    state "🟩🟨 SBOM Redactor\n🟩 Publisher" as integrator_publisher
+    state "🟩🟨🟪 SBOM Redactor\n🟩 Publisher" as integrator_publisher
     state "🟦🟨 Builder" as integrator_builder
     state "🟨 Deployer" as deployer
     state "🟦 Vuln. Checker" as integrator_checker
-    state "🟩🟨 SBOM Redactor" as redactor
+    state "🟩🟨🟪 SBOM Redactor" as redactor
     state "🟦 Consumer\n🟦  User" as consumer
     state "🟦 Auditor" as auditor_internal
     state "🟦 Auditor" as auditor_external
@@ -224,6 +233,7 @@ stateDiagram-v2
     classDef assemblesSBOM stroke:yellow,stroke-width:3px;
     classDef distributesSBOM stroke:green,stroke-width:3px;
     classDef verifiesSBOM stroke:#07f,stroke-width:3px;
+    classDef redactsSBOM stroke:#07f,stroke-width:3px;
 
     %% 
     class author_importer verifiesSBOM
@@ -839,6 +849,7 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 9. Add example of a chain of edits to an SBOM document, as it is passed down the supply-chain
 10. Distinguish between Dependencies (as resolved by the Builder, Packager or Integrator roles) and Requirements (unresolved, but as defined by the Author or Integrator roles).
 11. Distinguish in which SBOM Types (or stages) different fields are expected to be set, in order to help SBOM Authors produce and verify fields as expected.
+12. PCI-SSF v1.2.1 requires not only that component dependencies are listed, but also service dependencies. ([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
 
 
 ## License and use of this document

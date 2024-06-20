@@ -78,8 +78,15 @@ stateDiagram-v2
 
 ## SBOM Roles
 
-It may be useful to distinguish between roles that are focused on the SBOM documents themselves, from roles that are involved in a supply-chain activity.
+Let's distinguish between roles that are focused on the SBOM documents themselves, from roles that are involved in a supply-chain activity.
 For further reading, please see CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)).
+In this document, we distinguish between SBOM Authors that are _Authoritative_ sources for one or more fields, from _Non-authoritative_ SBOM Authors, SBOM Distributors and SBOM Consumers.
+We color-code these roles to help show what the expected SBOM activities any Supply-chain Role may perform.
+
+* 🟥 Create, define, sign SBOM metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
+* 🟨 Assemble, update, maintain, attest, annotate SBOM metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated**_.
+* 🟩 Distribute, curate, index SBOM metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
+* 🟦 Consume, aggregate, verify, validate, survey, analyze or report SBOM metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Correct** or **Compliant**_.
 
 
 ```mermaid
@@ -102,16 +109,6 @@ stateDiagram-v2
     sbom_distributor --> sbom_consumer
     sbom_consumer --> [*]
 ```
-
-
-## Color-coding legend for SBOM Roles
-
-The color-coding is used in this document to help illustrate different SBOM activities any role may perform.
-
-* 🟥 Create, define, sign SBOM metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
-* 🟨 Assemble, update, maintain, attest, annotate SBOM metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated**_.
-* 🟩 Distribute, curate, index SBOM metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
-* 🟦 Consume, aggregate, verify, validate, survey, analyze or report SBOM metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Correct** or **Compliant**_.
 
 
 ### SBOM Author

@@ -1,0 +1,19 @@
+Annex II
+INFORMATION AND INSTRUCTIONS TO THE USER
+At minimum, the product with digital elements shall be accompanied by:
+1. the name, registered trade name or registered trademark of the manufacturer, and the postal address, ▌the email address or other digital contact as well as, where available, the website at which the manufacturer can be contacted;
+2. the single point of contact where information about ▌ vulnerabilities of the product with digital elements can be reported and received, and where the manufacturer’s policy on coordinated vulnerability disclosure can be found;
+3. name and type and any additional information enabling the unique identification of the product with digital elements ▌;
+4. the intended purpose of the product with digital elements, including the security environment provided by the manufacturer, as well as the product’s essential functionalities and information about the security properties;
+5. any known or foreseeable circumstance, related to the use of the product with digital elements in accordance with its intended purpose or under conditions of reasonably
+foreseeable misuse, which may lead to significant cybersecurity risks; ▌
+6. where applicable, the internet address at which the EU declaration of conformity can be accessed;
+7. the type of technical security support offered by the manufacturer and the end-date of the support period during which users can expect vulnerabilities to be handled and to receive security updates;
+8. detailed instructions or an internet address referring to such detailed instructions and information on:
+(a) the necessary measures during initial commissioning and throughout the lifetime of the product with digital elements to ensure its secure use;
+(b) how changes to the product with digital elements can affect the security of data;
+(c) how security-relevant updates can be installed;
+(d) the secure decommissioning of the product with digital elements, including information on how user data can be securely removed;
+(e) how the default setting enabling the automatic installation of security updates, as required by Annex I, Part I, point (c), can be turned off;
+(f) where the product with digital elements is intended for integration into other products with digital elements, the information necessary for the integrator to comply with the essential requirements set out in Annex I and the documentation requirements set out in Annex VII.
+9. If the manufacturer decides to make available the software bill of materials to the user, information on where the software bill of materials can be accessed.

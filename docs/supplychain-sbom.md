@@ -39,11 +39,11 @@ In this document we're trying to identify and expose all places and roles in an 
 stateDiagram-v2
     direction TB
 
-    state "🟦🟥🟨 Maintainer" as environment_maintainer
+    state "🟥🟨🟦 Maintainer" as environment_maintainer
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
-    state "🟨🟩 Language Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_package
-    state "🟥🟨 Integrator Environment\n🟦🟥🟨 Manufacturer" as environment_integrator
+    state "🟨🟩 Language Ecosystem\n🟨🟦 OSS Steward" as ecosystem_lang
+    state "🟨🟩 Package Ecosystem\n🟨🟦 OSS Steward" as ecosystem_package
+    state "🟥🟨 Integrator Environment\n🟥🟨🟦 Manufacturer" as environment_integrator
     state "🟦 Production Environment" as environment_prod
 
 
@@ -54,7 +54,6 @@ stateDiagram-v2
     ecosystem_lang --> ecosystem_package
     ecosystem_lang --> ecosystem_lang
     ecosystem_lang --> environment_integrator
-    ecosystem_repo --> ecosystem_lang
     ecosystem_repo --> ecosystem_package
     ecosystem_repo --> environment_integrator
     ecosystem_package --> ecosystem_package
@@ -76,9 +75,10 @@ stateDiagram-v2
     * When a Supply-chain Role consumes an SBOM, we call them an [SBOM Consumer](glossary#sbom-consumer--role-)
 
 
-## SBOM Roles
+## SBOM (Metadata) Roles and Operations
 
-Let's distinguish between roles that are focused on the SBOM documents themselves, from roles that are involved in a supply-chain activity.
+Let's distinguish between roles that are focused on metadata operations from roles that are involved in a supply-chain activity.
+We're assuming that metadata is stored in SBOMs.
 For further reading, please see CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)).
 In this document, we distinguish between SBOM Authors that are _Authoritative_ sources for one or more fields, from _Non-authoritative_ SBOM Authors, SBOM Distributors and SBOM Consumers.
 We color-code these roles to help show what the expected SBOM activities any Supply-chain Role may perform.
@@ -93,7 +93,7 @@ We color-code these roles to help show what the expected SBOM activities any Sup
 ```mermaid
 stateDiagram-v2
     direction TB
-    accTitle: SBOM Roles and Activities
+    accTitle: Metadata Roles and Operations
 
     state "🟥 SBOM Author (Authoritative)" as sbom_author
     state "🟨 SBOM Author (Non-authoritative)" as sbom_assembler
@@ -137,7 +137,7 @@ stateDiagram-v2
     * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
 * An SBOM Author who is tasked with removing (censoring) sensitive information from SBOM documents may be called [SBOM Censor](glossary#sbom-censor--role-)
 * Creates an SBOM. (CISA-2024)
-    *  This document assumes that each SBOM created is available for sharing. 
+    * This document assumes that each SBOM created is available for sharing.
 
 | Do | Field name                             | Required   | Data type    | CycloneDX 1.6                                                     | SPDX 2.3 | Required by             |
 | -- | :------------------------------------- | :--------- | :----------- | ----------------------------------------------------------------- | ---- | ----------------------- |
@@ -184,7 +184,7 @@ stateDiagram-v2
 > FIXME – Check if this is sane.
 
 * SBOM Consumer roles gather, inspect, analyze, aggregate or verify SBOM metadata — _They make sure metadata and related artifacts are **Useful**, **Complete**, **Correct** or **Compliant**_. (CPANSec-2024)
-    * They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles.
+    * They don't have any specific metadata fields that are commonly used across the different supply-chain Consumer roles.
 * They may view SBOM files to understand the contents, and use this information to support decision making & business processes, or to compare and contrast SBOMs to discover significant changes or vulnerabilities. (NTIA-2021, "Consume" category)
 * Receives the transferred SBOM. (CISA-2024)
     * This could include roles such as third parties, authors, integrators, and end users.
@@ -198,34 +198,35 @@ stateDiagram-v2
 stateDiagram-v2
     direction TB
     accTitle: An idealized Open Source supply-chain graph
+    %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %%
     state "🟦 Importer" as author_importer
     state "🟥 Supplier, Owner" as author_owner
-    state "🟨🟥 Maintainer, Author\n🟨 Custodian" as author
+    state "🟨🟥 Maintainer, Author\n🟨 Custodian" as author_maintainer
     state "🟩 Distributor" as repository_distributor
     state "🟦 Importer" as language_importer
     state "🟦🟨 Packager" as language_packager
     state "🟦🟨 OSS Steward" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Distributor" as language_distributor
-    state "🟦 Contributor" as contributor
+    state "🟦 Contributor" as external_contributor
     state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
+    state "🟦🟨 OSS Steward" as package_steward
     state "🟨 Curator" as package_curator
     state "🟩 Distributor" as package_distributor
     state "🟦 Importer" as integrator_importer
     state "🟥 Supplier, Manufacturer, Owner" as integrator_owner
     state "🟦🟨🟥 Integrator, Developer" as integrator_developer
-    state "🟩🟨🟪 SBOM Censor\n🟩 Publisher" as integrator_publisher
-    state "🟦🟨 Builder" as integrator_builder
-    state "🟨 Deployer" as deployer
-    state "🟦 Analyst" as integrator_analyst
-    state "🟩🟨🟪 SBOM Censor" as censor
-    state "🟦 Consumer\n🟦  User" as consumer
-    state "🟦 Auditor" as auditor_internal
-    state "🟦 Auditor" as auditor_external
+    state "🟩🟨🟪 SBOM Censor" as integrator_censor
+    state "🟩 Publisher" as integrator_publisher
+    state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as integrator_builder
+    state "🟨 Deployer" as prod_deployer
+    state "🟦 Consumer\nUser" as external_consumer
+    state "🟦 Analyst\n🟦 Auditor" as integrator_analyst
+    state "🟦 Auditor" as external_auditor
 
     %% 
     classDef createsSBOM stroke:red,stroke-width:3px;
@@ -234,40 +235,42 @@ stateDiagram-v2
     classDef distributesSBOM stroke:green,stroke-width:3px;
     classDef verifiesSBOM stroke:#07f,stroke-width:3px;
     classDef censorsSBOM stroke:#07f,stroke-width:3px;
+    classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %% 
     class author_importer verifiesSBOM
     class author_owner createsSBOM
-    class manufacturer_owner createsSBOM
-    class author assemblesSBOM
-    class package_importer verifiesSBOM
-    class package_patcher updatesSBOM
-    class package_packager assemblesSBOM
-    class package_curator distributesSBOM
-    class package_distributor distributesSBOM
+    class author_maintainer assemblesSBOM
+    class repository_distributor distributesSBOM
     class language_importer verifiesSBOM
     class language_packager assemblesSBOM
     class language_steward updatesSBOM
     class language_curator distributesSBOM
     class language_distributor distributesSBOM
-    class repository_distributor distributesSBOM
+    class package_importer verifiesSBOM
+    class package_patcher updatesSBOM
+    class package_packager assemblesSBOM
+    class package_steward updatesSBOM
+    class package_curator distributesSBOM
+    class package_distributor distributesSBOM
     class integrator_importer verifiesSBOM
     class integrator_owner createsSBOM
     class integrator_developer assemblesSBOM
+    class integrator_censor updatesSBOM
     class integrator_publisher distributesSBOM
     class integrator_builder assemblesSBOM
     class integrator_analyst verifiesSBOM
-    class deployer assemblesSBOM
-    class censor distributesSBOM
-    class auditor_internal verifiesSBOM
-    class auditor_external verifiesSBOM
+    class prod_deployer assemblesSBOM
+    class external_auditor verifiesSBOM
+    class external_contributor verifiesSBOM
+    class external_consumer ignoresSBOM
 
     state "Author Environment" as environment_maintainer {
         [*] --> author_importer
-        [*] --> author
-        author_importer --> author
-        author_owner --> author
-        author       --> language_packager
+        [*] --> author_maintainer
+        author_importer   --> author_maintainer
+        author_owner      --> author_maintainer
+        author_maintainer --> language_packager
     }
 
     [*] --> environment_maintainer
@@ -280,6 +283,7 @@ stateDiagram-v2
         language_importer --> language_distributor
         language_importer --> language_curator
         language_steward --> language_curator
+        language_steward --> language_distributor
         language_curator --> language_distributor
     }
 
@@ -290,11 +294,11 @@ stateDiagram-v2
         [*] --> repository_distributor
     }
 
-    author         --> ecosystem_repo
-    ecosystem_repo --> author
+    author_maintainer --> ecosystem_repo
+    ecosystem_repo    --> author_maintainer
 
-    repository_distributor --> contributor
-    contributor            --> repository_distributor
+    repository_distributor --> external_contributor
+    external_contributor   --> repository_distributor
 
     state "Package Ecosystem" as ecosystem_package {
         [*] --> package_importer
@@ -304,6 +308,9 @@ stateDiagram-v2
         package_importer --> package_packager
         package_patcher  --> package_packager
         package_packager --> package_curator
+        package_steward  --> package_distributor
+        package_steward  --> package_curator
+        package_packager --> package_steward 
         package_packager --> package_distributor
         package_curator  --> package_distributor
     }
@@ -313,16 +320,15 @@ stateDiagram-v2
     ecosystem_package      --> ecosystem_package
 
     state "Integrator Environment" as environment_integrator {
-        [*] --> integrator_developer
         [*] --> integrator_importer
-        integrator_importer  --> integrator_developer
+        [*] --> integrator_developer
         integrator_owner     --> integrator_developer
+        integrator_importer  --> integrator_developer
+        integrator_builder   --> integrator_censor
         integrator_builder   --> integrator_publisher
-        integrator_developer --> integrator_analyst
+        integrator_builder   --> integrator_analyst
         integrator_analyst   --> integrator_developer
-        auditor_internal     --> integrator_developer
         integrator_developer --> integrator_builder
-        integrator_developer --> auditor_internal
     }
 
     repository_distributor --> environment_integrator
@@ -330,18 +336,18 @@ stateDiagram-v2
     package_distributor    --> environment_integrator
 
     state "Production Environment" as environment_prod {
-        [*] --> deployer
-        deployer --> censor
+        [*] --> prod_deployer
     }
 
-    integrator_publisher --> [*]
+    integrator_publisher --> external_auditor
     integrator_developer --> environment_prod 
     integrator_builder   --> environment_prod 
     integrator_publisher --> environment_prod 
+    integrator_censor    --> external_consumer
+    integrator_publisher --> [*]
+    integrator_censor    --> [*]
 
-    deployer --> auditor_external
-    deployer --> consumer
-    censor --> consumer
+    prod_deployer --> external_consumer
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licenced CC-BY-SA-4.0
@@ -607,7 +613,7 @@ Within an author environment, creates packages from their own project in prepara
 Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
 
 > [!NOTE]
-> * Packagers take upstream components from an upstream source  and build and install them into a custom environment for producing system packages for their native packaging ecosystem (e.g. APT).
+> * Packagers take upstream components from an upstream source and build and install them into a custom environment for producing system packages for their native packaging ecosystem (e.g. APT).
 > * Upstream sources may be…
 >     * Author's repository, or a Custodian's if a project is dormant (e.g. a repository on Codeberg).
 >     * Language-specific packages distributed by a Language Ecosystem (e.g. CPAN).
@@ -699,7 +705,7 @@ Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosyst
 Ensures the availability of packages or containers, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 > [!NOTE]
-> * Distributors take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry,  or similar).
+> * Distributors take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
 > * If SBOM metadata is expected to accompany the packages or containers in question, the Distributor makes sure this happens.
 > * Distributors have additional requirements and considerations laid out in CISA-2024.
 > * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
@@ -809,15 +815,15 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 * (CRA-AII)    [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303) Information and Instructions to the User, Dated 2024-03-12
 * (CRA-AV)     [Cyber Resilience Act, Annex V](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=311) EU Declaration of Conformity, Dated 2024-03-12
 * (CRA-AVII)   [Cyber Resilience Act, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314) Contents of the Technical Documentation, Dated 2024-03-12
-* (CRA-Art-3) [Cyber Resilience Act, Article 3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136) Definitions, Dated 2024-03-12
+* (CRA-Art-3)  [Cyber Resilience Act, Article 3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136) Definitions, Dated 2024-03-12
 * (CRA-Art-20) [Cyber Resilience Act, Article 20](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=202) Obligations of distributors, Dated 2024-03-12
 * (CRA-Art-47) [Cyber Resilience Act, Article 47](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=249) Operational obligations of notified bodies, Dated 2024-03-12
 * (CRA-Rec-15) [Cyber Resilience Act, Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17) Economic operators, Dated 2024-03-12
 * (CRA-Rec-18) [Cyber Resilience Act, Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20) Open Source Software Contributors, Dated 2024-03-12
 * (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Stewards, Dated 2024-03-12
-* (DE-TR) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 1.1, published 2023-11-28.
-* (NTIA-2021) [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30.
-* (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
+* (DE-TR)      German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 1.1, published 2023-11-28.
+* (NTIA-2021)  [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30.
+* (NTIA-SBOM)  [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
 
 * (CPANSec-2024) CPAN Security Group commentary by Author.
 
@@ -843,6 +849,7 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 10. Distinguish between Dependencies (as resolved by the Builder, Packager, Assembler or Integrator roles) and Requirements (unresolved, but as defined by the Author or Integrator roles).
 11. Distinguish in which SBOM Types (or stages) different fields are expected to be set, in order to help SBOM Authors produce and verify fields as expected.
 12. PCI-SSF v1.2.1 requires not only that component dependencies are listed, but also service dependencies. ([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
+13. Use "Metadata" as the primary term, instead of "SBOM"
 
 
 ## License and use of this document

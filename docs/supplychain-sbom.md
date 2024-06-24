@@ -88,6 +88,7 @@ We color-code these roles to help show what the expected SBOM activities any Sup
 * 🟩 Distribute, curate, index SBOM metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
 * 🟦 Consume, aggregate, verify, validate, survey, analyze or report SBOM metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Correct** or **Compliant**_.
 * 🟪 Censor, redact, delete, anonymize SBOM metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
+* ⬜ Ignore, pass-through, do nothing with SBOM metadata — _**Ignoring** roles do nothing with the metadata_.
 
 
 ```mermaid
@@ -200,32 +201,32 @@ stateDiagram-v2
     accTitle: An idealized Open Source supply-chain graph
 
     %%
-    state "🟦 Importer" as author_importer
-    state "🟥 Supplier, Owner" as author_owner
-    state "🟨🟥 Maintainer, Author\n🟨 Custodian" as author
-    state "🟩 Distributor" as repository_distributor
-    state "🟦 Importer" as language_importer
-    state "🟦🟨 Packager" as language_packager
-    state "🟦🟨 OSS Steward" as language_steward
-    state "🟨 Curator" as language_curator
-    state "🟩 Distributor" as language_distributor
-    state "🟦 Contributor" as contributor
-    state "🟦 Importer" as package_importer
-    state "🟨 Patcher" as package_patcher
-    state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
-    state "🟨 Curator" as package_curator
-    state "🟩 Distributor" as package_distributor
-    state "🟦 Importer" as integrator_importer
-    state "🟥 Supplier, Manufacturer, Owner" as integrator_owner
-    state "🟦🟨🟥 Integrator, Developer" as integrator_developer
-    state "🟩🟨🟪 SBOM Censor\n🟩 Publisher" as integrator_publisher
-    state "🟦🟨 Builder" as integrator_builder
-    state "🟨 Deployer" as deployer
-    state "🟦 Analyst" as integrator_analyst
-    state "🟩🟨🟪 SBOM Censor" as censor
-    state "🟦 Consumer\n🟦  User" as consumer
-    state "🟦 Auditor" as auditor_internal
-    state "🟦 Auditor" as auditor_external
+    state "⬜⬜⬜🟦⬜ Importer" as author_importer
+    state "🟥⬜⬜⬜⬜ Supplier, Owner" as author_owner
+    state "🟥🟨⬜⬜⬜ Maintainer, Author\n⬜🟨⬜⬜⬜ Custodian" as author
+    state "⬜⬜🟩⬜⬜ Distributor" as repository_distributor
+    state "⬜⬜⬜🟦⬜ Importer" as language_importer
+    state "⬜🟨⬜🟦⬜ Packager" as language_packager
+    state "⬜🟨⬜🟦⬜ OSS Steward" as language_steward
+    state "⬜🟨⬜⬜⬜ Curator" as language_curator
+    state "⬜⬜🟩⬜⬜ Distributor" as language_distributor
+    state "⬜⬜⬜🟦⬜ Contributor" as contributor
+    state "⬜⬜⬜🟦⬜ Importer" as package_importer
+    state "⬜🟨⬜⬜⬜ Patcher" as package_patcher
+    state "⬜🟨⬜🟦⬜ Builder\n⬜🟨⬜🟦⬜ Packager\n⬜🟨⬜🟦⬜ Assembler" as package_packager
+    state "⬜🟨⬜⬜⬜ Curator" as package_curator
+    state "⬜⬜🟩⬜⬜ Distributor" as package_distributor
+    state "⬜⬜⬜🟦⬜ Importer" as integrator_importer
+    state "🟥⬜⬜⬜⬜ Supplier, Manufacturer, Owner" as integrator_owner
+    state "🟥🟨⬜🟦⬜ Integrator, Developer" as integrator_developer
+    state "⬜🟨🟩⬜🟪 SBOM Censor\n⬜⬜🟩⬜⬜ Publisher" as integrator_publisher
+    state "⬜🟨⬜🟦⬜ Builder" as integrator_builder
+    state "⬜🟨⬜⬜⬜ Deployer" as deployer
+    state "⬜⬜⬜🟦⬜ Analyst" as integrator_analyst
+    state "⬜🟨🟩⬜🟪 SBOM Censor" as censor
+    state "⬜⬜⬜🟦⬜ Consumer\n⬜⬜⬜🟦⬜ User" as consumer
+    state "⬜⬜⬜🟦⬜ Auditor" as auditor_internal
+    state "⬜⬜⬜🟦⬜ Auditor" as auditor_external
 
     %% 
     classDef createsSBOM stroke:red,stroke-width:3px;

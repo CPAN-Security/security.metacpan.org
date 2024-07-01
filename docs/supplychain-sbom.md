@@ -43,6 +43,7 @@ stateDiagram-v2
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem\n🟨🟦 OSS Steward" as ecosystem_lang
     state "🟨🟩 Package Ecosystem\n🟨🟦 OSS Steward" as ecosystem_package
+    state "🟩 Content Delivery Network" as network_delivery
     state "🟥🟨 Integrator Environment\n🟥🟨🟦 Manufacturer" as environment_integrator
     state "🟦 Production Environment" as environment_prod
 
@@ -50,13 +51,17 @@ stateDiagram-v2
     [*] --> environment_maintainer
     environment_maintainer --> ecosystem_repo
     environment_maintainer --> ecosystem_lang
-    ecosystem_repo --> environment_maintainer
+    environment_maintainer --> network_delivery
     ecosystem_lang --> ecosystem_package
     ecosystem_lang --> ecosystem_lang
+    ecosystem_lang --> network_delivery
     ecosystem_lang --> environment_integrator
+    ecosystem_repo --> environment_maintainer
     ecosystem_repo --> ecosystem_package
     ecosystem_repo --> environment_integrator
     ecosystem_package --> ecosystem_package
+    ecosystem_package --> network_delivery
+    network_delivery --> environment_integrator
     ecosystem_package --> environment_integrator
     environment_integrator --> environment_prod
     environment_prod --> [*]
@@ -102,8 +107,8 @@ stateDiagram-v2
     state "🟪 SBOM Censor" as sbom_censor
 
     [*]              --> sbom_author
-%   sbom_distributor --> sbom_assembler
-%   sbom_censor      --> sbom_assembler
+    sbom_distributor --> sbom_author
+    sbom_distributor --> sbom_assembler
     sbom_author      --> sbom_assembler
     sbom_assembler   --> sbom_censor
     sbom_author      --> sbom_censor

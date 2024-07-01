@@ -33,7 +33,7 @@ For license information and acknowledgements, see the [end of this document](#li
 In this document we're trying to identify and expose all places and roles in an Open Source supply chain where someone cares about some metadata (and it's associated code) that someone downstream needs for detecting and mitigating vulnerabilities.
 
 
-## An idealized Open Source supply-chain graph
+## An idealized Open Source supply-chain graph (simple)
 
 ```mermaid
 stateDiagram-v2
@@ -193,6 +193,9 @@ stateDiagram-v2
 
 
 ## Supply-chain Ecosystems and Environments
+
+
+### An idealized Open Source supply-chain graph (full)
 
 ```mermaid
 stateDiagram-v2

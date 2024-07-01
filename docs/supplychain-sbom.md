@@ -44,9 +44,8 @@ stateDiagram-v2
     state "🟨🟩 Language Ecosystem\n🟨🟦 OSS Steward" as ecosystem_lang
     state "🟨🟩 Package Ecosystem\n🟨🟦 OSS Steward" as ecosystem_package
     state "🟩 Content Delivery Network" as network_delivery
-    state "🟥🟨 Integrator Environment\n🟥🟨🟦 Manufacturer" as environment_integrator
+    state "🟥🟨 Integrator Environment\n🟥🟨🟦🟪 Manufacturer" as environment_integrator
     state "🟦 Production Environment" as environment_prod
-
 
     [*] --> environment_maintainer
     environment_maintainer --> ecosystem_repo
@@ -66,6 +65,8 @@ stateDiagram-v2
     environment_integrator --> environment_prod
     environment_prod --> [*]
 
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
 

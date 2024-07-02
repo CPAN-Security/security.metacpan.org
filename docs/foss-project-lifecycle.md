@@ -11,10 +11,11 @@
 1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer
     * (number of maintainers is 1)
     * (number of maintainers is about to reduce to 0)
-1. ADOPTME – The project is abandoned, or the owner has been confirmed to be unresponsive, and therefore available for adoption
+1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption
     * The project needs a new maintainer
     * (number of maintainers is 0)
-1. NOXFER – The project is prevented from being transferred to new owners
+    * (number of maintainers is too low)
+1. NOXFER – The project is prevented from being transferred to new maintainers
     * The project has been prevented from being adopted, but may still be forked
     * (number of maintainers is not relevant)
 1. CUSTODY – This project is under custodianship
@@ -22,20 +23,27 @@
     * (number of maintainers is 0)
 1. DONE – The project is considered "Done", and while it is maintained, no further development is needed or expected
     * (number of maintainers is 1 or higher)
-1. DEPRECATED – The project owner recommends that this project is not to be used
+    * (number of maintainers does not need to change)
+1. DEPRECATED – The project maintainer recommends that this project is not to be used
     * (number of maintainers is 0)
+    * (number of maintainers does not need to change)
 1. UNMAINTAINED – This project is not actively maintained
     * Response time expectations should be none
     * (number of maintainers is 1 or higher)
+    * (number of maintainers does not need to change)
 1. CASUAL – This project is only maintained on a casual basis
     * Response time expectations should be low
     * (number of maintainers is 1 or higher)
+    * (number of maintainers does not need to change)
 1. NEEDFUNDING – This project needs funding
     * Workload is unsustainable with only a volunteer-level commitment
     * (number of maintainers is 1 or higher)
+    * (number of maintainers does not need to change)
 1. NEEDSUPPORT – This project needs non-funding support
     * Project growth and sustainability is hindered by lack of non-code contributions
+    * Examples: Branding development; Code security audit; Event organizing; Documentation writing
     * (number of maintainers is 1 or higher)
+    * (number of maintainers does not need to change)
 
 
 ## Other project states, claims and metadata

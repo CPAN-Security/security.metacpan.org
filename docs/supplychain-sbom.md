@@ -39,8 +39,8 @@ In this document we're trying to identify and expose all places and roles in an 
 stateDiagram-v2
     direction TB
 
-    state "🟦🟥🟨 Maintainer"             as environment_maintainer
-    state "🟩 Collaboration Ecosystem"  as ecosystem_repo
+    state "🟦🟥🟨 Maintainer" as environment_maintainer
+    state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_lang
     state "🟨🟩 Package Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_package
     state "🟥🟨 Integrator Environment\n🟦🟥🟨 Manufacturer" as environment_integrator

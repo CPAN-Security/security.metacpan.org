@@ -1,3 +1,10 @@
+---
+layout: page
+toc: true
+meeting_time: June 19th, 2024 16:00 UTC
+title: Minutes 2024-06-19
+---
+
 # Minutes
 
 2024-06-19 16:00 UTC @ TPRF Slack #cpan-security channel

@@ -38,7 +38,8 @@ toc: true
 
 ### Author
 
-> 1. An entity that creates an SBOM. When [author](#author) and [supplier](#supplier) are different, this indicates that one entity (the author) is making claims about components created or included by a different entity (the supplier). (NTIA 2021)
+> 1. An entity that creates an SBOM.
+> > 1. [author](#author) and [supplier](#supplier) will often be different. In the case of SBOMs, the author creates the SBOM. The supplier is the provider of the software included in the SBOM (NTIA 2021)
 > 2. A developer that publishes something as Open Source software. (CPANSec 2024)
 >
 > See also: [Author](supplychain-sbom#author) in the Supply-chain SBOM Roles document.
@@ -127,6 +128,7 @@ toc: true
 ### CycloneDX ✍️
 
 > 1. An OWASP managed software bill of materials specification designed to be lightweight and security-focused. (SCVS 2020)
+>     * CycloneDX is considered to be one of the three [SBOM](#sbom--software-bill-of-materials-) formats, together with [SWID](#software-identification--swid-) and [SPDX](#software-package-data-exchange--spdx-).
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
@@ -136,8 +138,9 @@ toc: true
 >     * In the SLSA model, it is always a package.
 >     * E.g. an Alpine package ([package](#package---)) distributed on Alpine Linux ([platform](#platform)).
 > 2. Characterizing the relationship that an upstream component X is ~~included~~ in software Y. (NTIA 2021) ⚠️
->
->> NOTE: Dependencies may be referenced, included, development/build/test/deploy/runtime phase-specific, dynamic, static, unresolved, resolved, direct or transitive. Yay! (CPANSec 2024)
+
+> [!NOTE]
+> * Dependencies may be referenced, included, development/build/test/deploy/runtime phase-specific, dynamic, static, unresolved, resolved, embedded, direct or transitive. The definition above is, in this sense, entirely insufficient. (CPANSec 2024)
 >
 > (Ref: [SLSA 2023](#references-and-terms), NTIA 2021, CPANSec 2024)
 
@@ -162,13 +165,63 @@ toc: true
 >
 > (Ref: [SCVS 2020](#references-and-terms), NTIA 2021, CPANSec 2024)
 
+
+#### Dependency (Detected during Analysis) ✍️
+
+> FIXME
+
+#### Dependency (Embedded, Included, Pre-resolved) ✍️
+
+> 1. A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package. (CPANSec 2024)
+
+#### Dependency (Implied, Assumed) ✍️
+
+> FIXME
+
+#### Dependency (Required, Unresolved, Requirement, Pre-requirement) ✍️
+
+> 1. A dependency that is required to be resolved for a software component to function as expected. (CPANSec 2024)
+>     * Requirements are expected to be resolved by the Builder or Packager of the component.
+
+#### Dependency (Resolved at Source) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Build) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Deploy) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Source) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Build) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Deploy) ✍️
+
+> FIXME
+
+#### Dependency (Resolved at Runtime) ✍️
+
+> FIXME
+
+#### Dependency (Pinned at Source) ✍️
+
+> FIXME
+
 ### Distributor ⚠️
 
 > [!WARNING]
 > The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
 > This means if an [Importer](#importer) or distributor applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail. (CRA 2024-03 Article 21, 22)
 >
-> TODO: Confirm with lawyer after final version of CRA is adopted.
+> FIXME: Confirm with lawyer after final version of CRA is adopted.
 
 > 1. A natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the Union market without affecting its properties. (2024-03)
 >
@@ -210,6 +263,8 @@ toc: true
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
 
+> FIXME: Add some clarification regarding Manufacturers, Importers, Distributors and Open Source Stewards.
+
 ### Manufacturer
 
 > 1. Any natural or legal person who develops or manufactures products with digital elements or has products with digital elements designed, developed or manufactured, and markets them under his or her name or trademark, whether for payment, monetisation or free of charge.
@@ -225,7 +280,7 @@ toc: true
 ### Open-source software steward ⚠️
 
 > [!NOTE]
-> TODO: This is a definition that was added to the CRA on 2023-12-20, meaning it may change in the final version of the regulation.
+> FIXME: This is a definition that was added to the CRA on 2023-12-20, meaning it may change in the final version of the regulation.
 
 > 1. Any legal person, other than a [manufacturer](#manufacturer), which has the purpose or objective to systematically provide support on a sustained basis for the development of specific products with digital elements qualifying as free and open-source software that are intended for commercial activities, and ensures the viability of those products.
 >
@@ -233,10 +288,12 @@ toc: true
 
 ### Package ⚠️  ✍️
 
-> 1. [Artifact](#artifact-) that is ~~“published”~~ for use by others.
+> 1. [An] [Artifact](#artifact-) that is “published” for use by others. (SLSA 2023)
 >     * In the model, it is always the output of a build process, though that build process can be a no-op.
 >     * E.g. a Docker image (package) distributed on DockerHub (platform).
 >     * E:g. a ZIP file containing source code is a package, not a source, because it is built from some other source, such as a git commit.
+> 2. An identifiable unit of software intended for distribution, ambiguously meaning either an “artifact” or a “package name”. (SLSA 2023)
+>     * Only use this term when the ambiguity is acceptable or desirable.
 >
 > (Ref: [SLSA 2023](#references-and-terms), CPANSec 2024)
 
@@ -248,7 +305,7 @@ toc: true
 
 ### Package URL (PURL)
 
-> 1. An ecosystem-agnostic specification which standardizes the syntax and location information of software components.
+> 1. An ecosystem-agnostic specification which standardizes the syntax and location information of software components. The PURL spec can be found in [GitHub](https://github.com/package-url/purl-spec). As it is an open source project it is constantly evolving.
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
@@ -278,15 +335,14 @@ toc: true
 
 ### Procurement ✍️
 
-> 1. The process of agreeing to terms and acquiring software or services for later use. (SCVS)
->
-> This includes agreeing to Open Source licenses. (CPANSec)
+> 1. The process of agreeing to terms and acquiring software or services for later use. (SCVS 2020)
+>     * This includes agreeing to Open Source licenses. (CPANSec 2024)
 >
 > (Ref: [SCVS 2020](#references-and-terms), CPANSec 2024)
 
 ### Product with digital elements
 
-> 1. A software or hardware product and its [Remote Data Processing](#remote-data-processing) solutions, including software or hardware components being placed on the market separately.
+> 1. A software or hardware product and its [Remote Data Processing](#remote-data-processing) solutions, including software or hardware components being placed on the market separately. (CRA 2024-03)
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
 
@@ -328,16 +384,20 @@ toc: true
 
 #### SBOM Assembler (Role) ✍️
 
-> 1. Someone that gathers and assembles SBOMs from different sources into a new SBOM. (CPANSec 2024)
->
-> (Ref: CPANSec)
+> 1. A non-authoritative [SBOM Author](#sbom-author--role-). (CPANSec 2024)
+> 2. Someone that gathers, assembles or updates SBOMs from different sources into a new SBOM. (CPANSec 2024)
+>     * This is a _proposed_ Role separate from "SBOM Author" for clarifying the responsibility when the Role intends to _gather_, _assemble_ or _update_ metadata fields, instead of being the authoritative source of a field.
+>     * This assumes some fields may be in need of updating as an SBOM is passed down a supply-chain – for example to correct upstream assumptions like 'Download location', add missing fields, or update the list of resolved dependencies.
+>     * The intention is to distinguish between "SBOM Author" and "SBOM Assembler" in the same way as one distinguishes between "Create" and "Update" in CRUD – to clarify responsibilities and expectations for who is the original source of some metadata fields.
+> (Ref: CPANSec 2024)
 
 
-#### SBOM Author (Role)
+#### SBOM Author (Role) ✍️
 
 > 1. The creator of an SBOM. (CISA 2024)
+> 2. The Authoritative source of an SBOM or an SBOM metadata field. (CPANSec 2024)
 >
-> (Ref: [CISA 2024](#references-and-terms))
+> (Ref: [CISA 2024](#references-and-terms), CPANSec 2024)
 
 #### SBOM Distributor (Role)
 
@@ -351,7 +411,6 @@ toc: true
 >      * This could include roles such as third parties, authors, integrators, and end users.
 >
 > (Ref: [CISA 2024](#references-and-terms))
-
 
 ### SBOM Types
 
@@ -407,23 +466,25 @@ toc: true
 
 ### Software Bill of Materials (SBOM)
 
-> 1. See [SBOM (Software Bill of Materials](#sbom-software-bill-of-materials).
+> 1. See [SBOM (Software Bill of Materials](#sbom--software-bill-of-materials-).
 
 ### Software Identification (SWID)
 
 > 1. An ISO standard that formalizes how software is tagged.
+>    * SWID is considered to be one of three [SBOM](#sbom--software-bill-of-materials-) formats, together with [CycloneDX](#cyclonedx--) and [SPDX](#software-package-data-exchange--spdx-).
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
 ### Software Package Data Exchange (SPDX)
 
-> 1. A Linux Foundation project which produces a [software bill of materials](#sbom-software-bill-of-materials) specification and a standardized list of open source licenses.
+> 1. A Linux Foundation project which produces a [software bill of materials](#sbom-software-bill-of-materials) specification and a standardized list of open source licenses. (SCVS 2020)
+>     * SPDX is considered to be one of three [SBOM](#sbom--software-bill-of-materials-) formats, together with [CycloneDX](#cyclonedx--) and [SWID](#software-identification--swid-).
 >
 > (Ref: [SCVS 2020](#references-and-terms))
 
 ### Source ⚠️  ✍️
 
-> 1. An [artifact](#artifact) that was directly authored ~~or reviewed~~ by persons, without modification.
+> 1. An [artifact](#artifact) that was directly authored ~~or reviewed~~ by persons, without modification. (SLSA 2023)
 >     * It is the beginning of the supply chain; we do not trace the provenance back any further.
 >     * E.g. a git commit (source) hosted on GitHub ([platform](#platform)).
 >
@@ -431,11 +492,13 @@ toc: true
 
 ### SPDX (Software Package Data Exchange)
 
-> See [Software Package Data Exchange (SPDX)](#software-package-data-exchange-spdx).
+> See [Software Package Data Exchange (SPDX)](#software-package-data-exchange--spdx-).
 
 ### Substantial Modification
 
-> A change to the product with digital elements following its placing on the market, which affects the compliance of the product with digital elements with the essential requirements set out in the EU Cyber Resilience Act, Annex I, Part I, or which results in a modification to the intended purpose for which the product with digital elements has been assessed. (CRA 2024-03)
+> 1. A change to the product with digital elements following its placing on the market, which affects the compliance of the product with digital elements with the essential requirements set out in the EU Cyber Resilience Act, Annex I, Part I, or which results in a modification to the intended purpose for which the product with digital elements has been assessed. (CRA 2024-03)
+>     * Where products with digital elements are subsequently modified, by physical or digital means, in a way that is not foreseen by the manufacturer [...], the modification should be considered as substantial. (CRA 2024-03 Recital 38)
+>     * Security updates are not Substantial Modifications. (CRA 2024-03 Recital 39)
 >
 > (Ref: [CRA 2024-03](#references-and-terms))
 
@@ -452,7 +515,7 @@ toc: true
 
 ### SWID (Software Identification)
 
-> See [Software Identification (SWID)](#software-identification-swid).
+> See [Software Identification (SWID)](#software-identification--swid-).
 
 ### Third-party component ✍️
 
@@ -467,10 +530,11 @@ toc: true
 > See [Manufacturer](#manufacturer) or [Author](#author).
 
 
-# References and terms
+## References and terms
 
 This glossary is partly based on terms from the following sources.
 
+- (CPANSec 2024) – These are commentary and proposed improvements made by the author(s) of this document.
 - (CISA 2023) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (Public Domain)
 - (CPANSec 2024) CPAN Security Group improvements and commentary, marked with ✍️ (CC-BY-SA-4.0)
 - (SCVS 2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
@@ -482,10 +546,18 @@ This glossary is partly based on terms from the following sources.
 - (CISA 2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
 
 
-# About this document
+## About this document
 
 Version: 0.5.0
-License: CC-BY-SA-4.0
-Copyright: Salve J. Nilsen <sjn at cpan.org>
+License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
+Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
-You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.
+You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.
+
+
+### Acknowledgements
+
+Several people have been involved in the development of this document
+
+* Salve J. Nilsen (main author)
+* Josh Bressers

@@ -20,11 +20,14 @@ toc: true
 * (NTIA) [The Minimum Elements For a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf) (July 2021)
 * (NSA, ODNI, CISA) [Securing the Software Supply Chain: Recommended Practices for Managing OSS and SBOMs](https://media.defense.gov/2023/Dec/11/2003355557/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN%20RECOMMENDED%20PRACTICES%20FOR%20MANAGING%20OPEN%20SOURCE%20SOFTWARE%20AND%20SOFTWARE%20BILL%20OF%20MATERIALS.PDF) (December 2023)
 * (NTIA) [Survey of Existing SBOM Formats and Standards](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) (2021)
+* (CISA) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (April 2023)
 
 ### SBOM use cases
 
 * (CDX) [CycloneDX Use Cases](https://cyclonedx.org/use-cases/)
 * (SPDX) [A Practical Guide to SPDX](https://fossa.com/learn/spdx)
+* (SPDX) [How To Use SPDX 2.3 in Different Scenarios](https://spdx.github.io/spdx-spec/v2.3/how-to-use/)
+
 
 ### Useful articles and papers
 
@@ -35,6 +38,13 @@ toc: true
 * (Lawfare Media) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards) (July 2022)
 * (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
 * (CISA) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations) (March 2024)
+* (SPDX) [Satisfying NTIA Minimum Elements for an SBOM using SPDX](https://spdx.github.io/spdx-spec/v2.3/how-to-use/#k22-mapping-ntia-minimum-elements-to-spdx-fields) (SPDX 2.3)
+* (SPDX) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 3.0)
+* (CISA) [SBOM Sharing Primer](https://www.cisa.gov/resources-tools/resources/sbom-sharing-primer)
+
+### SBOM Standards
+
+* (ISO/IEC 5962:2021) [SPDX® Specification V2.2.1](https://standards.iso.org/ittf/PubliclyAvailableStandards/c081870_ISO_IEC_5962_2021%28E%29.zip) (Source: ISO's [Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/index.html) list)
 
 See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
 
@@ -49,6 +59,9 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 * (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis) (October 2023)
 * (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
+* (Blog) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) (Philippe Ombredanne, May, 2023)
+* (Video) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) (FOSDEM 2022, 15 minutes)
+* (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) (S4 Conference 2023)
 
 
 ## Provenance & Supply Chain Security
@@ -99,33 +112,78 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 (EU) [Cyber Resilience Act](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html) (CRA, updated 2024-03-12)
 
-* In the [CRA Recitals](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=7)
-    * Recital (8): CRA relevance for supply chains (page 7)
-    * Recitals (10a-b): CRA relevance for Open Source projects (page 10-11)
-    * Recital (**10c**): Open Source Software Contributors (page 12)
-    * Recital (**10d**): Open Source Software Stewards, light-touch regulatory regime, and CE mark implications (page 13)
-    * Recital (**10e**): Open Source package managers considerations as "distributors" (page 14)
-    * Recitals (10f): Voluntary security attestation programs for Open Source projects (page 14)
-    * Recitals (10g): Submission of SBOMs for Open Source projects (page 14)
-    * Recital (11): CRA relevance for the NIS2 directive (page 16)
-    * Recital (16): Manufacturer's liability due to lack of security updates (page 21)
-    * Recital (18a): Due diligence when integrating third-party components (page 23)
-    * Recital (21): Software for testing purposes, alphas, betas (page 24)
-    * Recital (22b): Continued security updates (page 27)
-    * Recitals (33a-c): Support period (page 38-39)
-    * Recital (33e): Point of contact (page 40)
-    * Recital (33f): Secure by default (page 40)
-* In the [CRA Chapters](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=75)
-    * Chapter I, Article 3: Definitions (pages 75-80)
-    * Chapter I, Article 6 (b-c): Stakeholder consultation (pages 86-87)
-    * Chapter II, Articles 10, 11, 13, 14, 15, 16: Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software (pages 90-113)
-    * Chapter II, Articles 17 (a-c): Obligations of open-source software stewards (pages 113-115)
-    * Chapter III, Articles 20, 21, 22: EU declaration of conformity (pages 119-121)
-* In [CRA Annex I](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=164)
-    * Essential Cybersecurity Requirements (pages 164-167)
-* In [CRA Annex II](https://data.consilium.europa.eu/doc/document/ST-17000-2023-INIT/EN/pdf#page=168)
-    * Information and Instructions to the User (pages 168-169)
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-european-cyber-resilience-act)
+
+#### CRA Recitals
+
+[CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11)
+* Recital (10): CRA relevance for supply chains (page 11)
+* Recitals (16-17): CRA relevance for Open Source projects (page 18-19)
+* Recital (**18**): Open Source Software Contributors (page 20)
+* Recital (**19**): Open Source Software Stewards, light-touch regulatory regime, and CE mark implications (page 22)
+* Recital (**20**): Open Source package managers considerations as "distributors" (page 24)
+* Recital (21): Voluntary security attestation programs for Open Source projects (page 25)
+* Recital (22): Submission of SBOMs for Open Source projects (page 26)
+* Recital (24): CRA relevance for the NIS2 directive (page 29)
+* Recital (31): Manufacturer's liability due to lack of security updates (page 36)
+* Recital (34): Due diligence when integrating third-party components (page 39)
+* Recital (37): Software for testing purposes, alphas, betas (page 42)
+* Recital (39): Continued security updates (page 44)
+* Recital (41): Substantial modifications requires a new conformity assessment to be done (page 47)
+* Recitals (43-45): Important products with digital elements (pages 49-51)
+* Recital (**57**): On the download and installation of security updates, and notification of end of support (pages 66-67)
+* Recital (**58**): On the requirement to be able to get security updates separately from functionality updates (page 67)
+* Recitals (60-62): Support period (page 69-71)
+* Recital (64): Point of contact (page 73)
+* Recital (65): Secure by default (page 73)
+
+#### CRA Chapters
+
+[CRA Chapters](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136)
+
+* Chapter I, Article 3: Definitions (pages 136-146)
+* Chapter I, Article 9, Point 1. (b-c): Stakeholder consultation (pages 155-156)
+* Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
+    * Article 13, Obligations of Manufacturers (pages 161-175)
+        * Section 6, "[…] they shall share the relevant code or documentation […]"
+    * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
+    * **Article 15**, Voluntary reporting (pages 185-186)
+    * Article 16, Establishment of a single reporting platform (pages 187-192)
+    * Article 17, Other provisions related to reporting (pages 193-195)
+    * Article 18, Authorized representatives (pages 195-196)
+    * **Article 19**, Obligations of importers (pages 197-201)
+    * **Article 20**, Obligations of distributors (pages 202-205)
+    * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
+    * **Article 22**, Other cases in which obligations of manufacturers apply (page 206)
+    * Article 23, Identification of economic operators (page 207)
+* Chapter II – Obligations of open-source software stewards
+    * **Article 24**, Obligations of open-source software stewards (pages 208-209)
+    * Article 25, Security attestation of free and open-source software (page 210)
+    * Article 26, Guidance (pages 211-212)
+* Chapter III — Conformity of the product with digital elements
+    * Article 28, EU declaration of conformity (pages 218-219)
+    * Article 29, General principles of the CE marking (page 219)
+    * Article 30, Rules and conditions for affixing the CE marking (pages 220-222)
+* Chapter V — Market Surveillance and Enforcement
+    * **Article 58**, Formal non-compliance (pages 276)
+
+#### CRA Annexes
+
+* [CRA Annex I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
+    * Essential Cybersecurity Requirements (pages 297-302)
+        * Part I — Cybersecurity requirements relating to the properties of products with digital elements (pages 297-300)
+        * Part II — Vulnerability handling requirements (pages 300-302)
+* [CRA Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303)
+    * Information and Instructions to the User (pages 303-305)
+* [CRA, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314)
+    * Requirements to Technical Documentation content (pages 314-316)
+
+#### Other useful resources
+
+* Eclipse Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
+* Eclipse ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)
+* Eclipse ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
+
 
 ### EU and EEA – PLD
 
@@ -144,13 +202,14 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 * (Checkmarx) [Preparing for Europe’s Most Extensive Cybersecurity Directive, NIS2 – What AppSec teams need to know](https://checkmarx.com/blog/preparing-for-europes-most-extensive-cybersecurity-directive-nis2-what-appsec-teams-need-to-know/)
 * (CPAN) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html) – describing the different personas or roles involved in the life-cycle of a CPAN distribution.
+* (CISA) [Software Aquisition Guide](https://www.cisa.gov/resources-tools/resources/software-acquisition-guide-government-enterprise-consumers-software-assurance-cyber-supply-chain)
 
 
 ## License and use of this document
 
-Version: 0.5.0
-License: CC-BY-SA-4.0
-Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
+* Version: 0.5.0
+* License: CC-BY-SA-4.0
+* Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.
 

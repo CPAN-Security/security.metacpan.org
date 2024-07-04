@@ -12,14 +12,14 @@
 
 ## Regrets
 1. @Tux
-1. #garu
+1. @garu
 
 
 ## Not attending
 
 
 ## CPANminus
-1. stigo - hoping to get cpanm with https by default into the official perl docker images.  There are pull requests for this in cpanminus . @garu is planning to do the PR for docker images.
+1. @stigtsp - hoping to get cpanm with https by default into the official perl docker images.  There are pull requests for this in cpanminus . @garu is planning to do the PR for docker images.
 1. Cleanest way is a build
 
 ## OpenSSF

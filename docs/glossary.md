@@ -176,7 +176,9 @@ toc: true
 
 #### Dependency (Implied, Assumed) ✍️
 
-> FIXME
+> 1. A dependency that is _unstated_. (CPANSec 2024)
+>     * An implied dependency should be considered as a bug in the package, and corrected as soon as possible.
+>     * If a dependency has to be implied due to lacking capabilities in the tooling used to create the package, then this should be considered as a bug in the tooling.
 
 #### Dependency (Required, Unresolved, Requirement, Pre-requirement) ✍️
 
@@ -195,23 +197,19 @@ toc: true
 
 > FIXME
 
-#### Dependency (Resolved at Source) ✍️
-
-> FIXME
-
-#### Dependency (Resolved at Build) ✍️
-
-> FIXME
-
-#### Dependency (Resolved at Deploy) ✍️
-
-> FIXME
-
 #### Dependency (Resolved at Runtime) ✍️
 
 > FIXME
 
 #### Dependency (Pinned at Source) ✍️
+
+> FIXME
+
+#### Dependency (Pinned at Build) ✍️
+
+> FIXME
+
+#### Dependency (Pinned at Deploy) ✍️
 
 > FIXME
 

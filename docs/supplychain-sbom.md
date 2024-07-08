@@ -90,9 +90,9 @@ In this document, we distinguish between SBOM Authors that are _Authoritative_ s
 We color-code these roles to help show what the expected SBOM activities any Supply-chain Role may perform.
 
 * 🟥 Create, define, sign SBOM metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
-* 🟨 Assemble, update, maintain, attest, annotate SBOM metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated**_.
+* 🟨 Assemble, update, refine, maintain, attest, annotate SBOM metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
 * 🟩 Distribute, curate, index SBOM metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
-* 🟦 Consume, aggregate, verify, validate, survey, analyze or report SBOM metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Correct** or **Compliant**_.
+* 🟦 Consume, aggregate, verify, validate, survey, analyze or report SBOM metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
 * 🟪 Censor, redact, delete, anonymize SBOM metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
 
 

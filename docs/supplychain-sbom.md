@@ -859,6 +859,7 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 11. Distinguish in which SBOM Types (or stages) different fields are expected to be set, in order to help SBOM Authors produce and verify fields as expected.
 12. PCI-SSF v1.2.1 requires not only that component dependencies are listed, but also service dependencies. ([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
 13. Use "Metadata" as the primary term, instead of "SBOM"
+14. Find better general terms for "CycloneDX bomFormat" and "CycloneDX specVersion". E.g. "SBOM format" and "SBOM release". Add corresponding fields for SPDX.
 
 
 ## License and use of this document

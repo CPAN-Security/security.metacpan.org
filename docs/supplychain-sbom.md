@@ -44,24 +44,24 @@ stateDiagram-v2
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem\n🟨🟦 OSS Steward" as ecosystem_lang
     state "🟨🟩 Package Ecosystem\n🟨🟦 OSS Steward" as ecosystem_package
-    state "🟩 Content Delivery Network" as network_delivery
+    %%state "🟩 Content Delivery Network" as network_delivery
     state "🟥🟨 Integrator Environment\n🟥🟨🟦🟪 Manufacturer" as environment_integrator
     state "🟦 Production Environment" as environment_prod
 
     [*] --> environment_maintainer
     environment_maintainer --> ecosystem_repo
     environment_maintainer --> ecosystem_lang
-    environment_maintainer --> network_delivery
+    %%environment_maintainer --> network_delivery
     ecosystem_lang --> ecosystem_package
     ecosystem_lang --> ecosystem_lang
-    ecosystem_lang --> network_delivery
+    %%ecosystem_lang --> network_delivery
     ecosystem_lang --> environment_integrator
     ecosystem_repo --> environment_maintainer
     ecosystem_repo --> ecosystem_package
     ecosystem_repo --> environment_integrator
     ecosystem_package --> ecosystem_package
-    ecosystem_package --> network_delivery
-    network_delivery --> environment_integrator
+    %%ecosystem_package --> network_delivery
+    %%network_delivery --> environment_integrator
     ecosystem_package --> environment_integrator
     environment_integrator --> environment_prod
     environment_prod --> [*]
@@ -851,7 +851,6 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 1. Open Source in CRA... Maintainer -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor
 2. Open Source in CRA (simplified)... Hobbyist -> Maintainer -> Maintainer w/Steward -> Manufacturer
 3. Add graph/description on build steps, to illustrate how different SBOM files may be found, sourced, generated, assembled, installed and shared for later verification or analysis.
-5. Possible inclusion of "Config Ecosystems" or "Data Ecosystems" to take into account vulnerabilities/malware found in plugins, AI models or other shared data.
 6. Enumerate what distinguishes the different environments
     * Language: Not built, not deployed, Is source code, No execution environment
     * Distro/package: Built, Deployed, Is object, No execution environment
@@ -868,7 +867,6 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 11. Distinguish in which SBOM Types (or stages) different fields are expected to be set, in order to help SBOM Authors produce and verify fields as expected.
 12. PCI-SSF v1.2.1 requires not only that component dependencies are listed, but also service dependencies. ([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
 13. Use "Metadata" as the primary term, instead of "SBOM"
-14. Find better general terms for "CycloneDX bomFormat" and "CycloneDX specVersion". E.g. "SBOM format" and "SBOM release". Add corresponding fields for SPDX.
 
 
 ## License and use of this document

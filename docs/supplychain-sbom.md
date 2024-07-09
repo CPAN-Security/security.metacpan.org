@@ -18,12 +18,13 @@ mermaid: true
 
 ## About this document
 
-* In [Open-Source Software](glossary.md#open-source-software) supply chains, we find people filling distinct roles that each care about some metadata or tasks in SBOMs.
-* This document attempts to offer an overview of these roles, how they are related, and what each role cares about.
-* The rationale behind this document lays in the document author's perceiving that there were no good sources that described how SBOMs should (or could!) be used throughout an Open Source Software supply-chain.
-    * Much of existing documentation focused heavily on SBOMs from the perspective of a software suppliers (businesses) or consumers.
-    * Frustration with the lack of a clear Open Source perspective brought the author to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
-* This document exists in large part due to the author's attempt at taking notes while figuring out what the state of the art in SBOM.
+* This document offers an overview of [Open-Source Software](glossary.md#open-source-software) supply chains, as seen from the following perspectives;
+    * Different roles found throughout the supply-chain
+    * The metadata fields these roles typically care about
+    * What ways each role cares about each metadata, including common tasks
+    * What legislation or regulation, if any, that requires a specific metadata field
+    * To which roles metadata is communicated throughout the supply-chain
+* Original motivation for this document comes from the author's frustration with the lack of a clear Open Source perspective brought the author to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
 * Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation, taking incremental steps toward more transparent and accountable Open Source supply-chains.
 
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
@@ -205,23 +206,23 @@ stateDiagram-v2
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %%
-    state "🟦 Importer" as author_importer
+    %%state "🟦 Importer" as author_importer
     state "🟥 Supplier, Owner" as author_owner
     state "🟨🟥 Maintainer, Author\n🟨 Custodian" as author_maintainer
     state "🟩 Distributor" as repository_distributor
-    state "🟦 Importer" as language_importer
+    %%state "🟦 Importer" as language_importer
     state "🟦🟨 Packager" as language_packager
     state "🟦🟨 OSS Steward" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Distributor" as language_distributor
     state "🟦 Contributor" as external_contributor
-    state "🟦 Importer" as package_importer
+    %%state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
     state "🟦🟨 OSS Steward" as package_steward
     state "🟨 Curator" as package_curator
     state "🟩 Distributor" as package_distributor
-    state "🟦 Importer" as integrator_importer
+    %%state "🟦 Importer" as integrator_importer
     state "🟥 Supplier, Manufacturer, Owner" as integrator_owner
     state "🟦🟨🟥 Integrator, Developer" as integrator_developer
     state "🟩🟨🟪 SBOM Censor" as integrator_censor
@@ -242,22 +243,22 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %% 
-    class author_importer verifiesSBOM
+    %%class author_importer verifiesSBOM
     class author_owner createsSBOM
     class author_maintainer assemblesSBOM
     class repository_distributor distributesSBOM
-    class language_importer verifiesSBOM
+    %%class language_importer verifiesSBOM
     class language_packager assemblesSBOM
     class language_steward updatesSBOM
     class language_curator distributesSBOM
     class language_distributor distributesSBOM
-    class package_importer verifiesSBOM
+    %%class package_importer verifiesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
     class package_steward updatesSBOM
     class package_curator distributesSBOM
     class package_distributor distributesSBOM
-    class integrator_importer verifiesSBOM
+    %%class integrator_importer verifiesSBOM
     class integrator_owner createsSBOM
     class integrator_developer assemblesSBOM
     class integrator_censor updatesSBOM
@@ -270,9 +271,9 @@ stateDiagram-v2
     class external_consumer ignoresSBOM
 
     state "Author Environment" as environment_maintainer {
-        [*] --> author_importer
+        %%[*] --> author_importer
         [*] --> author_maintainer
-        author_importer   --> author_maintainer
+        %%author_importer   --> author_maintainer
         author_owner      --> author_maintainer
         author_maintainer --> language_packager
     }
@@ -280,12 +281,12 @@ stateDiagram-v2
     [*] --> environment_maintainer
 
     state "Language Ecosystem" as ecosystem_lang {
-        [*] --> language_importer
+        %%[*] --> language_importer
         [*] --> language_steward
         [*] --> language_curator
         [*] --> language_distributor
-        language_importer --> language_distributor
-        language_importer --> language_curator
+        %%language_importer --> language_distributor
+        %%language_importer --> language_curator
         language_steward --> language_curator
         language_steward --> language_distributor
         language_curator --> language_distributor
@@ -305,11 +306,11 @@ stateDiagram-v2
     external_contributor   --> repository_distributor
 
     state "Package Ecosystem" as ecosystem_package {
-        [*] --> package_importer
+        %%[*] --> package_importer
         [*] --> package_packager
         [*] --> package_patcher
-        package_importer --> package_patcher
-        package_importer --> package_packager
+        %%package_importer --> package_patcher
+        %%package_importer --> package_packager
         package_patcher  --> package_packager
         package_packager --> package_curator
         package_steward  --> package_distributor
@@ -324,10 +325,10 @@ stateDiagram-v2
     ecosystem_package      --> ecosystem_package
 
     state "Integrator Environment" as environment_integrator {
-        [*] --> integrator_importer
+        %%[*] --> integrator_importer
         [*] --> integrator_developer
         integrator_owner     --> integrator_developer
-        integrator_importer  --> integrator_developer
+        %%integrator_importer  --> integrator_developer
         integrator_builder   --> integrator_censor
         integrator_builder   --> integrator_publisher
         integrator_builder   --> integrator_analyst
@@ -570,9 +571,10 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 
 ### Importer
 
-May operate in any ecosystem or environment.
-A role specifically used when a EU entity makes available software on the EU market,
-Is required to verify that the imported software is compliant with the EU Cyber Resilience Act according to it's Article 19.
+* Proposed role, though it's unclear if it is relevant for this document. (CPANSec-2024)
+* May operate in any ecosystem or environment.
+* A role specifically used when a EU entity makes available software on the EU market,
+* Is required to verify that the imported software is compliant with the EU Cyber Resilience Act according to it's Article 19.
 
 | Do | Field name                      | Required | Data type    | CycloneDX 1.6                                                         | SPDX 2.3 | Required by              |
 | -- | :------------------------------ | :------- | :----------- | --------------------------------------------------------------------- | -------- | ------------------------ |
@@ -846,7 +848,7 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 ## Commentary and FIXME points (FIXME: remove when done)
 
-1. Open Source in CRA... Maintainer -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor -> Importer
+1. Open Source in CRA... Maintainer -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor
 2. Open Source in CRA (simplified)... Hobbyist -> Maintainer -> Maintainer w/Steward -> Manufacturer
 3. Add graph/description on build steps, to illustrate how different SBOM files may be found, sourced, generated, assembled, installed and shared for later verification or analysis.
 5. Possible inclusion of "Config Ecosystems" or "Data Ecosystems" to take into account vulnerabilities/malware found in plugins, AI models or other shared data.
@@ -867,7 +869,6 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 12. PCI-SSF v1.2.1 requires not only that component dependencies are listed, but also service dependencies. ([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
 13. Use "Metadata" as the primary term, instead of "SBOM"
 14. Find better general terms for "CycloneDX bomFormat" and "CycloneDX specVersion". E.g. "SBOM format" and "SBOM release". Add corresponding fields for SPDX.
-15. Consider if the CRA Importer role is worth keeping. (Tobie Langel suggested no)
 
 
 ## License and use of this document

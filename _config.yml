@@ -10,7 +10,6 @@ show_excerpts: true
 
 header_pages:
   - docs/report.md
-  - docs/pre-release-disclosure.md
   - docs/README.md
   - presentations/README.md
 

@@ -1,4 +1,20 @@
-----
+
+| State        | Maint = 0 | Maint = 1 | Maint >= 1 | Maint needs increase | Maint is declining | Response time | Response needs increase | Response is declining | Submitter  |
+| ------------ | --------- | --------- | ---------- | -------------------- | ------------------ | ------------- | ----------------------- | --------------------- | ---------- |
+| NEEDHELP     | no        | YES       | YES        | YES                  | no                 | LOW           |                         |                       | Maintainer |
+| HANDOFF      | no        | YES       | no         | YES                  | YES                | LOW           |                         |                       | Maintainer |
+| ADOPTME      | YES       | no        | no         | YES                  | no                 | NONE          |                         |                       | Ecosystem  |
+| CUSTODY      | YES       | no        | no         | YES                  | no                 | LOW           |                         |                       | Ecosystem  |
+| ACTIVE       | no        | YES       | YES        | no                   | no                 | OK            |                         |                       | Maintainer |
+| DONE         | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
+| UNMAINTAINED | no        | YES       | YES        | no                   | no                 | NONE          |                         |                       | Maintainer |
+| CASUAL       | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
+| NEEDFUNDING  | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
+| NEEDSUPPORT  | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
+| NOXFER       | no        | YES       | YES        | no                   | no                 | NONE          |                         |                       | Maintainer |
+| COMPROMISED  | YES       | YES       | YES        | no                   | no                 |               |                         |                       | Ecosystem  |
+| DISCOURAGED  | YES       | YES       | YES        | no                   | no                 | NONE          |                         |                       | Ecosystem  |
+| DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          |                         |                       | Ecosystem  |
 
 ## Open Source project life-cycle conditions
 
@@ -41,9 +57,15 @@
     * (number of maintainers does not need to change)
 1. NEEDSUPPORT – This project needs non-funding support
     * Project growth and sustainability is hindered by lack of non-code contributions
-    * Examples: Branding development; Code security audit; Event organizing; Documentation writing
+    * Examples: Branding development; Code security audit; Event organizing; Documentation writing;
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
+1. COMPROMISED
+    * 
+1. DISCOURAGED
+    * 
+1. DELISTED
+    *
 
 
 ## Other project states, claims and metadata
@@ -59,11 +81,3 @@
 1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (CRA Annex II, point 8)
 1. CE_CONFORMITY_BODY – A URL pointing to the Conformity Assessment Body where this component has been registered (CRA Article 22(4) and Article 58(1))
 1. CE_SUPPORT_END_DATE – The date for when the support for the component expires (Annex II, point 7)
-
-
-```mermaid
-graph TB
-    %% Life-cycle stages
-```
-
-

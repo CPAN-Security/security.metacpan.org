@@ -1,6 +1,6 @@
 ----
 
-## Open Source project life-cycle stages
+## Open Source project life-cycle conditions
 
 1. ACTIVE – The project is maintained (default state)
     * (number of maintainers is higher than 0)

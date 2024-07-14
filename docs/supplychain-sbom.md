@@ -521,7 +521,7 @@ An author or developer of an Open Source component project.
 | 🟥 | Version                        | Yes      | Text         | bom.components[].version                                              | packages[].versionInfo                                  | NTIA-SBOM, DE-TR.5.2.2                     |
 | 🟥 | Dependencies                   | Yes      | List         | bom.components[], bom.dependencies[]                                  | relationships[].[spdxElementId,relatedSpdxElement]      | CRA-AII(5), NTIA-SBOM                      |
 | 🟥 | Security contact               | Yes      | URL          | bom.externalReferences[].security-contact                             |                                                         | CRA-AII(2)                                 |
-| 🟥 | Unique ID, Product ID          | Yes      | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM, CRA-AV |
+| 🟥 | Unique Product ID              | Yes      | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM, CRA-AV |
 | 🟥 | Purpose, Intended Use          | Yes      | Text         | bom.components[].description                                          | packages[].comment                                      | CRA-AII(4)                                 |
 | 🟨 | Licenses                       | Yes      | SPDX License | bom.components[].licenses[]                                           | packages[].licenseConcluded, packages[].licenseDeclared |                                            |
 | 🟥 | Public Code Repository         | Yes      |              | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |  |
@@ -579,7 +579,7 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 | Do | Field name                      | Required | Data type    | CycloneDX 1.6                                                         | SPDX 2.3 | Required by              |
 | -- | :------------------------------ | :------- | :----------- | --------------------------------------------------------------------- | -------- | ------------------------ |
 | 🟦 | Security contact                | Yes      | URL          | bom.metadata.[supplier,manufacturer,author].contact.email             |          | CRA-AII(2)               |
-| 🟦 | Unique ID, Product ID           | Yes      | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM |
+| 🟦 | Unique Product ID               | Yes      | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM |
 | 🟦 | Purpose, Intended Use           | Yes      | Text         |                                                                       |          | CRA-AII(4)               |
 | 🟦 | SBOM Location                   | No       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |          | CRA-AII(9)               |
 | 🟦 | Licenses                        | Yes      | SPDX License | bom.metadata.licenses[], bom.components[].licenses[]                  | packages[].licenseConcluded, packages[].licenseDeclared |  |
@@ -611,7 +611,7 @@ This role is necessary when...
 | Do | Field name            | Required | Data type | CycloneDX 1.6            | SPDX 2.3               | Required by                        |
 | -- | :-------------------- | :------- | :-------- | ------------------------ | ---------------------- | ---------------------------------- |
 | 🟨 | Version               | Yes      | Text      | bom.components[].version | packages[].versionInfo | NTIA-SBOM, DE-TR.5.2.2             |
-| 🟨 | Unique ID, Product ID | Yes      | PURL      | bom.components[].purl    | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM |
+| 🟨 | Unique Product ID     | Yes      | PURL      | bom.components[].purl    | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM |
 
 > [!WARNING]
 > FIXME – Not done
@@ -641,8 +641,8 @@ Concerns themselves with correct package format and structure, and that package 
 
 | Do | Field name         | Required | Data type | CycloneDX 1.6                           | SPDX 2.3                                           | Required by                        |
 | -- | :----------------- | :------- | :-------- | --------------------------------------- | -------------------------------------------------- | ---------------------------------- |
-| 🟨 | Dependencies       | Yes      | List      | bom.components[], bom.dependencies[]    | relationships[].[spdxElementId,relatedSpdxElement] | CRA-AII(5), NTIA-SBOM              |
-| 🟨 | Download location  | No       | URL       |                                         |                                                    |                                    |
+| 🟥 | Dependencies       | Yes      | List      | bom.components[], bom.dependencies[]    | relationships[].[spdxElementId,relatedSpdxElement] | CRA-AII(5), NTIA-SBOM              |
+| 🟥 | Download location  | No       | URL       |                                         |                                                    |                                    |
 | 🟨 | SBOM Location      | No       | URL       | bom.components.externalReferences[].bom |                                                    | CRA-AII(9)                         |
 
 #### Assembler
@@ -656,8 +656,8 @@ Builds, installs package dependencies and creates container images from a base i
 
 | Do | Field name        | Required | Data type | CycloneDX 1.6                           | SPDX                                               | Required by           |
 | -- | :---------------- | :------- | :-------- | --------------------------------------- | -------------------------------------------------- | --------------------- |
-| 🟨 | Dependencies      | Yes      | List      | bom.components[], bom.dependencies[]    | relationships[].[spdxElementId,relatedSpdxElement] | CRA-AII(5), NTIA-SBOM |
-| 🟨 | Download location | No       | URL       |                                         |                                                    |                       |
+| 🟥 | Dependencies      | Yes      | List      | bom.components[], bom.dependencies[]    | relationships[].[spdxElementId,relatedSpdxElement] | CRA-AII(5), NTIA-SBOM |
+| 🟥 | Download location | No       | URL       |                                         |                                                    |                       |
 | 🟨 | SBOM Location     | No       | URL       | bom.components.externalReferences[].bom |                                                    | CRA-AII(9)            |
 
 #### Deployer
@@ -781,7 +781,7 @@ Communicates any issues or findings to any number of upstream roles, including t
 
 | Do | Field name            | Required | Data type | CycloneDX 1.6         | SPDX 2.3 | Required by           |
 | -- | :-------------------- | :------- | :-------- | --------------------- | -------- | --------------------- |
-| 🟦 | Unique ID, Product ID | Yes      | PURL      | bom.components[].purl | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM |
+| 🟦 | Unique Product ID     | Yes      | PURL      | bom.components[].purl | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM |
 
 
 > [!WARNING]
@@ -813,7 +813,7 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 | Do | Field name                     | Required | Data type | CycloneDX 1.6                                          | SPDX 2.3 | Required by           |
 | -- | :----------------------------- | :------- | :-------- | ------------------------------------------------------ | -------- | --------------------- |
 | 🟦 | Security contact               | Yes      | URL       | bom.components[].externalReferences[].security-contact |          | CRA-AII(2)            |
-| 🟦 | Unique ID, Product ID          | Yes      | PURL      | bom.components[].purl                                  | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM |
+| 🟦 | Unique Product ID              | Yes      | PURL      | bom.components[].purl                                  | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM |
 | 🟦 | Purpose, Intended Use          | Yes      | Text      |                                                        |          | CRA-AII(4)            |
 | 🟦 | SBOM Location                  | No       | URL       |                                                        |          | CRA-AII(9)            |
 | 🟦 | CE Declaration of Conformity   | No       | URL       |                                                        |          | CRA-AII(6), CRA-AV    |

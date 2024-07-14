@@ -156,12 +156,6 @@ stateDiagram-v2
     * A non-authoritative [SBOM Author](#sbom-author)
 
 
-### SBOM Censor
-
-* 🟪 SBOM Censor. (CPANSec-2024)
-    * An [SBOM Author](#sbom-author) that removes or anonymizes sensitive metadata from an SBOM before distribution.
-
-
 ### SBOM Distributor
 
 > [!NOTE]
@@ -194,8 +188,13 @@ stateDiagram-v2
 (Ref: [CISA-2024](#references), [NTIA-2021](#references), [CPANSec-2024](#references))
 
 
-## Supply-chain Ecosystems and Environments
+### SBOM Censor
 
+* 🟪 SBOM Censor. (CPANSec-2024)
+    * An [SBOM Author](#sbom-author) that removes or anonymizes sensitive metadata from an SBOM before distribution.
+
+
+## Supply-chain Ecosystems and Environments
 
 ### An idealized Open Source supply-chain graph (full)
 

@@ -9,10 +9,10 @@ mermaid: true
 ## Document status: ⚠️  DRAFT
 
 > [!CAUTION]
-> What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
+> What you see here is a DRAFT overview by the CPAN Security Group (CPANSec) of the core obligations set out by the EU Cyber Resilience Act, as applied to Open Source ecosystems and supply chains,
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/eu-cra-summary.md](https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/eu-cra-summary.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/cra-summary/docs/eu-cra-summary.md](https://github.com/CPAN-Security/security.metacpan.org/tree/cra-summary/docs/eu-cra-summary.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 
 
@@ -25,34 +25,42 @@ For license information and acknowledgements, see the [end of this document](#li
 
 
 
-## An idealized Open Source supply-chain graph
+## An idealized Open Source Steward Supply-Chain graph
 
 ```mermaid
 stateDiagram-v2
     direction TB
 
-    state "🟦🟥🟨 Maintainer"             as environment_maintainer
-    state "🟩 Collaboration Ecosystem"  as ecosystem_repo
-    state "🟨🟩 Language Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_package
-    state "🟥🟨 Integrator Environment\n🟦🟥🟨 Manufacturer" as environment_integrator
-    state "🟦 Production Environment"   as environment_prod
+    state "🟦🟥🟨 Maintainer" as environment_maintainer
+    state "🟩 Collaboration Ecosystem" as ecosystem_repo
+    state "🟨🟩 Language Ecosystem" as ecosystem_lang
+    state "🟨🟩 Package Ecosystem" as ecosystem_package
+    state "🟦🟥🟨🟩 OSS Steward" as ecosystem_steward
+    state "🟥🟨 Integrator" as environment_integrator
+    state "🟦🟥🟨 Manufacturer" as environment_manufacturer
+    state "🟦 Production Environment" as environment_prod
 
 
     [*] --> environment_maintainer
-    environment_maintainer --> ecosystem_repo
+    ecosystem_repo         --> ecosystem_lang
     environment_maintainer --> ecosystem_lang
+    environment_maintainer --> ecosystem_repo
     ecosystem_repo --> environment_maintainer
-    ecosystem_lang --> ecosystem_package
-    ecosystem_lang --> environment_integrator
-    ecosystem_repo --> ecosystem_lang
     ecosystem_repo --> ecosystem_package
+    ecosystem_lang --> ecosystem_package
+    ecosystem_package --> ecosystem_steward
+    ecosystem_lang --> ecosystem_steward
     ecosystem_repo --> environment_integrator
+    ecosystem_lang --> environment_integrator
     ecosystem_package --> environment_integrator
+    ecosystem_steward --> environment_manufacturer
     environment_integrator --> environment_prod
+    environment_manufacturer --> environment_prod
     environment_prod --> [*]
 
 ```
+
+
 
 
 ## Are you… a Manufacturer, Steward or Author?

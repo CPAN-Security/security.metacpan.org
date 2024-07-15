@@ -18,22 +18,45 @@ mermaid: true
 
 ## About this document
 
+This text attempts to summarize the most important parts of the CRA, for Open Source ecosystems.
 
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
-### TL;DR
 
+### Manufacturers
 
-* FOSS Software may get a voluntary security attestation, as described in [Article 25](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=210)
-  * …using an EU Attestation program as laid out in [Recital (21)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25)
-    * …by requesting a certification from ENISA, as laid out in [Regulation (EU) 2019/881, Article (48)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881#page=8)
-    * …in such a way that this security attestation can be financed
-    * ⚠️  NOTE: The end of Recital (21) seems to be incomplete!
-  * …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties. ([Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163))
+(Art 13 to Art 17, Art 18 for authorised representatives)
+
+* Manufacturers are obliged to exercise due diligence when integrating components from third parties. ([Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163))
   * …after the Manufacturer conducts a risk assessment, as laid out in [Article 13(2)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161)
   * …in accordance with essential requirements laid out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297).
-* Manufacturers are required to report discovered vulnerabilities in components to their maintainers. ([Article 13(6)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164))
+* …must report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=187)), in the way described in [Article 14](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176).
+* …required to report discovered vulnerabilities in components to their maintainers. ([Article 13(6)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164))
 
+
+* …Testing necessary, provide technical documentation, as laid out in [Article 13(6)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164).⚠️
+* …Vulnerability management
+* …perform risk assessments
+* …Coordinated vulnerability disclosure (CVD) policy mandatory
+* …CE Marking: must feature a CE marking to indicate conformity prior to entering the market, keep records for ten years
+
+* …must provide Software Bill of Materials (SBOM) upon request by authorities, but no need for publication
+* …offer support for their products for at least 5 years, security updates for 10 years
+
+### Open Source Stewards
+
+* Open Source Stewards are obliged to
+  * …facilitate the Manufacturer's due diligence obligation set out in [Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163)⚠️
+  * …provide a cybersecurity policy for voluntary reporting of vulnerabilities, as laid out in [Article 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=185)
+  * …cooperate with market surveillance authorities and provide documentation
+  * …report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=187)), in the way described in [Article 14](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176).
+
+* FOSS Software may get a voluntary security attestation, as described in [Article 25](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=210)⚠️
+  * …using an EU Attestation program as laid out in [Recital (21)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25)
+    * …by requesting a certification from ENISA, as laid out in [Regulation (EU) 2019/881, Article (48)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881#page=8)
+    * …in such a way that this security attestation can be initiated or financed by not only FOSS projects, but also by others, including manufacturers, users, or public administrations.
+    * …so this Attestation becomes a "proof of due diligence exercised"? ⚠️  FIXME: (Dis)confirm this.
+  * …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties.
 
 
 ## An idealized Open Source Steward Supply-Chain graph
@@ -42,37 +65,38 @@ For license information and acknowledgements, see the [end of this document](#li
 stateDiagram-v2
     direction TB
 
-    state "🟦🟥🟨 Maintainer" as environment_maintainer
+    state "🟥🟨🟦 Maintainer" as environment_maintainer
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
-    state "🟥 EU Attestation Org" as ecosystem_attester
-    state "🟦🟥🟨🟩 OSS Steward" as ecosystem_steward
+    state "🟥 EU Attestation Authority" as authority_attestation
+    state "🟥🟨🟩🟦 OSS Steward" as ecosystem_steward
     state "🟥🟨 Integrator" as environment_integrator
-    state "🟦🟥🟨 Manufacturer" as environment_manufacturer
+    state "🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
     state "🟦 Production Environment" as environment_prod
+    state "🟦 EU Auditor" as authority_auditor
 
 
-    [*] --> environment_maintainer
-    ecosystem_repo         --> ecosystem_lang
-    environment_maintainer --> ecosystem_lang
-    environment_maintainer --> ecosystem_repo
-    ecosystem_repo --> environment_maintainer
-    ecosystem_repo --> ecosystem_package
-    ecosystem_lang --> ecosystem_package
-    ecosystem_package --> ecosystem_steward
-    ecosystem_lang --> ecosystem_steward
-    ecosystem_repo --> environment_integrator
-    ecosystem_lang --> environment_integrator
-    ecosystem_package --> environment_integrator
-    ecosystem_steward --> environment_manufacturer
-    environment_integrator --> environment_prod
+    [*]                      --> environment_maintainer
+    ecosystem_repo           --> environment_maintainer
+    ecosystem_repo           --> ecosystem_lang
+    environment_maintainer   --> ecosystem_lang
+    environment_maintainer   --> ecosystem_repo
+    ecosystem_repo           --> ecosystem_package
+    ecosystem_lang           --> ecosystem_package
+    ecosystem_package        --> ecosystem_steward
+    ecosystem_lang           --> ecosystem_steward
+    authority_attestation    --> ecosystem_steward
+    ecosystem_repo           --> environment_integrator
+    ecosystem_lang           --> environment_integrator
+    ecosystem_package        --> environment_integrator
+    ecosystem_steward        --> environment_manufacturer
+    environment_integrator   --> environment_prod
     environment_manufacturer --> environment_prod
-    environment_prod --> [*]
+    environment_manufacturer --> authority_auditor
+    environment_prod         --> [*]
 
 ```
-
-
 
 
 ## Are you… a Manufacturer, Steward or Author?

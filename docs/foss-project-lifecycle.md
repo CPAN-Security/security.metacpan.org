@@ -17,6 +17,8 @@
 | DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          |                         |                       | Ecosystem  |
 
 
+(the following seems to only work on gitlab)
+
 ```json:table
 {
   "fields" : [
@@ -241,3 +243,9 @@
 1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (CRA Annex II, point 8)
 1. CE_CONFORMITY_BODY – A URL pointing to the Conformity Assessment Body where this component has been registered (CRA Article 22(4) and Article 58(1))
 1. CE_SUPPORT_END_DATE – The date for when the support for the component expires (Annex II, point 7)
+
+
+```mermaid
+graph TB
+    %% Life-cycle conditions
+```

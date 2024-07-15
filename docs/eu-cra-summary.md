@@ -21,7 +21,18 @@ mermaid: true
 
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
-### Purpose TL;DR
+### TL;DR
+
+
+* FOSS Software may get a voluntary security attestation, as described in [Article 25](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=210)
+  * …using an EU Attestation program as laid out in [Recital (21)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25)
+    * …by requesting a certification from ENISA, as laid out in [Regulation (EU) 2019/881, Article (48)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881#page=8)
+    * …in such a way that this security attestation can be financed
+    * ⚠️  NOTE: The end of Recital (21) seems to be incomplete!
+  * …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties. ([Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163))
+  * …after the Manufacturer conducts a risk assessment, as laid out in [Article 13(2)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161)
+  * …in accordance with essential requirements laid out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297).
+* Manufacturers are required to report discovered vulnerabilities in components to their maintainers. ([Article 13(6)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164))
 
 
 
@@ -35,6 +46,7 @@ stateDiagram-v2
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
+    state "🟥 EU Attestation Org" as ecosystem_attester
     state "🟦🟥🟨🟩 OSS Steward" as ecosystem_steward
     state "🟥🟨 Integrator" as environment_integrator
     state "🟦🟥🟨 Manufacturer" as environment_manufacturer

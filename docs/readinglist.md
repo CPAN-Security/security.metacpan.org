@@ -218,7 +218,7 @@ Annexes are technical materials presented separately from the main text, and hav
 ## License and use of this document
 
 * Version: 0.5.0
-* License: CC-BY-SA-4.0
+* License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.

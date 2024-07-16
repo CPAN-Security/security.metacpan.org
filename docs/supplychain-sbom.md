@@ -18,83 +18,103 @@ mermaid: true
 
 ## About this document
 
-* This document offers an overview of [Open-Source Software](glossary.md#open-source-software) supply chains, as seen from the following perspectives;
-    * Different roles found throughout the supply-chain
-    * The metadata fields these roles typically care about
-    * What ways each role cares about each metadata, including common tasks
-    * What legislation or regulation, if any, that requires a specific metadata field
-    * To which roles metadata is communicated throughout the supply-chain
-* Original motivation for this document comes from the author's frustration with the lack of a clear Open Source perspective brought the author to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
-* Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation, taking incremental steps toward more transparent and accountable Open Source supply-chains.
+This document offers an overview of [Open-Source Software](glossary.md#open-source-software) supply chains, taking into account the following perspectives:
+
+* The different Roles found throughout the supply-chain.
+* Enumerate the metadata fields these Roles typically care about.
+* List the ways each Role operates on the metadata,
+    * 🟥 Create,
+    * 🟨 Assemble,
+    * 🟩 Distribute,
+    * 🟦 Consume, and
+    * 🟪 Censor.
+* Show any relevant legislation, regulation or other rules or guides that require the presence of specific metadata fields.
+* Show how metadata may be communicated along these open source supply-chains.
+
+
+### Motivation
+
+Originally, this document stems from the author's frustration with the lack of a clear Open Source perspective in current SBOM documentation. This brought the author to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
+
+Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation, taking incremental steps toward more transparent and accountable Open Source supply-chains.
 
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
-### Purpose TL;DR
 
-In this document we're trying to identify and expose all places and roles in an Open Source supply chain where someone cares about some metadata (and it's associated code) that someone downstream needs for detecting and mitigating vulnerabilities.
+### TL;DR
+
+* This document identifies and maps out places – in Open Source supply chains:
+    1. Environments,
+    2. Roles, and
+    3. Metadata
+* …Where a Role operates on these data,
+* …So that downstream Roles can:
+    1. Detect and mitigate vulnerabilities,
+    2. Identify second- and third party component projects, so they
+    3. Interact with their upstream communities effectively and sustainably
 
 
-## An idealized Open Source supply-chain graph (simple)
+## A simplified Open Source supply-chain graph
 
 ```mermaid
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 Maintainer" as environment_maintainer
+    state "🟥🟨🟦 Maintainer Environment" as environment_maintainer
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
-    state "🟨🟩 Language Ecosystem\n🟨🟦 OSS Steward" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem\n🟨🟦 OSS Steward" as ecosystem_package
+    state "🟨🟩 Language Ecosystem" as ecosystem_lang
+    state "🟨🟩 Package Ecosystem" as ecosystem_package
+    state "🟥 Attestation Authority" as authority_attestation
+    state "🟥🟨🟩🟦 OSS Steward" as ecosystem_steward
     %%state "🟩 Content Delivery Network" as network_delivery
-    state "🟥🟨 Integrator Environment\n🟥🟨🟦🟪 Manufacturer" as environment_integrator
+    state "🟥🟨 Integrator Environment" as environment_integrator
+    state "🟥🟨🟦🟪 Manufacturer Environment" as environment_manufacturer
     state "🟦 Production Environment" as environment_prod
+    state "🟦 Auditor" as authority_auditor
 
-    [*] --> environment_maintainer
-    environment_maintainer --> ecosystem_repo
-    environment_maintainer --> ecosystem_lang
-    %%environment_maintainer --> network_delivery
-    ecosystem_lang --> ecosystem_package
-    ecosystem_lang --> ecosystem_lang
-    %%ecosystem_lang --> network_delivery
-    ecosystem_lang --> environment_integrator
-    ecosystem_repo --> environment_maintainer
-    ecosystem_repo --> ecosystem_package
-    ecosystem_repo --> environment_integrator
-    ecosystem_package --> ecosystem_package
-    %%ecosystem_package --> network_delivery
-    %%network_delivery --> environment_integrator
-    ecosystem_package --> environment_integrator
-    environment_integrator --> environment_prod
-    environment_prod --> [*]
+    [*]                      --> environment_maintainer
+    ecosystem_repo           --> environment_maintainer
+    %%environment_maintainer   --> network_delivery
+    ecosystem_repo           --> ecosystem_lang
+    environment_maintainer   --> ecosystem_lang
+    ecosystem_lang           --> ecosystem_lang
+    environment_maintainer   --> ecosystem_repo
+    %%ecosystem_lang           --> network_delivery
+    ecosystem_repo           --> ecosystem_package
+    ecosystem_lang           --> ecosystem_package
+    ecosystem_package        --> ecosystem_package
+    %%ecosystem_package        --> network_delivery
+    %%network_delivery         --> environment_integrator
+    ecosystem_package        --> ecosystem_steward
+    ecosystem_lang           --> ecosystem_steward
+    authority_attestation    --> ecosystem_steward
+    ecosystem_repo           --> environment_integrator
+    ecosystem_lang           --> environment_integrator
+    ecosystem_package        --> environment_integrator
+    ecosystem_steward        --> environment_manufacturer
+    environment_integrator   --> environment_prod
+    environment_manufacturer --> environment_prod
+    environment_manufacturer --> authority_auditor
+    environment_prod         --> [*]
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
 
-## The relation between Supply-chain Roles and SBOM Roles
+## Metadata Operations
 
-* Any single person working within a supply-chain may have one or more roles, and switch between them as needed.
-* Each supply-chain role described in this document _MAY_ care about some specific SBOM metadata and their accompanying artifacts.
-* Each SBOM role described in this document _MUST_ also have a supply-chain role.
-* If a supply-chain role cares about some SBOM metadata, they have one or more of the following SBOM roles.
-    * When a Supply-chain Role creates or updates an SBOM, we call them an [SBOM Author](glossary#sbom-author--role-).
-    * When a Supply-chain Role distributes an SBOM, we call them an [SBOM Distributor](glossary#sbom-distributor--role-).
-    * When a Supply-chain Role consumes an SBOM, we call them an [SBOM Consumer](glossary#sbom-consumer--role-)
-
-
-## SBOM (Metadata) Roles and Operations
-
-Let's distinguish between roles that are focused on metadata operations from roles that are involved in a supply-chain activity.
+Let's distinguish between roles that are focused on _metadata operations_ from actors that are involved in a supply-chain activity.
 We're assuming that metadata is stored in SBOMs.
 For further reading, please see CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)).
 In this document, we distinguish between SBOM Authors that are _Authoritative_ sources for one or more fields, from _Non-authoritative_ SBOM Authors, SBOM Distributors and SBOM Consumers.
 We color-code these roles to help show what the expected SBOM activities any Supply-chain Role may perform.
 
-* 🟥 Create, define, sign SBOM metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
-* 🟨 Assemble, update, refine, maintain, attest, annotate SBOM metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
-* 🟩 Distribute, curate, index SBOM metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
-* 🟦 Consume, aggregate, verify, validate, survey, analyze or report SBOM metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
-* 🟪 Censor, redact, delete, anonymize SBOM metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
+* 🟥 SBOM Author (Authoritative) – Creates, defines, signs metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
+* 🟨 SBOM Author (Non-authoritative) – Assembles, updates, refines, maintains, attests, annotates metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
+* 🟩 SBOM Distributor – Distributes, curates, indexes metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
+* 🟦 SBOM Consumer – Consumes, aggregates, verifies, validates, surveys, analyzes or reports metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
+* 🟪 SBOM Censor – Censors, redacts, deletes, anonymizes metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
 
 
 ```mermaid
@@ -125,74 +145,6 @@ stateDiagram-v2
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
-
-
-### SBOM Author
-
-> [!NOTE]
-> FIXME – Check if this is sane.
-
-* Creates an SBOM. (CISA-2024)
-* 🟥 SBOM Author (Authoritative). (CPANSec-2024)
-    * An authoritative source of an SBOM, or an SBOM metadata field.
-    * See also [SBOM Author](glossary#sbom-author--role-) in the glossary.
-* SBOM Authors create, define or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_. (CPANSec-2024)
-    * This mostly means authoritative metadata fields as laid out in the different [Supply-chain Roles](#supply-chain-roles-and-metadata) below.
-    * In addition to fields encountered throughout the supply-chain, they care about the fields listed in the table below.
-    * They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
-* SBOM Authors who are not authoritative sources, but instead gather SBOM metadata from different dependencies, may be referred to as an [SBOM Assembler](glossary#sbom-assembler--role-). (CPANSec-2024)
-* SBOM Authors may also collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_. (CPANSec-2024)
-    * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
-* An SBOM Author who is tasked with removing (censoring) sensitive information from SBOM documents may be called [SBOM Censor](glossary#sbom-censor--role-)
-* Creates an SBOM. (CISA-2024)
-    * This document assumes that each SBOM created is available for sharing.
-
-(Ref: [CISA-2024](#references), [NTIA-2021](#references), [CPANSec-2024](#references))
-
-
-### SBOM Assembler
-
-* 🟨 SBOM Author (Non-authoritative). (CPANSec-2024)
-    * A non-authoritative [SBOM Author](#sbom-author)
-
-
-### SBOM Distributor
-
-> [!NOTE]
-> FIXME – Check if this is sane.
-
-* 🟩 SBOM Distributor. (CPANSec-2024)
-    * SBOM Distributor roles distribute, curate, or index SBOM metadata — _They make sure the metadata and related artifacts are made **Available** to others_.
-    * They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
-* Receives SBOMs for the purpose of sharing them with SBOM Consumers or other Distributors. (CISA-2024)
-* Additionally, an SBOM Distributor may care about the following activities. (CISA-2023)
-    * Discovery: Mechanism used by the consumer to know the SBOM exists and how to access it.
-    * Access: Access control mechanisms used by the author or provider to regulate who can view or use an SBOM.
-    * Transport: Mechanism provided by the author or distributor to transfer an SBOM.  Also, the action of the consumer receiving an SBOM.
-
-(Ref: [CISA-2023](#references), [CISA-2024](#references), [CPANSec-2024](#references))
-
-
-### SBOM Consumer
-
-> [!NOTE]
-> FIXME – Check if this is sane.
-
-* 🟦 SBOM Consumer. (CPANSec-2024)
-    * SBOM Consumer roles gather, inspect, analyze, aggregate or verify SBOM metadata — _They make sure metadata and related artifacts are **Useful**, **Complete**, **Correct** or **Compliant**_.
-    * They don't have any specific metadata fields that are commonly used across the different supply-chain Consumer roles.
-* They may view SBOM files to understand the contents, and use this information to support decision making & business processes, or to compare and contrast SBOMs to discover significant changes or vulnerabilities. (NTIA-2021, "Consume" category)
-* Receives the transferred SBOM. (CISA-2024)
-    * This could include roles such as third parties, authors, integrators, and end users.
-
-(Ref: [CISA-2024](#references), [NTIA-2021](#references), [CPANSec-2024](#references))
-
-
-### SBOM Censor
-
-* 🟪 SBOM Censor. (CPANSec-2024)
-    * An [SBOM Author](#sbom-author) that removes or anonymizes sensitive metadata from an SBOM before distribution.
-
 
 ## Supply-chain Ecosystems and Environments
 

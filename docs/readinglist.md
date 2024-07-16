@@ -94,8 +94,8 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 [Directive 2022/2555, Network and Information Security Directive 2](https://eur-lex.europa.eu/eli/dir/2022/2555) (NIS2)
 
-* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 * In the [NIS2 Recitals](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=12)
+    * Recital (52): On Open-source cybersecurity tools (page 11)
     * Recital (58): On the handling of discovered vulnerabilities (page 12)
     * Recital (62): Access to correct and timely information about vulnerabilities (page 13)
     * Recital (85): On supply-chain risk management (page 17)
@@ -107,6 +107,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Article 7, point 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
     * Articles 21, points 1, 2 and 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
+* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 
 ### EU and EEA – CRA
 

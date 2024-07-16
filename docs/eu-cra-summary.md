@@ -65,25 +65,31 @@ For license information and acknowledgements, see the [end of this document](#li
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 Maintainer" as environment_maintainer
+    state "🟥🟨🟦 Maintainer Environment" as environment_maintainer
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
-    state "🟥 EU Attestation Authority" as authority_attestation
+    state "🟥 Attestation Authority" as authority_attestation
     state "🟥🟨🟩🟦 OSS Steward" as ecosystem_steward
-    state "🟥🟨 Integrator" as environment_integrator
-    state "🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
+    %%state "🟩 Content Delivery Network" as network_delivery
+    state "🟥🟨 Integrator Environment" as environment_integrator
+    state "🟥🟨🟦🟪 Manufacturer Environment" as environment_manufacturer
     state "🟦 Production Environment" as environment_prod
-    state "🟦 EU Auditor" as authority_auditor
-
+    state "🟦 Auditor" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
+    %%environment_maintainer   --> network_delivery
     ecosystem_repo           --> ecosystem_lang
     environment_maintainer   --> ecosystem_lang
+    ecosystem_lang           --> ecosystem_lang
     environment_maintainer   --> ecosystem_repo
+    %%ecosystem_lang           --> network_delivery
     ecosystem_repo           --> ecosystem_package
     ecosystem_lang           --> ecosystem_package
+    ecosystem_package        --> ecosystem_package
+    %%ecosystem_package        --> network_delivery
+    %%network_delivery         --> environment_integrator
     ecosystem_package        --> ecosystem_steward
     ecosystem_lang           --> ecosystem_steward
     authority_attestation    --> ecosystem_steward
@@ -96,6 +102,8 @@ stateDiagram-v2
     environment_manufacturer --> authority_auditor
     environment_prod         --> [*]
 
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
 

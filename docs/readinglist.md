@@ -94,8 +94,8 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 [Directive 2022/2555, Network and Information Security Directive 2](https://eur-lex.europa.eu/eli/dir/2022/2555) (NIS2)
 
-* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 * In the [NIS2 Recitals](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=12)
+    * Recital (52): On Open-source cybersecurity tools (page 11)
     * Recital (58): On the handling of discovered vulnerabilities (page 12)
     * Recital (62): Access to correct and timely information about vulnerabilities (page 13)
     * Recital (85): On supply-chain risk management (page 17)
@@ -107,6 +107,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Article 7, point 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
     * Articles 21, points 1, 2 and 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
+* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 
 ### EU and EEA – CRA
 
@@ -114,9 +115,11 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-european-cyber-resilience-act)
 
+
 #### CRA Recitals
 
-[CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11)
+[CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11) are for explaining the background and context for the regulation. The ordering is the same as the Articles. These are for interpretation, and not legally binding.
+
 * Recital (10): CRA relevance for supply chains (page 11)
 * Recitals (16-17): CRA relevance for Open Source projects (page 18-19)
 * Recital (**18**): Open Source Software Contributors (page 20)
@@ -137,12 +140,14 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Recital (64): Point of contact (page 73)
 * Recital (65): Secure by default (page 73)
 
-#### CRA Chapters
 
-[CRA Chapters](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136)
+#### CRA Articles
 
-* Chapter I, Article 3: Definitions (pages 136-146)
-* Chapter I, Article 9, Point 1. (b-c): Stakeholder consultation (pages 155-156)
+[CRA Articles](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136) are legally binding, and describes the scope, definitions and law.
+
+* Chapter I
+    * Article 3, Definitions (pages 136-146)
+    * Article 9, Point 1. (b-c), Stakeholder consultation (pages 155-156)
 * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
     * **Article 13**, Obligations of Manufacturers (pages 161-175)
         * **Section 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
@@ -160,7 +165,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Chapter II – Obligations of open-source software stewards
     * **Article 24**, Obligations of open-source software stewards (pages 208-209)
     * **Article 25**, Security attestation of free and open-source software (page 210)
-    * Article 26, Guidance (pages 211-212)
+    * **Article 26**, Guidance (pages 211-212)
 * Chapter III — Conformity of the product with digital elements
     * Article 28, EU declaration of conformity (pages 218-219)
     * Article 29, General principles of the CE marking (page 219)
@@ -168,7 +173,10 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Chapter V — Market Surveillance and Enforcement
     * **Article 58**, Formal non-compliance (pages 276)
 
+
 #### CRA Annexes
+
+Annexes are technical materials presented separately from the main text, and have the same value as the Articles (they are legally binding).
 
 * [CRA Annex I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
     * Essential Cybersecurity Requirements (pages 297-302)
@@ -178,6 +186,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Information and Instructions to the User (pages 303-305)
 * [CRA, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314)
     * Requirements to Technical Documentation content (pages 314-316)
+
 
 #### Other useful resources
 
@@ -209,7 +218,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 ## License and use of this document
 
 * Version: 0.5.0
-* License: CC-BY-SA-4.0
+* License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.

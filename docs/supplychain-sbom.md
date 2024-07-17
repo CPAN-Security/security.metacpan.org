@@ -113,7 +113,7 @@ stateDiagram-v2
 
     %%
     %%state "🟦 Importer" as maintainer_importer
-    state "🟥 Owner" as maintainer_owner
+    state "🟥 Owner (Supplier)" as maintainer_owner
     state "🟥🟨 Maintainer, Author\n🟨 Custodian" as maintainer_author
     state "🟨🟦 Packager" as language_packager
 
@@ -138,7 +138,7 @@ stateDiagram-v2
     state "🟩 Distributor" as package_distributor
 
     %%state "🟦 Importer" as integrator_importer
-    state "🟥 Supplier, Manufacturer" as integrator_owner
+    state "🟥 Manufacturer (Supplier)" as integrator_owner
     state "🟥🟨🟦 Integrator, Developer" as integrator_developer
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as integrator_builder
     state "🟨🟩🟪 SBOM Censor" as integrator_censor
@@ -815,8 +815,8 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
     * Model/plugin: Built, Not deployed, Is data, No execution environment (FIXME: unsure)
     * Image/container: Built, Deployed, Is object, Has execution environment
 7. Enumerate the different dependencies
-    * Stages; Author/develop, configure, build, test, install/deploy, packaging, containerization, post-deploy (plugin/dynamic), runtime.
-    * States; resolved, required/unresolved, embedded
+    * Stages; Author/develop, configure, build, test, install/deploy, packaging, container assembly, post-deploy (plugin/dynamic), runtime.
+    * States; resolved, required/unresolved, embedded/included
     * Types; component, patch, system resource, environment, ecosystem, service
     * Descriptions; cross-ecosystem vs. in-ecosystem, up-river vs. down-river (within language ecosystem), upstream vs. downstream (outside language ecosystem), reverse, assumed/implied vs. stated/explicit
 8. Clearer distinction between Builder, Deployer, Packager, Assembler, Integrator

@@ -74,7 +74,7 @@ This document offers an overview of [Open-Source Software](glossary#open-source-
 * Enumerate the metadata fields these Roles typically care about.
 * List the ways each Role may operate on any given metadata field,
     * 🟥 Create,
-    * 🟨 Assemble,
+    * 🟨 Assemble or Update,
     * 🟩 Distribute,
     * 🟦 Consume, and
     * 🟪 Censor
@@ -160,7 +160,7 @@ stateDiagram-v2
 
     %%
     classDef createsSBOM stroke:red,stroke-width:3px;
-    classDef updatesSBOM stroke:yellow,stroke-width:3px;
+    classDef updatesSBOM stroke:yellow,stroke-width:3px,stroke-dasharray:15,5;
     classDef assemblesSBOM stroke:yellow,stroke-width:3px;
     classDef distributesSBOM stroke:green,stroke-width:3px;
     classDef verifiesSBOM stroke:#07f,stroke-width:3px;
@@ -297,7 +297,7 @@ stateDiagram-v2
         [*] --> prod_deployer
     }
 
-    prod_deployer --> authority_auditor
+    prod_deployer        --> authority_auditor
     integrator_builder   --> environment_prod
     integrator_developer --> environment_prod
     integrator_publisher --> authority_auditor

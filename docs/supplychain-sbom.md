@@ -129,17 +129,17 @@ stateDiagram-v2
     state "🟪 SBOM Censor" as sbom_censor
 
     [*]              --> sbom_author
-    sbom_distributor --> sbom_author
     sbom_distributor --> sbom_assembler
+    sbom_distributor --> sbom_author
     sbom_author      --> sbom_assembler
     sbom_assembler   --> sbom_censor
     sbom_author      --> sbom_censor
-    sbom_author      --> sbom_distributor
     sbom_assembler   --> sbom_distributor
     sbom_censor      --> sbom_distributor
-    sbom_author      --> sbom_consumer
+    sbom_author      --> sbom_distributor
     sbom_assembler   --> sbom_consumer
     sbom_distributor --> sbom_consumer
+    sbom_author      --> sbom_consumer
     sbom_consumer    --> [*]
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
@@ -157,32 +157,43 @@ stateDiagram-v2
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %%
-    %%state "🟦 Importer" as author_importer
-    state "🟥 Supplier, Owner" as author_owner
-    state "🟨🟥 Maintainer, Author\n🟨 Custodian" as author_maintainer
-    state "🟩 Distributor" as repository_distributor
+    %%state "🟦 Importer" as maintainer_importer
+    state "🟥 Owner" as maintainer_owner
+    state "🟥🟨 Maintainer, Author\n🟨 Custodian" as maintainer_author
+    state "🟨🟦 Packager" as language_packager
+
+    %%
+    state "🟥 Attestation Authority" as authority_attester
+
     %%state "🟦 Importer" as language_importer
-    state "🟦🟨 Packager" as language_packager
-    state "🟦🟨 OSS Steward" as language_steward
+    state "🟨 Authenticator" as language_authenticator
+    state "🟥🟨🟦 OSS Steward" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Distributor" as language_distributor
+
+    %%
+    state "🟩 Distributor" as repository_distributor
     state "🟦 Contributor" as external_contributor
+
     %%state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
-    state "🟦🟨 OSS Steward" as package_steward
+    state "🟥🟨🟦 OSS Steward" as package_steward
     state "🟨 Curator" as package_curator
     state "🟩 Distributor" as package_distributor
+
     %%state "🟦 Importer" as integrator_importer
-    state "🟥 Supplier, Manufacturer, Owner" as integrator_owner
-    state "🟦🟨🟥 Integrator, Developer" as integrator_developer
-    state "🟩🟨🟪 SBOM Censor" as integrator_censor
-    state "🟩 Publisher" as integrator_publisher
+    state "🟥 Supplier, Manufacturer" as integrator_owner
+    state "🟥🟨🟦 Integrator, Developer" as integrator_developer
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as integrator_builder
-    state "🟨 Deployer" as prod_deployer
-    state "🟦 Consumer\nUser" as external_consumer
+    state "🟨🟩🟪 SBOM Censor" as integrator_censor
+    state "🟩 Publisher" as integrator_publisher
     state "🟦 Analyst\n🟦 Auditor" as integrator_analyst
-    state "🟦 Auditor" as external_auditor
+
+    %%
+    state "🟨 Deployer" as prod_deployer
+    state "🟦 Consumer" as external_consumer
+    state "🟦 Auditor" as authority_auditor
 
     %% 
     classDef createsSBOM stroke:red,stroke-width:3px;
@@ -194,21 +205,28 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %% 
-    %%class author_importer verifiesSBOM
-    class author_owner createsSBOM
-    class author_maintainer assemblesSBOM
+    %%class maintainer_importer verifiesSBOM
+    class maintainer_owner createsSBOM
+    class maintainer_author createsSBOM
+
+    %%
     class repository_distributor distributesSBOM
+    class external_contributor verifiesSBOM
+
     %%class language_importer verifiesSBOM
+    class language_authenticator updatesSBOM
     class language_packager assemblesSBOM
-    class language_steward updatesSBOM
+    class language_steward createsSBOM
     class language_curator distributesSBOM
     class language_distributor distributesSBOM
+
     %%class package_importer verifiesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
-    class package_steward updatesSBOM
+    class package_steward createsSBOM
     class package_curator distributesSBOM
     class package_distributor distributesSBOM
+
     %%class integrator_importer verifiesSBOM
     class integrator_owner createsSBOM
     class integrator_developer assemblesSBOM
@@ -216,31 +234,38 @@ stateDiagram-v2
     class integrator_publisher distributesSBOM
     class integrator_builder assemblesSBOM
     class integrator_analyst verifiesSBOM
+
+    %%
     class prod_deployer assemblesSBOM
-    class external_auditor verifiesSBOM
-    class external_contributor verifiesSBOM
     class external_consumer ignoresSBOM
 
-    state "Author Environment" as environment_maintainer {
-        %%[*] --> author_importer
-        [*] --> author_maintainer
-        %%author_importer   --> author_maintainer
-        author_owner      --> author_maintainer
-        author_maintainer --> language_packager
+    %%
+    class authority_attester createsSBOM
+    class authority_auditor verifiesSBOM
+
+
+    %%
+    state "Maintainer Environment" as environment_maintainer {
+        [*] --> maintainer_author
+        %%[*] --> maintainer_importer
+        %%maintainer_importer   --> maintainer_author
+        maintainer_owner      --> maintainer_author
+        maintainer_author --> language_packager
     }
 
     [*] --> environment_maintainer
 
     state "Language Ecosystem" as ecosystem_lang {
+        [*] --> language_authenticator
         %%[*] --> language_importer
-        [*] --> language_steward
-        [*] --> language_curator
-        [*] --> language_distributor
+        language_authenticator --> language_distributor
+        language_authenticator --> language_steward
+        language_authenticator --> language_curator
         %%language_importer --> language_distributor
         %%language_importer --> language_curator
-        language_steward --> language_curator
-        language_steward --> language_distributor
         language_curator --> language_distributor
+        language_steward --> language_distributor
+        language_steward --> language_curator
     }
 
     language_packager --> ecosystem_lang
@@ -250,11 +275,11 @@ stateDiagram-v2
         [*] --> repository_distributor
     }
 
-    author_maintainer --> ecosystem_repo
-    ecosystem_repo    --> author_maintainer
-
     repository_distributor --> external_contributor
     external_contributor   --> repository_distributor
+
+    maintainer_author --> ecosystem_repo
+    ecosystem_repo    --> maintainer_author
 
     state "Package Ecosystem" as ecosystem_package {
         %%[*] --> package_importer
@@ -263,17 +288,21 @@ stateDiagram-v2
         %%package_importer --> package_patcher
         %%package_importer --> package_packager
         package_patcher  --> package_packager
-        package_packager --> package_curator
-        package_steward  --> package_distributor
         package_steward  --> package_curator
-        package_packager --> package_steward 
         package_packager --> package_distributor
+        package_steward  --> package_distributor
+        package_packager --> package_curator
+        package_packager --> package_steward 
         package_curator  --> package_distributor
     }
 
     repository_distributor --> ecosystem_package
     language_distributor   --> ecosystem_package
     ecosystem_package      --> ecosystem_package
+
+
+    authority_attester --> language_steward
+    authority_attester --> package_steward
 
     state "Integrator Environment" as environment_integrator {
         %%[*] --> integrator_importer
@@ -283,8 +312,8 @@ stateDiagram-v2
         integrator_builder   --> integrator_censor
         integrator_builder   --> integrator_publisher
         integrator_builder   --> integrator_analyst
-        integrator_analyst   --> integrator_developer
         integrator_developer --> integrator_builder
+        integrator_analyst   --> integrator_developer
     }
 
     repository_distributor --> environment_integrator
@@ -295,14 +324,15 @@ stateDiagram-v2
         [*] --> prod_deployer
     }
 
-    integrator_publisher --> external_auditor
-    integrator_developer --> environment_prod 
-    integrator_builder   --> environment_prod 
+    authority_auditor    --> [*]
+    %%external_consumer    --> [*]
+    integrator_publisher --> authority_auditor
     integrator_publisher --> environment_prod 
+    integrator_builder   --> environment_prod 
+    integrator_developer --> environment_prod 
     integrator_censor    --> external_consumer
-    integrator_publisher --> [*]
-    integrator_censor    --> [*]
 
+    %%
     prod_deployer --> external_consumer
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
@@ -822,7 +852,7 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 
 ## License and use of this document
 
-* Version: 0.5.1
+* Version: 0.6.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

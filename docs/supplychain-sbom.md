@@ -16,7 +16,7 @@ mermaid: true
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 
 
-## A simplified Open Source supply-chain graph
+## A Simplified Open Source Supply-chain Graph
 
 ```mermaid
 stateDiagram-v2
@@ -28,7 +28,7 @@ stateDiagram-v2
     state "🟨🟩 Package Ecosystem" as ecosystem_package
     state "🟥 Attestation Authority" as authority_attestation
     state "🟥🟨🟩🟦 OSS Steward" as ecosystem_steward
-    %%state "🟩 Content Delivery Network" as network_delivery
+    %%state "🟩 Delivery Network" as network_distributor
     state "🟥🟨 Integrator Environment" as environment_integrator
     state "🟥🟨🟦🟪 Manufacturer Environment" as environment_manufacturer
     state "🟦 Production Environment" as environment_prod
@@ -36,28 +36,30 @@ stateDiagram-v2
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
-    %%environment_maintainer   --> network_delivery
-    ecosystem_repo           --> ecosystem_lang
+    environment_maintainer   --> ecosystem_repo
     environment_maintainer   --> ecosystem_lang
     ecosystem_lang           --> ecosystem_lang
-    environment_maintainer   --> ecosystem_repo
-    %%ecosystem_lang           --> network_delivery
-    ecosystem_repo           --> ecosystem_package
+    ecosystem_repo           --> ecosystem_lang
+    %%environment_maintainer   --> network_distributor
+    %%ecosystem_lang           --> network_distributor
+    %%ecosystem_package        --> network_distributor
     ecosystem_lang           --> ecosystem_package
+    ecosystem_repo           --> ecosystem_package
     ecosystem_package        --> ecosystem_package
-    %%ecosystem_package        --> network_delivery
-    %%network_delivery         --> environment_integrator
     ecosystem_package        --> ecosystem_steward
     ecosystem_lang           --> ecosystem_steward
     authority_attestation    --> ecosystem_steward
     ecosystem_repo           --> environment_integrator
     ecosystem_lang           --> environment_integrator
+    %%network_distributor      --> environment_integrator
     ecosystem_package        --> environment_integrator
+    %%network_distributor      --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
     environment_integrator   --> environment_prod
     environment_manufacturer --> environment_prod
+    environment_prod         --> authority_auditor
     environment_manufacturer --> authority_auditor
-    environment_prod         --> [*]
+    authority_auditor        --> [*]
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licenced CC-BY-SA-4.0
@@ -66,7 +68,7 @@ stateDiagram-v2
 
 ## About this document
 
-This document offers an overview of [Open-Source Software](glossary.md#open-source-software) supply chains, taking into account the following perspectives:
+This document offers an overview of [Open-Source Software](glossary#open-source-software) supply chains, taking into account the following perspectives:
 
 * The different Roles found throughout the supply-chain.
 * Enumerate the metadata fields these Roles typically care about.
@@ -120,6 +122,7 @@ stateDiagram-v2
     %%
     state "🟥 Attestation Authority" as authority_attester
 
+    %%
     %%state "🟦 Importer" as language_importer
     state "🟨 Authenticator" as language_authenticator
     state "🟥🟨🟦 OSS Steward" as language_steward
@@ -130,6 +133,10 @@ stateDiagram-v2
     state "🟩 Distributor" as repository_distributor
     state "🟦 Contributor" as external_contributor
 
+    %%
+    %%state "🟩 Delivery Network" as network_distributor
+
+    %%
     %%state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
@@ -137,6 +144,7 @@ stateDiagram-v2
     state "🟨 Curator" as package_curator
     state "🟩 Distributor" as package_distributor
 
+    %%
     %%state "🟦 Importer" as integrator_importer
     state "🟥 Manufacturer (Supplier)" as integrator_owner
     state "🟥🟨🟦 Integrator, Developer" as integrator_developer
@@ -150,7 +158,7 @@ stateDiagram-v2
     state "🟦 Consumer" as external_consumer
     state "🟦 Auditor" as authority_auditor
 
-    %% 
+    %%
     classDef createsSBOM stroke:red,stroke-width:3px;
     classDef updatesSBOM stroke:yellow,stroke-width:3px;
     classDef assemblesSBOM stroke:yellow,stroke-width:3px;
@@ -159,7 +167,7 @@ stateDiagram-v2
     classDef censorsSBOM stroke:#07f,stroke-width:3px;
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
-    %% 
+    %%
     %%class maintainer_importer verifiesSBOM
     class maintainer_owner createsSBOM
     class maintainer_author createsSBOM
@@ -168,12 +176,16 @@ stateDiagram-v2
     class repository_distributor distributesSBOM
     class external_contributor ignoresSBOM
 
+    %%
     %%class language_importer verifiesSBOM
     class language_authenticator updatesSBOM
     class language_packager assemblesSBOM
     class language_steward createsSBOM
     class language_curator updatesSBOM
     class language_distributor distributesSBOM
+
+    %%
+    %%class network_distributor ignoresSBOM
 
     %%class package_importer verifiesSBOM
     class package_patcher updatesSBOM
@@ -182,6 +194,7 @@ stateDiagram-v2
     class package_curator updatesSBOM
     class package_distributor distributesSBOM
 
+    %%
     %%class integrator_importer verifiesSBOM
     class integrator_owner createsSBOM
     class integrator_developer assemblesSBOM
@@ -210,6 +223,7 @@ stateDiagram-v2
 
     [*] --> environment_maintainer
 
+    %%
     state "Language Ecosystem" as ecosystem_lang {
         %%[*] --> language_importer
         [*] --> language_authenticator
@@ -230,11 +244,15 @@ stateDiagram-v2
         [*] --> repository_distributor
     }
 
-    repository_distributor --> external_contributor
-    external_contributor   --> repository_distributor
-
-    maintainer_author --> ecosystem_repo
     ecosystem_repo    --> maintainer_author
+    maintainer_author --> ecosystem_repo
+
+    %%maintainer_author    --> network_distributor
+    %%language_distributor --> network_distributor
+    %%network_distributor  --> environment_integrator
+
+    external_contributor   --> repository_distributor
+    repository_distributor --> external_contributor
 
     state "Package Ecosystem" as ecosystem_package {
         %%[*] --> package_importer
@@ -248,7 +266,7 @@ stateDiagram-v2
         package_packager --> package_distributor
         package_curator  --> package_distributor
         package_steward  --> package_distributor
-        package_packager --> package_steward 
+        package_packager --> package_steward
     }
 
     repository_distributor --> ecosystem_package
@@ -280,10 +298,10 @@ stateDiagram-v2
     }
 
     prod_deployer --> authority_auditor
-    integrator_builder   --> environment_prod 
-    integrator_developer --> environment_prod 
+    integrator_builder   --> environment_prod
+    integrator_developer --> environment_prod
     integrator_publisher --> authority_auditor
-    integrator_publisher --> environment_prod 
+    integrator_publisher --> environment_prod
     integrator_censor    --> external_consumer
     %%external_consumer    --> [*]
     authority_auditor    --> [*]
@@ -520,7 +538,7 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 > [!NOTE]
 > * Possible synonym for [Custodian](#custodian).
 > * Steward has a specific defined meaning in the EU Cyber Resilience Act, so it's better to avoid using the term in this manner.
-> * See also [Open Source Software Steward](#open-source-software-steward) 
+> * See also [Open Source Software Steward](#open-source-software-steward)
 
 #### Author
 
@@ -811,9 +829,9 @@ Verifies that all necessary metadata is available, up-to-date and made use of.
 3. Add graph/description on build steps, to illustrate how different SBOM files may be found, sourced, generated, assembled, installed and shared for later verification or analysis.
 6. Enumerate what distinguishes the different environments
     * Language: Not built, not deployed, Is source code, No execution environment
-    * Distro/package: Built, Deployed, Is object, No execution environment
+    * Distro/package: Built, Deployed, Is object code, No execution environment
     * Model/plugin: Built, Not deployed, Is data, No execution environment (FIXME: unsure)
-    * Image/container: Built, Deployed, Is object, Has execution environment
+    * Image/container: Built, Deployed, Is object code, Has execution environment
 7. Enumerate the different dependencies
     * Stages; Author/develop, configure, build, test, install/deploy, packaging, container assembly, post-deploy (plugin/dynamic), runtime.
     * States; resolved, required/unresolved, embedded/included

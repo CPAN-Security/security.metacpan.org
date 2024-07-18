@@ -65,6 +65,10 @@ stateDiagram-v2
     %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
+> [!NOTE]
+> The graph above does *not* include _Content Delivery Networks_, _Model Ecosystems_ and _Plugin Ecosystems_.
+> If you know of other parts of an Open Source Supply-chain that involves the managing of metadata somehow, then please reach out!
+
 
 ## About this document
 
@@ -130,7 +134,7 @@ stateDiagram-v2
     state "🟩 Distributor" as language_distributor
 
     %%
-    state "🟩 Distributor" as repository_distributor
+    state "🟩 Depositary" as repository_distributor
     state "🟦 Contributor" as external_contributor
 
     %%
@@ -499,11 +503,10 @@ An author or developer of an Open Source component project.
 | 🟥 | Unique Product ID              | Yes      | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM, CRA-AV |
 | 🟥 | Purpose, Intended Use          | Yes      | Text         | bom.components[].description                                          | packages[].comment                                      | CRA-AII(4)                                 |
 | 🟨 | Licenses                       | Yes      | SPDX License | bom.components[].licenses[]                                           | packages[].licenseConcluded, packages[].licenseDeclared |                                            |
-| 🟥 | Public Code Repository         | Yes      |              | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |  |
+| 🟥 | Code Repository                | Yes      |              | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |  |
 | 🟥 | Intended for Commercial Use    | No       | Boolean      |                                                                       |                                                         | CRA-Rec-15                                 |
 | 🟥 | Open-Source Software Steward   | No       | URL          |                                                                       |                                                         | CRA                                        |
 | 🟥 | Code Commit Revision           | No       |              |                                                                       |                                                         |                                            |
-| 🟨 | Code Repository                | Yes      |              | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |  |
 | 🟨 | Supplier Name (Maintainer)     | Yes      | Text, URL    | bom.components[].supplier                                             | creationInfo.creators[]                                 | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |
 | 🟨 | SBOM Location                  | No       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |                                                         | CRA-AII(9)                                 |
 | 🟨 | SBOM Type                      | FIXME    |              |                                                                       |                                                         |                                            |
@@ -691,6 +694,19 @@ Concerns themselves with both the stability and predictability of components, an
 
 > [!WARNING]
 > FIXME – Not done
+
+
+### Depositary
+
+Operates within a [Collaboration Ecosystem](#collaboration-ecosystem).
+Ensures the integrity and availability of the public source code repository.
+Facilitates collaboration through the hosting of the server components used by git, bzr or similar tooling.
+May assist in updating some SBOM metadata fields.
+
+* See also [Distributor](#distributor)
+
+> [!NOTE]
+> * (CPANSec-2024) Proposed role name.
 
 
 ### Distributor

@@ -26,13 +26,13 @@ stateDiagram-v2
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
-    state "🟥 Attestation Authority" as authority_attestation
-    state "🟥🟨🟩🟦 OSS Steward" as ecosystem_steward
+    state "🟥 Attestation Authority 🆕" as authority_attestation
+    state "🟥🟨🟩🟦 OSS Steward 🆕" as ecosystem_steward
     %%state "🟩 Delivery Network" as network_distributor
     state "🟥🟨 Integrator Environment" as environment_integrator
-    state "🟥🟨🟦🟪 Manufacturer Environment" as environment_manufacturer
+    state "🟥🟨🟦🟪 Manufacturer Environment 🆕" as environment_manufacturer
     state "🟦 Production Environment" as environment_prod
-    state "🟦 Auditor" as authority_auditor
+    state "🟦 Auditor 🆕" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
@@ -124,12 +124,12 @@ stateDiagram-v2
     state "🟨🟦 Packager" as language_packager
 
     %%
-    state "🟥 Attestation Authority" as authority_attester
+    state "🟥 Attestation Authority 🆕" as authority_attester
 
     %%
     %%state "🟦 Importer" as language_importer
     state "🟨 Authenticator" as language_authenticator
-    state "🟥🟨🟦 OSS Steward" as language_steward
+    state "🟥🟨🟦 OSS Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Distributor" as language_distributor
 
@@ -144,13 +144,13 @@ stateDiagram-v2
     %%state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
-    state "🟥🟨🟦 OSS Steward" as package_steward
+    state "🟥🟨🟦 OSS Steward 🆕" as package_steward
     state "🟨 Curator" as package_curator
     state "🟩 Distributor" as package_distributor
 
     %%
     %%state "🟦 Importer" as integrator_importer
-    state "🟥 Manufacturer (Supplier)" as integrator_owner
+    state "🟥 Manufacturer (Supplier) 🆕" as integrator_owner
     state "🟥🟨🟦 Integrator, Developer" as integrator_developer
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as integrator_builder
     state "🟨🟩🟪 SBOM Censor" as integrator_censor
@@ -160,7 +160,7 @@ stateDiagram-v2
     %%
     state "🟨 Deployer" as prod_deployer
     state "🟦 Consumer" as external_consumer
-    state "🟦 Auditor" as authority_auditor
+    state "🟦 Auditor 🆕" as authority_auditor
 
     %%
     classDef createsSBOM stroke:red,stroke-width:3px;
@@ -469,7 +469,7 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 | 🟥 | CE Conformity Assessment Body | Yes      | URL       | bom.externalReferences[?(@.conformity-body)]                   |                                                                     | CRA Article 47.1, CRA-AV           |
 
 > [!NOTE]
-> Manufacturer has a specific defined meaning in the Cyber Resilience Act, so until this definition is established, be careful when using the term.
+> Manufacturer has a specific defined meaning in the EU Cyber Resilience Act, so until this definition is established, be careful when using the term.
 > These fields are in addition to the fields listed under [Owner](#owner--supplier-).
 > SPDX 2.3 doesn't support the CE fields. SPDX 3.0 should be used at a future date.
 
@@ -730,7 +730,8 @@ Ensures the availability of packages or containers, that they are indexed correc
 | 🟨 | SBOM Location                  | No       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |          | CRA-AII(9)            |
 
 > [!WARNING]
-> FIXME – Not done
+> * FIXME – Not done
+> * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor.
 
 
 ### Developer
@@ -801,12 +802,14 @@ The software in use, in production, by a user.
 ### Auditor
 
 Verifies that all necessary metadata is available, up-to-date and made use of.
+This role is required by the EU Cyber Resilience Act. FIXME – find specific article.
 
 | Do | Field name                     | Required | Data type | CycloneDX 1.6                                          | SPDX 2.3 | Required by           |
 | -- | :----------------------------- | :------- | :-------- | ------------------------------------------------------ | -------- | --------------------- |
 | 🟦 | Security contact               | Yes      | URL       | bom.components[].externalReferences[].security-contact |          | CRA-AII(2)            |
 | 🟦 | Unique Product ID              | Yes      | PURL      | bom.components[].purl                                  | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | CRA-AII(3), NTIA-SBOM |
 | 🟦 | Purpose, Intended Use          | Yes      | Text      |                                                        |          | CRA-AII(4)            |
+| 🟦 | Security Attestation           | Yes      | URL       |                                                        |          | CRA-Rec-21            |
 | 🟦 | SBOM Location                  | No       | URL       |                                                        |          | CRA-AII(9)            |
 | 🟦 | CE Declaration of Conformity   | No       | URL       |                                                        |          | CRA-AII(6), CRA-AV    |
 | 🟦 | CE Support End Date            | No       | URL       |                                                        |          | CRA-AII(7)            |

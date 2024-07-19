@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CPANSec meeting minutes
-permalink: /docs/minutes/
+permalink: /meetings/
 next_meeting_time: August 1st, 2024 17:00 UTC
 ---
 

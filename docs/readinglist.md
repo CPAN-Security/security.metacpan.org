@@ -22,6 +22,7 @@ toc: true
 * (NTIA) [Survey of Existing SBOM Formats and Standards](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) (2021)
 * (CISA) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (April 2023)
 
+
 ### SBOM use cases
 
 * (CDX) [CycloneDX Use Cases](https://cyclonedx.org/use-cases/)
@@ -42,6 +43,7 @@ toc: true
 * (SPDX) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 3.0)
 * (CISA) [SBOM Sharing Primer](https://www.cisa.gov/resources-tools/resources/sbom-sharing-primer)
 
+
 ### SBOM Standards
 
 * (ISO/IEC 5962:2021) [SPDX® Specification V2.2.1](https://standards.iso.org/ittf/PubliclyAvailableStandards/c081870_ISO_IEC_5962_2021%28E%29.zip) (Source: ISO's [Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/index.html) list)
@@ -54,6 +56,7 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 * [PURL Specification](https://github.com/package-url/purl-spec)
 * (CPAN) [URI::PackageURL](https://github.com/giterlizzi/perl-URI-PackageURL)
 * (CPAN) [CPAN::DistnameInfo](https://github.com/Perl-Toolchain-Gang/CPAN-DistnameInfo)
+
 
 ### Useful articles, papers and resources
 
@@ -85,10 +88,12 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 There are several relevant legislation regarding cybersecurity in Open Source ecosystems and supply chains.
 
+
 ### USA – EO 14028
 
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) (EO 14028, 2021-05-12)
     * Section 4: Enhancing Software Supply Chain Security
+
 
 ### EU and EEA – NIS2
 
@@ -108,6 +113,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
     * Articles 21, points 1, 2 and 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
+
 
 ### EU and EEA – CRA
 
@@ -201,6 +207,7 @@ Annexes are technical materials presented separately from the main text, and hav
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive)
 
+
 ### EU and EEA – DORA
 
 (EU) [Digital Operational Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554&qid=1710317679922): Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations (DORA, 2022-12-14)
@@ -222,6 +229,7 @@ Annexes are technical materials presented separately from the main text, and hav
 * Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.
+
 
 ### Acknowledgements
 

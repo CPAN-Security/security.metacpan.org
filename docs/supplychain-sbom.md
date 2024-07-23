@@ -73,6 +73,9 @@ stateDiagram-v2
 
 ## About this document
 
+> [!NOTE]
+> TODO: Show how metadata may be communicated along these open source supply-chains.
+
 This document offers an overview of [Open-Source Software](glossary#open-source-software) supply chains, taking into account the following perspectives:
 
 * The different Roles found throughout the supply-chain.
@@ -84,7 +87,6 @@ This document offers an overview of [Open-Source Software](glossary#open-source-
     * 🟦 Consume, and
     * 🟪 Censor
 * Show any relevant legislation, regulation or other rules or guides that require the presence of specific metadata fields.
-* TODO: Show how metadata may be communicated along these open source supply-chains.
 
 
 ### Motivation
@@ -348,7 +350,8 @@ One or more developers that publish an Open-Source component.
 
 #### Author Environment
 
-* See [Maintainer Environment](#maintainer-environment).
+* See also
+  * [Maintainer Environment](#maintainer-environment).
 
 
 ### Integrator Environment
@@ -368,7 +371,9 @@ A business or institution that is responsible for developing and building the ap
 
 * Used specifically in the context of the EU Cyber Resilience Act, to mean a commercial entity that places a product with digital elements on the EU market.
 * Is expected to produce a complete SBOM document describing their application, including all dependencies.
-* See [Integrator Environment](#integrator-environment).
+
+* See also
+  * [Integrator Environment](#integrator-environment).
 
 
 ### Language Ecosystem
@@ -403,7 +408,8 @@ The environment and systems where a product or service is executed on behalf of 
 
 The environment and systems where a product or service is executed by a customer and thereby made available to their users.
 
-* See also [Production Environment](#production-environment)
+* See also
+   * [Production Environment](#production-environment)
 
 
 ### Collaboration Ecosystem
@@ -414,22 +420,23 @@ A website or tool that offers a public collaboration repository to Authors, so t
 
 #### Repository Ecosystem
 
-* See [Collaboration Ecosystem](#collaboration-ecosystem).
+* See also
+  * [Collaboration Ecosystem](#collaboration-ecosystem).
 
 
 ## Supply-chain Roles
 
 ### Common metadata
 
-| Do | Field name               | Required | Required by             | TODO |
-| -- | :----------------------- | :------- | ----------------------- | ---- |
-| 🟥 | SBOM Type                | No       |                         | Confirm req/spec |
-| 🟥 | SBOM Author              | Yes      | NTIA-SBOM, DE-TR.5.2.1  |      |
-| 🟥 | SBOM Creation Time-stamp | Yes      | NTIA-SBOM, DE-TR.5.2.1  |      |
-| 🟥 | SBOM Generation Tool     | No       |                         | Confirm req/spec |
-| 🟥 | SBOM Serial Number       | Yes      | CycloneDX 1.6           | Confirm SPDX |
-| 🟥 | SBOM Format              | Yes      | CycloneDX 1.6, SPDX 2.3 |      |
-| 🟥 | SBOM Release             | Yes      | CycloneDX 1.6, SPDX 2.3 |      |
+| Ops | Field name               | Required | Required by             | Comment |
+| :-: | :----------------------- | :------: | ----------------------- | ------- |
+| 🟥  | SBOM Type                | No       |                         | Confirm req/spec |
+| 🟥  | SBOM Author              | Yes      | NTIA-SBOM, DE-TR.5.2.1  |         |
+| 🟥  | SBOM Creation Time-stamp | Yes      | NTIA-SBOM, DE-TR.5.2.1  |         |
+| 🟥  | SBOM Generation Tool     | No       |                         | Confirm req/spec |
+| 🟥  | SBOM Serial Number       | Yes      | CycloneDX 1.6           | Confirm SPDX |
+| 🟥  | SBOM Format              | Yes      | CycloneDX 1.6, SPDX 2.3 |         |
+| 🟥  | SBOM Release             | Yes      | CycloneDX 1.6, SPDX 2.3 |         |
 
 
 ### Supplier
@@ -438,7 +445,12 @@ Is a role within an [Integrator Environment](#integrator-environment).
 The term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
 
 * The name of an entity that creates, defines, and identifies components. (CycloneDX-1.6)
-* See [Manufacturer](#manufacturer), [Owner](#owner--supplier-), [Open-Source Software Steward](#open-source-software-steward), [Supplier](glossary.md#supplier) in the glossary.
+
+* See also
+  * [Manufacturer](#manufacturer),
+  * [Owner](#owner--supplier-),
+  * [Open-Source Software Steward](#open-source-software-steward),
+  * [Supplier](glossary.md#supplier) in the glossary.
 
 
 #### Owner (Supplier)
@@ -448,13 +460,14 @@ Has the legal ownership rights and liabilities for the component.
 Is usually the [Author](#author), a business or some other type of legal entity.
 May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
 
-| Do | Field name            | Required | Required by                        | TODO |
-| -- | :-------------------- | :------- | :--------------------------------- | ---- |
-| 🟥 | Supplier Name (Owner) | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |      |
-| 🟥 | Licenses (Product)    | Yes      |                                    | Confirm which spec/Laws/License |
+| Ops | Field name            | Required | Required by                        | Comment |
+| :-: | :-------------------- | :------: | :--------------------------------- | ------- |
+| 🟥  | Supplier Name (Owner) | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |
+| 🟥  | Licenses (Product)    | Yes      |                                    | Confirm which spec/Laws/License |
 
 
-* See also [Manufacturer](#manufacturer)
+* See also
+  * [Manufacturer](#manufacturer)
 
 #### Manufacturer (Supplier)
 
@@ -466,20 +479,22 @@ May decide the name of the project and other project parameters for (or on behal
 A role within an [Integrator Environment](#integrator-environment).
 When doing business within the European Economic Area (EEA), has the duty to ensure that the conformity obligations in the EU Cyber Resilience Act are met. (CRA-AV)
 
-| Do | Field name                    | Required | Required by                        | TODO |
-| -- | :---------------------------- | :------- | ---------------------------------- | ---- |
-| 🟥 | Supplier Name (Manufacturer)  | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |      |
-| 🟥 | CE Declaration of Conformity  | Yes      | CRA-AII(6), CRA-AV                 |      |
-| 🟥 | CE Support End Date           | Yes      | CRA-AII(7)                         |      |
-| 🟥 | CE Technical Documentation    | Yes      | CRA-AII(8), CRA-AVII               |      |
-| 🟥 | CE Conformity Assessment Body | Yes      | CRA Article 47.1, CRA-AV           |      |
+| Ops | Field name                    | Required | Required by                        | Comment |
+| :-: | :---------------------------- | :------: | ---------------------------------- | ------- |
+| 🟥  | Supplier Name (Manufacturer)  | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |
+| 🟥  | CE Declaration of Conformity  | Yes      | CRA-AII(6), CRA-AV                 |         |
+| 🟥  | CE Support End Date           | Yes      | CRA-AII(7)                         |         |
+| 🟥  | CE Technical Documentation    | Yes      | CRA-AII(8), CRA-AVII               |         |
+| 🟥  | CE Conformity Assessment Body | Yes      | CRA Article 47.1, CRA-AV           |         |
 
-* See [Owner](#owner--supplier-)
+* See also
+  * [Owner](#owner--supplier-)
 
 
 ### Author (SBOM)
 
-* See [SBOM Author](#sbom-author)
+* See also
+  * [SBOM Author](#sbom-author)
 
 
 ### Maintainer
@@ -495,29 +510,30 @@ An author or developer of an Open Source component project.
 * Not to be confused with the [SBOM Author](#sbom-author--role-) role.
 * Other common names for this role include Author, Developer, [Owner](#owner--supplier-).
 
-| Do | Field name                     | Required | Required by                                | TODO |
-| -- | :----------------------------- | :------- | ------------------------------------------ | ---- |
-| 🟥 | Component Name                 | Yes      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |      |
-| 🟥 | Version                        | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |      |
-| 🟥 | Dependencies (Unresolved)      | Yes      | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
-| 🟥 | Dependencies (Embedded)        | Yes      | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
-| 🟥 | Security contact (Component)   | Yes      | CRA-AII(2)                                 | Confirm field variations |
-| 🟥 | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |      |
-| 🟥 | Purpose, Intended Use          | Yes      | CRA-AII(4)                                 |      |
-| 🟨 | Licenses (Embedded)            | Yes      |                                            | Confirm which spec/Laws/License |
-| 🟥 | Code Repository                | Yes      |                                            |      |
-| 🟥 | Intended for Commercial Use    | No       | CRA-Rec-15                                 |      |
-| 🟥 | Open-Source Software Steward   | No       | CRA                                        | Confirm CRA Article |
-| 🟨 | Supplier Name (Maintainer)     | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |      |
-| 🟨 | SBOM Location                  | No       | CRA-AII(9)                                 | Confirm CRA Article |
-| 🟨 | SBOM Type                      | FIXME    |                                            | Confirm req/spec |
-| 🟨 | SBOM Author                    | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |      |
-| 🟨 | SBOM Creation Time-stamp       | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |      |
-| 🟨 | SBOM Serial Number             | Yes      |                                            | Confirm req/spec |
-| 🟨 | SBOM Generation Tool           | No       |                                            | Consider recommendation |
-| 🟥 | Code Commit Revision           | No       |                                            | Consider recommendation |
+| Ops | Field name                     | Required | Required by                                | Comment |
+| :-: | :----------------------------- | :------: | ------------------------------------------ | ------- |
+| 🟥  | Component Name                 | Yes      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |         |
+| 🟥  | Version                        | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |
+| 🟥  | Dependencies (Unresolved)      | Yes      | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
+| 🟥  | Dependencies (Embedded)        | Yes      | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
+| 🟥  | Security contact (Component)   | Yes      | CRA-AII(2)                                 | Confirm field variations |
+| 🟥  | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |
+| 🟥  | Purpose, Intended Use          | Yes      | CRA-AII(4)                                 |         |
+| 🟨  | Licenses (Embedded)            | Yes      |                                            | Confirm which spec/Laws/License |
+| 🟥  | Code Repository                | Yes      |                                            |         |
+| 🟥  | Intended for Commercial Use    | No       | CRA-Rec-15                                 |         |
+| 🟥  | Open-Source Software Steward   | No       | CRA                                        | Confirm CRA Article |
+| 🟨  | Supplier Name (Maintainer)     | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |
+| 🟨  | SBOM Location                  | No       | CRA-AII(9)                                 | Confirm CRA Article |
+| 🟨  | SBOM Type                      | FIXME    |                                            | Confirm req/spec |
+| 🟨  | SBOM Author                    | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
+| 🟨  | SBOM Creation Time-stamp       | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
+| 🟨  | SBOM Serial Number             | Yes      |                                            | Confirm req/spec |
+| 🟨  | SBOM Generation Tool           | No       |                                            | Consider recommendation |
+| 🟥  | Code Commit Revision           | No       |                                            | Consider recommendation |
 
-* See also [Maintainer](glossary#maintainer) in the Glossary.
+* See also
+  * [Maintainer](glossary#maintainer) in the Glossary.
 
 
 #### Custodian
@@ -543,11 +559,14 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 > [!NOTE]
 > * Possible synonym for [Custodian](#custodian).
 > * Steward has a specific defined meaning in the EU Cyber Resilience Act, so it's better to avoid using the term in this manner.
-> * See also [Open Source Software Steward](#open-source-software-steward)
+
+* See also
+  * [Open Source Software Steward](#open-source-software-steward)
 
 #### Author
 
-* See [Maintainer](#maintainer)
+* See also
+  * [Maintainer](#maintainer)
 
 
 ### Importer
@@ -559,20 +578,21 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 * A role specifically used when a EU entity makes available software on the EU market,
 * Is required to verify that the imported software is compliant with the EU Cyber Resilience Act according to it's Article 19.
 
-| Do | Field name                      | Required | Required by              | TODO |
-| -- | :------------------------------ | :------- | ------------------------ | ---- |
-| 🟦 | Security contact                | Yes      | CRA-AII(2)               |      |
-| 🟦 | Unique Product ID               | Yes      | CRA-AII(3), NTIA-SBOM    |      |
-| 🟦 | Purpose, Intended Use           | Yes      | CRA-AII(4)               |      |
-| 🟦 | SBOM Location                   | No       | CRA-AII(9)               |      |
-| 🟦 | Licenses (All types)            | Yes      |                          | Confirm type need |
-| 🟦 | CE Declaration of Conformity    | No       | CRA-AII(6), CRA-AV       |      |
-| 🟦 | CE Support End Date             | No       | CRA-AII(7)               |      |
-| 🟦 | CE Instructions (Documentation) | No       | CRA-AII(8)               |      |
-| 🟦 | CE Conformity Assessment Body   | No       | CRA Article 47.1, CRA-AV |      |
-| 🟦 | Download location               | FIXME    |                          |      |
+| Ops | Field name                      | Required | Required by              | Comment |
+| :-: | :------------------------------ | :------: | ------------------------ | ------- |
+| 🟦  | Security contact                | Yes      | CRA-AII(2)               |         |
+| 🟦  | Unique Product ID               | Yes      | CRA-AII(3), NTIA-SBOM    |         |
+| 🟦  | Purpose, Intended Use           | Yes      | CRA-AII(4)               |         |
+| 🟦  | SBOM Location                   | No       | CRA-AII(9)               |         |
+| 🟦  | Licenses (All types)            | Yes      |                          | Confirm type need |
+| 🟦  | CE Declaration of Conformity    | No       | CRA-AII(6), CRA-AV       |         |
+| 🟦  | CE Support End Date             | No       | CRA-AII(7)               |         |
+| 🟦  | CE Instructions (Documentation) | No       | CRA-AII(8)               |         |
+| 🟦  | CE Conformity Assessment Body   | No       | CRA Article 47.1, CRA-AV |         |
+| 🟦  | Download location               | FIXME    |                          |         |
 
-* See also [Importer](#glossary.md#importer).
+* See also
+   * [Importer](#glossary.md#importer).
 
 
 ### Patcher
@@ -595,15 +615,15 @@ This role is necessary when...
 * When downstream constraints and requirements call for it – e.g. when back-porting of fixes are needed due to downstream LTS requirements.
 
 
-| Do | Field name                        | Required | Required by             | TODO |
-| -- | :-------------------------------- | :------- | ----------------------- | ---- |
-| 🟦 | Security contact (Upstream)       | Yes      | CRA-AII(2)              | Confirm Role need |
-| 🟦 | Unique Product ID (Upstream)      | Yes      | CRA-AII(3), NTIA-SBOM   | Confirm Role need |
-| 🟦 | SBOM Location (Upstream)          | No       | CRA-AII(9)              | Confirm Role need |
-| 🟦 | Download location (Upstream)      | FIXME    |                         | Confirm Role need, req/spec |
-| 🟦 | Version (Upstream)                | Yes      | NTIA-SBOM, DE-TR.5.2.2  | Confirm Role need |
-| 🟨 | Version (Redistributed)           | Yes      | NTIA-SBOM, DE-TR.5.2.2  |      |
-| 🟨 | Unique Product ID (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   | Check if field is replaced or added |
+| Ops | Field name                        | Required | Required by             | Comment |
+| :-: | :-------------------------------- | :------: | ----------------------- | ------- |
+| 🟦  | Security contact (Upstream)       | Yes      | CRA-AII(2)              | Confirm Role need |
+| 🟦  | Unique Product ID (Upstream)      | Yes      | CRA-AII(3), NTIA-SBOM   | Confirm Role need |
+| 🟦  | SBOM Location (Upstream)          | No       | CRA-AII(9)              | Confirm Role need |
+| 🟦  | Download location (Upstream)      | FIXME    |                         | Confirm Role need, req/spec |
+| 🟦  | Version (Upstream)                | Yes      | NTIA-SBOM, DE-TR.5.2.2  | Confirm Role need |
+| 🟨  | Version (Redistributed)           | Yes      | NTIA-SBOM, DE-TR.5.2.2  |         |
+| 🟨  | Unique Product ID (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   | Check if field is replaced or added |
 
 
 ### Builder
@@ -611,7 +631,10 @@ This role is necessary when...
 > [!IMPORTANT]
 > Builders should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
 
-* See also [Packager](#packager), [Assembler](#assembler), [Deployer](#packager).
+* See also
+  * [Packager](#packager),
+  * [Assembler](#assembler),
+  * [Deployer](#deployer).
 
 #### Packager
 
@@ -628,9 +651,9 @@ Within a package ecosystem, builds and creates packages from components received
 Within an author environment, creates packages from their own project in preparation for publication in a downstream [Language Ecosystem](#language-ecosystem) (e.g. create a CPAN package for uploading to CPAN using the PAUSE interface).
 Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
 
-| Do | Field name              | Required | Required by                        | TODO |
-| -- | :---------------------- | :------- | ---------------------------------- | ---- |
-| 🟥 | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM              |      |
+| Ops | Field name              | Required | Required by                        | Comment |
+| :-: | :---------------------- | :------: | ---------------------------------- | ------- |
+| 🟥  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM              |         |
 
 #### Assembler
 
@@ -641,9 +664,9 @@ Concerns themselves with correct package format and structure, and that package 
 Operates within a [Package Ecosystem](#package-ecosystem), creating containers.
 Builds, installs package dependencies and creates container images from a base images.
 
-| Do | Field name              | Required | Required by           | TODO |
-| -- | :---------------------- | :------- | --------------------- | ---- |
-| 🟥 | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM |      |
+| Ops | Field name              | Required | Required by           | Comment |
+| :-: | :---------------------- | :------: | --------------------- | ------- |
+| 🟥  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM |         |
 
 #### Deployer
 
@@ -653,16 +676,17 @@ Builds, installs package dependencies and creates container images from a base i
 Operates within a [Production Environment](#production-environment).
 Final preparation and installation of the software into a CI/CD or other deployment method an [Integrator](#integrator-environment) or [Production Environment](#production-environment).
 
-| Do | Field name                     | Required | Required by           | TODO |
-| -- | :----------------------------- | :------- | --------------------- | ---- |
-| 🟥 | Dependencies (Deployed)        | Yes      | CRA-AII(5), NTIA-SBOM | Confirm if necessary |
+| Ops | Field name                     | Required | Required by           | Comment |
+| :-: | :----------------------------- | :------: | --------------------- | ------- |
+| 🟥  | Dependencies (Deployed)        | Yes      | CRA-AII(5), NTIA-SBOM | Confirm if necessary |
 
 #### Installer
 
 > [!NOTE]
 > Mentioned once in the EU Cyber Resilience Act.
 
-* See [Deployer](#deployer)
+* See also
+  * [Deployer](#deployer)
 
 
 ### Open-Source Software Steward
@@ -672,13 +696,15 @@ Final preparation and installation of the software into a CI/CD or other deploym
 
 Within a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#package-ecosystem) the OSS Steward has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
 
-| Do | Field name                     | Required | Required by            | TODO |
-| -- | :----------------------------- | :------- | ---------------------- | ---- |
-| 🟦 | Open-Source Software Steward   | Yes      | CRA-Rec-19             |      |
-| 🟦 | Intended for Commercial Use    | Yes      | CRA-Rec-15, CRA-Rec-18 |      |
-| 🟥 | Security Attestation           | Yes      | CRA-Rec-21             | Confirm with standardization body |
+| Ops | Field name                     | Required | Required by            | Comment |
+| :-: | :----------------------------- | :------: | ---------------------- | ------- |
+| 🟦  | Open-Source Software Steward   | Yes      | CRA-Rec-19             |         |
+| 🟦  | Intended for Commercial Use    | Yes      | CRA-Rec-15, CRA-Rec-18 |         |
+| 🟥  | Security Attestation           | Yes      | CRA-Rec-21             | Confirm with standardization body |
 
-* See also [Maintainer](#maintainer), and [Open-Source Software Steward](glossary.md#open-source-software-steward-) in the glossary.
+* See also
+  * [Maintainer](#maintainer), and
+  * [Open-Source Software Steward](glossary.md#open-source-software-steward-) in the glossary.
 
 
 ### Curator
@@ -696,10 +722,10 @@ Selects or pins which components are suitable for use downstream of the package 
 Works mainly with the [Distributor](#distributor) role.
 Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bug fixes and security updates.
 
-| Do | Field name                     | Required | Required by           | TODO |
-| -- | :----------------------------- | :------- | --------------------- | ---- |
-| 🟥 | Download location (Repackaged) | No       |                       |      |
-| 🟥 | SBOM Location (Repackaged)     | No       | CRA-AII(9)            | Confirm if this is an update or an addition |
+| Ops | Field name                     | Required | Required by           | Comment |
+| :-: | :----------------------------- | :------: | --------------------- | ------- |
+| 🟥  | Download location (Repackaged) | No       |                       |         |
+| 🟥  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            | Confirm if this is an update or an addition |
 
 
 ### Depositary
@@ -712,7 +738,8 @@ Ensures the integrity and availability of the public source code repository.
 Facilitates collaboration through the hosting of the server components used by git, bzr or similar tooling.
 May assist in updating some SBOM metadata fields.
 
-* See also [Distributor](#distributor)
+* See also
+  * [Distributor](#distributor)
 
 
 ### Distributor
@@ -731,13 +758,13 @@ Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosyst
 Ensures the availability of packages or containers, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 * See also
-    * [CISA SBOM Sharing Roles and Considerations](#references) (CISA-2024)
-    * [CRA Article 20](#references) (CRA-Art-20)
+   * [CISA SBOM Sharing Roles and Considerations](#references) (CISA-2024)
+   * [CRA Article 20](#references) (CRA-Art-20)
 
-| Do | Field name                     | Required | Required by           | TODO |
-| -- | :----------------------------- | :------- | --------------------- | ---- |
-| 🟦 | Download location (Repackaged) | Yes      |                       |      |
-| 🟦 | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |      |
+| Ops | Field name                     | Required | Required by           | Comment |
+| :-: | :----------------------------- | :------: | --------------------- | ------- |
+| 🟦  | Download location (Repackaged) | Yes      |                       |         |
+| 🟦  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |
 
 
 ### Developer
@@ -750,17 +777,19 @@ Uses packages and components as dependencies in their own project, product or co
 A Developer is in many ways identical to an [Maintainer](#maintainer) from the upstream Maintainer's perspective, with the main difference being that a Developer doesn't publish their work as [Open-Source Software](glossary.md#open-source-software).
 A Developer that publishes their software as [Open-Source Software](glossary.md#open-source-software), is called an [Maintainer](#maintainer).
 
-* See also [Maintainer](#maintainer).
+* See also
+  * [Maintainer](#maintainer).
 
-| Do | Field name                     | Required | Required by           | TODO |
-| -- | :----------------------------- | :------- | --------------------- | ---- |
-|    |                                |          |                       |      |
+| Ops | Field name                     | Required | Required by           | Comment |
+| :-: | :----------------------------- | :------: | --------------------- | ------- |
+|     |                                |          |                       |         |
 
 #### Integrator
 
 Used in the EU Cyber Resilience Act Annex II to denote someone who integrates *a product with digital elements intended for integration* into other products with digital elements.
 
-* See [Developer](#developer).
+* See also
+  * [Developer](#developer).
 
 
 ### Publisher
@@ -782,18 +811,20 @@ May operate within a [Production Environment](#production-environment) or an [In
 Responsible for security checks, including runtime, dynamic and static checks, vulnerability monitoring, etc.
 Communicates any issues or findings to any number of upstream roles, including the component [Deployer](#deployer), [Developer](#developer) or [Maintainer](#maintainer).
 
-| Do | Field name            | Required | Required by           | TODO |
-| -- | :-------------------- | :------- | --------------------- | ---- |
-| 🟦 | Unique Product ID     | Yes      | CRA-AII(3), NTIA-SBOM |      |
+| Ops | Field name            | Required | Required by           | Comment |
+| :-: | :-------------------- | :------: | --------------------- | ------- |
+| 🟦  | Unique Product ID     | Yes      | CRA-AII(3), NTIA-SBOM |         |
 
 
 #### SecOps
 
-* See [Analyst](#analyst).
+* See also
+  * [Analyst](#analyst).
 
 #### Pentester
 
-* See [Analyst](#analyst).
+* See also
+  * [Analyst](#analyst).
 
 
 ### Consumer
@@ -802,7 +833,8 @@ The software in use, in production, by a user.
 
 #### User
 
-* See [Consumer](#consumer).
+* See also
+  * [Consumer](#consumer).
 
 
 ### Auditor
@@ -810,22 +842,23 @@ The software in use, in production, by a user.
 Verifies that all necessary metadata is available, up-to-date and made use of.
 This role is required by the EU Cyber Resilience Act. FIXME – find specific article.
 
-| Do | Field name                     | Required | Required by           | TODO |
-| -- | :----------------------------- | :------- | --------------------- | ---- |
-| 🟦 | Security contact               | Yes      | CRA-AII(2)            |      |
-| 🟦 | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM |      |
-| 🟦 | Purpose, Intended Use          | Yes      | CRA-AII(4)            |      |
-| 🟦 | Security Attestation           | Yes      | CRA-Rec-21            |      |
-| 🟦 | SBOM Location                  | No       | CRA-AII(9)            |      |
-| 🟦 | CE Declaration of Conformity   | No       | CRA-AII(6), CRA-AV    |      |
-| 🟦 | CE Support End Date            | No       | CRA-AII(7)            |      |
-| 🟦 | CE Instructions                | No       | CRA-AII(8)            |      |
-| 🟦 | CE Conformity Assessment Body  | No       | CRA-Art-47(1), CRA-AV |      |
-| 🟦 | Download location              | Yes      |                       |      |
+| Ops | Field name                     | Required | Required by           | Comment |
+| :-: | :----------------------------- | :------: | --------------------- | ------- |
+| 🟦  | Security contact               | Yes      | CRA-AII(2)            |         |
+| 🟦  | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM |         |
+| 🟦  | Purpose, Intended Use          | Yes      | CRA-AII(4)            |         |
+| 🟦  | Security Attestation           | Yes      | CRA-Rec-21            |         |
+| 🟦  | SBOM Location                  | No       | CRA-AII(9)            |         |
+| 🟦  | CE Declaration of Conformity   | No       | CRA-AII(6), CRA-AV    |         |
+| 🟦  | CE Support End Date            | No       | CRA-AII(7)            |         |
+| 🟦  | CE Instructions                | No       | CRA-AII(8)            |         |
+| 🟦  | CE Conformity Assessment Body  | No       | CRA-Art-47(1), CRA-AV |         |
+| 🟦  | Download location              | Yes      |                       |         |
 
 #### Compliance
 
-* See [Auditor](#auditor).
+* See also
+  * [Auditor](#auditor).
 
 
 ## References
@@ -890,36 +923,36 @@ Several people have been involved in the development of this document
 
 # Appendix
 
-| Field name                      | Data type    | CycloneDX 1.6                                                         | SPDX 2.3                |
-| :------------------------------ | :----------- | --------------------------------------------------------------------- | ----------------------- |
-| CE Conformity Assessment Body   | URL          | bom.externalReferences[?(@.conformity-body)]                          |                         |
-| CE Declaration of Conformity    | URL          | bom.externalReferences[?(@.conformity-declaration)]                   |                         |
-| CE Support End Date             | DateTime     | bom.externalReferences[?(@.support-horizon)]                          |                         |
-| CE Technical Documentation      | URL          | bom.externalReferences[?(@.documentation)]                            |                         |
-| Code Commit Revision            | SHA1         |                                                                       |                         |
-| Code Repository                 | URL          | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator | 
-| Component Name                  | Text         | bom.components[].name                                                 | packages[].name         |
-| Dependencies                    | List         | bom.components[], bom.dependencies[]                                  | relationships[].[spdxElementId,relatedSpdxElement] |
-| Download location               | URL          |                                                                       |                         |
-| Intended for Commercial Use     | Boolean      |                                                                       |                         |
-| Licenses                        | SPDX License | bom.metadata.licenses[], bom.components[].licenses[]                  | packages[].licenseConcluded, packages[].licenseDeclared |
-| Open-Source Software Steward    | URL          |                                                                       |                         |
-| Public Code Repository          |              | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |
-| Purpose, Intended Use           | Text         | bom.components[].description                                          | packages[].comment      |
-| SBOM Author                     | Text         | bom.metadata.author                                                   | creationInfo.creators[] |
-| SBOM Creation Time-stamp        | DateTime     | bom.metadata.timestamp                                                | creationInfo.created    |
-| SBOM Format                     | Enum         | bom.properties.bomFormat                                              | SPDXVersion             |
-| SBOM Generation Tool            | List         | bom.metadata.tools[]                                                  | creationInfo.creators[] |
-| SBOM Location                   | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |                         |
-| SBOM Release                    | Int          | bom.properties.specVersion                                            | SPDXVersion             |
-| SBOM Serial Number              | UUID         | bom.metadata.serialNumber                                             | SPDXID                  |
-| SBOM Type                       |              |                                                                       |                         |
-| Security Attestation            | URL          |                                                                       |                         |
-| Security contact (Dependency)   | URL          | bom.components[].externalReferences[].security-contact                |                         |
-| Security contact (Current)      | URL          | bom.externalReferences[].security-contact                             |                         |
-| Security contact (Audit)        | URL          | bom.metadata.[supplier,manufacturer,author].contact.email             |                         |
-| Supplier Name (Maintainer)      | Text, URL    | bom.components[].supplier                                             | creationInfo.creators[] |
-| Supplier Name (Manufacturer)    | Text, URL    | bom.metadata[supplier,manufacturer], bom.components[].supplier        | creationInfo.creators[], packages[].originator, packages[].supplier |
-| Supplier Name (Owner)           | Text, URL    | bom.metadata[supplier,manufacturer,author], bom.components[].supplier | creationInfo.creators[], packages[].originator, packages[].supplier |
-| Unique Product ID               | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator |
-| Version                         | Text         | bom.components[].version                                              | packages[].versionInfo  |
+| Field name                      | Data type    | CycloneDX 1.6                                                         | SPDX 2.3                | Comment |
+| :------------------------------ | :----------- | --------------------------------------------------------------------- | ----------------------- | ------- |
+| CE Conformity Assessment Body   | URL          | bom.externalReferences[?(@.conformity-body)]                          |                         |         |
+| CE Declaration of Conformity    | URL          | bom.externalReferences[?(@.conformity-declaration)]                   |                         |         |
+| CE Support End Date             | DateTime     | bom.externalReferences[?(@.support-horizon)]                          |                         |         |
+| CE Technical Documentation      | URL          | bom.externalReferences[?(@.documentation)]                            |                         |         |
+| Code Commit Revision            | SHA1         |                                                                       |                         |         |
+| Code Repository                 | URL          | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |          |
+| Component Name                  | Text         | bom.components[].name                                                 | packages[].name         |         |
+| Dependencies                    | List         | bom.components[], bom.dependencies[]                                  | relationships[].[spdxElementId,relatedSpdxElement] |         |
+| Download location               | URL          |                                                                       |                         |         |
+| Intended for Commercial Use     | Boolean      |                                                                       |                         |         |
+| Licenses                        | SPDX License | bom.metadata.licenses[], bom.components[].licenses[]                  | packages[].licenseConcluded, packages[].licenseDeclared |         |
+| Open-Source Software Steward    | URL          |                                                                       |                         |         |
+| Public Code Repository          |              | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |         |
+| Purpose, Intended Use           | Text         | bom.components[].description                                          | packages[].comment      |         |
+| SBOM Author                     | Text         | bom.metadata.author                                                   | creationInfo.creators[] |         |
+| SBOM Creation Time-stamp        | DateTime     | bom.metadata.timestamp                                                | creationInfo.created    |         |
+| SBOM Format                     | Enum         | bom.properties.bomFormat                                              | SPDXVersion             |         |
+| SBOM Generation Tool            | List         | bom.metadata.tools[]                                                  | creationInfo.creators[] |         |
+| SBOM Location                   | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |                         |         |
+| SBOM Release                    | Int          | bom.properties.specVersion                                            | SPDXVersion             |         |
+| SBOM Serial Number              | UUID         | bom.metadata.serialNumber                                             | SPDXID                  |         |
+| SBOM Type                       |              |                                                                       |                         |         |
+| Security Attestation            | URL          |                                                                       |                         |         |
+| Security contact (Dependency)   | URL          | bom.components[].externalReferences[].security-contact                |                         |         |
+| Security contact (Current)      | URL          | bom.externalReferences[].security-contact                             |                         |         |
+| Security contact (Audit)        | URL          | bom.metadata.[supplier,manufacturer,author].contact.email             |                         |         |
+| Supplier Name (Maintainer)      | Text, URL    | bom.components[].supplier                                             | creationInfo.creators[] |         |
+| Supplier Name (Manufacturer)    | Text, URL    | bom.metadata[supplier,manufacturer], bom.components[].supplier        | creationInfo.creators[], packages[].originator, packages[].supplier |         |
+| Supplier Name (Owner)           | Text, URL    | bom.metadata[supplier,manufacturer,author], bom.components[].supplier | creationInfo.creators[], packages[].originator, packages[].supplier |         |
+| Unique Product ID               | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator |         |
+| Version                         | Text         | bom.components[].version                                              | packages[].versionInfo  |         |

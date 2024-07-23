@@ -465,9 +465,9 @@ May decide the name of the project and other project parameters for (or on behal
 | 🟥  | Supplier Name (Owner) | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |
 | 🟥  | Licenses (Product)    | Yes      |                                    | Confirm which spec/Laws/License |
 
-
 * See also
   * [Manufacturer](#manufacturer)
+
 
 #### Manufacturer (Supplier)
 
@@ -923,8 +923,9 @@ Several people have been involved in the development of this document
 
 # Appendix
 
+
 | Field name                      | Data type    | CycloneDX 1.6                                                         | SPDX 2.3                | Comment |
-| :------------------------------ | :----------- | --------------------------------------------------------------------- | ----------------------- | ------- |
+| :------------------------------ | :----------: | :-------------------------------------------------------------------- | :---------------------- | :------ |
 | CE Conformity Assessment Body   | URL          | bom.externalReferences[?(@.conformity-body)]                          |                         |         |
 | CE Declaration of Conformity    | URL          | bom.externalReferences[?(@.conformity-declaration)]                   |                         |         |
 | CE Support End Date             | DateTime     | bom.externalReferences[?(@.support-horizon)]                          |                         |         |
@@ -956,3 +957,4 @@ Several people have been involved in the development of this document
 | Supplier Name (Owner)           | Text, URL    | bom.metadata[supplier,manufacturer,author], bom.components[].supplier | creationInfo.creators[], packages[].originator, packages[].supplier |         |
 | Unique Product ID               | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator |         |
 | Version                         | Text         | bom.components[].version                                              | packages[].versionInfo  |         |
+

@@ -124,7 +124,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 #### CRA Recitals
 
-[CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11) are for explaining the background and context for the regulation. The ordering is the same as the Articles. These are for interpretation, and not legally binding.
+[CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11) are for explaining the background and context for the regulation. The ordering is the same as in the Articles. These are for interpretation, and not legally binding.
 
 * Recital (10): CRA relevance for supply chains (page 11)
 * Recitals (16-17): CRA relevance for Open Source projects (page 18-19)
@@ -145,6 +145,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Recitals (60-62): Support period (page 69-71)
 * Recital (64): Point of contact (page 73)
 * Recital (65): Secure by default (page 73)
+* Recital (118): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […] (page 121)
 
 
 #### CRA Articles
@@ -152,12 +153,13 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 [CRA Articles](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136) are legally binding, and describes the scope, definitions and law.
 
 * Chapter I
-    * Article 3, Definitions (pages 136-146)
+    * **Article 3**, Definitions (pages 136-146)
     * Article 9, Point 1. (b-c), Stakeholder consultation (pages 155-156)
 * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
     * **Article 13**, Obligations of Manufacturers (pages 161-175)
         * **Section 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
         * Section 6, "[…] they shall share the relevant code or documentation […]" (page 164)
+        * Section 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 168)
     * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
     * **Article 15**, Voluntary reporting (pages 185-186)
     * Article 16, Establishment of a single reporting platform (pages 187-192)

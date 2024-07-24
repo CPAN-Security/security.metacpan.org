@@ -227,8 +227,55 @@
 1. DISCOURAGED
     * 
 1. DELISTED
-    *
+    * 
 
+### Support types
+
+When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
+
+1. Brand management
+    * Development
+    * Strategy
+    * Implementation
+    * Hosting & legal
+1. Bug or issue triage
+1. Outreach
+    * Article writing
+    * Podcast hosting or participation
+    * Conference presentations
+    * SoMe presence
+1. Code review
+    * Security
+    * Development process
+    * Maintainability
+1. Documentation
+    * Completness
+    * Consistency
+    * Relevance
+1. Community management & assistance
+    * Culture
+    * Diversity, Equity, Inclusion
+    * Forum management, moderation and support
+1. Community infrastructure and hosting
+    * Email
+    * Chat forum
+    * Other community services
+1. Event organizing
+    * Conferences, Meetups, Hackathons or other gatherings for knowledge-sharing gatherings
+    * Online events, webinars or classes/training
+1. Industry/Stakeholder/OSPO support
+1. Fundraising
+1. Media relations
+1. Security contact
+1. Course/training material development
+1. Open Source Steward
+1. Legal assistance
+    * License conflict resolution
+1. Governance development
+
+
+* Sources
+    * https://chaos.social/@sjn/109343732566572015
 
 ## Other project states, claims and metadata
 

@@ -364,7 +364,7 @@ A business or institution that is responsible for developing and building the ap
 
 #### Manufacturer Environment
 
-> [!WARNING]
+> [!CAUTION]
 > * FIXME - Much more to add!
 >   * e.g. from https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
 >   * Check also out the work coming out of the Eclipse ORC Working Group
@@ -460,10 +460,10 @@ Has the legal ownership rights and liabilities for the component.
 Is usually the [Author](#author), a business or some other type of legal entity.
 May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
 
-| Ops | Field name            | Required | Required by                        | Comment |
-| :-: | :-------------------- | :------: | :--------------------------------- | ------- |
-| 🟥  | Supplier Name (Owner) | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |
-| 🟥  | Licenses (Product)    | Yes      |                                    | Confirm which spec/Laws/License |
+| Ops | Field name                      | Required | Required by                        | Comment |
+| :-: | :------------------------------ | :------: | :--------------------------------- | ------- |
+| 🟥  | Supplier Name (Owner)           | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |
+| 🟥  | License(s) (Product, Component) | Yes      |                                    | Confirm which spec/Laws/License |
 
 * See also
   * [Manufacturer](#manufacturer)
@@ -510,27 +510,27 @@ An author or developer of an Open Source component project.
 * Not to be confused with the [SBOM Author](#sbom-author--role-) role.
 * Other common names for this role include Author, Developer, [Owner](#owner--supplier-).
 
-| Ops | Field name                     | Required | Required by                                | Comment |
-| :-: | :----------------------------- | :------: | ------------------------------------------ | ------- |
-| 🟥  | Component Name                 | Yes      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |         |
-| 🟥  | Version                        | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |
-| 🟥  | Dependencies (Unresolved)      | Yes      | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
-| 🟥  | Dependencies (Embedded)        | Yes      | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
-| 🟥  | Security contact (Component)   | Yes      | CRA-AII(2)                                 | Confirm field variations |
-| 🟥  | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |
-| 🟥  | Purpose, Intended Use          | Yes      | CRA-AII(4)                                 |         |
-| 🟨  | Licenses (Embedded)            | Yes      |                                            | Confirm which spec/Laws/License |
-| 🟥  | Code Repository                | Yes      |                                            |         |
-| 🟥  | Intended for Commercial Use    | No       | CRA-Rec-15                                 |         |
-| 🟥  | Open-Source Software Steward   | No       | CRA                                        | Confirm CRA Article |
-| 🟨  | Supplier Name (Maintainer)     | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |
-| 🟨  | SBOM Location                  | No       | CRA-AII(9)                                 | Confirm CRA Article |
-| 🟨  | SBOM Type                      | FIXME    |                                            | Confirm req/spec |
-| 🟨  | SBOM Author                    | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
-| 🟨  | SBOM Creation Time-stamp       | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
-| 🟨  | SBOM Serial Number             | Yes      |                                            | Confirm req/spec |
-| 🟨  | SBOM Generation Tool           | No       |                                            | Consider recommendation |
-| 🟥  | Code Commit Revision           | No       |                                            | Consider recommendation |
+| Ops | Field name                       | Required | Required by                                | Comment |
+| :-: | :------------------------------- | :------: | ------------------------------------------ | ------- |
+| 🟥  | Component Name                   | Yes      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |         |
+| 🟥  | Version                          | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |
+| 🟥  | Dependencies (Embedded)          | Yes      | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
+| 🟥  | Security contact (Component)     | Yes      | CRA-AII(2)                                 | Confirm field variations |
+| 🟥  | Unique Product ID                | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |
+| 🟥  | Purpose, Intended Use            | Yes      | CRA-AII(4)                                 |         |
+| 🟥  | Code Repository                  | Yes      |                                            |         |
+| 🟥  | Project Sustainability           | No       |                                            | CycloneDX 1.7 proposed |
+| 🟥  | Intended for Commercial Use      | No       | CRA-Rec-15                                 |         |
+| 🟥  | Open-Source Software Steward     | No       | CRA                                        | Confirm CRA Article |
+| 🟥  | Code Commit Revision             | No       |                                            | Consider recommendation |
+| 🟨  | License(s) (Component, Embedded) | Yes      |                                            | Confirm which spec/Laws/License |
+| 🟨  | Supplier Name (Maintainer)       | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |
+| 🟨  | SBOM Location                    | No       | CRA-AII(9)                                 | Confirm CRA Article |
+| 🟨  | SBOM Type                        | FIXME    |                                            | Confirm req/spec |
+| 🟨  | SBOM Author                      | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
+| 🟨  | SBOM Creation Time-stamp         | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
+| 🟨  | SBOM Serial Number               | Yes      |                                            | Confirm req/spec |
+| 🟨  | SBOM Generation Tool             | No       |                                            | Consider recommendation |
 
 * See also
   * [Maintainer](glossary#maintainer) in the Glossary.
@@ -546,6 +546,14 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 * Typically only concerned with updating dependencies or applying security fixes.
 * Works with the Maintainer primarily, and may take responsibility on their behalf when it comes to security concerns.
 * May work on behalf of the Maintainer if they are unavailable or unresponsive.
+
+| Ops | Field name                     | Required | Required by                                | Comment |
+| :-: | :----------------------------- | :------: | ------------------------------------------ | ------- |
+| 🟨  | Version                        | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |
+| 🟨  | Dependencies (Embedded)        | Maybe    | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
+| 🟨  | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |
+| 🟨  | Supplier Name (Maintainer)     | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |
+| 🟨  | Project Sustainability         | No       |                                            | CycloneDX 1.7 proposed |
 
 #### Contributor
 
@@ -584,7 +592,6 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 | 🟦  | Unique Product ID               | Yes      | CRA-AII(3), NTIA-SBOM    |         |
 | 🟦  | Purpose, Intended Use           | Yes      | CRA-AII(4)               |         |
 | 🟦  | SBOM Location                   | No       | CRA-AII(9)               |         |
-| 🟦  | Licenses (All types)            | Yes      |                          | Confirm type need |
 | 🟦  | CE Declaration of Conformity    | No       | CRA-AII(6), CRA-AV       |         |
 | 🟦  | CE Support End Date             | No       | CRA-AII(7)               |         |
 | 🟦  | CE Instructions (Documentation) | No       | CRA-AII(8)               |         |
@@ -602,8 +609,8 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 > * These patches may include back-ports of features, security fixes or other accommodations necessary for distributing multiple releases of the same upstream project, but within publishing constraints decided by the Curator of the Ecosystem (e.g. LTS releases, support contracts, etc.).
 > * A Patcher can both be found in-house (e.g. a business who uses a company-internal package mirror), working for a Package Ecosystem provider (e.g. applying backports of fixes in Debian packages), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
-> [!WARNING]
-> FIXME – Not done
+> [!CAUTION]
+> * FIXME – Not done
 
 Operates within a [Package Ecosystem](#package-ecosystem).
 Applies security and/or bug fixes to packages before building and packaging.
@@ -619,11 +626,14 @@ This role is necessary when...
 | :-: | :-------------------------------- | :------: | ----------------------- | ------- |
 | 🟦  | Security contact (Upstream)       | Yes      | CRA-AII(2)              | Confirm Role need |
 | 🟦  | Unique Product ID (Upstream)      | Yes      | CRA-AII(3), NTIA-SBOM   | Confirm Role need |
-| 🟦  | SBOM Location (Upstream)          | No       | CRA-AII(9)              | Confirm Role need |
-| 🟦  | Download location (Upstream)      | FIXME    |                         | Confirm Role need, req/spec |
 | 🟦  | Version (Upstream)                | Yes      | NTIA-SBOM, DE-TR.5.2.2  | Confirm Role need |
+| 🟦  | Dependencies (Upstream, Embedded) | Yes      | CRA-AII(5), NTIA-SBOM   | Confirm if necessary |
+| 🟦  | Download location (Upstream)      | FIXME    |                         | Confirm Role need, req/spec |
+| 🟦  | SBOM Location (Upstream)          | No       | CRA-AII(9)              | Confirm Role need |
+| 🟦  | License(s)                        | Yes      |                         |         |
 | 🟨  | Version (Redistributed)           | Yes      | NTIA-SBOM, DE-TR.5.2.2  |         |
 | 🟨  | Unique Product ID (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   | Check if field is replaced or added |
+| 🟨  | Project Sustainability            | No       |                         | CycloneDX 1.7 proposed |
 
 
 ### Builder
@@ -632,9 +642,9 @@ This role is necessary when...
 > Builders should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
 
 * See also
-  * [Packager](#packager),
-  * [Assembler](#assembler),
-  * [Deployer](#deployer).
+    * [Packager](#packager),
+    * [Assembler](#assembler),
+    * [Deployer](#deployer).
 
 #### Packager
 
@@ -670,8 +680,8 @@ Builds, installs package dependencies and creates container images from a base i
 
 #### Deployer
 
-> [!WARNING]
-> FIXME – Not done
+> [!CAUTION]
+> * FIXME – Not done
 
 Operates within a [Production Environment](#production-environment).
 Final preparation and installation of the software into a CI/CD or other deployment method an [Integrator](#integrator-environment) or [Production Environment](#production-environment).
@@ -692,7 +702,7 @@ Final preparation and installation of the software into a CI/CD or other deploym
 ### Open-Source Software Steward
 
 > [!NOTE]
-> FIXME – Not done
+> * FIXME – Not done
 
 Within a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#package-ecosystem) the OSS Steward has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
 
@@ -714,8 +724,8 @@ Within a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#pac
 > * Curators may operate both in-house, in order to keep an eye on what is being automatically installed there, or they may make the decisions that happen on the Package or Language Ecosystem provider side.
 > * Typically, a curator may consider LTS status, support contract terms or other reasons for distributing a package.
 
-> [!WARNING]
-> FIXME – Not done
+> [!NOTE]
+> * FIXME – Not done
 
 Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
 Selects or pins which components are suitable for use downstream of the package ecosystem.
@@ -744,15 +754,15 @@ May assist in updating some SBOM metadata fields.
 
 ### Distributor
 
-> [!WARNING]
+> [!CAUTION]
 > * FIXME – Not done
 > * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor.
 
 > [!NOTE]
-> * Distributors take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
-> * If SBOM metadata is expected to accompany the packages or containers in question, the Distributor makes sure this happens.
-> * Distributors have additional requirements and considerations laid out in CISA-2024.
-> * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+> * (CPANSec-2024) Distributors take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
+>     * If SBOM metadata is expected to accompany the packages or containers in question, the Distributor makes sure this happens.
+>     * Distributors have additional requirements and considerations laid out in CISA-2024.
+>     * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
 
 Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
 Ensures the availability of packages or containers, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
@@ -769,8 +779,8 @@ Ensures the availability of packages or containers, that they are indexed correc
 
 ### Developer
 
-> [!WARNING]
-> FIXME – Not done
+> [!CAUTION]
+> * FIXME – Not done
 
 Operates within an [Integrator Environment](#integrator-environment).
 Uses packages and components as dependencies in their own project, product or component.
@@ -778,11 +788,31 @@ A Developer is in many ways identical to an [Maintainer](#maintainer) from the u
 A Developer that publishes their software as [Open-Source Software](glossary.md#open-source-software), is called an [Maintainer](#maintainer).
 
 * See also
-  * [Maintainer](#maintainer).
+  * [Maintainer](#maintainer)
+  * [Integrator](#integrator)
 
-| Ops | Field name                     | Required | Required by           | Comment |
-| :-: | :----------------------------- | :------: | --------------------- | ------- |
-|     |                                |          |                       |         |
+| Ops | Field name                        | Required | Required by                                | Comment |
+| :-: | :-------------------------------- | :------: | ------------------------------------------ | ------- |
+| 🟦  | Project Sustainability (Upstream) | No       |                                            | CycloneDX 1.7 proposed |
+| 🟦  | License(s)                        | Yes      |                                            |         |
+| 🟥  | Component Name                    | Yes      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |         |
+| 🟥  | Version                           | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |
+| 🟥  | Dependencies (Embedded)           | Yes      | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
+| 🟥  | Security contact (Component)      | Yes      | CRA-AII(2)                                 | Confirm field variations |
+| 🟥  | Unique Product ID                 | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |
+| 🟥  | Purpose, Intended Use             | Yes      | CRA-AII(4)                                 |         |
+| 🟥  | Code Repository                   | Yes      |                                            |         |
+| 🟥  | Project Sustainability            | No       |                                            | CycloneDX 1.7 proposed |
+| 🟥  | Code Commit Revision              | No       |                                            | Consider recommendation |
+| 🟨  | Supplier Name (Integrator)        | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |
+| 🟨  | License(s) (Product, Embedded)    | Yes      |                                            | Confirm which spec/Laws/License |
+| 🟨  | SBOM Author                       | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
+| 🟨  | SBOM Creation Time-stamp          | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
+| 🟨  | SBOM Serial Number                | Yes      |                                            | Confirm req/spec |
+| 🟨  | SBOM Type                         | FIXME    |                                            | Confirm req/spec |
+| 🟨  | SBOM Location                     | No       | CRA-AII(9)                                 | Confirm CRA Article |
+| 🟨  | SBOM Generation Tool              | No       |                                            | Consider recommendation |
+
 
 #### Integrator
 
@@ -801,9 +831,9 @@ With regard to the EU Cyber Resilience Act, a Publisher is the same as a [Distri
 
 ### Analyst
 
-> [!WARNING]
-> FIXME – Check refs for CRA-Rec-34 and others
-> FIXME – Consider need for an Maintainer's list of known/addressed vulnerabilities, to check against public vulnerability databases.
+> [!CAUTION]
+> * FIXME – Check refs for CRA-Rec-34 and others
+> * FIXME – Consider need for an Maintainer's list of known/addressed vulnerabilities, to check against public vulnerability databases.
 
 Security analyst, or vulnerability checker.
 Also knows as "SecOps" or "Pentester".
@@ -811,9 +841,12 @@ May operate within a [Production Environment](#production-environment) or an [In
 Responsible for security checks, including runtime, dynamic and static checks, vulnerability monitoring, etc.
 Communicates any issues or findings to any number of upstream roles, including the component [Deployer](#deployer), [Developer](#developer) or [Maintainer](#maintainer).
 
-| Ops | Field name            | Required | Required by           | Comment |
-| :-: | :-------------------- | :------: | --------------------- | ------- |
-| 🟦  | Unique Product ID     | Yes      | CRA-AII(3), NTIA-SBOM |         |
+| Ops | Field name             | Required | Required by           | Comment |
+| :-: | :--------------------- | :------: | --------------------- | ------- |
+| 🟦  | Security contact       | Yes      | CRA-AII(2)            |         |
+| 🟦  | Unique Product ID      | Yes      | CRA-AII(3), NTIA-SBOM |         |
+| 🟦  | Security Attestation   | Yes      | CRA-Rec-21            |         |
+| 🟦  | Project Sustainability | No       |                       | CycloneDX 1.7 proposed |
 
 
 #### SecOps
@@ -848,12 +881,14 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 | 🟦  | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM |         |
 | 🟦  | Purpose, Intended Use          | Yes      | CRA-AII(4)            |         |
 | 🟦  | Security Attestation           | Yes      | CRA-Rec-21            |         |
+| 🟦  | License(s)                     | Yes      |                       |         |
 | 🟦  | SBOM Location                  | No       | CRA-AII(9)            |         |
 | 🟦  | CE Declaration of Conformity   | No       | CRA-AII(6), CRA-AV    |         |
 | 🟦  | CE Support End Date            | No       | CRA-AII(7)            |         |
 | 🟦  | CE Instructions                | No       | CRA-AII(8)            |         |
 | 🟦  | CE Conformity Assessment Body  | No       | CRA-Art-47(1), CRA-AV |         |
 | 🟦  | Download location              | Yes      |                       |         |
+| 🟦  | Project Sustainability         | No       |                       | CycloneDX 1.7 proposed |
 
 #### Compliance
 
@@ -883,24 +918,25 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 ## Commentary and FIXME points (FIXME: remove when done)
 
 1. Open Source in CRA... Maintainer -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor
-2. Open Source in CRA (simplified)... Hobbyist -> Maintainer -> Maintainer w/Steward -> Manufacturer
-3. Add graph/description on build steps, to illustrate how different SBOM files may be found, sourced, generated, assembled, installed and shared for later verification or analysis.
-6. Enumerate what distinguishes the different environments
+1. Open Source in CRA (simplified)... Hobbyist -> Maintainer -> Maintainer w/Steward -> Manufacturer
+1. Add graph/description on build steps, to illustrate how different SBOM files may be found, sourced, generated, assembled, installed and shared for later verification or analysis.
+1. Enumerate what distinguishes the different environments
     * Language: Not built, not deployed, Is source code, No execution environment
     * Distro/package: Built, Deployed, Is object code, No execution environment
     * Model/plugin: Built, Not deployed, Is data, No execution environment (FIXME: unsure)
     * Image/container: Built, Deployed, Is object code, Has execution environment
-7. Enumerate the different dependencies
+1. Enumerate the different dependencies
     * Stages; Author/develop, configure, build, test, install/deploy, packaging, container assembly, post-deploy (plugin/dynamic), runtime.
     * States; resolved, required/unresolved, embedded/included
     * Types; component, patch, system resource, environment, ecosystem, service
     * Descriptions; cross-ecosystem vs. in-ecosystem, up-river vs. down-river (within language ecosystem), upstream vs. downstream (outside language ecosystem), reverse, assumed/implied vs. stated/explicit
-8. Clearer distinction between Builder, Deployer, Packager, Assembler, Integrator
-9. Add example of a chain of edits to an SBOM document, as it is passed down the supply-chain
-10. Distinguish between Dependencies (as resolved by the Builder, Packager, Assembler or Integrator roles) and Requirements (unresolved, but as defined by the Author or Integrator roles).
-11. Distinguish in which SBOM Types (or stages) different fields are expected to be set, in order to help SBOM Authors produce and verify fields as expected.
-12. PCI-SSF v1.2.1 requires not only that component dependencies are listed, but also service dependencies. ([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
-13. Use "Metadata" as the primary term, instead of "SBOM"
+1. Clearer distinction between Builder, Deployer, Packager, Assembler, Integrator
+1. Add example of a chain of edits to an SBOM document, as it is passed down the supply-chain
+1. Distinguish between Dependencies (as resolved by the Builder, Packager, Assembler or Integrator roles) and Requirements (unresolved, but as defined by the Author or Integrator roles).
+1. Distinguish in which SBOM Types (or stages) different fields are expected to be set, in order to help SBOM Authors produce and verify fields as expected.
+1. PCI-SSF v1.2.1 requires not only that component dependencies are listed, but also service dependencies ([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
+1. Use "Metadata" as the primary term, instead of "SBOM"
+1. Add columns for fields, describing downstream consumers and upstream producers
 
 
 ## License and use of this document
@@ -936,7 +972,7 @@ Several people have been involved in the development of this document
 | Dependencies                    | List         | bom.components[], bom.dependencies[]                                  | relationships[].[spdxElementId,relatedSpdxElement] |         |
 | Download location               | URL          |                                                                       |                         |         |
 | Intended for Commercial Use     | Boolean      |                                                                       |                         |         |
-| Licenses                        | SPDX License | bom.metadata.licenses[], bom.components[].licenses[]                  | packages[].licenseConcluded, packages[].licenseDeclared |         |
+| License(s)                      | SPDX License | bom.metadata.licenses[], bom.components[].licenses[]                  | packages[].licenseConcluded, packages[].licenseDeclared |         |
 | Open-Source Software Steward    | URL          |                                                                       |                         |         |
 | Public Code Repository          |              | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |         |
 | Purpose, Intended Use           | Text         | bom.components[].description                                          | packages[].comment      |         |

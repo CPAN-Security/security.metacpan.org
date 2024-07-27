@@ -175,7 +175,8 @@ toc: true
 
 #### Dependency (Detected during Analysis) ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 #### Dependency (Embedded, Included, Pre-resolved) ✍️
 
@@ -205,43 +206,66 @@ toc: true
 
 #### Dependency (Resolved at Source) ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 #### Dependency (Resolved at Build) ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 #### Dependency (Resolved at Deploy) ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 #### Dependency (Resolved at Runtime) ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 #### Dependency (Pinned at Source) ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 #### Dependency (Pinned at Build) ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 #### Dependency (Pinned at Deploy) ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 #### Dependency (In-ecosystem) ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 #### Dependency (Out-of-ecosystem) ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+#### Dependency (Service) ✍️
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> 1. Required by PCI-DSS 
+
+> 1. (PCI-SSF-1.2.1) Service dependencies are required
+
+([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
+
+
 
 #### Requirement ✍️
 
-> FIXME
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 > * See also
 >     * [Dependency (Unresolved)]()
@@ -254,7 +278,8 @@ toc: true
 >     * (CRA-2024-03 Article 21, 22) This means if an [Importer](#importer) or distributor applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail.
 
 > [!NOTE]
-> FIXME: Confirm with lawyer after final version of CRA is adopted.
+> * FIXME: Expand on this topic
+> * FIXME: Confirm with lawyer after final version of CRA is adopted.
 
 > 1. (CRA-2024-03) A natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the Union market without affecting its properties.
 >
@@ -299,7 +324,8 @@ toc: true
 ### Making available on the market
 
 > [!NOTE]
-> FIXME: Add some clarification regarding Manufacturers, Importers, Distributors and Open Source Stewards.
+> * FIXME: Expand on this topic
+> * FIXME: Add some clarification regarding Manufacturers, Importers, Distributors and Open Source Stewards.
 
 > 1. (CRA-2024-03) The supply of a product with digital elements for distribution or use on the European Union market in the course of a commercial activity, whether in return for payment or free of charge.
 >
@@ -323,7 +349,8 @@ toc: true
 ### Open-source software steward ⚠️
 
 > [!NOTE]
-> FIXME: This is a definition that was added to the CRA on 2023-12-20, meaning it may change in the final version of the regulation.
+> * FIXME: Expand on this topic
+> * FIXME: This is a definition that was added to the CRA on 2023-12-20, meaning it may change in the final version of the regulation.
 
 > 1. (CRA-2024-03) Any legal person, other than a [manufacturer](#manufacturer), which has the purpose or objective to systematically provide support on a sustained basis for the development of specific products with digital elements qualifying as free and open-source software that are intended for commercial activities, and ensures the viability of those products.
 >
@@ -651,6 +678,7 @@ This glossary is partly based on terms from the following sources.
 - (SBOMit-2023) [SBOM on in-toto Terminology](https://github.com/SBOMit/specification/blob/main/specification.md#15-terminology), Specification introduction section 1.5, published July 2023.
 - (NTIA-2021) [NTIA The Minimum Elements for an SBOM, Glossary](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=25), pages 25-27, published 2021-07-12.
 - (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
+- (PCISSF-2023) [PCI Software Security Framework](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), published May 2023.
 
 
 ## About this document

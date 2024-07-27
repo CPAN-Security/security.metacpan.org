@@ -27,13 +27,13 @@ For license information and acknowledgements, see the [end of this document](#li
 
 (Art 13 to Art 17, Art 18 for authorised representatives)
 
-* Manufacturers are obliged to exercise due diligence when integrating components from third parties. ([Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163))
+* Manufacturers are obliged to exercise due diligence when integrating components from third parties, as laid out in **[Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163)**.
   * …after the Manufacturer conducts a risk assessment, as laid out in [Article 13(2)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161)
   * …in accordance with essential requirements laid out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297).
 * must report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=187))
-  * …in the way described in [Article 14](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176).
-* …are required to report discovered vulnerabilities in components to their maintainers. ([Article 13(6)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164))
-* …draw up the EU declaration of conformity in accordance with [Article 28](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=218) and affix the CE marking in accordance with [Article 30](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=220), as laid out in [Article 13(12)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=168))
+  * …in the way described in **[Article 14](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176)**.
+* …are required to report discovered vulnerabilities in components to their maintainers, as laid out in **[Article 13(6)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164)**.
+* …draw up the EU declaration of conformity in accordance with [Article 28](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=218) and affix the CE marking in accordance with [Article 30](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=220), as laid out in **[Article 13(12)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=168)**)
   * …to indicate conformity prior to entering the market ([Article 30(3)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=220))
   * …and keep records for ten years, as laid out in [Article 23(2)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=207)
 * …must provide Software Bill of Materials (SBOM) upon request by authorities, as laid out in [Recital (78)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=86)

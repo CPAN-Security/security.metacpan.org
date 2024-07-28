@@ -428,15 +428,15 @@ A website or tool that offers a public collaboration repository to Authors, so t
 
 ### Common metadata
 
-| Ops | Field name               | Required | Required by             | Comment |
-| :-: | :----------------------- | :------: | ----------------------- | ------- |
-| 🟥  | SBOM Type                | No       |                         | Confirm req/spec |
-| 🟥  | SBOM Author              | Yes      | NTIA-SBOM, DE-TR.5.2.1  |         |
-| 🟥  | SBOM Creation Time-stamp | Yes      | NTIA-SBOM, DE-TR.5.2.1  |         |
-| 🟥  | SBOM Generation Tool     | No       |                         | Confirm req/spec |
-| 🟥  | SBOM Serial Number       | Yes      | CycloneDX 1.6           | Confirm SPDX |
-| 🟥  | SBOM Format              | Yes      | CycloneDX 1.6, SPDX 2.3 |         |
-| 🟥  | SBOM Release             | Yes      | CycloneDX 1.6, SPDX 2.3 |         |
+| Ops | Field name               | Required | Required by             | Comment | TODO    |
+| :-: | :----------------------- | :------: | ----------------------- | ------- | ------- |
+| 🟥  | SBOM Type                | No       |                         |         | Confirm req/spec |
+| 🟥  | SBOM Author              | Yes      | NTIA-SBOM, DE-TR.5.2.1  |         |         |
+| 🟥  | SBOM Creation Time-stamp | Yes      | NTIA-SBOM, DE-TR.5.2.1  |         |         |
+| 🟥  | SBOM Generation Tool     | No       |                         |         | Confirm req/spec |
+| 🟥  | SBOM Serial Number       | Yes      | CycloneDX 1.6           |         | Confirm SPDX |
+| 🟥  | SBOM Format              | Yes      | CycloneDX 1.6, SPDX 2.3 |         |         |
+| 🟥  | SBOM Release             | Yes      | CycloneDX 1.6, SPDX 2.3 |         |         |
 
 
 ### Supplier
@@ -460,10 +460,10 @@ Has the legal ownership rights and liabilities for the component.
 Is usually the [Author](#author), a business or some other type of legal entity.
 May decide the name of the project and other project parameters for (or on behalf of) the [Author](#author) or [Developer](#developer).
 
-| Ops | Field name                      | Required | Required by                        | Comment |
-| :-: | :------------------------------ | :------: | :--------------------------------- | ------- |
-| 🟥  | Supplier Name (Owner)           | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |
-| 🟥  | License(s) (Product, Component) | Yes      |                                    | Confirm which spec/Laws/License |
+| Ops | Field name                      | Required | Required by                        | Comment | TODO    |
+| :-: | :------------------------------ | :------: | :--------------------------------- | ------- | ------- |
+| 🟥  | Supplier Name (Owner)           | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |         |
+| 🟥  | License(s) (Product, Component) | Yes      |                                    |         | Confirm which spec/Laws/License |
 
 * See also
   * [Manufacturer](#manufacturer)
@@ -479,13 +479,13 @@ May decide the name of the project and other project parameters for (or on behal
 A role within an [Integrator Environment](#integrator-environment).
 When doing business within the European Economic Area (EEA), has the duty to ensure that the conformity obligations in the EU Cyber Resilience Act are met. (CRA-AV)
 
-| Ops | Field name                    | Required | Required by                        | Comment |
-| :-: | :---------------------------- | :------: | ---------------------------------- | ------- |
-| 🟥  | Supplier Name (Manufacturer)  | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |
-| 🟥  | CE Declaration of Conformity  | Yes      | CRA-AII(6), CRA-AV                 |         |
-| 🟥  | CE Support End Date           | Yes      | CRA-AII(7)                         |         |
-| 🟥  | CE Technical Documentation    | Yes      | CRA-AII(8), CRA-AVII               |         |
-| 🟥  | CE Conformity Assessment Body | Yes      | CRA Article 47.1, CRA-AV           |         |
+| Ops | Field name                    | Required | Required by                        | Comment | TODO    |
+| :-: | :---------------------------- | :------: | ---------------------------------- | ------- | ------- |
+| 🟥  | Supplier Name (Manufacturer)  | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |         |
+| 🟥  | CE Declaration of Conformity  | Yes      | CRA-AII(6), CRA-AV                 |         |         |
+| 🟥  | CE Support End Date           | Yes      | CRA-AII(7)                         |         |         |
+| 🟥  | CE Technical Documentation    | Yes      | CRA-AII(8), CRA-AVII               |         |         |
+| 🟥  | CE Conformity Assessment Body | Yes      | CRA Article 47.1, CRA-AV           |         |         |
 
 * See also
   * [Owner](#owner--supplier-)
@@ -510,27 +510,27 @@ An author or developer of an Open Source component project.
 * Not to be confused with the [SBOM Author](#sbom-author--role-) role.
 * Other common names for this role include Author, Developer, [Owner](#owner--supplier-).
 
-| Ops | Field name                       | Required | Required by                                | Comment |
-| :-: | :------------------------------- | :------: | ------------------------------------------ | ------- |
-| 🟥  | Component Name                   | Yes      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |         |
-| 🟥  | Version                          | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |
-| 🟥  | Dependencies (Embedded)          | Yes      | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
-| 🟥  | Security contact (Component)     | Yes      | CRA-AII(2)                                 | Confirm field variations |
-| 🟥  | Unique Product ID                | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |
-| 🟥  | Purpose, Intended Use            | Yes      | CRA-AII(4)                                 |         |
-| 🟥  | Code Repository                  | Yes      |                                            |         |
-| 🟥  | Project Sustainability           | No       |                                            | CycloneDX 1.7 proposed |
-| 🟥  | Intended for Commercial Use      | No       | CRA-Rec-15                                 |         |
-| 🟥  | Open-Source Software Steward     | No       | CRA                                        | Confirm CRA Article |
-| 🟥  | Code Commit Revision             | No       |                                            | Consider recommendation |
-| 🟨  | License(s) (Component, Embedded) | Yes      |                                            | Confirm which spec/Laws/License |
-| 🟨  | Supplier Name (Maintainer)       | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |
-| 🟨  | SBOM Location                    | No       | CRA-AII(9)                                 | Confirm CRA Article |
-| 🟨  | SBOM Type                        | FIXME    |                                            | Confirm req/spec |
-| 🟨  | SBOM Author                      | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
-| 🟨  | SBOM Creation Time-stamp         | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
-| 🟨  | SBOM Serial Number               | Yes      |                                            | Confirm req/spec |
-| 🟨  | SBOM Generation Tool             | No       |                                            | Consider recommendation |
+| Ops | Field name                       | Required | Required by                                | Comment | TODO    |
+| :-: | :------------------------------- | :------: | ------------------------------------------ | ------- | ------- |
+| 🟥  | Component Name                   | Yes      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |         |         |
+| 🟥  | Version                          | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |         |
+| 🟥  | Dependencies (Embedded)          | Yes      | CRA-AII(5), NTIA-SBOM                      |         | Confirm if necessary |
+| 🟥  | Security contact (Component)     | Yes      | CRA-AII(2)                                 |         | Confirm field variations |
+| 🟥  | Unique Product ID                | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |         |
+| 🟥  | Purpose, Intended Use            | Yes      | CRA-AII(4)                                 |         |         |
+| 🟥  | Code Repository                  | Yes      |                                            |         |         |
+| 🟥  | Project Sustainability           | No       |                                            | CycloneDX 1.7 proposed | |
+| 🟥  | Intended for Commercial Use      | No       | CRA-Rec-15                                 |         |         |
+| 🟥  | Open-Source Software Steward     | No       | CRA                                        |         | Confirm CRA Article |
+| 🟥  | Code Commit Revision             | No       |                                            |         | Consider recommendation |
+| 🟨  | License(s) (Component, Embedded) | Yes      |                                            |         | Confirm which spec/Laws/License |
+| 🟨  | Supplier Name (Maintainer)       | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |         |
+| 🟨  | SBOM Location                    | No       | CRA-AII(9)                                 |         | Confirm CRA Article |
+| 🟨  | SBOM Type                        | FIXME    |                                            |         | Confirm req/spec |
+| 🟨  | SBOM Author                      | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
+| 🟨  | SBOM Creation Time-stamp         | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
+| 🟨  | SBOM Serial Number               | Yes      |                                            |         | Confirm req/spec |
+| 🟨  | SBOM Generation Tool             | No       |                                            |         | Consider recommendation |
 
 * See also
   * [Maintainer](glossary#maintainer) in the Glossary.
@@ -547,13 +547,13 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 * Works with the Maintainer primarily, and may take responsibility on their behalf when it comes to security concerns.
 * May work on behalf of the Maintainer if they are unavailable or unresponsive.
 
-| Ops | Field name                     | Required | Required by                                | Comment |
-| :-: | :----------------------------- | :------: | ------------------------------------------ | ------- |
-| 🟨  | Version                        | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |
-| 🟨  | Dependencies (Embedded)        | Maybe    | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
-| 🟨  | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |
-| 🟨  | Supplier Name (Maintainer)     | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |
-| 🟨  | Project Sustainability         | No       |                                            | CycloneDX 1.7 proposed |
+| Ops | Field name                     | Required | Required by                                | Comment | TODO    |
+| :-: | :----------------------------- | :------: | ------------------------------------------ | ------- | ------- |
+| 🟨  | Version                        | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |         |
+| 🟨  | Dependencies (Embedded)        | Maybe    | CRA-AII(5), NTIA-SBOM                      |         | Confirm if necessary |
+| 🟨  | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |         |
+| 🟨  | Supplier Name (Maintainer)     | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |         |
+| 🟨  | Project Sustainability         | No       |                                            | CycloneDX 1.7 proposed | |
 
 #### Contributor
 
@@ -586,17 +586,17 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 * A role specifically used when a EU entity makes available software on the EU market,
 * Is required to verify that the imported software is compliant with the EU Cyber Resilience Act according to it's Article 19.
 
-| Ops | Field name                      | Required | Required by              | Comment |
-| :-: | :------------------------------ | :------: | ------------------------ | ------- |
-| 🟦  | Security contact                | Yes      | CRA-AII(2)               |         |
-| 🟦  | Unique Product ID               | Yes      | CRA-AII(3), NTIA-SBOM    |         |
-| 🟦  | Purpose, Intended Use           | Yes      | CRA-AII(4)               |         |
-| 🟦  | SBOM Location                   | No       | CRA-AII(9)               |         |
-| 🟦  | CE Declaration of Conformity    | No       | CRA-AII(6), CRA-AV       |         |
-| 🟦  | CE Support End Date             | No       | CRA-AII(7)               |         |
-| 🟦  | CE Instructions (Documentation) | No       | CRA-AII(8)               |         |
-| 🟦  | CE Conformity Assessment Body   | No       | CRA Article 47.1, CRA-AV |         |
-| 🟦  | Download location               | FIXME    |                          |         |
+| Ops | Field name                      | Required | Required by              | Comment | TODO    |
+| :-: | :------------------------------ | :------: | ------------------------ | ------- | ------- |
+| 🟦  | Security contact                | Yes      | CRA-AII(2)               |         |         |
+| 🟦  | Unique Product ID               | Yes      | CRA-AII(3), NTIA-SBOM    |         |         |
+| 🟦  | Purpose, Intended Use           | Yes      | CRA-AII(4)               |         |         |
+| 🟦  | SBOM Location                   | No       | CRA-AII(9)               |         |         |
+| 🟦  | CE Declaration of Conformity    | No       | CRA-AII(6), CRA-AV       |         |         |
+| 🟦  | CE Support End Date             | No       | CRA-AII(7)               |         |         |
+| 🟦  | CE Instructions (Documentation) | No       | CRA-AII(8)               |         |         |
+| 🟦  | CE Conformity Assessment Body   | No       | CRA Article 47.1, CRA-AV |         |         |
+| 🟦  | Download location               | FIXME    |                          |         |         |
 
 * See also
    * [Importer](#glossary.md#importer).
@@ -622,18 +622,18 @@ This role is necessary when...
 * When downstream constraints and requirements call for it – e.g. when back-porting of fixes are needed due to downstream LTS requirements.
 
 
-| Ops | Field name                        | Required | Required by             | Comment |
-| :-: | :-------------------------------- | :------: | ----------------------- | ------- |
-| 🟦  | Security contact (Upstream)       | Yes      | CRA-AII(2)              | Confirm Role need |
-| 🟦  | Unique Product ID (Upstream)      | Yes      | CRA-AII(3), NTIA-SBOM   | Confirm Role need |
-| 🟦  | Version (Upstream)                | Yes      | NTIA-SBOM, DE-TR.5.2.2  | Confirm Role need |
-| 🟦  | Dependencies (Upstream, Embedded) | Yes      | CRA-AII(5), NTIA-SBOM   | Confirm if necessary |
-| 🟦  | Download location (Upstream)      | FIXME    |                         | Confirm Role need, req/spec |
-| 🟦  | SBOM Location (Upstream)          | No       | CRA-AII(9)              | Confirm Role need |
-| 🟦  | License(s)                        | Yes      |                         |         |
-| 🟨  | Version (Redistributed)           | Yes      | NTIA-SBOM, DE-TR.5.2.2  |         |
-| 🟨  | Unique Product ID (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   | Check if field is replaced or added |
-| 🟨  | Project Sustainability            | No       |                         | CycloneDX 1.7 proposed |
+| Ops | Field name                        | Required | Required by             | Comment | TODO    |
+| :-: | :-------------------------------- | :------: | ----------------------- |         | ------- |
+| 🟦  | Security contact (Upstream)       | Yes      | CRA-AII(2)              |         | Confirm Role need |
+| 🟦  | Unique Product ID (Upstream)      | Yes      | CRA-AII(3), NTIA-SBOM   |         | Confirm Role need |
+| 🟦  | Version (Upstream)                | Yes      | NTIA-SBOM, DE-TR.5.2.2  |         | Confirm Role need |
+| 🟦  | Dependencies (Upstream, Embedded) | Yes      | CRA-AII(5), NTIA-SBOM   |         | Confirm if necessary |
+| 🟦  | Download location (Upstream)      | FIXME    |                         |         | Confirm Role need, req/spec |
+| 🟦  | SBOM Location (Upstream)          | No       | CRA-AII(9)              |         | Confirm Role need |
+| 🟦  | License(s)                        | Yes      |                         |         |         |
+| 🟨  | Version (Redistributed)           | Yes      | NTIA-SBOM, DE-TR.5.2.2  |         |         |
+| 🟨  | Unique Product ID (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if field is replaced or added |
+| 🟨  | Project Sustainability            | No       |                         | CycloneDX 1.7 proposed | |
 
 
 ### Builder
@@ -661,9 +661,9 @@ Within a package ecosystem, builds and creates packages from components received
 Within an author environment, creates packages from their own project in preparation for publication in a downstream [Language Ecosystem](#language-ecosystem) (e.g. create a CPAN package for uploading to CPAN using the PAUSE interface).
 Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
 
-| Ops | Field name              | Required | Required by                        | Comment |
-| :-: | :---------------------- | :------: | ---------------------------------- | ------- |
-| 🟥  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM              |         |
+| Ops | Field name              | Required | Required by                        | Comment | TODO    |
+| :-: | :---------------------- | :------: | ---------------------------------- | ------- | ------- |
+| 🟥  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM              |         |         |
 
 #### Assembler
 
@@ -674,9 +674,9 @@ Concerns themselves with correct package format and structure, and that package 
 Operates within a [Package Ecosystem](#package-ecosystem), creating containers.
 Builds, installs package dependencies and creates container images from a base images.
 
-| Ops | Field name              | Required | Required by           | Comment |
-| :-: | :---------------------- | :------: | --------------------- | ------- |
-| 🟥  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM |         |
+| Ops | Field name              | Required | Required by           | Comment | TODO    |
+| :-: | :---------------------- | :------: | --------------------- | ------- | ------- |
+| 🟥  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM |         |         |
 
 #### Deployer
 
@@ -686,9 +686,9 @@ Builds, installs package dependencies and creates container images from a base i
 Operates within a [Production Environment](#production-environment).
 Final preparation and installation of the software into a CI/CD or other deployment method an [Integrator](#integrator-environment) or [Production Environment](#production-environment).
 
-| Ops | Field name                     | Required | Required by           | Comment |
-| :-: | :----------------------------- | :------: | --------------------- | ------- |
-| 🟥  | Dependencies (Deployed)        | Yes      | CRA-AII(5), NTIA-SBOM | Confirm if necessary |
+| Ops | Field name                     | Required | Required by           | Comment | TODO    |
+| :-: | :----------------------------- | :------: | --------------------- | ------- | ------- |
+| 🟥  | Dependencies (Deployed)        | Yes      | CRA-AII(5), NTIA-SBOM |         | Confirm if necessary |
 
 #### Installer
 
@@ -706,11 +706,11 @@ Final preparation and installation of the software into a CI/CD or other deploym
 
 Within a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#package-ecosystem) the OSS Steward has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
 
-| Ops | Field name                     | Required | Required by            | Comment |
-| :-: | :----------------------------- | :------: | ---------------------- | ------- |
-| 🟦  | Open-Source Software Steward   | Yes      | CRA-Rec-19             |         |
-| 🟦  | Intended for Commercial Use    | Yes      | CRA-Rec-15, CRA-Rec-18 |         |
-| 🟥  | Security Attestation           | Yes      | CRA-Rec-21             | Confirm with standardization body |
+| Ops | Field name                     | Required | Required by            | Comment | TODO    |
+| :-: | :----------------------------- | :------: | ---------------------- | ------- | ------- |
+| 🟦  | Open-Source Software Steward   | Yes      | CRA-Rec-19             |         |         |
+| 🟦  | Intended for Commercial Use    | Yes      | CRA-Rec-15, CRA-Rec-18 |         |         |
+| 🟥  | Security Attestation           | Yes      | CRA-Rec-21             |         | Confirm with standardization body |
 
 * See also
   * [Maintainer](#maintainer), and
@@ -732,10 +732,10 @@ Selects or pins which components are suitable for use downstream of the package 
 Works mainly with the [Distributor](#distributor) role.
 Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bug fixes and security updates.
 
-| Ops | Field name                     | Required | Required by           | Comment |
-| :-: | :----------------------------- | :------: | --------------------- | ------- |
-| 🟥  | Download location (Repackaged) | No       |                       |         |
-| 🟥  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            | Confirm if this is an update or an addition |
+| Ops | Field name                     | Required | Required by           | Comment | TODO    |
+| :-: | :----------------------------- | :------: | --------------------- | ------- | ------- |
+| 🟥  | Download location (Repackaged) | No       |                       |         |         |
+| 🟥  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         | Confirm if this is an update or an addition |
 
 
 ### Depositary
@@ -771,10 +771,10 @@ Ensures the availability of packages or containers, that they are indexed correc
    * [CISA SBOM Sharing Roles and Considerations](#references) (CISA-2024)
    * [CRA Article 20](#references) (CRA-Art-20)
 
-| Ops | Field name                     | Required | Required by           | Comment |
-| :-: | :----------------------------- | :------: | --------------------- | ------- |
-| 🟦  | Download location (Repackaged) | Yes      |                       |         |
-| 🟦  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |
+| Ops | Field name                     | Required | Required by           | Comment | TODO    |
+| :-: | :----------------------------- | :------: | --------------------- | ------- | ------- |
+| 🟦  | Download location (Repackaged) | Yes      |                       |         |         |
+| 🟦  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |         |
 
 
 ### Developer
@@ -791,27 +791,27 @@ A Developer that publishes their software as [Open-Source Software](glossary.md#
   * [Maintainer](#maintainer)
   * [Integrator](#integrator)
 
-| Ops | Field name                        | Required | Required by                                | Comment |
-| :-: | :-------------------------------- | :------: | ------------------------------------------ | ------- |
-| 🟦  | Project Sustainability (Upstream) | No       |                                            | CycloneDX 1.7 proposed |
-| 🟦  | License(s)                        | Yes      |                                            |         |
-| 🟥  | Component Name                    | Yes      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |         |
-| 🟥  | Version                           | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |
-| 🟥  | Dependencies (Embedded)           | Yes      | CRA-AII(5), NTIA-SBOM                      | Confirm if necessary |
-| 🟥  | Security contact (Component)      | Yes      | CRA-AII(2)                                 | Confirm field variations |
-| 🟥  | Unique Product ID                 | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |
-| 🟥  | Purpose, Intended Use             | Yes      | CRA-AII(4)                                 |         |
-| 🟥  | Code Repository                   | Yes      |                                            |         |
-| 🟥  | Project Sustainability            | No       |                                            | CycloneDX 1.7 proposed |
-| 🟥  | Code Commit Revision              | No       |                                            | Consider recommendation |
-| 🟨  | Supplier Name (Integrator)        | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |
-| 🟨  | License(s) (Product, Embedded)    | Yes      |                                            | Confirm which spec/Laws/License |
-| 🟨  | SBOM Author                       | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
-| 🟨  | SBOM Creation Time-stamp          | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |
-| 🟨  | SBOM Serial Number                | Yes      |                                            | Confirm req/spec |
-| 🟨  | SBOM Type                         | FIXME    |                                            | Confirm req/spec |
-| 🟨  | SBOM Location                     | No       | CRA-AII(9)                                 | Confirm CRA Article |
-| 🟨  | SBOM Generation Tool              | No       |                                            | Consider recommendation |
+| Ops | Field name                        | Required | Required by                                | Comment | TODO    |
+| :-: | :-------------------------------- | :------: | ------------------------------------------ | ------- | ------- |
+| 🟦  | Project Sustainability (Upstream) | No       |                                            | CycloneDX 1.7 proposed | |
+| 🟦  | License(s)                        | Yes      |                                            |         |         |
+| 🟥  | Component Name                    | Yes      | NTIA-SBOM, DE-TR.5.2.2, CRA-AV             |         |         |
+| 🟥  | Version                           | Yes      | NTIA-SBOM, DE-TR.5.2.2                     |         |         |
+| 🟥  | Dependencies (Embedded)           | Yes      | CRA-AII(5), NTIA-SBOM                      |         | Confirm if necessary |
+| 🟥  | Security contact (Component)      | Yes      | CRA-AII(2)                                 |         | Confirm field variations |
+| 🟥  | Unique Product ID                 | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |         |
+| 🟥  | Purpose, Intended Use             | Yes      | CRA-AII(4)                                 |         |         |
+| 🟥  | Code Repository                   | Yes      |                                            |         |         |
+| 🟥  | Project Sustainability            | No       |                                            | CycloneDX 1.7 proposed | |
+| 🟥  | Code Commit Revision              | No       |                                            |         | Consider recommendation |
+| 🟨  | Supplier Name (Integrator)        | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |         |
+| 🟨  | License(s) (Product, Embedded)    | Yes      |                                            |         | Confirm which spec/Laws/License |
+| 🟨  | SBOM Author                       | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
+| 🟨  | SBOM Creation Time-stamp          | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
+| 🟨  | SBOM Serial Number                | Yes      |                                            |         | Confirm req/spec |
+| 🟨  | SBOM Type                         | FIXME    |                                            |         | Confirm req/spec |
+| 🟨  | SBOM Location                     | No       | CRA-AII(9)                                 |         | Confirm CRA Article |
+| 🟨  | SBOM Generation Tool              | No       |                                            |         | Consider recommendation |
 
 
 #### Integrator
@@ -841,12 +841,12 @@ May operate within a [Production Environment](#production-environment) or an [In
 Responsible for security checks, including runtime, dynamic and static checks, vulnerability monitoring, etc.
 Communicates any issues or findings to any number of upstream roles, including the component [Deployer](#deployer), [Developer](#developer) or [Maintainer](#maintainer).
 
-| Ops | Field name             | Required | Required by           | Comment |
-| :-: | :--------------------- | :------: | --------------------- | ------- |
-| 🟦  | Security contact       | Yes      | CRA-AII(2)            |         |
-| 🟦  | Unique Product ID      | Yes      | CRA-AII(3), NTIA-SBOM |         |
-| 🟦  | Security Attestation   | Yes      | CRA-Rec-21            |         |
-| 🟦  | Project Sustainability | No       |                       | CycloneDX 1.7 proposed |
+| Ops | Field name             | Required | Required by           | Comment | TODO    |
+| :-: | :--------------------- | :------: | --------------------- | ------- | ------- |
+| 🟦  | Security contact       | Yes      | CRA-AII(2)            |         |         |
+| 🟦  | Unique Product ID      | Yes      | CRA-AII(3), NTIA-SBOM |         |         |
+| 🟦  | Security Attestation   | Yes      | CRA-Rec-21            |         |         |
+| 🟦  | Project Sustainability | No       |                       | CycloneDX 1.7 proposed | |
 
 
 #### SecOps
@@ -875,20 +875,20 @@ The software in use, in production, by a user.
 Verifies that all necessary metadata is available, up-to-date and made use of.
 This role is required by the EU Cyber Resilience Act. FIXME – find specific article.
 
-| Ops | Field name                     | Required | Required by           | Comment |
-| :-: | :----------------------------- | :------: | --------------------- | ------- |
-| 🟦  | Security contact               | Yes      | CRA-AII(2)            |         |
-| 🟦  | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM |         |
-| 🟦  | Purpose, Intended Use          | Yes      | CRA-AII(4)            |         |
-| 🟦  | Security Attestation           | Yes      | CRA-Rec-21            |         |
-| 🟦  | License(s)                     | Yes      |                       |         |
-| 🟦  | SBOM Location                  | No       | CRA-AII(9)            |         |
-| 🟦  | CE Declaration of Conformity   | No       | CRA-AII(6), CRA-AV    |         |
-| 🟦  | CE Support End Date            | No       | CRA-AII(7)            |         |
-| 🟦  | CE Instructions                | No       | CRA-AII(8)            |         |
-| 🟦  | CE Conformity Assessment Body  | No       | CRA-Art-47(1), CRA-AV |         |
-| 🟦  | Download location              | Yes      |                       |         |
-| 🟦  | Project Sustainability         | No       |                       | CycloneDX 1.7 proposed |
+| Ops | Field name                     | Required | Required by           | Comment | TODO    |
+| :-: | :----------------------------- | :------: | --------------------- | ------- | ------- |
+| 🟦  | Security contact               | Yes      | CRA-AII(2)            |         |         |
+| 🟦  | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM |         |         |
+| 🟦  | Purpose, Intended Use          | Yes      | CRA-AII(4)            |         |         |
+| 🟦  | Security Attestation           | Yes      | CRA-Rec-21            |         |         |
+| 🟦  | License(s)                     | Yes      |                       |         |         |
+| 🟦  | SBOM Location                  | No       | CRA-AII(9)            |         |         |
+| 🟦  | CE Declaration of Conformity   | No       | CRA-AII(6), CRA-AV    |         |         |
+| 🟦  | CE Support End Date            | No       | CRA-AII(7)            |         |         |
+| 🟦  | CE Instructions                | No       | CRA-AII(8)            |         |         |
+| 🟦  | CE Conformity Assessment Body  | No       | CRA-Art-47(1), CRA-AV |         |         |
+| 🟦  | Download location              | Yes      |                       |         |         |
+| 🟦  | Project Sustainability         | No       |                       | CycloneDX 1.7 proposed | |
 
 #### Compliance
 

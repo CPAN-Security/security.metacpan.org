@@ -22,6 +22,7 @@ toc: true
 * (NTIA) [Survey of Existing SBOM Formats and Standards](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) (2021)
 * (CISA) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (April 2023)
 
+
 ### SBOM use cases
 
 * (CDX) [CycloneDX Use Cases](https://cyclonedx.org/use-cases/)
@@ -42,6 +43,7 @@ toc: true
 * (SPDX) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 3.0)
 * (CISA) [SBOM Sharing Primer](https://www.cisa.gov/resources-tools/resources/sbom-sharing-primer)
 
+
 ### SBOM Standards
 
 * (ISO/IEC 5962:2021) [SPDX® Specification V2.2.1](https://standards.iso.org/ittf/PubliclyAvailableStandards/c081870_ISO_IEC_5962_2021%28E%29.zip) (Source: ISO's [Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/index.html) list)
@@ -54,6 +56,7 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 * [PURL Specification](https://github.com/package-url/purl-spec)
 * (CPAN) [URI::PackageURL](https://github.com/giterlizzi/perl-URI-PackageURL)
 * (CPAN) [CPAN::DistnameInfo](https://github.com/Perl-Toolchain-Gang/CPAN-DistnameInfo)
+
 
 ### Useful articles, papers and resources
 
@@ -85,10 +88,12 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 There are several relevant legislation regarding cybersecurity in Open Source ecosystems and supply chains.
 
+
 ### USA – EO 14028
 
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) (EO 14028, 2021-05-12)
     * Section 4: Enhancing Software Supply Chain Security
+
 
 ### EU and EEA – NIS2
 
@@ -109,6 +114,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Articles 21, points 1, 2 and 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 
+
 ### EU and EEA – CRA
 
 (EU) [Cyber Resilience Act](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html) (CRA, updated 2024-03-12)
@@ -118,7 +124,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 #### CRA Recitals
 
-[CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11) are for explaining the background and context for the regulation. The ordering is the same as the Articles. These are for interpretation, and not legally binding.
+[CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11) are for explaining the background and context for the regulation. The ordering is the same as in the Articles. These are for interpretation, and not legally binding.
 
 * Recital (10): CRA relevance for supply chains (page 11)
 * Recitals (16-17): CRA relevance for Open Source projects (page 18-19)
@@ -139,6 +145,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Recitals (60-62): Support period (page 69-71)
 * Recital (64): Point of contact (page 73)
 * Recital (65): Secure by default (page 73)
+* Recital (118): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […] (page 121)
 
 
 #### CRA Articles
@@ -146,12 +153,13 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 [CRA Articles](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136) are legally binding, and describes the scope, definitions and law.
 
 * Chapter I
-    * Article 3, Definitions (pages 136-146)
+    * **Article 3**, Definitions (pages 136-146)
     * Article 9, Point 1. (b-c), Stakeholder consultation (pages 155-156)
 * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
     * **Article 13**, Obligations of Manufacturers (pages 161-175)
         * **Section 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
         * Section 6, "[…] they shall share the relevant code or documentation […]" (page 164)
+        * Section 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 168)
     * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
     * **Article 15**, Voluntary reporting (pages 185-186)
     * Article 16, Establishment of a single reporting platform (pages 187-192)
@@ -193,6 +201,7 @@ Annexes are technical materials presented separately from the main text, and hav
 * Eclipse Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
 * Eclipse ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)
 * Eclipse ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
+* (EU) The '[Blue Guide](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.247.01.0001.01.ENG&toc=OJ%3AC%3A2022%3A247%3ATOC)' on the implementation of EU product rules (2022/C 247/01). (Published 2022-06-29)
 
 
 ### EU and EEA – PLD
@@ -200,6 +209,7 @@ Annexes are technical materials presented separately from the main text, and hav
 (EU) Product Liability Directive (PLD)
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive)
+
 
 ### EU and EEA – DORA
 
@@ -214,6 +224,21 @@ Annexes are technical materials presented separately from the main text, and hav
 * (CPAN) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html) – describing the different personas or roles involved in the life-cycle of a CPAN distribution.
 * (CISA) [Software Aquisition Guide](https://www.cisa.gov/resources-tools/resources/software-acquisition-guide-government-enterprise-consumers-software-assurance-cyber-supply-chain)
 
+### PCI-SSF
+
+The Payment Card Industry Software Security Framework v1.2.1, Control Objective C.1, states
+
+> * C.1
+>     * All components and services used by the software are identified and maintained in a manner that minimizes the exposure of vulnerabilities.
+> * C.1.1
+>     * Control Objective: All software components and services are documented or otherwise cataloged in a software bill of materials (SBOM).
+>     * Test Requirements: The assessor shall examine evidence to confirm that information is maintained that describes all software components and services comprising the software solution, including:
+>         * All proprietary software libraries, packages, modules, and/or code packaged in a manner that enables them to be tracked as a freestanding unit of software.
+>         * All third-party and open-source frameworks, libraries, and code embedded in or used by the software during operation.
+>         * All third-party software dependencies, APIs, and services called by the software during operation.
+>     * Guidance: […] Knowing all of the components that comprise a software application or service, where they come from, and how they are updated and maintained is critical to minimizing and managing vulnerabilities in software applications. Without this information, it would be extremely difficult to identify and track vulnerabilities in software components that could expose the embedding software application to attacks. […]
+
+* (PCI-SSC) [PCI-SSF v1.2.1](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), Published May 2023
 
 ## License and use of this document
 
@@ -222,6 +247,7 @@ Annexes are technical materials presented separately from the main text, and hav
 * Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the CC-BY-SA-4.0 license.
+
 
 ### Acknowledgements
 

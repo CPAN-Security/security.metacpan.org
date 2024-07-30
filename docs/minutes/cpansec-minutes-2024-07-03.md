@@ -38,9 +38,8 @@ This meeting was done in Element/[Matrix], which uses Jitsi. Went well.
 1. We have sent PRs to master and development
 2. An independant PR has been sent into the official perl-docker image.
 3. Trying to push for use of the new patched version
-4. What are the next steps 
-5. Some arguement about whether to accept into the docker images.
-6. @Tux mentioned the failback is needed - an environment variable would suffice
+4. Some arguement about whether to accept into the docker images.
+5. @Tux mentioned the failback is needed - an environment variable would suffice
 
 ### CNA process is initiated with Mitre
 1. @timlegge: Mitre finally got back to me and has some information they need as well as scheduling a meeting with them to discuss
@@ -72,7 +71,7 @@ This meeting was done in Element/[Matrix], which uses Jitsi. Went well.
 1. @sjn - no update
 
 ### POSIX::2008 vulnerabilities
-1. Need to look at register CVE for that
+1. @stigsto mentioned needing to look at registering CVE for that.
 
 ### SBOM/Supply Chain
 - @sjn - has been sharing and still a WIP.  The contents are in a good place at this time.

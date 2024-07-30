@@ -50,7 +50,7 @@ No updates
 
 ### TLS/HTTPS in core
 1. Options documented
-1. Currently only opensssl
+1. Currently only openssl
 1. Should have more ssl backends
 1. licensing is a concern - may need someone familiar with licensing to discuss
 1. @sjn will reach out to some legal

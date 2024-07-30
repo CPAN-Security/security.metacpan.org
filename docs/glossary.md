@@ -74,9 +74,9 @@ toc: true
 
 ### Chain of custody
 
-> 1. (SCVS-2020) Auditable documentation of point of origin as well as the method of transfer from point of origin to point of destination and the identity of the transfer agent.
+> 1. (SCVS-2020, CDXAG-2024) Auditable documentation of point of origin as well as the method of transfer from point of origin to point of destination and the identity of the transfer agent.
 >
-> (Ref: [SCVS-2020](#references-and-terms))
+> (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024)
 
 
 ### Component ✍️
@@ -94,32 +94,32 @@ toc: true
 
 #### Component function
 
-> 1. (SCVS-2020) The purpose for which a software component exists.
+> 1. (SCVS-2020, CDXAG-2024) The purpose for which a software component exists.
 >     * Examples of component functions include parsers, database persistence, and authentication providers.
 >
-> (Ref: [SCVS-2020](#references-and-terms))
+> (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024)
 
 #### Component, second-party ✍️
 
 > 1. (CPANSec-2024) Any software component created through the interaction with a second party, including open source, "source available", and proprietary software where the source is made available for either inspection, use, modification, building or sharing.
->     * Open Source software components that are dependencies should be considered as "second-party components", since the user of these components have an ongoing legal relationship with the FOSS component project, by the fact that the user has accepted the project license.
+>     * Open Source software components that an application has as dependencies should be considered as "second-party" components or dependencies, since the application owner has an ongoing relationship with the FOSS component project, by the fact that the owner has accepted the open source project's license.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
 #### Component, third-party ✍️
 
-> 1. (SCVS-2020) Any software component not directly created including open source, "source available", and commercial or proprietary software.
+> 1. (SCVS-2020, CDXAG-2024) Any software component not directly created including open source, "source available", and commercial or proprietary software.
 > 1. (CPANSec-2024) Any software component not directly created including "source available", commercial or proprietary software.
->     * Open Source software components that are dependencies should be considered as "second-party components", since the user of these components have an ongoing legal relationship with the FOSS component project, by the fact that the user has accepted the project license.
+>     * See [Component, second-party](#component--second-party-).
 >
-> (Ref: [SCVS-2020](#references-and-terms), CPANSec-2024)
+> (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 #### Component type
 
-> 1. (SCVS-2020) The general classification of a software components architecture.
+> 1. (SCVS-2020, CDXAG-2024) The general classification of a software components architecture.
 >     * Examples of component types include libraries, frameworks, applications, containers, and operating systems.
 >
-> (Ref: [SCVS-2020](#references-and-terms))
+> (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024)
 
 
 ### Consumer
@@ -149,18 +149,19 @@ toc: true
 > (Ref: [SLSA-2023](#references-and-terms), NTIA-2021, CPANSec-2024)
 
 > [!CAUTION]
-> * (CPANSec-2024) Dependencies may be declared/stated/referenced or included/embedded or assumed/implied/detected, phase-specific (e.g. developer, build, test, deploy, or runtime-specific), dynamic or static, unresolved or resolved, or direct or transitive.
+> * (CPANSec-2024) Dependencies may be declared/stated/referenced or included/embedded or assumed/implied/detected, development phase-specific (e.g. developer, build, test, deploy, or runtime-specific), dynamic or static, unresolved or resolved, direct or transitive, or required, recommended or suggested.
 >     * The NTIA-2021 definition above is therefore not only **wrong**, but also **entirely insufficient** — is for any practical purpose useless and should not be used.
 >     * The SLSA-2023 definition above is preferrable, though it doesn't sufficiently distinguish between stated, embedded and assumed dependencies.
 
 #### Dependency (Direct) ✍️
 
-> 1. (SCVS-2020) A software component that is referenced by a ~~program~~ [software](#software) itself.
-> 1. (CPANSec-2024) A program, library, plugin, service, resource or component that is required for another component to function as expected.
+> 1. (SCVS-2020, CDXAG-2024) A software component that is referenced by a program itself.
+> 1. (CPANSec-2024) A [software](#software) program, library, plugin, service, resource or component that is required for another software program or component to function as expected.
 >
-> For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive-).
+> * See also
+>     * For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive-).
 >
-> (Ref: [SCVS-2020](#references-and-terms), CPANSec-2024)
+> (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 #### Dependency (Transitive) ✍️
 
@@ -371,24 +372,26 @@ toc: true
 
 ### Package manager ✍️
 
-> 1. (SCVS-2020) A distribution mechanism that makes software artifacts discoverable by ~~requesters~~ users of a specific package ecosystem.
+> 1. (SCVS-2020, CDXAG-2024) A distribution mechanism that makes software artifacts discoverable by requesters of a specific package ecosystem.
+> 1. (CPANSec-2024) A distribution mechanism that makes software artifacts discoverable and installable by users of a specific package ecosystem.
 >
-> (Ref: [SCVS-2020](#references-and-terms), CPANSec-2024)
+> (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
 ### Package URL (PURL)
 
-> 1. (SCVS-2020) An ecosystem-agnostic specification which standardizes the syntax and location information of software components. The PURL spec can be found in [GitHub](https://github.com/package-url/purl-spec). As it is an open source project it is constantly evolving.
+> 1. (SCVS-2020, CDXAG-2024) An ecosystem-agnostic specification which standardizes the syntax and location information of software components.
+>    * (CPANSec-2024) The PURL spec can be found in [GitHub](https://github.com/package-url/purl-spec). As it is an open source project it is constantly evolving.
 >
-> (Ref: [SCVS-2020](#references-and-terms))
+> (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
 ### Pedigree
 
-> 1. (SCVS-2020) Data which describes the lineage and/or process for which software has been created or altered.
+> 1. (SCVS-2020, CDXAG-2024) Data which describes the lineage and/or process for which software has been created or altered.
 > 1. (NTIA-2021) Data on the origins of components that have come together to make a piece of software and the process under which they came together. This could include data beyond the minimum elements, such as compiler details and settings.
 >
-> (Ref: [SCVS-2020](#references-and-terms), NTIA-2021)
+> (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, NTIA-2021)
 
 
 ### Placing on the market
@@ -400,19 +403,19 @@ toc: true
 
 ### Point of origin ⚠️  ✍️
 
-> 1. (SCVS-2020) The supplier and associated metadata from which a software component has been procured, transmitted, or received.
->     * ~~Package repositories, release distribution platforms, and version control history are examples of various points of origin.~~
-> 1. (CPANSec-2024) Discouraged term. Confusing definition, having common meaning with both [Source](#source---), [Manufacturer](#manufacturer) and [Distributor](#distrubutor-).
+> 1. (SCVS-2020, CDXAG-2024) The supplier and associated metadata from which a software component has been procured, transmitted, or received.
+>     * Package repositories, release distribution platforms, and version control history are examples of various points of origin.
+> 1. (CPANSec-2024) Discouraged term – Confusing definition, having common meaning with both [Source](#source---), [Manufacturer](#manufacturer) and [Distributor](#distrubutor-). 
 >
-> (Ref: [SCVS-2020](#references-and-terms), CPANSec-2024)
+> (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
 ### Procurement ✍️
 
-> 1. (SCVS-2020) The process of agreeing to terms and acquiring software or services for later use.
-> 1. (CPANSec-2024) This includes agreeing to Open Source licenses.
+> 1. (SCVS-2020, CDXAG-2024) The process of agreeing to terms and acquiring software or services for later use.
+>     * (CPANSec-2024) This includes agreeing to Open Source licenses.
 >
-> (Ref: [SCVS-2020](#references-and-terms), CPANSec-2024)
+> (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
 ### Product with digital elements
@@ -424,8 +427,8 @@ toc: true
 
 ### Provenance ✍️
 
-> 1. (SCVS-2020) The [chain of custody](#chain-of-custody) and origin of a software component.
->     * Provenance incorporates the [point of origin](#point-of-origin-) through ~~distribution~~ [distributor](#distributor-) as well as derivatives in the case of software that has been modified.
+> 1. (SCVS-2020, CDXAG-2024) The [chain of custody](#chain-of-custody) and origin of a software component.
+>     * Provenance incorporates the [point of origin](#point-of-origin-) through distribution as well as derivatives in the case of software that has been modified.
 > 1. (NTIA-2021) Data about the chain of custody of the software and all of the constituent components, potentially including data about the authors and locations from where the components were obtained.
 >
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
@@ -447,16 +450,18 @@ toc: true
 ### SBOM (Software Bill of Materials)
 
 > 1. (CRA-2024-03) A formal record containing details and supply chain relationships of components included in the software elements of a product with digital elements.
-> 1. (SCVS-2020) A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software.
+> 1. (SCVS-2020, CDXAG-2024) A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software.
 > 1. (NTIA-2021) A formal record containing the details and supply chain relationships of various components used in building software.
 >     * Software developers and vendors often create products by assembling existing open source and commercial software components.
 >     * The SBOM enumerates these components in a product.
 >
-> (Ref: [CRA-2024-03](#references-and-terms), SCVS-2020, NTIA-2021)
+> (Ref: [CRA-2024-03](#references-and-terms), SCVS-2020, CDXAG-2024, NTIA-2021)
 
 
 ### SBOM Roles
 
+> 1. (CPANSec-2024) A person, agent or actor that does something with an SBOM document, or with specific metadata fields in an SBOM document.
+>     * This may include operations like Creating, Updating, Verifying, Censoring or Sharing SBOM documents or fields.
 > 1. (CISA-2024) "Data is only good if it is in the hands of the right people."
 >
 > (Ref: [CISA-2024](#references-and-terms))
@@ -473,7 +478,7 @@ toc: true
 > 1. (CPANSec-2024) 🟥 SBOM Author (Authoritative).
 >     * An authoritative source of an SBOM, or an SBOM metadata field.
 > 1. (CISA-2024) Creates an SBOM.
-> 1. (CPANSec-2024) SBOM Authors create, define or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_.
+> 1. (CPANSec-2024) SBOM Authors create, define, or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_.
 >     * This mostly means authoritative metadata fields as laid out in the different [Supply-chain Roles](supplychain-sbom#supply-chain-roles-and-metadata).
 >     * In addition to fields encountered throughout the supply-chain, they care about the fields listed in the table below.
 >     * They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
@@ -679,6 +684,7 @@ This glossary is partly based on terms from the following sources.
 - (NTIA-2021) [NTIA The Minimum Elements for an SBOM, Glossary](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=25), pages 25-27, published 2021-07-12.
 - (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
 - (PCISSF-2023) [PCI Software Security Framework](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), published May 2023.
+- (CDXAG-2024) [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf), Second edition, Appendix A, published April 2024.
 
 
 ## About this document

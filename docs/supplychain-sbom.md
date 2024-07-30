@@ -76,7 +76,7 @@ stateDiagram-v2
 > [!NOTE]
 > TODO: Show how metadata may be communicated along these open source supply-chains.
 
-This document offers an overview of [Open-Source Software](glossary#open-source-software) supply chains, taking into account the following perspectives:
+This document offers an overview of [Open-Source Software](glossary.md#open-source-software) supply chains, taking into account the following perspectives:
 
 * The different Roles found throughout the supply-chain.
 * Enumerate the metadata fields these Roles typically care about.
@@ -533,7 +533,7 @@ An author or developer of an Open Source component project.
 | 🟨  | SBOM Generation Tool             | No       |                                            |         | Consider recommendation |
 
 * See also
-  * [Maintainer](glossary#maintainer) in the Glossary.
+  * [Maintainer](#maintainer).
 
 
 #### Custodian
@@ -599,7 +599,7 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 | 🟦  | Download location               | FIXME    |                          |         |         |
 
 * See also
-   * [Importer](#glossary.md#importer).
+   * [Importer](glossary.md#importer) in the glossary.
 
 
 ### Patcher
@@ -714,7 +714,7 @@ Within a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#pac
 
 * See also
   * [Maintainer](#maintainer), and
-  * [Open-Source Software Steward](glossary.md#open-source-software-steward-) in the glossary.
+  * [Open-Source Software Steward](glossary.md#open-source-software-steward-%EF%B8%8F) in the glossary.
 
 
 ### Curator

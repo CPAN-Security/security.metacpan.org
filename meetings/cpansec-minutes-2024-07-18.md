@@ -1,15 +1,13 @@
- ---
- layout: page
- toc: true
- meeting_time: July 18th, 2024 17:00 UTC
- title: Minutes 2024-07-18
- ---
+---
+layout: page
+toc: true
+meeting_time: July 18, 2024 17:00 UTC
+title: Minutes 2024-07-18
+---
 
-# Minutes
+## Meeting time & place
 
-Thurs 2024-07-18 17:00 UTC @ https://matrix.to/#/#cpansec-discussion:matrix.org
-
-https://www.timeanddate.com/worldclock/converter.html?iso=20240718T170000&p1=1440&p2=1129&p3=195&p4=16&p5=136&p6=187&p7=233&p8=37&p9=250&p10=234&p11=256&p12=248
+Thu 2024-07-18 17:00 UTC @ #cpansec-discussion on matrix.org
 
 
 ## Attendees
@@ -40,7 +38,7 @@ https://www.timeanddate.com/worldclock/converter.html?iso=20240718T170000&p1=144
 - Any issues continuing to use Element/[Matrix], which uses Jitsi.
 - This was the second meet on Element/[Matrix]/Jitsi, and it worked very well
 
-### App::cpanminus
+### CPANminus
 
 No updates
 
@@ -95,12 +93,11 @@ No updates
 ## Upcoming Events
 
 Outreach is important and needs to continue
-1. [PostgreSQL Lowlands 2024 NL](https://kangaroot.net/events/pg-day-lowlands-2024-nl) - Fri 13 Sep 2024 - 
+1. [PostgreSQL Lowlands 2024 NL](https://kangaroot.net/events/pg-day-lowlands-2024-nl) - Fri 13 Sep 2024
 1. [Open Source Summit Europe](https://events.linuxfoundation.org/open-source-summit-europe/) in Vienna, Austria - September 16-18 + 19-20 - Lots of people from OpenSSF + SBOM + Supply chain security communities
 1. [London Perl Workshop](https://act.yapc.eu/lpw2024/) - Saturday 26th October 2024 - possible talk opportunities
 
 ## Other topics
 
 ## Next meeting
-1. Aug 1, 2024 at 17:00 UTC
-https://www.timeanddate.com/worldclock/converter.html?iso=20240801T170000&p1=1440&p2=1129&p3=136&p4=195&p5=16&p6=187&p7=233&p8=37&p9=250&p10=234&p11=256&p12=248
+1. Aug 1, 2024 at 17:00 UTC, #cpansec-discussion on matrix.org

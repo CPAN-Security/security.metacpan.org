@@ -5,11 +5,9 @@ meeting_time: July 03, 2024 17:00 UTC
 title: Minutes 2024-07-03
 ---
 
-# Minutes
+# Meeting time and place
 
 2024-07-03 17:00 UTC @ TPRF Slack #cpan-security channel
-
-https://www.timeanddate.com/worldclock/converter.html?iso=20240703T170000&p1=1440&p2=1129&p3=195&p4=16&p5=136&p6=187&p7=233&p8=37&p9=250&p10=234&p11=256&p12=248
 
 
 ## Attendees

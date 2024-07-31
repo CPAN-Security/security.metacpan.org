@@ -5,7 +5,7 @@ meeting_time: July 18, 2024 17:00 UTC
 title: Minutes 2024-07-18
 ---
 
-# Meeting time & place
+## Meeting time & place
 
 Thu 2024-07-18 17:00 UTC @ #cpansec-discussion on matrix.org
 
@@ -93,11 +93,11 @@ No updates
 ## Upcoming Events
 
 Outreach is important and needs to continue
-1. [PostgreSQL Lowlands 2024 NL](https://kangaroot.net/events/pg-day-lowlands-2024-nl) - Fri 13 Sep 2024 - 
+1. [PostgreSQL Lowlands 2024 NL](https://kangaroot.net/events/pg-day-lowlands-2024-nl) - Fri 13 Sep 2024
 1. [Open Source Summit Europe](https://events.linuxfoundation.org/open-source-summit-europe/) in Vienna, Austria - September 16-18 + 19-20 - Lots of people from OpenSSF + SBOM + Supply chain security communities
 1. [London Perl Workshop](https://act.yapc.eu/lpw2024/) - Saturday 26th October 2024 - possible talk opportunities
 
 ## Other topics
 
 ## Next meeting
-1. Aug 1, 2024 at 17:00 UTC, same place
+1. Aug 1, 2024 at 17:00 UTC, #cpansec-discussion on matrix.org

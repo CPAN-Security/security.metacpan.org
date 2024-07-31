@@ -110,9 +110,9 @@ For license information and acknowledgements, see the [end of this document](#li
     3. Interact with their upstream communities in a effective and sustainable way.
 
 
-## Supply-chain Ecosystems and Environments and Roles
+## Supply-chain Ecosystems, Environments & Roles
 
-### An idealized Open Source supply-chain graph
+### An Idealized Open Source Supply-chain Graph
 
 ```mermaid
 stateDiagram-v2
@@ -320,7 +320,7 @@ stateDiagram-v2
     %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
-## SBOM Metadata Operations
+### SBOM Metadata Operations
 
 Let's color-code the different _metadata operations_ so that we can quickly see what activities a Supply-chain Role is involved in.
 We're also assuming that metadata is stored in SBOMs, but this need not be the case.

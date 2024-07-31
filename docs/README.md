@@ -12,4 +12,3 @@ Documents relevant to the CPAN Security Group.
 * [Reading list](readinglist.md)
 * [Glossary](glossary.md)
 * [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md)
-* [Meeting minutes](minutes/)

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SBOM Roles in a supply-chain
-description: An overview of roles in a supply-chain who care about SBOM metadata
+title: Roles and metadata in open source supply-chains
+description: An overview of roles in a supply-chain and the metadata they care about
 toc: true
 mermaid: true
 ---
@@ -9,7 +9,7 @@ mermaid: true
 ## Document status: ⚠️  DRAFT
 
 > [!CAUTION]
-> What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
+> What you see here is a DRAFT of the Supply-chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/supplychain-sbom.md](https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/supplychain-sbom.md)
@@ -71,53 +71,64 @@ stateDiagram-v2
 ```
 
 
-## About this document
+## About this document (TL;DR)
 
 > [!NOTE]
 > TODO: Show how metadata may be communicated along these open source supply-chains.
 
-This document offers an overview of [Open-Source Software](glossary.md#open-source-software) supply chains, taking into account the following perspectives:
+This document offers an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains, taking into account the following perspectives:
 
-* The different Roles found throughout the supply-chain.
-* Enumerate the metadata fields these Roles typically care about.
-* List the ways each Role may operate on any given metadata field,
+* This document identifies and maps out places – in Open Source Supply-chains:
+    1. Environments and Ecosystems,
+    1. Roles, and
+    1. Metadata
+* …And enumerate the metadata fields these Roles typically care about.
+* …Noting the ways each Role may operate on any given metadata field,
     * 🟥 Create,
     * 🟨 Assemble or Update,
     * 🟩 Distribute,
-    * 🟦 Consume, and
+    * 🟦 Verify, and
     * 🟪 Censor
-* Show any relevant legislation, regulation or other rules or guides that require the presence of specific metadata fields.
+* …Showing any relevant legislation or other requirements that demand the presence of specific metadata fields.
+* …So that downstream Roles can:
+    1. Identify second- and third party component projects they depend on,
+    1. Learn where any specific field is likely to come from,
+    1. Use this to detect and mitigate vulnerabilities,
+    1. Interact with the right upstream communities in effective and sustainable ways.
 
 
 ### Motivation
 
-Originally, this document stems from the author's frustration with the lack of a clear Open Source perspective in current SBOM documentation. This brought the author to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
+Originally, this document stems from the author's frustration with the lack of a clear Open Source perspective in current SBOM documentation (as of 2023). This brought the author to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
 
-Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation, taking incremental steps toward more transparent and accountable Open Source supply-chains.
+Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation – taking incremental steps toward more transparent and accountable Open Source supply-chains.
 
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
-### TL;DR
-
-* This document identifies and maps out places – in Open Source supply chains:
-    1. Environments,
-    2. Roles, and
-    3. Metadata
-* …Where a Role operates on these data,
-* …So that downstream Roles can:
-    1. Detect and mitigate vulnerabilities,
-    2. Identify second- and third party component projects, so they
-    3. Interact with their upstream communities in a effective and sustainable way.
-
 
 ## Supply-chain Ecosystems, Environments & Roles
+
+### Metadata Operations
+
+In this document, we color-code the different _metadata operations_ in order to quickly see what activities a Supply-chain Role may be involved in.
+We're also assuming that metadata is stored in SBOMs, but this need not be the case.
+Some of the information here is based on CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)).
+In this document we also distinguish between SBOM Authors that are _Authoritative_ sources for fields and _Non-authoritative_ sources, in addition SBOM Distributors and Consumers.
+We also acknowledge that some situations may call for an SBOM Censor.
+
+* 🟥 SBOM Author (Authoritative) – Creates, defines, signs metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
+* 🟨 SBOM Author (Non-authoritative) – Assembles, updates, refines, maintains, attests, annotates metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
+* 🟩 SBOM Distributor – Distributes, curates, indexes metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
+* 🟦 SBOM Consumer – Consumes, aggregates, verifies, validates, surveys, analyzes or reports metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
+* 🟪 SBOM Censor – Censors, redacts, deletes, anonymizes metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
+
 
 ### An Idealized Open Source Supply-chain Graph
 
 ```mermaid
 stateDiagram-v2
     direction TB
-    accTitle: An idealized Open Source supply-chain graph
+    accTitle: An Idealized Open Source Supply-chain Graph
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %%
@@ -320,28 +331,13 @@ stateDiagram-v2
     %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
-### SBOM Metadata Operations
-
-Let's color-code the different _metadata operations_ so that we can quickly see what activities a Supply-chain Role is involved in.
-We're also assuming that metadata is stored in SBOMs, but this need not be the case.
-Some of the information here, is based on CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)).
-But i this document, we also distinguish between SBOM Authors that are _Authoritative_ sources for one or more fields, from _Non-authoritative_ SBOM Authors, in addition SBOM Distributors and SBOM Consumers.
-We also acknowledge that some situation may call for an SBOM Censor.
-
-* 🟥 SBOM Author (Authoritative) – Creates, defines, signs metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
-* 🟨 SBOM Author (Non-authoritative) – Assembles, updates, refines, maintains, attests, annotates metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
-* 🟩 SBOM Distributor – Distributes, curates, indexes metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
-* 🟦 SBOM Consumer – Consumes, aggregates, verifies, validates, surveys, analyzes or reports metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
-* 🟪 SBOM Censor – Censors, redacts, deletes, anonymizes metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
-
-
 ## Ecosystems and Environments
 
 ### Maintainer Environment
 
-One or more developers that publish an Open-Source component.
+One or more developers that publish an Open Source component.
 
-* Publishes [Open-Source Software](glossary.md#open-source-software)
+* Publishes [Open Source Software](glossary.md#open-source-software)
 * May have a project development life-cycle
 * May use a [Collaboration Ecosystem](#collaboration-ecosystem) to interact with [Contributors](#contributor)
 * May publish their project through a [Language Ecosystem](#language-ecosystem)
@@ -359,7 +355,7 @@ One or more developers that publish an Open-Source component.
 A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
 
 * Operates commercially
-* May publish [Open-Source Software](glossary.md#open-source-software)
+* May publish [Open Source Software](glossary.md#open-source-software)
 * Has a project development life-cycle
 
 #### Manufacturer Environment
@@ -449,7 +445,7 @@ The term is used within the NTIA "SBOM Minimum Elements" document as the legal s
 * See also
   * [Manufacturer](#manufacturer),
   * [Owner](#owner--supplier-),
-  * [Open-Source Software Steward](#open-source-software-steward),
+  * [Open Source Software Steward](#open-source-software-steward),
   * [Supplier](glossary.md#supplier) in the glossary.
 
 
@@ -521,7 +517,7 @@ An author or developer of an Open Source component project.
 | 🟥  | Code Repository                  | Yes      |                                            |         |         |
 | 🟥  | Project Sustainability           | No       |                                            | CycloneDX 1.7 proposed | |
 | 🟥  | Intended for Commercial Use      | No       | CRA-Rec-15                                 |         |         |
-| 🟥  | Open-Source Software Steward     | No       | CRA                                        |         | Confirm CRA Article |
+| 🟥  | Open Source Software Steward     | No       | CRA                                        |         | Confirm CRA Article |
 | 🟥  | Code Commit Revision             | No       |                                            |         | Consider recommendation |
 | 🟨  | License(s) (Component, Embedded) | Yes      |                                            |         | Confirm which spec/Laws/License |
 | 🟨  | Supplier Name (Maintainer)       | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |         |
@@ -699,7 +695,7 @@ Final preparation and installation of the software into a CI/CD or other deploym
   * [Deployer](#deployer)
 
 
-### Open-Source Software Steward
+### Open Source Software Steward
 
 > [!NOTE]
 > * FIXME – Not done
@@ -708,13 +704,13 @@ Within a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#pac
 
 | Ops | Field name                     | Required | Required by            | Comment | TODO    |
 | :-: | :----------------------------- | :------: | ---------------------- | ------- | ------- |
-| 🟦  | Open-Source Software Steward   | Yes      | CRA-Rec-19             |         |         |
+| 🟦  | Open Source Software Steward   | Yes      | CRA-Rec-19             |         |         |
 | 🟦  | Intended for Commercial Use    | Yes      | CRA-Rec-15, CRA-Rec-18 |         |         |
 | 🟥  | Security Attestation           | Yes      | CRA-Rec-21             |         | Confirm with standardization body |
 
 * See also
   * [Maintainer](#maintainer), and
-  * [Open-Source Software Steward](glossary.md#open-source-software-steward-%EF%B8%8F) in the glossary.
+  * [Open Source Software Steward](glossary.md#open-source-software-steward-%EF%B8%8F) in the glossary.
 
 
 ### Curator
@@ -784,8 +780,8 @@ Ensures the availability of packages or containers, that they are indexed correc
 
 Operates within an [Integrator Environment](#integrator-environment).
 Uses packages and components as dependencies in their own project, product or component.
-A Developer is in many ways identical to an [Maintainer](#maintainer) from the upstream Maintainer's perspective, with the main difference being that a Developer doesn't publish their work as [Open-Source Software](glossary.md#open-source-software).
-A Developer that publishes their software as [Open-Source Software](glossary.md#open-source-software), is called an [Maintainer](#maintainer).
+A Developer is in many ways identical to an [Maintainer](#maintainer) from the upstream Maintainer's perspective, with the main difference being that a Developer doesn't publish their work as [Open Source Software](glossary.md#open-source-software).
+A Developer that publishes their software as [Open Source Software](glossary.md#open-source-software), is called an [Maintainer](#maintainer).
 
 * See also
   * [Maintainer](#maintainer)
@@ -973,7 +969,7 @@ Several people have been involved in the development of this document
 | Download location               | URL          |                                                                       |                         |         |
 | Intended for Commercial Use     | Boolean      |                                                                       |                         |         |
 | License(s)                      | SPDX License | bom.metadata.licenses[], bom.components[].licenses[]                  | packages[].licenseConcluded, packages[].licenseDeclared |         |
-| Open-Source Software Steward    | URL          |                                                                       |                         |         |
+| Open Source Software Steward    | URL          |                                                                       |                         |         |
 | Public Code Repository          |              | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator |         |
 | Purpose, Intended Use           | Text         | bom.components[].description                                          | packages[].comment      |         |
 | SBOM Author                     | Text         | bom.metadata.author                                                   | creationInfo.creators[] |         |

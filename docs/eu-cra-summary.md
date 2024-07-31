@@ -9,49 +9,111 @@ mermaid: true
 ## Document status: ⚠️  DRAFT
 
 > [!CAUTION]
-> What you see here is a DRAFT of the Supply Chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
+> What you see here is a DRAFT overview by the CPAN Security Group (CPANSec) of the core obligations set out by the EU Cyber Resilience Act, as applied to Open Source ecosystems and supply chains,
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/eu-cra-summary.md](https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/eu-cra-summary.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/cra-summary/docs/eu-cra-summary.md](https://github.com/CPAN-Security/security.metacpan.org/tree/cra-summary/docs/eu-cra-summary.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 
 
 ## About this document
 
+This text attempts to summarize the most important parts of the CRA, for Open Source ecosystems.
 
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
-### Purpose TL;DR
+
+### Manufacturers
+
+(Art 13 to Art 17, Art 18 for authorised representatives)
+
+* Manufacturers are obliged to exercise due diligence when integrating components from third parties, as laid out in **[Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163)**.
+  * …after the Manufacturer conducts a risk assessment, as laid out in [Article 13(2)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161)
+  * …in accordance with essential requirements laid out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297).
+* must report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=187))
+  * …in the way described in **[Article 14](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176)**.
+* …are required to report discovered vulnerabilities in components to their maintainers, as laid out in **[Article 13(6)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164)**.
+* …draw up the EU declaration of conformity in accordance with [Article 28](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=218) and affix the CE marking in accordance with [Article 30](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=220), as laid out in **[Article 13(12)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=168)**)
+  * …to indicate conformity prior to entering the market ([Article 30(3)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=220))
+  * …and keep records for ten years, as laid out in [Article 23(2)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=207)
+* …must provide Software Bill of Materials (SBOM) upon request by authorities, as laid out in [Recital (78)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=86)
+  * but no need for making these public
 
 
+* …Testing necessary, provide technical documentation, as laid out in [Article 13(6)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164). ⚠️
+* …Vulnerability management
+* …perform risk assessments
+* …Coordinated vulnerability disclosure (CVD) policy mandatory
 
-## An idealized Open Source supply-chain graph
+* …offer support for their products for at least 5 years, security updates for 10 years
+
+### Open Source Stewards
+
+* Open Source Stewards are obliged to
+  * …facilitate the Manufacturer's due diligence obligation set out in [Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163) ⚠️
+  * …provide a cybersecurity policy for voluntary reporting of vulnerabilities, as laid out in [Article 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=185)
+  * …cooperate with market surveillance authorities and provide documentation (FIXME)
+  * …report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=187)), in the way described in [Article 14](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176).
+
+* FOSS Software may get a voluntary security attestation, as described in [Article 25](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=210)⚠️
+  * …using an EU Attestation program as laid out in [Recital (21)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25)
+    * …by requesting a certification from ENISA, as laid out in [Regulation (EU) 2019/881, Article (48)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881#page=8)
+    * …in such a way that this security attestation can be initiated or financed by not only FOSS projects, but also by others, including manufacturers, users, or public administrations.
+    * …so this Attestation becomes a "proof of due diligence exercised"? ⚠️  FIXME: (Dis)confirm this.
+  * …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties.
+
+
+#### Open questions
+
+* Commission shall publish guidance to assist economic operators in applying this Regulation
+  * 
+* 
+
+## An idealized Open Source Steward Supply-Chain graph
 
 ```mermaid
 stateDiagram-v2
     direction TB
 
-    state "🟦🟥🟨 Maintainer"             as environment_maintainer
-    state "🟩 Collaboration Ecosystem"  as ecosystem_repo
-    state "🟨🟩 Language Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem\n🟦🟨🟩 OSS Steward" as ecosystem_package
-    state "🟥🟨 Integrator Environment\n🟦🟥🟨 Manufacturer" as environment_integrator
-    state "🟦 Production Environment"   as environment_prod
+    state "🟥🟨🟦 Maintainer Environment" as environment_maintainer
+    state "🟩 Collaboration Ecosystem" as ecosystem_repo
+    state "🟨🟩 Language Ecosystem" as ecosystem_lang
+    state "🟨🟩 Package Ecosystem" as ecosystem_package
+    state "🟥 Attestation Authority" as authority_attestation
+    state "🟥🟨🟩🟦 OSS Steward" as ecosystem_steward
+    %%state "🟩 Content Delivery Network" as network_delivery
+    state "🟥🟨 Integrator Environment" as environment_integrator
+    state "🟥🟨🟦🟪 Manufacturer Environment" as environment_manufacturer
+    state "🟦 Production Environment" as environment_prod
+    state "🟦 Auditor" as authority_auditor
 
+    [*]                      --> environment_maintainer
+    ecosystem_repo           --> environment_maintainer
+    %%environment_maintainer   --> network_delivery
+    ecosystem_repo           --> ecosystem_lang
+    environment_maintainer   --> ecosystem_lang
+    ecosystem_lang           --> ecosystem_lang
+    environment_maintainer   --> ecosystem_repo
+    %%ecosystem_lang           --> network_delivery
+    ecosystem_repo           --> ecosystem_package
+    ecosystem_lang           --> ecosystem_package
+    ecosystem_package        --> ecosystem_package
+    %%ecosystem_package        --> network_delivery
+    %%network_delivery         --> environment_integrator
+    ecosystem_package        --> ecosystem_steward
+    ecosystem_lang           --> ecosystem_steward
+    authority_attestation    --> ecosystem_steward
+    ecosystem_repo           --> environment_integrator
+    ecosystem_lang           --> environment_integrator
+    ecosystem_package        --> environment_integrator
+    ecosystem_steward        --> environment_manufacturer
+    environment_integrator   --> environment_prod
+    environment_manufacturer --> environment_prod
+    environment_manufacturer --> authority_auditor
+    environment_prod         --> [*]
 
-    [*] --> environment_maintainer
-    environment_maintainer --> ecosystem_repo
-    environment_maintainer --> ecosystem_lang
-    ecosystem_repo --> environment_maintainer
-    ecosystem_lang --> ecosystem_package
-    ecosystem_lang --> environment_integrator
-    ecosystem_repo --> ecosystem_lang
-    ecosystem_repo --> ecosystem_package
-    ecosystem_repo --> environment_integrator
-    ecosystem_package --> environment_integrator
-    environment_integrator --> environment_prod
-    environment_prod --> [*]
-
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
 
@@ -88,7 +150,7 @@ graph TB
 * (CRA-AII)    [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303) Information and Instructions to the User, Dated 2024-03-12
 * (CRA-AV)     [Cyber Resilience Act, Annex V](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=311) EU Declaration of Conformity, Dated 2024-03-12
 * (CRA-AVII)   [Cyber Resilience Act, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314) Contents of the Technical Documentation, Dated 2024-03-12
-* (CRA-Art-3) [Cyber Resilience Act, Article 3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136) Definitions, Dated 2024-03-12
+* (CRA-Art-3)  [Cyber Resilience Act, Article 3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136) Definitions, Dated 2024-03-12
 * (CRA-Art-20) [Cyber Resilience Act, Article 20](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=202) Obligations of distributors, Dated 2024-03-12
 * (CRA-Art-47) [Cyber Resilience Act, Article 47](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=249) Operational obligations of notified bodies, Dated 2024-03-12
 * (CRA-Rec-15) [Cyber Resilience Act, Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17) Economic operators, Dated 2024-03-12

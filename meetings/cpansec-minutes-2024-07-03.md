@@ -36,42 +36,42 @@ This meeting was done in Element/[Matrix], which uses Jitsi. Went well.
 
 ### CPANminus
 1. We have sent PRs to master and development
-2. An independant PR has been sent into the official perl-docker image.
-3. Trying to push for use of the new patched version
-4. Some arguement about whether to accept into the docker images.
-5. @Tux mentioned the failback is needed - an environment variable would suffice
+1. An independent PR has been sent into the official perl-docker image.
+1. Trying to push for use of the new patched version
+1. Some argument about whether to accept into the docker images.
+1. @Tux mentioned the fallback is needed - an environment variable would suffice
 
 ### CNA process is initiated with Mitre
 1. @timlegge: Mitre finally got back to me and has some information they need as well as scheduling a meeting with them to discuss
-2. @timlegge Stig and I are discussing
-3. We could use some additional help as we go further with a CNA  Please reach out if you have time and an interest.
+1. @timlegge Stig and I are discussing
+1. We could use some additional help as we go further with a CNA  Please reach out if you have time and an interest.
 
 ### TLS/HTTPS in core
 1. @leont said "I did start working on that", but hasn't shared a document yet
-2. New PSC will likely support HTTPS in core - there will be a meeting between old and new and it will likely continue
+1. New PSC will likely support HTTPS in core - there will be a meeting between old and new and it will likely continue
 
 ### German Sovereign Tech fund is open for applications
 1. @sjn suggests a poll of who can commit time to the work that could be started based on an application
-2. Peter will help post US Perl conference
-3. We need someone who can do project management.
+1. Peter will help post US Perl conference
+1. We need someone who can do project management.
 
 ### Secure by Default
 1. @stigtsp and @garu are putting together a list
-2. sigstore and tuf could/should be on the list
+1. Sigstore and TUF could/should be on the list
 
 ### Eclipse ORC WG
 1. @sjn - goal is to give feed back on the EU standards and regulations
-2. Project has a technical lead
-3. PRF is a foundation perl noc hosts code in theory neither can join the organization - need to do both.
+1. Project has a technical lead
+1. TPRF is a foundation, and Perl NOC hosts code. In theory neither can join the organization - an org needs to both host and be a foundation/non-profit.
 
 ### CycloneDX 1.7 Sustainability fields
-1. @sjn - talked to someone who is working in the sustainability of opensource projects
+1. @sjn - talked to someone who is working in the sustainability of open source projects
 
 ### CPAN Meta Requirements and PURLs
 1. @sjn - no update
 
 ### POSIX::2008 vulnerabilities
-1. @stigsto mentioned needing to look at registering CVE for that.
+1. @stigtsp mentioned needing to look at registering CVE for that.
 
 ### SBOM/Supply Chain
 - @sjn - has been sharing and still a WIP.  The contents are in a good place at this time.
@@ -85,7 +85,7 @@ This meeting was done in Element/[Matrix], which uses Jitsi. Went well.
 
 ## Other topics
 1. @Tux and @Tim worked on Crypt::OpenSSL::PKCS12
-2. @stigsto how should a secure random module get moved to core?  @garu explainde the process for getting things moved into core - requests for comment, etc.
+2. @stigtsp how should a secure random module get moved to core?  @garu explained the process for getting things moved into core - requests for comment, etc.
 
 ## Next meeting
 1. July 18, 2024 at 17:00 UTC

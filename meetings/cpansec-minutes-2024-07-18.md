@@ -40,18 +40,18 @@ https://www.timeanddate.com/worldclock/converter.html?iso=20240718T170000&p1=144
 - Any issues continuing to use Element/[Matrix], which uses Jitsi.
 - This was the second meet on Element/[Matrix]/Jitsi, and it worked very well
 
-### CPANminus
+### App::cpanminus
 
 No updates
 
 ### CNA process is initiated with Mitre
 
-- @timlegge has written up an initial CNA disclosure but it needs more work - hoppefully this week
+- @timlegge has written up an initial CNA disclosure but it needs more work - hopefully this week
 
 ### TLS/HTTPS in core
 1. Options documented
-1. Currently only openssl
-1. Should have more ssl backends
+1. Currently only OpenSSL
+1. Should have more SSL back-ends
 1. licensing is a concern - may need someone familiar with licensing to discuss
 1. @sjn will reach out to some legal
 
@@ -63,16 +63,16 @@ No updates
 1. Level of funding and things to push it forward looking at a 500K ask
 1. Initial funding is an evaluation activity
 1. Stuart has drafted an application in the past for the Sovereign tech fund - needs to be specific to meeting their goals -
-1. Abount 2B$ available in Europe for opensource
+1. About 2B$ available in Europe for open source
 1. CPAN admins are the worlds experts on this area
-1. @sjn needs some assitance on the importance of the tasks and the "boringness" of the items
+1. @sjn needs some assistance on the importance of the tasks and the "boringness" of the items
 
 ### Secure by Default
 1. No progress/updates
 
 ### Eclipse ORC WG
 1. @sjn – Attended CRA Intro meeting. Will share video recording once it's published
-1. WG is focused on the impact of EU standards and processes on OpenSource
+1. WG is focused on the impact of EU standards and processes on Open Source
 1. Currently Perl foundation is not a member
 
 ### CycloneDX 1.7 Sustainability fields
@@ -87,10 +87,10 @@ No updates
 ### SBOM/Supply Chain
 1. @sjn – Added a simplified SC graph that includes a OSS Steward role. Worked also on simplifying and cleaning up errors
 1. Clean ups
-1. It needs some reading from the community - especially CPANsec
+1. It needs some reading from the community - especially CPANSec
 1. Some role specific guidance would help as well as simplification of the documentation
 1. @garu also wants to work on modules to do SBOM
-1. @ovids SBOM CycloneDX parser is still out there
+1. @ovid's SBOM CycloneDX parser is still out there
 
 ## Upcoming Events
 

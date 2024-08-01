@@ -3,7 +3,7 @@ layout: page
 title: CPANSec meeting minutes
 toc: false
 permalink: /meetings/
-next_meeting_time: August 1st, 2024 17:00 UTC
+next_meeting_time: August 15th, 2024 16:00 UTC
 ---
 
 ## When is the next CPAN Security Group meeting?

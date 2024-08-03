@@ -387,9 +387,10 @@ A language ecosystem hosts, indexes and distributes components specific for a pr
 ### Package Ecosystem
 
 A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#curator), [indexes and hosts](#distributor) either components for a specific OS distributions, or [collections](#assembler) of components for use in container registries, made available (published) for easy download and use.
+Package Ecosystems typically have their own tooling and services that are expected to be used when interacting with them.
 
-* Examples of package systems: APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD, OpenBSD)
-* Examples of container systems: Docker
+* Examples of package systems: APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD)
+* Examples of container systems: Docker Hub
 * May have upstream package ecosystems
 * May have downstream package ecosystems
 * May be Public
@@ -399,6 +400,8 @@ A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#cur
 ### Production Environment
 
 The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
+
+> FIXME: Add more examples for physial products
 
 #### Customer Environment
 
@@ -410,9 +413,10 @@ The environment and systems where a product or service is executed by a customer
 
 ### Collaboration Ecosystem
 
-A website or tool that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
+A website or tool ("Forge") that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
 
 * Examples: Github, Codeberg, Bitbucket, Gitlab, Gitea and others.
+* May be open for public use, or project specific use only
 
 #### Repository Ecosystem
 
@@ -500,7 +504,7 @@ An author or developer of an Open Source component project.
 * Operates within an [Maintainer Environment](#maintainer-environment).
 * The initial and/or main creator of the component in question.
 * Typically works on all aspects of the code, including features, bug fixes, tests and security issues.
-* Has the final say on the original contents of the package.
+* Has the final say on the original contents of the package, and it's namespaces.
 * The Maintainer _can_ be a group of people (having co-maintainers), though a single point of responsibility is common.
 * If a Maintainer has upstream (reverse) dependencies, the Maintainer is also considered to be an [Developer](#developer) (as seen from the upstream Maintainer's perspective).
 * Not to be confused with the [SBOM Author](#sbom-author--role-) role.
@@ -610,7 +614,9 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 
 Operates within a [Package Ecosystem](#package-ecosystem).
 Applies security and/or bug fixes to packages before building and packaging.
+Adopts a component in order to make it conform to build and exeution environment demands.
 Works mainly with a downstream [Packager](#packager), and has [Maintainer](#maintainer)'s downstream ecosystems as upstream.
+Some patches may contain substantial modifications and be based on the Packager's judgement and opinions.
 
 This role is necessary when...
 
@@ -933,6 +939,9 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 1. PCI-SSF v1.2.1 requires not only that component dependencies are listed, but also service dependencies ([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
 1. Use "Metadata" as the primary term, instead of "SBOM"
 1. Add columns for fields, describing downstream consumers and upstream producers
+1. Add some text regarding an "Vulnerability report SBOM", since this is required in the Cyber Resilience Act Annex I, part II(1)
+1. Split simplified graph into "old" and "new"
+1. Make colors/boxes more colorblind-friendly
 
 
 ## License and use of this document
@@ -951,6 +960,7 @@ Several people have been involved in the development of this document
 * Salve J. Nilsen (main author)
 * Stian Kristoffersen
 * Josh Bressers
+* Stig Palmquist
 
 
 # Appendix
@@ -989,4 +999,3 @@ Several people have been involved in the development of this document
 | Supplier Name (Owner)           | Text, URL    | bom.metadata[supplier,manufacturer,author], bom.components[].supplier | creationInfo.creators[], packages[].originator, packages[].supplier |         |
 | Unique Product ID               | PURL         | bom.components[].purl                                                 | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator |         |
 | Version                         | Text         | bom.components[].version                                              | packages[].versionInfo  |         |
-

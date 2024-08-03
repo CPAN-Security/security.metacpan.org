@@ -942,6 +942,8 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 1. Add some text regarding an "Vulnerability report SBOM", since this is required in the Cyber Resilience Act Annex I, part II(1)
 1. Split simplified graph into "old" and "new"
 1. Make colors/boxes more colorblind-friendly
+1. Describe the Supply Chain Roles section (intention, use, how to read, etc.), including why it has been split up into different roles
+1. Add some words for each Role/section on what it can be used for
 
 
 ## License and use of this document

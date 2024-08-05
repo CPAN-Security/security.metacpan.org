@@ -224,6 +224,21 @@ Annexes are technical materials presented separately from the main text, and hav
 * (CPAN) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html) – describing the different personas or roles involved in the life-cycle of a CPAN distribution.
 * (CISA) [Software Aquisition Guide](https://www.cisa.gov/resources-tools/resources/software-acquisition-guide-government-enterprise-consumers-software-assurance-cyber-supply-chain)
 
+### PCI-SSF
+
+The Payment Card Industry Software Security Framework v1.2.1, Control Objective C.1, states
+
+> * C.1
+>     * All components and services used by the software are identified and maintained in a manner that minimizes the exposure of vulnerabilities.
+> * C.1.1
+>     * Control Objective: All software components and services are documented or otherwise cataloged in a software bill of materials (SBOM).
+>     * Test Requirements: The assessor shall examine evidence to confirm that information is maintained that describes all software components and services comprising the software solution, including:
+>         * All proprietary software libraries, packages, modules, and/or code packaged in a manner that enables them to be tracked as a freestanding unit of software.
+>         * All third-party and open-source frameworks, libraries, and code embedded in or used by the software during operation.
+>         * All third-party software dependencies, APIs, and services called by the software during operation.
+>     * Guidance: […] Knowing all of the components that comprise a software application or service, where they come from, and how they are updated and maintained is critical to minimizing and managing vulnerabilities in software applications. Without this information, it would be extremely difficult to identify and track vulnerabilities in software components that could expose the embedding software application to attacks. […]
+
+* (PCI-SSC) [PCI-SSF v1.2.1](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), Published May 2023
 
 ## License and use of this document
 

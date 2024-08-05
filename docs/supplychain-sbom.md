@@ -27,44 +27,48 @@ mermaid: true
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 Maintainer Environment" as environment_maintainer
+    state "🟥🟨🟦 Maintainer" as environment_maintainer
+    state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
-    state "🟥 Attestation Authority 🆕" as authority_attestation
-    state "🟥🟨🟩🟦 OSS Steward 🆕" as ecosystem_steward
+    %%state "🟥 Attestation Authority 🆕" as authority_attestation
+    %%state "🟥🟨🟩🟦 OSS Steward 🆕" as ecosystem_steward
     %%state "🟩 Delivery Network" as network_distributor
-    state "🟥🟨 Integrator Environment" as environment_integrator
-    state "🟥🟨🟦🟪 Manufacturer Environment 🆕" as environment_manufacturer
-    state "🟦 Production Environment" as environment_prod
-    state "🟦 Auditor 🆕" as authority_auditor
+    state "🟥🟨 Integrator" as environment_integrator
+    %%state "🟥🟨🟦🟪 Manufacturer Environment 🆕" as environment_manufacturer
+    state "🟦 Production" as environment_prod
+    %%state "🟦 Auditor 🆕" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
+    ecosystem_repo           --> environment_contributor
+    ecosystem_repo           --> ecosystem_lang
     environment_maintainer   --> ecosystem_repo
     environment_maintainer   --> ecosystem_lang
+    environment_contributor  --> ecosystem_repo
     ecosystem_lang           --> ecosystem_lang
-    ecosystem_repo           --> ecosystem_lang
     %%environment_maintainer   --> network_distributor
     %%ecosystem_lang           --> network_distributor
     %%ecosystem_package        --> network_distributor
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
     ecosystem_package        --> ecosystem_package
-    ecosystem_package        --> ecosystem_steward
-    ecosystem_lang           --> ecosystem_steward
-    authority_attestation    --> ecosystem_steward
+    %%ecosystem_package        --> ecosystem_steward
+    %%ecosystem_lang           --> ecosystem_steward
+    %%authority_attestation    --> ecosystem_steward
     ecosystem_repo           --> environment_integrator
     ecosystem_lang           --> environment_integrator
     %%network_distributor      --> environment_integrator
     ecosystem_package        --> environment_integrator
     %%network_distributor      --> environment_manufacturer
-    ecosystem_steward        --> environment_manufacturer
+    %%ecosystem_steward        --> environment_manufacturer
     environment_integrator   --> environment_prod
-    environment_manufacturer --> environment_prod
-    environment_prod         --> authority_auditor
-    environment_manufacturer --> authority_auditor
-    authority_auditor        --> [*]
+    %%environment_manufacturer --> environment_prod
+    %%environment_prod         --> authority_auditor
+    %%environment_manufacturer --> authority_auditor
+    %%authority_auditor        --> [*]
+    environment_prod         --> [*]
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licenced CC-BY-SA-4.0
@@ -107,6 +111,64 @@ For license information and acknowledgements, see the [end of this document](#li
 
 
 ## Supply-chain Ecosystems, Environments & Roles
+
+Here, we map out the different parts of typical Open Source Supply-chains – the Environments and Ecosystems we use, the Roles that are operating within these, and what Metadata they care about, and which operations they are expected to do when caring.
+Additionally, we give an indication of what regulations, standards or other requirements that call for the presence of a given field.
+And all this, with the goal of allowing downstream users to both live up to their legal obligations and to improve their security posture.
+To improve by ensuring that the metadata they need is available, updated and authoritative, and can be helpful in both mitigating vulnerabilities and interacting with the maintainers of any Open Source projects that may be involved.
+
+
+### A Simplified Open Source Supply-chain Graph, w/CRA Roles
+
+```mermaid
+stateDiagram-v2
+    direction TB
+
+    state "🟥🟨🟦 Maintainer Environment" as environment_maintainer
+    state "🟨 Contributor" as environment_contributor
+    state "🟩 Collaboration Ecosystem" as ecosystem_repo
+    state "🟨🟩 Language Ecosystem" as ecosystem_lang
+    state "🟨🟩 Package Ecosystem" as ecosystem_package
+    state "🟥 Attestation Authority 🆕" as authority_attestation
+    state "🟥🟨🟩🟦 OSS Steward 🆕" as ecosystem_steward
+    %%state "🟩 Delivery Network" as network_distributor
+    state "🟥🟨 Integrator Environment" as environment_integrator
+    state "🟥🟨🟦🟪 Manufacturer Environment 🆕" as environment_manufacturer
+    state "🟦 Production Environment" as environment_prod
+    state "🟦 Auditor 🆕" as authority_auditor
+
+    [*]                      --> environment_maintainer
+    ecosystem_repo           --> environment_maintainer
+    ecosystem_repo           --> environment_contributor
+    ecosystem_repo           --> ecosystem_lang
+    environment_maintainer   --> ecosystem_repo
+    environment_maintainer   --> ecosystem_lang
+    environment_contributor  --> ecosystem_repo
+    ecosystem_lang           --> ecosystem_lang
+    %%environment_maintainer   --> network_distributor
+    %%ecosystem_lang           --> network_distributor
+    %%ecosystem_package        --> network_distributor
+    ecosystem_lang           --> ecosystem_package
+    ecosystem_repo           --> ecosystem_package
+    ecosystem_package        --> ecosystem_package
+    ecosystem_package        --> ecosystem_steward
+    ecosystem_lang           --> ecosystem_steward
+    authority_attestation    --> ecosystem_steward
+    ecosystem_repo           --> environment_integrator
+    ecosystem_lang           --> environment_integrator
+    %%network_distributor      --> environment_integrator
+    ecosystem_package        --> environment_integrator
+    %%network_distributor      --> environment_manufacturer
+    ecosystem_steward        --> environment_manufacturer
+    environment_integrator   --> environment_prod
+    environment_manufacturer --> environment_prod
+    environment_prod         --> authority_auditor
+    environment_manufacturer --> authority_auditor
+    authority_auditor        --> [*]
+
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licenced CC-BY-SA-4.0
+```
 
 ### Metadata Operations
 
@@ -167,7 +229,7 @@ stateDiagram-v2
     state "🟥 Manufacturer (Supplier) 🆕" as integrator_owner
     state "🟥🟨🟦 Integrator, Developer" as integrator_developer
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as integrator_builder
-    state "🟨🟩🟪 SBOM Censor" as integrator_censor
+    state "🟩🟪 SBOM Censor" as integrator_censor
     state "🟩 Publisher" as integrator_publisher
     state "🟦 Analyst\n🟦 Auditor" as integrator_analyst
 
@@ -331,7 +393,9 @@ stateDiagram-v2
     %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
-## Ecosystems and Environments
+
+## Supply-chain Ecosystems and Environments
+
 
 ### Maintainer Environment
 
@@ -399,9 +463,10 @@ Package Ecosystems typically have their own tooling and services that are expect
 
 ### Production Environment
 
-The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
+> [!CAUTION]
+> * FIXME: Add examples of physical products
 
-> FIXME: Add more examples for physial products
+The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
 
 #### Customer Environment
 
@@ -424,9 +489,10 @@ A website or tool ("Forge") that offers a public collaboration repository to Aut
   * [Collaboration Ecosystem](#collaboration-ecosystem).
 
 
-## Supply-chain Roles
+## Supply-chain Roles and Metadata
 
-### Common metadata
+
+### Common Metadata
 
 | Ops | Field name               | Required | Required by             | Comment | TODO    |
 | :-: | :----------------------- | :------: | ----------------------- | ------- | ------- |
@@ -504,7 +570,7 @@ An author or developer of an Open Source component project.
 * Operates within an [Maintainer Environment](#maintainer-environment).
 * The initial and/or main creator of the component in question.
 * Typically works on all aspects of the code, including features, bug fixes, tests and security issues.
-* Has the final say on the original contents of the package, and it's namespaces.
+* Has the final say on the original contents of the package, and it's name-spaces.
 * The Maintainer _can_ be a group of people (having co-maintainers), though a single point of responsibility is common.
 * If a Maintainer has upstream (reverse) dependencies, the Maintainer is also considered to be an [Developer](#developer) (as seen from the upstream Maintainer's perspective).
 * Not to be confused with the [SBOM Author](#sbom-author--role-) role.
@@ -614,7 +680,7 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 
 Operates within a [Package Ecosystem](#package-ecosystem).
 Applies security and/or bug fixes to packages before building and packaging.
-Adopts a component in order to make it conform to build and exeution environment demands.
+Adopts a component in order to make it conform to build and execution environment demands.
 Works mainly with a downstream [Packager](#packager), and has [Maintainer](#maintainer)'s downstream ecosystems as upstream.
 Some patches may contain substantial modifications and be based on the Packager's judgement and opinions.
 
@@ -940,7 +1006,6 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 1. Use "Metadata" as the primary term, instead of "SBOM"
 1. Add columns for fields, describing downstream consumers and upstream producers
 1. Add some text regarding an "Vulnerability report SBOM", since this is required in the Cyber Resilience Act Annex I, part II(1)
-1. Split simplified graph into "old" and "new"
 1. Make colors/boxes more colorblind-friendly
 1. Describe the Supply Chain Roles section (intention, use, how to read, etc.), including why it has been split up into different roles
 1. Add some words for each Role/section on what it can be used for

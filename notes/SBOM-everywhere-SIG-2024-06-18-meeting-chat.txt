@@ -1,0 +1,64 @@
+17:07:03 From Josh Bressers (Anchore, Inc) To Everyone:
+	https://docs.google.com/document/d/193ODRga1F49WKPYYR79SNi9b27mChBqpOf5iiWJcMso/edit
+17:07:16 From Josh Bressers (Anchore, Inc) To Everyone:
+	My name is Josh Bressers. I am the VP of security at Anchore. I am also the co-chair of SBOM everywhere.
+17:07:42 From Salve J. Nilsen To Everyone:
+	<- Salve J. Nilsen, CPANSec volunteer \o/
+17:08:06 From Allan Friedman (CISA) To Everyone:
+	https://www.cisa.gov/news-events/events/sbom-rama-fall-2024
+17:08:10 From Nisha Kumar To Everyone:
+	Nisha Kumar: Software Engineer at Oracle Cloud Infrastructure and SPDX community member
+17:09:10 From Deanna Medina To Everyone:
+	Deanna Medina, Cybersecurity Engineer, Honeywell
+17:09:16 From Adolfo García Veytia (Stacklok) To Everyone:
+	I’m Puerco, maintainer of protobom and fan of SBOM, in particular of the SPDX variety 🙂
+17:09:18 From Kate Stewart (The Linux Foundation) To Everyone:
+	My name is Kate Stewart,  VP of Dependable Embedded Systems at the Linux Foundation,  co-chair of SBOM everywhere, and co-lead of SPDX tech team.
+17:10:05 From Karen Bennet (QCC) To Everyone:
+	Karen Bennet, IEEE and ISO
+17:11:36 From Dick Brooks (BCG) To Everyone:
+	Dick Brooks, Co-Founder and Lead Software Engineer, SAG Product Line (SAG-PM and SAG-CTR) at Business Cyber Guardian (BCG) an REA Company
+17:11:39 From Allan Friedman (CISA) To Everyone:
+	https://www.cisa.gov/news-events/events/sbom-rama-fall-2024
+17:15:02 From Dick Brooks (BCG) To Everyone:
+	Please provide a link to Salve's paper
+17:15:10 From Josh Bressers (Anchore, Inc) To Everyone:
+	https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/supplychain-sbom.md
+17:15:18 From Dick Brooks (BCG) To Everyone:
+	Reacted to "https://github.com/C..." with 👍
+17:15:20 From Adolfo García Veytia (Stacklok) To Everyone:
+	🎉
+17:19:06 From Dick Brooks (BCG) To Everyone:
+	SBOM consumers expect, and check for NTIA min elements
+17:19:47 From Nisha Kumar To Everyone:
+	Question: how did you create your pretty graphs?
+17:21:38 From Adolfo García Veytia (Stacklok) To Everyone:
+	Replying to "Question: how did yo..."
+	
+	Its mermaid, check the source 🧜‍♀️
+17:23:19 From Adolfo García Veytia (Stacklok) To Everyone:
+	In al fairness I volunteered with Salve to help out with some of the SPDX specifics but haven’t had the cycles yet 🙁 🙁
+17:23:47 From Josh Bressers (Anchore, Inc) To Everyone:
+	The current fields were added by me, and I’m a moron, so they certainly need someone smart to review them
+17:27:44 From Dick Brooks (BCG) To Everyone:
+	The CISA Secure Software Assurance Buyers Guide provides clear insights on how US Government agencies may use an SBOM.
+17:28:57 From Dick Brooks (BCG) To Everyone:
+	https://www.cisa.gov/news-events/events/innovations-ict-supply-chain-risk-management-conference
+17:30:30 From Allan Friedman (CISA) To Everyone:
+	Tool taxonomy: https://www.ntia.gov/sites/default/files/publications/ntia_sbom_tooling_taxonomy-2021mar30_0.pdf
+17:35:03 From Dick Brooks (BCG) To Everyone:
+	Binary analysis and SBOM extrapolation is very common when no SBOM is provided.
+17:37:16 From Dick Brooks (BCG) To Everyone:
+	The CISA Secure Software Attestation form speaks to authoritative parties for software products.
+17:37:55 From Nisha Kumar To Everyone:
+	What is the difference between software_author -> license vs software_integrator -> inference -> license?
+17:38:48 From Nisha Kumar To Everyone:
+	or software_consumer -> tool -> inference -> license?
+17:41:24 From Dick Brooks (BCG) To Everyone:
+	The IETF Supply Chain Integrity, Transparency and Trust (SCITT) initiative describes a use case to verify authenticity and authorization of a signing party for software; https://datatracker.ietf.org/doc/draft-ietf-scitt-software-use-cases/
+17:44:25 From Dick Brooks (BCG) To Everyone:
+	Trust Score, Allan?
+17:53:05 From Dick Brooks (BCG) To Everyone:
+	Nisha, an SBOM is insufficient to conduct a comprehensive software risk assessment following NIST SP 800-161; IETF SCITT demo'd a Vendor Response File (VRF) to share all relevant data, including support status and other materials: https://energycentral.com/c/pip/advice-software-vendors-prepare-omb-m-22-18-requirements
+17:55:11 From Dick Brooks (BCG) To Everyone:
+	https://energycentral.com/c/iu/international-trust-registry-demonstration-success

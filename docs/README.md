@@ -11,4 +11,4 @@ Documents relevant to the CPAN Security Group.
 * [Pre-release Disclosure Agreement](pre-release-disclosure.md)
 * [Reading list](readinglist.md)
 * [Glossary](glossary.md)
-* [Meeting minutes](minutes/)
+* [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md)

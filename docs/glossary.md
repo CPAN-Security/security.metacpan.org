@@ -410,6 +410,19 @@ toc: true
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
+### Presumption of Conformity
+
+> [!CAUTION]
+> * FIXME: Find a better definition! The one in the Blue Guide is more of an explanation with context. In the meantime, please read the Blue Guide text.
+
+> 1. (EUBG-2022)
+>     * The terms ‘standard’, ‘national standard’, ‘European standard’, ‘harmonised standard’ and ‘international standard’ are subject to concrete definitions in Article 2 of Regulation (EU) No 1025/2012.
+>     * Standards are technical specifications and are therefore useful and effective in promoting and disseminating good technical practises and technical solutions.
+>     * Standards are in themselves of voluntary application.
+>     * Harmonised standards are European standards adopted on the basis of a request made by the Commission for the application of Union harmonisation legislation.
+>     * If references of harmonised standards have been published in the Official Journal of the European Union (OJEU), they provide a presumption of conformity with the essential or other legislative requirements they aim to cover.
+
+
 ### Procurement ✍️
 
 > 1. (SCVS-2020, CDXAG-2024) The process of agreeing to terms and acquiring software or services for later use.
@@ -685,6 +698,7 @@ This glossary is partly based on terms from the following sources.
 - (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
 - (PCISSF-2023) [PCI Software Security Framework](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), published May 2023.
 - (CDXAG-2024) [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf), Second edition, Appendix A, published April 2024.
+- (EUBG-2022) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)), Section 4.1.2 "Conformity with the essential requirements: harmonised standards", Published 2022-06-29.
 
 
 ## About this document

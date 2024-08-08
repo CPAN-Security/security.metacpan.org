@@ -17,167 +17,6 @@
 | DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          |                         |                       | Ecosystem  |
 
 
-(the following seems to only work on gitlab)
-
-```json:table
-{
-  "fields" : [
-    { "key": "condition",             "label": "Condition" },
-    { "key": "no_maint",              "label": "Maint = 0" },
-    { "key": "one_maint",             "label": "Maint = 1" },
-    { "key": "many_maint",            "label": "Maint >= 1" },
-    { "key": "increase_maint",        "label": "Maint needs increase" },
-    { "key": "declining_maint",       "label": "Maint is declining" },
-    { "key": "responsive_maint",      "label": "Response time" },
-    { "key": "faster_response_maint", "label": "Response needs increase" },
-    { "key": "slow_response_maint",   "label": "Response is declining" },
-    { "key": "claimed_by",            "label": "Claimed by" }
-  ],
-  "items" : [
-    { "condition":             "NEEDHELP",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "YES",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "HANDOFF",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "no",
-      "increase_maint":        "YES",
-      "declining_maint":       "YES",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "ADOPTME",
-      "no_maint":              "YES",
-      "one_maint":             "no",
-      "many_maint":            "no",
-      "increase_maint":        "YES",
-      "declining_maint":       "no",
-      "responsive_maint":      "NONE",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Ecosystem" },
-    { "condition":             "CUSTODY",
-      "no_maint":              "YES",
-      "one_maint":             "no",
-      "many_maint":            "no",
-      "increase_maint":        "YES",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Ecosystem" },
-    { "condition":             "ACTIVE",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "OK",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "DONE",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "UNMAINTAINED",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "NONE",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "CASUAL",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "NEEDFUNDING",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "NEEDSUPPORT",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "NOXFER",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "NONE",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "COMPROMISED",
-      "no_maint":              "YES",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Ecosystem" },
-    { "condition":             "DISCOURAGED",
-      "no_maint":              "YES",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "NONE",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Ecosystem" },
-    { "condition":             "DELISTED",
-      "no_maint":              "YES",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "NONE",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Ecosystem" }
-  ]
-}
-```
-
 ## Open Source project life-cycle conditions
 
 1. ACTIVE – The project is maintained (default state)
@@ -227,8 +66,55 @@
 1. DISCOURAGED
     * 
 1. DELISTED
-    *
+    * 
 
+### Support types
+
+When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
+
+1. Brand management
+    * Development
+    * Strategy
+    * Implementation
+    * Hosting & legal
+1. Bug or issue triage
+1. Outreach
+    * Article writing
+    * Podcast hosting or participation
+    * Conference presentations
+    * SoMe presence
+1. Code review
+    * Security
+    * Development process
+    * Maintainability
+1. Documentation
+    * Completness
+    * Consistency
+    * Relevance
+1. Community management & assistance
+    * Culture
+    * Diversity, Equity, Inclusion
+    * Forum management, moderation and support
+1. Community infrastructure and hosting
+    * Email
+    * Chat forum
+    * Other community services
+1. Event organizing
+    * Conferences, Meetups, Hackathons or other gatherings for knowledge-sharing gatherings
+    * Online events, webinars or classes/training
+1. Industry/Stakeholder/OSPO support
+1. Fundraising
+1. Media relations
+1. Security contact
+1. Course/training material development
+1. Open Source Steward
+1. Legal assistance
+    * License conflict resolution
+1. Governance development
+
+
+* Sources
+    * https://chaos.social/@sjn/109343732566572015
 
 ## Other project states, claims and metadata
 

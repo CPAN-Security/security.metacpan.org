@@ -235,7 +235,7 @@ stateDiagram-v2
 
     %%
     state "🟨 Deployer" as prod_deployer
-    state "🟦 Consumer" as external_consumer
+    state "🟦 End-user, Consumer" as external_consumer
     state "🟦 Auditor 🆕" as authority_auditor
 
     %%
@@ -877,7 +877,7 @@ A Developer that publishes their software as [Open Source Software](glossary.md#
 | 🟨  | SBOM Author                       | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
 | 🟨  | SBOM Creation Time-stamp          | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
 | 🟨  | SBOM Serial Number                | Yes      |                                            |         | Confirm req/spec |
-| 🟨  | SBOM Type                         | FIXME    |                                            |         | Confirm req/spec |
+| 🟨  | SBOM Type                         | No       | CISA-2023                                  |         | Confirm req/spec |
 | 🟨  | SBOM Location                     | No       | CRA-AII(9)                                 |         | Confirm CRA Article |
 | 🟨  | SBOM Generation Tool              | No       |                                            |         | Consider recommendation |
 
@@ -928,14 +928,25 @@ Communicates any issues or findings to any number of upstream roles, including t
   * [Analyst](#analyst).
 
 
-### Consumer
+### End-user
 
-The software in use, in production, by a user.
+> 1. (CPANSec-2024) The software in use, in production, by a user or customer.
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
+
+* See also:
+    * [End-user](glossary.md#end-user) in the Glossary
+
+
+#### Consumer
+
+* See also
+  * [End-user](#end-user).
 
 #### User
 
 * See also
-  * [Consumer](#consumer).
+  * [End-user](#end-user).
 
 
 ### Auditor
@@ -966,6 +977,8 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 
 ## References
 
+* (CPANSec-2024) CPAN Security Group commentary by Author. If you agree or have improvements, [share it with us](#document-status-%EF%B8%8F--draft)!
+* (CISA-2023)  [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), published
 * (CISA-2024)  [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28.
 * (CRA-AII)    [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303) Information and Instructions to the User, Dated 2024-03-12
 * (CRA-AV)     [Cyber Resilience Act, Annex V](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=311) EU Declaration of Conformity, Dated 2024-03-12
@@ -979,8 +992,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 * (DE-TR)      German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 1.1, published 2023-11-28.
 * (NTIA-2021)  [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30.
 * (NTIA-SBOM)  [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
-
-* (CPANSec-2024) CPAN Security Group commentary by Author.
+* (EUBG-2022)  [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04))
 
 
 ## Commentary and FIXME points (FIXME: remove when done)
@@ -1056,7 +1068,7 @@ Several people have been involved in the development of this document
 | SBOM Location                   | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |                         |         |
 | SBOM Release                    | Int          | bom.properties.specVersion                                            | SPDXVersion             |         |
 | SBOM Serial Number              | UUID         | bom.metadata.serialNumber                                             | SPDXID                  |         |
-| SBOM Type                       |              |                                                                       |                         |         |
+| SBOM Type                       | Text         |                                                                       |                         | FIXME: Required? |
 | Security Attestation            | URL          |                                                                       |                         |         |
 | Security contact (Dependency)   | URL          | bom.components[].externalReferences[].security-contact                |                         |         |
 | Security contact (Current)      | URL          | bom.externalReferences[].security-contact                             |                         |         |

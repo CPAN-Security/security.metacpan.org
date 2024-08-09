@@ -17,11 +17,12 @@ mermaid: true
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
-## A Simplified Open Source Supply-chain Graph
+## Open Source Supply-chain (Simplified diagram)
 
 > [!NOTE]
 > The graph below does *not* include _Content Delivery Networks_, _Model Ecosystems_ and _Plugin Ecosystems_.
-> If you know of other parts of an Open Source Supply-chain that involves the managing of metadata somehow, then please reach out!
+> If you know of other parts of an Open Source Supply-chain that involves the managing of metadata somehow, then please [reach out](#document-status--)!
+> We'd love to add them – or at least to be aware of them.
 
 ```mermaid
 stateDiagram-v2
@@ -75,7 +76,7 @@ stateDiagram-v2
 ```
 
 
-## About this document (TL;DR)
+## TL;DR
 
 > [!NOTE]
 > TODO: Show how metadata may be communicated along these open source supply-chains.
@@ -101,24 +102,32 @@ This document offers an overview of [Open Source Software](glossary.md#open-sour
     1. Interact with the right upstream communities in effective and sustainable ways.
 
 
-### Motivation
+## Motivation
 
 Originally, this document stems from the author's frustration with the lack of a clear Open Source perspective in current SBOM documentation (as of 2023). This brought the author to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
+
+Furthermore, this document is also an attempt to explore and map out the consequences that the EU Cyber Resilience Act will have for Open Source Ecosystems.
+The CRA is the first regulation that has language that explicitly affects Open Source ecosystems.
+This law introduces a new entity – the Open Source Steward – with obligations to them (and other Roles) to improve the state of Cybersecurity throughout Open Source Supply-chains.
+This has shown us that there's a need to map out what Open Source Supply-chains actually look like, and spell out what Roles can be found throughout it, and more.
 
 Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation – taking incremental steps toward more transparent and accountable Open Source supply-chains.
 
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
 
-## Supply-chain Ecosystems, Environments & Roles and fields
+# Supply-chain Ecosystems, Environments & Roles and Fields
 
-Here, we map out the different parts of typical Open Source Supply-chains – the Environments and Ecosystems we use, the Roles that are operating within these, and what Metadata they care about, and which operations they are expected to do when caring.
+In this section, we map out the different parts of typical Open Source Supply-chains – the Environments and Ecosystems we use, the Roles that are operating within these, and what Metadata they care about, and which operations they are expected to do when caring.
 Additionally, we give an indication of what regulations, standards or other requirements that call for the presence of a given field.
 And all this, with the goal of allowing downstream users to both live up to their legal obligations and to improve their security posture.
 To improve by ensuring that the metadata they need is available, updated and authoritative, and can be helpful in both mitigating vulnerabilities and interacting with the maintainers of any Open Source projects that may be involved.
 
 
-### A Simplified Open Source Supply-chain Graph, w/CRA Roles
+## Open Source Supply-chain (Simplified diagram w/CRA Roles)
+
+> [!NOTE]
+> This diagram is identical to the simplified one above, but adding the extra Roles implied by the EU Cyber Resilience Act.
 
 ```mermaid
 stateDiagram-v2
@@ -170,22 +179,23 @@ stateDiagram-v2
     %% Some rights reserved. Licenced CC-BY-SA-4.0
 ```
 
-### Typical Metadata Operations
+### Legend of Metadata Operations
 
-In this document, we color-code the different _metadata operations_ in order to quickly see what activities a Supply-chain Role may be involved in.
+Throughout this document, we color-code the different _metadata operations_ in order to quickly see what activities a Supply-chain Role may be involved in.
 We're also assuming that metadata is stored in SBOMs, but this need not be the case.
 Some of the information here is based on CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)).
-In this document we also distinguish between SBOM Authors that are _Authoritative_ sources for fields and _Non-authoritative_ sources, in addition SBOM Distributors and Consumers.
-We also acknowledge that some situations may call for an SBOM Censor.
+We also distinguish between SBOM Authors that are _Authoritative_ sources for fields and _Non-authoritative_ sources, in addition SBOM Distributors and Consumers.
+The Authoritative/Non-authoritative distinction is important so everyone is clear about where a given metadata field originally comes from.
+And finally, we acknowledge that some situations may call for an SBOM Censor.
 
 * 🟥 SBOM Author (Authoritative) – **Creates**, defines, signs metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
 * 🟨 SBOM Author (Non-authoritative) – **Assembles**, **updates**, refines, maintains, attests, annotates metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
 * 🟩 SBOM Distributor – **Distributes**, curates, indexes metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
 * 🟦 SBOM Consumer – **Verifies**, consumes, aggregates, validates, surveys, analyzes or reports metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
-* 🟪 SBOM Censor – **Censors**, redacts, deletes, anonymizes metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
+* 🟪 SBOM Censor – **Censors**, redacts, deletes, anonymizes or filters metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
 
 
-### An Idealized Open Source Supply-chain Graph
+## Open Source Supply-chain (Full diagram)
 
 ```mermaid
 stateDiagram-v2
@@ -394,7 +404,9 @@ stateDiagram-v2
 ```
 
 
-## Supply-chain Ecosystems and Environments
+## Ecosystems and Environments
+
+Which environments and Ecosystems are found throughout a Supply-chain? Here's an overview.
 
 
 ### Maintainer Environment
@@ -504,7 +516,7 @@ Here, you'll get an overview of the most important ones, which fields they care 
 * TODO: CPANSec Remaining work related to this field.
 
 
-### Common Metadata
+### Metadata common for all Roles
 
 | Ops | Field name               | Required | Required by             | Comment | TODO    |
 | :-: | :----------------------- | :------: | ----------------------- | :------ | :------ |
@@ -545,7 +557,6 @@ May decide the name of the project and other project parameters for (or on behal
 
 * See also
   * [Manufacturer](#manufacturer)
-
 
 #### Manufacturer (Supplier)
 

@@ -13,6 +13,8 @@ toc: true
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md](https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
+> - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
+
 
 ### Legend
 
@@ -124,11 +126,8 @@ toc: true
 
 ### Consumer
 
-> 1. (NTIA-2021) Entity that obtains SBOMs.
->     * An entity can be both a supplier and consumer, using components with SBOM data in its own software, which is then passed downstream.
->     * An “end-user” consumer (that is not also a supplier) may also be called an operator or a leaf entity.
->
-> (Ref: [NTIA-2021](#references-and-terms))
+> * See also
+>     * [End-user](#end-user)
 
 
 ### CycloneDX ✍️
@@ -202,7 +201,7 @@ toc: true
 > (Ref: [CPANSec-2024](#references-and-terms))
 >
 > * See also
->     * [Requirement](#requirement)
+>     * [Requirement](#requirement).
 
 
 #### Dependency (Resolved at Source) ✍️
@@ -255,13 +254,10 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-> 1. Required by PCI-DSS 
-
-> 1. (PCI-SSF-1.2.1) Service dependencies are required
-
-([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
-
-
+> 1. (CPANSec-2024) A network service dependency that are required for component to function as expected
+>     * (PCISSF-2023) Required by the PCI Software Security Framework version 1.2.1
+>
+> (Ref: [CPANSec-2024](#references-and-terms), [PCISSF-2023](#references-and-terms))
 
 #### Requirement ✍️
 
@@ -269,7 +265,7 @@ toc: true
 > * FIXME: Expand on this topic
 
 > * See also
->     * [Dependency (Unresolved)]()
+>     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
 
 
 ### Distributor ⚠️
@@ -283,8 +279,10 @@ toc: true
 > * FIXME: Confirm with lawyer after final version of CRA is adopted.
 
 > 1. (CRA-2024-03) A natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the Union market without affecting its properties.
+> 1. (EUBG-2022-3) The distributor is a natural or a legal person in the supply chain, other than the manufacturer or the importer, who makes a product available on the market.
+>     *  Distributors are subject to specific obligations and have a key role to play in the context of market surveillance.
 >
-> (Ref: [CRA-2024-03](#references-and-terms))
+> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms))
 
 
 ### Downstream
@@ -301,6 +299,17 @@ toc: true
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
+### End-user
+
+> 1. (NTIA-2021) Entity that obtains SBOMs.
+>     * An entity can be both a supplier and consumer, using components with SBOM data in its own software, which is then passed downstream.
+>     * An “end-user” consumer (that is not also a supplier) may also be called an operator or a leaf entity.
+> 1. (EUBG-2022-3) The end user is any natural or legal person residing or established in the European Union, to whom a product has been made available either as a consumer outside of any trade, business, craft or profession or as a professional end user in the course of its industrial or professional activities.
+>     * Many products covered by European Union product harmonisation legislation are used at work and thus also subject to Union safety at work legislation.
+>
+> (Ref: [NTIA-2021](#references-and-terms), [EUBG-2022-3](#references-and-terms))
+
+
 ### Hardware
 
 > 1. (CRA-2024-03) A physical electronic information system, or parts thereof capable of processing, storing or transmitting digital data.
@@ -311,8 +320,10 @@ toc: true
 ### Importer
 
 > 1. (CRA-2024-03) A natural or legal person established in the Union who places on the market a product with digital elements that bears the name or trademark of a natural or legal person established outside the European Union.
+> 1. (EUBG-2022-3) The importer is a natural or legal person established in the Union who places a product from a third country on the EU market.
+>    * His obligations build on the obligations of the manufacturer.
 >
-> (Ref: [CRA-2024-03](#references-and-terms))
+> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms))
 
 
 ### Life-cycle Phase
@@ -336,8 +347,12 @@ toc: true
 ### Manufacturer
 
 > 1. (CRA-2024-03) Any natural or legal person who develops or manufactures products with digital elements or has products with digital elements designed, developed or manufactured, and markets them under his or her name or trademark, whether for payment, monetisation or free of charge.
+> 1. (EUBG-2022-3) The manufacturer is any natural or legal person who manufactures a product or has a product designed or manufactured, and places it on the market under his own name or trademark.
+>     * The manufacturer is responsible for the conformity assessment of the product and is subject to a series of obligations including traceability requirements.
+>     * When placing a product on the Union market, the responsibilities of a manufacturer are the same whether he is established outside the European Union or in a Member State.
+>     * The manufacturer must cooperate with the competent national authorities in charge of market surveillance in case of a product presenting a risk or being non-compliant.
 >
-> (Ref: [CRA-2024-03](#references-and-terms))
+> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms))
 
 
 ### Open-source software
@@ -474,17 +489,18 @@ toc: true
 ### SBOM Roles
 
 > 1. (CPANSec-2024) A person, agent or actor that does something with an SBOM document, or with specific metadata fields in an SBOM document.
->     * This may include operations like Creating, Updating, Verifying, Censoring or Sharing SBOM documents or fields.
+>     * This MAY include operations like Creating, Updating, Verifying, Censoring or Sharing SBOM documents or fields.
 > 1. (CISA-2024) "Data is only good if it is in the hands of the right people."
 >
 > (Ref: [CISA-2024](#references-and-terms))
 
 #### SBOM Assembler (Role) ✍️
 
-> 1. (CPANSec-2024) A non-authoritative [SBOM Author](#sbom-author--non-authoritative-)
+> 1. (CPANSec-2024) An 🟨 [SBOM Author (Non-authoritative)](#sbom-author--non-authoritative-)
+>    * MAY consume [Source SBOM](#source-sbom--type-), [Build SBOM](#build-sbom--type-) and/or [Deployed SBOM](#deployed-sbom--type-) type documents
+>    * SHOULD produce [Build SBOM](#build-sbom--type-) and/or [Deployed SBOM](#deployed-sbom--type-) type documents
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
-
 
 #### SBOM Author (Authoritative) (Role) ✍️
 
@@ -687,7 +703,7 @@ toc: true
 
 This glossary is partly based on terms from the following sources.
 
-- (CPANSec-2024) – These are commentary and proposed improvements made by the author(s) of this document.
+- (CPANSec-2024) – These are commentary and proposed improvements made by the author(s) of this document. If you agree or have improvements, [share it with us](#document-status-%EF%B8%8F--draft)!
 - (CISA-2023) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (Public Domain)
 - (SCVS-2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
 - (SLSA-2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)
@@ -698,12 +714,12 @@ This glossary is partly based on terms from the following sources.
 - (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
 - (PCISSF-2023) [PCI Software Security Framework](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), published May 2023.
 - (CDXAG-2024) [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf), Second edition, Appendix A, published April 2024.
-- (EUBG-2022) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)), Section 4.1.2 "Conformity with the essential requirements: harmonised standards", Published 2022-06-29.
+- (EUBG-2022-3)  [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)#page=34), Chapter 3 (pages 34-46), published 2022-06-29.
 
 
 ## About this document
 
-* Version: 0.6.0
+* Version: 0.6.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

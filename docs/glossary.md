@@ -163,6 +163,16 @@ toc: true
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
+
+#### Dependency (Dynamic)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> * See also
+>     * [Dependency (Static)](#dependency-static)
+
+
 #### Dependency (Transitive) ✍️
 
 > 1. (SCVS-2020) A software component that is indirectly used by a program by means of being a dependency of a dependency.
@@ -210,12 +220,17 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved at Build) ✍️
+#### Dependency (Resolved during Configuration) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved at Deploy) ✍️
+#### Dependency (Resolved during Build) ✍️
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+#### Dependency (Resolved during Deploy) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -230,12 +245,12 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Pinned at Build) ✍️
+#### Dependency (Pinned during Build) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Pinned at Deploy) ✍️
+#### Dependency (Pinned during Deploy) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -261,7 +276,13 @@ toc: true
 
 ([download link](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf]
 
+#### Dependency (Static)
 
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> * See also
+>     * [Dependency (Dynamic)](#dependency-dynamic)
 
 #### Requirement ✍️
 

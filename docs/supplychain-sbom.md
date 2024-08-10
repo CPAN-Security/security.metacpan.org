@@ -1017,7 +1017,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 * (EUBG-2022)  [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04))
 
 
-## Commentary and FIXME points (FIXME: remove when done)
+## Commentary and TODOs
 
 1. Open Source in CRA... Maintainer -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor
 1. Open Source in CRA (simplified)... Hobbyist -> Maintainer -> Maintainer w/Steward -> Manufacturer
@@ -1031,7 +1031,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
     * Stages; Author/develop, configure, build, test, install/deploy, packaging, container assembly, post-deploy (plugin/dynamic), runtime.
     * States; resolved, required/unresolved, embedded/included
     * Types; component, patch, system resource, environment, ecosystem, service
-    * Descriptions; cross-ecosystem vs. in-ecosystem, up-river vs. down-river (within language ecosystem), upstream vs. downstream (outside language ecosystem), reverse, assumed/implied vs. stated/explicit
+    * Descriptions; cross-ecosystem vs. in-ecosystem, up-river vs. down-river (within language ecosystem), upstream vs. downstream (outside language ecosystem), reverse, assumed/implied vs. stated/explicit, static vs. dynamic
 1. Clearer distinction between Builder, Deployer, Packager, Assembler, Integrator
 1. Add example of a chain of edits to an SBOM document, as it is passed down the supply-chain
 1. Distinguish between Dependencies (as resolved by the Builder, Packager, Assembler or Integrator roles) and Requirements (unresolved, but as defined by the Author or Integrator roles).

@@ -1,6 +1,6 @@
 ----
 layout: page
-title: CPAN Author's Security Guide
+title: CPAN Author's Secure Coding Guide
 description: A security guide for CPAN Distribution Authors
 toc: true
 ----
@@ -13,6 +13,7 @@ toc: true
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/cpan-author-guide.md](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/cpan-author-guide.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
+> - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 ## Learn the basics
 
@@ -55,12 +56,14 @@ toc: true
 
 # Relevant documentation and guides
 
-* SEI CERT Secure Perl Coding Standard https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard
+* SEI CERT [Secure Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
 * [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
 
 
-# About this document
+## License and use of this document
 
-Version: 0.5.0
-License: CC-BY-SA-4.0
-Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
+* Version: 0.5.1
+* License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
+* Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
+
+You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.

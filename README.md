@@ -20,6 +20,7 @@ If you care and would like to make a contribution, you can…
 ## Resources
 
 * [Our main website](https://security.metacpan.org/)
+* [Matrix channel](https://matrix.to/#/#cpansec-discussion:matrix.org)
 * [IRC channel](ircs://ssl.irc.perl.org:7062/#cpan-security) ([web client](https://kiwiirc.com/nextclient/#ircs://ssl.irc.perl.org:7062/#cpan-security))
 * [Github organization](https://github.com/orgs/CPAN-Security)
 * [Projects](https://github.com/orgs/CPAN-Security/projects)
@@ -28,4 +29,5 @@ If you care and would like to make a contribution, you can…
     * [Reading list](docs/readinglist.md) (Work in progress)
     * [Pre-Release Disclosure Agreement](docs/pre-release-disclosure.md)
     * How to [Report a Security Issue](docs/report.md)
+* [Meetings](meetings/)
 * [Presentations](presentations/) about us and our work

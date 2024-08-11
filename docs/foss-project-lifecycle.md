@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Open Source project life-cycle conditions
-description: A proposed list of conditions one can find an Open Source project in
+title: Open Source project life-cycle states and indicators
+description: A proposed list of states and their indicators one can find an Open Source project in
 toc: true
 mermaid: true
 ---
@@ -17,13 +17,15 @@ mermaid: true
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
-## Table of life-cycle conditions
+## Table of life-cycle states
+
+States in **bold** already exist on CPAN.
 
 | State        | Maint = 0 | Maint = 1 | Maint >= 1 | Maint needs increase | Maint is declining | Response time | Submitter  |
 | ------------ | --------- | --------- | ---------- | -------------------- | ------------------ | ------------- | ---------- |
-| NEEDHELP     | no        | YES       | YES        | YES                  | no                 | LOW           | Maintainer |
-| HANDOFF      | no        | YES       | no         | YES                  | YES                | LOW           | Maintainer |
-| ADOPTME      | YES       | no        | no         | YES                  | no                 | NONE          | Ecosystem  |
+| **NEEDHELP** | no        | YES       | YES        | YES                  | no                 | LOW           | Maintainer |
+| **HANDOFF**  | no        | YES       | no         | YES                  | YES                | LOW           | Maintainer |
+| **ADOPTME**  | YES       | no        | no         | YES                  | no                 | NONE          | Ecosystem  |
 | CUSTODY      | YES       | no        | no         | YES                  | no                 | LOW           | Ecosystem  |
 | ACTIVE       | no        | YES       | YES        | no                   | no                 | OK            | Maintainer |
 | DONE         | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
@@ -31,13 +33,13 @@ mermaid: true
 | CASUAL       | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
 | NEEDFUNDING  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
 | NEEDSUPPORT  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
-| NOXFER       | no        | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
+| **NOXFER**   | no        | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
 | COMPROMISED  | YES       | YES       | YES        | no                   | no                 |               | Ecosystem  |
 | DISCOURAGED  | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
 | DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
 
 
-### Indicators
+### State indicators
 
 1. ACTIVE – The project is maintained (default state)
     * (number of maintainers is higher than 0)
@@ -88,7 +90,7 @@ mermaid: true
 1. DELISTED
     * 
 
-### List of Kinds of Support
+### List of Support Types
 
 When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
 

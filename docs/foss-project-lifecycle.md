@@ -122,6 +122,7 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 1. Event organizing
     * Conferences, Meetups, Hackathons or other gatherings for knowledge-sharing gatherings
     * Online events, webinars or classes/training
+    * Socializing
 1. Industry/Stakeholder/OSPO support
 1. Fundraising
 1. Media relations

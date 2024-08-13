@@ -568,8 +568,8 @@ toc: true
 
 ### SBOM Roles
 
-> 1. (CPANSec-2024) A person, agent or actor that does something with an SBOM document, or with specific metadata fields in an SBOM document.
->     * This may include operations like Creating, Updating, Verifying, Censoring or Sharing SBOM documents or fields.
+> 1. (CPANSec-2024) A person, agent or actor that does something with an SBOM document, or with specific metadata attributes in an SBOM document.
+>     * This may include operations like Creating, Updating, Verifying, Censoring or Sharing SBOM documents or attributes.
 > 1. (CISA-2024-3) "Data is only good if it is in the hands of the right people."
 >
 > (Ref: [CISA-2024-3](#references-and-terms))
@@ -583,11 +583,11 @@ toc: true
 #### SBOM Author (Authoritative) (Role) ✍️
 
 > 1. (CPANSec-2024) 🟥 SBOM Author (Authoritative).
->     * An authoritative source of an SBOM, or an SBOM metadata field.
+>     * An authoritative source of an SBOM, or an SBOM metadata attributes.
 > 1. (CISA-2024-3) Creates an SBOM.
-> 1. (CPANSec-2024) SBOM Authors create, define, or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_.
->     * This mostly means authoritative metadata fields as laid out in the different [Supply-chain Roles](supplychain-sbom#supply-chain-roles-and-metadata).
->     * In addition to fields encountered throughout the supply-chain, they care about the fields listed in the table below.
+> 1. (CPANSec-2024) SBOM Authors create, define, or sign SBOM metadata — _They make sure the attributes and related artifacts **Exist**_.
+>     * This mostly means authoritative metadata attributes as laid out in the different [Supply-chain Roles](supplychain-sbom#supply-chain-roles-and-metadata).
+>     * In addition to attributes encountered throughout the supply-chain, they care about the attributes listed in the table below.
 >     * They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
 >
 > (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
@@ -603,9 +603,9 @@ toc: true
 > 1. (CPANSec-2024) 🟨 SBOM Author (Non-authoritative)
 >     * A non-authoritative [SBOM Author](#sbom-author--role-).
 > 1. (CPANSec-2024) Someone that gathers, assembles or updates SBOMs from different sources into a new SBOM.
->     * This is a _informal_ Role separate from "SBOM Author" for clarifying the responsibility when the Role intends to _gather_, _assemble_ or _update_ metadata fields, instead of being the authoritative _creator_ of a field.
->     * This assumes some fields may be in need of updating as an SBOM is passed down a supply-chain – for example to correct upstream assumptions like 'Download location', add missing fields, or update the list of resolved dependencies.
->     * The intention is to distinguish between "SBOM Author" and "SBOM Assembler" in the same way as one distinguishes between "Create" and "Update" in CRUD – to clarify responsibilities and expectations for who is the original source of some metadata fields.
+>     * This is a _informal_ Role separate from "SBOM Author" for clarifying the responsibility when the Role intends to _gather_, _assemble_ or _update_ metadata attributes, instead of being the authoritative _creator_ of an attributes.
+>     * This assumes some attributes may be in need of updating as an SBOM is passed down a supply-chain – for example to correct upstream assumptions like 'Download location', add missing attributes, or update the list of resolved dependencies.
+>     * The intention is to distinguish between "SBOM Author" and "SBOM Assembler" in the same way as one distinguishes between "Create" and "Update" in CRUD – to clarify responsibilities and expectations for who is the original source of some metadata attributes.
 > 
 > (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
@@ -613,7 +613,7 @@ toc: true
 
 > 1. (CPANSec-2024) 🟩 SBOM Distributor.
 >     * SBOM Distributor roles distribute, curate, or index SBOM metadata — _They make sure the metadata and related artifacts are made **Available** to others_.
->     * They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
+>     * They don't have any specific metadata attributes that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
 > 1. (CISA-2024-3) Receives SBOMs for the purpose of sharing them with [SBOM Consumers](#sbom-consumer--role-) or other Distributors.
 > 1. (CISA-2023) Additionally, an SBOM Distributor may care about the following activities.
 >     * Discovery: Mechanism used by the consumer to know the SBOM exists and how to access it.
@@ -626,7 +626,7 @@ toc: true
 
 > 1. (CPANSec-2024) 🟦 SBOM Consumer.
 >     * SBOM Consumer roles gather, inspect, analyze, aggregate or verify SBOM metadata — _They make sure metadata and related artifacts are **Useful**, **Complete**, **Correct** or **Compliant**_.
->     * They don't have any specific metadata fields that are commonly used across the different supply-chain Consumer roles.
+>     * They don't have any specific metadata attributes that are commonly used across the different supply-chain Consumer roles.
 > 1. (CISA-2024-3) Receives the transferred SBOM.
 >     * This could include roles such as third parties, authors, integrators, and end users.
 > 1. (NTIA-2021, "Consume" category) They may view SBOM files to understand the contents, and use this information to support decision making & business processes, or to compare and contrast SBOMs to discover significant changes or vulnerabilities.

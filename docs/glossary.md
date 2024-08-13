@@ -797,7 +797,7 @@ This glossary is partly based on terms from the following sources.
 
 ## About this document
 
-* Version: 0.6.0
+* Version: 0.7.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

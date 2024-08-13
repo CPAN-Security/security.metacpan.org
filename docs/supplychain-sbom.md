@@ -1051,7 +1051,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 
 ## License and use of this document
 
-* Version: 0.6.1
+* Version: 0.7.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

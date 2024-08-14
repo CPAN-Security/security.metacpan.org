@@ -213,8 +213,8 @@ stateDiagram-v2
     state "🟥 Attestation Authority 🆕" as authority_attester
 
     %%
+    state "🟦 Authenticator" as language_authenticator
     %%state "🟦 Importer" as language_importer
-    state "🟨 Authenticator" as language_authenticator
     state "🟥🟨🟦 OSS Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Distributor" as language_distributor
@@ -227,6 +227,7 @@ stateDiagram-v2
     %%state "🟩 Delivery Network" as network_distributor
 
     %%
+    state "🟦 Authenticator" as package_authenticator
     %%state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
@@ -250,7 +251,7 @@ stateDiagram-v2
 
     %%
     classDef createsSBOM stroke:red,stroke-width:3px;
-    classDef updatesSBOM stroke:yellow,stroke-width:3px,stroke-dasharray:15,5;
+    classDef updatesSBOM stroke:yellow,stroke-width:3px,stroke-dasharray:5,5;
     classDef assemblesSBOM stroke:yellow,stroke-width:3px;
     classDef distributesSBOM stroke:green,stroke-width:3px;
     classDef verifiesSBOM stroke:#07f,stroke-width:3px;
@@ -278,6 +279,7 @@ stateDiagram-v2
     %%class network_distributor ignoresSBOM
 
     %%class package_importer verifiesSBOM
+    class package_authenticator updatesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
     class package_steward createsSBOM
@@ -315,8 +317,8 @@ stateDiagram-v2
 
     %%
     state "Language Ecosystem" as ecosystem_lang {
-        %%[*] --> language_importer
         [*] --> language_authenticator
+        %%[*] --> language_importer
         language_authenticator --> language_distributor
         language_authenticator --> language_steward
         language_authenticator --> language_curator
@@ -345,18 +347,19 @@ stateDiagram-v2
     repository_distributor --> external_contributor
 
     state "Package Ecosystem" as ecosystem_package {
+        [*] --> package_authenticator
         %%[*] --> package_importer
-        [*] --> package_packager
-        [*] --> package_patcher
-        %%package_importer --> package_patcher
-        %%package_importer --> package_packager
-        package_patcher  --> package_packager
-        package_packager --> package_curator
-        package_steward  --> package_curator
-        package_packager --> package_distributor
-        package_curator  --> package_distributor
-        package_steward  --> package_distributor
-        package_packager --> package_steward
+        package_authenticator --> package_patcher
+        %%package_importer      --> package_patcher
+        %%package_importer      --> package_packager
+        package_authenticator --> package_packager
+        package_patcher       --> package_packager
+        package_packager      --> package_curator
+        package_steward       --> package_curator
+        package_packager      --> package_distributor
+        package_curator       --> package_distributor
+        package_steward       --> package_distributor
+        package_packager      --> package_steward
     }
 
     repository_distributor --> ecosystem_package
@@ -691,6 +694,16 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 
 * See also
    * [Importer](glossary.md#importer) in the glossary.
+
+### Authenticator
+
+> [!NOTE]
+> * Authenticators ensure that only authorized Maintainers are allowed to publish their components to a Language or Package Ecosystem.
+
+* Examples
+    * (CPAN) Upload to the PAUSE web interface at `https://pause.perl.org`
+    * (Debian) Upload using the `dput` tool, or manually to `sftp://ftp.eu.upload.debian.org/pub/UPLOAD` for regular packages
+        * For security updates, upload a patch to the stable-proposed-updates and an accompanying explanation to the `stable-release-managers` list
 
 
 ### Patcher

@@ -1,184 +1,43 @@
+---
+layout: page
+title: Open Source project life-cycle conditions
+description: A proposed list of conditions one can find an Open Source project in
+toc: true
+mermaid: true
+---
 
-| State        | Maint = 0 | Maint = 1 | Maint >= 1 | Maint needs increase | Maint is declining | Response time | Response needs increase | Response is declining | Submitter  |
-| ------------ | --------- | --------- | ---------- | -------------------- | ------------------ | ------------- | ----------------------- | --------------------- | ---------- |
-| NEEDHELP     | no        | YES       | YES        | YES                  | no                 | LOW           |                         |                       | Maintainer |
-| HANDOFF      | no        | YES       | no         | YES                  | YES                | LOW           |                         |                       | Maintainer |
-| ADOPTME      | YES       | no        | no         | YES                  | no                 | NONE          |                         |                       | Ecosystem  |
-| CUSTODY      | YES       | no        | no         | YES                  | no                 | LOW           |                         |                       | Ecosystem  |
-| ACTIVE       | no        | YES       | YES        | no                   | no                 | OK            |                         |                       | Maintainer |
-| DONE         | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
-| UNMAINTAINED | no        | YES       | YES        | no                   | no                 | NONE          |                         |                       | Maintainer |
-| CASUAL       | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
-| NEEDFUNDING  | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
-| NEEDSUPPORT  | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
-| NOXFER       | no        | YES       | YES        | no                   | no                 | NONE          |                         |                       | Ecosystem  |
-| COMPROMISED  | YES       | YES       | YES        | no                   | no                 |               |                         |                       | Ecosystem  |
-| DISCOURAGED  | YES       | YES       | YES        | no                   | no                 | NONE          |                         |                       | Ecosystem  |
-| DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          |                         |                       | Ecosystem  |
+## Document status: ⚠️  DRAFT
+
+> [!CAUTION]
+> What you see here is a DRAFT of an Open Source project life-cycle conditions overview, by the CPAN Security Group (CPANSec).
+> As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
+>
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/lifecycle/docs/foss-project-lifecycle.md](https://github.com/CPAN-Security/security.metacpan.org/tree/lifecycle/docs/foss-project-lifecycle.md)
+> - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
+> - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
-(the following seems to only work on gitlab)
+## Table of life-cycle conditions
 
-```json:table
-{
-  "fields" : [
-    { "key": "condition",             "label": "Condition" },
-    { "key": "no_maint",              "label": "Maint = 0" },
-    { "key": "one_maint",             "label": "Maint = 1" },
-    { "key": "many_maint",            "label": "Maint >= 1" },
-    { "key": "increase_maint",        "label": "Maint needs increase" },
-    { "key": "declining_maint",       "label": "Maint is declining" },
-    { "key": "responsive_maint",      "label": "Response time" },
-    { "key": "faster_response_maint", "label": "Response needs increase" },
-    { "key": "slow_response_maint",   "label": "Response is declining" },
-    { "key": "claimed_by",            "label": "Claimed by" }
-  ],
-  "items" : [
-    { "condition":             "NEEDHELP",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "YES",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "HANDOFF",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "no",
-      "increase_maint":        "YES",
-      "declining_maint":       "YES",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "ADOPTME",
-      "no_maint":              "YES",
-      "one_maint":             "no",
-      "many_maint":            "no",
-      "increase_maint":        "YES",
-      "declining_maint":       "no",
-      "responsive_maint":      "NONE",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Ecosystem" },
-    { "condition":             "CUSTODY",
-      "no_maint":              "YES",
-      "one_maint":             "no",
-      "many_maint":            "no",
-      "increase_maint":        "YES",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Ecosystem" },
-    { "condition":             "ACTIVE",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "OK",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "DONE",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "UNMAINTAINED",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "NONE",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "CASUAL",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "NEEDFUNDING",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "NEEDSUPPORT",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "LOW",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "NOXFER",
-      "no_maint":              "no",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "NONE",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Maintainer" },
-    { "condition":             "COMPROMISED",
-      "no_maint":              "YES",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Ecosystem" },
-    { "condition":             "DISCOURAGED",
-      "no_maint":              "YES",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "NONE",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Ecosystem" },
-    { "condition":             "DELISTED",
-      "no_maint":              "YES",
-      "one_maint":             "YES",
-      "many_maint":            "YES",
-      "increase_maint":        "no",
-      "declining_maint":       "no",
-      "responsive_maint":      "NONE",
-      "faster_response_maint": "",
-      "slow_response_maint":   "",
-      "claimed_by":            "Ecosystem" }
-  ]
-}
-```
+| State        | Maint = 0 | Maint = 1 | Maint >= 1 | Maint needs increase | Maint is declining | Response time | Submitter  |
+| ------------ | --------- | --------- | ---------- | -------------------- | ------------------ | ------------- | ---------- |
+| NEEDHELP     | no        | YES       | YES        | YES                  | no                 | LOW           | Maintainer |
+| HANDOFF      | no        | YES       | no         | YES                  | YES                | LOW           | Maintainer |
+| ADOPTME      | YES       | no        | no         | YES                  | no                 | NONE          | Ecosystem  |
+| CUSTODY      | YES       | no        | no         | YES                  | no                 | LOW           | Ecosystem  |
+| ACTIVE       | no        | YES       | YES        | no                   | no                 | OK            | Maintainer |
+| DONE         | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
+| UNMAINTAINED | no        | YES       | YES        | no                   | no                 | NONE          | Maintainer |
+| CASUAL       | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
+| NEEDFUNDING  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
+| NEEDSUPPORT  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
+| NOXFER       | no        | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
+| COMPROMISED  | YES       | YES       | YES        | no                   | no                 |               | Ecosystem  |
+| DISCOURAGED  | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
+| DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
 
-## Open Source project life-cycle conditions
+
+### Indicators
 
 1. ACTIVE – The project is maintained (default state)
     * (number of maintainers is higher than 0)
@@ -227,7 +86,51 @@
 1. DISCOURAGED
     * 
 1. DELISTED
-    *
+    * 
+
+### List of Kinds of Support
+
+When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
+
+1. Brand management
+    * Development
+    * Strategy
+    * Implementation
+    * Hosting & legal
+1. Bug or issue triage
+1. Outreach
+    * Article writing
+    * Podcast hosting or participation
+    * Conference presentations
+    * SoMe presence
+1. Code review
+    * Security
+    * Development process
+    * Maintainability
+1. Documentation
+    * Completness
+    * Consistency
+    * Relevance
+1. Community management & assistance
+    * Culture
+    * Diversity, Equity, Inclusion
+    * Forum management, moderation and support
+1. Community infrastructure and hosting
+    * Email
+    * Chat forum
+    * Other community services
+1. Event organizing
+    * Conferences, Meetups, Hackathons or other gatherings for knowledge-sharing gatherings
+    * Online events, webinars or classes/training
+1. Industry/Stakeholder/OSPO support
+1. Fundraising
+1. Media relations
+1. Security contact
+1. Course/training material development
+1. Open Source Steward
+1. Legal assistance
+    * License conflict resolution
+1. Governance development
 
 
 ## Other project states, claims and metadata
@@ -243,6 +146,11 @@
 1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (CRA Annex II, point 8)
 1. CE_CONFORMITY_BODY – A URL pointing to the Conformity Assessment Body where this component has been registered (CRA Article 22(4) and Article 58(1))
 1. CE_SUPPORT_END_DATE – The date for when the support for the component expires (Annex II, point 7)
+
+
+## Sources
+
+* https://chaos.social/@sjn/109343732566572015
 
 
 ```mermaid

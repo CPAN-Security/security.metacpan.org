@@ -67,6 +67,12 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 * (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) (S4 Conference 2023)
 
 
+## Software Lifecycle
+
+* (OWASP) [Common Lifecycle Enumeration](https://owasp.org/www-project-common-lifecycle-enumeration/)
+* (MPO) [Defining End of Life for Medical Devices](https://www.mpo-mag.com/issues/2023-09-01/view_columns/defining-end-of-life-for-medical-devices/), MPO Magazine, 2023-09-06
+
+
 ## Provenance & Supply Chain Security
 
 * (OpenSSF) [Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security) (Feb 2024)
@@ -97,7 +103,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 
 ### EU and EEA – NIS2
 
-[Directive 2022/2555, Network and Information Security Directive 2](https://eur-lex.europa.eu/eli/dir/2022/2555) (NIS2)
+[Directive 2022/2555, Network and Information Security Directive 2](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555&qid=1710318619717) (NIS2; Published 2022-12-27)
 
 * In the [NIS2 Recitals](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=12)
     * Recital (52): On Open-source cybersecurity tools (page 11)
@@ -113,6 +119,10 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
     * Articles 21, points 1, 2 and 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
+
+#### NIS2 Implemented Regulation
+
+* [Draft act](https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14241-Cybersecurity-risk-management-reporting-obligations-for-digital-infrastructure-providers-and-ICT-service-managers_en)
 
 
 ### EU and EEA – CRA
@@ -201,7 +211,7 @@ Annexes are technical materials presented separately from the main text, and hav
 * Eclipse Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
 * Eclipse ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)
 * Eclipse ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
-* (EU) The '[Blue Guide](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.247.01.0001.01.ENG&toc=OJ%3AC%3A2022%3A247%3ATOC)' on the implementation of EU product rules (2022/C 247/01). (Published 2022-06-29)
+* (EU) The '[Blue Guide](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.247.01.0001.01.ENG&toc=OJ%3AC%3A2022%3A247%3ATOC)' on the implementation of EU product rules (2022/C 247/01). Published 2022-06-29; [PDF](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04))
 
 
 ### EU and EEA – PLD
@@ -209,6 +219,7 @@ Annexes are technical materials presented separately from the main text, and hav
 (EU) Product Liability Directive (PLD)
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive)
+* [Product Liability Directive](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.html) (85/374/EEC), Published 2024-03-12 by the EU Parliament ([PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.pdf))
 
 
 ### EU and EEA – DORA
@@ -224,6 +235,21 @@ Annexes are technical materials presented separately from the main text, and hav
 * (CPAN) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html) – describing the different personas or roles involved in the life-cycle of a CPAN distribution.
 * (CISA) [Software Aquisition Guide](https://www.cisa.gov/resources-tools/resources/software-acquisition-guide-government-enterprise-consumers-software-assurance-cyber-supply-chain)
 
+### PCI-SSF
+
+The Payment Card Industry Software Security Framework v1.2.1, Control Objective C.1, states
+
+> * C.1
+>     * All components and services used by the software are identified and maintained in a manner that minimizes the exposure of vulnerabilities.
+> * C.1.1
+>     * Control Objective: All software components and services are documented or otherwise cataloged in a software bill of materials (SBOM).
+>     * Test Requirements: The assessor shall examine evidence to confirm that information is maintained that describes all software components and services comprising the software solution, including:
+>         * All proprietary software libraries, packages, modules, and/or code packaged in a manner that enables them to be tracked as a freestanding unit of software.
+>         * All third-party and open-source frameworks, libraries, and code embedded in or used by the software during operation.
+>         * All third-party software dependencies, APIs, and services called by the software during operation.
+>     * Guidance: […] Knowing all of the components that comprise a software application or service, where they come from, and how they are updated and maintained is critical to minimizing and managing vulnerabilities in software applications. Without this information, it would be extremely difficult to identify and track vulnerabilities in software components that could expose the embedding software application to attacks. […]
+
+* (PCI-SSC) [PCI-SSF v1.2.1](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), Published May 2023
 
 ## License and use of this document
 

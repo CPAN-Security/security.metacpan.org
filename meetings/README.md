@@ -2,7 +2,7 @@
 layout: page
 permalink: /meetings/
 toc: false
-next_meeting_time: August 15th, 2024 16:00 UTC
+next_meeting_time: August 29th, 2024 16:00 UTC
 title: CPANSec meeting details & minutes
 ---
 
@@ -31,3 +31,4 @@ title: CPANSec meeting details & minutes
 * [2024-06-05](cpansec-minutes-2024-06-05.md)
 * [2024-07-18](cpansec-minutes-2024-07-18.md)
 * [2024-08-01](cpansec-minutes-2024-08-01.md)
+* [2024-08-15](cpansec-minutes-2024-08-15.md)

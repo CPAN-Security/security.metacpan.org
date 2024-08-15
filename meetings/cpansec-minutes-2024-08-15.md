@@ -29,7 +29,7 @@ title: Minutes 2024-08-15
 ### Quick summary of current work
 *   0.0.0.0 issue for chrome. https://vulcan.io/blog/0-0-0-0-day
 *   @stigtsp - Could be worth checking CPAN modules for similar issues (Net:: namespace, etc.)
-*   @stigtsp has released a "pirated" version of `cpanm` for potential use in the official Docker images.
+*   @stigtsp has made an unauthorized test release (on github) of `cpanminus` containing https patches from @garu and @atoomic for consideration in perl docker images
 *   @tux and @timlegge are looking into getting access to more uncommon OS's and architectures for testing, please reach out if you can help!
 *   @tux looks into giving @stigtsp access to some testing infrastructure for Perl.
 

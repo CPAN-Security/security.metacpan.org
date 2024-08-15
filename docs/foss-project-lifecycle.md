@@ -1,23 +1,43 @@
+---
+layout: page
+title: Open Source project life-cycle conditions
+description: A proposed list of conditions one can find an Open Source project in
+toc: true
+mermaid: true
+---
 
-| State        | Maint = 0 | Maint = 1 | Maint >= 1 | Maint needs increase | Maint is declining | Response time | Response needs increase | Response is declining | Submitter  |
-| ------------ | --------- | --------- | ---------- | -------------------- | ------------------ | ------------- | ----------------------- | --------------------- | ---------- |
-| NEEDHELP     | no        | YES       | YES        | YES                  | no                 | LOW           |                         |                       | Maintainer |
-| HANDOFF      | no        | YES       | no         | YES                  | YES                | LOW           |                         |                       | Maintainer |
-| ADOPTME      | YES       | no        | no         | YES                  | no                 | NONE          |                         |                       | Ecosystem  |
-| CUSTODY      | YES       | no        | no         | YES                  | no                 | LOW           |                         |                       | Ecosystem  |
-| ACTIVE       | no        | YES       | YES        | no                   | no                 | OK            |                         |                       | Maintainer |
-| DONE         | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
-| UNMAINTAINED | no        | YES       | YES        | no                   | no                 | NONE          |                         |                       | Maintainer |
-| CASUAL       | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
-| NEEDFUNDING  | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
-| NEEDSUPPORT  | no        | YES       | YES        | no                   | no                 | LOW           |                         |                       | Maintainer |
-| NOXFER       | no        | YES       | YES        | no                   | no                 | NONE          |                         |                       | Ecosystem  |
-| COMPROMISED  | YES       | YES       | YES        | no                   | no                 |               |                         |                       | Ecosystem  |
-| DISCOURAGED  | YES       | YES       | YES        | no                   | no                 | NONE          |                         |                       | Ecosystem  |
-| DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          |                         |                       | Ecosystem  |
+## Document status: ⚠️  DRAFT
+
+> [!CAUTION]
+> What you see here is a DRAFT of an Open Source project life-cycle conditions overview, by the CPAN Security Group (CPANSec).
+> As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
+>
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/lifecycle/docs/foss-project-lifecycle.md](https://github.com/CPAN-Security/security.metacpan.org/tree/lifecycle/docs/foss-project-lifecycle.md)
+> - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
+> - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
-## Open Source project life-cycle conditions
+## Table of life-cycle conditions
+
+| State        | Maint = 0 | Maint = 1 | Maint >= 1 | Maint needs increase | Maint is declining | Response time | Submitter  |
+| ------------ | --------- | --------- | ---------- | -------------------- | ------------------ | ------------- | ---------- |
+| NEEDHELP     | no        | YES       | YES        | YES                  | no                 | LOW           | Maintainer |
+| HANDOFF      | no        | YES       | no         | YES                  | YES                | LOW           | Maintainer |
+| ADOPTME      | YES       | no        | no         | YES                  | no                 | NONE          | Ecosystem  |
+| CUSTODY      | YES       | no        | no         | YES                  | no                 | LOW           | Ecosystem  |
+| ACTIVE       | no        | YES       | YES        | no                   | no                 | OK            | Maintainer |
+| DONE         | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
+| UNMAINTAINED | no        | YES       | YES        | no                   | no                 | NONE          | Maintainer |
+| CASUAL       | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
+| NEEDFUNDING  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
+| NEEDSUPPORT  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
+| NOXFER       | no        | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
+| COMPROMISED  | YES       | YES       | YES        | no                   | no                 |               | Ecosystem  |
+| DISCOURAGED  | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
+| DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
+
+
+### Indicators
 
 1. ACTIVE – The project is maintained (default state)
     * (number of maintainers is higher than 0)
@@ -68,7 +88,7 @@
 1. DELISTED
     * 
 
-### Support types
+### List of Kinds of Support
 
 When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
 
@@ -113,9 +133,6 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 1. Governance development
 
 
-* Sources
-    * https://chaos.social/@sjn/109343732566572015
-
 ## Other project states, claims and metadata
 
 1. Intended for commercial use (EU CRA signal for OSS Stewards)
@@ -129,6 +146,11 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (CRA Annex II, point 8)
 1. CE_CONFORMITY_BODY – A URL pointing to the Conformity Assessment Body where this component has been registered (CRA Article 22(4) and Article 58(1))
 1. CE_SUPPORT_END_DATE – The date for when the support for the component expires (Annex II, point 7)
+
+
+## Sources
+
+* https://chaos.social/@sjn/109343732566572015
 
 
 ```mermaid

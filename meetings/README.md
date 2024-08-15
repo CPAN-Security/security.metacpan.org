@@ -3,7 +3,7 @@ layout: page
 permalink: /meetings/
 toc: false
 next_meeting_time: August 15th, 2024 16:00 UTC
-title: CPANSec meeting minutes
+title: CPANSec meeting details & minutes
 ---
 
 ## When is the next CPAN Security Group meeting?
@@ -15,6 +15,7 @@ title: CPANSec meeting minutes
     * The meeting is primarily for sharing progress; If you have lots of questions, please ask them before/after the timeboxed period.
     * Changes in how we organize ourselves and work are discussed and decided under the "Operating changes" agenda item.
 * **Location**: Online, in the [CPANSec Matrix channel](https://matrix.to/#/#cpansec-discussion:matrix.org), using the Jitsi widget for video conferencing
+* **Agenda**: Announced in the IRC and Matrix channels
 
 
 ## Meeting minutes

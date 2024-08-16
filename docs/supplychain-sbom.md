@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Roles and metadata in open source supply-chains
-description: An overview of roles in a supply-chain and the metadata they care about
+description: An overview of roles in a supply-chain and the metadata they care about, in light of upcoming regulatory changed introduced by the EU Cyber Resilience Act
 toc: true
 mermaid: true
 ---
@@ -78,38 +78,39 @@ stateDiagram-v2
 
 ## TL;DR
 
-> [!NOTE]
-> TODO: Show how metadata may be communicated along these open source supply-chains.
+This document offers an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains.
 
-This document offers an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains, taking into account the following perspectives:
 
-* This document identifies and maps out places – in Open Source Supply-chains:
+* Taking into account the following perspectives:
     1. Environments and Ecosystems,
     1. Roles, and
     1. Metadata
-* …And enumerate the metadata attributes these Roles typically care about.
-* …Noting the ways each Role may operate on any given metadata attribute,
-    * 🟥 Create,
-    * 🟨 Assemble or Update,
+* …Enumerating the Metadata Attributes these Roles typically care about.
+* …Noting the ways each Role may Operate on any given Metadata Attribute,
+    * 🟥 Create (authoritative),
+    * 🟨 Assemble or Update (non-authoritative),
     * 🟩 Distribute,
     * 🟦 Verify, and
     * 🟪 Censor
-* …Showing any relevant legislation or other requirements that demand the presence of specific metadata attributes.
-* …So that downstream Roles can:
-    1. Identify second- and third party component projects they depend on,
-    1. Learn where any specific attribute is likely to come from,
-    1. Use this to detect and mitigate vulnerabilities,
-    1. Interact with the right upstream communities in effective and sustainable ways.
+* …Showing any relevant regulation or other requirements that demand the presence of specific Metadata Attributes.
+* …So that the different Roles within the Supply-chain can:
+    1. Get an overarching map of what other Roles may Operate within their Supply-chain
+    1. Form a picture of what purpose each Role can play in the Supply-chain,
+    1. Get an idea where a specific Attribute is likely to come from, and which Roles care about them
+    1. Become aware of what upstream communities are involved in their Supply-chain, in order to interact with them in effective and sustainable ways.
+    1. Use this information to both live up to their regulatory obligations and to improve their security posture.
 
 
 ## Motivation
 
-Originally, this document stems from the author's frustration with the lack of a clear Open Source perspective in current SBOM documentation (as of 2023). This brought the author to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
+Originally, this document stems from the main author's frustration with the lack of a clear Open Source perspective in current SBOM documentation (as of 2023). This brought him to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
 
-Furthermore, this document is also an attempt to explore and map out the consequences that the EU Cyber Resilience Act will have for Open Source Ecosystems.
+Furthermore, this document is also an attempt to explore and map out the consequences that the EU Cyber Resilience Act is likely have for Open Source Ecosystems.
 The CRA is the first regulation that has language that explicitly affects Open Source ecosystems.
 This law introduces a new entity – the Open Source Steward – with obligations to them (and other Roles) to improve the state of Cybersecurity throughout Open Source Supply-chains.
 This has shown us that there's a need to map out what Open Source Supply-chains actually look like, and spell out what Roles can be found throughout it, and more.
+This document therefore also represents the author's exploration of this topic, and could be considered as "public notes" on the matter.
+Still, the author hopes this document can be useful for others than himself and the CPAN Security Group!
 
 Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation – taking incremental steps toward more transparent and accountable Open Source supply-chains.
 
@@ -118,9 +119,12 @@ For license information and acknowledgements, see the [end of this document](#li
 
 # Supply-chain Ecosystems, Environments & Roles and Attributes
 
-In this section, we map out the different parts of typical Open Source Supply-chains – the Environments and Ecosystems we use, the Roles that are operating within these, and what Metadata they care about, and which operations they are expected to do when caring.
-Additionally, we give an indication of what regulations, standards or other requirements that call for the presence of a given attribute.
-And all this, with the goal of allowing downstream users to both live up to their legal obligations and to improve their security posture.
+> [!NOTE]
+> TODO: Show how metadata may be communicated along these open source supply-chains.
+
+In this section, we map out the different parts of typical Open Source Supply-chains – the Environments and Ecosystems we use, the Roles that are operating within these, what Metadata Attributes they care about, and which Operations they are expected to execute when caring.
+Additionally, you should get some indications of what regulations, standards or other requirements that call for the presence of a given Attribute.
+And all this, with the goal of allowing downstream users to both live up to their regulatory obligations and to improve their security posture in general.
 To improve by ensuring that the metadata they need is available, updated and authoritative, and can be helpful in both mitigating vulnerabilities and interacting with the maintainers of any Open Source projects that may be involved.
 
 
@@ -183,18 +187,18 @@ stateDiagram-v2
 
 ### Legend of Metadata Operations
 
-Throughout this document, we color-code the different _metadata operations_ in order to quickly see what activities a Supply-chain Role may be involved in.
-We're also assuming that metadata is stored in SBOMs, but this need not be the case.
-Some of the information here is based on CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)).
-We also distinguish between SBOM Authors that are _Authoritative_ sources for attributes and _Non-authoritative_ sources, in addition SBOM Distributors and Consumers.
-The Authoritative/Non-authoritative distinction is important so everyone is clear about where a given metadata attribute originally comes from.
+In this document we color-code the different _metadata operations_ in order to quickly see what activities a Supply-chain Role may be involved in.
+We're also assuming that Metadata is stored in SBOMs, but this need not be the case.
+Some of the information here is based on CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)) and other public documents.
+We also distinguish between SBOM Authors that are _Authoritative_ sources for Attributes and _Non-authoritative_ sources, in addition SBOM Distributors and Consumers.
+The Authoritative/Non-authoritative distinction is important so everyone is clear about where a given Metadata Attribute originally comes from.
 And finally, we acknowledge that some situations may call for an SBOM Censor.
 
-* 🟥 SBOM Author (Authoritative) – **Creates**, defines, signs metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
-* 🟨 SBOM Author (Non-authoritative) – **Assembles**, **updates**, refines, maintains, attests, annotates metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
-* 🟩 SBOM Distributor – **Distributes**, curates, indexes metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
-* 🟦 SBOM Consumer – **Verifies**, consumes, aggregates, validates, surveys, analyzes or reports metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
-* 🟪 SBOM Censor – **Censors**, redacts, deletes, anonymizes or filters metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
+* 🟥 SBOM Author (Authoritative) – **Creates**, defines, signs Metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
+* 🟨 SBOM Author (Non-authoritative) – **Assembles**, **updates**, refines, maintains, attests, annotates Metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
+* 🟩 SBOM Distributor – **Distributes**, curates, indexes Metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
+* 🟦 SBOM Consumer – **Verifies**, consumes, aggregates, validates, surveys, analyzes or reports Metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
+* 🟪 SBOM Censor – **Censors**, redacts, deletes, anonymizes or filters Metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
 
 
 ## Open Source Supply-chain (Full diagram)

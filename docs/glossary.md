@@ -162,6 +162,16 @@ toc: true
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
+
+#### Dependency (Dynamic)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> * See also
+>     * [Dependency (Static)](#dependency-static)
+
+
 #### Dependency (Transitive) ✍️
 
 > 1. (SCVS-2020) A software component that is indirectly used by a program by means of being a dependency of a dependency.
@@ -209,12 +219,17 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved at Build) ✍️
+#### Dependency (Resolved during Configuration) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved at Deploy) ✍️
+#### Dependency (Resolved during Build) ✍️
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+#### Dependency (Resolved during Deploy) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -229,15 +244,11 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Pinned at Build) ✍️
+#### Dependency (Pinned during Build) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Pinned at Deploy) ✍️
-
-> [!NOTE]
-> * FIXME: Expand on this topic
 
 #### Dependency (In-ecosystem) ✍️
 
@@ -254,10 +265,20 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
+> 1. Required by PCI-DSS 
+
 > 1. (CPANSec-2024) A network service dependency that are required for component to function as expected
 >     * (PCISSF-2023) Required by the PCI Software Security Framework version 1.2.1
 >
 > (Ref: [CPANSec-2024](#references-and-terms), [PCISSF-2023](#references-and-terms))
+
+#### Dependency (Static)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> * See also
+>     * [Dependency (Dynamic)](#dependency-dynamic)
 
 #### Requirement ✍️
 
@@ -486,13 +507,100 @@ toc: true
 > (Ref: [CRA-2024-03](#references-and-terms), SCVS-2020, CDXAG-2024, NTIA-2021)
 
 
+### SBOM Attributes
+
+#### SBOM Author Name (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### SBOM Timestamp (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### SBOM Type (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### SBOM Primary Component (Attribute)
+
+> 1. (CISA-2024-9) The Primary Component, or root of dependencies, is the subject of the SBOM or the foundational component being described in the SBOM.
+>     * […] component attributes […] are also identified for this component, just as they are for the direct and transitive components.
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Component Name (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Version (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Supplier Name (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Cryptographic Hash (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Unique Identifier (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Relationships (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### License (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Copyright Holder (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+
 ### SBOM Roles
 
-> 1. (CPANSec-2024) A person, agent or actor that does something with an SBOM document, or with specific metadata fields in an SBOM document.
->     * This MAY include operations like Creating, Updating, Verifying, Censoring or Sharing SBOM documents or fields.
-> 1. (CISA-2024) "Data is only good if it is in the hands of the right people."
+> 1. (CPANSec-2024) A person, agent or actor that does something with an SBOM document, or with specific metadata attributes in an SBOM document.
+>     * This may include operations like Creating, Updating, Verifying, Censoring or Sharing SBOM documents or attributes.
+> 1. (CISA-2024-3) "Data is only good if it is in the hands of the right people."
 >
-> (Ref: [CISA-2024](#references-and-terms))
+> (Ref: [CISA-2024-3](#references-and-terms))
 
 #### SBOM Assembler (Role) ✍️
 
@@ -505,14 +613,14 @@ toc: true
 #### SBOM Author (Authoritative) (Role) ✍️
 
 > 1. (CPANSec-2024) 🟥 SBOM Author (Authoritative).
->     * An authoritative source of an SBOM, or an SBOM metadata field.
-> 1. (CISA-2024) Creates an SBOM.
-> 1. (CPANSec-2024) SBOM Authors create, define, or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_.
->     * This mostly means authoritative metadata fields as laid out in the different [Supply-chain Roles](supplychain-sbom#supply-chain-roles-and-metadata).
->     * In addition to fields encountered throughout the supply-chain, they care about the fields listed in the table below.
+>     * An authoritative source of an SBOM, or an SBOM metadata attributes.
+> 1. (CISA-2024-3) Creates an SBOM.
+> 1. (CPANSec-2024) SBOM Authors create, define, or sign SBOM metadata — _They make sure the attributes and related artifacts **Exist**_.
+>     * This mostly means authoritative metadata attributes as laid out in the different [Supply-chain Roles](supplychain-sbom#supply-chain-roles-and-metadata).
+>     * In addition to attributes encountered throughout the supply-chain, they care about the attributes listed in the table below.
 >     * They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
 >
-> (Ref: [CISA-2024](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
+> (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
 > [!NOTE]
 > 1. (CPANSec-2024) SBOM Authors who are not authoritative sources, but instead gather SBOM metadata from different dependencies, may be referred to as an [SBOM Assembler](glossary#sbom-assembler--role-).
@@ -525,35 +633,35 @@ toc: true
 > 1. (CPANSec-2024) 🟨 SBOM Author (Non-authoritative)
 >     * A non-authoritative [SBOM Author](#sbom-author--role-).
 > 1. (CPANSec-2024) Someone that gathers, assembles or updates SBOMs from different sources into a new SBOM.
->     * This is a _informal_ Role separate from "SBOM Author" for clarifying the responsibility when the Role intends to _gather_, _assemble_ or _update_ metadata fields, instead of being the authoritative _creator_ of a field.
->     * This assumes some fields may be in need of updating as an SBOM is passed down a supply-chain – for example to correct upstream assumptions like 'Download location', add missing fields, or update the list of resolved dependencies.
->     * The intention is to distinguish between "SBOM Author" and "SBOM Assembler" in the same way as one distinguishes between "Create" and "Update" in CRUD – to clarify responsibilities and expectations for who is the original source of some metadata fields.
+>     * This is a _informal_ Role separate from "SBOM Author" for clarifying the responsibility when the Role intends to _gather_, _assemble_ or _update_ metadata attributes, instead of being the authoritative _creator_ of an attributes.
+>     * This assumes some attributes may be in need of updating as an SBOM is passed down a supply-chain – for example to correct upstream assumptions like 'Download location', add missing attributes, or update the list of resolved dependencies.
+>     * The intention is to distinguish between "SBOM Author" and "SBOM Assembler" in the same way as one distinguishes between "Create" and "Update" in CRUD – to clarify responsibilities and expectations for who is the original source of some metadata attributes.
 > 
-> (Ref: [CISA-2024](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
+> (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
 #### SBOM Distributor (Role)
 
 > 1. (CPANSec-2024) 🟩 SBOM Distributor.
 >     * SBOM Distributor roles distribute, curate, or index SBOM metadata — _They make sure the metadata and related artifacts are made **Available** to others_.
->     * They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
-> 1. (CISA-2024) Receives SBOMs for the purpose of sharing them with [SBOM Consumers](#sbom-consumer--role-) or other Distributors.
+>     * They don't have any specific metadata attributes that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
+> 1. (CISA-2024-3) Receives SBOMs for the purpose of sharing them with [SBOM Consumers](#sbom-consumer--role-) or other Distributors.
 > 1. (CISA-2023) Additionally, an SBOM Distributor may care about the following activities.
 >     * Discovery: Mechanism used by the consumer to know the SBOM exists and how to access it.
 >     * Access: Access control mechanisms used by the author or provider to regulate who can view or use an SBOM.
 >     * Transport: Mechanism provided by the author or distributor to transfer an SBOM.  Also, the action of the consumer receiving an SBOM.
 > 
-> (Ref: [CISA-2023](#references-and-terms), [CISA-2024](#references-and-terms), [CPANSec-2024](#references-and-terms))
+> (Ref: [CISA-2023](#references-and-terms), [CISA-2024-3](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
 #### SBOM Consumer (Role)
 
 > 1. (CPANSec-2024) 🟦 SBOM Consumer.
 >     * SBOM Consumer roles gather, inspect, analyze, aggregate or verify SBOM metadata — _They make sure metadata and related artifacts are **Useful**, **Complete**, **Correct** or **Compliant**_.
->     * They don't have any specific metadata fields that are commonly used across the different supply-chain Consumer roles.
-> 1. (CISA-2024) Receives the transferred SBOM.
+>     * They don't have any specific metadata attributes that are commonly used across the different supply-chain Consumer roles.
+> 1. (CISA-2024-3) Receives the transferred SBOM.
 >     * This could include roles such as third parties, authors, integrators, and end users.
 > 1. (NTIA-2021, "Consume" category) They may view SBOM files to understand the contents, and use this information to support decision making & business processes, or to compare and contrast SBOMs to discover significant changes or vulnerabilities.
 > 
-> (Ref: [CISA-2024](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
+> (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
 #### SBOM Censor (Role)
 
@@ -663,15 +771,23 @@ toc: true
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
-### Supplier
+### Supplier ⚠️
+
+> [!CAUTION]
+> * (CPANSec-2024) The term 'Supplier' is not well defined, and should be either avoided in favor of a more precise term, or otherwise be disambiguated.
 
 > 1. (NTIA-2021) An entity that creates, defines, and identifies components and produces associated SBOMs.
 >     * A supplier may also be known as a manufacturer, vendor, developer, integrator, maintainer, or provider.
 >     * Ideally, all suppliers are also authors of SBOMs for the suppliers’ components.
 >     * Most suppliers are also consumers.
 >     * A supplier with no included upstream components is a root entity.
+> 1. (CDXAG-2024) The name of an entity that creates, defines, and identifies components.
 >
-> (Ref: [NTIA-2021](#references-and-terms))
+> * See also
+>     * [Manufacturer](#manufacturer)
+>     * [Author](#author)
+>
+> (Ref: [NTIA-2021](#references-and-terms), CDXAG-2024)
 
 
 ### SWID (Software Identification)
@@ -711,15 +827,17 @@ This glossary is partly based on terms from the following sources.
 - (CPAN-2015) [CPAN Glossary](http://neilb.org/2015/09/05/cpan-glossary.html) by Neil Bowers, published 2015-09-05.
 - (SBOMit-2023) [SBOM on in-toto Terminology](https://github.com/SBOMit/specification/blob/main/specification.md#15-terminology), Specification introduction section 1.5, published July 2023.
 - (NTIA-2021) [NTIA The Minimum Elements for an SBOM, Glossary](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=25), pages 25-27, published 2021-07-12.
-- (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
+- (CISA-2024-3) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
 - (PCISSF-2023) [PCI Software Security Framework](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), published May 2023.
 - (CDXAG-2024) [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf), Second edition, Appendix A, published April 2024.
-- (EUBG-2022-3)  [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)#page=34), Chapter 3 (pages 34-46), published 2022-06-29.
-
+- (CISA-2024-9) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](), Sections 2.2.1.4, 2.2.2, and Appendix B, Published 2024-09-03
+    - FIXME: Replace after publishing: [draft document](https://docs.google.com/document/d/1z8hKtPxs5OWaspst120NHN9XXgyULGl2aKdSebwIYPc/edit)
+- (EUBG-2022-3) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)#page=34), Chapter 3 (pages 34-46), published 2022-06-29.
+- (NIXOS-2024) [Nix concepts](https://zero-to-nix.com/concepts), as of 2024-08-15
 
 ## About this document
 
-* Version: 0.6.1
+* Version: 0.7.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

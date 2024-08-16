@@ -771,15 +771,23 @@ toc: true
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
-### Supplier
+### Supplier ⚠️
+
+> [!CAUTION]
+> * (CPANSec-2024) The term 'Supplier' is not well defined, and should be either avoided in favor of a more precise term, or otherwise be disambiguated.
 
 > 1. (NTIA-2021) An entity that creates, defines, and identifies components and produces associated SBOMs.
 >     * A supplier may also be known as a manufacturer, vendor, developer, integrator, maintainer, or provider.
 >     * Ideally, all suppliers are also authors of SBOMs for the suppliers’ components.
 >     * Most suppliers are also consumers.
 >     * A supplier with no included upstream components is a root entity.
+> 1. (CDXAG-2024) The name of an entity that creates, defines, and identifies components.
 >
-> (Ref: [NTIA-2021](#references-and-terms))
+> * See also
+>     * [Manufacturer](#manufacturer)
+>     * [Author](#author)
+>
+> (Ref: [NTIA-2021](#references-and-terms), CDXAG-2024)
 
 
 ### SWID (Software Identification)
@@ -824,7 +832,7 @@ This glossary is partly based on terms from the following sources.
 - (CDXAG-2024) [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf), Second edition, Appendix A, published April 2024.
 - (CISA-2024-9) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](), Sections 2.2.1.4, 2.2.2, and Appendix B, Published 2024-09-03
     - FIXME: Replace after publishing: [draft document](https://docs.google.com/document/d/1z8hKtPxs5OWaspst120NHN9XXgyULGl2aKdSebwIYPc/edit)
-- (EUBG-2022-3)  [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)#page=34), Chapter 3 (pages 34-46), published 2022-06-29.
+- (EUBG-2022-3) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)#page=34), Chapter 3 (pages 34-46), published 2022-06-29.
 - (NIXOS-2024) [Nix concepts](https://zero-to-nix.com/concepts), as of 2024-08-15
 
 ## About this document

@@ -17,7 +17,7 @@ mermaid: true
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
-## Open Source Supply-chain (Simplified diagram)
+## Open Source Supply-chain (Simplified diagram, pre-CRA)
 
 > [!NOTE]
 > The graph below does *not* include _Content Delivery Networks_, _Model Ecosystems_ and _Plugin Ecosystems_.
@@ -72,7 +72,7 @@ stateDiagram-v2
     environment_prod         --> [*]
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
-    %% Some rights reserved. Licenced CC-BY-SA-4.0
+    %% Some rights reserved. Licensed CC-BY-SA-4.0
 ```
 
 
@@ -124,7 +124,7 @@ And all this, with the goal of allowing downstream users to both live up to thei
 To improve by ensuring that the metadata they need is available, updated and authoritative, and can be helpful in both mitigating vulnerabilities and interacting with the maintainers of any Open Source projects that may be involved.
 
 
-## Open Source Supply-chain (Simplified diagram w/CRA Roles)
+## Open Source Supply-chain (Simplified diagram, post-CRA)
 
 > [!NOTE]
 > This diagram is identical to the simplified one above, but adding the extra Roles implied by the EU Cyber Resilience Act.
@@ -141,7 +141,7 @@ stateDiagram-v2
     state "🟥 Attestation Authority 🆕" as authority_attestation
     state "🟥🟨🟩🟦 OSS Steward 🆕" as ecosystem_steward
     %%state "🟩 Delivery Network" as network_distributor
-    state "🟥🟨 Integrator Environment" as environment_integrator
+    %%state "🟥🟨 Integrator Environment" as environment_integrator
     state "🟥🟨🟦🟪 Manufacturer Environment 🆕" as environment_manufacturer
     state "🟦 Production Environment" as environment_prod
     state "🟦 Auditor 🆕" as authority_auditor
@@ -149,7 +149,9 @@ stateDiagram-v2
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
     ecosystem_repo           --> environment_contributor
+    ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
+    ecosystem_repo           --> environment_manufacturer
     environment_maintainer   --> ecosystem_repo
     environment_maintainer   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
@@ -158,25 +160,25 @@ stateDiagram-v2
     %%ecosystem_lang           --> network_distributor
     %%ecosystem_package        --> network_distributor
     ecosystem_lang           --> ecosystem_package
-    ecosystem_repo           --> ecosystem_package
     ecosystem_package        --> ecosystem_package
     ecosystem_package        --> ecosystem_steward
     ecosystem_lang           --> ecosystem_steward
     authority_attestation    --> ecosystem_steward
-    ecosystem_repo           --> environment_integrator
-    ecosystem_lang           --> environment_integrator
+    %%ecosystem_repo           --> environment_integrator
+    %%ecosystem_lang           --> environment_integrator
     %%network_distributor      --> environment_integrator
-    ecosystem_package        --> environment_integrator
+    %%ecosystem_package        --> environment_integrator
     %%network_distributor      --> environment_manufacturer
+    ecosystem_package        --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
-    environment_integrator   --> environment_prod
+    %%environment_integrator   --> environment_prod
     environment_manufacturer --> environment_prod
     environment_prod         --> authority_auditor
     environment_manufacturer --> authority_auditor
     authority_auditor        --> [*]
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
-    %% Some rights reserved. Licenced CC-BY-SA-4.0
+    %% Some rights reserved. Licensed CC-BY-SA-4.0
 ```
 
 ### Legend of Metadata Operations
@@ -221,7 +223,7 @@ stateDiagram-v2
 
     %%
     state "🟩 Depositary" as repository_distributor
-    state "🟦 Contributor" as external_contributor
+    state "🟨 Contributor" as external_contributor
 
     %%
     %%state "🟩 Delivery Network" as network_distributor
@@ -403,7 +405,7 @@ stateDiagram-v2
     prod_deployer --> external_consumer
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
-    %% Some rights reserved. Licenced CC-BY-SA-4.0
+    %% Some rights reserved. Licensed CC-BY-SA-4.0
 ```
 
 
@@ -512,10 +514,10 @@ Here, you'll get an overview of the most important ones, which attributes they c
 * Ops: The type of operation that someone with a given Role is most likely to do on a given metadata attribute.
     * See the [Typical Metadata Operations](#typical-metadata-operations) section describing what the colors represent.
 * Attribute name:
-* Required: CPANSec's interpretation on whether or not the attribute is required.
+* Required: CPANSec interpretation on whether or not the attribute is required.
 * Required by: Reference to relevant regulation, guides or standards where the attribute is mentioned.
     * See the [References](#references) section for links to the documents mentioned.
-* Comment: CPANSec's commentary on a attribute.
+* Comment: CPANSec commentary on a attribute.
 * TODO: CPANSec Remaining work related to this attribute.
 
 
@@ -614,9 +616,10 @@ An author or developer of an Open Source component project.
 | 🟥  | Purpose, Intended Use            | Yes      | CRA-AII(4)                                 |         |         |
 | 🟥  | Code Repository                  | Yes      |                                            |         |         |
 | 🟥  | Project Sustainability           | No       |                                            | CycloneDX 1.7 proposed | |
-| 🟥  | Intended for Commercial Use      | No       | CRA-Rec-15                                 |         |         |
-| 🟥  | Open Source Software Steward     | No       | CRA                                        |         | Confirm CRA Article |
 | 🟥  | Code Commit Revision             | No       |                                            |         | Consider recommendation |
+| 🟥  | CRA Intended for Commercial Use  | No       | CRA-Rec-15                                 |         |         |
+| 🟥  | CRA OSS Steward                  | No       | CRA                                        |         | Confirm CRA Article |
+| 🟥  | CRA Security Attestation         | No       | CRA                                        |         | Confirm CRA Article |
 | 🟨  | License(s) (Component, Embedded) | Yes      |                                            |         | Confirm which spec/Laws/License |
 | 🟨  | Supplier Name (Maintainer)       | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |         |
 | 🟨  | SBOM Location                    | No       | CRA-AII(9)                                 |         | Confirm CRA Article |
@@ -811,11 +814,11 @@ Final preparation and installation of the software into a CI/CD or other deploym
 
 Within a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#package-ecosystem) the OSS Steward has the duty to ensure that the obligations in the EU Cyber Resilience Act are met.
 
-| Ops | Attribute name                 | Required | Required by            | Comment | TODO    |
-| :-: | :----------------------------- | :------: | ---------------------- | :------ | :------ |
-| 🟦  | Open Source Software Steward   | Yes      | CRA-Rec-19             |         |         |
-| 🟦  | Intended for Commercial Use    | Yes      | CRA-Rec-15, CRA-Rec-18 |         |         |
-| 🟥  | Security Attestation           | Yes      | CRA-Rec-21             |         | Confirm with standardization body |
+| Ops | Attribute name                  | Required | Required by            | Comment | TODO    |
+| :-: | :------------------------------ | :------: | ---------------------- | :------ | :------ |
+| 🟦  | CRA OSS Steward                 | Yes      | CRA-Rec-19             |         |         |
+| 🟦  | CRA Intended for Commercial Use | Yes      | CRA-Rec-15, CRA-Rec-18 |         |         |
+| 🟥  | CRA Security Attestation        | Yes      | CRA-Rec-21             |         | Confirm with standardization body |
 
 * See also
   * [Maintainer](#maintainer), and
@@ -918,7 +921,6 @@ A Developer that publishes their software as [Open Source Software](glossary.md#
 | 🟨  | SBOM Location                     | No       | CRA-AII(9)                                 |         | Confirm CRA Article |
 | 🟨  | SBOM Generation Tool              | No       |                                            |         | Consider recommendation |
 
-
 #### Integrator
 
 Used in the EU Cyber Resilience Act Annex II to denote someone who integrates *a product with digital elements intended for integration* into other products with digital elements.
@@ -946,13 +948,12 @@ May operate within a [Production Environment](#production-environment) or an [In
 Responsible for security checks, including runtime, dynamic and static checks, vulnerability monitoring, etc.
 Communicates any issues or findings to any number of upstream roles, including the component [Deployer](#deployer), [Developer](#developer) or [Maintainer](#maintainer).
 
-| Ops | Attribute name         | Required | Required by           | Comment | TODO    |
-| :-: | :--------------------- | :------: | --------------------- | :------ | :------ |
-| 🟦  | Security contact       | Yes      | CRA-AII(2)            |         |         |
-| 🟦  | Unique Product ID      | Yes      | CRA-AII(3), NTIA-SBOM |         |         |
-| 🟦  | Security Attestation   | Yes      | CRA-Rec-21            |         |         |
-| 🟦  | Project Sustainability | No       |                       | CycloneDX 1.7 proposed | |
-
+| Ops | Attribute name           | Required | Required by           | Comment | TODO    |
+| :-: | :----------------------- | :------: | --------------------- | :------ | :------ |
+| 🟦  | Security contact         | Yes      | CRA-AII(2)            |         |         |
+| 🟦  | Unique Product ID        | Yes      | CRA-AII(3), NTIA-SBOM |         |         |
+| 🟦  | CRA Security Attestation | Yes      | CRA-Rec-21            |         |         |
+| 🟦  | Project Sustainability   | No       |                       | CycloneDX 1.7 proposed | |
 
 #### SecOps
 
@@ -973,7 +974,6 @@ Communicates any issues or findings to any number of upstream roles, including t
 
 * See also:
     * [End-user](glossary.md#end-user) in the Glossary
-
 
 #### Consumer
 
@@ -1089,17 +1089,17 @@ Several people have been involved in the development of this document
 | CE Declaration of Conformity    |                                     | URL          | bom.externalReferences[?(@.conformity-declaration)]                   |                         |          |         |
 | CE Support End Date             |                                     | DateTime     | bom.externalReferences[?(@.support-horizon)]                          |                         |          |         |
 | CE Technical Documentation      |                                     | URL          | bom.externalReferences[?(@.documentation)]                            |                         |          |         |
+| CRA OSS Steward                 |                                     | URL          |                                                                       |                         |          |         |
+| CRA Security Attestation        |                                     | URL          |                                                                       |                         |          |         |
+| CRA Intended for Commercial Use |                                     | Boolean      |                                                                       |                         |          |         |
 | Code Commit Revision            |                                     | SHA1         |                                                                       |                         |          |         |
 | Code Repository                 |                                     | URL          | bom.metadata.component.externalReferences[].vcs | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator | |
 | Component Name                  | (7.1) PackageName                   | Text         | bom.components[].name                                                 | packages[].name         | Software.Package.name | |
 | Dependencies                    | (11.1) Relationship: CONTAINS       | List         | bom.components[], bom.dependencies[]                                  | relationships[].[spdxElementId,relatedSpdxElement] | |
 | Download location               |                                     | URL          |                                                                       |                         |          |         |
 | Cryptographic Hash              | (7.10) PackageChecksum, (7.9) PackageVerificationCode | SHA256 | components[].hashes[]                                     |                         | Software.Package.verifiedUsing | |
-| Intended for Commercial Use     |                                     | Boolean      |                                                                       |                         |          |         |
 | License(s)                      | (7.15) PackageLicenseDeclared, (7.13) PackageLicenseConcluded, (7.14) LicenseInfoFromFiles | SPDX License | bom.metadata.licenses[], bom.components[].licenses[], components[].licenses[].acknowledgement[declared,concluded], components[].licenses[].licensing (proprietary) | packages[].licenseConcluded, packages[].licenseDeclared | Core.Relationship hasConcludedLicense hasDeclaredLicense | |
 | Copyright Holder                | (7.17) PackageCopyrightText         | Text         | bom.components[].copyright, bom.components[].evidence.copyright       |                         | Software.SoftwareArtifact.copyrightText | |
-| Open Source Software Steward    |                                     | URL          |                                                                       |                         |          |         |
-| Public Code Repository          |                                     |              | bom.metadata.component.externalReferences[].vcs | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator | |
 | Purpose, Intended Use           |                                     | Text         | bom.components[].description                                          | packages[].comment      |          |         |
 | SBOM Author                     | (6.8) Creator                       | Text         | bom.metadata.author, bom.metadata.authors                             | creationInfo.creators[] |          |         |
 | SBOM Creation Time-stamp        | (6.9) Created                       | DateTime     | bom.metadata.timestamp                                                | creationInfo.created    |          |         |
@@ -1110,7 +1110,6 @@ Several people have been involved in the development of this document
 | SBOM Serial Number              | (6.5) SPDX Document Namespace, (7.2) SPDXID | UUID | bom.metadata.serialNumber                                             | SPDXID                  |          |         |
 | SBOM Type                       | (6.10) CreatorComment               | Text         |                                                                       |                         |          |         |
 | SBOM Primary Component          | (11.1) Relationship: DESCRIBES      | Text         | bom.metadata.component                                                |                         | Software.Sbom.rootElement | |
-| Security Attestation            |                                     | URL          |                                                                       |                         |          |         |
 | Security contact (Audit)        |                                     | URL          | bom.metadata[supplier,manufacturer].contact.email                     |                         |          |         |
 | Security contact (Dependency)   |                                     | URL          | bom.components[].externalReferences[].security-contact                |                         |          |         |
 | Security contact (Primary)      |                                     | URL          | bom.externalReferences[].security-contact                             |                         |          |         |

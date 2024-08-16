@@ -162,17 +162,7 @@ toc: true
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
-
-#### Dependency (Dynamic)
-
-> [!NOTE]
-> * FIXME: Expand on this topic
->
-> * See also
->     * [Dependency (Static)](#dependency-static)
-
-
-#### Dependency (Transitive) ✍️
+##### Dependency (Transitive) ✍️
 
 > 1. (SCVS-2020) A software component that is indirectly used by a program by means of being a dependency of a dependency.
 > 1. (NTIA-2021) Characterizing the relationship that if an upstream component X is included in software Y and component Z is included in component X then component Z is included in software Y.
@@ -183,10 +173,7 @@ toc: true
 >
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
-#### Dependency (Detected during Analysis) ✍️
 
-> [!NOTE]
-> * FIXME: Expand on this topic
 
 #### Dependency (Embedded, Included, Pre-resolved) ✍️
 
@@ -194,30 +181,59 @@ toc: true
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Implied, Assumed) ✍️
+##### Dependency (Pinned at Source) ✍️
+
+> * See also
+>     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded-included-pre-resolved-%EF%B8%8F)
+
+##### Dependency (Resolved at Source) ✍️
+
+> * See also
+>     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded-included-pre-resolved-%EF%B8%8F)
+
+#### Dependency (Implied, Assumed, Unstated) ✍️
+
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 > 1. (CPANSec-2024) A dependency that is _unstated_.
->     * An impled dependency is a package that is needed to perform some action or functionality, but has not been explicitly stated as required.
->     * An implied dependency should be considered as a bug in the package, and corrected as soon as possible.
+>     * An implied dependency is a component that is required to perform an action or functionality, but has not been explicitly stated as required.
+>     * An implied dependency should be considered as a bug in the component, and corrected as soon as possible.
 >     * If a dependency has to be implied due to lacking capabilities in the tooling used to create the package, then this should be considered as a bug in the tooling.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Unresolved, Required, Requirement, Pre-requirement) ✍️
+##### Dependency (Detected during Analysis) ✍️
+
+> * See also
+>     * [Dependency (Implied, Assumed, Unstated)](#dependency-implied-assumed-unstated-%EF%B8%8F)
+
+#### Dependency (Unresolved, Required) ✍️
 
 > 1. (CPANSec-2024) A dependency that that needs to be resolved for a software component to function as expected.
 >     * Requirements are expected to be resolved by the Builder or Packager of the component.
+>     * An unresolved dependency has always a version constraint associated with it (implied or explicitly), to be used during dependency resolution.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 >
 > * See also
->     * [Requirement](#requirement).
+>     * [Pre-Requirement](#pre-requirement)
+>     * [Requirement](#requirement)
 
+##### Requirement ✍️
 
-#### Dependency (Resolved at Source) ✍️
+> * See also
+>     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
 
-> [!NOTE]
-> * FIXME: Expand on this topic
+##### Pre-Requirement ✍️
+
+> * See also
+>     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
+
+##### Prereq ✍️
+
+> * See also
+>     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
 
 #### Dependency (Resolved during Configuration) ✍️
 
@@ -239,33 +255,31 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Pinned at Source) ✍️
-
-> [!NOTE]
-> * FIXME: Expand on this topic
-
 #### Dependency (Pinned during Build) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
-
 
 #### Dependency (In-ecosystem) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
+> * See also
+>     * [Dependency (Out-of-ecosystem)](#dependency-out-of-ecosystem-%EF%B8%8F)
+
 #### Dependency (Out-of-ecosystem) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
+> * See also
+>     * [Dependency (In-ecosystem)](#dependency-in-ecosystem-%EF%B8%8F)
+
 #### Dependency (Service) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
-
-> 1. Required by PCI-DSS 
 
 > 1. (CPANSec-2024) A network service dependency that are required for component to function as expected
 >     * (PCISSF-2023) Required by the PCI Software Security Framework version 1.2.1
@@ -280,13 +294,13 @@ toc: true
 > * See also
 >     * [Dependency (Dynamic)](#dependency-dynamic)
 
-#### Requirement ✍️
+##### Dependency (Dynamic)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
-
+>
 > * See also
->     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
+>     * [Dependency (Static)](#dependency-static)
 
 
 ### Distributor ⚠️

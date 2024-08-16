@@ -19,11 +19,6 @@ mermaid: true
 
 ## Open Source Supply-chain (Simplified diagram, pre-CRA)
 
-> [!NOTE]
-> The graph below does *not* include _Content Delivery Networks_, _Model Ecosystems_ and _Plugin Ecosystems_.
-> If you know of other parts of an Open Source Supply-chain that involves the managing of metadata somehow, then please [reach out](#document-status--)!
-> We'd love to add them – or at least to be aware of them.
-
 ```mermaid
 stateDiagram-v2
     direction TB
@@ -80,8 +75,7 @@ stateDiagram-v2
 
 This document offers an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains.
 
-
-* Taking into account the following perspectives:
+* Take into account the following perspectives:
     1. Environments and Ecosystems,
     1. Roles, and
     1. Metadata
@@ -90,15 +84,15 @@ This document offers an overview of [Open Source Software](glossary.md#open-sour
     * 🟥 Create (authoritative),
     * 🟨 Assemble or Update (non-authoritative),
     * 🟩 Distribute,
-    * 🟦 Verify, and
+    * 🟦 Verify, or
     * 🟪 Censor
-* …Showing any relevant regulation or other requirements that demand the presence of specific Metadata Attributes.
+* …Showing any relevant regulation or other requirements that expect the presence of specific Metadata Attributes.
 * …So that the different Roles within the Supply-chain can:
-    1. Get an overarching map of what other Roles may Operate within their Supply-chain
-    1. Form a picture of what purpose each Role can play in the Supply-chain,
-    1. Get an idea where a specific Attribute is likely to come from, and which Roles care about them
-    1. Become aware of what upstream communities are involved in their Supply-chain, in order to interact with them in effective and sustainable ways.
-    1. Use this information to both live up to their regulatory obligations and to improve their security posture.
+    1. Draw an overarching map of what other Roles may Operate within their Supply-chain
+    1. Form a idea of what purpose each Role in the Supply-chain may have
+    1. Get an idea where a specific Attribute is likely to come from, and which Roles care about these
+    1. Become aware of what upstream communities are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
+    1. Use this information to both live up to their new regulatory obligations and to help improve their security posture in general
 
 
 ## Motivation
@@ -137,18 +131,17 @@ To improve by ensuring that the metadata they need is available, updated and aut
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 Maintainer Environment" as environment_maintainer
+    state "🟥🟨🟦 Maintainer" as environment_maintainer
     state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
     state "🟥 Attestation Authority 🆕" as authority_attestation
-    state "🟥🟨🟩🟦 OSS Steward 🆕" as ecosystem_steward
+    state "🟥🟩🟦 CRA OSS Steward 🆕" as ecosystem_steward
     %%state "🟩 Delivery Network" as network_distributor
-    %%state "🟥🟨 Integrator Environment" as environment_integrator
-    state "🟥🟨🟦🟪 Manufacturer Environment 🆕" as environment_manufacturer
-    state "🟦 Production Environment" as environment_prod
-    state "🟦 Auditor 🆕" as authority_auditor
+    state "🟥🟨🟦🟪 Integrator (Manufacturer) 🆕" as environment_manufacturer
+    state "🟦 Production" as environment_prod
+    state "🟦 CRA Auditor 🆕" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
@@ -168,14 +161,9 @@ stateDiagram-v2
     ecosystem_package        --> ecosystem_steward
     ecosystem_lang           --> ecosystem_steward
     authority_attestation    --> ecosystem_steward
-    %%ecosystem_repo           --> environment_integrator
-    %%ecosystem_lang           --> environment_integrator
-    %%network_distributor      --> environment_integrator
-    %%ecosystem_package        --> environment_integrator
     %%network_distributor      --> environment_manufacturer
     ecosystem_package        --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
-    %%environment_integrator   --> environment_prod
     environment_manufacturer --> environment_prod
     environment_prod         --> authority_auditor
     environment_manufacturer --> authority_auditor
@@ -202,6 +190,11 @@ And finally, we acknowledge that some situations may call for an SBOM Censor.
 
 
 ## Open Source Supply-chain (Full diagram)
+
+> [!NOTE]
+> The graphs in this document do *not* include _Content Delivery Networks_, _Model Ecosystems_ or _Plugin Ecosystems_.
+> If you know of other parts of an Open Source Supply-chain that involves the managing of metadata somehow, then please [reach out](#document-status--)!
+> We'd love to add them – or at least to be aware of them.
 
 ```mermaid
 stateDiagram-v2

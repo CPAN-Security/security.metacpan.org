@@ -61,26 +61,27 @@ stateDiagram-v2
 
 ## TL;DR
 
-This document offers an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains.
+This document offers **an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains**.
 
-* Take into account the following perspectives:
+* Taking into account the following perspectives:
     1. Environments and Ecosystems,
-    1. Roles, and
-    1. Metadata
-* …Enumerating the Metadata Attributes these Roles typically care about.
+    1. Roles,
+    1. Metadata, and
+    1. Industry [Terms and Concepts](glossary.md)
+* …Enumerating and describing the Metadata Attributes these Roles typically care about.
 * …Noting the ways each Role may Operate on any given Metadata Attribute,
     * 🟥 Create (authoritative),
     * 🟨 Assemble or Update (non-authoritative),
     * 🟩 Distribute,
     * 🟦 Verify, or
     * 🟪 Censor
-* …Showing any relevant regulation or other requirements that expect the presence of specific Metadata Attributes.
-* …So that the different Roles within the Supply-chain can:
+* …Showing any relevant regulation or other requirements that impose expectations of the presence of specific Metadata Attributes.
+* …So that people having a Role within the Supply-chain can:
     1. Draw an overarching map of what other Roles may Operate within their Supply-chain
-    1. Form a idea of what purpose each Role in the Supply-chain may have
-    1. Get an idea where a specific Attribute is likely to come from, and which Roles care about these
-    1. Become aware of what upstream communities are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
-    1. Use this information to both live up to their new regulatory obligations and to help improve their security posture in general
+    1. Form a idea of what purpose each Role may have
+    1. Get an idea where an Attribute is likely to come from, and which Roles care about these
+    1. Become aware of what upstream Communities, Ecosystems and Environments are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
+    1. Use this information to both live up to their new Regulatory Obligations and to help improve their Security Posture in general
 
 
 ## Motivation
@@ -462,12 +463,17 @@ A business or institution that is responsible for developing and building the ap
 * May publish [Open Source Software](glossary.md#open-source-software)
 * Has a project development life-cycle
 
+* See also:
+    * [Manufacturer Environment](#manufacturer-environment)
+
 #### Manufacturer Environment
 
 > [!CAUTION]
 > * FIXME - Much more to add!
 >   * e.g. from https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
 >   * Check also out the work coming out of the Eclipse ORC Working Group
+>   * Cover the CE mark requirements, the roles of downstream Importers and Distributors in verifying these,
+>   * Cover the roles of upstream Roles in attesting the security of the components they use
 
 * Used specifically in the context of the EU Cyber Resilience Act, to mean a commercial entity that places a product with digital elements on the EU market.
 * Is expected to produce a complete SBOM document describing their application, including all dependencies.
@@ -523,8 +529,8 @@ These are common across all roles, and considered to be _baseline_ because they 
 
 ### Supplier
 
-Is a role used throughout the Supply-chain within an [Integrator Environment](#integrator-environment).
-The term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
+The Supplier is a role used throughout the Supply-chain, but most often represents a Role within a [Maintainer](#maintainer-environment) or an [Integrator](#integrator-environment) Environment.
+This term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
 
 * See also
   * [Supplier](glossary.md#supplier) in the glossary.
@@ -532,6 +538,8 @@ The term is used within the NTIA "SBOM Minimum Elements" document as the legal s
   * [Maintainer](#maintainer),
   * [Custodian](#custodian),
   * [Manufacturer](#manufacturer),
+  * [Maintainer Environment](#maintainer-environment),
+  * [Integrator Environment](#integrator-environment),
   * [Open Source Software Steward](#open-source-software-steward),
 
 #### Owner
@@ -583,7 +591,7 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 An author or developer of an Open Source component project.
 
 * Operates within an [Maintainer Environment](#maintainer-environment).
-* The initial and/or main creator of the component in question.
+* Is usually the initial and/or main creator of the component in question.
 * Typically works on all aspects of the code, including features, bug fixes, tests and security issues.
 * Has the final say on the original contents of the package, and it's name-spaces.
 * The Maintainer _can_ be a group of people (having co-maintainers), though a single point of responsibility is common.
@@ -1016,7 +1024,6 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 * (NTIA-SBOM)   [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
 * (EUBG-2022)   [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04))
 * (CISA-2024-9) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](), Sections 2.2.1.4 and 2.2.2 and others, Published 2024-09-03
-
 
 
 ## Commentary and TODOs

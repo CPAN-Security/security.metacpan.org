@@ -129,8 +129,7 @@ stateDiagram-v2
     state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
     %%state "🟩 Delivery Network" as network_distributor
     state "🟥🟨🟦🟪 Manufacturer (Integrator) 🆕" as environment_manufacturer
-    state "🟦 Production" as environment_prod
-    state "🟦 Auditor 🆕" as authority_auditor
+    state "🟦 Auditor 🆕\n🟦 Importer 🆕\n🟦 Distributor 🆕" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
@@ -153,8 +152,6 @@ stateDiagram-v2
     %%network_distributor      --> environment_manufacturer
     ecosystem_package        --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
-    environment_manufacturer --> environment_prod
-    environment_prod         --> authority_auditor
     environment_manufacturer --> authority_auditor
     authority_auditor        --> [*]
 
@@ -192,7 +189,6 @@ stateDiagram-v2
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %%
-    %%state "🟦 Importer" as maintainer_importer
     state "🟥 Owner (Supplier)" as maintainer_owner
     state "🟥🟨 Maintainer, Author\n🟨 Custodian" as maintainer_author
     state "🟨🟦 Packager" as language_packager
@@ -202,29 +198,23 @@ stateDiagram-v2
 
     %%
     state "🟦 Authenticator" as language_authenticator
-    %%state "🟦 Importer" as language_importer
     state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
-    state "🟩 Distributor" as language_distributor
+    state "🟩 Provider" as language_distributor
 
     %%
     state "🟩 Depositary" as repository_distributor
     state "🟨 Contributor" as external_contributor
 
     %%
-    %%state "🟩 Delivery Network" as network_distributor
-
-    %%
     state "🟦 Authenticator" as package_authenticator
-    %%state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
     state "🟥🟨🟦 Open Source Software Steward 🆕" as package_steward
     state "🟨 Curator" as package_curator
-    state "🟩 Distributor" as package_distributor
+    state "🟩 Provider" as package_distributor
 
     %%
-    %%state "🟦 Importer" as integrator_importer
     state "🟥 Manufacturer (Supplier) 🆕" as integrator_owner
     state "🟥🟨🟦 Integrator, Developer" as integrator_developer
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as integrator_builder
@@ -235,7 +225,7 @@ stateDiagram-v2
     %%
     state "🟨 Deployer" as prod_deployer
     state "🟦 End-user, Consumer" as external_consumer
-    state "🟦 Auditor 🆕" as authority_auditor
+    state "🟦 Auditor 🆕\n🟦 Importer 🆕\n🟦 Distributor 🆕" as authority_auditor
 
     %%
     classDef createsSBOM stroke:red,stroke-width:3px;
@@ -247,7 +237,6 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %%
-    %%class maintainer_importer verifiesSBOM
     class maintainer_owner createsSBOM
     class maintainer_author createsSBOM
 
@@ -256,7 +245,6 @@ stateDiagram-v2
     class external_contributor ignoresSBOM
 
     %%
-    %%class language_importer verifiesSBOM
     class language_authenticator updatesSBOM
     class language_packager assemblesSBOM
     class language_steward createsSBOM
@@ -264,9 +252,6 @@ stateDiagram-v2
     class language_distributor distributesSBOM
 
     %%
-    %%class network_distributor ignoresSBOM
-
-    %%class package_importer verifiesSBOM
     class package_authenticator updatesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
@@ -275,7 +260,6 @@ stateDiagram-v2
     class package_distributor distributesSBOM
 
     %%
-    %%class integrator_importer verifiesSBOM
     class integrator_owner createsSBOM
     class integrator_developer assemblesSBOM
     class integrator_censor updatesSBOM
@@ -291,7 +275,6 @@ stateDiagram-v2
     class authority_attester createsSBOM
     class authority_auditor verifiesSBOM
 
-
     %%
     state "Maintainer Environment" as environment_maintainer {
         [*] --> maintainer_author
@@ -306,12 +289,9 @@ stateDiagram-v2
     %%
     state "Language Ecosystem" as ecosystem_lang {
         [*] --> language_authenticator
-        %%[*] --> language_importer
         language_authenticator --> language_distributor
         language_authenticator --> language_steward
         language_authenticator --> language_curator
-        %%language_importer --> language_distributor
-        %%language_importer --> language_curator
         language_curator --> language_distributor
         language_steward --> language_distributor
         language_steward --> language_curator
@@ -327,19 +307,12 @@ stateDiagram-v2
     ecosystem_repo    --> maintainer_author
     maintainer_author --> ecosystem_repo
 
-    %%maintainer_author    --> network_distributor
-    %%language_distributor --> network_distributor
-    %%network_distributor  --> environment_integrator
-
     external_contributor   --> repository_distributor
     repository_distributor --> external_contributor
 
     state "Package Ecosystem" as ecosystem_package {
         [*] --> package_authenticator
-        %%[*] --> package_importer
         package_authenticator --> package_patcher
-        %%package_importer      --> package_patcher
-        %%package_importer      --> package_packager
         package_authenticator --> package_packager
         package_patcher       --> package_packager
         package_packager      --> package_curator
@@ -359,10 +332,8 @@ stateDiagram-v2
     authority_attester --> package_steward
 
     state "Integrator Environment" as environment_integrator {
-        %%[*] --> integrator_importer
         [*] --> integrator_developer
         integrator_owner     --> integrator_developer
-        %%integrator_importer  --> integrator_developer
         integrator_builder   --> integrator_censor
         integrator_builder   --> integrator_publisher
         integrator_builder   --> integrator_analyst
@@ -384,7 +355,6 @@ stateDiagram-v2
     integrator_publisher --> authority_auditor
     integrator_publisher --> environment_prod
     integrator_censor    --> external_consumer
-    %%external_consumer    --> [*]
     authority_auditor    --> [*]
 
     %%
@@ -707,7 +677,7 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 > [!NOTE]
 > * Patchers (a role that often is held by the same person as the Packager), may select and apply patches before building.
 > * These patches may include back-ports of features, security fixes or other accommodations necessary for distributing multiple releases of the same upstream project, but within publishing constraints decided by the Curator of the Ecosystem (e.g. LTS releases, support contracts, etc.).
-> * A Patcher can both be found in-house (e.g. a business who uses a company-internal package mirror), working for a Package Ecosystem provider (e.g. applying backports of fixes in Debian packages), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
+> * A Patcher can both be found in-house (e.g. a business who uses a company-internal package mirror), preparing for a Package Ecosystem provider (e.g. applying backports of fixes in Debian packages), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
 > [!CAUTION]
 > * FIXME – Not done
@@ -755,7 +725,7 @@ This role is necessary when...
 >     * Author's repository, or a Custodian's if a project is dormant (e.g. a repository on Codeberg).
 >     * Language-specific packages distributed by a Language Ecosystem (e.g. CPAN).
 > * E.g. someone in the #debian-perl group downloads, builds, tests and installs something from CPAN, but instead of doing a regular install, they us tooling like `dh-make-perl` to produce a custom installation directory that can be incorporated into a .deb archive.
-> * A Packager can both be found in-house (e.g. a business who uses a company-internal package mirror), for a Package Ecosystem provider (e.g. Debian), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
+> * A Packager can both be found in-house (e.g. a business who uses a company-internal package mirror), for a Package Ecosystem Provider (e.g. Debian), or a Language Ecosystem Provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
 Operates within a [Package Ecosystem](#package-ecosystem) or an [Maintainer Environment](#maintainer-environment).
 Within a package ecosystem, builds and creates packages from components received from an upstream source, optionally with patches applied from the [Patcher](#patcher).
@@ -822,7 +792,7 @@ Within a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#pac
 
 > [!NOTE]
 > * Curators may decide both whether and where the output of a Packager is distributed.
-> * Curators may operate both in-house, in order to keep an eye on what is being automatically installed there, or they may make the decisions that happen on the Package or Language Ecosystem provider side.
+> * Curators may operate both in-house, in order to keep an eye on what is being automatically installed there, or they may make the decisions that happen on the Package or Language Ecosystem Provider side.
 > * Typically, a curator may consider LTS status, support contract terms or other reasons for distributing a package.
 
 > [!NOTE]

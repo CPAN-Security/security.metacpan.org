@@ -307,18 +307,27 @@ toc: true
 ### Distributor ⚠️
 
 > [!WARNING]
-> 1. The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
->     * (CRA-2024-03 Article 21, 22) This means if an [Importer](#importer) or distributor applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail.
+> 1. (CPANSec-2024) The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
+>     * (CRA-2024-03 Article 21, 22) This means if an [Importer](#importer) or [Distributor](#distributor) applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail.
+>     * (CPANSec-2024) To disambiguate, we recommend Open Source Supply-chain Roles like this to be referred to as [Provider](#provider)
 
 > [!NOTE]
-> * FIXME: Expand on this topic
 > * FIXME: Confirm with lawyer after final version of CRA is adopted.
 
 > 1. (CRA-2024-03) A natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the Union market without affecting its properties.
 > 1. (EUBG-2022-3) The distributor is a natural or a legal person in the supply chain, other than the manufacturer or the importer, who makes a product available on the market.
 >     *  Distributors are subject to specific obligations and have a key role to play in the context of market surveillance.
 >
-> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms))
+> * See also:
+>     * [Provider](#provider)
+>
+> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms), [CPANSec-2024](#references-and-terms))
+
+#### Provider ✍️
+
+> 1. (CPANSec-2024) The Role that is tasked with ensuring a component artifact is available for download by anyone downstream.
+>
+> (Ref: [CPANSec-2024](#references-and-terms), [Distributor](#distributor))
 
 
 ### Downstream

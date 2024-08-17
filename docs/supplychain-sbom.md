@@ -428,7 +428,7 @@ A business or institution that is responsible for developing and building the ap
 
 #### Manufacturer Environment
 
-> [!CAUTION]
+> [!NOTE]
 > * FIXME - Much more to add!
 >   * e.g. from https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
 >   * Check also out the work coming out of the Eclipse ORC Working Group
@@ -444,8 +444,8 @@ A business or institution that is responsible for developing and building the ap
 
 ### Production Environment
 
-> [!CAUTION]
-> * FIXME: Add examples of physical products
+> [!NOTE]
+> * FIXME – Add examples of physical products
 
 The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
 
@@ -629,10 +629,12 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 
 ### Importer (CRA)
 
-> [!NOTE]
-> * Proposed role, though it's unclear if it is relevant for this document. (CPANSec-2024)
+> [!CAUTION]
+> * Not directly part of an Open Source Supply-chain, but can be found downstream of Manufacturers that use these.
+> * FIXME – Not done
 
-* May operate in any ecosystem or environment.
+* A role specific for the EU Cyber Resilience Act.
+* Operate downstream of Manufacturers.
 * A role specifically used when a EU entity makes available software on the EU market,
 * Is required to verify that the imported software is compliant with the EU Cyber Resilience Act (CRA) according to it's Article 19.
 
@@ -650,11 +652,15 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 
 * See also
    * [Importer](glossary.md#importer) in the glossary.
+   * [Distributor](glossary.md#distributor) in the glossary.
+
 
 ### Authenticator
 
 > [!NOTE]
-> * Authenticators ensure that only authorized Maintainers are allowed to publish their components to a Language or Package Ecosystem.
+> * FIXME – Not done
+
+Authenticators ensure that only authorized Maintainers are allowed to publish their components to a Language or Package Ecosystem.
 
 * Examples
     * (CPAN) Upload to the PAUSE web interface at `https://pause.perl.org`
@@ -843,15 +849,15 @@ Ensures the availability of packages or containers, that they are indexed correc
 > [!CAUTION]
 > * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor,
 
-> * Distributor is a term commonly used throughout Open Source Ecosystems, but
->     * Distributors have additional requirements and considerations laid out in CISA-2024.
->     * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
->
-> * See also
->    * [Provider](#provider)
->    * [Distributor](glossary.md#distributor) in the glossary.
->    * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](#references)
->    * (CRA-Art-20) [CRA Article 20](#references)
+* Distributor is a term commonly used throughout Open Source Ecosystems, but
+    * Distributors have additional requirements and considerations laid out in CISA-2024.
+    * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+
+* See also
+   * [Provider](#provider)
+   * [Distributor](glossary.md#distributor) in the glossary.
+   * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](#references)
+   * (CRA-Art-20) [CRA Article 20](#references)
 
 
 ### Developer
@@ -937,9 +943,9 @@ Communicates any issues or findings to any number of upstream roles, including t
 
 ### End-user
 
-> 1. (CPANSec-2024) The software in use, in production, by a user or customer.
->
-> (Ref: [CPANSec-2024](#references-and-terms))
+1. (CPANSec-2024) The software in use, in a production environment, by a user or customer.
+
+(Ref: [CPANSec-2024](#references-and-terms))
 
 * See also:
     * [End-user](glossary.md#end-user) in the Glossary
@@ -1010,7 +1016,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 1. Enumerate what distinguishes the different environments
     * Language: Not built, not deployed, Is source code, No execution environment
     * Distro/package: Built, Deployed, Is object code, No execution environment
-    * Model/plugin: Built, Not deployed, Is data, No execution environment (FIXME: unsure)
+    * Model/plugin: Built, Not deployed, Is data, No execution environment (FIXME – unsure)
     * Image/container: Built, Deployed, Is object code, Has execution environment
 1. Enumerate the different dependencies
     * Stages; Author/develop, configure, build, test, install/deploy, packaging, container assembly, post-deploy (plugin/dynamic), runtime.

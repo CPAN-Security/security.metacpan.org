@@ -28,7 +28,6 @@ stateDiagram-v2
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
-    %%state "🟩 Delivery Network" as network_distributor
     state "🟥🟨 Integrator" as environment_integrator
     state "🟦 Production" as environment_prod
 
@@ -40,17 +39,12 @@ stateDiagram-v2
     environment_maintainer   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
     ecosystem_lang           --> ecosystem_lang
-    %%environment_maintainer   --> network_distributor
-    %%ecosystem_lang           --> network_distributor
-    %%ecosystem_package        --> network_distributor
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
     ecosystem_package        --> ecosystem_package
     ecosystem_repo           --> environment_integrator
     ecosystem_lang           --> environment_integrator
-    %%network_distributor      --> environment_integrator
     ecosystem_package        --> environment_integrator
-    %%network_distributor      --> environment_manufacturer
     environment_integrator   --> environment_prod
     environment_prod         --> [*]
 
@@ -127,7 +121,6 @@ stateDiagram-v2
     state "🟨🟩 Package Ecosystem" as ecosystem_package
     state "🟥 Attestation Authority 🆕" as authority_attestation
     state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
-    %%state "🟩 Delivery Network" as network_distributor
     state "🟥🟨🟦🟪 Manufacturer (Integrator) 🆕" as environment_manufacturer
     state "🟦 Auditor 🆕\n🟦 Importer 🆕\n🟦 Distributor 🆕" as authority_auditor
 
@@ -141,15 +134,11 @@ stateDiagram-v2
     environment_maintainer   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
     ecosystem_lang           --> ecosystem_lang
-    %%environment_maintainer   --> network_distributor
-    %%ecosystem_lang           --> network_distributor
-    %%ecosystem_package        --> network_distributor
     ecosystem_lang           --> ecosystem_package
     ecosystem_package        --> ecosystem_package
     ecosystem_package        --> ecosystem_steward
     ecosystem_lang           --> ecosystem_steward
     authority_attestation    --> ecosystem_steward
-    %%network_distributor      --> environment_manufacturer
     ecosystem_package        --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
     environment_manufacturer --> authority_auditor
@@ -278,8 +267,6 @@ stateDiagram-v2
     %%
     state "Maintainer Environment" as environment_maintainer {
         [*] --> maintainer_author
-        %%[*] --> maintainer_importer
-        %%maintainer_importer   --> maintainer_author
         maintainer_owner      --> maintainer_author
         maintainer_author --> language_packager
     }
@@ -300,6 +287,7 @@ stateDiagram-v2
     language_packager --> ecosystem_lang
     ecosystem_lang    --> ecosystem_lang
 
+    %%
     state "Collaboration Ecosystem" as ecosystem_repo {
         [*] --> repository_distributor
     }
@@ -310,6 +298,7 @@ stateDiagram-v2
     external_contributor   --> repository_distributor
     repository_distributor --> external_contributor
 
+    %%
     state "Package Ecosystem" as ecosystem_package {
         [*] --> package_authenticator
         package_authenticator --> package_patcher
@@ -327,10 +316,10 @@ stateDiagram-v2
     language_distributor   --> ecosystem_package
     ecosystem_package      --> ecosystem_package
 
-
     authority_attester --> language_steward
     authority_attester --> package_steward
 
+    %%
     state "Integrator Environment" as environment_integrator {
         [*] --> integrator_developer
         integrator_owner     --> integrator_developer
@@ -345,6 +334,7 @@ stateDiagram-v2
     language_distributor   --> environment_integrator
     package_distributor    --> environment_integrator
 
+    %%
     state "Production Environment" as environment_prod {
         [*] --> prod_deployer
     }
@@ -823,22 +813,22 @@ May assist in updating some SBOM metadata attributes.
   * [Distributor](#distributor)
 
 
-### Distributor
+### Provider
 
 > [!CAUTION]
 > * FIXME – Not done
-> * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor.
 
 > [!NOTE]
-> * (CPANSec-2024) Distributors take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
->     * If SBOM metadata is expected to accompany the packages or containers in question, the Distributor makes sure this happens.
->     * Distributors have additional requirements and considerations laid out in CISA-2024.
->     * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+> * (CPANSec-2024) This term is used in place of the [Distributor](#distributor) Role when referring to Open Source Ecosystem component suppliers.
+>     * This is done to disambiguate it from the [Distributor](#distributor) Role as used in the EU Cyber Resilience Act.
+> * (CPANSec-2024) Providers take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
+>     * If SBOM metadata is expected to accompany the packages or containers in question, the Provider makes sure this happens.
 
 Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
 Ensures the availability of packages or containers, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 * See also
+   * [Distributor](#distributor)
    * [CISA SBOM Sharing Roles and Considerations](#references) (CISA-2024)
    * [CRA Article 20](#references) (CRA-Art-20)
 
@@ -846,6 +836,22 @@ Ensures the availability of packages or containers, that they are indexed correc
 | :-: | :----------------------------- | :------: | --------------------- | :------ | :------ |
 | 🟦  | Download location (Repackaged) | Yes      |                       |         |         |
 | 🟦  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |         |
+
+
+#### Distributor
+
+> [!CAUTION]
+> * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor,
+
+> * Distributor is a term commonly used throughout Open Source Ecosystems, but
+>     * Distributors have additional requirements and considerations laid out in CISA-2024.
+>     * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+>
+> * See also
+>    * [Provider](#provider)
+>    * [Distributor](glossary.md#distributor) in the glossary.
+>    * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](#references)
+>    * (CRA-Art-20) [CRA Article 20](#references)
 
 
 ### Developer

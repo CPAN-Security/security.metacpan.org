@@ -76,36 +76,37 @@ stateDiagram-v2
     direction TB
 
     state "🟥🟨🟦 Maintainer" as environment_maintainer
+    state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
-    state "🟥 EU Attestation Authority" as authority_attestation
-    state "🟥🟨🟩🟦 OSS Steward" as ecosystem_steward
-    state "🟥🟨 Integrator" as environment_integrator
-    state "🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
-    state "🟦 Production Environment" as environment_prod
-    state "🟦 EU Auditor" as authority_auditor
-
+    state "🟥 Attestation Authority 🆕" as authority_attestation
+    state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
+    state "🟥🟨🟦🟪 Manufacturer (Integrator) 🆕" as environment_manufacturer
+    state "🟦 Auditor 🆕\n🟦 Importer 🆕\n🟦 Distributor 🆕" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
-    ecosystem_repo           --> ecosystem_lang
-    environment_maintainer   --> ecosystem_lang
-    environment_maintainer   --> ecosystem_repo
+    ecosystem_repo           --> environment_contributor
     ecosystem_repo           --> ecosystem_package
+    ecosystem_repo           --> ecosystem_lang
+    ecosystem_repo           --> environment_manufacturer
+    environment_maintainer   --> ecosystem_repo
+    environment_maintainer   --> ecosystem_lang
+    environment_contributor  --> ecosystem_repo
+    ecosystem_lang           --> ecosystem_lang
     ecosystem_lang           --> ecosystem_package
+    ecosystem_package        --> ecosystem_package
     ecosystem_package        --> ecosystem_steward
     ecosystem_lang           --> ecosystem_steward
     authority_attestation    --> ecosystem_steward
-    ecosystem_repo           --> environment_integrator
-    ecosystem_lang           --> environment_integrator
-    ecosystem_package        --> environment_integrator
+    ecosystem_package        --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
-    environment_integrator   --> environment_prod
-    environment_manufacturer --> environment_prod
     environment_manufacturer --> authority_auditor
-    environment_prod         --> [*]
+    authority_auditor        --> [*]
 
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licensed CC-BY-SA-4.0
 ```
 
 
@@ -157,7 +158,7 @@ graph TB
 
 ## License and use of this document
 
-* Version: 0.5.1
+* Version: 0.5.2
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

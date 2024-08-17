@@ -167,7 +167,7 @@ toc: true
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > * See also
 >     * [Dependency (Static)](#dependency-static)
 
@@ -249,7 +249,6 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-
 #### Dependency (In-ecosystem) ✍️
 
 > [!NOTE]
@@ -265,10 +264,8 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-> 1. Required by PCI-DSS 
-
 > 1. (CPANSec-2024) A network service dependency that are required for component to function as expected
->     * (PCISSF-2023) Required by the PCI Software Security Framework version 1.2.1
+> 1. (PCISSF-2023) Required by the PCI Software Security Framework version 1.2.1
 >
 > (Ref: [CPANSec-2024](#references-and-terms), [PCISSF-2023](#references-and-terms))
 
@@ -276,7 +273,7 @@ toc: true
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > * See also
 >     * [Dependency (Dynamic)](#dependency-dynamic)
 
@@ -513,21 +510,21 @@ toc: true
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 #### SBOM Timestamp (Attribute)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 #### SBOM Type (Attribute)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 #### SBOM Primary Component (Attribute)
@@ -541,56 +538,56 @@ toc: true
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 #### Version (Attribute)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 #### Supplier Name (Attribute)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 #### Cryptographic Hash (Attribute)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 #### Unique Identifier (Attribute)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 #### Relationships (Attribute)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 #### License (Attribute)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 #### Copyright Holder (Attribute)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
->
+
 > (Ref: [CISA-2024-9](#references-and-terms))
 
 
@@ -612,6 +609,12 @@ toc: true
 
 #### SBOM Author (Authoritative) (Role) ✍️
 
+> [!NOTE]
+> 1. (CPANSec-2024) SBOM Authors who are not authoritative sources, but instead gather SBOM metadata from different dependencies, may be referred to as an [SBOM Assembler](glossary#sbom-assembler--role-).
+> 1. (CPANSec-2024) SBOM Authors may also collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_.
+>     * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
+> 1. (CPANSec-2024) An SBOM Author who is tasked with removing (censoring) sensitive information from SBOM documents may be called [SBOM Censor](glossary#sbom-censor--role-)
+
 > 1. (CPANSec-2024) 🟥 SBOM Author (Authoritative).
 >     * An authoritative source of an SBOM, or an SBOM metadata attributes.
 > 1. (CISA-2024-3) Creates an SBOM.
@@ -621,12 +624,6 @@ toc: true
 >     * They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
 >
 > (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
-
-> [!NOTE]
-> 1. (CPANSec-2024) SBOM Authors who are not authoritative sources, but instead gather SBOM metadata from different dependencies, may be referred to as an [SBOM Assembler](glossary#sbom-assembler--role-).
-> 1. (CPANSec-2024) SBOM Authors may also collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_.
->     * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
-> 1. (CPANSec-2024) An SBOM Author who is tasked with removing (censoring) sensitive information from SBOM documents may be called [SBOM Censor](glossary#sbom-censor--role-)
 
 #### SBOM Author (Non-authoritative) (Role)
 

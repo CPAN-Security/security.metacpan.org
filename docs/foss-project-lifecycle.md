@@ -94,30 +94,31 @@ States in **bold** already exist on CPAN.
 
 When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
 
-1. Brand management
-    * Development
+1. Brand Development
     * Strategy
     * Implementation
     * Hosting & legal
 1. Bug or issue triage
-1. Outreach
+1. Outreach & marketing
     * Article writing
     * Podcast hosting or participation
     * Conference presentations
     * SoMe presence
 1. Code review
-    * Security
+    * Security review
     * Development process
     * Maintainability
 1. Documentation
     * Completness
-    * Consistency
-    * Relevance
-1. Community management & assistance
-    * Culture
+    * Consistency and Voice
+    * User Rpelevance
+    * Findability & SEO
+1. Community management & development
+    * Culture & conduct
     * Diversity, Equity, Inclusion
     * Forum management, moderation and support
-1. Community infrastructure and hosting
+    * Outreach & recruitment
+1. Technical infrastructure and hosting
     * Email
     * Chat forum
     * Other community services
@@ -125,7 +126,7 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
     * Conferences, Meetups, Hackathons or other gatherings for knowledge-sharing gatherings
     * Online events, webinars or classes/training
     * Socializing
-1. Industry/Stakeholder/OSPO support
+1. Industry/Stakeholder/OSPO assistance
 1. Fundraising
 1. Media relations
 1. Security contact
@@ -133,6 +134,7 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 1. Open Source Steward
 1. Legal assistance
     * License conflict resolution
+    * License enforcement
 1. Governance development
 
 

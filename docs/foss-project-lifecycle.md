@@ -113,6 +113,8 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
     * Consistency and Voice
     * User or Stakeholder Relevance
     * Indexing, Findability & SEO
+    * Internationalization/I18N
+    * Localization/L10N and Translation (CHAOSS-2020)
 1. Community management & development
     * Governance development
     * Culture & conduct
@@ -137,6 +139,15 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 1. Legal counsel
     * License conflict resolution
     * License enforcement
+1. Mentorship (MSFTOSS-2024)
+    * Security
+    * Governance
+    * Outreach & Communication
+1. Skill & contribution gaps compensation (MSFTOSS-2024)
+    * Language
+    * Technology/platform
+    * Specialized skills
+1. User Interface, User Experience, and Accessibility (CHAOSS-2020)
 
 
 ## Other project states, claims and metadata
@@ -157,11 +168,7 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 ## Sources
 
 * (SJN-2022) [What kind of non-technical "nice-to-haves" you would expect to see in a healthy #OpenSource #FLOSS community?](https://chaos.social/@sjn/109343732566572015, Published 2022-11-14.
-* (CHAOSS-1) CHAOSS [Types of Contributions](https://chaoss.community/?p=3432), First created 2020-02-20.
+* (CHAOSS-2020) CHAOSS [Types of Contributions](https://chaoss.community/?p=3432), First created 2020-02-20.
 * (arXiv:2408.06723v1) [Sustaining Maintenance Labor for Healthy Open Source Software Projects through Human Infrastructure: A Maintainer Perspective](https://arxiv.org/pdf/2408.06723), Published 2024-08-13.
+* (MSFTOSS-2024) [5 things we learned from sponsoring a sampling of our open source dependencies](https://opensource.microsoft.com/blog/2024/06/27/5-things-we-learned-from-sponsoring-a-sampling-of-our-open-source-dependencies/), Published 2024-06-27.
 
-
-```mermaid
-graph TB
-    %% Life-cycle conditions
-```

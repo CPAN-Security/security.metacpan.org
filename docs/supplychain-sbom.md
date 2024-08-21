@@ -16,6 +16,14 @@ mermaid: true
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
+> [!NOTE]
+> This document has two companion documents:
+>
+> * The CPANSec [glossary](glossary.md)
+> * The CPANSec [reading list](readinglist.md)
+>
+> Please refer to them as needed.
+
 
 ## Open Source Supply-chain (Simplified diagram, pre-CRA)
 
@@ -53,7 +61,7 @@ stateDiagram-v2
 ```
 
 
-## TL;DR
+## About this document (TL;DR)
 
 This document offers **an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains**.
 
@@ -72,9 +80,9 @@ This document offers **an overview of [Open Source Software](glossary.md#open-so
 * …Showing any relevant regulation or other requirements that impose expectations of the presence of specific Metadata Attributes.
 * …So that people having a Role within the Supply-chain can:
     1. Draw an overarching map of what other Roles may Operate within their Supply-chain
-    1. Form a idea of what purpose each Role may have
+    1. Form a idea of what purpose each Role may have, and find out where they fit
     1. Get an idea where an Attribute is likely to come from, and which Roles care about these
-    1. Become aware of what upstream Communities, Ecosystems and Environments are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
+    1. Become aware of both upstream and downstream Communities, Ecosystems and Environments are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
     1. Use this information to both live up to their new Regulatory Obligations and to help improve their Security Posture in general
 
 
@@ -85,9 +93,9 @@ Originally, this document stems from the main author's frustration with the lack
 Furthermore, this document is also an attempt to explore and map out the consequences that the EU Cyber Resilience Act (CRA) is likely have for Open Source Ecosystems.
 The CRA is the first regulation that has language that explicitly affects Open Source ecosystems.
 This law introduces a new entity – the Open Source Software Steward – with obligations to them (and other Roles) to improve the state of Cybersecurity throughout Open Source Supply-chains.
-This has shown us that there's a need to map out what Open Source Supply-chains actually look like, and spell out what Roles can be found throughout it, and more.
+This shown us that there's a need to map out what Open Source Supply-chains actually look like, and spell out what Roles can be found throughout it, and more.
 This document therefore also represents the author's exploration of this topic, and could be considered as "public notes" on the matter.
-Still, the author hopes this document can be useful for others than himself and the CPAN Security Group!
+Still, the author hopes this document also can be useful for others than himself and the CPAN Security Group.
 
 Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation – taking incremental steps toward more transparent and accountable Open Source supply-chains.
 
@@ -150,12 +158,20 @@ stateDiagram-v2
 
 ### Legend of Metadata Operations
 
-In this document we color-code the different _metadata operations_ in order to quickly see what activities a Supply-chain Role may be involved in.
+In the graphs presented above and below, we color-code the different _metadata operations_ in order to quickly show what activities a Supply-chain Role may be involved in.
+
 We're also assuming that Metadata is stored in SBOMs, but this need not be the case.
-Some of the information here is based on CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)) and other public documents.
+To distinguish between Metadata roles and Supply-chain roles, we have decided to refer to the former as "SBOM Roles".
+This convention is also commonly used (or implied) in the referenced material.
+This may change in later revisions of this document.
+
+Some of the information here is based on CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)) and other public documents, [referenced](#references) below.
+
 We also distinguish between SBOM Authors that are _Authoritative_ sources for Attributes and _Non-authoritative_ sources, in addition SBOM Distributors and Consumers.
 The Authoritative/Non-authoritative distinction is important so everyone is clear about where a given Metadata Attribute originally comes from.
-And finally, we acknowledge that some situations may call for an SBOM Censor.
+This distinction is _not commonly used_ in the referenced material.
+
+And finally, we acknowledge that some situations may call for an SBOM Censor, which is the time of writing is _not a commonly used term_ in the referenced material.
 
 * 🟥 SBOM Author (Authoritative) – **Creates**, defines, signs Metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
 * 🟨 SBOM Author (Non-authoritative) – **Assembles**, **updates**, refines, maintains, attests, annotates Metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
@@ -392,7 +408,9 @@ A website or tool ("Forge") that offers a public collaboration repository to Aut
 
 ### Language Ecosystem
 
-A language ecosystem hosts, indexes and distributes components specific for a programming language
+A language ecosystem hosts, indexes and distributes components specific for a programming language.
+Used for publishing Open Source components for use when writing software in the given programming language.
+Typically, the Ecosystem has dedicated services and tooling for interacting with it.
 
 * Examples: CPAN (Perl), PyPI (Python), NPM (Node/JS)
 * May have upstream language ecosystems

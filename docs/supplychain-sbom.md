@@ -1056,7 +1056,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 
 ## License and use of this document
 
-* Version: 0.7.0
+* Version: 0.7.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
@@ -1093,14 +1093,14 @@ Several people have been involved in the development of this document
 | License(s)                          | (7.15) PackageLicenseDeclared, (7.13) PackageLicenseConcluded, (7.14) LicenseInfoFromFiles | SPDX License | bom.metadata.licenses[], bom.components[].licenses[], components[].licenses[].acknowledgement[declared,concluded], components[].licenses[].licensing (proprietary) | packages[].licenseConcluded, packages[].licenseDeclared | Core.Relationship hasConcludedLicense hasDeclaredLicense | |
 | Copyright Holder                    | (7.17) PackageCopyrightText         | Text         | bom.components[].copyright, bom.components[].evidence.copyright       |                         | Software.SoftwareArtifact.copyrightText | |
 | Purpose, Intended Use               |                                     | Text         | bom.components[].description                                          | packages[].comment      |          |         |
-| SBOM Author                         | (6.8) Creator                       | Text         | bom.metadata.author, bom.metadata.authors                             | creationInfo.creators[] |          |         |
+| SBOM Author                         | (6.8) Creator                       | Text         | bom.metadata.authors                                                  | creationInfo.creators[] |          |         |
 | SBOM Creation Time-stamp            | (6.9) Created                       | DateTime     | bom.metadata.timestamp                                                | creationInfo.created    |          |         |
 | SBOM Format                         |                                     | Enum         | bom.properties.bomFormat                                              | SPDXVersion             |          |         |
 | SBOM Generation Tool                |                                     | List         | bom.metadata.tools[]                                                  | creationInfo.creators[] |          |         |
 | SBOM Location                       |                                     | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |                         |          |         |
 | SBOM Release                        |                                     | Int          | bom.properties.specVersion                                            | SPDXVersion             |          |         |
 | SBOM Serial Number                  | (6.5) SPDX Document Namespace, (7.2) SPDXID | UUID | bom.metadata.serialNumber                                             | SPDXID                  |          |         |
-| SBOM Type (Maintainer)              | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[design,pre-build]                             |                         |          | CISA 'Source' Type SBOM; FIXME – confirm   |
+| SBOM Type (Maintainer)              | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[pre-build]                                    |                         |          | CISA 'Source' Type SBOM; FIXME – confirm   |
 | SBOM Type (Builder)                 | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[build]                                        |                         |          | CISA 'Build' Type SBOM; FIXME – confirm    |
 | SBOM Type (Packager)                | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[post-build]                                   |                         |          | CISA 'Deployed' Type SBOM; FIXME – confirm |
 | SBOM Type (Deployer)                | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[operations]                                   |                         |          | CISA 'Runtime' Type SBOM; FIXME – confirm  |

@@ -44,17 +44,17 @@ States in **bold** already exist on CPAN.
 1. ACTIVE – The project is maintained (default state)
     * (number of maintainers is higher than 0)
     * (number of maintainers does not need to change)
-1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development
+1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (PAUSE-2016)
     * (number of maintainers is higher than 0)
     * (number of maintainers is too low)
-1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer
+1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer (PAUSE-2016)
     * (number of maintainers is 1)
     * (number of maintainers is about to reduce to 0)
-1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption
+1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption (PAUSE-2016)
     * The project needs a new maintainer
     * (number of maintainers is 0)
     * (number of maintainers is too low)
-1. NOXFER – The project is prevented from being transferred to new maintainers
+1. NOXFER – The project is prevented from being transferred to new maintainers (PAUSE-2017)
     * The project has been prevented from being adopted, but may still be forked
     * (number of maintainers is not relevant)
 1. CUSTODY – This project is under custodianship
@@ -84,11 +84,14 @@ States in **bold** already exist on CPAN.
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
 1. COMPROMISED
-    * 
+    *  
 1. DISCOURAGED
-    * 
+    *  
 1. DELISTED
-    * 
+    * Removed from the ecosystem index for some reason
+1. DUAL
+    * Equivalent to the P5P special user on CPAN (PAUSE-2017)
+    * Used to specify modules that are both published as part of the core language, and through a language ecosystem
 
 ### List of Support Types
 
@@ -171,4 +174,5 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 * (CHAOSS-2020) CHAOSS [Types of Contributions](https://chaoss.community/?p=3432), First created 2020-02-20.
 * (arXiv:2408.06723v1) [Sustaining Maintenance Labor for Healthy Open Source Software Projects through Human Infrastructure: A Maintainer Perspective](https://arxiv.org/pdf/2408.06723), Published 2024-08-13.
 * (MSFTOSS-2024) [5 things we learned from sponsoring a sampling of our open source dependencies](https://opensource.microsoft.com/blog/2024/06/27/5-things-we-learned-from-sponsoring-a-sampling-of-our-open-source-dependencies/), Published 2024-06-27.
-
+* (NEILB-2016) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html), Published 2016-02-13.
+* (PAUSE-2017) [The PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) Version 2 (section 4.5), published 2017-10-27.

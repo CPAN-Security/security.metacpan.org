@@ -44,17 +44,17 @@ States in **bold** already exist on CPAN.
 1. ACTIVE – The project is maintained (default state)
     * (number of maintainers is higher than 0)
     * (number of maintainers does not need to change)
-1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (PAUSE-2016)
+1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#sources))
     * (number of maintainers is higher than 0)
     * (number of maintainers is too low)
-1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer (PAUSE-2016)
+1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer (Ref: [PAUSE-2017](#sources))
     * (number of maintainers is 1)
     * (number of maintainers is about to reduce to 0)
-1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption (PAUSE-2016)
+1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption (Ref: [PAUSE-2017](#sources))
     * The project needs a new maintainer
     * (number of maintainers is 0)
     * (number of maintainers is too low)
-1. NOXFER – The project is prevented from being transferred to new maintainers (PAUSE-2017)
+1. NOXFER – The project is prevented from being transferred to new maintainers (Ref: [PAUSE-2017](#sources))
     * The project has been prevented from being adopted, but may still be forked
     * (number of maintainers is not relevant)
 1. CUSTODY – This project is under custodianship
@@ -66,11 +66,11 @@ States in **bold** already exist on CPAN.
 1. DEPRECATED – The project maintainer recommends that this project is not to be used
     * (number of maintainers is 0)
     * (number of maintainers does not need to change)
-1. UNMAINTAINED – This project is not actively maintained
+1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#sources))
     * Response time expectations should be none
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
-1. CASUAL – This project is only maintained on a casual basis
+1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#sources))
     * Response time expectations should be low
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
@@ -90,7 +90,7 @@ States in **bold** already exist on CPAN.
 1. DELISTED
     * Removed from the ecosystem index for some reason
 1. DUAL
-    * Equivalent to the P5P special user on CPAN (PAUSE-2017)
+    * Equivalent to the P5P special user on CPAN (Ref: [PAUSE-2017](#sources))
     * Used to specify modules that are both published as part of the core language, and through a language ecosystem
 
 ### List of Support Types
@@ -117,7 +117,7 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
     * User or Stakeholder Relevance
     * Indexing, Findability & SEO
     * Internationalization/I18N
-    * Localization/L10N and Translation (CHAOSS-2020)
+    * Localization/L10N and Translation (Ref: [CHAOSS-2020](#sources))
 1. Community management & development
     * Governance development
     * Culture & conduct
@@ -142,15 +142,15 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 1. Legal counsel
     * License conflict resolution
     * License enforcement
-1. Mentorship (MSFTOSS-2024)
+1. Mentorship (Ref: [MSFTOSS-2024](#sources))
     * Security
     * Governance
     * Outreach & Communication
-1. Skill & contribution gaps compensation (MSFTOSS-2024)
+1. Skill & contribution gaps compensation (Ref: [MSFTOSS-2024](#sources))
     * Language
     * Technology/platform
     * Specialized skills
-1. User Interface, User Experience, and Accessibility (CHAOSS-2020)
+1. User Interface, User Experience, and Accessibility (Ref: [CHAOSS-2020](#sources))
 
 
 ## Other project states, claims and metadata
@@ -176,3 +176,5 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 * (MSFTOSS-2024) [5 things we learned from sponsoring a sampling of our open source dependencies](https://opensource.microsoft.com/blog/2024/06/27/5-things-we-learned-from-sponsoring-a-sampling-of-our-open-source-dependencies/), Published 2024-06-27.
 * (NEILB-2016) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html), Published 2016-02-13.
 * (PAUSE-2017) [The PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) Version 2 (section 4.5), published 2017-10-27.
+* (UNMAINTED-2016) [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/), Published 2016-01-13.
+* (CASUAL-2023) [![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg)](https://casuallymaintained.tech/), Published 2023-09-25.

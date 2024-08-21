@@ -44,17 +44,17 @@ States in **bold** already exist on CPAN.
 1. ACTIVE – The project is maintained (default state)
     * (number of maintainers is higher than 0)
     * (number of maintainers does not need to change)
-1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#sources))
+1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))
     * (number of maintainers is higher than 0)
     * (number of maintainers is too low)
-1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer (Ref: [PAUSE-2017](#sources))
+1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer (Ref: [PAUSE-2017](#references))
     * (number of maintainers is 1)
     * (number of maintainers is about to reduce to 0)
-1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption (Ref: [PAUSE-2017](#sources))
+1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption (Ref: [PAUSE-2017](#references))
     * The project needs a new maintainer
     * (number of maintainers is 0)
     * (number of maintainers is too low)
-1. NOXFER – The project is prevented from being transferred to new maintainers (Ref: [PAUSE-2017](#sources))
+1. NOXFER – The project is prevented from being transferred to new maintainers (Ref: [PAUSE-2017](#references))
     * The project has been prevented from being adopted, but may still be forked
     * (number of maintainers is not relevant)
 1. CUSTODY – This project is under custodianship
@@ -66,11 +66,11 @@ States in **bold** already exist on CPAN.
 1. DEPRECATED – The project maintainer recommends that this project is not to be used
     * (number of maintainers is 0)
     * (number of maintainers does not need to change)
-1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#sources))
+1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))
     * Response time expectations should be none
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
-1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#sources))
+1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
     * Response time expectations should be low
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
@@ -90,7 +90,7 @@ States in **bold** already exist on CPAN.
 1. DELISTED
     * Removed from the ecosystem index for some reason
 1. DUAL
-    * Equivalent to the P5P special user on CPAN (Ref: [PAUSE-2017](#sources))
+    * Equivalent to the P5P special user on CPAN (Ref: [PAUSE-2017](#references))
     * Used to specify modules that are both published as part of the core language, and through a language ecosystem
 
 ### List of Support Types
@@ -117,7 +117,7 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
     * User or Stakeholder Relevance
     * Indexing, Findability & SEO
     * Internationalization/I18N
-    * Localization/L10N and Translation (Ref: [CHAOSS-2020](#sources))
+    * Localization/L10N and Translation (Ref: [CHAOSS-2020](#references))
 1. Community management & development
     * Governance development
     * Culture & conduct
@@ -142,15 +142,15 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 1. Legal counsel
     * License conflict resolution
     * License enforcement
-1. Mentorship (Ref: [MSFTOSS-2024](#sources))
+1. Mentorship (Ref: [MSFTOSS-2024](#references))
     * Security
     * Governance
     * Outreach & Communication
-1. Skill & contribution gaps compensation (Ref: [MSFTOSS-2024](#sources))
+1. Skill & contribution gaps compensation (Ref: [MSFTOSS-2024](#references))
     * Language
     * Technology/platform
     * Specialized skills
-1. User Interface, User Experience, and Accessibility (Ref: [CHAOSS-2020](#sources))
+1. User Interface, User Experience, and Accessibility (Ref: [CHAOSS-2020](#references))
 
 
 ## Other project states, claims and metadata
@@ -168,7 +168,24 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 1. CE_SUPPORT_END_DATE – The date for when the support for the component expires (Annex II, point 7)
 
 
-## Sources
+## License and use of this document
+
+* Version: 0.1.0
+* License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
+* Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
+
+You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.
+
+
+### Acknowledgements
+
+Several people have been involved in the development of this document
+
+* Salve J. Nilsen (main author)
+* Georg Link
+
+
+## References
 
 * (SJN-2022) [What kind of non-technical "nice-to-haves" you would expect to see in a healthy #OpenSource #FLOSS community?](https://chaos.social/@sjn/109343732566572015, Published 2022-11-14.
 * (CHAOSS-2020) CHAOSS [Types of Contributions](https://chaoss.community/?p=3432), First created 2020-02-20.

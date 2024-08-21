@@ -62,11 +62,12 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 ### Useful articles, papers and resources
 
-* (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis) (October 2023)
+* (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis); Published October 2023.
 * (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
-* (Blog) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) (Philippe Ombredanne, May, 2023)
-* (Video) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) (FOSDEM 2022, 15 minutes)
-* (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) (S4 Conference 2023)
+* (Blog) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) Published by Philippe Ombredanne, May 2023.
+* (Video) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) Presented at FOSDEM 2022, 15 minutes length.
+* (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) Presented at S4 Conference 2023.
+* (OpenSSF) [OpenSSF Responds to the CISA RFC on Software Identification Ecosystem Analysis](https://openssf.org/blog/2023/12/11/openssf-responds-to-the-cisa-rfc-on-software-identification-ecosystem-analysis/) Published 2023-12-11.
 
 
 ## Software Lifecycle

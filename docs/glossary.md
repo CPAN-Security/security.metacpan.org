@@ -11,7 +11,7 @@ toc: true
 > What you see here is a DRAFT of the Glossary used by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md](https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md](https://github.com/CPAN-Security/security.metacpan.org/blob/supplychain-sbom/docs/glossary.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
@@ -140,17 +140,17 @@ toc: true
 
 ### Dependency ⚠️  ✍️
 
+> [!CAUTION]
+> * (CPANSec-2024) Dependencies may be declared/stated/referenced or included/embedded or assumed/implied/detected, development phase-specific (e.g. developer, build, test, deploy, or runtime-specific), dynamic or static, unresolved or resolved, direct or transitive, or required, recommended or suggested.
+>     * The NTIA-2021 definition above is therefore not only **wrong**, but also **entirely insufficient** — is for any practical purpose useless and should not be used.
+>     * The SLSA-2023 definition above is preferrable, though it doesn't sufficiently distinguish between stated, embedded and assumed dependencies.
+
 > 1. (SLSA-2023) An [Artifact](#artifact) that is an input to a build process but that is not a source.
 >     * In the SLSA model, it is always a package.
 >     * E.g. an Alpine package ([package](#package---)) distributed on Alpine Linux ([platform](#platform)).
 > 1. ⚠️  (NTIA-2021) Characterizing the relationship that an upstream component X is included in software Y.
 >
 > (Ref: [SLSA-2023](#references-and-terms), NTIA-2021, CPANSec-2024)
-
-> [!CAUTION]
-> * (CPANSec-2024) Dependencies may be declared/stated/referenced or included/embedded or assumed/implied/detected, development phase-specific (e.g. developer, build, test, deploy, or runtime-specific), dynamic or static, unresolved or resolved, direct or transitive, or required, recommended or suggested.
->     * The NTIA-2021 definition above is therefore not only **wrong**, but also **entirely insufficient** — is for any practical purpose useless and should not be used.
->     * The SLSA-2023 definition above is preferrable, though it doesn't sufficiently distinguish between stated, embedded and assumed dependencies.
 
 #### Dependency (Direct) ✍️
 
@@ -162,7 +162,6 @@ toc: true
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
-
 #### Dependency (Dynamic)
 
 > [!NOTE]
@@ -170,7 +169,6 @@ toc: true
 
 > * See also
 >     * [Dependency (Static)](#dependency-static)
-
 
 #### Dependency (Transitive) ✍️
 
@@ -183,41 +181,60 @@ toc: true
 >
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
-#### Dependency (Detected during Analysis) ✍️
-
-> [!NOTE]
-> * FIXME: Expand on this topic
-
 #### Dependency (Embedded, Included, Pre-resolved) ✍️
 
 > 1. (CPANSec-2024) A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Implied, Assumed) ✍️
+##### Dependency (Pinned at Source) ✍️
+
+> * See also
+>     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded-included-pre-resolved-%EF%B8%8F)
+
+##### Dependency (Resolved at Source) ✍️
+
+> * See also
+>     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded-included-pre-resolved-%EF%B8%8F)
+
+#### Dependency (Implied, Assumed, Unstated) ✍️
+
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 > 1. (CPANSec-2024) A dependency that is _unstated_.
->     * An impled dependency is a package that is needed to perform some action or functionality, but has not been explicitly stated as required.
->     * An implied dependency should be considered as a bug in the package, and corrected as soon as possible.
+>     * An implied dependency is a component that is required to perform an action or functionality, but has not been explicitly stated as required.
+>     * An implied dependency should be considered as a bug in the component, and corrected as soon as possible.
 >     * If a dependency has to be implied due to lacking capabilities in the tooling used to create the package, then this should be considered as a bug in the tooling.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Unresolved, Required, Requirement, Pre-requirement) ✍️
+##### Dependency (Detected during Analysis) ✍️
+
+> * See also
+>     * [Dependency (Implied, Assumed, Unstated)](#dependency-implied-assumed-unstated-%EF%B8%8F)
+
+#### Dependency (Unresolved, Required) ✍️
 
 > 1. (CPANSec-2024) A dependency that that needs to be resolved for a software component to function as expected.
 >     * Requirements are expected to be resolved by the Builder or Packager of the component.
+>     * An unresolved dependency has always a version constraint associated with it (implied or explicitly), to be used during dependency resolution.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 >
 > * See also
->     * [Requirement](#requirement).
+>     * [Pre-Requirement](#pre-requirement)
+>     * [Requirement](#requirement)
 
+##### Requirement ✍️
 
-#### Dependency (Resolved at Source) ✍️
+> * See also
+>     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
 
-> [!NOTE]
-> * FIXME: Expand on this topic
+##### Pre-Requirement ✍️
+
+> * See also
+>     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
 
 #### Dependency (Resolved during Configuration) ✍️
 
@@ -239,11 +256,6 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Pinned at Source) ✍️
-
-> [!NOTE]
-> * FIXME: Expand on this topic
-
 #### Dependency (Pinned during Build) ✍️
 
 > [!NOTE]
@@ -254,10 +266,16 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
+> * See also
+>     * [Dependency (Out-of-ecosystem)](#dependency-out-of-ecosystem-%EF%B8%8F)
+
 #### Dependency (Out-of-ecosystem) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
+
+> * See also
+>     * [Dependency (In-ecosystem)](#dependency-in-ecosystem-%EF%B8%8F)
 
 #### Dependency (Service) ✍️
 
@@ -277,30 +295,39 @@ toc: true
 > * See also
 >     * [Dependency (Dynamic)](#dependency-dynamic)
 
-#### Requirement ✍️
+##### Dependency (Dynamic)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > * See also
->     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
+>     * [Dependency (Static)](#dependency-static)
 
 
 ### Distributor ⚠️
 
 > [!WARNING]
-> 1. The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
->     * (CRA-2024-03 Article 21, 22) This means if an [Importer](#importer) or distributor applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail.
+> 1. (CPANSec-2024) The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
+>     * (CRA-2024-03 Article 21, 22) This means if an [Importer](#importer) or [Distributor](#distributor) applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail.
+>     * (CPANSec-2024) To disambiguate, we recommend Open Source Supply-chain Roles like this to be referred to as [Provider](#provider)
 
 > [!NOTE]
-> * FIXME: Expand on this topic
 > * FIXME: Confirm with lawyer after final version of CRA is adopted.
 
 > 1. (CRA-2024-03) A natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the Union market without affecting its properties.
 > 1. (EUBG-2022-3) The distributor is a natural or a legal person in the supply chain, other than the manufacturer or the importer, who makes a product available on the market.
 >     *  Distributors are subject to specific obligations and have a key role to play in the context of market surveillance.
 >
-> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms))
+> * See also:
+>     * [Provider](#provider)
+>
+> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms), [CPANSec-2024](#references-and-terms))
+
+#### Provider ✍️
+
+> 1. (CPANSec-2024) The Role that is tasked with ensuring a component artifact is available for download by anyone downstream.
+>
+> (Ref: [CPANSec-2024](#references-and-terms), [Distributor](#distributor))
 
 
 ### Downstream
@@ -349,6 +376,9 @@ toc: true
 > 1. (NTIA-2021) The stage in the software life-cycle where an SBOM is generated (e.g. from source, at the time of build or packaging, or from a built executable).
 >
 > (Ref: [NTIA-2021](#references-and-terms))
+>
+> * See also
+>     * [SBOM Types](#sbom-types)
 
 
 ### Making available on the market
@@ -356,6 +386,7 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 > * FIXME: Add some clarification regarding Manufacturers, Importers, Distributors and Open Source Stewards.
+> * FIXME: Check if the Blue Guide has something to say on this matter.
 
 > 1. (CRA-2024-03) The supply of a product with digital elements for distribution or use on the European Union market in the course of a commercial activity, whether in return for payment or free of charge.
 >
@@ -834,7 +865,7 @@ This glossary is partly based on terms from the following sources.
 
 ## About this document
 
-* Version: 0.7.0
+* Version: 0.7.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

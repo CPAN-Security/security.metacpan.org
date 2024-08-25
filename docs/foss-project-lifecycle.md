@@ -162,8 +162,8 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 ### For consideration
 
 1. FORK – This project claims to be an API-compatible fork of another project
-1. CE_DECLARATION – A URL, linking to declaration of conformance to the EU Cyber Resilience Act, as required in CRA Annex II, point 6; and Chapter III, Article 28; and in Chapter II Article 13(20).
-1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (CRA Annex II, point 8)
+1. CE_DECLARATION – A URL, linking to declaration of conformance to the EU Cyber Resilience Act, as required in Annex II, point 6; and Chapter III, Article 28; and in Chapter II Article 13(20).
+1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (Annex II, point 8)
 1. CE_CONFORMITY_BODY – A URL pointing to the Conformity Assessment Body where this component has been registered (CRA Article 22(4) and Article 58(1))
 1. CE_SUPPORT_END_DATE – The date for when the support for the component expires (Annex II, point 7)
 

@@ -121,9 +121,9 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * In [Chapter I](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=32)
     * Article 6: Definitions
 * In [Chapter II](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=36)
-    * Article 7, point 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
+    * Article 7 paragraph 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
-    * Articles 21, points 1, 2 and 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
+    * Articles 21 paragraphs 1, 2, 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 
 #### NIS2 Implemented Regulation
@@ -151,7 +151,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Recital (22): Submission of SBOMs for Open Source projects (page 26)
 * Recital (24): CRA relevance for the NIS2 directive (page 29)
 * Recital (31): Manufacturer's liability due to lack of security updates (page 36)
-* Recital (34): Due diligence when integrating third-party components (page 39)
+* Recital (**34**): Exercise due diligence when integrating third-party components (page 39)
 * Recital (37): Software for testing purposes, alphas, betas (page 42)
 * Recital (39): Continued security updates (page 44)
 * Recital (41): Substantial modifications requires a new conformity assessment to be done (page 47)
@@ -195,6 +195,12 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Article 29, General principles of the CE marking (page 219)
     * Article 30, Rules and conditions for affixing the CE marking (pages 220-222)
 * Chapter V — Market Surveillance and Enforcement
+    * **Article 52**, Market surveillance and control of products (pages 253-259)
+        * **Section 3**, Market surveillance authorities […] shall also be responsible for carrying out market surveillance activities in relation to the obligations for open-source software stewards […].
+        * Section 11, Market surveillance authorities shall inform consumers of where to submit complaints that could indicate non-compliance with this Regulation […] and […] facilitate reporting of vulnerabilities, incidents and cyber threats […].
+    * **Article 54**, Procedure […] concerning products […] presenting a significant cybersecurity risk (pages 261-265)
+        * Section 1, [If a market authority finds] sufficient reason to consider that a product […], including its vulnerability handling, presents a significant cybersecurity risk, […] it shall […] carry out an evaluation of the product […] concerned in respect of its compliance with all the requirements laid down in this Regulation.
+        * Section 5, [If the economic operator] not take adequate corrective action […], the market surveillance authority shall take all appropriate provisional measures to prohibit or restrict that product […] from being made available […], to withdraw it from that market or to recall it.
     * **Article 58**, Formal non-compliance (pages 276)
 
 
@@ -262,7 +268,7 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 
 ## License and use of this document
 
-* Version: 0.5.0
+* Version: 0.5.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
 

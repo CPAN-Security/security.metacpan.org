@@ -294,7 +294,7 @@ toc: true
 
 > [!NOTE]
 > * FIXME: Expand on this topic
-> * FIXME: Confirm with lawyer after final version of CRA is adopted.
+> * FIXME: Confirm with legal counsel after final version of CRA is adopted.
 
 > 1. (CRA-2024-03) A natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the Union market without affecting its properties.
 > 1. (EUBG-2022-3) The distributor is a natural or a legal person in the supply chain, other than the manufacturer or the importer, who makes a product available on the market.
@@ -308,6 +308,13 @@ toc: true
 > 1. (NTIA-2021) Referring to how a component is subsequently used in other pieces of software at a later stage in the supply chain.
 >
 > (Ref: [NTIA-2021](#references-and-terms))
+
+
+### Economic operator
+
+> 1. (CRA-2024-03) The [Manufacturer](#manufacturer), the authorised representative, the [Importer](#importer), the [Distributor](#distributor), or other natural or legal person who is subject to obligations in relation to the manufacture of products with digital elements or to the making available of products on the market in accordance with [the Cyber Resilience Act];
+>
+> (Ref: [CRA-2024-03](#references-and-terms))
 
 
 ### Electronic information system
@@ -339,7 +346,7 @@ toc: true
 
 > 1. (CRA-2024-03) A natural or legal person established in the Union who places on the market a product with digital elements that bears the name or trademark of a natural or legal person established outside the European Union.
 > 1. (EUBG-2022-3) The importer is a natural or legal person established in the Union who places a product from a third country on the EU market.
->    * His obligations build on the obligations of the manufacturer.
+>    * [Their] obligations build on the obligations of the manufacturer.
 >
 > (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms))
 
@@ -834,7 +841,7 @@ This glossary is partly based on terms from the following sources.
 
 ## About this document
 
-* Version: 0.7.0
+* Version: 0.7.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

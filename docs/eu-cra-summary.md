@@ -77,24 +77,32 @@ Manufacturers must provide a Software Bill of Materials (SBOM) upon request by a
 * …offer support for their products for at least 5 years, security updates for 10 years
 
 
-### Importers and Distributors
+### Importers
+
+Importers shall place on the market only products with digital elements that comply with the essential requirements set out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297), and where the processes put in place by the manufacturer comply with the essential requirements set out in [Annex I, Part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300), as required in [Article 19(1))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=197)
+
+
+
+### Distributors
+
 
 
 ### Open Source Stewards
 
-* Open Source Stewards are obliged to
-  * …facilitate the Manufacturer's _due diligence_ obligation set out in [Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163) ⚠️  FIXME: (Dis)confirm this.
-  * …provide a cybersecurity policy for voluntary reporting of vulnerabilities, as laid out in [Article 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=185)
-  * …cooperate with market surveillance authorities and provide documentation. ⚠️  FIXME: (Dis)confirm this.
-  * …report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=187)), in the way described in [Article 14](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176).
+Open Source Stewards are obliged to
 
-* FOSS Software may get a voluntary security attestation, as described in [Article 25](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=210) ⚠️  FIXME: (Dis)confirm this.
-  * …using an EU Attestation program as laid out in [Recital (21)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25)
-    * …by requesting a certification from ENISA, as laid out in [Regulation (EU) 2019/881, Article (48)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881#page=8)
-    * …in such a way that this security attestation can be initiated or financed by not only FOSS projects, but also by others, including manufacturers, users, or public administrations.
-    * …so this Attestation becomes a "proof of due diligence exercised"? ⚠️  FIXME: (Dis)confirm this.
-  * …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties.
+* …facilitate the Manufacturer's _due diligence_ obligation set out in [Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163) ⚠️  FIXME: (Dis)confirm this.
+* …provide a cybersecurity policy for voluntary reporting of vulnerabilities, as laid out in [Article 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=185)
+* …cooperate with market surveillance authorities and provide documentation. ⚠️  FIXME: (Dis)confirm this.
+* …report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=187)), in the way described in [Article 14](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176).
 
+FOSS Software may get a voluntary security attestation, as described in [Article 25](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=210) ⚠️  FIXME: (Dis)confirm this.
+
+* …using an EU Attestation program as laid out in [Recital (21)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25)
+  * …by requesting a certification from ENISA, as laid out in [Regulation (EU) 2019/881, Article (48)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881#page=8)
+  * …in such a way that this security attestation can be initiated or financed by not only FOSS projects, but also by others, including manufacturers, users, or public administrations.
+  * …so this Attestation becomes a "proof of due diligence exercised"? ⚠️  FIXME: (Dis)confirm this.
+* …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties.
 
 
 

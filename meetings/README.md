@@ -32,4 +32,8 @@ title: CPANSec meeting details & minutes
 * [2024-07-18](cpansec-minutes-2024-07-18.md)
 * [2024-08-01](cpansec-minutes-2024-08-01.md)
 * [2024-08-15](cpansec-minutes-2024-08-15.md)
-* [2024-08-25]()
+* [2024-08-29]()
+
+### Under review
+
+Meeting minutes [currently under review](https://github.com/CPAN-Security/security.metacpan.org/pulls?q=is%3Apr+is%3Aopen+label%3Aminutes) on Github.

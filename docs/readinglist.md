@@ -8,11 +8,12 @@ toc: true
 ## Document status: ⚠️  DRAFT
 
 > [!CAUTION]
-> This is The CPAN Security Group recommended reading list.
+> This is the CPAN Security Group recommended reading list.
 > If you have any additions or improvements, please [open an issue](https://github.com/CPAN-Security/security.metacpan.org/issues), citing this page.
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/readinglist/docs/readinglist.md](https://github.com/CPAN-Security/security.metacpan.org/blob/readinglist/docs/readinglist.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
+> - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
 ## Software Bills of Materials (SBOM)
@@ -30,6 +31,12 @@ toc: true
 * (SPDX) [How To Use SPDX 2.3 in Different Scenarios](https://spdx.github.io/spdx-spec/v2.3/how-to-use/)
 
 
+### SBOM Standards
+
+* (ISO/IEC 5962:2021) [SPDX® Specification V2.2.1](https://standards.iso.org/ittf/PubliclyAvailableStandards/c081870_ISO_IEC_5962_2021%28E%29.zip) (Source: ISO's [Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/index.html) list)
+* (ECMA-424) [CycloneDX Bill of materials specification](https://ecma-international.org/publications-and-standards/standards/ecma-424/), published June 2024.
+
+
 ### Useful articles and papers
 
 * (NTIA) [Software Suppliers Playbook: SBOM Production and Provision](https://www.ntia.gov/files/ntia/publications/software_suppliers_sbom_production_and_provision_-_final.pdf) (November 2021)
@@ -37,17 +44,11 @@ toc: true
 * [Understanding OWASP’s Bill of Material Maturity Model: Not all SBOMs are created equal](https://www.csoonline.com/article/1246904/not-all-sboms-are-created-equal-understanding-owasps-bill-of-material-maturity-model.html) (Chris Huges, 2023)
 * (NTIA) [Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.ntia.gov/files/ntia/publications/ntia_sbom_framing_2nd_edition_20211021.pdf) (October 2021)
 * (Lawfare Media) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards) (July 2022)
-* (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
 * (CISA) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations) (March 2024)
 * (SPDX) [Satisfying NTIA Minimum Elements for an SBOM using SPDX](https://spdx.github.io/spdx-spec/v2.3/how-to-use/#k22-mapping-ntia-minimum-elements-to-spdx-fields) (SPDX 2.3)
 * (SPDX) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 3.0)
 * (CISA) [SBOM Sharing Primer](https://www.cisa.gov/resources-tools/resources/sbom-sharing-primer)
 * (NTIA) [Roles and Benefits for SBOM Across the Supply Chain](https://www.ntia.gov/files/ntia/publications/ntia_sbom_use_cases_roles_benefits-nov2019.pdf), (November 2019)
-
-
-### SBOM Standards
-
-* (ISO/IEC 5962:2021) [SPDX® Specification V2.2.1](https://standards.iso.org/ittf/PubliclyAvailableStandards/c081870_ISO_IEC_5962_2021%28E%29.zip) (Source: ISO's [Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/index.html) list)
 
 See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
 
@@ -61,17 +62,21 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 ### Useful articles, papers and resources
 
-* (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis) (October 2023)
+* (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis); Published October 2023.
 * (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
-* (Blog) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) (Philippe Ombredanne, May, 2023)
-* (Video) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) (FOSDEM 2022, 15 minutes)
-* (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) (S4 Conference 2023)
+* (Blog) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) Published by Philippe Ombredanne, May 2023.
+* (Video) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) Presented at FOSDEM 2022, 15 minutes length.
+* (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) Presented at S4 Conference 2023.
+* (OpenSSF) [OpenSSF Responds to the CISA RFC on Software Identification Ecosystem Analysis](https://openssf.org/blog/2023/12/11/openssf-responds-to-the-cisa-rfc-on-software-identification-ecosystem-analysis/) Published 2023-12-11.
 
 
 ## Software Lifecycle
 
 * (OWASP) [Common Lifecycle Enumeration](https://owasp.org/www-project-common-lifecycle-enumeration/)
 * (MPO) [Defining End of Life for Medical Devices](https://www.mpo-mag.com/issues/2023-09-01/view_columns/defining-end-of-life-for-medical-devices/), MPO Magazine, 2023-09-06
+* (CHAOSS-2020) CHAOSS [Types of Contributions](https://chaoss.community/?p=3432), First created 2020-02-20.
+* (arXiv:2408.06723v1) [Sustaining Maintenance Labor for Healthy Open Source Software Projects through Human Infrastructure: A Maintainer Perspective](https://arxiv.org/pdf/2408.06723), Published 2024-08-13.
+* (MSFTOSS-2024) [5 things we learned from sponsoring a sampling of our open source dependencies](https://opensource.microsoft.com/blog/2024/06/27/5-things-we-learned-from-sponsoring-a-sampling-of-our-open-source-dependencies/), Published 2024-06-27.
 
 
 ## Provenance & Supply Chain Security
@@ -116,9 +121,9 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * In [Chapter I](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=32)
     * Article 6: Definitions
 * In [Chapter II](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=36)
-    * Article 7, point 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
+    * Article 7 paragraph 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
-    * Articles 21, points 1, 2 and 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
+    * Articles 21 paragraphs 1, 2, 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 
 #### NIS2 Implemented Regulation
@@ -146,7 +151,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Recital (22): Submission of SBOMs for Open Source projects (page 26)
 * Recital (24): CRA relevance for the NIS2 directive (page 29)
 * Recital (31): Manufacturer's liability due to lack of security updates (page 36)
-* Recital (34): Due diligence when integrating third-party components (page 39)
+* Recital (**34**): Exercise due diligence when integrating third-party components (page 39)
 * Recital (37): Software for testing purposes, alphas, betas (page 42)
 * Recital (39): Continued security updates (page 44)
 * Recital (41): Substantial modifications requires a new conformity assessment to be done (page 47)
@@ -190,6 +195,12 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Article 29, General principles of the CE marking (page 219)
     * Article 30, Rules and conditions for affixing the CE marking (pages 220-222)
 * Chapter V — Market Surveillance and Enforcement
+    * **Article 52**, Market surveillance and control of products (pages 253-259)
+        * **Section 3**, Market surveillance authorities […] shall also be responsible for carrying out market surveillance activities in relation to the obligations for open-source software stewards […].
+        * Section 11, Market surveillance authorities shall inform consumers of where to submit complaints that could indicate non-compliance with this Regulation […] and […] facilitate reporting of vulnerabilities, incidents and cyber threats […].
+    * **Article 54**, Procedure […] concerning products […] presenting a significant cybersecurity risk (pages 261-265)
+        * Section 1, [If a market authority finds] sufficient reason to consider that a product […], including its vulnerability handling, presents a significant cybersecurity risk, […] it shall […] carry out an evaluation of the product […] concerned in respect of its compliance with all the requirements laid down in this Regulation.
+        * Section 5, [If the economic operator] not take adequate corrective action […], the market surveillance authority shall take all appropriate provisional measures to prohibit or restrict that product […] from being made available […], to withdraw it from that market or to recall it.
     * **Article 58**, Formal non-compliance (pages 276)
 
 
@@ -209,9 +220,10 @@ Annexes are technical materials presented separately from the main text, and hav
 
 #### Other useful resources
 
-* Eclipse Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
-* Eclipse ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)
-* Eclipse ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
+* (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
+* (Eclipse) Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
+* (Eclipse) ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)
+* (Eclipse) ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
 * (EU) The '[Blue Guide](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.247.01.0001.01.ENG&toc=OJ%3AC%3A2022%3A247%3ATOC)' on the implementation of EU product rules (2022/C 247/01). Published 2022-06-29; [PDF](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04))
 
 
@@ -230,13 +242,14 @@ Annexes are technical materials presented separately from the main text, and hav
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-cross-sectoral-financial-services-act-1)
 
 
-## Other articles and guides
+## Other informative articles and guides
 
 * (Checkmarx) [Preparing for Europe’s Most Extensive Cybersecurity Directive, NIS2 – What AppSec teams need to know](https://checkmarx.com/blog/preparing-for-europes-most-extensive-cybersecurity-directive-nis2-what-appsec-teams-need-to-know/)
 * (CPAN) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html) – describing the different personas or roles involved in the life-cycle of a CPAN distribution.
-* (CISA) [Software Aquisition Guide](https://www.cisa.gov/resources-tools/resources/software-acquisition-guide-government-enterprise-consumers-software-assurance-cyber-supply-chain)
+* (CISA) [Software Acquisition Guide](https://www.cisa.gov/resources-tools/resources/software-acquisition-guide-government-enterprise-consumers-software-assurance-cyber-supply-chain)
 
-### PCI-SSF
+
+## PCI-SSF
 
 The Payment Card Industry Software Security Framework v1.2.1, Control Objective C.1, states
 
@@ -252,9 +265,10 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 
 * (PCI-SSC) [PCI-SSF v1.2.1](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), Published May 2023
 
+
 ## License and use of this document
 
-* Version: 0.5.0
+* Version: 0.5.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
 

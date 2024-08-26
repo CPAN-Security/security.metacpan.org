@@ -11,7 +11,7 @@ toc: true
 > What you see here is a DRAFT of the Glossary used by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md](https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md](https://github.com/CPAN-Security/security.metacpan.org/blob/supplychain-sbom/docs/glossary.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
@@ -140,17 +140,17 @@ toc: true
 
 ### Dependency ⚠️  ✍️
 
+> [!CAUTION]
+> * (CPANSec-2024) Dependencies may be declared/stated/referenced or included/embedded or assumed/implied/detected, development phase-specific (e.g. developer, build, test, deploy, or runtime-specific), dynamic or static, unresolved or resolved, direct or transitive, or required, recommended or suggested.
+>     * The NTIA-2021 definition above is therefore not only **wrong**, but also **entirely insufficient** — is for any practical purpose useless and should not be used.
+>     * The SLSA-2023 definition above is preferrable, though it doesn't sufficiently distinguish between stated, embedded and assumed dependencies.
+
 > 1. (SLSA-2023) An [Artifact](#artifact) that is an input to a build process but that is not a source.
 >     * In the SLSA model, it is always a package.
 >     * E.g. an Alpine package ([package](#package---)) distributed on Alpine Linux ([platform](#platform)).
 > 1. ⚠️  (NTIA-2021) Characterizing the relationship that an upstream component X is included in software Y.
 >
 > (Ref: [SLSA-2023](#references-and-terms), NTIA-2021, CPANSec-2024)
-
-> [!CAUTION]
-> * (CPANSec-2024) Dependencies may be declared/stated/referenced or included/embedded or assumed/implied/detected, development phase-specific (e.g. developer, build, test, deploy, or runtime-specific), dynamic or static, unresolved or resolved, direct or transitive, or required, recommended or suggested.
->     * The NTIA-2021 definition above is therefore not only **wrong**, but also **entirely insufficient** — is for any practical purpose useless and should not be used.
->     * The SLSA-2023 definition above is preferrable, though it doesn't sufficiently distinguish between stated, embedded and assumed dependencies.
 
 #### Dependency (Direct) ✍️
 
@@ -161,6 +161,14 @@ toc: true
 >     * For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive-).
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
+
+#### Dependency (Dynamic)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> * See also
+>     * [Dependency (Static)](#dependency-static)
 
 #### Dependency (Transitive) ✍️
 
@@ -173,48 +181,72 @@ toc: true
 >
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
-#### Dependency (Detected during Analysis) ✍️
-
-> [!NOTE]
-> * FIXME: Expand on this topic
-
 #### Dependency (Embedded, Included, Pre-resolved) ✍️
 
 > 1. (CPANSec-2024) A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Implied, Assumed) ✍️
+##### Dependency (Pinned at Source) ✍️
+
+> * See also
+>     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded-included-pre-resolved-%EF%B8%8F)
+
+##### Dependency (Resolved at Source) ✍️
+
+> * See also
+>     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded-included-pre-resolved-%EF%B8%8F)
+
+#### Dependency (Implied, Assumed, Unstated) ✍️
+
+> [!NOTE]
+> * FIXME: Expand on this topic
 
 > 1. (CPANSec-2024) A dependency that is _unstated_.
->     * An impled dependency is a package that is needed to perform some action or functionality, but has not been explicitly stated as required.
->     * An implied dependency should be considered as a bug in the package, and corrected as soon as possible.
+>     * An implied dependency is a component that is required to perform an action or functionality, but has not been explicitly stated as required.
+>     * An implied dependency should be considered as a bug in the component, and corrected as soon as possible.
 >     * If a dependency has to be implied due to lacking capabilities in the tooling used to create the package, then this should be considered as a bug in the tooling.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Unresolved, Required, Requirement, Pre-requirement) ✍️
+##### Dependency (Detected during Analysis) ✍️
+
+> * See also
+>     * [Dependency (Implied, Assumed, Unstated)](#dependency-implied-assumed-unstated-%EF%B8%8F)
+
+#### Dependency (Unresolved, Required) ✍️
 
 > 1. (CPANSec-2024) A dependency that that needs to be resolved for a software component to function as expected.
 >     * Requirements are expected to be resolved by the Builder or Packager of the component.
+>     * An unresolved dependency has always a version constraint associated with it (implied or explicitly), to be used during dependency resolution.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 >
 > * See also
->     * [Requirement](#requirement).
+>     * [Pre-Requirement](#pre-requirement)
+>     * [Requirement](#requirement)
 
+##### Requirement ✍️
 
-#### Dependency (Resolved at Source) ✍️
+> * See also
+>     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
+
+##### Pre-Requirement ✍️
+
+> * See also
+>     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
+
+#### Dependency (Resolved during Configuration) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved at Build) ✍️
+#### Dependency (Resolved during Build) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved at Deploy) ✍️
+#### Dependency (Resolved during Deploy) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -224,17 +256,7 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Pinned at Source) ✍️
-
-> [!NOTE]
-> * FIXME: Expand on this topic
-
-#### Dependency (Pinned at Build) ✍️
-
-> [!NOTE]
-> * FIXME: Expand on this topic
-
-#### Dependency (Pinned at Deploy) ✍️
+#### Dependency (Pinned during Build) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -244,10 +266,16 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 
+> * See also
+>     * [Dependency (Out-of-ecosystem)](#dependency-out-of-ecosystem-%EF%B8%8F)
+
 #### Dependency (Out-of-ecosystem) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
+
+> * See also
+>     * [Dependency (In-ecosystem)](#dependency-in-ecosystem-%EF%B8%8F)
 
 #### Dependency (Service) ✍️
 
@@ -255,34 +283,52 @@ toc: true
 > * FIXME: Expand on this topic
 
 > 1. (CPANSec-2024) A network service dependency that are required for component to function as expected
->     * (PCISSF-2023) Required by the PCI Software Security Framework version 1.2.1
+> 1. (PCISSF-2023) Required by the PCI Software Security Framework version 1.2.1
 >
 > (Ref: [CPANSec-2024](#references-and-terms), [PCISSF-2023](#references-and-terms))
 
-#### Requirement ✍️
+#### Dependency (Static)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > * See also
->     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
+>     * [Dependency (Dynamic)](#dependency-dynamic)
+
+##### Dependency (Dynamic)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> * See also
+>     * [Dependency (Static)](#dependency-static)
 
 
 ### Distributor ⚠️
 
 > [!WARNING]
-> 1. The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
->     * (CRA-2024-03 Article 21, 22) This means if an [Importer](#importer) or distributor applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail.
+> 1. (CPANSec-2024) The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
+>     * (CRA-2024-03 Article 21, 22) This means if an [Importer](#importer) or [Distributor](#distributor) applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail.
+>     * (CPANSec-2024) To disambiguate, we recommend Open Source Supply-chain Roles like this to be referred to as [Provider](#provider)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
-> * FIXME: Confirm with lawyer after final version of CRA is adopted.
+> * FIXME: Confirm with legal counsel after final version of CRA is adopted.
 
 > 1. (CRA-2024-03) A natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the Union market without affecting its properties.
 > 1. (EUBG-2022-3) The distributor is a natural or a legal person in the supply chain, other than the manufacturer or the importer, who makes a product available on the market.
 >     *  Distributors are subject to specific obligations and have a key role to play in the context of market surveillance.
 >
-> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms))
+> * See also:
+>     * [Provider](#provider)
+>
+> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms), [CPANSec-2024](#references-and-terms))
+
+#### Provider ✍️
+
+> 1. (CPANSec-2024) The Role that is tasked with ensuring a component artifact is available for download by anyone downstream.
+>
+> (Ref: [CPANSec-2024](#references-and-terms), [Distributor](#distributor))
 
 
 ### Downstream
@@ -290,6 +336,13 @@ toc: true
 > 1. (NTIA-2021) Referring to how a component is subsequently used in other pieces of software at a later stage in the supply chain.
 >
 > (Ref: [NTIA-2021](#references-and-terms))
+
+
+### Economic operator
+
+> 1. (CRA-2024-03) The [Manufacturer](#manufacturer), the authorised representative, the [Importer](#importer), the [Distributor](#distributor), or other natural or legal person who is subject to obligations in relation to the manufacture of products with digital elements or to the making available of products on the market in accordance with [the Cyber Resilience Act];
+>
+> (Ref: [CRA-2024-03](#references-and-terms))
 
 
 ### Electronic information system
@@ -321,7 +374,7 @@ toc: true
 
 > 1. (CRA-2024-03) A natural or legal person established in the Union who places on the market a product with digital elements that bears the name or trademark of a natural or legal person established outside the European Union.
 > 1. (EUBG-2022-3) The importer is a natural or legal person established in the Union who places a product from a third country on the EU market.
->    * His obligations build on the obligations of the manufacturer.
+>    * [Their] obligations build on the obligations of the manufacturer.
 >
 > (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms))
 
@@ -331,6 +384,9 @@ toc: true
 > 1. (NTIA-2021) The stage in the software life-cycle where an SBOM is generated (e.g. from source, at the time of build or packaging, or from a built executable).
 >
 > (Ref: [NTIA-2021](#references-and-terms))
+>
+> * See also
+>     * [SBOM Types](#sbom-types)
 
 
 ### Making available on the market
@@ -338,6 +394,7 @@ toc: true
 > [!NOTE]
 > * FIXME: Expand on this topic
 > * FIXME: Add some clarification regarding Manufacturers, Importers, Distributors and Open Source Stewards.
+> * FIXME: Check if the Blue Guide has something to say on this matter.
 
 > 1. (CRA-2024-03) The supply of a product with digital elements for distribution or use on the European Union market in the course of a commercial activity, whether in return for payment or free of charge.
 >
@@ -486,13 +543,100 @@ toc: true
 > (Ref: [CRA-2024-03](#references-and-terms), SCVS-2020, CDXAG-2024, NTIA-2021)
 
 
+### SBOM Attributes
+
+#### SBOM Author Name (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### SBOM Timestamp (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### SBOM Type (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### SBOM Primary Component (Attribute)
+
+> 1. (CISA-2024-9) The Primary Component, or root of dependencies, is the subject of the SBOM or the foundational component being described in the SBOM.
+>     * […] component attributes […] are also identified for this component, just as they are for the direct and transitive components.
+>
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Component Name (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Version (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Supplier Name (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Cryptographic Hash (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Unique Identifier (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Relationships (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### License (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+#### Copyright Holder (Attribute)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> (Ref: [CISA-2024-9](#references-and-terms))
+
+
 ### SBOM Roles
 
-> 1. (CPANSec-2024) A person, agent or actor that does something with an SBOM document, or with specific metadata fields in an SBOM document.
->     * This MAY include operations like Creating, Updating, Verifying, Censoring or Sharing SBOM documents or fields.
-> 1. (CISA-2024) "Data is only good if it is in the hands of the right people."
+> 1. (CPANSec-2024) A person, agent or actor that does something with an SBOM document, or with specific metadata attributes in an SBOM document.
+>     * This may include operations like Creating, Updating, Verifying, Censoring or Sharing SBOM documents or attributes.
+> 1. (CISA-2024-3) "Data is only good if it is in the hands of the right people."
 >
-> (Ref: [CISA-2024](#references-and-terms))
+> (Ref: [CISA-2024-3](#references-and-terms))
 
 #### SBOM Assembler (Role) ✍️
 
@@ -504,56 +648,56 @@ toc: true
 
 #### SBOM Author (Authoritative) (Role) ✍️
 
-> 1. (CPANSec-2024) 🟥 SBOM Author (Authoritative).
->     * An authoritative source of an SBOM, or an SBOM metadata field.
-> 1. (CISA-2024) Creates an SBOM.
-> 1. (CPANSec-2024) SBOM Authors create, define, or sign SBOM metadata — _They make sure the fields and related artifacts **Exist**_.
->     * This mostly means authoritative metadata fields as laid out in the different [Supply-chain Roles](supplychain-sbom#supply-chain-roles-and-metadata).
->     * In addition to fields encountered throughout the supply-chain, they care about the fields listed in the table below.
->     * They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
->
-> (Ref: [CISA-2024](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
-
 > [!NOTE]
 > 1. (CPANSec-2024) SBOM Authors who are not authoritative sources, but instead gather SBOM metadata from different dependencies, may be referred to as an [SBOM Assembler](glossary#sbom-assembler--role-).
 > 1. (CPANSec-2024) SBOM Authors may also collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_.
 >     * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
 > 1. (CPANSec-2024) An SBOM Author who is tasked with removing (censoring) sensitive information from SBOM documents may be called [SBOM Censor](glossary#sbom-censor--role-)
 
+> 1. (CPANSec-2024) 🟥 SBOM Author (Authoritative).
+>     * An authoritative source of an SBOM, or an SBOM metadata attributes.
+> 1. (CISA-2024-3) Creates an SBOM.
+> 1. (CPANSec-2024) SBOM Authors create, define, or sign SBOM metadata — _They make sure the attributes and related artifacts **Exist**_.
+>     * This mostly means authoritative metadata attributes as laid out in the different [Supply-chain Roles](supplychain-sbom#supply-chain-roles-and-metadata).
+>     * In addition to attributes encountered throughout the supply-chain, they care about the attributes listed in the table below.
+>     * They may edit SBOM files manually or use tooling for analyzing artifacts, or ideally – use have SBOMs generated automatically as part of a build process. (NTIA-2021, "Produce" category)
+>
+> (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
+
 #### SBOM Author (Non-authoritative) (Role)
 
 > 1. (CPANSec-2024) 🟨 SBOM Author (Non-authoritative)
 >     * A non-authoritative [SBOM Author](#sbom-author--role-).
 > 1. (CPANSec-2024) Someone that gathers, assembles or updates SBOMs from different sources into a new SBOM.
->     * This is a _informal_ Role separate from "SBOM Author" for clarifying the responsibility when the Role intends to _gather_, _assemble_ or _update_ metadata fields, instead of being the authoritative _creator_ of a field.
->     * This assumes some fields may be in need of updating as an SBOM is passed down a supply-chain – for example to correct upstream assumptions like 'Download location', add missing fields, or update the list of resolved dependencies.
->     * The intention is to distinguish between "SBOM Author" and "SBOM Assembler" in the same way as one distinguishes between "Create" and "Update" in CRUD – to clarify responsibilities and expectations for who is the original source of some metadata fields.
+>     * This is a _informal_ Role separate from "SBOM Author" for clarifying the responsibility when the Role intends to _gather_, _assemble_ or _update_ metadata attributes, instead of being the authoritative _creator_ of an attributes.
+>     * This assumes some attributes may be in need of updating as an SBOM is passed down a supply-chain – for example to correct upstream assumptions like 'Download location', add missing attributes, or update the list of resolved dependencies.
+>     * The intention is to distinguish between "SBOM Author" and "SBOM Assembler" in the same way as one distinguishes between "Create" and "Update" in CRUD – to clarify responsibilities and expectations for who is the original source of some metadata attributes.
 > 
-> (Ref: [CISA-2024](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
+> (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
 #### SBOM Distributor (Role)
 
 > 1. (CPANSec-2024) 🟩 SBOM Distributor.
 >     * SBOM Distributor roles distribute, curate, or index SBOM metadata — _They make sure the metadata and related artifacts are made **Available** to others_.
->     * They don't have any specific metadata fields that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
-> 1. (CISA-2024) Receives SBOMs for the purpose of sharing them with [SBOM Consumers](#sbom-consumer--role-) or other Distributors.
+>     * They don't have any specific metadata attributes that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
+> 1. (CISA-2024-3) Receives SBOMs for the purpose of sharing them with [SBOM Consumers](#sbom-consumer--role-) or other Distributors.
 > 1. (CISA-2023) Additionally, an SBOM Distributor may care about the following activities.
 >     * Discovery: Mechanism used by the consumer to know the SBOM exists and how to access it.
 >     * Access: Access control mechanisms used by the author or provider to regulate who can view or use an SBOM.
 >     * Transport: Mechanism provided by the author or distributor to transfer an SBOM.  Also, the action of the consumer receiving an SBOM.
 > 
-> (Ref: [CISA-2023](#references-and-terms), [CISA-2024](#references-and-terms), [CPANSec-2024](#references-and-terms))
+> (Ref: [CISA-2023](#references-and-terms), [CISA-2024-3](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
 #### SBOM Consumer (Role)
 
 > 1. (CPANSec-2024) 🟦 SBOM Consumer.
 >     * SBOM Consumer roles gather, inspect, analyze, aggregate or verify SBOM metadata — _They make sure metadata and related artifacts are **Useful**, **Complete**, **Correct** or **Compliant**_.
->     * They don't have any specific metadata fields that are commonly used across the different supply-chain Consumer roles.
-> 1. (CISA-2024) Receives the transferred SBOM.
+>     * They don't have any specific metadata attributes that are commonly used across the different supply-chain Consumer roles.
+> 1. (CISA-2024-3) Receives the transferred SBOM.
 >     * This could include roles such as third parties, authors, integrators, and end users.
 > 1. (NTIA-2021, "Consume" category) They may view SBOM files to understand the contents, and use this information to support decision making & business processes, or to compare and contrast SBOMs to discover significant changes or vulnerabilities.
 > 
-> (Ref: [CISA-2024](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
+> (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
 #### SBOM Censor (Role)
 
@@ -663,15 +807,23 @@ toc: true
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
-### Supplier
+### Supplier ⚠️
+
+> [!CAUTION]
+> * (CPANSec-2024) The term 'Supplier' is not well defined, and should be either avoided in favor of a more precise term, or otherwise be disambiguated.
 
 > 1. (NTIA-2021) An entity that creates, defines, and identifies components and produces associated SBOMs.
 >     * A supplier may also be known as a manufacturer, vendor, developer, integrator, maintainer, or provider.
 >     * Ideally, all suppliers are also authors of SBOMs for the suppliers’ components.
 >     * Most suppliers are also consumers.
 >     * A supplier with no included upstream components is a root entity.
+> 1. (CDXAG-2024) The name of an entity that creates, defines, and identifies components.
 >
-> (Ref: [NTIA-2021](#references-and-terms))
+> * See also
+>     * [Manufacturer](#manufacturer)
+>     * [Author](#author)
+>
+> (Ref: [NTIA-2021](#references-and-terms), CDXAG-2024)
 
 
 ### SWID (Software Identification)
@@ -711,15 +863,17 @@ This glossary is partly based on terms from the following sources.
 - (CPAN-2015) [CPAN Glossary](http://neilb.org/2015/09/05/cpan-glossary.html) by Neil Bowers, published 2015-09-05.
 - (SBOMit-2023) [SBOM on in-toto Terminology](https://github.com/SBOMit/specification/blob/main/specification.md#15-terminology), Specification introduction section 1.5, published July 2023.
 - (NTIA-2021) [NTIA The Minimum Elements for an SBOM, Glossary](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=25), pages 25-27, published 2021-07-12.
-- (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
+- (CISA-2024-3) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
 - (PCISSF-2023) [PCI Software Security Framework](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), published May 2023.
 - (CDXAG-2024) [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf), Second edition, Appendix A, published April 2024.
-- (EUBG-2022-3)  [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)#page=34), Chapter 3 (pages 34-46), published 2022-06-29.
-
+- (CISA-2024-9) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](), Sections 2.2.1.4, 2.2.2, and Appendix B, Published 2024-09-03
+    - FIXME: Replace after publishing: [draft document](https://docs.google.com/document/d/1z8hKtPxs5OWaspst120NHN9XXgyULGl2aKdSebwIYPc/edit)
+- (EUBG-2022-3) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)#page=34), Chapter 3 (pages 34-46), published 2022-06-29.
+- (NIXOS-2024) [Nix concepts](https://zero-to-nix.com/concepts), as of 2024-08-15
 
 ## About this document
 
-* Version: 0.6.1
+* Version: 0.7.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

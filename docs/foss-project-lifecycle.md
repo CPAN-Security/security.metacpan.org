@@ -21,22 +21,24 @@ mermaid: true
 
 States in **bold** already exist on CPAN.
 
-| State        | Maint = 0 | Maint = 1 | Maint >= 1 | Maint needs increase | Maint is declining | Response time | Submitter  |
-| ------------ | --------- | --------- | ---------- | -------------------- | ------------------ | ------------- | ---------- |
-| **NEEDHELP** | no        | YES       | YES        | YES                  | no                 | LOW           | Maintainer |
-| **HANDOFF**  | no        | YES       | no         | YES                  | YES                | LOW           | Maintainer |
-| **ADOPTME**  | YES       | no        | no         | YES                  | no                 | NONE          | Ecosystem  |
-| CUSTODY      | YES       | no        | no         | YES                  | no                 | LOW           | Ecosystem  |
-| ACTIVE       | no        | YES       | YES        | no                   | no                 | OK            | Maintainer |
-| DONE         | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
-| UNMAINTAINED | no        | YES       | YES        | no                   | no                 | NONE          | Maintainer |
-| CASUAL       | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
-| NEEDFUNDING  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
-| NEEDSUPPORT  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer |
-| **NOXFER**   | no        | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
-| COMPROMISED  | YES       | YES       | YES        | no                   | no                 |               | Ecosystem  |
-| DISCOURAGED  | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
-| DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem  |
+| State        | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Submitter  |
+| ------------ | --------- | --------- | --------- | -------------------- | ------------------ | ------------- | ---------- |
+| **NEEDHELP** | no        | YES       | YES       | YES                  | no                 | LOW           | Maintainer |
+| **HANDOFF**  | no        | YES       | no        | YES                  | YES                | LOW           | Maintainer |
+| **ADOPTME**  | YES       | no        | no        | YES                  | no                 | NONE          | Ecosystem  |
+| CUSTODY      | YES       | no        | no        | YES                  | no                 | EMERG         | Ecosystem  |
+| ACTIVE       | no        | YES       | YES       | no                   | no                 | OK            | Maintainer |
+| DONE         | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer |
+| UNMAINTAINED | no        | YES       | YES       | no                   | no                 | NONE          | Maintainer |
+| CASUAL       | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer |
+| NEEDFUNDING  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer |
+| NEEDSUPPORT  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer |
+| **NOXFER**   | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem  |
+| COMPROMISED  | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem  |
+| DISCOURAGED  | YES       | YES       | YES       | no                   | no                 | LOW           | Maintainer |
+| DELISTED     | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem  |
+
+
 
 
 ### State indicators
@@ -193,5 +195,5 @@ Several people have been involved in the development of this document
 * (MSFTOSS-2024) [5 things we learned from sponsoring a sampling of our open source dependencies](https://opensource.microsoft.com/blog/2024/06/27/5-things-we-learned-from-sponsoring-a-sampling-of-our-open-source-dependencies/), Published 2024-06-27.
 * (NEILB-2016) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html), Published 2016-02-13.
 * (PAUSE-2017) [The PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) Version 2 (section 4.5), published 2017-10-27.
-* (UNMAINTED-2016) [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/), Published 2016-01-13.
-* (CASUAL-2023) [![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg)](https://casuallymaintained.tech/), Published 2023-09-25.
+* (UNMAINTED-2016) ![No Maintenance Intended](http://unmaintained.tech/badge.svg) [unmaintained.tech](http://unmaintained.tech/), Published 2016-01-13.
+* (CASUAL-2023) ![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg) [casuallymaintained|tech](https://casuallymaintained.tech/), Published 2023-09-25.

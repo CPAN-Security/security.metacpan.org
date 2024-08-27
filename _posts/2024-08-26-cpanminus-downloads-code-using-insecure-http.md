@@ -65,7 +65,7 @@ $ perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|f
 
 ### Option 3:  Use an alternative client
 
-- [CPAN.pm](https://metacpan.org/dist/CPAN) (`cpan`) will use HTTPS sources if TLS support is available  
+- [CPAN.pm](https://metacpan.org/dist/CPAN) (`cpan`) 2.35 or later will use HTTPS with certificate verification if TLS support is available  
 - [App::cpm](https://metacpan.org/pod/App::cpm) (`cpm`) uses HTTPS sources by default
 
 ## Links
@@ -76,4 +76,4 @@ $ perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|f
 - [Perl/docker-perl#167: generate: hotpatch bin/cpanm to use HTTPS endpoints](https://github.com/Perl/docker-perl/pull/167)
 
 ## Changes
-- 2024-08-27: Add reference to CVE-2024-45321, add excerpt, fix typos
+- 2024-08-27: Add reference to CVE-2024-45321, add excerpt, fix typos, add note about CPAN.pm version

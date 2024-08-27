@@ -31,23 +31,24 @@ one of the following options.
 ### Option 1: Set a HTTPS mirror
 
 The easiest way is to configure cpanminus to use a HTTPS mirror using the
-`--from` option.
-
-> Setting the `--from` option disables support for downloading old
-> releases from BackPan and development (TRIAL) releases.
-
-This can be configured as a CLI option:
+`--from` command-line argument. This can be configured as a CLI option,
+replacing DISTNAME in the command below with the name of the distribution
+you want to install:
 
 ```sh
-$ cpanm --from https://www.cpan.org Mojolicious
+$ cpanm --from https://www.cpan.org DISTNAME
 ```
 
-Or set in the `PERL_CPANM_OPT` environment variable:
+Alternatively, you can set the `--from` option via the `PERL_CPANM_OPT`
+environment variable:
 
 ```
 $ export PERL_CPANM_OPT="--from https://www.cpan.org"
 ```
+And use cpanm as you normally would.
 
+> Please note that setting a `--from` option will disable support for
+> downloading old releases from BackPan and development (TRIAL) releases.
 
 ### Option 2: Patch the cpanm executable
 
@@ -76,4 +77,5 @@ $ perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|f
 - [Perl/docker-perl#167: generate: hotpatch bin/cpanm to use HTTPS endpoints](https://github.com/Perl/docker-perl/pull/167)
 
 ## Changes
-- 2024-08-27: Add reference to CVE-2024-45321, add excerpt, fix typos, add note about CPAN.pm version
+- 2024-08-27: Add reference to CVE-2024-45321, add excerpt, fix typos, add note about CPAN.pm version.
+- 2024-08-27: Minor rewording for the `--from` cpanm option explanation.

@@ -469,8 +469,12 @@ toc: true
 ### Placing on the market
 
 > 1. (CRA-2024-03) The first making available of a product with digital elements on the Union market.
+> 1. (EUBG-2022) A product is placed on the market when it is made available for the first time on the Union market.
+>     * According to Union harmonisation legislation, each individual product can only be placed once on the Union market.
+>     * Products made available on the market must comply with the applicable Union harmonisation legislation at the moment of placing on the market.
 >
-> (Ref: [CRA-2024-03](#references-and-terms))
+>
+> (Ref: [CRA-2024-03](#references-and-terms), EUBG-2022)
 
 
 ### Point of origin ⚠️  ✍️

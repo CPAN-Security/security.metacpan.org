@@ -41,3 +41,8 @@
 
 * What are the concrete demands for metadata required for liable parties to actually live up to the obligations set by the CRA?
     * To which extent these metadata have to be up-to-date and authoritative (e.g. if a component author changes it's license, what happens?)
+
+## Attestation
+
+* How are the OSS Steward Attestation Programmes intended to work?
+    * 

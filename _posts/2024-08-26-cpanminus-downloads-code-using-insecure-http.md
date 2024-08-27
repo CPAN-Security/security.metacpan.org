@@ -2,18 +2,18 @@
 layout: post
 published: True
 toc: true
-title: App::cpanminus through 1.7047 downloads code using insecure HTTP
+title: "App::cpanminus through 1.7047 downloads code using insecure HTTP"
 date: 2024-08-26 00:00:00 +0000
 tags: cve
 author: Stig Palmquist
-excerpt: 
+excerpt: "CVE-2024-45321: In its default configuration cpanminus uses insecure HTTP to download and install code from CPAN. This results in a CWE-494 weakness, enabling code execution for network attackers."
 ---
 
 [App::cpanminus](https://metacpan.org/pod/App::cpanminus) (`cpanm`) is a popular
 and lighweight alternative to the official CPAN client for downloading and
 installing Perl modules from CPAN.
 
-## Vulnerability
+## CVE-2024-45321
 
 In its default configuration cpanminus uses insecure HTTP to download and
 install code from CPAN.
@@ -25,7 +25,7 @@ weakness, enabling code execution for network attackers.
 
 ## Mitigations
 
-There is currently no patch available upstream yet. Users are can mitigate with
+There is currently no patch available upstream yet. Users can mitigate with
 one of the following options.
 
 ### Option 1: Set a HTTPS mirror
@@ -70,6 +70,10 @@ $ perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|f
 
 ## Links
 
+- [NVD - CVE-2024-45321](https://nvd.nist.gov/vuln/detail/CVE-2024-45321)
 - [miyagawa/cpanminus#611: Securing Perl: cpanm HTTPS + verify_SSL + verify signatures?](https://github.com/miyagawa/cpanminus/issues/611)
 - [miyagawa/cpanminus#674: make cpanm secure by default](https://github.com/miyagawa/cpanminus/pull/674)
 - [Perl/docker-perl#167: generate: hotpatch bin/cpanm to use HTTPS endpoints](https://github.com/Perl/docker-perl/pull/167)
+
+## Changes
+- 2024-08-27: Add reference to CVE-2024-45321, add excerpt, fix typos

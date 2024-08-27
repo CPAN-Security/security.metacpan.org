@@ -79,15 +79,20 @@ Manufacturers must provide a Software Bill of Materials (SBOM) upon request by a
 
 ### Importers
 
-Importers shall place on the market only products with digital elements that comply with the essential requirements set out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297), and where the processes put in place by the manufacturer comply with the essential requirements set out in [Annex I, Part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300), as required in [Article 19(1))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=197)
-
+Importers shall place on the market only products with digital elements that comply with the essential requirements set out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297), and where the processes put in place by the manufacturer comply with the essential requirements set out in [Annex I, Part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300) – as laid out in [Article 19(1))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=197)
 
 
 ### Distributors
 
+When making a product with digital elements available on the market, distributors shall act with due care in relation to the requirements set out in this Regulation.
+
+Before making a product with digital elements available on the market, distributors shall verify that:
+
+* (a) the product with digital elements bears the CE marking;
+* (b) the manufacturer and the importer have complied with the obligations set out in [Article 13(15), (16), (18), (19) and (20)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=169) and [Article 19(4)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=199), and have provided all necessary documents to the distributor.
 
 
-### Open Source Stewards
+### Open Source Stewards ⚠️  FIXME: Not done
 
 Open Source Stewards are obliged to
 
@@ -110,7 +115,9 @@ FOSS Software may get a voluntary security attestation, as described in [Article
 
 * "Commission shall publish guidance to assist economic operators in applying this Regulation"
   * 
-* 
+* Who gives out attestations?
+  * Under what terms?
+  * Can these attestations be used as a "value add" to existing components in such a way that may be sold by Stewards to fund it's work and it's community.
 
 ## An idealized Open Source Steward Supply-Chain graph
 
@@ -133,9 +140,7 @@ stateDiagram-v2
     ecosystem_repo           --> environment_contributor
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
-    ecosystem_repo           --> environment_manufacturer
-    environment_maintainer   --> ecosystem_repo
-    environment_maintainer   --> ecosystem_lang
+
     environment_contributor  --> ecosystem_repo
     ecosystem_lang           --> ecosystem_lang
     ecosystem_lang           --> ecosystem_package

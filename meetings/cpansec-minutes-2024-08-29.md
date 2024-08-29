@@ -17,7 +17,7 @@
     *  @book, @leont
 
 ### Approve previous meeting minutes
-*   Previous meeting minutes was approved by @stigtsp, …
+*   Previous meeting minutes was approved by @tux, @timlegge, @stigtsp
 
 ### Quick summary of current work
 *   @tux - released DBI. CVE updates might be needed upstream
@@ -55,7 +55,7 @@
 
 ### Eclipse ORC WG
 *   @sjn - Formal start soon; FAQ gathering started
-*   @sjn - meeting w/EU Commision next week
+*   @sjn - meeting w/EU Commission next week
 
 ### CycloneDX 1.7 Sustainability fields
 *   @sjn - CycloneDX Sustainability WG first meeting started. 

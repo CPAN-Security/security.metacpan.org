@@ -720,6 +720,9 @@ This role is necessary when...
 | 🟨  | Unique Product ID (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if attribute is replaced or added |
 | 🟨  | Project Sustainability            | No       |                         | CycloneDX 1.7 proposed | |
 
+* Examples
+    * In Debian, there is a concept of "Non-Maintainer Uploads", where contributors are allowed to do one-time uploads to fix bugs under certain conditions and following some guidelines. (Source: [Debian developers reference](https://www.debian.org/doc/manuals/developers-reference/pkgs.en.html#non-maintainer-uploads-nmus), [perl5-porters message on NMUs](https://www.nntp.perl.org/group/perl.perl5.porters/2024/08/msg268757.html))
+
 
 ### Builder
 

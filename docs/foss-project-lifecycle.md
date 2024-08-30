@@ -153,6 +153,7 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
     * Technology/platform
     * Specialized skills
 1. User Interface, User Experience, and Accessibility (Ref: [CHAOSS-2020](#references))
+1. Accessibility audit
 
 
 ## Other project states, claims and metadata

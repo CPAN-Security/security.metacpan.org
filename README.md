@@ -10,7 +10,7 @@ Over time, we aim to improve supply chain security, make CPAN a more secure and 
 ## Learn more & Contribute
 
 On CPAN, improving security is a volunteer-driven collaborative effort.
-If you care and would like to make a contribution, you can…
+If you care and would like to make a contribution or join, you are welcome to do so!
 
 * Explore [our main website](https://security.metacpan.org/)
 * Check us out on [Github](https://github.com/CPAN-Security) :octocat:

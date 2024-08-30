@@ -303,6 +303,13 @@ toc: true
 > * See also
 >     * [Dependency (Static)](#dependency-static)
 
+#### Dependency (Virtual)
+
+> [!NOTE]
+> * (CPANSec) A dependency that is present, but cannot be represented by an actual software package.
+>     * e.g. The OS kernel and base file-system and services that have to be in place before the first regular package may be installed.
+> * FIXME: Expand on this topic
+
 
 ### Distributor ⚠️
 

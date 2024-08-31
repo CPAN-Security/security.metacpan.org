@@ -41,3 +41,13 @@
 
 * What are the concrete demands for metadata required for liable parties to actually live up to the obligations set by the CRA?
     * To which extent these metadata have to be up-to-date and authoritative (e.g. if a component author changes it's license, what happens?)
+
+## Manufacturer? 
+
+* Does receiving anything but donations make an actor into a Manufacturer
+* Does earning money on publishing an open source component automatically a Manufacturer
+
+# (wishlist)
+
+* funding is needed
+

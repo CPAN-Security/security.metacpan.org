@@ -8,6 +8,8 @@ mermaid: true
 
 ## Document status: ⚠️  DRAFT
 
+
+
 > [!CAUTION]
 > What you see here is a DRAFT of the Supply-chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
@@ -21,6 +23,7 @@ mermaid: true
 >
 > * The CPANSec [glossary](glossary.md)
 > * The CPANSec [reading list](readinglist.md)
+> * A proposed overview of [project life-cycle statuses and needs](foss-project-lifecycle.md)
 >
 > Please refer to them as needed.
 
@@ -84,6 +87,11 @@ This document offers **an overview of [Open Source Software](glossary.md#open-so
     1. Get an idea where an Attribute is likely to come from, and which Roles care about these
     1. Become aware of both upstream and downstream Communities, Ecosystems and Environments are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
     1. Use this information to both live up to their new Regulatory Obligations and to help improve their Security Posture in general
+
+
+## This document is **visionary** and a **proposal**
+
+Some aspects of this document – specifically those related to the role of Open Source Stewards and the role of OSS Attestations – are presented as **suggestions, proposals or visions of a possible future**.
 
 
 ## Motivation

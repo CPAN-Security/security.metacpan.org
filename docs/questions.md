@@ -19,8 +19,8 @@
     * "I, the author, am conforming to EU law, including the CRA" (Assumption: YES, 85%)
     * Which EU laws is one expected to conform to, when applying a CE mark?
         * CRA (Assumption: YES, 99%)
-        * NIS2 (Assumption: YES, 90%)
-        * Fintech-specific laws (Assumption: YES, 40%)
+        * NIS2 (Assumption: YES, 60%)
+        * Fintech-specific laws (Assumption: YES, 60%)
         * ...
 * What does the CE mark apply to?
     * A specific product with digital components, that is put on the EU market (Assumption: YES, 99%)
@@ -42,10 +42,13 @@
 * What are the concrete demands for metadata required for liable parties to actually live up to the obligations set by the CRA?
     * To which extent these metadata have to be up-to-date and authoritative (e.g. if a component author changes it's license, what happens?)
 
-## Manufacturer? 
+## Manufacturer?
 
-* Does receiving anything but donations make an actor into a Manufacturer
-* Does earning money on publishing an open source component automatically a Manufacturer
+* Does receiving money that isn't in the form of donations turn an OSS Maintainer into a Manufacturer?
+* Does earning money on publishing an open source component into an OSS ecosystem automatically make one a Manufacturer?
+* Under what circumstances can a Steward become a Manufacturer?
+* What role or purpose will the attestation regime described in Recital 21 have?
+* 
 
 # (wishlist)
 

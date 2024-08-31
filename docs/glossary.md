@@ -16,6 +16,13 @@ toc: true
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
+### This document is **visionary** and a **proposal**
+
+Some aspects of this document – including those related to the role of Open Source Stewards, the Cyber Resilience Act and CE Marking – are presented as **suggestions, proposals or visions of a possible future**.
+
+Please take this into account when commenting this document.
+
+
 ### Legend
 
 > [!NOTE]

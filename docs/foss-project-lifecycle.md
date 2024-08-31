@@ -9,7 +9,7 @@ mermaid: true
 ## Document status: ⚠️  DRAFT
 
 > [!CAUTION]
-> What you see here is a DRAFT of an Open Source project life-cycle conditions overview, by the CPAN Security Group (CPANSec).
+> What you see here is a DRAFT of an overview of Open Source project life-cycle conditions and needs, created by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/lifecycle/docs/foss-project-lifecycle.md](https://github.com/CPAN-Security/security.metacpan.org/tree/lifecycle/docs/foss-project-lifecycle.md)
@@ -35,10 +35,7 @@ States in **bold** already exist on CPAN.
 | NEEDSUPPORT  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer |
 | **NOXFER**   | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem  |
 | COMPROMISED  | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem  |
-| DISCOURAGED  | YES       | YES       | YES       | no                   | no                 | LOW           | Maintainer |
 | DELISTED     | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem  |
-
-
 
 
 ### State indicators
@@ -86,14 +83,13 @@ States in **bold** already exist on CPAN.
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
 1. COMPROMISED
-    *  
-1. DISCOURAGED
-    *  
+    * Project has removed from the index due to security issues
 1. DELISTED
     * Removed from the ecosystem index for some reason
 1. DUAL
     * Equivalent to the P5P special user on CPAN (Ref: [PAUSE-2017](#references))
     * Used to specify modules that are both published as part of the core language, and through a language ecosystem
+
 
 ### List of Support Types
 
@@ -159,21 +155,19 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 ## Other project states, claims and metadata
 
 1. Intended for commercial use (EU CRA signal for OSS Stewards)
-1. Registered OSS Steward
 
 
 ### For consideration
 
-1. FORK – This project claims to be an API-compatible fork of another project
-1. CE_DECLARATION – A URL, linking to declaration of conformance to the EU Cyber Resilience Act, as required in CRA Annex II, point 6; and Chapter III, Article 28; and in Chapter II Article 13(20).
-1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (CRA Annex II, point 8)
+1. CE_DECLARATION – A URL, linking to declaration of conformance to the EU Cyber Resilience Act, as required in Annex II, point 6; and Chapter III, Article 28; and in Chapter II Article 13(20).
+1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (Annex II, point 8)
 1. CE_CONFORMITY_BODY – A URL pointing to the Conformity Assessment Body where this component has been registered (CRA Article 22(4) and Article 58(1))
 1. CE_SUPPORT_END_DATE – The date for when the support for the component expires (Annex II, point 7)
 
 
 ## License and use of this document
 
-* Version: 0.1.0
+* Version: 0.1.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

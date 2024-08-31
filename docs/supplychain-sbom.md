@@ -8,6 +8,8 @@ mermaid: true
 
 ## Document status: ⚠️  DRAFT
 
+
+
 > [!CAUTION]
 > What you see here is a DRAFT of the Supply-chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
@@ -15,6 +17,15 @@ mermaid: true
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/supplychain-sbom.md](https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/supplychain-sbom.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
+
+> [!NOTE]
+> This document has two companion documents:
+>
+> * The CPANSec [glossary](glossary.md)
+> * The CPANSec [reading list](readinglist.md)
+> * A proposed overview of [project life-cycle statuses and needs](foss-project-lifecycle.md)
+>
+> Please refer to them as needed.
 
 
 ## Open Source Supply-chain (Simplified diagram, pre-CRA)
@@ -28,7 +39,6 @@ stateDiagram-v2
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
-    %%state "🟩 Delivery Network" as network_distributor
     state "🟥🟨 Integrator" as environment_integrator
     state "🟦 Production" as environment_prod
 
@@ -40,17 +50,12 @@ stateDiagram-v2
     environment_maintainer   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
     ecosystem_lang           --> ecosystem_lang
-    %%environment_maintainer   --> network_distributor
-    %%ecosystem_lang           --> network_distributor
-    %%ecosystem_package        --> network_distributor
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
     ecosystem_package        --> ecosystem_package
     ecosystem_repo           --> environment_integrator
     ecosystem_lang           --> environment_integrator
-    %%network_distributor      --> environment_integrator
     ecosystem_package        --> environment_integrator
-    %%network_distributor      --> environment_manufacturer
     environment_integrator   --> environment_prod
     environment_prod         --> [*]
 
@@ -59,28 +64,34 @@ stateDiagram-v2
 ```
 
 
-## TL;DR
+## About this document (TL;DR)
 
-This document offers an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains.
+This document offers **an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains**.
 
-* Take into account the following perspectives:
+* Taking into account the following perspectives:
     1. Environments and Ecosystems,
-    1. Roles, and
-    1. Metadata
-* …Enumerating the Metadata Attributes these Roles typically care about.
+    1. Roles,
+    1. Metadata, and
+    1. Industry [Terms and Concepts](glossary.md)
+* …Enumerating and describing the Metadata Attributes these Roles typically care about.
 * …Noting the ways each Role may Operate on any given Metadata Attribute,
     * 🟥 Create (authoritative),
     * 🟨 Assemble or Update (non-authoritative),
     * 🟩 Distribute,
     * 🟦 Verify, or
     * 🟪 Censor
-* …Showing any relevant regulation or other requirements that expect the presence of specific Metadata Attributes.
-* …So that the different Roles within the Supply-chain can:
+* …Showing any relevant regulation or other requirements that impose expectations of the presence of specific Metadata Attributes.
+* …So that people having a Role within the Supply-chain can:
     1. Draw an overarching map of what other Roles may Operate within their Supply-chain
-    1. Form a idea of what purpose each Role in the Supply-chain may have
-    1. Get an idea where a specific Attribute is likely to come from, and which Roles care about these
-    1. Become aware of what upstream communities are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
-    1. Use this information to both live up to their new regulatory obligations and to help improve their security posture in general
+    1. Form a idea of what purpose each Role may have, and find out where they fit
+    1. Get an idea where an Attribute is likely to come from, and which Roles care about these
+    1. Become aware of both upstream and downstream Communities, Ecosystems and Environments are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
+    1. Use this information to both live up to their new Regulatory Obligations and to help improve their Security Posture in general
+
+
+## This document is **visionary** and a **proposal**
+
+Some aspects of this document – specifically those related to the role of Open Source Stewards and the role of OSS Attestations – are presented as **suggestions, proposals or visions of a possible future**.
 
 
 ## Motivation
@@ -90,9 +101,9 @@ Originally, this document stems from the main author's frustration with the lack
 Furthermore, this document is also an attempt to explore and map out the consequences that the EU Cyber Resilience Act (CRA) is likely have for Open Source Ecosystems.
 The CRA is the first regulation that has language that explicitly affects Open Source ecosystems.
 This law introduces a new entity – the Open Source Software Steward – with obligations to them (and other Roles) to improve the state of Cybersecurity throughout Open Source Supply-chains.
-This has shown us that there's a need to map out what Open Source Supply-chains actually look like, and spell out what Roles can be found throughout it, and more.
+This shown us that there's a need to map out what Open Source Supply-chains actually look like, and spell out what Roles can be found throughout it, and more.
 This document therefore also represents the author's exploration of this topic, and could be considered as "public notes" on the matter.
-Still, the author hopes this document can be useful for others than himself and the CPAN Security Group!
+Still, the author hopes this document also can be useful for others than himself and the CPAN Security Group.
 
 Please take this document as it is – a public set of notes, intended as a source for illumination and as an ongoing conversation – taking incremental steps toward more transparent and accountable Open Source supply-chains.
 
@@ -126,10 +137,8 @@ stateDiagram-v2
     state "🟨🟩 Package Ecosystem" as ecosystem_package
     state "🟥 Attestation Authority 🆕" as authority_attestation
     state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
-    %%state "🟩 Delivery Network" as network_distributor
     state "🟥🟨🟦🟪 Manufacturer (Integrator) 🆕" as environment_manufacturer
-    state "🟦 Production" as environment_prod
-    state "🟦 Auditor 🆕" as authority_auditor
+    state "🟦 Auditor 🆕\n🟦 Importer 🆕\n🟦 Distributor 🆕" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
@@ -141,19 +150,13 @@ stateDiagram-v2
     environment_maintainer   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
     ecosystem_lang           --> ecosystem_lang
-    %%environment_maintainer   --> network_distributor
-    %%ecosystem_lang           --> network_distributor
-    %%ecosystem_package        --> network_distributor
     ecosystem_lang           --> ecosystem_package
     ecosystem_package        --> ecosystem_package
     ecosystem_package        --> ecosystem_steward
     ecosystem_lang           --> ecosystem_steward
     authority_attestation    --> ecosystem_steward
-    %%network_distributor      --> environment_manufacturer
     ecosystem_package        --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
-    environment_manufacturer --> environment_prod
-    environment_prod         --> authority_auditor
     environment_manufacturer --> authority_auditor
     authority_auditor        --> [*]
 
@@ -163,12 +166,20 @@ stateDiagram-v2
 
 ### Legend of Metadata Operations
 
-In this document we color-code the different _metadata operations_ in order to quickly see what activities a Supply-chain Role may be involved in.
+In the graphs presented above and below, we color-code the different _metadata operations_ in order to quickly show what activities a Supply-chain Role may be involved in.
+
 We're also assuming that Metadata is stored in SBOMs, but this need not be the case.
-Some of the information here is based on CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)) and other public documents.
+To distinguish between Metadata roles and Supply-chain roles, we have decided to refer to the former as "SBOM Roles".
+This convention is also commonly used (or implied) in the referenced material.
+This may change in later revisions of this document.
+
+Some of the information here is based on CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)) and other public documents, [referenced](#references) below.
+
 We also distinguish between SBOM Authors that are _Authoritative_ sources for Attributes and _Non-authoritative_ sources, in addition SBOM Distributors and Consumers.
 The Authoritative/Non-authoritative distinction is important so everyone is clear about where a given Metadata Attribute originally comes from.
-And finally, we acknowledge that some situations may call for an SBOM Censor.
+This distinction is _not commonly used_ in the referenced material.
+
+And finally, we acknowledge that some situations may call for an SBOM Censor, which is the time of writing is _not a commonly used term_ in the referenced material.
 
 * 🟥 SBOM Author (Authoritative) – **Creates**, defines, signs Metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
 * 🟨 SBOM Author (Non-authoritative) – **Assembles**, **updates**, refines, maintains, attests, annotates Metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
@@ -191,7 +202,6 @@ stateDiagram-v2
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %%
-    %%state "🟦 Importer" as maintainer_importer
     state "🟥 Owner (Supplier)" as maintainer_owner
     state "🟥🟨 Maintainer, Author\n🟨 Custodian" as maintainer_author
     state "🟨🟦 Packager" as language_packager
@@ -201,29 +211,23 @@ stateDiagram-v2
 
     %%
     state "🟦 Authenticator" as language_authenticator
-    %%state "🟦 Importer" as language_importer
     state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
-    state "🟩 Distributor" as language_distributor
+    state "🟩 Provider" as language_distributor
 
     %%
     state "🟩 Depositary" as repository_distributor
     state "🟨 Contributor" as external_contributor
 
     %%
-    %%state "🟩 Delivery Network" as network_distributor
-
-    %%
     state "🟦 Authenticator" as package_authenticator
-    %%state "🟦 Importer" as package_importer
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
     state "🟥🟨🟦 Open Source Software Steward 🆕" as package_steward
     state "🟨 Curator" as package_curator
-    state "🟩 Distributor" as package_distributor
+    state "🟩 Provider" as package_distributor
 
     %%
-    %%state "🟦 Importer" as integrator_importer
     state "🟥 Manufacturer (Supplier) 🆕" as integrator_owner
     state "🟥🟨🟦 Integrator, Developer" as integrator_developer
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as integrator_builder
@@ -234,7 +238,7 @@ stateDiagram-v2
     %%
     state "🟨 Deployer" as prod_deployer
     state "🟦 End-user, Consumer" as external_consumer
-    state "🟦 Auditor 🆕" as authority_auditor
+    state "🟦 Auditor 🆕\n🟦 Importer 🆕\n🟦 Distributor 🆕" as authority_auditor
 
     %%
     classDef createsSBOM stroke:red,stroke-width:3px;
@@ -246,7 +250,6 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %%
-    %%class maintainer_importer verifiesSBOM
     class maintainer_owner createsSBOM
     class maintainer_author createsSBOM
 
@@ -255,7 +258,6 @@ stateDiagram-v2
     class external_contributor ignoresSBOM
 
     %%
-    %%class language_importer verifiesSBOM
     class language_authenticator updatesSBOM
     class language_packager assemblesSBOM
     class language_steward createsSBOM
@@ -263,9 +265,6 @@ stateDiagram-v2
     class language_distributor distributesSBOM
 
     %%
-    %%class network_distributor ignoresSBOM
-
-    %%class package_importer verifiesSBOM
     class package_authenticator updatesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
@@ -274,7 +273,6 @@ stateDiagram-v2
     class package_distributor distributesSBOM
 
     %%
-    %%class integrator_importer verifiesSBOM
     class integrator_owner createsSBOM
     class integrator_developer assemblesSBOM
     class integrator_censor updatesSBOM
@@ -290,12 +288,9 @@ stateDiagram-v2
     class authority_attester createsSBOM
     class authority_auditor verifiesSBOM
 
-
     %%
     state "Maintainer Environment" as environment_maintainer {
         [*] --> maintainer_author
-        %%[*] --> maintainer_importer
-        %%maintainer_importer   --> maintainer_author
         maintainer_owner      --> maintainer_author
         maintainer_author --> language_packager
     }
@@ -305,12 +300,9 @@ stateDiagram-v2
     %%
     state "Language Ecosystem" as ecosystem_lang {
         [*] --> language_authenticator
-        %%[*] --> language_importer
         language_authenticator --> language_distributor
         language_authenticator --> language_steward
         language_authenticator --> language_curator
-        %%language_importer --> language_distributor
-        %%language_importer --> language_curator
         language_curator --> language_distributor
         language_steward --> language_distributor
         language_steward --> language_curator
@@ -319,6 +311,7 @@ stateDiagram-v2
     language_packager --> ecosystem_lang
     ecosystem_lang    --> ecosystem_lang
 
+    %%
     state "Collaboration Ecosystem" as ecosystem_repo {
         [*] --> repository_distributor
     }
@@ -326,19 +319,13 @@ stateDiagram-v2
     ecosystem_repo    --> maintainer_author
     maintainer_author --> ecosystem_repo
 
-    %%maintainer_author    --> network_distributor
-    %%language_distributor --> network_distributor
-    %%network_distributor  --> environment_integrator
-
     external_contributor   --> repository_distributor
     repository_distributor --> external_contributor
 
+    %%
     state "Package Ecosystem" as ecosystem_package {
         [*] --> package_authenticator
-        %%[*] --> package_importer
         package_authenticator --> package_patcher
-        %%package_importer      --> package_patcher
-        %%package_importer      --> package_packager
         package_authenticator --> package_packager
         package_patcher       --> package_packager
         package_packager      --> package_curator
@@ -353,15 +340,13 @@ stateDiagram-v2
     language_distributor   --> ecosystem_package
     ecosystem_package      --> ecosystem_package
 
-
     authority_attester --> language_steward
     authority_attester --> package_steward
 
+    %%
     state "Integrator Environment" as environment_integrator {
-        %%[*] --> integrator_importer
         [*] --> integrator_developer
         integrator_owner     --> integrator_developer
-        %%integrator_importer  --> integrator_developer
         integrator_builder   --> integrator_censor
         integrator_builder   --> integrator_publisher
         integrator_builder   --> integrator_analyst
@@ -373,6 +358,7 @@ stateDiagram-v2
     language_distributor   --> environment_integrator
     package_distributor    --> environment_integrator
 
+    %%
     state "Production Environment" as environment_prod {
         [*] --> prod_deployer
     }
@@ -383,7 +369,6 @@ stateDiagram-v2
     integrator_publisher --> authority_auditor
     integrator_publisher --> environment_prod
     integrator_censor    --> external_consumer
-    %%external_consumer    --> [*]
     authority_auditor    --> [*]
 
     %%
@@ -431,7 +416,9 @@ A website or tool ("Forge") that offers a public collaboration repository to Aut
 
 ### Language Ecosystem
 
-A language ecosystem hosts, indexes and distributes components specific for a programming language
+A language ecosystem hosts, indexes and distributes components specific for a programming language.
+Used for publishing Open Source components for use when writing software in the given programming language.
+Typically, the Ecosystem has dedicated services and tooling for interacting with it.
 
 * Examples: CPAN (Perl), PyPI (Python), NPM (Node/JS)
 * May have upstream language ecosystems
@@ -462,12 +449,17 @@ A business or institution that is responsible for developing and building the ap
 * May publish [Open Source Software](glossary.md#open-source-software)
 * Has a project development life-cycle
 
+* See also:
+    * [Manufacturer Environment](#manufacturer-environment)
+
 #### Manufacturer Environment
 
-> [!CAUTION]
+> [!NOTE]
 > * FIXME - Much more to add!
 >   * e.g. from https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
 >   * Check also out the work coming out of the Eclipse ORC Working Group
+>   * Cover the CE mark requirements, the roles of downstream Importers and Distributors in verifying these,
+>   * Cover the roles of upstream Roles in attesting the security of the components they use
 
 * Used specifically in the context of the EU Cyber Resilience Act, to mean a commercial entity that places a product with digital elements on the EU market.
 * Is expected to produce a complete SBOM document describing their application, including all dependencies.
@@ -478,8 +470,8 @@ A business or institution that is responsible for developing and building the ap
 
 ### Production Environment
 
-> [!CAUTION]
-> * FIXME: Add examples of physical products
+> [!NOTE]
+> * FIXME – Add examples of physical products
 
 The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
 
@@ -523,8 +515,8 @@ These are common across all roles, and considered to be _baseline_ because they 
 
 ### Supplier
 
-Is a role used throughout the Supply-chain within an [Integrator Environment](#integrator-environment).
-The term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
+The Supplier is a role used throughout the Supply-chain, but most often represents a Role within a [Maintainer](#maintainer-environment) or an [Integrator](#integrator-environment) Environment.
+This term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
 
 * See also
   * [Supplier](glossary.md#supplier) in the glossary.
@@ -532,6 +524,8 @@ The term is used within the NTIA "SBOM Minimum Elements" document as the legal s
   * [Maintainer](#maintainer),
   * [Custodian](#custodian),
   * [Manufacturer](#manufacturer),
+  * [Maintainer Environment](#maintainer-environment),
+  * [Integrator Environment](#integrator-environment),
   * [Open Source Software Steward](#open-source-software-steward),
 
 #### Owner
@@ -583,7 +577,7 @@ When doing business within the European Economic Area (EEA), has the duty to ens
 An author or developer of an Open Source component project.
 
 * Operates within an [Maintainer Environment](#maintainer-environment).
-* The initial and/or main creator of the component in question.
+* Is usually the initial and/or main creator of the component in question.
 * Typically works on all aspects of the code, including features, bug fixes, tests and security issues.
 * Has the final say on the original contents of the package, and it's name-spaces.
 * The Maintainer _can_ be a group of people (having co-maintainers), though a single point of responsibility is common.
@@ -661,10 +655,12 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 
 ### Importer (CRA)
 
-> [!NOTE]
-> * Proposed role, though it's unclear if it is relevant for this document. (CPANSec-2024)
+> [!CAUTION]
+> * Not directly part of an Open Source Supply-chain, but can be found downstream of Manufacturers that use these.
+> * FIXME – Not done
 
-* May operate in any ecosystem or environment.
+* A role specific for the EU Cyber Resilience Act.
+* Operate downstream of Manufacturers.
 * A role specifically used when a EU entity makes available software on the EU market,
 * Is required to verify that the imported software is compliant with the EU Cyber Resilience Act (CRA) according to it's Article 19.
 
@@ -682,11 +678,15 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 
 * See also
    * [Importer](glossary.md#importer) in the glossary.
+   * [Distributor](glossary.md#distributor) in the glossary.
+
 
 ### Authenticator
 
 > [!NOTE]
-> * Authenticators ensure that only authorized Maintainers are allowed to publish their components to a Language or Package Ecosystem.
+> * FIXME – Not done
+
+Authenticators ensure that only authorized Maintainers are allowed to publish their components to a Language or Package Ecosystem.
 
 * Examples
     * (CPAN) Upload to the PAUSE web interface at `https://pause.perl.org`
@@ -699,7 +699,7 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 > [!NOTE]
 > * Patchers (a role that often is held by the same person as the Packager), may select and apply patches before building.
 > * These patches may include back-ports of features, security fixes or other accommodations necessary for distributing multiple releases of the same upstream project, but within publishing constraints decided by the Curator of the Ecosystem (e.g. LTS releases, support contracts, etc.).
-> * A Patcher can both be found in-house (e.g. a business who uses a company-internal package mirror), working for a Package Ecosystem provider (e.g. applying backports of fixes in Debian packages), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
+> * A Patcher can both be found in-house (e.g. a business who uses a company-internal package mirror), preparing for a Package Ecosystem provider (e.g. applying backports of fixes in Debian packages), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
 > [!CAUTION]
 > * FIXME – Not done
@@ -728,6 +728,9 @@ This role is necessary when...
 | 🟨  | Unique Product ID (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if attribute is replaced or added |
 | 🟨  | Project Sustainability            | No       |                         | CycloneDX 1.7 proposed | |
 
+* Examples
+    * In Debian, there is a concept of "Non-Maintainer Uploads", where contributors are allowed to do one-time uploads to fix bugs under certain conditions and following some guidelines. (Source: [Debian developers reference](https://www.debian.org/doc/manuals/developers-reference/pkgs.en.html#non-maintainer-uploads-nmus), [perl5-porters message on NMUs](https://www.nntp.perl.org/group/perl.perl5.porters/2024/08/msg268757.html))
+
 
 ### Builder
 
@@ -747,7 +750,7 @@ This role is necessary when...
 >     * Author's repository, or a Custodian's if a project is dormant (e.g. a repository on Codeberg).
 >     * Language-specific packages distributed by a Language Ecosystem (e.g. CPAN).
 > * E.g. someone in the #debian-perl group downloads, builds, tests and installs something from CPAN, but instead of doing a regular install, they us tooling like `dh-make-perl` to produce a custom installation directory that can be incorporated into a .deb archive.
-> * A Packager can both be found in-house (e.g. a business who uses a company-internal package mirror), for a Package Ecosystem provider (e.g. Debian), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
+> * A Packager can both be found in-house (e.g. a business who uses a company-internal package mirror), for a Package Ecosystem Provider (e.g. Debian), or a Language Ecosystem Provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 
 Operates within a [Package Ecosystem](#package-ecosystem) or an [Maintainer Environment](#maintainer-environment).
 Within a package ecosystem, builds and creates packages from components received from an upstream source, optionally with patches applied from the [Patcher](#patcher).
@@ -814,7 +817,7 @@ Within a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#pac
 
 > [!NOTE]
 > * Curators may decide both whether and where the output of a Packager is distributed.
-> * Curators may operate both in-house, in order to keep an eye on what is being automatically installed there, or they may make the decisions that happen on the Package or Language Ecosystem provider side.
+> * Curators may operate both in-house, in order to keep an eye on what is being automatically installed there, or they may make the decisions that happen on the Package or Language Ecosystem Provider side.
 > * Typically, a curator may consider LTS status, support contract terms or other reasons for distributing a package.
 
 > [!NOTE]
@@ -845,22 +848,22 @@ May assist in updating some SBOM metadata attributes.
   * [Distributor](#distributor)
 
 
-### Distributor
+### Provider
 
 > [!CAUTION]
 > * FIXME – Not done
-> * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor.
 
 > [!NOTE]
-> * (CPANSec-2024) Distributors take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
->     * If SBOM metadata is expected to accompany the packages or containers in question, the Distributor makes sure this happens.
->     * Distributors have additional requirements and considerations laid out in CISA-2024.
->     * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+> * (CPANSec-2024) This term is used in place of the [Distributor](#distributor) Role when referring to Open Source Ecosystem component suppliers.
+>     * This is done to disambiguate it from the [Distributor](#distributor) Role as used in the EU Cyber Resilience Act.
+> * (CPANSec-2024) Providers take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
+>     * If SBOM metadata is expected to accompany the packages or containers in question, the Provider makes sure this happens.
 
 Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
 Ensures the availability of packages or containers, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 * See also
+   * [Distributor](#distributor)
    * [CISA SBOM Sharing Roles and Considerations](#references) (CISA-2024)
    * [CRA Article 20](#references) (CRA-Art-20)
 
@@ -868,6 +871,22 @@ Ensures the availability of packages or containers, that they are indexed correc
 | :-: | :----------------------------- | :------: | --------------------- | :------ | :------ |
 | 🟦  | Download location (Repackaged) | Yes      |                       |         |         |
 | 🟦  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |         |
+
+
+#### Distributor
+
+> [!CAUTION]
+> * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor,
+
+* Distributor is a term commonly used throughout Open Source Ecosystems, but
+    * Distributors have additional requirements and considerations laid out in CISA-2024.
+    * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+
+* See also
+   * [Provider](#provider)
+   * [Distributor](glossary.md#distributor) in the glossary.
+   * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](#references)
+   * (CRA-Art-20) [CRA Article 20](#references)
 
 
 ### Developer
@@ -953,9 +972,9 @@ Communicates any issues or findings to any number of upstream roles, including t
 
 ### End-user
 
-> 1. (CPANSec-2024) The software in use, in production, by a user or customer.
->
-> (Ref: [CPANSec-2024](#references-and-terms))
+1. (CPANSec-2024) The software in use, in a production environment, by a user or customer.
+
+(Ref: [CPANSec-2024](#references-and-terms))
 
 * See also:
     * [End-user](glossary.md#end-user) in the Glossary
@@ -1018,7 +1037,6 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 * (CISA-2024-9) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](), Sections 2.2.1.4 and 2.2.2 and others, Published 2024-09-03
 
 
-
 ## Commentary and TODOs
 
 1. Open Source in CRA... Maintainer -> Provider -> Supplier -> Steward -> Manufacturer -> Distributor
@@ -1027,7 +1045,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 1. Enumerate what distinguishes the different environments
     * Language: Not built, not deployed, Is source code, No execution environment
     * Distro/package: Built, Deployed, Is object code, No execution environment
-    * Model/plugin: Built, Not deployed, Is data, No execution environment (FIXME: unsure)
+    * Model/plugin: Built, Not deployed, Is data, No execution environment (FIXME – unsure)
     * Image/container: Built, Deployed, Is object code, Has execution environment
 1. Enumerate the different dependencies
     * Stages; Author/develop, configure, build, test, install/deploy, packaging, container assembly, post-deploy (plugin/dynamic), runtime.
@@ -1049,7 +1067,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 
 ## License and use of this document
 
-* Version: 0.7.0
+* Version: 0.7.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
@@ -1086,19 +1104,22 @@ Several people have been involved in the development of this document
 | License(s)                          | (7.15) PackageLicenseDeclared, (7.13) PackageLicenseConcluded, (7.14) LicenseInfoFromFiles | SPDX License | bom.metadata.licenses[], bom.components[].licenses[], components[].licenses[].acknowledgement[declared,concluded], components[].licenses[].licensing (proprietary) | packages[].licenseConcluded, packages[].licenseDeclared | Core.Relationship hasConcludedLicense hasDeclaredLicense | |
 | Copyright Holder                    | (7.17) PackageCopyrightText         | Text         | bom.components[].copyright, bom.components[].evidence.copyright       |                         | Software.SoftwareArtifact.copyrightText | |
 | Purpose, Intended Use               |                                     | Text         | bom.components[].description                                          | packages[].comment      |          |         |
-| SBOM Author                         | (6.8) Creator                       | Text         | bom.metadata.author, bom.metadata.authors                             | creationInfo.creators[] |          |         |
+| SBOM Author                         | (6.8) Creator                       | Text         | bom.metadata.authors                                                  | creationInfo.creators[] |          |         |
 | SBOM Creation Time-stamp            | (6.9) Created                       | DateTime     | bom.metadata.timestamp                                                | creationInfo.created    |          |         |
 | SBOM Format                         |                                     | Enum         | bom.properties.bomFormat                                              | SPDXVersion             |          |         |
 | SBOM Generation Tool                |                                     | List         | bom.metadata.tools[]                                                  | creationInfo.creators[] |          |         |
 | SBOM Location                       |                                     | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |                         |          |         |
 | SBOM Release                        |                                     | Int          | bom.properties.specVersion                                            | SPDXVersion             |          |         |
 | SBOM Serial Number                  | (6.5) SPDX Document Namespace, (7.2) SPDXID | UUID | bom.metadata.serialNumber                                             | SPDXID                  |          |         |
-| SBOM Type                           | (6.10) CreatorComment               | Text         |                                                                       |                         |          |         |
+| SBOM Type (Maintainer)              | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[pre-build]                                    |                         |          | CISA 'Source' Type SBOM; FIXME – confirm   |
+| SBOM Type (Builder)                 | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[build]                                        |                         |          | CISA 'Build' Type SBOM; FIXME – confirm    |
+| SBOM Type (Packager)                | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[post-build]                                   |                         |          | CISA 'Deployed' Type SBOM; FIXME – confirm |
+| SBOM Type (Deployer)                | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[operations]                                   |                         |          | CISA 'Runtime' Type SBOM; FIXME – confirm  |
 | SBOM Primary Component              | (11.1) Relationship: DESCRIBES      | Text         | bom.metadata.component                                                |                         | Software.Sbom.rootElement | |
-| Security contact (Audit)            |                                     | URL          | bom.metadata[supplier,manufacturer].contact.email                     |                         |          |         |
 | Security contact (Dependency)       |                                     | URL          | bom.components[].externalReferences[].security-contact                |                         |          |         |
-| Security contact (Primary)          |                                     | URL          | bom.externalReferences[].security-contact                             |                         |          |         |
-| Supplier Name (Maintainer)          | (7.5) PackageSupplier               | Text, URL    | bom.metadata[supplier], bom.components[].supplier                     | creationInfo.creators[] | Software.Package.suppliedBy | |
-| Supplier Name (Manufacturer)        | (7.5) PackageSupplier               | Text, URL    | bom.metadata[manufacturer], bom.components[].supplier                 | creationInfo.creators[], packages[].originator, packages[].supplier | Software.Package.suppliedBy | |
+| Security contact (Manufacturer)     |                                     | URL          | bom.metadata[manufacturer].contact.email, bom.externalReferences[].security-contact |                         |          |         |
+| Security contact (Maintainer)       |                                     | URL          | bom.metadata[supplier].contact.email, bom.externalReferences[].security-contact     |                         |          |         |
+| Supplier Name (Maintainer)          | (7.5) PackageSupplier               | Text, URL    | bom.metadata[supplier], bom.components[].authors[]                    | creationInfo.creators[] | Software.Package.suppliedBy | |
+| Supplier Name (Manufacturer)        | (7.5) PackageSupplier               | Text, URL    | bom.metadata[manufacturer], bom.components[].manufacturer             | creationInfo.creators[], packages[].originator, packages[].supplier | Software.Package.suppliedBy | |
 | Unique Product ID                   |                                     | PURL         | bom.components[].purl | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | |
 | Version                             | (7.3) PackageVersion                | Text         | bom.components[].version                                              | packages[].versionInfo  | Software.Package.packageVersion | |

@@ -19,8 +19,8 @@
     * "I, the author, am conforming to EU law, including the CRA" (Assumption: YES, 85%)
     * Which EU laws is one expected to conform to, when applying a CE mark?
         * CRA (Assumption: YES, 99%)
-        * NIS2 (Assumption: YES, 90%)
-        * Fintech-specific laws (Assumption: YES, 40%)
+        * NIS2 (Assumption: YES, 60%)
+        * Fintech-specific laws (Assumption: YES, 60%)
         * ...
 * What does the CE mark apply to?
     * A specific product with digital components, that is put on the EU market (Assumption: YES, 99%)
@@ -45,4 +45,10 @@
 ## Attestation
 
 * How are the OSS Steward Attestation Programmes intended to work?
-    * 
+
+## Manufacturer?
+
+* Does receiving money that isn't in the form of donations turn an OSS Maintainer into a Manufacturer?
+* Does earning money on publishing an open source component into an OSS ecosystem automatically make one a Manufacturer?
+* Under what circumstances can a Steward become a Manufacturer?
+* What role or purpose will the attestation regime described in Recital 21 have?

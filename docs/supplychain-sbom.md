@@ -8,6 +8,8 @@ mermaid: true
 
 ## Document status: ⚠️  DRAFT
 
+
+
 > [!CAUTION]
 > What you see here is a DRAFT of the Supply-chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
@@ -21,6 +23,7 @@ mermaid: true
 >
 > * The CPANSec [glossary](glossary.md)
 > * The CPANSec [reading list](readinglist.md)
+> * A proposed overview of [project life-cycle statuses and needs](foss-project-lifecycle.md)
 >
 > Please refer to them as needed.
 
@@ -84,6 +87,11 @@ This document offers **an overview of [Open Source Software](glossary.md#open-so
     1. Get an idea where an Attribute is likely to come from, and which Roles care about these
     1. Become aware of both upstream and downstream Communities, Ecosystems and Environments are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
     1. Use this information to both live up to their new Regulatory Obligations and to help improve their Security Posture in general
+
+
+## This document is **visionary** and a **proposal**
+
+Some aspects of this document – specifically those related to the role of Open Source Stewards and the role of OSS Attestations – are presented as **suggestions, proposals or visions of a possible future**.
 
 
 ## Motivation
@@ -720,6 +728,9 @@ This role is necessary when...
 | 🟨  | Unique Product ID (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if attribute is replaced or added |
 | 🟨  | Project Sustainability            | No       |                         | CycloneDX 1.7 proposed | |
 
+* Examples
+    * In Debian, there is a concept of "Non-Maintainer Uploads", where contributors are allowed to do one-time uploads to fix bugs under certain conditions and following some guidelines. (Source: [Debian developers reference](https://www.debian.org/doc/manuals/developers-reference/pkgs.en.html#non-maintainer-uploads-nmus), [perl5-porters message on NMUs](https://www.nntp.perl.org/group/perl.perl5.porters/2024/08/msg268757.html))
+
 
 ### Builder
 
@@ -1105,9 +1116,9 @@ Several people have been involved in the development of this document
 | SBOM Type (Packager)                | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[post-build]                                   |                         |          | CISA 'Deployed' Type SBOM; FIXME – confirm |
 | SBOM Type (Deployer)                | (6.10) CreatorComment               | Text         | bom.metadata.lifecycles[operations]                                   |                         |          | CISA 'Runtime' Type SBOM; FIXME – confirm  |
 | SBOM Primary Component              | (11.1) Relationship: DESCRIBES      | Text         | bom.metadata.component                                                |                         | Software.Sbom.rootElement | |
-| Security contact (Audit)            |                                     | URL          | bom.metadata[supplier,manufacturer].contact.email                     |                         |          |         |
 | Security contact (Dependency)       |                                     | URL          | bom.components[].externalReferences[].security-contact                |                         |          |         |
-| Security contact (Primary)          |                                     | URL          | bom.externalReferences[].security-contact                             |                         |          |         |
+| Security contact (Manufacturer)     |                                     | URL          | bom.metadata[manufacturer].contact.email, bom.externalReferences[].security-contact |                         |          |         |
+| Security contact (Maintainer)       |                                     | URL          | bom.metadata[supplier].contact.email, bom.externalReferences[].security-contact     |                         |          |         |
 | Supplier Name (Maintainer)          | (7.5) PackageSupplier               | Text, URL    | bom.metadata[supplier], bom.components[].authors[]                    | creationInfo.creators[] | Software.Package.suppliedBy | |
 | Supplier Name (Manufacturer)        | (7.5) PackageSupplier               | Text, URL    | bom.metadata[manufacturer], bom.components[].manufacturer             | creationInfo.creators[], packages[].originator, packages[].supplier | Software.Package.suppliedBy | |
 | Unique Product ID                   |                                     | PURL         | bom.components[].purl | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | |

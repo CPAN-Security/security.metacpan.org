@@ -16,6 +16,13 @@ toc: true
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
+### This document is **visionary** and a **proposal**
+
+Some aspects of this document – including those related to the role of Open Source Stewards, the Cyber Resilience Act and CE Marking – are presented as **suggestions, proposals or visions of a possible future**.
+
+Please take this into account when commenting this document.
+
+
 ### Legend
 
 > [!NOTE]
@@ -303,6 +310,13 @@ toc: true
 > * See also
 >     * [Dependency (Static)](#dependency-static)
 
+#### Dependency (Virtual)
+
+> [!NOTE]
+> * (CPANSec) A dependency that is present, but cannot be represented by an actual software package.
+>     * e.g. The OS kernel and base file-system and services that have to be in place before the first regular package may be installed.
+> * FIXME: Expand on this topic
+
 
 ### Distributor ⚠️
 
@@ -469,8 +483,12 @@ toc: true
 ### Placing on the market
 
 > 1. (CRA-2024-03) The first making available of a product with digital elements on the Union market.
+> 1. (EUBG-2022) A product is placed on the market when it is made available for the first time on the Union market.
+>     * According to Union harmonisation legislation, each individual product can only be placed once on the Union market.
+>     * Products made available on the market must comply with the applicable Union harmonisation legislation at the moment of placing on the market.
 >
-> (Ref: [CRA-2024-03](#references-and-terms))
+>
+> (Ref: [CRA-2024-03](#references-and-terms), EUBG-2022)
 
 
 ### Point of origin ⚠️  ✍️

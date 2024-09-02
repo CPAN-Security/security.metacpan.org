@@ -11,10 +11,6 @@
 
 *   Attendees
     *  @sjn, @timlegge, @stigtsp, @tux
-*   Regrets
-    *  
-*   Partly Absent
-    *  @book, @leont
 
 ### Approve previous meeting minutes
 *   Previous meeting minutes was approved by @tux, @timlegge, @stigtsp
@@ -103,7 +99,8 @@ We continue with this list next meeting!
 1. [London Perl Workshop](https://act.yapc.eu/lpw2024/) - Saturday 26th October 2024 - @sjn got his talk [accepted](http://act.yapc.eu/lpw2024/talk/7915), @tux got his LT [accepted](https://act.yapc.eu/lpw2024/talk/7922)
 
 ### Operating changes
-*   Try finding ways to make it easier to attend the meetings (like not forgetting there is one) *@timlegge will think about this*
+*   Try finding ways to make it easier to attend the meetings (like not forgetting there is one)
+*   @timlegge will look at setting up a sharable calendar
 *   Skip electing next meeting chair/secretary from now on
 
 ~~### Elect next meeting chair and secretary~~

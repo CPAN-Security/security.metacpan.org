@@ -50,7 +50,14 @@
 * What role or purpose will the attestation regime described in Recital 21 have?
 * 
 
-# (wishlist)
+## OSS Steward Organization forms
 
-* funding is needed
-
+* What types of organizations may become OSS Stewards?
+    * Charities
+    * Non-profits
+    * Not-for-profit organizations
+    * For benefit corporations
+* What kind of funding structures are accepted for OSS Stewards?
+    * Sales, fees, membership dues
+    * Donations, grants, fund-raising
+    * Business activities like Due Diligence consulting services

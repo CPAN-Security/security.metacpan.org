@@ -31,7 +31,7 @@
 
 ### Vulnerability Index
 *   @stigtsp - need to do some considerations on this vs. CNA
-*   the CNA requires a public index of CVEs - most open projects use github
+*   the CNA requires a public index of CVEs - some OSS projects use github for their index
 
 ### TLS/HTTPS in core
 *   Neither @leont nor @book where present, so nothing to report

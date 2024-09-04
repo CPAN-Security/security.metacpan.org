@@ -1086,9 +1086,9 @@ Several people have been involved in the development of this document
 * Stig Palmquist
 
 
-# Appendix
+## Appendix
 
-## SBOM JSON Paths and data types
+### SBOM JSON Paths and data types
 
 | Attribute name                      | Data type    | CycloneDX 1.6 (ECMA-424)                                              | SPDX 2.3                | SPDX 3.0 | Comment |
 | :---------------------------------- | :----------: | :-------------------------------------------------------------------- | :---------------------- | -------- | :------ |
@@ -1130,7 +1130,7 @@ Several people have been involved in the development of this document
 | CE Technical Documentation          | URL          | bom.externalReferences[?(@.documentation)]                            |                         |          |         |
 
 
-## SBOM Attribute names and obligation sources
+### SBOM Attribute names and obligation sources
 
 | References                                 | Required for | Attribute name                      | SPDX 2.2.1 name (ISO/IEC 5962:2021)                                                         | CycloneDX 1.6 (ECMA-424) |
 | -----------------------------------------: | :----------: | :---------------------------------- | :------------------------------------------------------------------------------------------ | :----------------------- |

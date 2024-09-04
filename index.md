@@ -17,10 +17,10 @@ On CPAN, improving security is a volunteer-driven collaborative effort.
 If you care and would like to make a contribution, you can…
 
 * Explore [our main website](https://security.metacpan.org/)
-* Check us out on [Github](https://github.com/CPAN-Security) :octocat:
+* Check us out on [Github](https://github.com/CPAN-Security)
 * Join us in our [Matrix channel](https://matrix.to/#/#cpansec-discussion:matrix.org), #cpansec-discussion on matrix.org
 * Join us in our [IRC channel](ircs://ssl.irc.perl.org:7062/#cpan-security), #cpan-security on irc.perl.org
-* Send a mail to &lt;cpan-security&#64;perl.org&gt; :email:
+* Send an e-mail to `CPAN Security Group &lt;cpan-security&#64;perl.org&gt;` 📧
 * Subscribe to [@cpan_security@perl.social](https://perl.social/profile/cpan_security) on the Fediverse :elephant:
 
 

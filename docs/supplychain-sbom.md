@@ -221,7 +221,7 @@ stateDiagram-v2
     state "🟦 Authenticator" as package_authenticator
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
-    state "🟥🟨🟦 Open Source Software Steward 🆕" as package_steward
+    state "🟥🟨🟦 Open Source Software Steward 🆕" as package_steward  %% FIXME: not necessary?
     state "🟨 Curator" as package_curator
     state "🟩 Provider" as package_distributor
 

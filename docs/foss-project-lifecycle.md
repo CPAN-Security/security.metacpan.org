@@ -21,26 +21,28 @@ mermaid: true
 
 States in **bold** already exist on CPAN.
 
-| State        | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Submitter  |
-| ------------ | --------- | --------- | --------- | -------------------- | ------------------ | ------------- | ---------- |
-| **NEEDHELP** | no        | YES       | YES       | YES                  | no                 | LOW           | Maintainer |
-| **HANDOFF**  | no        | YES       | no        | YES                  | YES                | LOW           | Maintainer |
-| **ADOPTME**  | YES       | no        | no        | YES                  | no                 | NONE          | Ecosystem  |
-| CUSTODY      | YES       | no        | no        | YES                  | no                 | EMERG         | Ecosystem  |
-| ACTIVE       | no        | YES       | YES       | no                   | no                 | OK            | Maintainer |
-| DONE         | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer |
-| UNMAINTAINED | no        | YES       | YES       | no                   | no                 | NONE          | Maintainer |
-| CASUAL       | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer |
-| NEEDFUNDING  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer |
-| NEEDSUPPORT  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer |
-| **NOXFER**   | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem  |
-| COMPROMISED  | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem  |
-| DELISTED     | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem  |
+| State / Need | Maint = 0 | Maint = 1 | Maint >= 1 | Maint needs increase | Maint is declining | Response time | Claim source |
+| :----------- | :-------: | :-------: | :--------: | :------------------- | :----------------- | :-----------: | :----------- |
+| **NEEDHELP** | no        | YES       | YES        | YES                  | no                 | LOW           | Maintainer   |
+| **HANDOFF**  | no        | YES       | no         | YES                  | YES                | LOW           | Maintainer   |
+| **ADOPTME**  | YES       | no        | no         | YES                  | no                 | NONE          | Ecosystem    |
+| NEEDFUNDING  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer   |
+| NEEDSUPPORT  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer   |
+| CUSTODY      | YES       | no        | no         | YES                  | no                 | SECURITY      | Ecosystem    |
+| DONE         | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer   |
+| MAINTAINED   | no        | YES       | YES        | no                   | no                 | OK            | Maintainer   |
+| CASUAL       | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer   |
+| LEASTEFFORT  | no        | YES       | YES        | no                   | no                 | MINIMUM       | Maintainer   |
+| UNMAINTAINED | no        | YES       | YES        | no                   | no                 | NONE          | Maintainer   |
+| **NOXFER**   | no        | YES       | YES        | no                   | no                 | NONE          | Ecosystem    |
+| COMPROMISED  | no        | YES       | YES        | no                   | no                 | NONE          | Ecosystem    |
+| DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem    |
+| UNREACHABLE  | no        | YES       | YES        | no                   | no                 | ERROR         | Ecosystem    |
 
 
 ### State indicators
 
-1. ACTIVE – The project is maintained (default state)
+1. MAINTAINED – The project is maintained (default state)
     * (number of maintainers is higher than 0)
     * (number of maintainers does not need to change)
 1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))

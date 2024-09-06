@@ -612,7 +612,7 @@ An author or main developer of an Open Source component project.
 | 🟨  | SBOM Type                          | FIXME    |                                            |         | Confirm req/spec |
 | 🟨  | SBOM Author                        | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
 | 🟨  | SBOM Creation Time-stamp           | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
-| 🟨  | SBOM Serial Number                 | Yes      |                                            |         | Confirm req/spec |
+| 🟨  | SBOM Serial Number                 | Yes      | CycloneDX 1.6, SPDX 2.3                    |         |         |
 | 🟨  | SBOM Generation Tool               | No       |                                            |         | Consider recommendation |
 
 * See also
@@ -934,7 +934,7 @@ Ensures the availability of packages or containers, that they are indexed correc
 | 🟨  | License(s) (Product, Embedded)    | Yes      |                                            |         | Confirm which spec/Laws/License |
 | 🟨  | SBOM Author                       | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
 | 🟨  | SBOM Creation Time-stamp          | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
-| 🟨  | SBOM Serial Number                | Yes      |                                            |         | Confirm req/spec |
+| 🟨  | SBOM Serial Number                | Yes      | CycloneDX 1.6, SPDX 2.3                    |         |         |
 | 🟨  | SBOM Type                         | No       | CISA-2023                                  |         | Confirm req/spec |
 | 🟨  | SBOM Location                     | No       | CRA-AII(9)                                 |         | Confirm CRA Article |
 | 🟨  | SBOM Generation Tool              | No       |                                            |         | Consider recommendation |
@@ -1133,7 +1133,7 @@ Several people have been involved in the development of this document
 | SBOM Generation Tool                | No       |                                            |                                                                                             |                          | 
 | SBOM Location                       | Yes      | CRA-AII(9)                                 |                                                                                             |                          | 
 | SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |                                                                                             |                          | 
-| SBOM Serial Number                  | Yes      | CycloneDX 1.6                              | (6.5) SPDX Document Namespace, (7.2) SPDXID                                                 |                          | 
+| SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    | (6.5) SPDX Document Namespace, (7.2) SPDXID                                                 |                          | 
 | SBOM Type                           | No       | CISA-2023, CISA-2024-9                     | (6.10) CreatorComment                                                                       |                          | 
 | CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                      |                                                                                             |                          | 
 | CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                         |                                                                                             |                          | 

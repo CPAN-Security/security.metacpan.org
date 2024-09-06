@@ -9,7 +9,6 @@ mermaid: true
 ## Document status: ⚠️  DRAFT
 
 
-
 > [!CAUTION]
 > What you see here is a DRAFT of the Supply-chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
@@ -28,7 +27,31 @@ mermaid: true
 > Please refer to them as needed.
 
 
-## Open Source Supply-chain (Simplified diagram, pre-CRA)
+## About this document (TL;DR)
+
+This document offers **an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains**.
+
+* Taking into account the following perspectives:
+    1. Environments and Ecosystems,
+    1. Roles,
+    1. Metadata, and
+    1. Industry [Terms and Concepts](glossary.md)
+* …Enumerating and describing the Metadata Attributes these Roles typically care about.
+* …Noting the ways each Role may Operate on any given Metadata Attribute,
+    * 🟥 Create (authoritative),
+    * 🟨 Assemble or Update (non-authoritative),
+    * 🟩 Distribute,
+    * 🟦 Verify, or
+    * 🟪 Censor
+* …Showing any relevant regulation or other requirements that impose expectations of the presence of specific Metadata Attributes.
+* …So that people having a Role within the Supply-chain can:
+    1. Draw an overarching map of what other Roles may Operate within their Supply-chain
+    1. Form a idea of what purpose each Role may have, and find out where they fit
+    1. Get an idea where an Attribute is likely to come from, and which Roles care about these
+    1. Become aware of both upstream and downstream Communities, Ecosystems and Environments are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
+    1. Use this information to both live up to their new Regulatory Obligations and to help improve their Security Posture in general
+
+### A Typical Open Source Supply-chain (Simplified)
 
 ```mermaid
 stateDiagram-v2
@@ -64,37 +87,12 @@ stateDiagram-v2
 ```
 
 
-## About this document (TL;DR)
-
-This document offers **an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains**.
-
-* Taking into account the following perspectives:
-    1. Environments and Ecosystems,
-    1. Roles,
-    1. Metadata, and
-    1. Industry [Terms and Concepts](glossary.md)
-* …Enumerating and describing the Metadata Attributes these Roles typically care about.
-* …Noting the ways each Role may Operate on any given Metadata Attribute,
-    * 🟥 Create (authoritative),
-    * 🟨 Assemble or Update (non-authoritative),
-    * 🟩 Distribute,
-    * 🟦 Verify, or
-    * 🟪 Censor
-* …Showing any relevant regulation or other requirements that impose expectations of the presence of specific Metadata Attributes.
-* …So that people having a Role within the Supply-chain can:
-    1. Draw an overarching map of what other Roles may Operate within their Supply-chain
-    1. Form a idea of what purpose each Role may have, and find out where they fit
-    1. Get an idea where an Attribute is likely to come from, and which Roles care about these
-    1. Become aware of both upstream and downstream Communities, Ecosystems and Environments are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
-    1. Use this information to both live up to their new Regulatory Obligations and to help improve their Security Posture in general
-
-
 ## This document is **visionary** and a **proposal**
 
 Some aspects of this document – specifically those related to the role of Open Source Stewards and the role of OSS Attestations – are presented as **suggestions, proposals or visions of a possible future**.
 
 
-## Motivation
+### Motivation
 
 Originally, this document stems from the main author's frustration with the lack of a clear Open Source perspective in current SBOM documentation (as of 2023). This brought him to the SBOM devroom at FOSDEM 2024 to offer [a rant](https://fosdem.org/2024/schedule/event/fosdem-2024-3358-can-sboms-become-first-class-citizens-in-open-source-ecosystems-/) about what he perceived as a less-than-ideal state of affairs.
 
@@ -110,7 +108,7 @@ Please take this document as it is – a public set of notes, intended as a sou
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
 
-# Supply-chain Ecosystems, Environments & Roles and Attributes
+## Supply-chain Ecosystems, Environments & Roles and Attributes
 
 > [!NOTE]
 > TODO: Show how metadata may be communicated along these open source supply-chains.
@@ -121,7 +119,7 @@ And all this, with the goal of allowing downstream users to both live up to thei
 To improve by ensuring that the metadata they need is available, updated and authoritative, and can be helpful in both mitigating vulnerabilities and interacting with the maintainers of any Open Source projects that may be involved.
 
 
-## Open Source Supply-chain (Simplified diagram, post-CRA)
+### A Post-CRA Open Source Supply-chain (Simplified)
 
 > [!NOTE]
 > This diagram is equivalent to the simplified one above, but showing the new Roles implied and introduced by the EU Cyber Resilience Act (CRA).
@@ -188,7 +186,7 @@ And finally, we acknowledge that some situations may call for an SBOM Censor, wh
 * 🟪 SBOM Censor – **Censors**, redacts, deletes, anonymizes or filters Metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
 
 
-## Open Source Supply-chain (Full diagram)
+## Open Source Supply-chain (Detailed)
 
 > [!NOTE]
 > The graphs in this document do *not* include _Content Delivery Networks_, _Model Ecosystems_ or _Plugin Ecosystems_.
@@ -223,6 +221,7 @@ stateDiagram-v2
     state "🟦 Authenticator" as package_authenticator
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
+    %% FIXME: package_steward not useful/necessary?
     state "🟥🟨🟦 Open Source Software Steward 🆕" as package_steward
     state "🟨 Curator" as package_curator
     state "🟩 Provider" as package_distributor
@@ -441,18 +440,7 @@ Package Ecosystems typically have their own tooling and services that are expect
 * May be Private
 
 
-### Integrator Environment
-
-A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
-
-* Operates commercially
-* May publish [Open Source Software](glossary.md#open-source-software)
-* Has a project development life-cycle
-
-* See also:
-    * [Manufacturer Environment](#manufacturer-environment)
-
-#### Manufacturer Environment
+### Manufacturer Environment
 
 > [!NOTE]
 > * FIXME - Much more to add!
@@ -466,6 +454,17 @@ A business or institution that is responsible for developing and building the ap
 
 * See also
   * [Integrator Environment](#integrator-environment).
+
+#### Integrator Environment
+
+A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
+
+* Operates commercially
+* May publish [Open Source Software](glossary.md#open-source-software)
+* Has a project development life-cycle
+
+* See also:
+    * [Manufacturer Environment](#manufacturer-environment)
 
 
 ### Production Environment
@@ -610,7 +609,6 @@ An author or developer of an Open Source component project.
 
 * See also
   * [Maintainer](#maintainer).
-
 
 #### Custodian
 
@@ -889,7 +887,14 @@ Ensures the availability of packages or containers, that they are indexed correc
    * (CRA-Art-20) [CRA Article 20](#references)
 
 
-### Developer
+### Integrator
+
+Used in the EU Cyber Resilience Act Annex II to denote someone who integrates *a product with digital elements intended for integration* into other products with digital elements.
+
+* See also
+  * [Developer](#developer).
+
+#### Developer
 
 > [!CAUTION]
 > * FIXME – Not done
@@ -924,13 +929,6 @@ A Developer that publishes their software as [Open Source Software](glossary.md#
 | 🟨  | SBOM Type                         | No       | CISA-2023                                  |         | Confirm req/spec |
 | 🟨  | SBOM Location                     | No       | CRA-AII(9)                                 |         | Confirm CRA Article |
 | 🟨  | SBOM Generation Tool              | No       |                                            |         | Consider recommendation |
-
-#### Integrator
-
-Used in the EU Cyber Resilience Act Annex II to denote someone who integrates *a product with digital elements intended for integration* into other products with digital elements.
-
-* See also
-  * [Developer](#developer).
 
 
 ### Publisher
@@ -1088,6 +1086,41 @@ Several people have been involved in the development of this document
 
 ## Appendix
 
+### SBOM Attribute names and obligation sources
+
+| Attribute name                      | Required | References                                 | SPDX 2.2.1 name (ISO/IEC 5962:2021)                                                         | CycloneDX 1.6 (ECMA-424) |
+| :---------------------------------- | :------: | -----------------------------------------: | :------------------------------------------------------------------------------------------ | :----------------------- |
+| Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-9, CRA-AV             | (7.1) PackageName                                                                           |                          | 
+| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-9 |                                                                                             |                          | 
+| Version                             | Yes      | CISA-2024-9, CRA-AV                        | (7.3) PackageVersion                                                                        |                          | 
+| Purpose, Intended Use               | Yes      | CRA-AII(4)                                 |                                                                                             |                          | 
+| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-9 | (7.5) PackageSupplier                                                                       |                          | 
+| Security contact                    | Yes      | CRA-AII(2)                                 |                                                                                             |                          | 
+| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-9         | (11.1) Relationship: CONTAINS                                                               |                          | 
+| Relationships                       | Yes      | CISA-2024-9                                |                                                                                             |                          | 
+| Cryptographic Hash                  | Yes      | CISA-2024-9                                | (7.10) PackageChecksum, (7.9) PackageVerificationCode                                       |                          | 
+| Copyright Notice                    | Yes      | CISA-2024-9                                | (7.17) PackageCopyrightText                                                                 |                          | 
+| License(s)                          | Yes      | CISA-2024-9                                | (7.15) PackageLicenseDeclared, (7.13) PackageLicenseConcluded, (7.14) LicenseInfoFromFiles  |                          | 
+| Download location                   | No       |                                            |                                                                                             |                          | 
+| Code Commit Revision                | No       |                                            |                                                                                             |                          | 
+| Code Repository                     | No       |                                            |                                                                                             |                          | 
+| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                     |                                                                                             |                          | 
+| Open Source Software Steward        | No       | CRA-Rec-19                                 |                                                                                             |                          | 
+| Security Attestation                | No       | CRA-Rec-21                                 |                                                                                             |                          | 
+| SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-9                     | (6.8) Creator                                                                               |                          | 
+| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-9                     | (6.9) Created                                                                               |                          | 
+| SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |                                                                                             |                          | 
+| SBOM Generation Tool                | No       |                                            |                                                                                             |                          | 
+| SBOM Location                       | Yes      | CRA-AII(9)                                 |                                                                                             |                          | 
+| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |                                                                                             |                          | 
+| SBOM Serial Number                  | Yes      | CycloneDX 1.6                              | (6.5) SPDX Document Namespace, (7.2) SPDXID                                                 |                          | 
+| SBOM Type                           | No       | CISA-2023, CISA-2024-9                     | (6.10) CreatorComment                                                                       |                          | 
+| CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                      |                                                                                             |                          | 
+| CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                         |                                                                                             |                          | 
+| CE Support End Date                 | No       | CRA-AII(7)                                 |                                                                                             |                          | 
+| CE Technical Documentation          | No       | CRA-AII(8)                                 |                                                                                             |                          | 
+
+
 ### SBOM JSON Paths and data types
 
 | Attribute name                      | Data type    | CycloneDX 1.6 (ECMA-424)                                              | SPDX 2.3                | SPDX 3.0 | Comment |
@@ -1128,38 +1161,3 @@ Several people have been involved in the development of this document
 | CE Declaration of Conformity        | URL          | bom.externalReferences[?(@.conformity-declaration)]                   |                         |          |         |
 | CE Support End Date                 | DateTime     | bom.externalReferences[?(@.support-horizon)]                          |                         |          |         |
 | CE Technical Documentation          | URL          | bom.externalReferences[?(@.documentation)]                            |                         |          |         |
-
-
-### SBOM Attribute names and obligation sources
-
-| Attribute name                      | Required | References                                 | SPDX 2.2.1 name (ISO/IEC 5962:2021)                                                         | CycloneDX 1.6 (ECMA-424) |
-| :---------------------------------- | :------: | -----------------------------------------: | :------------------------------------------------------------------------------------------ | :----------------------- |
-| Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-9, CRA-AV             | (7.1) PackageName                                                                           |                          | 
-| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-9 |                                                                                             |                          | 
-| Version                             | Yes      | CISA-2024-9, CRA-AV                        | (7.3) PackageVersion                                                                        |                          | 
-| Purpose, Intended Use               | Yes      | CRA-AII(4)                                 |                                                                                             |                          | 
-| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-9 | (7.5) PackageSupplier                                                                       |                          | 
-| Security contact                    | Yes      | CRA-AII(2)                                 |                                                                                             |                          | 
-| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-9         | (11.1) Relationship: CONTAINS                                                               |                          | 
-| Relationships                       | Yes      | CISA-2024-9                                |                                                                                             |                          | 
-| Cryptographic Hash                  | Yes      | CISA-2024-9                                | (7.10) PackageChecksum, (7.9) PackageVerificationCode                                       |                          | 
-| Copyright Notice                    | Yes      | CISA-2024-9                                | (7.17) PackageCopyrightText                                                                 |                          | 
-| License(s)                          | Yes      | CISA-2024-9                                | (7.15) PackageLicenseDeclared, (7.13) PackageLicenseConcluded, (7.14) LicenseInfoFromFiles  |                          | 
-| Download location                   | No       |                                            |                                                                                             |                          | 
-| Code Commit Revision                | No       |                                            |                                                                                             |                          | 
-| Code Repository                     | No       |                                            |                                                                                             |                          | 
-| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                     |                                                                                             |                          | 
-| Open Source Software Steward        | No       | CRA-Rec-19                                 |                                                                                             |                          | 
-| Security Attestation                | No       | CRA-Rec-21                                 |                                                                                             |                          | 
-| SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-9                     | (6.8) Creator                                                                               |                          | 
-| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-9                     | (6.9) Created                                                                               |                          | 
-| SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |                                                                                             |                          | 
-| SBOM Generation Tool                | No       |                                            |                                                                                             |                          | 
-| SBOM Location                       | Yes      | CRA-AII(9)                                 |                                                                                             |                          | 
-| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |                                                                                             |                          | 
-| SBOM Serial Number                  | Yes      | CycloneDX 1.6                              | (6.5) SPDX Document Namespace, (7.2) SPDXID                                                 |                          | 
-| SBOM Type                           | No       | CISA-2023, CISA-2024-9                     | (6.10) CreatorComment                                                                       |                          | 
-| CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                      |                                                                                             |                          | 
-| CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                         |                                                                                             |                          | 
-| CE Support End Date                 | No       | CRA-AII(7)                                 |                                                                                             |                          | 
-| CE Technical Documentation          | No       | CRA-AII(8)                                 |                                                                                             |                          | 

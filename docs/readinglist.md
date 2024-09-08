@@ -173,10 +173,13 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Article 9, Point 1. (b-c), Stakeholder consultation (pages 155-156)
 * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
     * **Article 13**, Obligations of Manufacturers (pages 161-175)
-        * **Section 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
-        * Section 6, "[…] they shall share the relevant code or documentation […]" (page 164)
-        * Section 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 168)
+        * **Paragraph 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
+        * Paragraph 6, "[…] they shall share the relevant code or documentation […]" (page 164)
+        * Paragraph 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 168)
     * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
+        * Paragraph 1, "A manufacturer shall notify any actively exploited vulnerability contained in the product […] that it becomes aware of"
+        * Paragraph 3, "A manufacturer shall notify any severe incident having an impact on the security of the product […] that it becomes aware of"
+        * Paragraph 8, "After becoming aware of an actively exploited vulnerability or a severe incident, the manufacturer shall inform the impacted users of the product, and where appropriate all users, […] and, […] about risk mitigation and any corrective measures that the users can deploy"
     * **Article 15**, Voluntary reporting (pages 185-186)
     * Article 16, Establishment of a single reporting platform (pages 187-192)
     * Article 17, Other provisions related to reporting (pages 193-195)

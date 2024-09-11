@@ -220,7 +220,7 @@ graph TB
 
 ## License and use of this document
 
-* Version: 0.5.2
+* Version: 0.5.3
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

@@ -201,7 +201,7 @@ stateDiagram-v2
 
     %%
     state "🟥 Owner (Supplier)" as maintainer_owner
-    state "🟥🟨 Maintainer, Author\n🟨 Custodian" as maintainer_author
+    state "🟥🟨 Maintainer (Developer)\n🟨 Custodian" as maintainer_author
     state "🟨🟦 Packager" as language_packager
 
     %%
@@ -219,7 +219,7 @@ stateDiagram-v2
 
     %%
     state "🟦 Authenticator" as package_authenticator
-    state "🟨 Patcher" as package_patcher
+    state "🟨 Patcher (Developer)" as package_patcher
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
     %% FIXME: package_steward not useful/necessary?
     state "🟥🟨🟦 Open Source Software Steward 🆕" as package_steward
@@ -228,7 +228,7 @@ stateDiagram-v2
 
     %%
     state "🟥 Manufacturer (Supplier) 🆕" as integrator_owner
-    state "🟥🟨🟦 Integrator, Developer" as integrator_developer
+    state "🟥🟨🟦 Integrator (Developer)" as integrator_developer
     state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as integrator_builder
     state "🟩🟪 SBOM Censor" as integrator_censor
     state "🟩 Publisher" as integrator_publisher
@@ -712,18 +712,18 @@ Authenticators ensure that only authorized Maintainers are allowed to publish th
 
 Patchers may select and apply updates to a component before building and/or packaging.
 
-* Operates within a [Package Ecosystem](#package-ecosystem).
-* Applies changes to a component may include…
+* Operates like a [Developer](#developer) within a [Package Ecosystem](#package-ecosystem).
+* Vets and applies changes to a component, including…
     * Back-ports of features,
-    * Security fixes
-    * Other accommodations necessary for distributing multiple parallel releases of the same upstream project
-    * Adopts a component in order to make it conform to build and execution environment demands.
+    * Security fixes,
+    * Other accommodations necessary for distributing multiple parallel releases of the same upstream project,
+    * Adopts a component to make it conform to build and execution environment demands.
 * May work within publishing constraints decided by a [Curator](#curator) of the Ecosystem (e.g. LTS releases, support contracts, etc.).
-* May work both with a downstream or in-stream Ecosystem [Packager](#packager).
-* May have a [Maintainer](#maintainer)'s downstream ecosystems as upstream.
+* May work both with a downstream or their own Ecosystem [Packager](#packager).
+* May have a [Maintainer](#maintainer)'s downstream ecosystems as their upstream.
 * Is a role that often is held by the same person as the [Packager](#packager) or [Builder](#builder).
 * May also be found in-house (e.g. a business or [Manufacturer](#manufacturer) who uses a company-internal package mirror)
-* May work on preparing patches for a Package Ecosystem provider (e.g. applying backports of fixes in Debian packages), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
+* May work on preparing patches for a Package Ecosystem provider (e.g. applying back-ports of fixes in Debian packages), or a Language Ecosystem provider (e.g. a company-internal CPAN mirror that distributes patched packages).
 * Some patches may contain substantial modifications and be based on the Packager's judgement and opinions.
 
 This role is necessary when...
@@ -949,7 +949,7 @@ Ensures the availability of packages or containers, that they are indexed correc
 > * FIXME – Not done
 
 * Equivalent to an [Integrator](#integrator)
-    * (CPANSec) Avoid using this term, since it doesn't distinguish between developers who publish their work as Open Source ([Maintainer](#maintainer)), Developers who work on behalf of a [Manufacturer](#manufacturer), [Integrating](#integrator) components into some product, service or applicatin, or a [Patcher](#patcher) working on behalf of a Package Ecosystem figuring out how to backport a fix.
+    * (CPANSec) Avoid using this term, since it doesn't distinguish between developers who publish their work as Open Source ([Maintainer](#maintainer)), Developers who work on behalf of a [Manufacturer](#manufacturer), [Integrating](#integrator) components into some product, service or application, or a [Patcher](#patcher) working on behalf of a Package Ecosystem figuring out how to backport a fix.
 
 * See also
   * [Integrator](#integrator)

@@ -152,7 +152,9 @@ stateDiagram-v2
     ecosystem_repo           --> environment_contributor
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
-
+    ecosystem_repo           --> environment_manufacturer
+    environment_maintainer   --> ecosystem_repo
+    environment_maintainer   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
     ecosystem_lang           --> ecosystem_lang
     ecosystem_lang           --> ecosystem_package

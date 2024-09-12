@@ -105,39 +105,39 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 1. Outreach & marketing
     * Article writing
     * Podcast hosting or participation
-    * Conference presentations
-    * SoMe presence
+    * Conference presentation
+    * Social Media presence
 1. Code review
     * Security review
     * Development process
-    * Maintainability
+    * Maintainability review
 1. Documentation
-    * Completeness
+    * Automation & Completeness
     * Consistency and Voice
     * User or Stakeholder Relevance
     * Indexing, Findability & SEO
     * Internationalization/I18N
     * Localization/L10N and Translation (Ref: [CHAOSS-2020](#references))
+    * Course/training material development
 1. Community management & development
     * Governance development
     * Culture & conduct
     * Diversity, Equity, Inclusion
     * Forum management, moderation and support
-    * Outreach & recruitment
+    * Recruitment & on-boarding
 1. Technical infrastructure and hosting
-    * Email
+    * DNS & Email
     * Chat forum
-    * DNS
     * Other hosted community services
 1. Event organizing
     * Conferences, Meetups, Hackathons or other gatherings for knowledge-sharing
     * Online events, webinars or classes/training
-    * Socializing
-1. Industry/Stakeholder/OSPO assistance
-1. Fundraising
+    * Social & networking events
+    * Program committee work
+1. Industry/Stakeholder/OSPO outreach & assistance
+1. Fund-raising
 1. Media relations
 1. Security contact
-1. Course/training material development
 1. Open Source Steward (EU Cyber Resilience Act)
 1. Legal counsel
     * License conflict resolution
@@ -146,12 +146,15 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
     * Security
     * Governance
     * Outreach & Communication
+    * Documentation
+    * Code contribution
 1. Skill & contribution gaps compensation (Ref: [MSFTOSS-2024](#references))
     * Language
     * Technology/platform
     * Specialized skills
 1. User Interface, User Experience, and Accessibility (Ref: [CHAOSS-2020](#references))
-1. Accessibility audit
+    * Accessibility audit
+1. Audio and video editing
 
 
 ## Other project states, claims and metadata

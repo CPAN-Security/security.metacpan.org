@@ -57,7 +57,7 @@ States in **bold** exist on CPAN.
 
 When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
 
-Items in **bold** are found in [CHAOSS-2020](#references).
+Needs in **bold** are found in [CHAOSS-2020](#references).
 
 1. Brand Development
     * Brand Strategy
@@ -137,11 +137,12 @@ Items in **bold** are found in [CHAOSS-2020](#references).
 | Offers       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
 | :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
 | MAINTAINED   | no        | YES       | YES       | no                   | no                 | OK            | Maintainer   |
-| CASUAL       | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
-| DONE         | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
+| CASUAL       | no        | YES       | YES       | YES                  | no                 | LOW           | Maintainer   |
+| DONE         | no        | YES       | no        | no                   | no                 | LOW           | Maintainer   |
 | LEASTEFFORT  | no        | YES       | YES       | no                   | no                 | MINIMUM       | Maintainer   |
 | DEPRECATED   | no        | YES       | no        | no                   | no                 | SECURITY      | Maintainer   |
-| UNMAINTAINED | no        | YES       | YES       | no                   | no                 | NONE          | Maintainer   |
+| SECURITYONLY | no        | YES       | no        | YES                  | no                 | SECURITY      | Maintainer   |
+| UNMAINTAINED | no        | YES       | YES       | YES                  | no                 | NONE          | Maintainer   |
 
 
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
@@ -164,6 +165,8 @@ Items in **bold** are found in [CHAOSS-2020](#references).
 
 
 ## Project Ecosystem States
+
+States in **bold** exist on CPAN.
 
 | States       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
 | :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |

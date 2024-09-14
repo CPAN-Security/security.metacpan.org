@@ -141,14 +141,14 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 | DONE         | no        | YES       | no        | no                   | no                 | LOW           | Maintainer   |
 | LEASTEFFORT  | no        | YES       | YES       | no                   | no                 | MINIMUM       | Maintainer   |
 | DEPRECATED   | no        | YES       | no        | no                   | no                 | SECURITY      | Maintainer   |
-| SECURITYONLY | no        | YES       | no        | YES                  | no                 | SECURITY      | Maintainer   |
+| SECURITYONLY | no        | YES       | YES       | YES                  | no                 | SECURITY      | Maintainer   |
 | UNMAINTAINED | no        | YES       | YES       | YES                  | no                 | NONE          | Maintainer   |
 
 
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
     * Response time expectations should be low
     * (number of maintainers is 1 or higher)
-    * (number of maintainers does not need to change)
+    * (number of maintainers increase may be desired)
 1. DEPRECATED – The project maintainer recommends that this project is not to be used
     * (number of maintainers is 0)
     * (number of maintainers does not need to change)
@@ -157,11 +157,14 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * (number of maintainers does not need to change)
 1. MAINTAINED – The project is maintained (default state)
     * (number of maintainers is higher than 0)
-    * (number of maintainers does not need to change)
+    * (number of maintainers increase may be desired)
+1. SECURITYONLY – The project receives security fixes only
+    * (number of maintainers is 1 or higher)
+    * (number of maintainers increase may be desired)
 1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))
     * Response time expectations should be none
     * (number of maintainers is 1 or higher)
-    * (number of maintainers does not need to change)
+    * (number of maintainers increase may be desired)
 
 
 ## Project Ecosystem States

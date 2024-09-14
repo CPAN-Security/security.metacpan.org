@@ -16,8 +16,10 @@ mermaid: true
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
+This document is background material and notes for the [CycloneDX OSS Sustainability WG](https://docs.google.com/document/d/1IZnHEwzz1N7LbChVkZTE_dfo3I2np8rULssq5I2wchM/edit).
 
-## Table of life-cycle states
+
+## Project Need Indicators
 
 States in **bold** exist on CPAN.
 
@@ -28,6 +30,7 @@ States in **bold** exist on CPAN.
 | **ADOPTME**  | YES       | no        | no        | YES                  | no                 | NONE          | Ecosystem    |
 | NEEDFUNDING  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
 | NEEDSUPPORT  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
+
 
 1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))
     * (number of maintainers is higher than 0)
@@ -48,73 +51,9 @@ States in **bold** exist on CPAN.
     * Examples: Branding development; Code security audit; Event organizing; Documentation writing;
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
+    * See [Enumeration of NEEDSUPPORT items](#enumeration-of-needsupport-items) for examples
 
-
-| Offers       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| MAINTAINED   | no        | YES       | YES       | no                   | no                 | OK            | Maintainer   |
-| CASUAL       | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
-| DONE         | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
-| LEASTEFFORT  | no        | YES       | YES       | no                   | no                 | MINIMUM       | Maintainer   |
-| DEPRECATED   | no        | YES       | no        | no                   | no                 | SECURITY      | Maintainer   |
-| UNMAINTAINED | no        | YES       | YES       | no                   | no                 | NONE          | Maintainer   |
-
-### Support offer indicators
-
-1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
-    * Response time expectations should be low
-    * (number of maintainers is 1 or higher)
-    * (number of maintainers does not need to change)
-1. DEPRECATED – The project maintainer recommends that this project is not to be used
-    * (number of maintainers is 0)
-    * (number of maintainers does not need to change)
-1. DONE – The project is considered "Done", and while it is maintained, no further development is needed or expected
-    * (number of maintainers is 1 or higher)
-    * (number of maintainers does not need to change)
-1. MAINTAINED – The project is maintained (default state)
-    * (number of maintainers is higher than 0)
-    * (number of maintainers does not need to change)
-1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))
-    * Response time expectations should be none
-    * (number of maintainers is 1 or higher)
-    * (number of maintainers does not need to change)
-
-
-| States       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| COMPROMISED  | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
-| CUSTODY      | YES       | no        | no        | YES                  | no                 | SECURITY      | Ecosystem    |
-| DELISTED     | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
-| DUAL         | no        | YES       | YES       | no                   | no                 | OK            | Ecosystem    |
-| **NOXFER**   | no        | YES       | no        | no                   | no                 | NONE          | Ecosystem    |
-| UNREACHABLE  | no        | YES       | YES       | no                   | no                 | ERROR         | Ecosystem    |
-
-1. COMPROMISED – This project has a prevailing and substantial security compromise
-    * Project has removed from the index due to security issues that have prevailed for a substantial time.
-    * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
-    * (number of maintainers is not relevant)
-1. CUSTODY – This project is under custodianship
-    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
-    * (number of maintainers is 0)
-1. DELISTED
-    * The project has been removed from the ecosystem index due to extraordinary circumstances
-    * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
-1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
-    * This project is maintained by the language core team itself.
-    * The project is both published as part of the core language, and through the language ecosystem.
-    * Equivalent to the P5P special user on CPAN (Ref: [PAUSE-2017](#references))
-1. NOXFER – The project is prevented from being transferred to new maintainers (Ref: [PAUSE-2017](#references))
-    * The project maintainer has requested that this project is to be prevented from being adopted.
-    * The project may still be forked under a new name.
-    * (number of maintainers is not relevant)
-1. UNREACHABLE – The project maintainers are not reachable
-    * The project maintainer(s) has not been reachable through registered communication channels for a substantial time, due to reasons outside the control of the project.
-        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other Forces Majeures beyond the Maintainer's control.
-    * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
-    * (number of maintainers is not relevant)
-
-
-### List of Support Types
+### Enumeration of NEEDSUPPORT items
 
 When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
 
@@ -193,6 +132,74 @@ Items in **bold** are found in [CHAOSS-2020](#references).
 1. **User Interface, User Experience, and Accessibility**
     * Accessibility audit
 
+## Project Support Indicators
+
+| Offers       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
+| MAINTAINED   | no        | YES       | YES       | no                   | no                 | OK            | Maintainer   |
+| CASUAL       | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
+| DONE         | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
+| LEASTEFFORT  | no        | YES       | YES       | no                   | no                 | MINIMUM       | Maintainer   |
+| DEPRECATED   | no        | YES       | no        | no                   | no                 | SECURITY      | Maintainer   |
+| UNMAINTAINED | no        | YES       | YES       | no                   | no                 | NONE          | Maintainer   |
+
+
+1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
+    * Response time expectations should be low
+    * (number of maintainers is 1 or higher)
+    * (number of maintainers does not need to change)
+1. DEPRECATED – The project maintainer recommends that this project is not to be used
+    * (number of maintainers is 0)
+    * (number of maintainers does not need to change)
+1. DONE – The project is considered "Done", and while it is maintained, no further development is needed or expected
+    * (number of maintainers is 1 or higher)
+    * (number of maintainers does not need to change)
+1. MAINTAINED – The project is maintained (default state)
+    * (number of maintainers is higher than 0)
+    * (number of maintainers does not need to change)
+1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))
+    * Response time expectations should be none
+    * (number of maintainers is 1 or higher)
+    * (number of maintainers does not need to change)
+
+
+## Project Ecosystem States
+
+| States       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
+| COMPROMISED  | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
+| CUSTODY      | YES       | no        | no        | YES                  | no                 | SECURITY      | Ecosystem    |
+| DELISTED     | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
+| DUAL         | no        | YES       | YES       | no                   | no                 | OK            | Ecosystem    |
+| **NOXFER**   | no        | YES       | no        | no                   | no                 | NONE          | Ecosystem    |
+| UNREACHABLE  | no        | YES       | YES       | no                   | no                 | ERROR         | Ecosystem    |
+
+### Project State Indicators
+
+1. COMPROMISED – This project has a prevailing and substantial security compromise
+    * Project has removed from the index due to security issues that have prevailed for a substantial time.
+    * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
+    * (number of maintainers is not relevant)
+1. CUSTODY – This project is under custodianship
+    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
+    * (number of maintainers is 0)
+1. DELISTED
+    * The project has been removed from the ecosystem index due to extraordinary circumstances
+    * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
+1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
+    * This project is maintained by the language core team itself.
+    * The project is both published as part of the core language, and through the language ecosystem.
+    * Equivalent to the P5P special user on CPAN (Ref: [PAUSE-2017](#references))
+1. NOXFER – The project is prevented from being transferred to new maintainers (Ref: [PAUSE-2017](#references))
+    * The project maintainer has requested that this project is to be prevented from being adopted.
+    * The project may still be forked under a new name.
+    * (number of maintainers is not relevant)
+1. UNREACHABLE – The project maintainers are not reachable
+    * The project maintainer(s) has not been reachable through registered communication channels for a substantial time, due to reasons outside the control of the project.
+        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other Forces Majeures beyond the Maintainer's control.
+    * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
+    * (number of maintainers is not relevant)
+
 
 ## Other project states, claims and metadata
 
@@ -209,7 +216,7 @@ Items in **bold** are found in [CHAOSS-2020](#references).
 
 ## License and use of this document
 
-* Version: 0.1.1
+* Version: 0.2.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

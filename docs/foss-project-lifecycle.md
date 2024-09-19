@@ -142,6 +142,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 | LEASTEFFORT  | no        | YES       | YES       | no                   | no                 | MINIMUM       | Maintainer   |
 | DEPRECATED   | no        | YES       | no        | no                   | no                 | SECURITY      | Maintainer   |
 | SECURITYONLY | no        | YES       | YES       | YES                  | no                 | SECURITY      | Maintainer   |
+| SUPERSEEDED  | no        | YES       | YES       | no                   | no                 | 
 | UNMAINTAINED | no        | YES       | YES       | YES                  | no                 | NONE          | Maintainer   |
 
 
@@ -179,6 +180,8 @@ States in **bold** exist on CPAN.
 | DUAL         | no        | YES       | YES       | no                   | no                 | OK            | Ecosystem    |
 | **NOXFER**   | no        | YES       | no        | no                   | no                 | NONE          | Ecosystem    |
 | UNREACHABLE  | no        | YES       | YES       | no                   | no                 | ERROR         | Ecosystem    |
+
+
 
 ### Project State Indicators
 

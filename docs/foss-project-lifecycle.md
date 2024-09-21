@@ -69,6 +69,10 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Maintainability review
 1. **Code Writing**
     * Internationalization/I18N
+1. Packaging
+    * Adaptation new packaging systems
+    * Package maintenance
+    * Container assembly
 1. **Community Building and Management**
     * Culture and conduct
     * Diversity, Equity, Inclusion

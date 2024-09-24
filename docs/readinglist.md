@@ -123,7 +123,9 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * In [Chapter II](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=36)
     * Article 7 paragraph 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
+    * Article 20
     * Articles 21 paragraphs 1, 2, 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
+    * Article 23
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 
 #### NIS2 Implemented Regulation
@@ -242,6 +244,9 @@ Annexes are technical materials presented separately from the main text, and hav
 
 (EU) [Digital Operational Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554&qid=1710317679922): Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations (DORA, 2022-12-14)
 
+
+* Article 16-23
+
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-cross-sectoral-financial-services-act-1)
 
 
@@ -268,6 +273,20 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 
 * (PCI-SSC) [PCI-SSF v1.2.1](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), Published May 2023
 
+
+## Information Security
+
+* ISO 27001
+    * 6.1.3
+    * 9.1
+    * 7.2
+    * 6.1.2
+    * 5.2
+    * Article 5.24, Article 5.25, Article 5.26
+    * 
+    * 
+* CIS Controls V8
+* ISO 27036:2023 (3rd party risk)
 
 ## License and use of this document
 

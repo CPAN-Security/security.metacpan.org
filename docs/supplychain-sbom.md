@@ -72,13 +72,13 @@ stateDiagram-v2
     environment_maintainer   --> ecosystem_repo
     environment_maintainer   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
-    ecosystem_lang           --> ecosystem_lang
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
-    ecosystem_package        --> ecosystem_package
     ecosystem_repo           --> environment_integrator
     ecosystem_lang           --> environment_integrator
     ecosystem_package        --> environment_integrator
+    ecosystem_lang           --> ecosystem_lang
+    ecosystem_package        --> ecosystem_package
     environment_integrator   --> environment_prod
     environment_prod         --> [*]
 
@@ -135,27 +135,27 @@ stateDiagram-v2
     state "🟨🟩 Package Ecosystem" as ecosystem_package
     state "🟥 Attestation Authority 🆕" as authority_attestation
     state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
-    state "🟥🟨🟦🟪 Manufacturer (Integrator) 🆕" as environment_manufacturer
-    state "🟦 Auditor 🆕\n🟦 Importer 🆕\n🟦 Distributor 🆕" as authority_auditor
+    state "🟥🟨🟦🟪 Integrator (Manufacturer) 🆕" as environment_manufacturer
+    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
     ecosystem_repo           --> environment_contributor
+    ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
     ecosystem_repo           --> environment_manufacturer
     environment_maintainer   --> ecosystem_repo
     environment_maintainer   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
-    ecosystem_lang           --> ecosystem_lang
-    ecosystem_lang           --> ecosystem_package
-    ecosystem_package        --> ecosystem_package
-    ecosystem_package        --> ecosystem_steward
-    ecosystem_lang           --> ecosystem_steward
     authority_attestation    --> ecosystem_steward
-    ecosystem_package        --> environment_manufacturer
+    ecosystem_package        --> ecosystem_package
+    ecosystem_lang           --> ecosystem_steward
+    ecosystem_package        --> ecosystem_steward
     ecosystem_steward        --> environment_manufacturer
     environment_manufacturer --> authority_auditor
+    ecosystem_package        --> environment_manufacturer
+    ecosystem_lang           --> ecosystem_lang
     authority_auditor        --> [*]
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
@@ -186,7 +186,7 @@ And finally, we acknowledge that some situations may call for an SBOM Censor, wh
 * 🟪 SBOM Censor – **Censors**, redacts, deletes, anonymizes or filters Metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
 
 
-## Open Source Supply-chain (Detailed)
+## Open Source Supply-chain
 
 > [!NOTE]
 > The graphs in this document do *not* include _Content Delivery Networks_, _Model Ecosystems_ or _Plugin Ecosystems_.
@@ -200,9 +200,9 @@ stateDiagram-v2
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %%
-    state "🟥 Owner (Supplier)" as maintainer_owner
-    state "🟥🟨 Maintainer (Developer)\n🟨 Custodian" as maintainer_author
-    state "🟨🟦 Packager" as language_packager
+    state "🟥 Owner" as maintainer_owner
+    state "🟥🟨 Maintainer<br>🟨 Custodian" as maintainer_author
+    state "🟨🟦 Packager (Maintainer)" as language_packager
 
     %%
     state "🟥 Attestation Authority 🆕" as authority_attester
@@ -220,24 +220,24 @@ stateDiagram-v2
     %%
     state "🟦 Authenticator" as package_authenticator
     state "🟨 Patcher (Developer)" as package_patcher
-    state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as package_packager
+    state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as package_packager
     %% FIXME: package_steward not useful/necessary?
     state "🟥🟨🟦 Open Source Software Steward 🆕" as package_steward
     state "🟨 Curator" as package_curator
     state "🟩 Provider" as package_distributor
 
     %%
-    state "🟥 Manufacturer (Supplier) 🆕" as integrator_owner
+    state "🟥 Manufacturer 🆕" as integrator_owner
     state "🟥🟨🟦 Integrator (Developer)" as integrator_developer
-    state "🟨🟦 Builder\n🟨🟦 Packager\n🟨🟦 Assembler" as integrator_builder
+    state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as integrator_builder
     state "🟩🟪 SBOM Censor" as integrator_censor
     state "🟩 Publisher" as integrator_publisher
-    state "🟦 Analyst\n🟦 Auditor" as integrator_analyst
+    state "🟦 Analyst<br>🟦 Auditor" as integrator_analyst
 
     %%
     state "🟨 Deployer" as prod_deployer
     state "🟦 End-user, Consumer" as external_consumer
-    state "🟦 Auditor 🆕\n🟦 Importer 🆕\n🟦 Distributor 🆕" as authority_auditor
+    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
 
     %%
     classDef createsSBOM stroke:red,stroke-width:3px;
@@ -378,113 +378,11 @@ stateDiagram-v2
 ```
 
 
-## Ecosystems and Environments
+## Supply-chain Ecosystems, their Roles and Metadata
 
 Which environments and Ecosystems are found throughout a Supply-chain? Here's an overview.
 
-
-### Maintainer Environment
-
-One or more developers that publish an Open Source component.
-
-* Publishes [Open Source Software](glossary.md#open-source-software)
-* May have a project development life-cycle
-* May use a [Collaboration Ecosystem](#collaboration-ecosystem) to interact with [Contributors](#contributor)
-* May publish their project through a [Language Ecosystem](#language-ecosystem)
-* May have their project published through a [Package Ecosystem](#package-ecosystem)
-* May be intended for commercial use
-
-#### Author Environment
-
-* See also
-  * [Maintainer Environment](#maintainer-environment).
-
-
-### Collaboration Ecosystem
-
-A website or tool ("Forge") that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
-
-* Examples: Github, Codeberg, Bitbucket, Gitlab, Gitea and others.
-* May be open for public use, or project specific use only
-
-#### Repository Ecosystem
-
-* See also
-  * [Collaboration Ecosystem](#collaboration-ecosystem).
-
-
-### Language Ecosystem
-
-A language ecosystem hosts, indexes and distributes components specific for a programming language.
-Used for publishing Open Source components for use when writing software in the given programming language.
-Typically, the Ecosystem has dedicated services and tooling for interacting with it.
-
-* Examples: CPAN (Perl), PyPI (Python), NPM (Node/JS)
-* May have upstream language ecosystems
-* May have downstream language ecosystems
-* May have automated Patcher
-* May be Public
-* May be Private
-
-
-### Package Ecosystem
-
-A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#curator), [indexes and hosts](#distributor) either components for a specific OS distributions, or [collections](#assembler) of components for use in container registries, made available (published) for easy download and use.
-Package Ecosystems typically have their own tooling and services that are expected to be used when interacting with them.
-
-* Examples of package systems: APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD)
-* Examples of container systems: Docker Hub
-* May have upstream package ecosystems
-* May have downstream package ecosystems
-* May be Public
-* May be Private
-
-
-### Manufacturer Environment
-
-> [!NOTE]
-> * FIXME – Much more to add!
->   * e.g. from https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
->   * Check also out the work coming out of the Eclipse ORC Working Group
->   * Cover the CE mark requirements, the roles of downstream Importers and Distributors in verifying these,
->   * Cover the roles of upstream Roles in attesting the security of the components they use
-
-* Used specifically in the context of the EU Cyber Resilience Act, to mean a commercial entity that places a product with digital elements on the EU market.
-* Is expected to produce a complete SBOM document describing their application, including all dependencies.
-
-* See also
-  * [Integrator Environment](#integrator-environment).
-
-#### Integrator Environment
-
-A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
-
-* Operates commercially
-* May publish [Open Source Software](glossary.md#open-source-software)
-* Has a project development life-cycle
-
-* See also:
-    * [Manufacturer Environment](#manufacturer-environment)
-
-
-### Production Environment
-
-> [!NOTE]
-> * FIXME – Add examples of physical products
-
-The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
-
-#### Customer Environment
-
-The environment and systems where a product or service is executed by a customer and thereby made available to their users.
-
-* See also
-   * [Production Environment](#production-environment)
-
-
-## Supply-chain Roles and Metadata
-
-Throughout Open-Source Supply-chains, we find different Roles that care about certain metadata, or are in possession of some authoritative information, or needs to verify these.
+Throughout Open Source Supply-chains, we find different Roles that care about certain metadata, or are in possession of some authoritative information, or needs to verify these.
 Here, you'll get an overview of the most important ones, which attributes they care about and how they care, and some information about why they do so (e.g. due to legal requirements).
 
 * Ops: The type of operation that someone with a given Role is most likely to do on a given metadata attribute.
@@ -499,9 +397,9 @@ Here, you'll get an overview of the most important ones, which attributes they c
 * FIXME: CPANSec Remaining work related to this attribute.
 
 
-### SBOM Baseline Attributes
+### Environment-independent (Baseline) Attributes
 
-These are common across all roles, and considered to be _baseline_ because they are required by all Roles.
+These are common across all roles, and considered to be _baseline_ because they are required independently of the Roles' needs.
 
 | Ops | Attribute name           | Required | Required by             | Comment | FIXME   |
 | :-: | :----------------------- | :------: | ----------------------- | :------ | :------ |
@@ -514,23 +412,20 @@ These are common across all roles, and considered to be _baseline_ because they 
 | 🟥  | SBOM Release             | Yes      | CycloneDX 1.6, SPDX 2.3 |         |         |
 
 
-### Supplier
 
-The Supplier is a role used throughout the Supply-chain, but most often represents a Role within a [Maintainer](#maintainer-environment) or an [Integrator](#integrator-environment) Environment.
+----------------------------------------------------------------------
 
-* This term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
-* (CPANSec) This term is confusing, as it doesn't distinguish between the different types of "Suppliers" that may be involved in the creation of a product.
-    * Please use a more precise term, like [Maintainer](#maintainer) or [Manufacturer](#manufacturer).
+### Maintainer Environment
 
-* See also
-  * [Supplier](glossary.md#supplier) in the glossary.
-  * [Owner](#owner),
-  * [Maintainer](#maintainer),
-  * [Custodian](#custodian),
-  * [Manufacturer](#manufacturer),
-  * [Maintainer Environment](#maintainer-environment),
-  * [Integrator Environment](#integrator-environment),
-  * [Open Source Software Steward](#open-source-software-steward),
+This environment represents one or more developers that publish an Open Source component.
+
+* Publishes [Open Source Software](glossary.md#open-source-software)
+* May have a project development life-cycle
+* May use a [Collaboration Ecosystem](#collaboration-ecosystem) to interact with [Contributors](#contributor)
+* May publish their project through a [Language Ecosystem](#language-ecosystem)
+* May have their project published through a [Package Ecosystem](#package-ecosystem)
+* May be intended for commercial use
+
 
 #### Owner
 
@@ -551,35 +446,8 @@ The legal owner of a project or product.
 * See also
   * [Manufacturer](#manufacturer)
 
-#### Manufacturer
 
-> [!NOTE]
-> Manufacturer has a specific defined meaning in the EU Cyber Resilience Act (CRA), so until this definition is established, be careful when using the term.
-> These attributes are in addition to the attributes listed under [Owner](#owner--supplier-).
-> SPDX 2.3 doesn't support the CE attributes. SPDX 3.0 should be used at a future date.
-
-* A role within an [Integrator Environment](#integrator-environment).
-* When doing business within the European Economic Area (EEA), has the duty to ensure that the conformity obligations in the EU Cyber Resilience Act (CRA) are met.
-
-| Ops | Attribute name                | Required | Required by                        | Comment | FIXME   |
-| :-: | :---------------------------- | :------: | ---------------------------------- | :------ | :------ |
-| 🟥  | Supplier Name (Manufacturer)  | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |         |
-| 🟥  | CE Declaration of Conformity  | Yes      | CRA-AII(6), CRA-AV                 |         |         |
-| 🟥  | CE Support End Date           | Yes      | CRA-AII(7)                         |         |         |
-| 🟥  | CE Technical Documentation    | Yes      | CRA-AII(8), CRA-AVII               |         |         |
-| 🟥  | CE Conformity Assessment Body | Yes      | CRA Article 47.1, CRA-AV           |         |         |
-
-* See also
-  * [Owner](#owner--supplier-)
-
-
-### Author (SBOM)
-
-* See also
-  * [SBOM Author](#sbom-author)
-
-
-### Maintainer
+#### Maintainer
 
 An author or main developer of an Open Source component project.
 
@@ -618,7 +486,8 @@ An author or main developer of an Open Source component project.
 | 🟨  | SBOM Generation Tool               | No       |                                            |         | Consider recommendation |
 
 * See also
-  * [Maintainer](#maintainer).
+  * [Integrator](#integrator).
+
 
 #### Custodian
 
@@ -641,6 +510,43 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 | 🟨  | Supplier Name (Custodian)      | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2, CRA-AV |         |         |
 | 🟨  | Project Sustainability         | No       |                                            | CycloneDX 1.7 proposed | |
 
+
+#### Packager (Maintainer)
+
+Prepares a Language ecosystem package for upload.
+
+* See also
+  * [Packager](#packager)
+
+
+----------------------------------------------------------------------
+
+### Collaboration Ecosystem
+
+A website or tool ("Forge") that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
+
+* Examples: Github, Codeberg, Bitbucket, Gitlab, Gitea and others.
+* May be open for public use, or project specific use only
+
+
+#### Depositary
+
+> [!NOTE]
+> * (CPANSec-2024) Proposed role name.
+
+Takes care of the hosting of a project's public source code repository on behalf of it's [Maintainer](#maintainer).
+Common responsibilities include ensuring availability, non-tampering and hosting supporting services like continuous integration (CI) pipelines.
+
+* Operates within a [Collaboration Ecosystem](#collaboration-ecosystem).
+* Ensures the integrity and availability of the public source code repository.
+* Facilitates collaboration through the hosting of the server components used by git, bzr or similar tooling.
+* May assist in updating some SBOM metadata attributes.
+* May function as a distribution point for releases of a Maintainer's project.
+
+* See also
+  * [Distributor](#distributor)
+
+
 #### Contributor
 
 * Operates independently, but through a [Collaboration Ecosystem](#collaboration-ecosystem).
@@ -648,64 +554,78 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 * May or may not have repository commit privileges.
 * May also have additional roles, including being a downstream [Integrator](#integrator), [Patcher](#patcher) or [Maintainer](#maintainer).
 
-#### Steward
 
-> [!NOTE]
-> * Possible synonym for [Custodian](#custodian).
-> * Steward has a specific defined meaning in the EU Cyber Resilience Act      , so it's better to avoid using the term in this manner.
+----------------------------------------------------------------------
 
-* See also
-  * [Open Source Software Steward](#open-source-software-steward)
+### Language Ecosystem
 
-#### Author
+A language ecosystem hosts, indexes and distributes components specific for a programming language.
+Used for publishing Open Source components for use when writing software in the given programming language.
+Typically, the Ecosystem has dedicated services and tooling for interacting with it.
 
-* See also
-  * [Maintainer](#maintainer)
-
-
-### Importer
-
-> [!CAUTION]
-> * Not directly part of an Open Source Supply-chain, but can be found downstream of Manufacturers that use these.
-> * FIXME – Not done
-
-* A role specific for the EU Cyber Resilience Act.
-* Operate downstream of Manufacturers.
-* A role specifically used when a EU entity makes available software on the EU market,
-* Is required to verify that the imported software is compliant with the EU Cyber Resilience Act       according to it's Article 19.
-
-| Ops | Attribute name                  | Required | Required by              | Comment | FIXME   |
-| :-: | :------------------------------ | :------: | ------------------------ | :------ | :------ |
-| 🟦  | Security contact                | Yes      | CRA-AII(2)               |         |         |
-| 🟦  | Unique Product ID               | Yes      | CRA-AII(3), NTIA-SBOM    |         |         |
-| 🟦  | Purpose, Intended Use           | Yes      | CRA-AII(4)               |         |         |
-| 🟦  | SBOM Location                   | No       | CRA-AII(9)               |         |         |
-| 🟦  | CE Declaration of Conformity    | No       | CRA-AII(6), CRA-AV       |         |         |
-| 🟦  | CE Support End Date             | No       | CRA-AII(7)               |         |         |
-| 🟦  | CE Instructions (Documentation) | No       | CRA-AII(8)               |         |         |
-| 🟦  | CE Conformity Assessment Body   | No       | CRA Article 47.1, CRA-AV |         |         |
-| 🟦  | Download location               | FIXME    |                          |         |         |
-
-* See also
-   * [Importer](glossary.md#importer) in the glossary.
-   * [Distributor](glossary.md#distributor) in the glossary.
+* Examples: CPAN (Perl), PyPI (Python), NPM (Node/JS)
+* May have upstream language ecosystems
+* May have downstream language ecosystems
+* May have automated Patcher
+* May be Public
+* May be Private
 
 
-### Authenticator
+#### Authenticator (Language ecosystem)
 
 > [!CAUTION]
 > * FIXME – Not done
 > * FIXME – Find a better name
 
 Authenticators ensure that only authorized Maintainers are allowed to publish their components to a [Language](#language-ecosystem) or [Package Ecosystem](#package-ecosystem).
+Usually decides who gets access to which resources.
 
 * Examples
     * (CPAN) Upload to the PAUSE web interface at `https://pause.perl.org`
     * (Debian) Upload using the `dput` tool, or manually to `sftp://ftp.eu.upload.debian.org/pub/UPLOAD` for regular packages
         * For security updates, upload a patch to the stable-proposed-updates and an accompanying explanation to the `stable-release-managers` list
 
+#### Packager (Language ecosystem)
 
-### Patcher
+> [!CAUTION]
+> * FIXME – Not done
+
+
+#### Open Source Software Steward
+
+> [!CAUTION]
+> * FIXME – Not done
+
+Within, or on behalf of a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#package-ecosystem), the OSS Steward has the task to ensure that their obligations in the EU Cyber Resilience Act are met.
+
+
+| Ops | Attribute name                     | Required | Required by            | Comment | FIXME   |
+| :-: | :--------------------------------- | :------: | ---------------------- | :------ | :------ |
+| 🟦  | Open Source Software Steward       | Yes      | CRA-Rec-19             |         |         |
+| 🟦  | Intended for Commercial Use        | Yes      | CRA-Rec-15, CRA-Rec-18 |         |         |
+| 🟥  | Security Attestation               | Yes      | CRA-Rec-21             |         | Confirm with standardization body |
+
+* See also
+  * [Maintainer](#maintainer), and
+  * [Open Source Software Steward](glossary.md#open-source-software-steward-%EF%B8%8F) in the glossary.
+
+
+----------------------------------------------------------------------
+
+### Package Ecosystem
+
+A package ecosystem [patches](#patcher), [repackages](#packager), [curates](#curator), [indexes and hosts](#distributor) either components for a specific OS distributions, or [collections](#assembler) of components for use in container registries, made available (published) for easy download and use.
+Package Ecosystems typically have their own tooling and services that are expected to be used when interacting with them.
+
+* Examples of package systems: APT (Debian, Ubuntu), RPM (AlmaLinux, SuSE), Ports (FreeBSD)
+* Examples of container systems: Docker Hub
+* May have upstream package ecosystems
+* May have downstream package ecosystems
+* May be Public
+* May be Private
+
+
+#### Patcher
 
 > [!CAUTION]
 > * FIXME – Not done
@@ -748,7 +668,7 @@ This role is necessary when...
     * In Debian, there is a concept of "Non-Maintainer Uploads", where contributors are allowed to do one-time uploads to fix bugs under certain conditions and following some guidelines. (Source: [Debian developers reference](https://www.debian.org/doc/manuals/developers-reference/pkgs.en.html#non-maintainer-uploads-nmus), [perl5-porters message on NMUs](https://www.nntp.perl.org/group/perl.perl5.porters/2024/08/msg268757.html))
 
 
-### Builder
+#### Builder
 
 > [!IMPORTANT]
 > Builders should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
@@ -757,6 +677,7 @@ This role is necessary when...
     * [Packager](#packager),
     * [Assembler](#assembler),
     * [Deployer](#deployer).
+
 
 #### Packager
 
@@ -777,6 +698,7 @@ This role is necessary when...
 | :-: | :---------------------- | :------: | ---------------------------------- | :------ | :------ |
 | 🟥  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM              |         |         |
 
+
 #### Assembler
 
 > [!NOTE]
@@ -790,47 +712,7 @@ This role is necessary when...
 | :-: | :---------------------- | :------: | --------------------- | :------ | :------ |
 | 🟥  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM |         |         |
 
-#### Deployer
-
-> [!CAUTION]
-> * FIXME – Not done
-
-* Operates within a [Production Environment](#production-environment).
-* Final preparation and installation of the software into a CI/CD or other deployment method an [Integrator](#integrator-environment) or [Production Environment](#production-environment).
-
-| Ops | Attribute name                 | Required | Required by           | Comment | FIXME   |
-| :-: | :----------------------------- | :------: | --------------------- | :------ | :------ |
-| 🟥  | Dependencies (Deployed)        | Yes      | CRA-AII(5), NTIA-SBOM |         |         |
-
-#### Installer
-
-> [!NOTE]
-> Mentioned once in the EU Cyber Resilience Act.
-
-* See also
-  * [Deployer](#deployer)
-
-
-### Open Source Software Steward
-
-> [!CAUTION]
-> * FIXME – Not done
-
-Within, or on behalf of a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#package-ecosystem), the OSS Steward has the task to ensure that their obligations in the EU Cyber Resilience Act are met.
-
-
-| Ops | Attribute name                     | Required | Required by            | Comment | FIXME   |
-| :-: | :--------------------------------- | :------: | ---------------------- | :------ | :------ |
-| 🟦  | Open Source Software Steward       | Yes      | CRA-Rec-19             |         |         |
-| 🟦  | Intended for Commercial Use        | Yes      | CRA-Rec-15, CRA-Rec-18 |         |         |
-| 🟥  | Security Attestation               | Yes      | CRA-Rec-21             |         | Confirm with standardization body |
-
-* See also
-  * [Maintainer](#maintainer), and
-  * [Open Source Software Steward](glossary.md#open-source-software-steward-%EF%B8%8F) in the glossary.
-
-
-### Curator
+#### Curator
 
 > [!NOTE]
 > * Curators may decide both whether and where the output of a Packager is distributed.
@@ -851,21 +733,7 @@ Within, or on behalf of a [Language Ecosystem](#language-ecosystem) or a [Packag
 | 🟥  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |         |
 
 
-### Depositary
-
-> [!NOTE]
-> * (CPANSec-2024) Proposed role name.
-
-* Operates within a [Collaboration Ecosystem](#collaboration-ecosystem).
-* Ensures the integrity and availability of the public source code repository.
-* Facilitates collaboration through the hosting of the server components used by git, bzr or similar tooling.
-* May assist in updating some SBOM metadata attributes.
-
-* See also
-  * [Distributor](#distributor)
-
-
-### Provider
+#### Provider
 
 > [!CAUTION]
 > * FIXME – Not done
@@ -890,23 +758,146 @@ Ensures the availability of packages or containers, that they are indexed correc
 | 🟦  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |         |
 
 
-#### Distributor
 
-> [!CAUTION]
-> * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor,
+----------------------------------------------------------------------
 
-* Distributor is a term commonly used throughout Open Source Ecosystems, but
-    * Distributors have additional requirements and considerations laid out in CISA-2024.
-    * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+### Integrator Environment
+
+A business or institution that is responsible for developing and building the application that is required to have an accompanying SBOM document.
+
+* Operates commercially
+* May publish [Open Source Software](glossary.md#open-source-software)
+* Has a project development life-cycle
+
+* See also:
+    * [Manufacturer Environment](#manufacturer-environment)
+
+```mermaid
+stateDiagram-v2
+    direction TB
+    accTitle: An Idealized Open Source Supply-chain Graph
+    %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
+
+    state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
+
+    %%
+    state "🟥 Manufacturer 🆕" as integrator_owner
+    state "🟥🟨🟦 Integrator (Developer)" as integrator_developer
+    state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as integrator_builder
+    state "🟩🟪 SBOM Censor" as integrator_censor
+    state "🟩 Publisher" as integrator_publisher
+    state "🟦 Analyst<br>🟦 Auditor" as integrator_analyst
+
+    %%
+    state "🟦 End-user, Consumer" as external_consumer
+    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
+
+    %%
+    classDef createsSBOM stroke:red,stroke-width:3px;
+    classDef updatesSBOM stroke:yellow,stroke-width:3px,stroke-dasharray:5,5;
+    classDef assemblesSBOM stroke:yellow,stroke-width:3px;
+    classDef distributesSBOM stroke:green,stroke-width:3px;
+    classDef verifiesSBOM stroke:#07f,stroke-width:3px;
+    classDef censorsSBOM stroke:#07f,stroke-width:3px;
+    classDef ignoresSBOM stroke:#777,stroke-width:3px;
+
+    %%
+    class maintainer_owner createsSBOM
+    class maintainer_author createsSBOM
+
+    %%
+    class repository_distributor distributesSBOM
+    class external_contributor ignoresSBOM
+
+    %%
+    class language_authenticator updatesSBOM
+    class language_packager assemblesSBOM
+    class language_steward createsSBOM
+    class language_curator updatesSBOM
+    class language_distributor distributesSBOM
+
+    %%
+    class package_authenticator updatesSBOM
+    class package_patcher updatesSBOM
+    class package_packager assemblesSBOM
+    class package_steward createsSBOM
+    class package_curator updatesSBOM
+    class package_distributor distributesSBOM
+
+    %%
+    class integrator_owner createsSBOM
+    class integrator_developer assemblesSBOM
+    class integrator_censor updatesSBOM
+    class integrator_publisher distributesSBOM
+    class integrator_builder assemblesSBOM
+    class integrator_analyst verifiesSBOM
+
+    %%
+    class prod_deployer assemblesSBOM
+    class external_consumer ignoresSBOM
+
+    %%
+    class authority_attester createsSBOM
+    class authority_auditor verifiesSBOM
+
+    state "Language Ecosystem" as ecosystem_lang
+    state "Collaboration Ecosystem" as ecosystem_repo
+    state "Package Ecosystem" as ecosystem_package
+
+    %%
+    state "Integrator Environment" as environment_integrator {
+        [*] --> integrator_developer
+        integrator_owner     --> integrator_developer
+        integrator_builder   --> integrator_censor
+        integrator_builder   --> integrator_publisher
+        integrator_builder   --> integrator_analyst
+        integrator_developer --> integrator_builder
+        integrator_analyst   --> integrator_developer
+    }
+
+    
+    language_steward  --> environment_integrator
+    ecosystem_repo    --> environment_integrator
+    ecosystem_lang    --> environment_integrator
+    ecosystem_package --> environment_integrator
+
+    %%
+    state "Production Environment" as environment_prod
+
+    integrator_builder   --> environment_prod
+    integrator_developer --> environment_prod
+    integrator_publisher --> authority_auditor
+    integrator_publisher --> environment_prod
+    integrator_censor    --> external_consumer
+
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licensed CC-BY-SA-4.0
+```
+
+
+#### Manufacturer
+
+> [!NOTE]
+> Manufacturer has a specific defined meaning in the EU Cyber Resilience Act (CRA), so until this definition is established, be careful when using the term.
+> These attributes are in addition to the attributes listed under [Owner](#owner--supplier-).
+> SPDX 2.3 doesn't support the CE attributes. SPDX 3.0 should be used at a future date.
+
+* A role within an [Integrator Environment](#integrator-environment).
+* When doing business within the European Economic Area (EEA), has the duty to ensure that the conformity obligations in the EU Cyber Resilience Act (CRA) are met.
+
+| Ops | Attribute name                | Required | Required by                        | Comment | FIXME   |
+| :-: | :---------------------------- | :------: | ---------------------------------- | :------ | :------ |
+| 🟥  | Supplier Name (Manufacturer)  | Yes      | CRA-AII(1), NTIA-SBOM, DE-TR.5.2.2 |         |         |
+| 🟥  | CE Declaration of Conformity  | Yes      | CRA-AII(6), CRA-AV                 |         |         |
+| 🟥  | CE Support End Date           | Yes      | CRA-AII(7)                         |         |         |
+| 🟥  | CE Technical Documentation    | Yes      | CRA-AII(8), CRA-AVII               |         |         |
+| 🟥  | CE Conformity Assessment Body | Yes      | CRA Article 47.1, CRA-AV           |         |         |
 
 * See also
-   * [Provider](#provider)
-   * [Distributor](glossary.md#distributor) in the glossary.
-   * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](#references)
-   * (CRA-Art-20) [CRA Article 20](#references)
+  * [Owner](#owner--supplier-)
 
 
-### Integrator
+#### Integrator
 
 > [!NOTE]
 > * Used in the EU Cyber Resilience Act Annex II to denote someone who integrates *a product with digital elements intended for integration* into other products with digital elements.
@@ -954,14 +945,14 @@ Ensures the availability of packages or containers, that they are indexed correc
 * See also
   * [Integrator](#integrator)
 
-### Publisher
+#### Publisher
 
 * Operates within an [Integrator Environment](#integrator-environment) or a [Manufacturer Environment](#manufacturer-environment).
 * Makes available a component or product on a market on behalf of the Integrator or Manufacturer.
 * With regard to the EU Cyber Resilience Act, a Publisher is the same as a [Distributor](#distributor).
 
 
-### Analyst
+#### Analyst
  
 > [!CAUTION]
 > * FIXME – Check refs for CRA-Rec-34 and others
@@ -980,38 +971,44 @@ Ensures the availability of packages or containers, that they are indexed correc
 | 🟦  | Security Attestation       | Yes      | CRA-Rec-21            |         |         |
 | 🟦  | Project Sustainability     | No       |                       | CycloneDX 1.7 proposed | |
 
-#### SecOps
+
+----------------------------------------------------------------------
+
+### Production Environment
+
+> [!NOTE]
+> * FIXME – Add examples of physical products
+
+The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
+
+
+#### Deployer
+
+> [!CAUTION]
+> * FIXME – Not done
+
+* Operates within a [Production Environment](#production-environment).
+* Final preparation and installation of the software into a CI/CD or other deployment method an [Integrator](#integrator-environment) or [Production Environment](#production-environment).
+
+| Ops | Attribute name                 | Required | Required by           | Comment | FIXME   |
+| :-: | :----------------------------- | :------: | --------------------- | :------ | :------ |
+| 🟥  | Dependencies (Deployed)        | Yes      | CRA-AII(5), NTIA-SBOM |         |         |
+
+#### Installer
+
+> [!NOTE]
+> Mentioned once in the EU Cyber Resilience Act.
 
 * See also
-  * [Analyst](#analyst).
-
-#### Pentester
-
-* See also
-  * [Analyst](#analyst).
+  * [Deployer](#deployer)
 
 
-### End-user
+----------------------------------------------------------------------
 
-1. (CPANSec-2024) The software in use, in a production environment, by a user or customer.
-
-(Ref: [CPANSec-2024](#references-and-terms))
-
-* See also:
-    * [End-user](glossary.md#end-user) in the Glossary
-
-#### Consumer
-
-* See also
-  * [End-user](#end-user).
-
-#### User
-
-* See also
-  * [End-user](#end-user).
+### Non-Ecosystem Roles
 
 
-### Auditor
+#### Auditor
 
 Verifies that all necessary metadata is available, up-to-date and made use of.
 This role is required by the EU Cyber Resilience Act. FIXME – find specific article.
@@ -1031,11 +1028,157 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 | 🟦  | Download location                   | Yes      |                       |         |         |
 | 🟦  | Project Sustainability              | No       |                       | CycloneDX 1.7 proposed | |
 
+
+#### Distributor
+
+> [!CAUTION]
+> * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor,
+
+* Distributor is a term commonly used throughout Open Source Ecosystems, but
+    * Distributors have additional requirements and considerations laid out in CISA-2024.
+    * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+
+* See also
+   * [Provider](#provider)
+   * [Distributor](glossary.md#distributor) in the glossary.
+   * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](#references)
+   * (CRA-Art-20) [CRA Article 20](#references)
+
+
+#### Importer
+
+> [!CAUTION]
+> * Not directly part of an Open Source Supply-chain, but can be found downstream of Manufacturers that use these.
+> * FIXME – Not done
+
+* A role specific for the EU Cyber Resilience Act.
+* Operate downstream of Manufacturers.
+* A role specifically used when a EU entity makes available software on the EU market,
+* Is required to verify that the imported software is compliant with the EU Cyber Resilience Act       according to it's Article 19.
+
+| Ops | Attribute name                  | Required | Required by              | Comment | FIXME   |
+| :-: | :------------------------------ | :------: | ------------------------ | :------ | :------ |
+| 🟦  | Security contact                | Yes      | CRA-AII(2)               |         |         |
+| 🟦  | Unique Product ID               | Yes      | CRA-AII(3), NTIA-SBOM    |         |         |
+| 🟦  | Purpose, Intended Use           | Yes      | CRA-AII(4)               |         |         |
+| 🟦  | SBOM Location                   | No       | CRA-AII(9)               |         |         |
+| 🟦  | CE Declaration of Conformity    | No       | CRA-AII(6), CRA-AV       |         |         |
+| 🟦  | CE Support End Date             | No       | CRA-AII(7)               |         |         |
+| 🟦  | CE Instructions (Documentation) | No       | CRA-AII(8)               |         |         |
+| 🟦  | CE Conformity Assessment Body   | No       | CRA Article 47.1, CRA-AV |         |         |
+| 🟦  | Download location               | FIXME    |                          |         |         |
+
+* See also
+   * [Importer](glossary.md#importer) in the glossary.
+   * [Distributor](glossary.md#distributor) in the glossary.
+
+#### End-user
+
+1. (CPANSec-2024) The software in use, in a production environment, by a user or customer.
+
+(Ref: [CPANSec-2024](#references-and-terms))
+
+* See also
+    * [End-user](glossary.md#end-user) in the Glossary
+
+
+----------------------------------------------------------------------
+
+### Other common terms for Ecosystems and Roles
+
+#### Repository Ecosystem
+
+* See also
+  * [Collaboration Ecosystem](#collaboration-ecosystem).
+
+#### Author Environment
+
+* See also
+  * [Maintainer Environment](#maintainer-environment).
+
+#### Manufacturer Environment
+
+> [!NOTE]
+> * FIXME – Much more to add!
+>   * e.g. from https://blog.nlnetlabs.nl/what-i-learned-in-brussels-the-cyber-resilience-act/
+>   * Check also out the work coming out of the Eclipse ORC Working Group
+>   * Cover the CE mark requirements, the roles of downstream Importers and Distributors in verifying these,
+>   * Cover the roles of upstream Roles in attesting the security of the components they use
+
+* Used specifically in the context of the EU Cyber Resilience Act, to mean a commercial entity that places a product with digital elements on the EU market.
+* Is expected to produce a complete SBOM document describing their application, including all dependencies.
+
+* See also
+  * [Integrator Environment](#integrator-environment).
+
+#### Customer Environment
+
+The environment and systems where a product or service is executed by a customer and thereby made available to their users.
+
+* See also
+  * [Production Environment](#production-environment)
+
+
+#### Supplier
+
+The Supplier is a role used throughout the Supply-chain, but most often represents a Role within a [Maintainer](#maintainer-environment) or an [Integrator](#integrator-environment) Environment.
+
+* This term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
+* (CPANSec) This term is confusing, as it doesn't distinguish between the different types of "Suppliers" that may be involved in the creation of a product.
+    * Please use a more precise term, like [Maintainer](#maintainer) or [Manufacturer](#manufacturer).
+
+* See also
+  * [Supplier](glossary.md#supplier) in the glossary.
+  * [Owner](#owner),
+  * [Maintainer](#maintainer),
+  * [Custodian](#custodian),
+  * [Manufacturer](#manufacturer),
+  * [Maintainer Environment](#maintainer-environment),
+  * [Integrator Environment](#integrator-environment),
+  * [Open Source Software Steward](#open-source-software-steward),
+
+
 #### Compliance
 
 * See also
   * [Auditor](#auditor).
 
+#### Consumer
+
+* See also
+  * [End-user](#end-user).
+
+#### User
+
+* See also
+  * [End-user](#end-user).
+
+#### Steward
+
+> [!NOTE]
+> * Possible synonym for [Custodian](#custodian).
+> * Steward has a specific defined meaning in the EU Cyber Resilience Act      , so it's better to avoid using the term in this manner.
+
+* See also
+  * [Open Source Software Steward](#open-source-software-steward)
+
+#### Author
+
+* See also
+  * [Maintainer](#maintainer)
+
+#### SecOps
+
+* See also
+  * [Analyst](#analyst).
+
+#### Pentester
+
+* See also
+  * [Analyst](#analyst).
+
+
+----------------------------------------------------------------------
 
 ## References
 
@@ -1090,7 +1233,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 
 ## License and use of this document
 
-* Version: 0.7.2
+* Version: 0.8.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
@@ -1162,7 +1305,7 @@ Several people have been involved in the development of this document
 | Dependencies                        | List         | bom.components[], bom.dependencies[]                                  | relationships[].[spdxElementId,relatedSpdxElement] | |
 | Download location                   | URL          |                                                                       |                         |          |         |
 | Cryptographic Hash                  | SHA256       | components[].hashes[]                                                 |                         | Software.Package.verifiedUsing | |
-| License(s)                          | SPDX License | bom.metadata.licenses[], bom.components[].licenses[], components[].licenses[].acknowledgement[declared,concluded], components[].licenses[].licensing (proprietary) | packages[].licenseConcluded, packages[].licenseDeclared | Core.Relationship hasConcludedLicense hasDeclaredLicense | |
+| License(s)                          | SPDX License | bom.metadata.licenses[], bom.components[].licenses[], components[].licenses[].acknowledgement[declared], components[].licenses[].acknowledgement[concluded], components[].licenses[].licensing (proprietary) | packages[].licenseConcluded, packages[].licenseDeclared | Core.Relationship hasConcludedLicense hasDeclaredLicense | |
 | Copyright Holder                    | Text         | bom.components[].copyright, bom.components[].evidence.copyright       |                         | Software.SoftwareArtifact.copyrightText | |
 | Purpose, Intended Use               | Text         | bom.components[].description                                          | packages[].comment      |          |         |
 | Open Source Software Steward        | URL          |                                                                       |                         |          |         |

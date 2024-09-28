@@ -43,7 +43,7 @@ toc: true
 * [Managing Open Source and SBOMs](https://resilientcyber.substack.com/p/managing-open-source-and-sboms) (Chris Huges, 2023)
 * [Understanding OWASP’s Bill of Material Maturity Model: Not all SBOMs are created equal](https://www.csoonline.com/article/1246904/not-all-sboms-are-created-equal-understanding-owasps-bill-of-material-maturity-model.html) (Chris Huges, 2023)
 * (NTIA) [Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.ntia.gov/files/ntia/publications/ntia_sbom_framing_2nd_edition_20211021.pdf) (October 2021)
-* (Lawfare Media) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards) (July 2022)
+* (Lawfare Media) [Open Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards) (July 2022)
 * (CISA) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations) (March 2024)
 * (SPDX) [Satisfying NTIA Minimum Elements for an SBOM using SPDX](https://spdx.github.io/spdx-spec/v2.3/how-to-use/#k22-mapping-ntia-minimum-elements-to-spdx-fields) (SPDX 2.3)
 * (SPDX) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 3.0)
@@ -112,7 +112,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 [Directive 2022/2555, Network and Information Security Directive 2](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555&qid=1710318619717) (NIS2; Published 2022-12-27)
 
 * In the [NIS2 Recitals](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=12)
-    * Recital (52): On Open-source cybersecurity tools (page 11)
+    * Recital (52): On Open Source cybersecurity tools (page 11)
     * Recital (58): On the handling of discovered vulnerabilities (page 12)
     * Recital (62): Access to correct and timely information about vulnerabilities (page 13)
     * Recital (85): On supply-chain risk management (page 17)
@@ -161,7 +161,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Recitals (60-62): Support period (page 69-71)
 * Recital (64): Point of contact (page 73)
 * Recital (65): Secure by default (page 73)
-* Recital (118): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […] (page 121)
+* Recital (118): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and Open Source software […] (page 121)
 
 
 #### CRA Articles
@@ -171,7 +171,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Chapter I
     * **Article 3**, Definitions (pages 136-146)
     * Article 9, Point 1. (b-c), Stakeholder consultation (pages 155-156)
-* Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
+* Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open Source Software
     * **Article 13**, Obligations of Manufacturers (pages 161-175)
         * **Section 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
         * Section 6, "[…] they shall share the relevant code or documentation […]" (page 164)
@@ -186,9 +186,9 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
     * **Article 22**, Other cases in which obligations of manufacturers apply (page 206)
     * Article 23, Identification of economic operators (page 207)
-* Chapter II – Obligations of open-source software stewards
-    * **Article 24**, Obligations of open-source software stewards (pages 208-209)
-    * **Article 25**, Security attestation of free and open-source software (page 210)
+* Chapter II – Obligations of Open Source software stewards
+    * **Article 24**, Obligations of Open Source software stewards (pages 208-209)
+    * **Article 25**, Security attestation of free and Open Source software (page 210)
     * **Article 26**, Guidance (pages 211-212)
 * Chapter III — Conformity of the product with digital elements
     * Article 28, EU declaration of conformity (pages 218-219)
@@ -196,7 +196,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Article 30, Rules and conditions for affixing the CE marking (pages 220-222)
 * Chapter V — Market Surveillance and Enforcement
     * **Article 52**, Market surveillance and control of products (pages 253-259)
-        * **Section 3**, Market surveillance authorities […] shall also be responsible for carrying out market surveillance activities in relation to the obligations for open-source software stewards […].
+        * **Section 3**, Market surveillance authorities […] shall also be responsible for carrying out market surveillance activities in relation to the obligations for Open Source software stewards […].
         * Section 11, Market surveillance authorities shall inform consumers of where to submit complaints that could indicate non-compliance with this Regulation […] and […] facilitate reporting of vulnerabilities, incidents and cyber threats […].
     * **Article 54**, Procedure […] concerning products […] presenting a significant cybersecurity risk (pages 261-265)
         * Section 1, [If a market authority finds] sufficient reason to consider that a product […], including its vulnerability handling, presents a significant cybersecurity risk, […] it shall […] carry out an evaluation of the product […] concerned in respect of its compliance with all the requirements laid down in this Regulation.
@@ -259,7 +259,7 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 >     * Control Objective: All software components and services are documented or otherwise cataloged in a software bill of materials (SBOM).
 >     * Test Requirements: The assessor shall examine evidence to confirm that information is maintained that describes all software components and services comprising the software solution, including:
 >         * All proprietary software libraries, packages, modules, and/or code packaged in a manner that enables them to be tracked as a freestanding unit of software.
->         * All third-party and open-source frameworks, libraries, and code embedded in or used by the software during operation.
+>         * All third-party and Open Source frameworks, libraries, and code embedded in or used by the software during operation.
 >         * All third-party software dependencies, APIs, and services called by the software during operation.
 >     * Guidance: […] Knowing all of the components that comprise a software application or service, where they come from, and how they are updated and maintained is critical to minimizing and managing vulnerabilities in software applications. Without this information, it would be extremely difficult to identify and track vulnerabilities in software components that could expose the embedding software application to attacks. […]
 

@@ -168,7 +168,7 @@ graph TB
     is-legal-entity -->|No| cra-is-out-of-scope
     intended-commercial-use -->|No| cra-is-out-of-scope
     intended-commercial-use -->|Yes| product-supporter{"Providing<br>support for OSS<br>products?<br>CRA Recital (18)"}
-    product-supporter -->|Yes| cra-oss-steward("CRA in-scope<br>You are an Open-Source Software Steward<br>CRA Article 3 (14)")
+    product-supporter -->|Yes| cra-oss-steward("CRA in-scope<br>You are an Open Source Software Steward<br>CRA Article 3 (14)")
     product-supporter -->|No| cra-is-out-of-scope
 
     %% Based on the flowchart made by Maarten Aertsen (NLNetLabs) found at

@@ -24,6 +24,13 @@ This text attempts to summarize the most important parts of the CRA, for Open So
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
 
+### Purpose
+
+Fostering the development of secure products
+
+* _Harmonized standards_ create _presumption of conformance_.
+
+
 ### Manufacturers
 
 Manufacturers are obliged to _exercise due diligence when integrating components from third parties_, as laid out in **[Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163)**
@@ -122,8 +129,53 @@ Additionally,
 * The mere circumstances under which the product with digital elements has been developed, or how the development has been financed, should therefore not be taken into account when determining the commercial or non-commercial nature of that activity. ([Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=21))
 * […] the development of […] free and open-source software by *not-for-profit organisations* should not be considered to be a commercial activity provided that the organisation is set up in such a way that ensures that all earnings after costs are used to achieve not-for-profit objectives. ([Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=21))
 
+
+
+#### TODO: Open Source Steward
+
+* Article 24 Obligations
+
+* **Article 52**, Market surveillance and control of products (pages 253-259)
+  * **Section 3**, Market surveillance authorities […] shall also be responsible for carrying out market surveillance activities in relation to the obligations for open-source software stewards […].
+  * Section 11, Market surveillance authorities shall inform consumers of where to submit complaints that could indicate non-compliance with this Regulation […] and […] facilitate reporting of vulnerabilities, incidents and cyber threats […].
+
+* Article 26 Guidance
+
+
+
+
 > [!CAUTION]
 > * (CPANSec, 2024-09-11) The details and implementations around this concept has not been made available yet.
+
+
+### Maintainers
+
+* CRA does not apply to you, as long as…
+  * You are providing Free and Open Source Software (as mention in [Recital 18]())
+  * You are not […] providing the product […] in the course of a commercial activity […] **where this […] only the recuperation of actual costs**
+  * 
+
+
+#### Who does the CRA apply to? ([Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17))
+
+This Regulation applies to [economic operators](glossary.md#economic-operator) only in relation to products with digital [elements made available on the market](glossary.md#making-available-on-the-market) hence supplied for distribution or use on the Union market in the course of a commercial activity.
+
+_Supply in the course of a commercial activity_ might be characterised […]
+
+* by charging a price for a product with digital elements […]
+* by charging a price for technical support services
+  * where this does not serve only the recuperation of actual costs,
+* by an intention to monetise,
+  * for instance by providing a software platform through which the manufacturer monetises other services,
+* by requiring as a condition for use the processing of personal data
+  * for reasons other than exclusively for improving the security, compatibility or interoperability of the software, or
+* by accepting donations
+  * exceeding the costs associated with the design, development and provision of a product with digital elements.
+
+Accepting donations without the intention of making a profit should not be considered to be a commercial activity
+
+
+
 
 
 #### Open questions

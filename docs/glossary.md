@@ -408,12 +408,14 @@ Please take this into account when commenting this document.
 > [!NOTE]
 > * FIXME: Expand on this topic
 > * FIXME: Add some clarification regarding Manufacturers, Importers, Distributors and Open Source Stewards.
-> * FIXME: Check if the Blue Guide has something to say on this matter.
 
 > 1. (CRA-2024-03) The supply of a product with digital elements for distribution or use on the European Union market in the course of a commercial activity, whether in return for payment or free of charge.
+> 1. (EUBG-2022) A product is made available on the market when supplied for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge.
+>     * The concept of making available refers to each individual product.
+>     * A product is made available on the market when supplied for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge.
+>     * Such supply includes any offer for distribution, consumption or use on the Union market which could result in actual supply in relation to products already manufactured (e.g. an invitation to purchase, advertising campaigns).
 >
-> (Ref: [CRA-2024-03](#references-and-terms))
-
+> (Ref: [CRA-2024-03](#references-and-terms), EUBG-2022)
 
 ### Manufacturer
 

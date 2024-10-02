@@ -151,16 +151,14 @@ Additionally,
 ### Maintainers
 
 * CRA does not apply to you, as long as…
-  * You are providing Free and Open Source Software (as mention in [Recital 18]())
-  * You are not […] providing the product […] in the course of a commercial activity […] **where this […] only the recuperation of actual costs**
-  * 
+  * You are providing Free and Open Source Software (as mention in [Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=21))
 
 
 #### Who does the CRA apply to? ([Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17))
 
-This Regulation applies to [economic operators](glossary.md#economic-operator) only in relation to products with digital [elements made available on the market](glossary.md#making-available-on-the-market) hence supplied for distribution or use on the Union market in the course of a commercial activity.
+This Regulation applies to [economic operators](glossary.md#economic-operator) only in relation to products with digital [elements made available on the market](glossary.md#making-available-on-the-market) hence supplied for distribution or use on the Union market _in the course of a commercial activity_.
 
-_Supply in the course of a commercial activity_ might be characterised […]
+Supply _in the course of a commercial activity_ might be characterised […]
 
 * by charging a price for a product with digital elements […]
 * by charging a price for technical support services

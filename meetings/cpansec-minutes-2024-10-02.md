@@ -54,11 +54,11 @@
 ### German Sovereign Tech fund is open for applications
 *   @sjn - stalled: work is registered in a spreadsheet
 *   @sjn - had a chat with STF at #OSSummit
-*   @sjn summarizes results - a company involment would smooth things. Ovid said he could help
+*   @sjn summarizes results - a company involvement (or any other business or institution) would smooth things. Ovid said he could help
 
 ### Ongoing vulnerabilities
-*   @tux checked with p5p. No further action required
-*   Someone should have a look at https://github.com/mojolicious/mojo/pull/1791 and consider if this is a vulnerability
+*   @tux checked a possible candidate for a CVE in the Unicode area of perl CORE with p5p. No further action required
+*   https://github.com/mojolicious/mojo/pull/1791 needs triage to see if this is a vulnerability. @stigtsp is working on a PR that addresses this
 
 ### Secure by Default
 *   @stigtsp - Fedora started with patched cpanm
@@ -67,9 +67,10 @@
 
 ### Eclipse ORC WG
 *   @sjn - short report about recent movements
+    Horizontal standards workstream has had it's first kickoff meeting.
 
 ### CycloneDX 1.7 Sustainability fields
-*   @sjn - short report about WG progress
+*   @sjn - short report about WG progress: Bi-weekly meetings ongoing. Meetings are published on youtube
 
 ### CPAN Meta Requirements and PURLs
 *   @sjn - stalled
@@ -78,7 +79,7 @@
 *   @stigtsp - Need  to create CVEs for https://github.com/briandfoy/cpan-security-advisory/blob/master/cpansa/CPANSA-POSIX-2008.yml
 
 ### SBOM/Supply Chain
-*   @sjn - short report from #OSSummit in Vienna
+*   @sjn - short report from #OSSummit in Vienna. @sjn met lots of people from OpenSSF and others, with many interesting conversations. Good trip!
 *   @garu will try to start a (or more) module(s) around SBOM
 
 ### CNA Update
@@ -88,8 +89,9 @@
 
 ### Manpower / Recruitment
 *   @tux - This project needs more manpower. People currently are not enough available and those who do actual work might get overloaded. The project is too important to peter out
-*   @sjn - how may STF funding help
+*   @sjn - how may STF funding help? This funding may help with involving people who aren't willing to volunteer
 *   @sjn - do we need a comunity-manager? Vienna conversations may have triggered helpers
+*   @sjn - possible recruitment opportunities during LPW
 
 ### CPANSA feed
 *   @garu will work on stabalizing this week

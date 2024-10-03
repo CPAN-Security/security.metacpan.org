@@ -17,6 +17,7 @@ mermaid: true
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 This document is background material and notes for the [CycloneDX OSS Sustainability WG](https://docs.google.com/document/d/1IZnHEwzz1N7LbChVkZTE_dfo3I2np8rULssq5I2wchM/edit).
+In this project we try to help both OSS project's Maintainers communicate their needs and requirements, as well as help the share important information that may assist their user's _business continuity challenges_.
 
 
 ## Project Need Indicators

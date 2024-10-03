@@ -64,17 +64,11 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Brand Management and Implementation
 1. **Bug Triage**
 1. **Code Review**
-    * Security review
     * Development process
     * Maintainability review
+    * Security review
 1. **Code Writing** and development
     * Internationalization/I18N
-1. Packaging
-    * Adaptation new packaging systems
-    * Package maintenance
-    * Container assembly
-    * Tooling development
-    * Release management
 1. **Community Building and Management**
     * Culture and conduct
     * Diversity, Equity, Inclusion
@@ -94,21 +88,21 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 1. **Event Organizing**
     * Conferences, Meetups, Hackathons or other gatherings for social knowledge-sharing
     * Online events, webinars or classes/training
-    * Social and networking events
     * Program committee work
+    * Social and networking events
 1. **Financial Management**
     * Fund-raising
 1. **Legal Counsel**
     * License Conflict Resolution
     * License Enforcement
-    * Trademark Registration
     * Trademark Defense
+    * Trademark Registration
 1. Mentorship (Ref: [MSFTOSS-2024](#references))
-    * Security
+    * Code contribution
+    * Documentation
     * Governance
     * Outreach and Communication
-    * Documentation
-    * Code contribution
+    * Security
 1. Open Source Steward (EU Cyber Resilience Act)
 1. Outreach
     * Industry/Stakeholder/OSPO Outreach and Assistance
@@ -117,22 +111,28 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * **Public Relations - Interviews with Technical Press**
     * **Social Media Management** and presence
     * **Speaking at Events** and Conference Presentations
-    * **Writing Articles**
     * **Website Development**
+    * **Writing Articles**
+1. Packaging
+    * Adaptation new packaging systems
+    * Container assembly
+    * Package maintenance
+    * Release management
+    * Tooling development
 1. **Quality Assurance and Testing**
-1. Technical infrastructure and hosting
-    * DNS and Email hosting
-    * Chat forum hosting
-    * Other hosted community services
 1. **Security-Related Activities**
     * Hardening
     * Writing automated security tests
 1. Skill and contribution gaps compensation (Ref: [MSFTOSS-2024](#references))
     * Language
-    * Technology/platform
     * Specialized skills
+    * Technology/platform
 1. **Teaching and Tutorial Building**
     * Course/training material development
+1. Technical infrastructure and hosting
+    * Chat forum hosting
+    * DNS and Email hosting
+    * Other hosted community services
 1. **Troubleshooting and Support**
     * **User Support and Answering Questions**
 1. **User Interface, User Experience, and Accessibility**

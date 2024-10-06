@@ -154,6 +154,65 @@ Additionally,
   * You are providing Free and Open Source Software (as mention in [Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=21))
 
 
+
+#### On Open Source software _intended for use in the course of a commercial activity_
+
+This is [Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20), reformatted and emphasized for legibility.
+
+* Free and open-source software is understood as software the source code of which is openly shared
+  * and the licensing of which provides for all rights to make it
+    * freely accessible, usable, modifiable and redistributable.
+
+* Free and open-source software is developed, maintained and distributed openly,
+  * including via online platforms.
+
+* In relation to economic operators that fall within the scope of this Regulation,
+  * only free and open-source software made available on the market,
+    * and therefore supplied for distribution or use _in the course of a commercial activity,_
+  * should fall within the scope of this Regulation.
+
+* The mere circumstances under which the product with digital elements has been developed,
+  * or how the development has been financed,
+    * should therefore not be taken into account when determining the commercial or non-commercial nature of that activity.
+  * More specifically, for the purposes of this Regulation
+    * and in relation to the economic operators that fall within its scope,
+      * to ensure that there is a clear distinction between the development and supply phases,
+    * the provision of products with digital elements qualifying as free and open-source software
+      * that are not monetised by their manufacturers
+    * should not be considered to be a commercial activity.
+
+* Furthermore, **the supply of** products with digital elements
+  * qualifying as **free and open-source software components**
+    * **intended for integration by other manufacturers** into their own products with digital elements
+  * **should be considered making available on the market**
+    * **only if the component is monetised** by its original manufacturer.
+
+* For instance,
+  * the mere fact that an open-source software product with digital elements
+    * receives financial support from manufacturers
+    * or that manufacturers contribute to the development of such a product
+  * should not in itself determine that the activity is of commercial nature.
+
+* In addition,
+  * the mere presence of regular releases
+  * should not in itself lead to the conclusion that a product with digital elements
+    * is supplied in the course of a commercial activity.
+
+* Finally, for the purposes of this Regulation,
+  * the **development of** products with digital elements
+    * qualifying as **free and open-source software**
+    * **by not-for-profit organisations**
+    * **should not be considered to be a commercial activity**
+      * **provided** that the organisation is set up in such a way
+      * that ensures that **all earnings after costs are used to achieve not-for-profit objectives**.
+
+* This Regulation does not apply to
+  * natural or legal persons
+    * who contribute with source code to products with digital elements
+      * qualifying as free and open-source software
+      * that are not under their responsibility.
+
+
 #### Who does the CRA apply to? ([Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17))
 
 This Regulation applies to [economic operators](glossary.md#economic-operator) only in relation to products with digital [elements made available on the market](glossary.md#making-available-on-the-market) hence supplied for distribution or use on the Union market _in the course of a commercial activity_.

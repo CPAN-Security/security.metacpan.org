@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Report Security Issue
+title: Report a Security Issue
 toc: true
 ---
 
@@ -11,6 +11,16 @@ Please refer to the [Perl security report handling policy](https://perldoc.perl.
 
 The CPAN Security Group does not handle security issues in Perl, with the exception of dual-life core modules.
 We will coordinate with the Perl security team if necessary.
+
+
+## I've found a vulnerability in a distribution on CPAN
+
+If you believe you have found a security vulnerability in a distribution on CPAN, please follow the [Coordinated vulnerability disclosure](https://en.wikipedia.org/wiki/Coordinated_vulnerability_disclosure) model.
+
+It's important that you **do not** post information about it on:
+- bug trackers, like RT or GitHub
+- social media or chat channels, like IRC or Mastodon
+- mailing lists or discussion forums
 
 
 ## I've found malware on CPAN
@@ -32,17 +42,10 @@ Please contact the PAUSE admins on [pause-admin@perl.org](mailto:pause-admin@per
 - Any evidence of the account being compromised
 
 
-## I've found a vulnerability in a distribution on CPAN
 
-If you believe you have found a security vulnerability in a distribution on CPAN, please follow the [Coordinated vulnerability disclosure](https://en.wikipedia.org/wiki/Coordinated_vulnerability_disclosure) model.
+# How to report a vulnerability
 
-It's important that you **do not** post information about it on:
-- bug trackers, like RT or GitHub
-- social media or chat channels, like IRC or Mastodon
-- mailing lists or discussion forums
-
-
-### Step 1: Prepare a Report
+## Step 1: Prepare a Report
 
 Please provide a detailed description of the steps required to reproduce the vulnerability.
 
@@ -55,7 +58,7 @@ The following information is required:
 Also consider proposing a date for public disclosure, this is usually 30 days or longer.
 
 
-### Step 2: Contact the Author
+## Step 2: Contact the Author
 
 Send the vulnerability report to the distribution author by email or other private channels.
 You can CC our team on [cpan-security@perl.org](mailto:cpan-security@perl.org) on the report if you would like us to help in triaging the issue, register CVE identifiers, or for any other reason.
@@ -72,7 +75,7 @@ Please allow for some time for authors and potential downstream distributions to
 It is not unusual for authors to request extensions to any proposed disclosure date.
 
 
-#### If the Author is unresponsive
+### If the Author is unresponsive
 
 If the author is unresponsive, or you are concerned that the issue is not being handled, or for other reasons, then please send the report to [cpan-security@perl.org](mailto:cpan-security@perl.org) so we can coordinate with authors and relevant community members directly.
 
@@ -80,7 +83,7 @@ If you wish that we keep your identity private, please state this in the first l
 You do not need to provide any rationale.
 
 
-### Step 3: Disclosure
+## Step 3: Disclosure
 
 When disclosure has been agreed by the parties, or if details of the vulnerability has otherwise been made public, the CPAN Security Group will take following actions:
 

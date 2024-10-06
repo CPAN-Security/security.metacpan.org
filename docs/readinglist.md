@@ -123,7 +123,9 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * In [Chapter II](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=36)
     * Article 7 paragraph 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
+    * Article 20
     * Articles 21 paragraphs 1, 2, 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
+    * Article 23
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 
 #### NIS2 Implemented Regulation
@@ -143,7 +145,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 [CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11) are for explaining the background and context for the regulation. The ordering is the same as in the Articles. These are for interpretation, and not legally binding.
 
 * Recital (10): CRA relevance for supply chains (page 11)
-* Recitals (16-17): CRA relevance for Open Source projects (page 18-19)
+* Recital (**15**): CRA applies to economic operators that have an intention to monetise a product (page 17)
 * Recital (**18**): Open Source Software Contributors (page 20)
 * Recital (**19**): Open Source Software Stewards, light-touch regulatory regime, and CE mark implications (page 22)
 * Recital (**20**): Open Source package managers considerations as "distributors" (page 24)
@@ -156,12 +158,12 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Recital (39): Continued security updates (page 44)
 * Recital (41): Substantial modifications requires a new conformity assessment to be done (page 47)
 * Recitals (43-45): Important products with digital elements (pages 49-51)
-* Recital (**57**): On the download and installation of security updates, and notification of end of support (pages 66-67)
-* Recital (**58**): On the requirement to be able to get security updates separately from functionality updates (page 67)
+* Recital (**56**): On the download and installation of security updates, and notification of end of support (page 65-66)
+* Recital (**57**): On the requirement to be able to get security updates separately from functionality updates (pages 66)
 * Recitals (60-62): Support period (page 69-71)
-* Recital (64): Point of contact (page 73)
+* Recital (64): Point of contact (page 72)
 * Recital (65): Secure by default (page 73)
-* Recital (118): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […] (page 121)
+* Recital (118): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […] (page 122)
 
 
 #### CRA Articles
@@ -173,19 +175,22 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Article 9, Point 1. (b-c), Stakeholder consultation (pages 155-156)
 * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
     * **Article 13**, Obligations of Manufacturers (pages 161-175)
-        * **Section 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
-        * Section 6, "[…] they shall share the relevant code or documentation […]" (page 164)
-        * Section 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 168)
-    * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
-    * **Article 15**, Voluntary reporting (pages 185-186)
-    * Article 16, Establishment of a single reporting platform (pages 187-192)
-    * Article 17, Other provisions related to reporting (pages 193-195)
-    * Article 18, Authorized representatives (pages 195-196)
-    * **Article 19**, Obligations of importers (pages 197-201)
-    * **Article 20**, Obligations of distributors (pages 202-205)
-    * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
-    * **Article 22**, Other cases in which obligations of manufacturers apply (page 206)
-    * Article 23, Identification of economic operators (page 207)
+        * **Paragraph 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
+        * Paragraph 6, "[…] they shall share the relevant code or documentation […]" (page 164)
+        * Paragraph 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 168)
+    * **Article 14**, Reporting obligations of manufacturers (pages 175-183)
+        * Paragraph 1, "A manufacturer shall notify any actively exploited vulnerability contained in the product […] that it becomes aware of"
+        * Paragraph 3, "A manufacturer shall notify any severe incident having an impact on the security of the product […] that it becomes aware of"
+        * Paragraph 8, "After becoming aware of an actively exploited vulnerability or a severe incident, the manufacturer shall inform the impacted users of the product, and where appropriate all users, […] and, […] about risk mitigation and any corrective measures that the users can deploy"
+    * **Article 15**, Voluntary reporting (pages 184-185)
+    * Article 16, Establishment of a single reporting platform (pages 186-191)
+    * Article 17, Other provisions related to reporting (pages 192-194)
+    * Article 18, Authorized representatives (pages 194-195)
+    * **Article 19**, Obligations of importers (pages 196-201)
+    * **Article 20**, Obligations of distributors (pages 201-204)
+    * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 204)
+    * **Article 22**, Other cases in which obligations of manufacturers apply (page 205)
+    * Article 23, Identification of economic operators (page 206)
 * Chapter II – Obligations of open-source software stewards
     * **Article 24**, Obligations of open-source software stewards (pages 208-209)
     * **Article 25**, Security attestation of free and open-source software (page 210)
@@ -201,8 +206,10 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * **Article 54**, Procedure […] concerning products […] presenting a significant cybersecurity risk (pages 261-265)
         * Section 1, [If a market authority finds] sufficient reason to consider that a product […], including its vulnerability handling, presents a significant cybersecurity risk, […] it shall […] carry out an evaluation of the product […] concerned in respect of its compliance with all the requirements laid down in this Regulation.
         * Section 5, [If the economic operator] not take adequate corrective action […], the market surveillance authority shall take all appropriate provisional measures to prohibit or restrict that product […] from being made available […], to withdraw it from that market or to recall it.
-    * **Article 58**, Formal non-compliance (pages 276)
-
+    * **Article 58**, Formal non-compliance (page 276)
+* Chapter VII – Confidentiality and Penalties
+    * Article 63 - Non-compliance (pages 286-289)
+        * **Section 10(b)**, Rules on administrative fines shall not apply to Open Source Software Stewards (page 289)
 
 #### CRA Annexes
 
@@ -225,19 +232,22 @@ Annexes are technical materials presented separately from the main text, and hav
 * (Eclipse) ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)
 * (Eclipse) ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
 * (EU) The '[Blue Guide](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.247.01.0001.01.ENG&toc=OJ%3AC%3A2022%3A247%3ATOC)' on the implementation of EU product rules (2022/C 247/01). Published 2022-06-29; [PDF](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04))
-
+* (EU) [CRA Corrigendum](https://draftable.com/compare/ShyQnqhNqFGP) comparison. Published 2024-09-03; [Original PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130-FNL-COR01_EN.pdf)
 
 ### EU and EEA – PLD
 
 (EU) Product Liability Directive (PLD)
 
-* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive)
-* [Product Liability Directive](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.html) (85/374/EEC), Published 2024-03-12 by the EU Parliament ([PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.pdf))
-
+* (EU) [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive)
+* (EU) [Product Liability Directive](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.html) (85/374/EEC), Published 2024-03-12 by the EU Parliament ([PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.pdf))
+* (EU) [PLD Corrigendum](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130-FNL-COR01_EN.pdf) (PDF); Published 2024-09-03;
 
 ### EU and EEA – DORA
 
 (EU) [Digital Operational Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554&qid=1710317679922): Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations (DORA, 2022-12-14)
+
+
+* Article 16-23
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-cross-sectoral-financial-services-act-1)
 
@@ -265,6 +275,20 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 
 * (PCI-SSC) [PCI-SSF v1.2.1](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), Published May 2023
 
+
+## Information Security
+
+* ISO 27001
+    * 6.1.3
+    * 9.1
+    * 7.2
+    * 6.1.2
+    * 5.2
+    * Article 5.24, Article 5.25, Article 5.26
+    * 
+    * 
+* CIS Controls V8
+* ISO 27036:2023 (3rd party risk)
 
 ## License and use of this document
 

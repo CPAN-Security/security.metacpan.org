@@ -206,8 +206,10 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * **Article 54**, Procedure […] concerning products […] presenting a significant cybersecurity risk (pages 261-265)
         * Section 1, [If a market authority finds] sufficient reason to consider that a product […], including its vulnerability handling, presents a significant cybersecurity risk, […] it shall […] carry out an evaluation of the product […] concerned in respect of its compliance with all the requirements laid down in this Regulation.
         * Section 5, [If the economic operator] not take adequate corrective action […], the market surveillance authority shall take all appropriate provisional measures to prohibit or restrict that product […] from being made available […], to withdraw it from that market or to recall it.
-    * **Article 58**, Formal non-compliance (pages 276)
-
+    * **Article 58**, Formal non-compliance (page 276)
+* Chapter VII – Confidentiality and Penalties
+    * Article 63 - Non-compliance (pages 286-289)
+        * **Section 10(b)**, Rules on administrative fines shall not apply to Open Source Software Stewards (page 289)
 
 #### CRA Annexes
 

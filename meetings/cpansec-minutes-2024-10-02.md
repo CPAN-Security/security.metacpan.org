@@ -85,7 +85,7 @@
 ### CNA Update
 *   Still not enough people involved
 *   @timlegge - locations need to be set for resources
-*   @timlegge - what's needed? Tim writes a blog post with instructions
+*   @timlegge - what's needed? Tim will write a blog post with information for getting involved
 
 ### Manpower / Recruitment
 *   @tux - This project needs more manpower. People currently are not enough available and those who do actual work might get overloaded. The project is too important to peter out
@@ -94,7 +94,7 @@
 *   @sjn - possible recruitment opportunities during LPW
 
 ### CPANSA feed
-*   @garu will work on stabalizing this week
+*   @garu will work on stabilizing this week
 
 ### Upcoming events and deadlines
 
@@ -108,7 +108,7 @@
 *   @sjn - prefer 16:00 UTC because of clashes with other meetings
 
 ### Misc
-*   @timlegge finally (his words) released stuff related to CPANSec
+*   @timlegge finally (his words) released stuff marginally related to CPANSec (a new release of Module::Signature and Crypt::OpenPGP)
 
 ### Next meeting date, time and location
 *   Next meeting is 2024-10-16 (16 Oct 2024) @ 16:00UTC in #cpansec-discussion on Matrix (18:00 Europe/Amsterdam)

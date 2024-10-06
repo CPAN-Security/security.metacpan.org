@@ -145,7 +145,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 [CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11) are for explaining the background and context for the regulation. The ordering is the same as in the Articles. These are for interpretation, and not legally binding.
 
 * Recital (10): CRA relevance for supply chains (page 11)
-* Recitals (16-17): CRA relevance for Open Source projects (page 18-19)
+* Recital (**15**): CRA applies to economic operators that have an intention to monetise a product (page 17)
 * Recital (**18**): Open Source Software Contributors (page 20)
 * Recital (**19**): Open Source Software Stewards, light-touch regulatory regime, and CE mark implications (page 22)
 * Recital (**20**): Open Source package managers considerations as "distributors" (page 24)
@@ -158,12 +158,12 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Recital (39): Continued security updates (page 44)
 * Recital (41): Substantial modifications requires a new conformity assessment to be done (page 47)
 * Recitals (43-45): Important products with digital elements (pages 49-51)
-* Recital (**57**): On the download and installation of security updates, and notification of end of support (pages 66-67)
-* Recital (**58**): On the requirement to be able to get security updates separately from functionality updates (page 67)
+* Recital (**56**): On the download and installation of security updates, and notification of end of support (page 65-66)
+* Recital (**57**): On the requirement to be able to get security updates separately from functionality updates (pages 66)
 * Recitals (60-62): Support period (page 69-71)
-* Recital (64): Point of contact (page 73)
+* Recital (64): Point of contact (page 72)
 * Recital (65): Secure by default (page 73)
-* Recital (118): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […] (page 121)
+* Recital (118): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […] (page 122)
 
 
 #### CRA Articles
@@ -178,19 +178,19 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
         * **Paragraph 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
         * Paragraph 6, "[…] they shall share the relevant code or documentation […]" (page 164)
         * Paragraph 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 168)
-    * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
+    * **Article 14**, Reporting obligations of manufacturers (pages 175-183)
         * Paragraph 1, "A manufacturer shall notify any actively exploited vulnerability contained in the product […] that it becomes aware of"
         * Paragraph 3, "A manufacturer shall notify any severe incident having an impact on the security of the product […] that it becomes aware of"
         * Paragraph 8, "After becoming aware of an actively exploited vulnerability or a severe incident, the manufacturer shall inform the impacted users of the product, and where appropriate all users, […] and, […] about risk mitigation and any corrective measures that the users can deploy"
-    * **Article 15**, Voluntary reporting (pages 185-186)
-    * Article 16, Establishment of a single reporting platform (pages 187-192)
-    * Article 17, Other provisions related to reporting (pages 193-195)
-    * Article 18, Authorized representatives (pages 195-196)
-    * **Article 19**, Obligations of importers (pages 197-201)
-    * **Article 20**, Obligations of distributors (pages 202-205)
-    * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
-    * **Article 22**, Other cases in which obligations of manufacturers apply (page 206)
-    * Article 23, Identification of economic operators (page 207)
+    * **Article 15**, Voluntary reporting (pages 184-185)
+    * Article 16, Establishment of a single reporting platform (pages 186-191)
+    * Article 17, Other provisions related to reporting (pages 192-194)
+    * Article 18, Authorized representatives (pages 194-195)
+    * **Article 19**, Obligations of importers (pages 196-201)
+    * **Article 20**, Obligations of distributors (pages 201-204)
+    * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 204)
+    * **Article 22**, Other cases in which obligations of manufacturers apply (page 205)
+    * Article 23, Identification of economic operators (page 206)
 * Chapter II – Obligations of open-source software stewards
     * **Article 24**, Obligations of open-source software stewards (pages 208-209)
     * **Article 25**, Security attestation of free and open-source software (page 210)

@@ -67,7 +67,7 @@
 
 ### Eclipse ORC WG
 *   @sjn - short report about recent movements
-    Horizontal standards workstream has had it's first kickoff meeting.
+    Horizontal standards workstream had it's first kickoff meeting.
 
 ### CycloneDX 1.7 Sustainability fields
 *   @sjn - short report about WG progress: Bi-weekly meetings ongoing. Meetings are published on youtube

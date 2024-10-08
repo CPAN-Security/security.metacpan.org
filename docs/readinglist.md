@@ -49,6 +49,8 @@ toc: true
 * (SPDX) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 3.0)
 * (CISA) [SBOM Sharing Primer](https://www.cisa.gov/resources-tools/resources/sbom-sharing-primer)
 * (NTIA) [Roles and Benefits for SBOM Across the Supply Chain](https://www.ntia.gov/files/ntia/publications/ntia_sbom_use_cases_roles_benefits-nov2019.pdf), (November 2019)
+* (CISA) [Attributes for evaluation and cataloging of Software Bill of Materials Tooling](https://docs.google.com/document/d/1TKPIjT7Rfc38F0OMuXIlPqFRoH7wj2H8x3w13Pgy8V4/edit), (Unpublished)
+  * Related [spreadsheet](https://onedrive.live.com/view.aspx?resid=68652AA55C12F19A%216830&authkey=!AG7Yjwi-1S3rjWI)
 
 See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
 

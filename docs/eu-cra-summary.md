@@ -155,9 +155,26 @@ Additionally,
 
 
 
-#### On Open Source software _intended for use in the course of a commercial activity_
+#### Who does the CRA apply to? ([Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17))
 
-This is [Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20), reformatted and emphasized for legibility.
+This Regulation applies to [economic operators](glossary.md#economic-operator) only in relation to products with digital [elements made available on the market](glossary.md#making-available-on-the-market) hence supplied for distribution or use on the Union market _in the course of a commercial activity_.
+
+Supply _in the course of a commercial activity_ might be characterised […]
+
+* by charging a price for a product with digital elements […]
+* by charging a price for technical support services
+  * where this does not serve only the recuperation of actual costs,
+* by an intention to monetise,
+  * for instance by providing a software platform through which the manufacturer monetises other services,
+* by requiring as a condition for use the processing of personal data
+  * for reasons other than exclusively for improving the security, compatibility or interoperability of the software, or
+* by accepting donations
+  * exceeding the costs associated with the design, development and provision of a product with digital elements.
+
+Accepting donations without the intention of making a profit should not be considered to be a commercial activity
+
+
+#### On Open Source software _intended for use in the course of a commercial activity_ ([Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
 
 * Free and open-source software is understood as software the source code of which is openly shared
   * and the licensing of which provides for all rights to make it
@@ -211,28 +228,6 @@ This is [Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-013
     * who contribute with source code to products with digital elements
       * qualifying as free and open-source software
       * that are not under their responsibility.
-
-
-#### Who does the CRA apply to? ([Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17))
-
-This Regulation applies to [economic operators](glossary.md#economic-operator) only in relation to products with digital [elements made available on the market](glossary.md#making-available-on-the-market) hence supplied for distribution or use on the Union market _in the course of a commercial activity_.
-
-Supply _in the course of a commercial activity_ might be characterised […]
-
-* by charging a price for a product with digital elements […]
-* by charging a price for technical support services
-  * where this does not serve only the recuperation of actual costs,
-* by an intention to monetise,
-  * for instance by providing a software platform through which the manufacturer monetises other services,
-* by requiring as a condition for use the processing of personal data
-  * for reasons other than exclusively for improving the security, compatibility or interoperability of the software, or
-* by accepting donations
-  * exceeding the costs associated with the design, development and provision of a product with digital elements.
-
-Accepting donations without the intention of making a profit should not be considered to be a commercial activity
-
-
-
 
 
 #### Open questions

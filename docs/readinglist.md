@@ -9,6 +9,7 @@ toc: true
 
 > [!CAUTION]
 > This is the CPAN Security Group recommended reading list.
+> **This page is [Open Source](#license-and-use-of-this-document)** – meaning, it's eventual quality and usefulness is proportional to your contribution!
 > If you have any additions or improvements, please [open an issue](https://github.com/CPAN-Security/security.metacpan.org/issues), citing this page.
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/readinglist/docs/readinglist.md](https://github.com/CPAN-Security/security.metacpan.org/blob/readinglist/docs/readinglist.md)
@@ -100,7 +101,8 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 ## Regulations, directives and laws
 
-There are several relevant legislation regarding cybersecurity in Open Source ecosystems and supply chains.
+There are several relevant legislations regarding cybersecurity in Open Source ecosystems and supply chains.
+This is not a exhaustive list!
 
 
 ### USA – EO 14028
@@ -287,10 +289,10 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
     * 6.1.2
     * 5.2
     * Article 5.24, Article 5.25, Article 5.26
-    * 
-    * 
+    * …
 * CIS Controls V8
 * ISO 27036:2023 (3rd party risk)
+
 
 ## License and use of this document
 

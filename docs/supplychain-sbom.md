@@ -205,7 +205,7 @@ stateDiagram-v2
     state "🟨🟦 Packager (Maintainer)" as language_packager
 
     %%
-    state "🟥 Attestation Authority 🆕" as authority_attester
+    %%state "🟥 Attestation Authority 🆕" as authority_attester
 
     %%
     state "🟦 Authenticator" as language_authenticator
@@ -284,14 +284,17 @@ stateDiagram-v2
     class external_consumer ignoresSBOM
 
     %%
-    class authority_attester createsSBOM
+    %%class authority_attester createsSBOM
     class authority_auditor verifiesSBOM
 
     %%
     state "Maintainer Environment" as environment_maintainer {
         [*] --> maintainer_author
-        maintainer_owner      --> maintainer_author
+        [*] --> maintainer_owner
+        maintainer_owner  --> maintainer_author
         maintainer_author --> language_packager
+        maintainer_author --> [*]
+        language_packager --> [*]
     }
 
     [*] --> environment_maintainer
@@ -305,21 +308,27 @@ stateDiagram-v2
         language_curator --> language_distributor
         language_steward --> language_distributor
         language_steward --> language_curator
+        language_distributor --> [*]
     }
 
-    language_packager --> ecosystem_lang
-    ecosystem_lang    --> ecosystem_lang
+    %%ecosystem_lang    --> ecosystem_lang
+    %%language_packager --> ecosystem_lang
+    environment_maintainer --> ecosystem_lang
 
     %%
     state "Collaboration Ecosystem" as ecosystem_repo {
         [*] --> repository_distributor
+        external_contributor   --> repository_distributor
+        repository_distributor --> external_contributor
+        repository_distributor --> [*]
     }
 
-    ecosystem_repo    --> maintainer_author
-    maintainer_author --> ecosystem_repo
+    %%ecosystem_repo    --> maintainer_author
+    %%maintainer_author --> ecosystem_repo
+    environment_maintainer --> ecosystem_repo
+    ecosystem_repo         --> environment_maintainer
 
-    external_contributor   --> repository_distributor
-    repository_distributor --> external_contributor
+    %%external_contributor   --> repository_distributor
 
     %%
     state "Package Ecosystem" as ecosystem_package {
@@ -333,45 +342,64 @@ stateDiagram-v2
         package_curator       --> package_distributor
         package_steward       --> package_distributor
         package_packager      --> package_steward
+        package_distributor   --> [*]
     }
 
-    repository_distributor --> ecosystem_package
-    language_distributor   --> ecosystem_package
-    ecosystem_package      --> ecosystem_package
+    %%ecosystem_package      --> ecosystem_package
+    %%repository_distributor --> ecosystem_package
+    %%language_distributor   --> ecosystem_package
+    ecosystem_lang           --> ecosystem_package
+    ecosystem_lang           --> environment_integrator
+    ecosystem_repo           --> ecosystem_package
 
-    authority_attester --> language_steward
-    authority_attester --> package_steward
+    %%authority_attester --> language_steward
+    %%authority_attester --> package_steward
 
     %%
     state "Integrator Environment" as environment_integrator {
         [*] --> integrator_developer
+        [*] --> integrator_owner
         integrator_owner     --> integrator_developer
         integrator_builder   --> integrator_censor
         integrator_builder   --> integrator_publisher
         integrator_builder   --> integrator_analyst
         integrator_developer --> integrator_builder
         integrator_analyst   --> integrator_developer
+        integrator_analyst   --> [*]
+        integrator_censor    --> [*]
+        integrator_publisher --> [*]
     }
 
-    repository_distributor --> environment_integrator
-    language_distributor   --> environment_integrator
-    package_distributor    --> environment_integrator
+    %%repository_distributor --> environment_integrator
+    ecosystem_repo           --> environment_integrator
+    %%language_distributor   --> environment_integrator
+    ecosystem_package        --> environment_integrator
 
     %%
     state "Production Environment" as environment_prod {
         [*] --> prod_deployer
+        prod_deployer --> [*]
     }
 
-    prod_deployer        --> authority_auditor
-    integrator_builder   --> environment_prod
-    integrator_developer --> environment_prod
-    integrator_publisher --> authority_auditor
-    integrator_publisher --> environment_prod
-    integrator_censor    --> external_consumer
-    authority_auditor    --> [*]
+    %%
+    state "Market Surveillance" as environment_surveillance {
+        [*] --> authority_auditor
+        authority_auditor --> [*]
+    }
+
+    environment_prod        --> environment_surveillance
+    %%integrator_builder   --> environment_prod
+    %%integrator_developer --> environment_prod
+    %%integrator_publisher --> environment_prod
+    environment_integrator   --> environment_prod
+    environment_integrator   --> environment_surveillance
+    environment_integrator   --> external_consumer
+    environment_integrator   --> [*]
+    environment_surveillance --> [*]
 
     %%
-    prod_deployer --> external_consumer
+    environment_prod  --> external_consumer
+    external_consumer --> [*]
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0

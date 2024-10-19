@@ -46,22 +46,18 @@ Note:
 
 ## EU Cyber Resilience Act
 
-* Approved by the EU Parliament March 12th 2024
-* Adopted by the EU Commission on October 12th 2024 
-* Final publication expected by 
-* Three year implementation period
-* **CRA expexted to take effect in Q2 2027**
+* Approved by the EU Parliament Mar 12th 2024
+* Adopted by the EU Commission on Oct 10th 2024
+* Published in the official EU Journal [soon]
+* **Takes effect 36 months after publication** – ̃Q4 2027
 
 <div style="font-size: large;">
 
-> * Parliament resolution [T9-0130/2024](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.html)
+> * [Council adoption](https://www.consilium.europa.eu/en/press/press-releases/2024/10/10/cyber-resilience-act-council-adopts-new-law-on-security-requirements-for-digital-products/) – 2024-10-10
 
 </div>
 
 Note:
-
-Approved 6 weeks ago
-Law is expected to be approved by the Council in April 2024!
 
 
 [comment]: # (!!!)
@@ -73,6 +69,7 @@ Law is expected to be approved by the Council in April 2024!
 * Connected devices
 * Remote data processing solutions
 * Non-tangible digital products
+* Related systems and services needed for operation
 
 <div style="font-size: large;">
 
@@ -91,34 +88,32 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ## CRA does not apply to...
 
 * Software that is part of a service  ([Recital 12](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=13))
-* Though NIS2 applies if the services is considered critical infrastructure (70%)
+* Though NIS2 applies if the service is considered part of critical infrastructure
 
 
 [comment]: # (!!!)
 
-## Five "Roles"
+## Six "Roles"
 
 * Manufacturer
-* Distributor
-* Importer
-* Open-Source Software Steward
-* Open-Source Developers
+* Distributor, Importer and Market Authorities
+* Open Source Software Steward
+* Open Source Developers
 
 [comment]: # (!!! data-auto-animate)
 
-## Five "Roles"
+## Six "Roles"
 
 * Manufacturer 🔍
-* Distributor
-* Importer
-* Open-Source Software Steward
-* Open-Source Developers
+* Distributor, Importer and Market Authorities
+* Open Source Software Steward
+* Open Source Developers
 
 [comment]: # (||| data-auto-animate)
 
 ## Manufacturer
 
-* A natural or legal person who 
+* A natural or legal person who
     * **develops** or manufactures **products with digital elements**
     * or **has products with digital elements** designed, **developed** or manufactured,
     * and **markets them under its name** or trademark,
@@ -249,119 +244,42 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-## Five "Roles"
+## Six "Roles"
 
 * Manufacturer ✅
-* Distributor
-* Importer
-* Open-Source Software Steward
-* Open-Source Developers
+* Distributor, Importer and Market Authorities
+* Open Source Software Steward
+* Open Source Developers
 
 
 [comment]: # (!!! data-auto-animate)
 
-## Five "Roles"
+## Six "Roles"
 
 * Manufacturer ✅
-* Distributor ❌
-* Importer
-* Open-Source Software Steward
-* Open-Source Developers
+* Distributor, Importer and Market Authorities ❌
+* Open Source Software Steward
+* Open Source Developers
 
 
 [comment]: # (!!! data-auto-animate)
 
-## Five "Roles"
+## Six "Roles"
 
 * Manufacturer ✅
-* Distributor ❌
-* Importer ❌
-* Open-Source Software Steward
-* Open-Source Developers
+* Distributor, Importer and Market Authorities ❌
+* Open Source Software Steward ❌
+* Open Source Developers
 
 
 [comment]: # (!!! data-auto-animate)
 
-## Five "Roles"
+## Six "Roles"
 
 * Manufacturer ✅
-* Distributor ❌
-* Importer ❌
-* Open-Source Software Steward 🔍
-* Open-Source Developers
-
-
-[comment]: # (||| data-auto-animate)
-
-## Open Source Steward
-
-* A legal person, but not natural person, who...
-    * must be a non-profit ([Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17))
-    * provides support for OSS projects that are intended for commercial activities ([Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
-    * may provide voluntary security attestation ([Recital 21](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25))
-
-
-[comment]: # (|||)
-
-### Obligations of Open Source Stewards – Community Policy
-
-* Must create cybersecurity policy and documentation for it's community, that fosters...
-    * Development of secure products ([Article 24.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=208))
-    * Effective handling and information sharing around vulnerabilities ([Article 24.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=208))
-    * Voluntary vulnerability reporting ([Article 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=185))
-
-
-[comment]: # (|||)
-
-### Obligations of Open Source Stewards – Cooperation
-
-* Must cooperate with market surveillance authorities in... ([Article 24.2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=209))
-    * Mitigating risks
-    * Provide above documentation upon request
-    * Notify of exploited vulnerability discoveries ([Article 14.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176))
-    * Informing users of the impact of active exploited vulnerabilities or severe incidents ([Article 14.8](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=183))
-
-<div style="font-size: large;">
-
-> * Here, Stewards "add value" for Manufacturers by offloading some of the due diligence tasks. This is valuable!
-
-</div>
-
-
-[comment]: # (|||)
-
-### Obligations of Open Source Stewards – Security Attestation
-
-* 😍 Facilitate Manufacturer's due diligence as laid out in [Article 13.5](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163) ([Article 25](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=210))
-* EU Commision is tasked to set up a security attestation programme to facilitate this ([Recital 21](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25))
-
-<div style="font-size: large;">
-
-> * Stewards "add value" for Manufacturers by providing a Security Attestation via. This is valuable!
-
-</div>
-
-
-[comment]: # (|||)
-
-## Five "Roles"
-
-* Manufacturer ✅
-* Distributor ❌
-* Importer ❌
-* Open-Source Software Steward ✅
-* Open-Source Developers
-
-
-[comment]: # (!!! data-auto-animate)
-
-## Five "Roles"
-
-* Manufacturer ✅
-* Distributor ❌
-* Importer ❌
-* Open-Source Software Steward ✅
-* Open-Source Developers 🔍
+* Distributor, Importer and Market Authorities ❌
+* Open Source Software Steward ❌
+* Open Source Developers 🔍
 
 
 [comment]: # (||| data-auto-animate)
@@ -394,13 +312,12 @@ A Open Source Software Steward to assist them in improving their product's secur
 
 [comment]: # (|||)
 
-## Five "Roles"
+## Six "Roles"
 
 * Manufacturer ✅
-* Distributor ❌
-* Importer ❌
-* Open-Source Software Steward ✅
-* Open-Source Developers ✅
+* Distributor, Importer and Market Authorities ❌
+* Open Source Software Steward ❌
+* Open Source Developers ✅
 
 
 [comment]: # (!!! data-auto-animate)

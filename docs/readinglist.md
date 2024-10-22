@@ -52,6 +52,7 @@ toc: true
 * (NTIA) [Roles and Benefits for SBOM Across the Supply Chain](https://www.ntia.gov/files/ntia/publications/ntia_sbom_use_cases_roles_benefits-nov2019.pdf), (November 2019)
 * (CISA) [Attributes for evaluation and cataloging of Software Bill of Materials Tooling](https://docs.google.com/document/d/1TKPIjT7Rfc38F0OMuXIlPqFRoH7wj2H8x3w13Pgy8V4/edit), (Unpublished)
   * Related [spreadsheet](https://onedrive.live.com/view.aspx?resid=68652AA55C12F19A%216830&authkey=!AG7Yjwi-1S3rjWI)
+* (DE) [Technical Guideline TR-03183: Cyber Resilience Requirements for Manufacturers and Products - Part 2: Software Bill of Materials (SBOM)](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03183/BSI-TR-03183-2.pdf) (Version 1.1, January 2024)
 
 See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
 

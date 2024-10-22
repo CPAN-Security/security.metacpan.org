@@ -131,11 +131,11 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ![CE Mark](media/280px-Conformité_Européenne.png)
 
-* Place a CE mark on their products ([Article 28](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=218))
+* Place a CE mark on their products
 
 <div style="font-size: large;">
 
-> * Automating this (on MetaCPAN) may be an awesome way to help the sustainability of FOSS projects! (50%)
+> [Article 28](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=218)
 
 </div>
 
@@ -143,14 +143,15 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers – Support period
 
-* Determine the product support period.
-    * Default is 5 years, but should reflect expected use time. ([Article 13.8](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=165))
-    * Support period can also set by authorities if deemed inadequate, or for certain categories.
-* Security fixes must remain available for 10 years after publishing ([Article 13.9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=167))
+* Determine the product support period
+    * Default is 5 years, but should reflect expected use time
+    * Support period can also set by authorities
+* Security fixes must remain available for 10 years after issuing
 
 <div style="font-size: large;">
 
-> * Period length may be different per product (40%)
+> * [Article 13 (8)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=165)
+> * [Article 13 (9)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=166)
 
 </div>
 
@@ -170,11 +171,11 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers — Unique ID
 
-* Create a unique identification of their product ([Annex II.3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
+* Create a unique identification of their product
 
 <div style="font-size: large;">
 
-> PackageURL can solve this! (85%)
+> * [Annex II (3)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303)
 
 </div>
 
@@ -182,12 +183,13 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers – Build & Dependencies
 
-* Be able to identify and document vulnerabilities and components contained in products ([Annex I, Part II (1)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297))
-* Describe how the product is put together ([Annex VII.2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314))
+* Be able to identify and document vulnerabilities and components contained in products
+* Describe how the product is put together
 
 <div style="font-size: large;">
 
-> Match Unique ID to vulnerability databases (90%)
+> * [Annex I, Part II (1)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
+> * [Annex VII.2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314)
 
 </div>
 
@@ -195,14 +197,13 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers – Produce SBOMs
 
-* Produce SBOMs upon request by regulators ([Recital 22](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=26))
-    * At minimum, top level dependencies ([Annex I, Part II (1)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300))
-* See also: The German Federal Office for Information Security's [Technical Guideline TR-03183](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03183/BSI-TR-03183-2.pdf) version 1.1 (published 2023-11-28)
+* Produce SBOMs upon request by regulators
+    * At minimum, top level dependencies
 
 <div style="font-size: large;">
 
-> * Requires ways to refer to both embedded and cross-ecosystem dependencies (95%)
-> * Transitive dependencies are implied to be produced (70%)
+> * [Recital 22](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=26)
+> * [Annex I, Part II (1)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300)
 
 </div>
 
@@ -210,15 +211,18 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers – No Vulnerabilities
 
-* Product has **no known vulnerabilities** in their products ([Article 13.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161); [Annex I, Part I (2 (a))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297))
-* Product is **secure by default** ([Recital 65](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=73))
-* 😍 Exercise due diligence when integrating third party components to avoid they compromise security ([Article 13.5](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163))
-* Report vulnerabilities to the Manufacturer or Open Source maintainer ([Article 13.6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164))
+* Product has **no known vulnerabilities** in their products
+* Product is **secure by default**
+* 😍 Exercise due diligence when integrating third party components to avoid they compromise security
+* Report vulnerabilities to the Manufacturer or Open Source maintainer
 
 <div style="font-size: large;">
 
-> * Implies they have a complete picture of dependencies (95%)
-> * Though the minimum is "top level dependencies" ([Annex I, Part II, (1)]())
+> * [Article 13.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161)
+> * [Annex I, Part I (2 (a))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
+> * [Recital 65](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=73)
+> * [Article 13.5](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163)
+> * [Article 13.6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164)
 
 </div>
 
@@ -226,21 +230,29 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ### Obligations of Manufacturers – Offer timely security updates
 
-* Make security updates available to customers effectively for the duration of the support period ([Article 13.8](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=165); [Annex I part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300))
-* Ensure vulnerabilities can be addressed through security updates ([Annex I, Part I (2 (c))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=))
-    * In a timely manner ([Annex I, Part II (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=302))
+* Make security updates available to customers effectively for the duration of the support period
+* Ensure vulnerabilities can be addressed through security updates, in a timely manner
 
+> * [Article 13.8](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=165)
+> * [Annex I part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300)
+> * [Annex I, Part I (2 (c))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
+>    * [Annex I, Part II (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=302)
 
 [comment]: # (|||)
 
 ### Obligations of Manufacturers – Early warning system
 
-* Take part in the EU early warning notification regime ([Article 13.6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164); [Article 14.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176))
-    * Submit early warning within 24h after exploit discovery ([Article 14.2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177))
-    * Submit vulnerability notification within 72h, incl. corrective measures ([Article 14.2 (b)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177))
-    * Submit a final report no later than 14 days after discovery ([Article 14.2 (c)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=178))
+* Take part in the EU early warning notification regime
+    * Submit early warning within 24h after exploit discovery
+    * Submit vulnerability notification within 72h, incl. corrective measures
+    * Submit a final report no later than a month after discovery
 * Incident reports must be submitted to a common EU reporting platform
 
+> * [Article 13.6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164)
+> * [Article 14.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176)
+> * [Article 14.2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177)
+> * [Article 14.2 (b)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177)
+> * [Article 14.2 (c)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=178)
 
 [comment]: # (|||)
 
@@ -294,20 +306,21 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ### Obligations to Open Source Developers – Status Quo
 
 * CRA **does not apply** to Developers if...
-    * they contribute code to projects they are **not responsible for** ([Recital (18)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
-    * they are **not monetising** their product ([Recital (18)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
-    * their product **is not ultimately** intended for commercial activities ([Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22))
+    * they contribute code to projects they are **not responsible for**
+    * they are **not monetising** their product
+    * their product is ultimately **not intended for commercial activities**
 
+> * [Recital (18)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
+> * [Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22))
 
 [comment]: # (|||)
 
 ### Obligations to Open Source Developers – With a FOSS Steward
 
 * CRA **applies voluntarily** if the Developer decides...
-    * their product **is ultimately intended** for commercial activities ([Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22))
+    * their product **is ultimately intended** for commercial activities
 
-
-A Open Source Software Steward to assist them in improving their product's security posture.
+> * [Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22)
 
 
 [comment]: # (|||)
@@ -327,48 +340,54 @@ A Open Source Software Steward to assist them in improving their product's secur
 
 [comment]: # (||| data-auto-animate)
 
-## Now what?
-
-* We can help our users comply with EU Law!
-
-
-[comment]: # (||| data-auto-animate)
-
 ## Metadata
 
-* Update CPAN::Meta::Spec
-    * Add CRA compliance fields
-    * Add project sustainability fields
-    * Who would like to make this happen? ✋
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-9, CRA-AV             |
+| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-9 |
+| Version                             | Yes      | CISA-2024-9, CRA-AV                        |
+| Purpose, Intended Use               | Yes      | CRA-AII(4)                                 |
+| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-9 |
+| Security contact                    | Yes      | CRA-AII(2)                                 |
+| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-9         |
+| Relationships                       | Yes      | CISA-2024-9                                |
+| Cryptographic Hash                  | Yes      | CISA-2024-9                                |
+| Copyright Notice                    | Yes      | CISA-2024-9                                |
+| License(s)                          | Yes      | CISA-2024-9                                |
+| Download location                   | No       |                                            |
+| Code Commit Revision                | No       |                                            |
+| Code Repository                     | No       |                                            |
+| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                     |
+| Open Source Software Steward        | No       | CRA-Rec-19                                 |
+| Security Attestation                | No       | CRA-Rec-21                                 |
+| SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-9                     |
+| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-9                     |
+| SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |
+| SBOM Generation Tool                | No       |                                            |
+| SBOM Location                       | No       | CRA-AII(9)                                 |
+| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |
+| SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    |
+| SBOM Type                           | No       | CISA-2023, CISA-2024-9                     |
+| CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                      |
+| CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                         |
+| CE Support End Date                 | No       | CRA-AII(7)                                 |
+| CE Technical Documentation          | No       | CRA-AII(8)                                 |
+
+
 
 
 [comment]: # (|||)
 
-## SBOM
-
-* Support Software Bill of Materials in the toolchain
-    * PackageURL for helping with out-of-ecosystem dependencies and requirements
-    * SBOM-aware PAUSE
-    * SBOM discovery API on MetaCPAN
-    * Who would like to make this work? ✋
 
 
 [comment]: # (|||)
 
-## Documentation
-
-* Create an overview of roles, metadata, responsibilities and terminology
-    * Who needs the metadata required by CRA?
-    * Where does it come from?
-    * **LOTS done!**
-    * See https://security.metacpan.org/docs/
 
 
 [comment]: # (|||)
 
-## CPANSec's supply-chain SBOM overview
-
-Let's take a look!
 
 
 [comment]: # (!!!)

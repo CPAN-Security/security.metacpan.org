@@ -25,7 +25,7 @@ title: Minutes 2024-08-01
     *  @petek
     *  @leont
 *   Partly Absent
-    *  @wildgaru
+    *  @garu
     *  @timlegge
 
 @stigtsp and @tux returned from vacation, so nothing new to add

@@ -79,17 +79,28 @@ Manufacturers must provide a Software Bill of Materials (SBOM) upon request by a
 
 ### Importers
 
-Importers shall place on the market only products with digital elements that comply with the essential requirements set out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297), and where the processes put in place by the manufacturer comply with the essential requirements set out in [Annex I, Part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300), as required in [Article 19(1))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=197)
-
+Importers shall place on the market only products with digital elements that comply with the essential requirements set out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297), and where the processes put in place by the manufacturer comply with the essential requirements set out in [Annex I, Part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300) – as laid out in [Article 19(1))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=197)
 
 
 ### Distributors
 
+When making a product with digital elements available on the market, distributors shall act with due care in relation to the requirements set out in this Regulation.
+
+Before making a product with digital elements available on the market, distributors shall verify that:
+
+* (a) the product with digital elements bears the CE marking;
+* (b) the manufacturer and the importer have complied with the obligations set out in [Article 13(15), (16), (18), (19) and (20)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=169) and [Article 19(4)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=199), and have provided all necessary documents to the distributor.
 
 
-### Open Source Stewards
+### Open Source Stewards ⚠️  FIXME: Not done
 
-Open Source Stewards are obliged to
+Open Source Software Stewards are…
+
+* […] legal persons who *provide support on a sustained basis* for the development […] of products which are intended for commercial activities, and who *play a main role in ensuring the viability of those products* […] ([Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22))
+  * […] should be subject to a light-touch and tailor-made regulatory regime.
+  * [and…] only cover […] free and open-source software that are ultimately intended for commercial activities.
+
+Open Source Stewards are obliged to…
 
 * …facilitate the Manufacturer's _due diligence_ obligation set out in [Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163) ⚠️  FIXME: (Dis)confirm this.
 * …provide a cybersecurity policy for voluntary reporting of vulnerabilities, as laid out in [Article 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=185)
@@ -104,13 +115,21 @@ FOSS Software may get a voluntary security attestation, as described in [Article
   * …so this Attestation becomes a "proof of due diligence exercised"? ⚠️  FIXME: (Dis)confirm this.
 * …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties.
 
+Furthermore, the OSS Software Stewards are only subject to a "light-touch" and "tailor-made" regulatory regime, ans are not to be considered as Manufacturers.
+
+* […] the development of […] free and open-source software by *not-for-profit organisations* should not be considered to be a commercial activity provided that the organisation is set up in such a way that ensures that all earnings after costs are used to achieve not-for-profit objectives. ([Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=21))
+
+> [!CAUTION]
+> * (CPANSec, 2024-09-11) The details and implementations around this concept has not been made available yet.
 
 
 #### Open questions
 
 * "Commission shall publish guidance to assist economic operators in applying this Regulation"
   * 
-* 
+* Who gives out attestations?
+  * Under what terms?
+  * Can these attestations be used as a "value add" to existing components in such a way that may be sold by Stewards to fund it's work and it's community.
 
 ## An idealized Open Source Steward Supply-Chain graph
 
@@ -201,7 +220,7 @@ graph TB
 
 ## License and use of this document
 
-* Version: 0.5.2
+* Version: 0.5.3
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

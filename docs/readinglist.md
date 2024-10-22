@@ -9,6 +9,7 @@ toc: true
 
 > [!CAUTION]
 > This is the CPAN Security Group recommended reading list.
+> **This page is [Open Source](#license-and-use-of-this-document)** – meaning, it's eventual quality and usefulness is proportional to your contribution!
 > If you have any additions or improvements, please [open an issue](https://github.com/CPAN-Security/security.metacpan.org/issues), citing this page.
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/readinglist/docs/readinglist.md](https://github.com/CPAN-Security/security.metacpan.org/blob/readinglist/docs/readinglist.md)
@@ -18,10 +19,10 @@ toc: true
 
 ## Software Bills of Materials (SBOM)
 
-* (NTIA) [The Minimum Elements For a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf) (July 2021)
-* (NSA, ODNI, CISA) [Securing the Software Supply Chain: Recommended Practices for Managing OSS and SBOMs](https://media.defense.gov/2023/Dec/11/2003355557/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN%20RECOMMENDED%20PRACTICES%20FOR%20MANAGING%20OPEN%20SOURCE%20SOFTWARE%20AND%20SOFTWARE%20BILL%20OF%20MATERIALS.PDF) (December 2023)
-* (NTIA) [Survey of Existing SBOM Formats and Standards](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) (2021)
-* (CISA) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (April 2023)
+* (NTIA-2021-7) [The Minimum Elements For a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf) (July 2021)
+* (CISA-2023-12) (NSA, ODNI, CISA) [Securing the Software Supply Chain: Recommended Practices for Managing OSS and SBOMs](https://media.defense.gov/2023/Dec/11/2003355557/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN%20RECOMMENDED%20PRACTICES%20FOR%20MANAGING%20OPEN%20SOURCE%20SOFTWARE%20AND%20SOFTWARE%20BILL%20OF%20MATERIALS.PDF) (December 2023)
+* (NTIA-2021) [Survey of Existing SBOM Formats and Standards](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) (2021)
+* (CISA-2023-4) [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), published 2023-04-21
 
 
 ### SBOM use cases
@@ -39,16 +40,22 @@ toc: true
 
 ### Useful articles and papers
 
-* (NTIA) [Software Suppliers Playbook: SBOM Production and Provision](https://www.ntia.gov/files/ntia/publications/software_suppliers_sbom_production_and_provision_-_final.pdf) (November 2021)
-* [Managing Open Source and SBOMs](https://resilientcyber.substack.com/p/managing-open-source-and-sboms) (Chris Huges, 2023)
-* [Understanding OWASP’s Bill of Material Maturity Model: Not all SBOMs are created equal](https://www.csoonline.com/article/1246904/not-all-sboms-are-created-equal-understanding-owasps-bill-of-material-maturity-model.html) (Chris Huges, 2023)
-* (NTIA) [Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.ntia.gov/files/ntia/publications/ntia_sbom_framing_2nd_edition_20211021.pdf) (October 2021)
-* (Lawfare Media) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards) (July 2022)
-* (CISA) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations) (March 2024)
-* (SPDX) [Satisfying NTIA Minimum Elements for an SBOM using SPDX](https://spdx.github.io/spdx-spec/v2.3/how-to-use/#k22-mapping-ntia-minimum-elements-to-spdx-fields) (SPDX 2.3)
-* (SPDX) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 3.0)
-* (CISA) [SBOM Sharing Primer](https://www.cisa.gov/resources-tools/resources/sbom-sharing-primer)
-* (NTIA) [Roles and Benefits for SBOM Across the Supply Chain](https://www.ntia.gov/files/ntia/publications/ntia_sbom_use_cases_roles_benefits-nov2019.pdf), (November 2019)
+* (CISA-2024-3) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), (March 2024)
+* (CISA-2024-3) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28
+* (CISA-2024-5) [SBOM Sharing Primer](https://www.cisa.gov/resources-tools/resources/sbom-sharing-primer), (May 2024)
+* (CISA-2024-10) [Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024), Sections 2.2.1.4 and 2.2.2 and others, (October 2024)
+* (CISA) [Attributes for evaluation and cataloging of Software Bill of Materials Tooling](https://docs.google.com/document/d/1TKPIjT7Rfc38F0OMuXIlPqFRoH7wj2H8x3w13Pgy8V4/edit), (Unpublished)
+  * Related [spreadsheet](https://onedrive.live.com/view.aspx?resid=68652AA55C12F19A%216830&authkey=!AG7Yjwi-1S3rjWI)
+* (DE-TR) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 2.0.0, published 2024-09-20.
+* (Huges-2023-1) [Managing Open Source and SBOMs](https://resilientcyber.substack.com/p/managing-open-source-and-sboms), (Chris Huges, 2023)
+* (Huges-2023-2) [Understanding OWASP’s Bill of Material Maturity Model: Not all SBOMs are created equal](https://www.csoonline.com/article/1246904/not-all-sboms-are-created-equal-understanding-owasps-bill-of-material-maturity-model.html), (Chris Huges, 2023)
+* (Lawfare-2023) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards), (Lawfare Media, July 2022)
+* (NTIA-2019-11) [Roles and Benefits for SBOM Across the Supply Chain](https://www.ntia.gov/files/ntia/publications/ntia_sbom_use_cases_roles_benefits-nov2019.pdf), (November 2019)
+* (NTIA-2021-3) [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30
+* (NTIA-2021-7) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12 (Superseeded by CISA-2024-10)
+* (NTIA-2021-11) [Software Suppliers Playbook: SBOM Production and Provision](https://www.ntia.gov/files/ntia/publications/software_suppliers_sbom_production_and_provision_-_final.pdf), (November 2021)
+* (SPDX-2.3) [Satisfying NTIA Minimum Elements for an SBOM using SPDX](https://spdx.github.io/spdx-spec/v2.3/how-to-use/#k22-mapping-ntia-minimum-elements-to-spdx-fields), (SPDX 2.3)
+* (SPDX-3.0) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028), (SPDX 3.0)
 
 See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
 
@@ -62,12 +69,12 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 ### Useful articles, papers and resources
 
-* (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis); Published October 2023.
+* (CISA-2023-10) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis); Published October 2023.
 * (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
-* (Blog) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) Published by Philippe Ombredanne, May 2023.
-* (Video) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) Presented at FOSDEM 2022, 15 minutes length.
+* (Ombredanne-2023) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) Published by Philippe Ombredanne, May 2023.
+* (Ombredanne-2022) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) Presented at FOSDEM 2022, 15 minutes length.
 * (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) Presented at S4 Conference 2023.
-* (OpenSSF) [OpenSSF Responds to the CISA RFC on Software Identification Ecosystem Analysis](https://openssf.org/blog/2023/12/11/openssf-responds-to-the-cisa-rfc-on-software-identification-ecosystem-analysis/) Published 2023-12-11.
+* (OpenSSF-2023-12) [OpenSSF Responds to the CISA RFC on Software Identification Ecosystem Analysis](https://openssf.org/blog/2023/12/11/openssf-responds-to-the-cisa-rfc-on-software-identification-ecosystem-analysis/) Published 2023-12-11.
 
 
 ## Software Lifecycle
@@ -81,8 +88,8 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 ## Provenance & Supply Chain Security
 
-* (OpenSSF) [Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security) (Feb 2024)
-* (OpenSSF) [Build Provenance for All Package Registries](https://repos.openssf.org/build-provenance-for-all-package-registries) (July 2023)
+* (OpenSSF-2024-3) [Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security) (Feb 2024)
+* (OpenSSF-2023-7) [Build Provenance for All Package Registries](https://repos.openssf.org/build-provenance-for-all-package-registries) (July 2023)
 * (SLSA) [SLSA v1.0 Guiding Principles](https://slsa.dev/spec/v1.0/principles)
 * (SLSA) [SLSA v1.0 Terminology](https://slsa.dev/spec/v1.0/terminologye)
 * (SLSA) [SLSA v1.0 Developer's quick-start guide](https://slsa.dev/get-started)
@@ -98,7 +105,8 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 ## Regulations, directives and laws
 
-There are several relevant legislation regarding cybersecurity in Open Source ecosystems and supply chains.
+There are several relevant legislations regarding cybersecurity in Open Source ecosystems and supply chains.
+This is not a exhaustive list!
 
 
 ### USA – EO 14028
@@ -285,10 +293,10 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
     * 6.1.2
     * 5.2
     * Article 5.24, Article 5.25, Article 5.26
-    * 
-    * 
+    * …
 * CIS Controls V8
 * ISO 27036:2023 (3rd party risk)
+
 
 ## License and use of this document
 

@@ -20,6 +20,11 @@ toc: true
 * Read the [perlsec](https://perldoc.perl.org/perlsec) page to familiarize yourself with Perl's security features
 * Read the OpenSSF [Open Source Best Practices Badge](https://www.bestpractices.dev/en) program, and try to at least achieve a [passing badge](https://www.bestpractices.dev/en/criteria/0). (You can also see how well [other Perl projects](https://www.bestpractices.dev/en/projects?q=perl) do in this regard!)
 
+# Write code that is _Secure by Design_
+
+* [CISA's Secure by Design Pledge](https://www.cisa.gov/securebydesign/pledge)
+
+
 ## Keep your security metadata up-to-date
 
 * Read the [CPAN::META::Spec](https://metacpan.org/pod/CPAN::Meta::Spec) and make sure all relevant fields are correct and up-to-date
@@ -58,6 +63,7 @@ toc: true
 
 * SEI CERT [Secure Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
 * [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
+* [CISA Product Security Bad Practices guide](https://www.cisa.gov/resources-tools/resources/product-security-bad-practices)
 
 
 ## License and use of this document

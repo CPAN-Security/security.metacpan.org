@@ -30,8 +30,8 @@ Note:
 
 ## New laws, new obligations
 
-* Cyber Resilience Act is arriving soon!
-* First law to affect Open Source projects substantially
+* Cyber Resilience Act is arriving in the next weeks
+* 1st law to affect Open Source projects substantially
 
 
 Note:
@@ -135,7 +135,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 <div style="font-size: large;">
 
-> [Article 28](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=218)
+> * [Article 28](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=218)
 
 </div>
 
@@ -161,11 +161,6 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 * Set up a single point of contact ([Annex II.2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
 
-<div style="font-size: large;">
-
-> May require confirmation (60%)
-
-</div>
 
 [comment]: # (|||)
 
@@ -233,10 +228,14 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 * Make security updates available to customers effectively for the duration of the support period
 * Ensure vulnerabilities can be addressed through security updates, in a timely manner
 
+<div style="font-size: large;">
+
 > * [Article 13.8](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=165)
 > * [Annex I part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300)
 > * [Annex I, Part I (2 (c))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
 >    * [Annex I, Part II (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=302)
+
+</div>
 
 [comment]: # (|||)
 
@@ -248,11 +247,15 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
     * Submit a final report no later than a month after discovery
 * Incident reports must be submitted to a common EU reporting platform
 
+<div style="font-size: large;">
+
 > * [Article 13.6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164)
 > * [Article 14.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176)
 > * [Article 14.2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177)
 > * [Article 14.2 (b)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177)
 > * [Article 14.2 (c)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=178)
+
+</div>
 
 [comment]: # (|||)
 
@@ -310,8 +313,12 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
     * they are **not monetising** their product
     * their product is ultimately **not intended for commercial activities**
 
+<div style="font-size: large;">
+
 > * [Recital (18)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
 > * [Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22))
+
+</div>
 
 [comment]: # (|||)
 
@@ -320,7 +327,11 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 * CRA **applies voluntarily** if the Developer decides...
     * their product **is ultimately intended** for commercial activities
 
+<div style="font-size: large;">
+
 > * [Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22)
+
+</div>
 
 
 [comment]: # (|||)
@@ -342,6 +353,14 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ## Metadata
 
+* The "Minimum Elements" or "Baseline Attributes" are required
+* Additionally attributes are needed to achieve the purpose
+
+
+
+[comment]: # (|||)
+
+
 
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
@@ -351,6 +370,14 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 | Purpose, Intended Use               | Yes      | CRA-AII(4)                                 |
 | Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-9 |
 | Security contact                    | Yes      | CRA-AII(2)                                 |
+
+
+[comment]: # (|||)
+
+
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
 | Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-9         |
 | Relationships                       | Yes      | CISA-2024-9                                |
 | Cryptographic Hash                  | Yes      | CISA-2024-9                                |
@@ -359,26 +386,46 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 | Download location                   | No       |                                            |
 | Code Commit Revision                | No       |                                            |
 | Code Repository                     | No       |                                            |
-| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                     |
-| Open Source Software Steward        | No       | CRA-Rec-19                                 |
-| Security Attestation                | No       | CRA-Rec-21                                 |
+
+
+[comment]: # (|||)
+
+
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
 | SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-9                     |
 | SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-9                     |
 | SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |
-| SBOM Generation Tool                | No       |                                            |
-| SBOM Location                       | No       | CRA-AII(9)                                 |
 | SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    |
+| SBOM Generation Tool                | No       |                                            |
+| SBOM Location                       | No       | CRA-AII(9)                                 |
 | SBOM Type                           | No       | CISA-2023, CISA-2024-9                     |
+
+
+
+[comment]: # (|||)
+
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                     |
+| Open Source Software Steward        | No       | CRA-Rec-19                                 |
+| Security Attestation                | No       | CRA-Rec-21                                 |
+
+
+
+[comment]: # (|||)
+
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
 | CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                      |
 | CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                         |
 | CE Support End Date                 | No       | CRA-AII(7)                                 |
 | CE Technical Documentation          | No       | CRA-AII(8)                                 |
 
-
-
-
-[comment]: # (|||)
 
 
 

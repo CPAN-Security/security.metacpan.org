@@ -64,15 +64,15 @@ Note:
 
 ## CRA Applies to...
 
-* All Manufacturers that wish to place "Products with Digital Elements" on the EU market. ([Recital 9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=10))
-
-* Connected devices
-* Remote data processing solutions
-* Non-tangible digital products
-* Related systems and services needed for operation
+* All Manufacturers that wish to place "Products with Digital Elements" on the EU market.
+  * Connected devices
+  * Remote data processing solutions
+  * Non-tangible digital products
+  * _Related systems and services needed for operation_
 
 <div style="font-size: large;">
 
+> * [Recital 9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=10)
 > * Product with Digital Elements: [Article 3 (1), (4), (6), (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136)
 > * Placing on the market: [Article 3 (21)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=140)
 
@@ -239,7 +239,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 > * [Article 13.8](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=165)
 > * [Annex I part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300)
 > * [Annex I, Part I (2 (c))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
->    * [Annex I, Part II (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=302)
+> * [Annex I, Part II (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=302)
 
 </div>
 
@@ -248,10 +248,10 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ### Obligations of Manufacturers – Early warning system
 
 * Take part in the EU early warning notification regime
-    * Submit early warning within 24h after exploit discovery
-    * Submit vulnerability notification within 72h, incl. corrective measures
-    * Submit a final report no later than a month after discovery
-* Incident reports must be submitted to a common EU reporting platform
+    * Early warning within 24h after exploit discovery
+    * Vulnerability notification within 72h, incl. corrective measures
+    * Final report no later than a month after discovery
+* Incident reports submitted to a common EU reporting platform
 
 <div style="font-size: large;">
 
@@ -352,43 +352,103 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (!!! data-auto-animate)
 
-## Now what?
+## What Metadata is being asked for?
 
 
 [comment]: # (||| data-auto-animate)
 
 ## Metadata
 
-* The "Minimum Elements" or "Baseline Attributes" are required
-* Additionally attributes are needed to achieve the purpose
+* Open Source ecosystems are _universal_
+* CPAN's philosophy regarding Metadata:
 
+"As Much as Possible is Optional"
+
+
+[comment]: # (||| data-auto-animate)
+
+## Metadata Headaches
+
+* Required: "Minimum Elements" or "Baseline Attributes"
+  * Some operate with multiple levels of "Requiredness"
+  * Required, Recommended, Aspirational
+
+<div style="font-size: large;">
+
+> * (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
+> * (CISA-2024-10) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf), Third edition, Section 2 and Appendix B; Published 2024-10-15
+
+</div>
+
+
+[comment]: # (||| data-auto-animate)
+
+## Metadata Headaches
+
+* Lots of "opinions" from legislators & gov't orgs
+* ⚠️  Inconsistencies in Terms
+* ⚠️  Missing: More attributes needed to achieve security goals?
+
+
+[comment]: # (||| data-auto-animate)
+
+## Metadata Headaches
+
+* Needed: a "Metadata Rosetta Stone"
 
 
 [comment]: # (|||)
 
+# Metadata References
 
+* (CISA-2023-4) [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), published 2023-04-21
+* (CISA-2024-10) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf), Third edition, sections 2.2.1.4, 2.2.2 and Appendix B; Published 2024-10-15
+* (CRA-AII) [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303) Information and Instructions to the User, Dated 2024-03-12
+* (CRA-AV) [Cyber Resilience Act, Annex V](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=311) EU Declaration of Conformity, Dated 2024-03-12
+* (CRA-AVII) [Cyber Resilience Act, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314) Contents of the Technical Documentation, Dated 2024-03-12
+* (CRA-Art-47) [Cyber Resilience Act, Article 47](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=249) Operational obligations of notified bodies, Dated 2024-03-12
+* (CRA-Rec-15) [Cyber Resilience Act, Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17) Economic operators, Dated 2024-03-12
+* (CRA-Rec-18) [Cyber Resilience Act, Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20) Open Source Software Contributors, Dated 2024-03-12
+* (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Stewards, Dated 2024-03-12
+* (CRA-Rec-21) [Cyber Resilience Act, Recital 21](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25) Open Source Security Attestation, Dated 2024-03-12
+* (TR-03183) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products](https://bsi.bund.de/dok/TR-03183), Part 2: Software Bill of Materials (SBOM), Version 2.0.0, published 2024-09-20
+* (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
+
+
+[comment]: # (|||)
+
+# Component attributes
 
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-9, CRA-AV             |
-| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-9 |
-| Version                             | Yes      | CISA-2024-9, CRA-AV                        |
+| Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183  |
+| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10 |
+| Version                             | Yes      | CISA-2024-10, CRA-AV, TR-03183             |
 | Purpose, Intended Use               | Yes      | CRA-AII(4)                                 |
-| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-9 |
+| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
 | Security contact                    | Yes      | CRA-AII(2)                                 |
+| Primary Component Filename          | Yes      | TR-03183                                   |
 
 
 [comment]: # (|||)
 
-
+# Dependency Attributes
 
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-9         |
-| Relationships                       | Yes      | CISA-2024-9                                |
-| Cryptographic Hash                  | Yes      | CISA-2024-9                                |
-| Copyright Notice                    | Yes      | CISA-2024-9                                |
-| License(s)                          | Yes      | CISA-2024-9                                |
+| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183 |
+| Relationships                       | Yes      | CISA-2024-10                               |
+| Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183                     |
+| Copyright Notice                    | Yes      | CISA-2024-10                               |
+| License(s)                          | Yes      | CISA-2024-10, TR-03183                     |
+
+
+[comment]: # (|||)
+
+# Other useful attributes
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
 | Download location                   | No       |                                            |
 | Code Commit Revision                | No       |                                            |
 | Code Repository                     | No       |                                            |
@@ -396,23 +456,23 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-
+# The SBOM Document Itself
 
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-9                     |
-| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-9                     |
+| SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
+| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
 | SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |
 | SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    |
+| SBOM Location                       | Yes      | CRA-AII(9), TR-03183                       |
+| SBOM Type                           | No       | CISA-2023-4, CISA-2024-10                  |
 | SBOM Generation Tool                | No       |                                            |
-| SBOM Location                       | No       | CRA-AII(9)                                 |
-| SBOM Type                           | No       | CISA-2023, CISA-2024-9                     |
-
 
 
 [comment]: # (|||)
 
+# Open Source Stewards
 
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
@@ -421,9 +481,9 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 | Security Attestation                | No       | CRA-Rec-21                                 |
 
 
-
 [comment]: # (|||)
 
+# Manufacturer's CE Conformity Declaration
 
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
@@ -433,30 +493,9 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 | CE Technical Documentation          | No       | CRA-AII(8)                                 |
 
 
-
-
 [comment]: # (|||)
 
-
-
-[comment]: # (|||)
-
-# References
-
-* (CISA-2024) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28.
-* (CISA-2024-9) 
-* (CRA-AII) [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303) Information and Instructions to the User, Dated 2024-03-12
-* (CRA-AV) [Cyber Resilience Act, Annex V](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=311) EU Declaration of Conformity, Dated 2024-03-12
-* (CRA-AVII) [Cyber Resilience Act, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314) Contents of the Technical Documentation, Dated 2024-03-12
-* (CRA-Art-3) [Cyber Resilience Act, Article 3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136) Definitions, Dated 2024-03-12
-* (CRA-Art-20) [Cyber Resilience Act, Article 20](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=202) Obligations of distributors, Dated 2024-03-12
-* (CRA-Art-47) [Cyber Resilience Act, Article 47](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=249) Operational obligations of notified bodies, Dated 2024-03-12
-* (CRA-Rec-15) [Cyber Resilience Act, Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17) Economic operators, Dated 2024-03-12
-* (CRA-Rec-18) [Cyber Resilience Act, Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20) Open Source Software Contributors, Dated 2024-03-12
-* (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Stewards, Dated 2024-03-12
-* (DE-TR) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products](https://bsi.bund.de/dok/TR-03183), Part 2: Software Bill of Materials (SBOM), Version 2.0.0, published 2024-09-20
-* (NTIA-2021) [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30
-* (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
+# * Sigh *
 
 
 [comment]: # (!!!)

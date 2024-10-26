@@ -42,17 +42,30 @@ Note:
 
 ## (I am not a lawyer)
 
-(Also, I am not an "authority")
+
+[comment]: # (||| data-auto-animate)
+
+## (I am not a lawyer)
+
+* (Also, I am not an "authority")
 
 
-[comment]: # (!!!)
+[comment]: # (||| data-auto-animate)
+
+## (I am not a lawyer)
+
+* (Also, I am not an ~"authority"~)
+* I'm a _volunteer_
+
+
+[comment]: # (!!! data-auto-animate)
 
 ## EU Cyber Resilience Act
 
 * Approved by the EU Parliament Mar 12th 2024
-* Adopted by the EU Commission on Oct 10th 2024
+* Adopted by the EU Commission on **Oct 10th 2024**
 * Published in the official EU Journal [soon]
-* **Takes effect 36 months after publication** – ̃Q4 2027
+* **Takes effect 36 months after publication**
 
 <div style="font-size: large;">
 
@@ -62,6 +75,10 @@ Note:
 
 Note:
 
+* Into full effect by the end of 2027
+* This talk is to...
+    * _help you_ prepare, and
+    * for you to _help us_ prepare
 
 
 [comment]: # (|||)
@@ -71,6 +88,9 @@ Note:
 * Increase the general Cybersecurity across Europe
 * To ensure they are safe before placement on the market
 
+Note:
+
+* Details in the upcoming slides
 
 
 [comment]: # (|||)
@@ -93,7 +113,9 @@ Note:
 
 Note:
 
-* Devices, components, routers, cameras, fridges, toys, etc. Anything which has software may be affected!
+* Devices, components
+* routers, cameras, fridges, toys, etc.
+* Anything which has software may be affected!
 
 
 [comment]: # (|||)
@@ -120,7 +142,7 @@ Note:
 * Open Source Developers
 
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Six "Roles"
 
@@ -130,7 +152,7 @@ Note:
 * Open Source Developers
 
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Six "Roles"
 
@@ -157,7 +179,7 @@ Note:
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers<br> – Conformance
+### Obligations of Manufacturers<br> — Conformance
 
 ![CE Mark](media/280px-Conformité_Européenne.png)
 
@@ -169,9 +191,15 @@ Note:
 
 </div>
 
+
+Note:
+
+* "I am following EU Law"
+
+
 [comment]: # (|||)
 
-### Obligations of Manufacturers<br> – Support period
+### — Support period
 
 * Determine the product support period
     * Default is 5 years, but should reflect expected use time
@@ -185,16 +213,23 @@ Note:
 
 </div>
 
-[comment]: # (|||)
-
-### Obligations of Manufacturers – Point of Contact
-
-* Set up a single point of contact ([Annex II.2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303))
-
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers — Unique ID
+### — Point of Contact
+
+* Set up a single point of contact
+
+
+<div style="font-size: large;">
+
+> * [Annex II.2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303)
+
+</div>
+
+[comment]: # (|||)
+
+### — Unique ID
 
 * Create a unique identification of their product
 
@@ -206,7 +241,7 @@ Note:
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers<br> – Build & Dependencies
+### — Build & Dependencies
 
 * Be able to identify and document vulnerabilities and components contained in products
 * Describe how the product is put together
@@ -220,7 +255,7 @@ Note:
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers<br> – Produce SBOMs
+### — Produce SBOMs
 
 * Produce SBOMs upon request by regulators
     * At minimum, top level dependencies
@@ -234,12 +269,12 @@ Note:
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers<br> – No Vulnerabilities
+### — No Vulnerabilities
 
-* Product has **no known vulnerabilities** in their products
-* Product is **secure by default**
-* 😍 Exercise due diligence when integrating third party components to avoid they compromise security
-* Report vulnerabilities to the Manufacturer or Open Source maintainer
+* Product has **no known vulnerabilities**
+* Product is **secure by default**, and **secure by design**
+* 😍 Exercise due diligence when integrating third party components
+* 😍 Report vulnerabilities to the Manufacturer or Open Source maintainer
 
 <div style="font-size: large;">
 
@@ -251,12 +286,16 @@ Note:
 
 </div>
 
+Note:
+
+* Due diligence – to avoid these components compromise security
+
 [comment]: # (|||)
 
-### Obligations of Manufacturers<br> – Offer timely security updates
+### — Offer timely security updates
 
 * Make security updates available to customers effectively for the duration of the support period
-* Ensure vulnerabilities can be addressed through security updates, in a timely manner
+* Ensure vulnerabilities can be addressed through security updates
 
 <div style="font-size: large;">
 
@@ -267,14 +306,20 @@ Note:
 
 </div>
 
+
+Note:
+
+* Address vulnerabilities _in a timely manner_
+
+
 [comment]: # (|||)
 
-### Obligations of Manufacturers<br> – Early warning system
+### — Early warning system
 
 * Take part in the EU early warning notification regime
-    * Early warning within 24h after exploit discovery
-    * Vulnerability notification within 72h, incl. corrective measures
-    * Final report no later than a month after discovery
+    * **Early warning within 24h** after exploit discovery
+    * **Vulnerability notification within 72h**, incl. corrective measures
+    * **Final report no later than a month after discovery**
 * Incident reports submitted to a common EU reporting platform
 
 <div style="font-size: large;">
@@ -332,7 +377,7 @@ Note:
 
 [comment]: # (|||)
 
-### Obligations to Open Source Developers<br> – With a FOSS Steward
+### – With a FOSS Steward
 
 * CRA **applies voluntarily** if the Developer decides...
     * their product **is ultimately intended** for commercial activities

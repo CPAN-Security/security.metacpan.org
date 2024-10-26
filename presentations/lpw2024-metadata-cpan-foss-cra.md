@@ -63,6 +63,16 @@ Note:
 Note:
 
 
+
+[comment]: # (|||)
+
+## What is the goal of the CRA?
+
+* Increase the general Cybersecurity across Europe
+* To ensure they are safe before placement on the market
+
+
+
 [comment]: # (|||)
 
 ## CRA Applies to...
@@ -99,14 +109,6 @@ Note:
 > * [Recital 12](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=13)
 
 </div>
-
-[comment]: # (|||)
-
-## What is the goal of the CRA?
-
-* Increase the general Cybersecurity across Europe
-* To ensure they are safe before placement on the market
-
 
 [comment]: # (!!!)
 

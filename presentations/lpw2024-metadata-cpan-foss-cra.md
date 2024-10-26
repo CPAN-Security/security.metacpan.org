@@ -387,21 +387,150 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ## Metadata Headaches
 
-* Lots of "opinions" from legislators & gov't orgs
-* ⚠️  Inconsistencies in Terms
-* ⚠️  Missing: More attributes needed to achieve security goals?
-
-
-[comment]: # (||| data-auto-animate)
-
-## Metadata Headaches
-
 * Needed: a "Metadata Rosetta Stone"
 
 
 [comment]: # (|||)
 
-# Metadata References
+### Component attributes
+
+<div style="font-size: x-large;">
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183  |
+| **Version**                         | Yes      | CISA-2024-10, CRA-AV, TR-03183             |
+| Purpose, Intended Use               | Yes      | CRA-AII(4)                                 |
+| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
+| Security contact                    | Yes      | CRA-AII(2)                                 |
+| Copyright Notice                    | Yes      | CISA-2024-10                               |
+| License(s)                          | Yes      | CISA-2024-10, TR-03183                     |
+
+</div>
+
+Note:
+
+* Version:
+    * Semantic Versions ("SemVer"), Calendar Versions ("CalVer")
+    * On CPAN: Decimal Versions ("DeciVer").
+    * Actually: Arbitrary Versions
+
+[comment]: # (|||)
+
+### Dependency Attributes
+
+<div style="font-size: x-large;">
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| **Unique Product Identifier**       | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10 |
+| Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183                     |
+| Primary Component Filename          | Yes      | TR-03183                                   |
+| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183 |
+| **Relationships**                   | Yes      | CISA-2024-10                               |
+
+</div>
+
+
+Note:
+
+* Unique ID: CPE (Common Platform Enumeration), Package URL, SWID, UUIDs, SWHID (Software Heritage ID), OmniBOR
+    * Intrinsic vs. Extrinsic
+    * Global uniqueness required
+* Relationships: If a dependency is static, remote, provided, or dynamic
+   * "Primary", "Included in", "Heritage or Pedigree"
+   * Relationship completeness
+
+
+[comment]: # (|||)
+
+### Other useful attributes
+
+<div style="font-size: x-large;">
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Download location                   | No       |                                            |
+| Code Commit Revision                | No       |                                            |
+| Code Repository                     | No       |                                            |
+
+</div>
+
+
+Note:
+
+* What else is needed to make it easier to manage vulnerabilities?
+    * A list of known vulnerabilities addressed
+    * Details on which function/method had a vulnerability fixed
+    * When & where the package was downloaded from
+
+[comment]: # (|||)
+
+### The SBOM Document Itself
+
+<div style="font-size: x-large;">
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
+| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
+| SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |
+| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |
+| SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    |
+| **SBOM Location**                   | Yes      | CRA-AII(9), TR-03183                       |
+| SBOM Type                           | No       | CISA-2023-4, CISA-2024-10                  |
+| SBOM Generation Tool                | No       |                                            |
+
+</div>
+
+
+Note:
+
+* Location: Where to get the most recent SBOM
+* Type: "When" in a Supply Chain an SBOM was created
+
+
+[comment]: # (|||)
+
+### Open Source Stewards
+
+<div style="font-size: x-large;">
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                     |
+| Open Source Software Steward        | No       | CRA-Rec-19                                 |
+| Security Attestation                | No       | CRA-Rec-21                                 |
+
+</div>
+
+
+Note:
+
+* Intended for Commercial Use + Attestations + OSS Steward = Possible funding source
+
+
+[comment]: # (|||)
+
+### Manufacturers
+
+<div style="font-size: x-large;">
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                      |
+| CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                         |
+| CE Support End Date                 | No       | CRA-AII(7)                                 |
+| CE Technical Documentation          | No       | CRA-AII(8)                                 |
+
+</div>
+
+[comment]: # (|||)
+
+## References
+
+
+<div style="font-size: large;">
 
 * (CISA-2023-4) [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), published 2023-04-21
 * (CISA-2024-10) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf), Third edition, sections 2.2.1.4, 2.2.2 and Appendix B; Published 2024-10-15
@@ -416,125 +545,26 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 * (TR-03183) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products](https://bsi.bund.de/dok/TR-03183), Part 2: Software Bill of Materials (SBOM), Version 2.0.0, published 2024-09-20
 * (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
 
-
-[comment]: # (|||)
-
-# Component attributes
-
-| Attribute name                      | Required | References                                 |
-| :---------------------------------- | :------: | -----------------------------------------: |
-| Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183  |
-| Version                             | Yes      | CISA-2024-10, CRA-AV, TR-03183             |
-| Purpose, Intended Use               | Yes      | CRA-AII(4)                                 |
-| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
-| Security contact                    | Yes      | CRA-AII(2)                                 |
-| Copyright Notice                    | Yes      | CISA-2024-10                               |
-| License(s)                          | Yes      | CISA-2024-10, TR-03183                     |
+</div>
 
 
-Note:
 
-* Version:
-    * Semantic Versions ("SemVer"), Calendar Versions ("CalVer")
-    * On CPAN: Decimal Versions ("DeciVer").
-    * Actually: Arbitrary Versions
+[comment]: # (||| data-auto-animate)
 
-[comment]: # (|||)
+## Metadata Headaches
 
-# Dependency Attributes
-
-| Attribute name                      | Required | References                                 |
-| :---------------------------------- | :------: | -----------------------------------------: |
-| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10 |
-| Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183                     |
-| Primary Component Filename          | Yes      | TR-03183                                   |
-| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183 |
-| Relationships                       | Yes      | CISA-2024-10                               |
-
-
-Note:
-
-* Unique ID: CPE (Common Platform Enumeration), Package URL, SWID, UUIDs, SWHID (Software Heritage ID), OmniBOR
-    * Intrinsic vs. Extrinsic
-    * Global uniqueness required
-* Relationship: If a dependency is static, remote, provided, or dynamic
-   * "Primary", "Included in", "Heritage or Pedigree"
-   * Relationship completeness
+* Lots of "opinions" from legislators & gov't orgs
+* ⚠️  Inconsistencies in Terms
+* ⚠️  Missing: More attributes needed to achieve security goals?
 
 
 [comment]: # (|||)
 
-# Other useful attributes
-
-| Attribute name                      | Required | References                                 |
-| :---------------------------------- | :------: | -----------------------------------------: |
-| Download location                   | No       |                                            |
-| Code Commit Revision                | No       |                                            |
-| Code Repository                     | No       |                                            |
-
-
-Note:
-
-* What else is needed to make it easier to manage vulnerabilities?
-    * A list of known vulnerabilities addressed
-    * Details on which function/method had a vulnerability fixed
-
-[comment]: # (|||)
-
-# The SBOM Document Itself
-
-| Attribute name                      | Required | References                                 |
-| :---------------------------------- | :------: | -----------------------------------------: |
-| SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
-| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
-| SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |
-| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |
-| SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    |
-| SBOM Location                       | Yes      | CRA-AII(9), TR-03183                       |
-| SBOM Type                           | No       | CISA-2023-4, CISA-2024-10                  |
-| SBOM Generation Tool                | No       |                                            |
-
-
-Note:
-
-* Location: Where to get the most recent SBOM
-* Type: "When" in a Supply Chain an SBOM was created
-
-
-[comment]: # (|||)
-
-# Open Source Stewards
-
-| Attribute name                      | Required | References                                 |
-| :---------------------------------- | :------: | -----------------------------------------: |
-| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                     |
-| Open Source Software Steward        | No       | CRA-Rec-19                                 |
-| Security Attestation                | No       | CRA-Rec-21                                 |
-
-
-Note:
-
-* Intended for Commercial Use + Attestations + OSS Steward = Possible funding source
-
-
-[comment]: # (|||)
-
-# Manufacturer's CE Conformity Declaration
-
-| Attribute name                      | Required | References                                 |
-| :---------------------------------- | :------: | -----------------------------------------: |
-| CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                      |
-| CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                         |
-| CE Support End Date                 | No       | CRA-AII(7)                                 |
-| CE Technical Documentation          | No       | CRA-AII(8)                                 |
-
-
-[comment]: # (|||)
-
-# Metadata conclusions?
+## Metadata conclusions?
 
 * It's a mess, and it has to improve
 * No more: "If it ain't broke, don't fix it"
+
 
 
 [comment]: # (!!!)

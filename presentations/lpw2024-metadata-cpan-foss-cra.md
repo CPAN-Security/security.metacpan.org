@@ -36,6 +36,7 @@ Note:
 
 Note:
 
+* This talk is more about _the future_ of our community, than the present
 
 [comment]: # (!!!)
 
@@ -55,14 +56,14 @@ Note:
 
 <div style="font-size: large;">
 
-> * [Council adoption](https://www.consilium.europa.eu/en/press/press-releases/2024/10/10/cyber-resilience-act-council-adopts-new-law-on-security-requirements-for-digital-products/) – 2024-10-10
+> * [Council adoption](https://www.consilium.europa.eu/en/press/press-releases/2024/10/10/cyber-resilience-act-council-adopts-new-law-on-security-requirements-for-digital-products/) announcement – 2024-10-10
 
 </div>
 
 Note:
 
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## CRA Applies to...
 
@@ -82,14 +83,14 @@ Note:
 
 Note:
 
-Devices, components, routers, toys, etc. Anything which has software may be affected!
+* Devices, components, routers, cameras, fridges, toys, etc. Anything which has software may be affected!
 
 
-[comment]: # (!!!)
+[comment]: # (|||)
 
 ## CRA **does not** apply to...
 
-* Software that is _part of a service_
+* Software that is purely _part of a service_
 * Software that is covered by other regulation (NIS2, AI Act, Health regulations, etc.)
 * Software that is Open Source*
 
@@ -98,6 +99,14 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 > * [Recital 12](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=13)
 
 </div>
+
+[comment]: # (|||)
+
+## What is the goal of the CRA?
+
+* Increase the general Cybersecurity across Europe
+* To ensure they are safe before placement on the market
+
 
 [comment]: # (!!!)
 
@@ -108,13 +117,24 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 * Open Source Software Steward
 * Open Source Developers
 
+
+[comment]: # (!!! data-auto-animate)
+
+## Six "Roles"
+
+* Manufacturer
+* Distributor, Importer and Market Authorities ❌
+* Open Source Software Steward ❌
+* Open Source Developers
+
+
 [comment]: # (!!! data-auto-animate)
 
 ## Six "Roles"
 
 * Manufacturer 🔍
-* Distributor, Importer and Market Authorities
-* Open Source Software Steward
+* Distributor, Importer and Market Authorities ❌
+* Open Source Software Steward ❌
 * Open Source Developers
 
 [comment]: # (||| data-auto-animate)
@@ -270,26 +290,6 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ## Six "Roles"
 
 * Manufacturer ✅
-* Distributor, Importer and Market Authorities
-* Open Source Software Steward
-* Open Source Developers
-
-
-[comment]: # (!!! data-auto-animate)
-
-## Six "Roles"
-
-* Manufacturer ✅
-* Distributor, Importer and Market Authorities ❌
-* Open Source Software Steward
-* Open Source Developers
-
-
-[comment]: # (!!! data-auto-animate)
-
-## Six "Roles"
-
-* Manufacturer ✅
 * Distributor, Importer and Market Authorities ❌
 * Open Source Software Steward ❌
 * Open Source Developers
@@ -362,7 +362,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ## Metadata
 
 * Open Source ecosystems are _universal_
-* A "CPAN's philosophy" regarding Metadata? 😅
+* Is there a "CPAN's philosophy" regarding Metadata? 😅
 
 "Optional, As Much as Possible"
 
@@ -371,7 +371,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ## Metadata Headaches
 
-* Required: "Minimum Elements" or "Baseline Attributes"
+* New requirements: "Minimum Elements" or "Baseline Attributes"
   * Some operate with multiple levels of "Requiredness"
   * Minimum, Recommended, Aspirational
 
@@ -387,6 +387,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 ## Metadata Headaches
 
+* No common glossary of terms
 * Needed: a "Metadata Rosetta Stone"
 
 
@@ -562,9 +563,16 @@ Note:
 
 ## Metadata conclusions?
 
-* It's a mess, and it has to improve
-* No more: "If it ain't broke, don't fix it"
+* It's all a mess
+* It's up to us to improve it
+* ~"If it ain't broke, don't fix it"~
+* Don't be a bystander
 
+
+Note:
+
+* "Permissionless Innovation"
+* "Being a Good Open Source Citizen"
 
 
 [comment]: # (!!!)
@@ -577,7 +585,6 @@ Note:
 ## Join the work!
 
 * Pick something you are passionate about
-* Don't be a bystander!
 * Let's coordinate on #cpan-security on irc.perl.org! 😍
 
 

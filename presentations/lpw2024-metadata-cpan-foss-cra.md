@@ -41,6 +41,8 @@ Note:
 
 ## (I am not a lawyer)
 
+(Also, I am not an "authority")
+
 
 [comment]: # (!!!)
 
@@ -133,7 +135,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers – Conformance
+### Obligations of Manufacturers<br> – Conformance
 
 ![CE Mark](media/280px-Conformité_Européenne.png)
 
@@ -147,7 +149,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers – Support period
+### Obligations of Manufacturers<br> – Support period
 
 * Determine the product support period
     * Default is 5 years, but should reflect expected use time
@@ -182,7 +184,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers – Build & Dependencies
+### Obligations of Manufacturers<br> – Build & Dependencies
 
 * Be able to identify and document vulnerabilities and components contained in products
 * Describe how the product is put together
@@ -196,7 +198,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers – Produce SBOMs
+### Obligations of Manufacturers<br> – Produce SBOMs
 
 * Produce SBOMs upon request by regulators
     * At minimum, top level dependencies
@@ -210,7 +212,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers – No Vulnerabilities
+### Obligations of Manufacturers<br> – No Vulnerabilities
 
 * Product has **no known vulnerabilities** in their products
 * Product is **secure by default**
@@ -229,7 +231,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers – Offer timely security updates
+### Obligations of Manufacturers<br> – Offer timely security updates
 
 * Make security updates available to customers effectively for the duration of the support period
 * Ensure vulnerabilities can be addressed through security updates, in a timely manner
@@ -245,7 +247,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-### Obligations of Manufacturers – Early warning system
+### Obligations of Manufacturers<br> – Early warning system
 
 * Take part in the EU early warning notification regime
     * Early warning within 24h after exploit discovery
@@ -312,7 +314,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-### Obligations to Open Source Developers – Status Quo
+### Obligations to Open Source Developers<br> – Status Quo
 
 * CRA **does not apply** to Developers if...
     * they contribute code to projects they are **not responsible for**
@@ -328,7 +330,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-### Obligations to Open Source Developers – With a FOSS Steward
+### Obligations to Open Source Developers<br> – With a FOSS Steward
 
 * CRA **applies voluntarily** if the Developer decides...
     * their product **is ultimately intended** for commercial activities
@@ -360,9 +362,9 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 ## Metadata
 
 * Open Source ecosystems are _universal_
-* CPAN's philosophy regarding Metadata:
+* A "CPAN's philosophy" regarding Metadata? 😅
 
-"As Much as Possible is Optional"
+"Optional, As Much as Possible"
 
 
 [comment]: # (||| data-auto-animate)
@@ -371,7 +373,7 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 * Required: "Minimum Elements" or "Baseline Attributes"
   * Some operate with multiple levels of "Requiredness"
-  * Required, Recommended, Aspirational
+  * Minimum, Recommended, Aspirational
 
 <div style="font-size: large;">
 
@@ -422,13 +424,20 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
 | Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183  |
-| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10 |
 | Version                             | Yes      | CISA-2024-10, CRA-AV, TR-03183             |
 | Purpose, Intended Use               | Yes      | CRA-AII(4)                                 |
 | Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
 | Security contact                    | Yes      | CRA-AII(2)                                 |
-| Primary Component Filename          | Yes      | TR-03183                                   |
+| Copyright Notice                    | Yes      | CISA-2024-10                               |
+| License(s)                          | Yes      | CISA-2024-10, TR-03183                     |
 
+
+Note:
+
+* Version:
+    * Semantic Versions ("SemVer"), Calendar Versions ("CalVer")
+    * On CPAN: Decimal Versions ("DeciVer").
+    * Actually: Arbitrary Versions
 
 [comment]: # (|||)
 
@@ -436,11 +445,21 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
+| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10 |
+| Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183                     |
+| Primary Component Filename          | Yes      | TR-03183                                   |
 | Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183 |
 | Relationships                       | Yes      | CISA-2024-10                               |
-| Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183                     |
-| Copyright Notice                    | Yes      | CISA-2024-10                               |
-| License(s)                          | Yes      | CISA-2024-10, TR-03183                     |
+
+
+Note:
+
+* Unique ID: CPE (Common Platform Enumeration), Package URL, SWID, UUIDs, SWHID (Software Heritage ID), OmniBOR
+    * Intrinsic vs. Extrinsic
+    * Global uniqueness required
+* Relationship: If a dependency is static, remote, provided, or dynamic
+   * "Primary", "Included in", "Heritage or Pedigree"
+   * Relationship completeness
 
 
 [comment]: # (|||)
@@ -453,6 +472,12 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 | Code Commit Revision                | No       |                                            |
 | Code Repository                     | No       |                                            |
 
+
+Note:
+
+* What else is needed to make it easier to manage vulnerabilities?
+    * A list of known vulnerabilities addressed
+    * Details on which function/method had a vulnerability fixed
 
 [comment]: # (|||)
 
@@ -470,6 +495,12 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 | SBOM Generation Tool                | No       |                                            |
 
 
+Note:
+
+* Location: Where to get the most recent SBOM
+* Type: "When" in a Supply Chain an SBOM was created
+
+
 [comment]: # (|||)
 
 # Open Source Stewards
@@ -479,6 +510,11 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 | Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                     |
 | Open Source Software Steward        | No       | CRA-Rec-19                                 |
 | Security Attestation                | No       | CRA-Rec-21                                 |
+
+
+Note:
+
+* Intended for Commercial Use + Attestations + OSS Steward = Possible funding source
 
 
 [comment]: # (|||)
@@ -495,13 +531,23 @@ Devices, components, routers, toys, etc. Anything which has software may be affe
 
 [comment]: # (|||)
 
-# * Sigh *
+# Metadata conclusions?
+
+* It's a mess, and it has to improve
+* No more: "If it ain't broke, don't fix it"
 
 
 [comment]: # (!!!)
 
-## Further work in CPANSec
+## Questions & Comments
 
+
+[comment]: # (!!!)
+
+## Join the work!
+
+* Pick something you are passionate about
+* Don't be a bystander!
 * Let's coordinate on #cpan-security on irc.perl.org! 😍
 
 

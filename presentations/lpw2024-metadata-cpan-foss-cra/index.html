@@ -122,7 +122,7 @@ Note:
 
 <div style="font-size: large;">
 
-> * [Recital 9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=10)
+> * Background: [Recital 9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=10)
 > * Product with Digital Elements: [Article 3 (1), (4), (6), (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136)
 > * Placing on the market: [Article 3 (21)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=140)
 
@@ -147,6 +147,7 @@ Note:
 <div style="font-size: large;">
 
 > * [Recital 12](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=13)
+> * [Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=21)
 
 </div>
 
@@ -366,19 +367,19 @@ Note:
 </div>
 
 </textarea></section>
+</section>
+<section>
 <section data-markdown  data-auto-animate><textarea data-template>
 
 ## Six "Roles"
 
-* Manufacturer ✅
+* Manufacturer 🔍
 * Distributor, Importer and Market Authorities ❌
 * Open Source Software Steward ❌
 * Open Source Developers
 
 
 </textarea></section>
-</section>
-<section>
 <section data-markdown  data-auto-animate><textarea data-template>
 
 ## Six "Roles"
@@ -414,6 +415,7 @@ Note:
 
 </div>
 
+
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
@@ -427,6 +429,16 @@ Note:
 > * [Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22)
 
 </div>
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+## Six "Roles"
+
+* Manufacturer ✅
+* Distributor, Importer and Market Authorities ❌
+* Open Source Software Steward ❌
+* Open Source Developers 🔍
 
 
 </textarea></section>
@@ -454,9 +466,17 @@ Note:
 ## Metadata
 
 * Open Source ecosystems are _universal_
-* Is there a "CPAN's philosophy" regarding Metadata? 😅
+* Is there a "CPAN philosophy" regarding Metadata? 😅
 
 "Optional, As Much as Possible"
+
+
+Note:
+
+* It makes sense to look at metadata requirements in general
+    * Not just CRA's
+* "Optional" isn't really an option any more
+    * Some fields are actually _required_
 
 
 </textarea></section>
@@ -476,6 +496,12 @@ Note:
 </div>
 
 
+Note:
+
+* "Required" attributes come in different forms
+  * Keep in mind what the _purpose_ of the metadata is – not just it's "requiredness"
+
+
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
@@ -483,6 +509,12 @@ Note:
 
 * No common glossary of terms
 * Needed: a "Metadata Rosetta Stone"
+
+
+Note:
+
+* The current landscape is still a mess
+  * Which means that well-considered constructive implementations can become a good example for others to consider
 
 
 </textarea></section>
@@ -495,7 +527,7 @@ Note:
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
 | Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183  |
-| **Version**                         | Yes      | CISA-2024-10, CRA-AV, TR-03183             |
+| **Version**  👈                     | Yes      | CISA-2024-10, CRA-AV, TR-03183             |
 | Purpose, Intended Use               | Yes      | CRA-AII(4)                                 |
 | Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
 | Security contact                    | Yes      | CRA-AII(2)                                 |
@@ -509,7 +541,8 @@ Note:
 * Version:
     * Semantic Versions ("SemVer"), Calendar Versions ("CalVer")
     * On CPAN: Decimal Versions ("DeciVer").
-    * Actually: Arbitrary Versions
+* Reality: Arbitrary Versions formats have to be supported
+
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
@@ -520,11 +553,11 @@ Note:
 
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| **Unique Product Identifier**       | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10 |
+| **Unique Product ID** 👈            | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10 |
 | Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183                     |
 | Primary Component Filename          | Yes      | TR-03183                                   |
 | Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183 |
-| **Relationships**                   | Yes      | CISA-2024-10                               |
+| **Relationships**          👈       | Yes      | CISA-2024-10                               |
 
 </div>
 
@@ -534,6 +567,7 @@ Note:
 * Unique ID: CPE (Common Platform Enumeration), Package URL, SWID, UUIDs, SWHID (Software Heritage ID), OmniBOR
     * Intrinsic vs. Extrinsic
     * Global uniqueness required
+    * This is a mess, and very hard to solve. Best option for OSS today: Package URLs
 * Relationships: If a dependency is static, remote, provided, or dynamic
    * "Primary", "Included in", "Heritage or Pedigree"
    * Relationship completeness
@@ -562,6 +596,7 @@ Note:
     * Details on which function/method had a vulnerability fixed
     * When & where the package was downloaded from
 
+
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
@@ -576,7 +611,7 @@ Note:
 | SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |
 | SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    |
-| **SBOM Location**                   | Yes      | CRA-AII(9), TR-03183                       |
+| **SBOM Location**       👈          | Yes      | CRA-AII(9), TR-03183                       |
 | SBOM Type                           | No       | CISA-2023-4, CISA-2024-10                  |
 | SBOM Generation Tool                | No       |                                            |
 
@@ -600,7 +635,7 @@ Note:
 | :---------------------------------- | :------: | -----------------------------------------: |
 | Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                     |
 | Open Source Software Steward        | No       | CRA-Rec-19                                 |
-| Security Attestation                | No       | CRA-Rec-21                                 |
+| **Security Attestation**  👈        | No       | CRA-Rec-21                                 |
 
 </div>
 
@@ -625,6 +660,14 @@ Note:
 | CE Technical Documentation          | No       | CRA-AII(8)                                 |
 
 </div>
+
+
+Note:
+
+* What's needed for components that are monetized?
+  * Maintainer becomes a Manufacturer
+  * This needs also to be supported
+
 
 </textarea></section>
 <section data-markdown  data-auto-animate><textarea data-template>
@@ -661,12 +704,18 @@ Note:
 * ⚠️  Missing: More attributes needed to achieve security goals?
 
 
+Note:
+
+* This picture is likely to evolve in the coming years
+* Ecosystems would do well to prepare a smooth evolution
+
+
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## Metadata conclusions?
+## Conclusions?
 
-* It's all a mess
+* It's a mess
 * It's up to us to improve it
 * ~"If it ain't broke, don't fix it"~
 * Don't be a bystander
@@ -676,6 +725,7 @@ Note:
 
 * "Permissionless Innovation"
 * "Being a Good Open Source Citizen"
+* We already know that being a bystander doesn't work – better to step up instead!
 
 
 </textarea></section>
@@ -692,6 +742,7 @@ Note:
 
 * Pick something you are passionate about
 * Let's coordinate on #cpan-security on irc.perl.org! 😍
+* [https://security.metacpan.org/](https://security.metacpan.org/)
 
 
 </textarea></section>
@@ -703,7 +754,7 @@ Salve J. Nilsen
 
 @sjn\@chaos.social
 
-🦆🦆🦆
+🦆🦆🦆🦆
 </textarea></section>
 			</div>
 		</div>

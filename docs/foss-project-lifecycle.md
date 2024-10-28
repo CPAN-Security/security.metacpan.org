@@ -190,6 +190,7 @@ States in **bold** exist on CPAN.
 | DUAL         | no        | YES       | YES       | no                   | no                 | OK            | Ecosystem    |
 | **NOXFER**   | no        | YES       | no        | no                   | no                 | NONE          | Ecosystem    |
 | UNREACHABLE  | no        | YES       | YES       | no                   | no                 | ERROR         | Ecosystem    |
+| UNRESPONSIVE | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
 
 
 
@@ -218,6 +219,10 @@ States in **bold** exist on CPAN.
         * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other Forces Majeures beyond the Maintainer's control.
     * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
     * (number of maintainers is not relevant)
+1. UNRESPONSIVE – Project Maintainers are reachable but actively not engaging
+    * The project maintainers(s) have not been responsive to ecosystem concerns for a substantial time, due to non-technical reasons.
+        * e.g.: Maintainer does not respond to ecosystem concerns for personal reasons.
+    * The project is expected to revert to it's previous state after normal interaction resumes.
 
 
 ## Other project states, claims and metadata

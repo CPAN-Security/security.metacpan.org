@@ -311,8 +311,8 @@ stateDiagram-v2
         language_distributor --> [*]
     }
 
-    %%ecosystem_lang    --> ecosystem_lang
-    %%language_packager --> ecosystem_lang
+    ecosystem_lang         --> ecosystem_lang
+    %%language_packager    --> ecosystem_lang
     environment_maintainer --> ecosystem_lang
 
     %%
@@ -345,7 +345,7 @@ stateDiagram-v2
         package_distributor   --> [*]
     }
 
-    %%ecosystem_package      --> ecosystem_package
+    ecosystem_package        --> ecosystem_package
     %%repository_distributor --> ecosystem_package
     %%language_distributor   --> ecosystem_package
     ecosystem_lang           --> ecosystem_package
@@ -806,7 +806,23 @@ stateDiagram-v2
     accTitle: An Idealized Open Source Supply-chain Graph
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
+    %%
     state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
+    state "Language Ecosystem" as ecosystem_lang
+    state "Collaboration Ecosystem" as ecosystem_repo
+    state "Package Ecosystem" as ecosystem_package
+
+    %%
+    state "Integrator Environment" as environment_integrator {
+        [*] --> integrator_developer
+        integrator_owner     --> integrator_developer
+        integrator_builder   --> integrator_censor
+        integrator_builder   --> integrator_publisher
+        integrator_developer --> integrator_builder
+        integrator_analyst   --> integrator_developer
+        integrator_builder   --> integrator_analyst
+    }
+
 
     %%
     state "🟥 Manufacturer 🆕" as integrator_owner
@@ -819,6 +835,7 @@ stateDiagram-v2
     %%
     state "🟦 End-user, Consumer" as external_consumer
     state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
+    state "Production Environment" as environment_prod
 
     %%
     classDef createsSBOM stroke:red,stroke-width:3px;
@@ -868,30 +885,13 @@ stateDiagram-v2
     class authority_attester createsSBOM
     class authority_auditor verifiesSBOM
 
-    state "Language Ecosystem" as ecosystem_lang
-    state "Collaboration Ecosystem" as ecosystem_repo
-    state "Package Ecosystem" as ecosystem_package
-
     %%
-    state "Integrator Environment" as environment_integrator {
-        [*] --> integrator_developer
-        integrator_owner     --> integrator_developer
-        integrator_builder   --> integrator_censor
-        integrator_builder   --> integrator_publisher
-        integrator_builder   --> integrator_analyst
-        integrator_developer --> integrator_builder
-        integrator_analyst   --> integrator_developer
-    }
-
-
     language_steward  --> environment_integrator
     ecosystem_repo    --> environment_integrator
     ecosystem_lang    --> environment_integrator
     ecosystem_package --> environment_integrator
 
     %%
-    state "Production Environment" as environment_prod
-
     integrator_builder   --> environment_prod
     integrator_developer --> environment_prod
     integrator_publisher --> authority_auditor

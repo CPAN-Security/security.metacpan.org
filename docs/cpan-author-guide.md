@@ -1,9 +1,9 @@
-----
+---
 layout: page
 title: CPAN Author's Secure Coding Guide
 description: A security guide for CPAN Distribution Authors
 toc: true
-----
+---
 
 ## Document status: ⚠️  DRAFT
 
@@ -17,8 +17,10 @@ toc: true
 
 ## Learn the basics
 
-* Read the [perlsec](https://perldoc.perl.org/perlsec) page to familiarize yourself with Perl's security features
-* Read the OpenSSF [Open Source Best Practices Badge](https://www.bestpractices.dev/en) program, and try to at least achieve a [passing badge](https://www.bestpractices.dev/en/criteria/0). (You can also see how well [other Perl projects](https://www.bestpractices.dev/en/projects?q=perl) do in this regard!)
+1. Read the [perlsec](https://perldoc.perl.org/perlsec) page to familiarize yourself with Perl's security features
+1. Read the OpenSSF [Open Source Best Practices Badge](https://www.bestpractices.dev/en) program, and
+    * Try to at least achieve a [passing badge](https://www.bestpractices.dev/en/criteria/0).
+    * (You can also see how well [other Perl projects](https://www.bestpractices.dev/en/projects?q=perl) do in this regard!)
 
 # Write code that is _Secure by Design_
 
@@ -27,32 +29,33 @@ toc: true
 
 ## Keep your security metadata up-to-date
 
-* Read the [CPAN::META::Spec](https://metacpan.org/pod/CPAN::Meta::Spec) and make sure all relevant fields are correct and up-to-date
+1. Read the [CPAN::META::Spec](https://metacpan.org/pod/CPAN::Meta::Spec) and make sure all relevant fields are correct and up-to-date
+1. Ensure also that your list of dependencies is complete and correct
 
 ## Share your security metadata
 
-* Add a [security.txt](https://securitytxt.org/) file to your project website
-* Add a [security policy](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository#adding-a-security-policy-to-your-repository) to your Github project
+1. Add a [security.txt](https://securitytxt.org/) file to your project website
+1. Add a [security policy](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository#adding-a-security-policy-to-your-repository) to your Github project
 
 ## Add security tests to your code
 
-* Add [tests for taintedness](https://metacpan.org/pod/Test::Taint) to your codebase
+1. Learn how to use [perltaint](https://perldoc.perl.org/perlsec#Laundering-and-Detecting-Tainted-Data) to detect and defang input from untrusted sources
+1. Add [tests for taintedness](https://metacpan.org/pod/Test::Taint) to your codebase, to verify that your code actually handles untrusted input as expected
 
 ## Practice symbol import discipline
 
-* Use [App::perlimports](https://www.olafalders.com/2024/04/15/getting-started-with-perlimports/) to get a better idea of what symbols you are using.
+1. Use [App::perlimports](https://www.olafalders.com/2024/04/15/getting-started-with-perlimports/) to get a better idea of what symbols you are using.
 
 ## Reduce the amount transitive dependencies
 
-* The more modules you depend on, the larger the attack surface you'll have to defend.
+1. The more modules you depend on, the larger the attack surface you may have to defend.
 
-## Ensure you have trusted co-maintainers
+## Ensure your project is sustainable
 
-* Add a co-maintainer in PAUSE
-
-## Have a succession plan
-
-* Describe who among your co-maintainers will take over your project if you become unavailable
+1. Have at least one other trusted co-maintainer
+    * You can add a co-maintainer in PAUSE
+1. Have a succession plan
+    * Describe who among your co-maintainers will take over your project if you become permanently unavailable
 
 ## Select an appropriate Open Source license
 
@@ -68,7 +71,7 @@ toc: true
 
 ## License and use of this document
 
-* Version: 0.5.1
+* Version: 0.5.2
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

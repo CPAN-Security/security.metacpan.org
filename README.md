@@ -22,11 +22,11 @@ If you care and would like to make a contribution or join, you are welcome to do
 
 ## Resources
 
-* [Projects](https://github.com/orgs/CPAN-Security/projects) overview on Github
 * [Documents](docs/) and other relevant resources
-    * How to [Report a Security Issue](docs/report.md)
+    * **How to [Report a Security Issue](docs/report.md)**
     * [Pre-Release Disclosure Agreement](docs/pre-release-disclosure.md)
     * [Group charter](docs/charter.md) ⚠️  DRAFT
     * Standards and regulations [reading list](docs/readinglist.md) ⚠️  DRAFT
+* [Projects](https://github.com/orgs/CPAN-Security/projects) overview on Github
 * [Meetings](meetings/) information and minutes
 * [Presentations](presentations/) about us and our work

@@ -1,3 +1,10 @@
+---
+layout: page
+toc: true
+meeting_time: October 2nd, 2024 17:00 UTC
+title: Minutes 2024-10-02
+---
+
 ## Meeting details
 
 * 2024-10-02 17:00 UTC on #cpansec-discussion on Matrix

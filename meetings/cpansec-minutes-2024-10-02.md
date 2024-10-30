@@ -70,7 +70,7 @@ title: Minutes 2024-10-02
 ### Secure by Default
 *   @stigtsp - Fedora started with patched cpanm
 *   @timlegge & @stigtsp work on other distros
-*   A blog-post is being worked on (work in progress)
+*   A blog-post is being worked on collectively
 
 ### Eclipse ORC WG
 *   @sjn - short report about recent movements

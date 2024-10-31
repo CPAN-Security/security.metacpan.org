@@ -264,4 +264,4 @@ Several people have been involved in the development of this document
 * (NEILB-2016) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html), Published 2016-02-13.
 * (PAUSE-2017) [The PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) Version 2 (section 4.5), published 2017-10-27.
 * (UNMAINTED-2016) ![No Maintenance Intended](http://unmaintained.tech/badge.svg) [unmaintained.tech](http://unmaintained.tech/), Published 2016-01-13.
-* (CASUAL-2023) ![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg) [casuallymaintained|tech](https://casuallymaintained.tech/), Published 2023-09-25.
+* (CASUAL-2023) ![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg) [casuallymaintained.tech](https://casuallymaintained.tech/), Published 2023-09-25.

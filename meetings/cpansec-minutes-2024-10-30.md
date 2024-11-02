@@ -72,7 +72,7 @@ title: Minutes 2024-10-30
 *   @stigtsp - investigating one possible upcoming issue
 
 ### Secure by Default
-*   @stigtsp - not much movement; PRs and updates to current efforts (cpanm and mojo) have been submitted; We're hoping their maintainers eventually engage with these.
+*   @stigtsp - not much movement; PRs and updates to current efforts (cpanm and mojo) have been submitted; We're hoping for their maintainers to resolve the issues raised in these.
 *   @garu - Let's remember to update relevant CVE's and issue recommendations for tooling use.
 *   @charsbar is working on MFA for PAUSE! We wish him success in his work.
 

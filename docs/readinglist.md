@@ -9,6 +9,7 @@ toc: true
 
 > [!CAUTION]
 > This is the CPAN Security Group recommended reading list.
+> **This page is [Open Source](#license-and-use-of-this-document)** – meaning, it's eventual quality and usefulness is proportional to your contribution!
 > If you have any additions or improvements, please [open an issue](https://github.com/CPAN-Security/security.metacpan.org/issues), citing this page.
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/readinglist/docs/readinglist.md](https://github.com/CPAN-Security/security.metacpan.org/blob/readinglist/docs/readinglist.md)
@@ -18,10 +19,10 @@ toc: true
 
 ## Software Bills of Materials (SBOM)
 
-* (NTIA) [The Minimum Elements For a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf) (July 2021)
-* (NSA, ODNI, CISA) [Securing the Software Supply Chain: Recommended Practices for Managing OSS and SBOMs](https://media.defense.gov/2023/Dec/11/2003355557/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN%20RECOMMENDED%20PRACTICES%20FOR%20MANAGING%20OPEN%20SOURCE%20SOFTWARE%20AND%20SOFTWARE%20BILL%20OF%20MATERIALS.PDF) (December 2023)
-* (NTIA) [Survey of Existing SBOM Formats and Standards](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) (2021)
-* (CISA) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (April 2023)
+* (NTIA-2021-7) [The Minimum Elements For a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf) (July 2021)
+* (CISA-2023-12) (NSA, ODNI, CISA) [Securing the Software Supply Chain: Recommended Practices for Managing OSS and SBOMs](https://media.defense.gov/2023/Dec/11/2003355557/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN%20RECOMMENDED%20PRACTICES%20FOR%20MANAGING%20OPEN%20SOURCE%20SOFTWARE%20AND%20SOFTWARE%20BILL%20OF%20MATERIALS.PDF) (December 2023)
+* (NTIA-2021) [Survey of Existing SBOM Formats and Standards](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) (2021)
+* (CISA-2023-4) [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), published 2023-04-21
 
 
 ### SBOM use cases
@@ -39,16 +40,22 @@ toc: true
 
 ### Useful articles and papers
 
-* (NTIA) [Software Suppliers Playbook: SBOM Production and Provision](https://www.ntia.gov/files/ntia/publications/software_suppliers_sbom_production_and_provision_-_final.pdf) (November 2021)
-* [Managing Open Source and SBOMs](https://resilientcyber.substack.com/p/managing-open-source-and-sboms) (Chris Huges, 2023)
-* [Understanding OWASP’s Bill of Material Maturity Model: Not all SBOMs are created equal](https://www.csoonline.com/article/1246904/not-all-sboms-are-created-equal-understanding-owasps-bill-of-material-maturity-model.html) (Chris Huges, 2023)
-* (NTIA) [Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.ntia.gov/files/ntia/publications/ntia_sbom_framing_2nd_edition_20211021.pdf) (October 2021)
-* (Lawfare Media) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards) (July 2022)
-* (CISA) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations) (March 2024)
-* (SPDX) [Satisfying NTIA Minimum Elements for an SBOM using SPDX](https://spdx.github.io/spdx-spec/v2.3/how-to-use/#k22-mapping-ntia-minimum-elements-to-spdx-fields) (SPDX 2.3)
-* (SPDX) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028) (SPDX 3.0)
-* (CISA) [SBOM Sharing Primer](https://www.cisa.gov/resources-tools/resources/sbom-sharing-primer)
-* (NTIA) [Roles and Benefits for SBOM Across the Supply Chain](https://www.ntia.gov/files/ntia/publications/ntia_sbom_use_cases_roles_benefits-nov2019.pdf), (November 2019)
+* (CISA-2024-3) [SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), (March 2024)
+* (CISA-2024-3) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28
+* (CISA-2024-5) [SBOM Sharing Primer](https://www.cisa.gov/resources-tools/resources/sbom-sharing-primer), (May 2024)
+* (CISA-2024-10) [Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024), Sections 2.2.1.4 and 2.2.2 and others, (October 2024)
+* (CISA) [Attributes for evaluation and cataloging of Software Bill of Materials Tooling](https://docs.google.com/document/d/1TKPIjT7Rfc38F0OMuXIlPqFRoH7wj2H8x3w13Pgy8V4/edit), (Unpublished)
+  * Related [spreadsheet](https://onedrive.live.com/view.aspx?resid=68652AA55C12F19A%216830&authkey=!AG7Yjwi-1S3rjWI)
+* (DE-TR) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 2.0.0, published 2024-09-20.
+* (Huges-2023-1) [Managing Open Source and SBOMs](https://resilientcyber.substack.com/p/managing-open-source-and-sboms), (Chris Huges, 2023)
+* (Huges-2023-2) [Understanding OWASP’s Bill of Material Maturity Model: Not all SBOMs are created equal](https://www.csoonline.com/article/1246904/not-all-sboms-are-created-equal-understanding-owasps-bill-of-material-maturity-model.html), (Chris Huges, 2023)
+* (Lawfare-2023) [Open-Source Security: How Digital Infrastructure Is Built on a House of Cards](https://www.lawfaremedia.org/article/open-source-security-how-digital-infrastructure-built-house-cards), (Lawfare Media, July 2022)
+* (NTIA-2019-11) [Roles and Benefits for SBOM Across the Supply Chain](https://www.ntia.gov/files/ntia/publications/ntia_sbom_use_cases_roles_benefits-nov2019.pdf), (November 2019)
+* (NTIA-2021-3) [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30
+* (NTIA-2021-7) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12 (Superseeded by CISA-2024-10)
+* (NTIA-2021-11) [Software Suppliers Playbook: SBOM Production and Provision](https://www.ntia.gov/files/ntia/publications/software_suppliers_sbom_production_and_provision_-_final.pdf), (November 2021)
+* (SPDX-2.3) [Satisfying NTIA Minimum Elements for an SBOM using SPDX](https://spdx.github.io/spdx-spec/v2.3/how-to-use/#k22-mapping-ntia-minimum-elements-to-spdx-fields), (SPDX 2.3)
+* (SPDX-3.0) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028), (SPDX 3.0)
 
 See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
 
@@ -62,12 +69,12 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 ### Useful articles, papers and resources
 
-* (CISA) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis); Published October 2023.
+* (CISA-2023-10) [Software Identification Ecosystem Option Analysis](https://www.cisa.gov/resources-tools/resources/software-identification-ecosystem-option-analysis); Published October 2023.
 * (Repology) [Repology ruleset repo](https://github.com/repology/repology-rules)
-* (Blog) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) Published by Philippe Ombredanne, May 2023.
-* (Video) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) Presented at FOSDEM 2022, 15 minutes length.
+* (Ombredanne-2023) [PURLs of Wisdom: Universal software package identification](https://nexb.com/purl-universal-software-package-identification/) Published by Philippe Ombredanne, May 2023.
+* (Ombredanne-2022) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) Presented at FOSDEM 2022, 15 minutes length.
 * (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) Presented at S4 Conference 2023.
-* (OpenSSF) [OpenSSF Responds to the CISA RFC on Software Identification Ecosystem Analysis](https://openssf.org/blog/2023/12/11/openssf-responds-to-the-cisa-rfc-on-software-identification-ecosystem-analysis/) Published 2023-12-11.
+* (OpenSSF-2023-12) [OpenSSF Responds to the CISA RFC on Software Identification Ecosystem Analysis](https://openssf.org/blog/2023/12/11/openssf-responds-to-the-cisa-rfc-on-software-identification-ecosystem-analysis/) Published 2023-12-11.
 
 
 ## Software Lifecycle
@@ -81,8 +88,8 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 ## Provenance & Supply Chain Security
 
-* (OpenSSF) [Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security) (Feb 2024)
-* (OpenSSF) [Build Provenance for All Package Registries](https://repos.openssf.org/build-provenance-for-all-package-registries) (July 2023)
+* (OpenSSF-2024-3) [Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security) (Feb 2024)
+* (OpenSSF-2023-7) [Build Provenance for All Package Registries](https://repos.openssf.org/build-provenance-for-all-package-registries) (July 2023)
 * (SLSA) [SLSA v1.0 Guiding Principles](https://slsa.dev/spec/v1.0/principles)
 * (SLSA) [SLSA v1.0 Terminology](https://slsa.dev/spec/v1.0/terminologye)
 * (SLSA) [SLSA v1.0 Developer's quick-start guide](https://slsa.dev/get-started)
@@ -98,7 +105,8 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 
 ## Regulations, directives and laws
 
-There are several relevant legislation regarding cybersecurity in Open Source ecosystems and supply chains.
+There are several relevant legislations regarding cybersecurity in Open Source ecosystems and supply chains.
+This is not a exhaustive list!
 
 
 ### USA – EO 14028
@@ -112,7 +120,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 [Directive 2022/2555, Network and Information Security Directive 2](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555&qid=1710318619717) (NIS2; Published 2022-12-27)
 
 * In the [NIS2 Recitals](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=12)
-    * Recital (52): On Open-source cybersecurity tools (page 11)
+    * Recital (52): On Open Source cybersecurity tools (page 11)
     * Recital (58): On the handling of discovered vulnerabilities (page 12)
     * Recital (62): Access to correct and timely information about vulnerabilities (page 13)
     * Recital (85): On supply-chain risk management (page 17)
@@ -123,7 +131,9 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * In [Chapter II](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=36)
     * Article 7 paragraph 2(a): Creation of a national cybersecurity strategy regarding the security of supply chains for ICT products and services
 * In [Chapter IV](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555&qid=1710318619717#page=48)
+    * Article 20
     * Articles 21 paragraphs 1, 2, 3: **All-hazards approach** to cybersecurity risk-management measures (page 48)
+    * Article 23
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-review-of-the-nis-directive)
 
 #### NIS2 Implemented Regulation
@@ -143,7 +153,7 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 [CRA Recitals](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=11) are for explaining the background and context for the regulation. The ordering is the same as in the Articles. These are for interpretation, and not legally binding.
 
 * Recital (10): CRA relevance for supply chains (page 11)
-* Recitals (16-17): CRA relevance for Open Source projects (page 18-19)
+* Recital (**15**): CRA applies to economic operators that have an intention to monetise a product (page 17)
 * Recital (**18**): Open Source Software Contributors (page 20)
 * Recital (**19**): Open Source Software Stewards, light-touch regulatory regime, and CE mark implications (page 22)
 * Recital (**20**): Open Source package managers considerations as "distributors" (page 24)
@@ -156,12 +166,12 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Recital (39): Continued security updates (page 44)
 * Recital (41): Substantial modifications requires a new conformity assessment to be done (page 47)
 * Recitals (43-45): Important products with digital elements (pages 49-51)
-* Recital (**57**): On the download and installation of security updates, and notification of end of support (pages 66-67)
-* Recital (**58**): On the requirement to be able to get security updates separately from functionality updates (page 67)
+* Recital (**56**): On the download and installation of security updates, and notification of end of support (page 65-66)
+* Recital (**57**): On the requirement to be able to get security updates separately from functionality updates (pages 66)
 * Recitals (60-62): Support period (page 69-71)
-* Recital (64): Point of contact (page 73)
+* Recital (64): Point of contact (page 72)
 * Recital (65): Secure by default (page 73)
-* Recital (118): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […] (page 121)
+* Recital (117): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […] (page 119)
 
 
 #### CRA Articles
@@ -171,21 +181,25 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
 * Chapter I
     * **Article 3**, Definitions (pages 136-146)
     * Article 9, Point 1. (b-c), Stakeholder consultation (pages 155-156)
-* Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
+* Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open Source Software
     * **Article 13**, Obligations of Manufacturers (pages 161-175)
-        * **Section 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
-        * Section 6, "[…] they shall share the relevant code or documentation […]" (page 164)
-        * Section 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 168)
-    * **Article 14**, Reporting obligations of manufacturers (pages 176-184)
-    * **Article 15**, Voluntary reporting (pages 185-186)
-    * Article 16, Establishment of a single reporting platform (pages 187-192)
-    * Article 17, Other provisions related to reporting (pages 193-195)
-    * Article 18, Authorized representatives (pages 195-196)
-    * **Article 19**, Obligations of importers (pages 197-201)
-    * **Article 20**, Obligations of distributors (pages 202-205)
-    * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 205)
-    * **Article 22**, Other cases in which obligations of manufacturers apply (page 206)
-    * Article 23, Identification of economic operators (page 207)
+        * **Paragraph 5**, "Manufacturers shall exercise due diligence when integrating components" (page 163)
+        * Paragraph 6, "[…] they shall share the relevant code or documentation […]" (page 164)
+        * Paragraph 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 168)
+    * **Article 14**, Reporting obligations of manufacturers (pages 175-183)
+        * Paragraph 1, "A manufacturer shall notify any actively exploited vulnerability contained in the product […] that it becomes aware of"
+        * Paragraph 3, "A manufacturer shall notify any severe incident having an impact on the security of the product […] that it becomes aware of"
+        * Paragraph 8, "After becoming aware of an actively exploited vulnerability or a severe incident, the manufacturer shall inform the impacted users of the product, and where appropriate all users, […] and, […] about risk mitigation and any corrective measures that the users can deploy"
+    * **Article 14**, Reporting obligations of manufacturers (pages 175-183)
+    * **Article 15**, Voluntary reporting (pages 184-185)
+    * Article 16, Establishment of a single reporting platform (pages 186-191)
+    * Article 17, Other provisions related to reporting (pages 192-194)
+    * Article 18, Authorized representatives (pages 194-195)
+    * **Article 19**, Obligations of importers (pages 196-201)
+    * **Article 20**, Obligations of distributors (pages 201-204)
+    * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 204)
+    * **Article 22**, Other cases in which obligations of manufacturers apply (page 205)
+    * Article 23, Identification of economic operators (page 206)
 * Chapter II – Obligations of open-source software stewards
     * **Article 24**, Obligations of open-source software stewards (pages 208-209)
     * **Article 25**, Security attestation of free and open-source software (page 210)
@@ -196,13 +210,15 @@ There are several relevant legislation regarding cybersecurity in Open Source ec
     * Article 30, Rules and conditions for affixing the CE marking (pages 220-222)
 * Chapter V — Market Surveillance and Enforcement
     * **Article 52**, Market surveillance and control of products (pages 253-259)
-        * **Section 3**, Market surveillance authorities […] shall also be responsible for carrying out market surveillance activities in relation to the obligations for open-source software stewards […].
+        * **Section 3**, Market surveillance authorities […] shall also be responsible for carrying out market surveillance activities in relation to the obligations for Open Source software stewards […].
         * Section 11, Market surveillance authorities shall inform consumers of where to submit complaints that could indicate non-compliance with this Regulation […] and […] facilitate reporting of vulnerabilities, incidents and cyber threats […].
     * **Article 54**, Procedure […] concerning products […] presenting a significant cybersecurity risk (pages 261-265)
         * Section 1, [If a market authority finds] sufficient reason to consider that a product […], including its vulnerability handling, presents a significant cybersecurity risk, […] it shall […] carry out an evaluation of the product […] concerned in respect of its compliance with all the requirements laid down in this Regulation.
         * Section 5, [If the economic operator] not take adequate corrective action […], the market surveillance authority shall take all appropriate provisional measures to prohibit or restrict that product […] from being made available […], to withdraw it from that market or to recall it.
-    * **Article 58**, Formal non-compliance (pages 276)
-
+    * **Article 58**, Formal non-compliance (page 276)
+* Chapter VII – Confidentiality and Penalties
+    * Article 63 - Non-compliance (pages 286-289)
+        * **Section 10(b)**, Rules on administrative fines shall not apply to Open Source Software Stewards (page 289)
 
 #### CRA Annexes
 
@@ -225,19 +241,22 @@ Annexes are technical materials presented separately from the main text, and hav
 * (Eclipse) ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)
 * (Eclipse) ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
 * (EU) The '[Blue Guide](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.247.01.0001.01.ENG&toc=OJ%3AC%3A2022%3A247%3ATOC)' on the implementation of EU product rules (2022/C 247/01). Published 2022-06-29; [PDF](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04))
-
+* (EU) [CRA Corrigendum](https://draftable.com/compare/ShyQnqhNqFGP) comparison. Published 2024-09-03; [Original PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130-FNL-COR01_EN.pdf)
 
 ### EU and EEA – PLD
 
 (EU) Product Liability Directive (PLD)
 
-* [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive)
-* [Product Liability Directive](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.html) (85/374/EEC), Published 2024-03-12 by the EU Parliament ([PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.pdf))
-
+* (EU) [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-new-product-liability-directive)
+* (EU) [Product Liability Directive](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.html) (85/374/EEC), Published 2024-03-12 by the EU Parliament ([PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.pdf))
+* (EU) [PLD Corrigendum](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130-FNL-COR01_EN.pdf) (PDF); Published 2024-09-03;
 
 ### EU and EEA – DORA
 
 (EU) [Digital Operational Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554&qid=1710317679922): Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations (DORA, 2022-12-14)
+
+
+* Article 16-23
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-cross-sectoral-financial-services-act-1)
 
@@ -259,11 +278,25 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 >     * Control Objective: All software components and services are documented or otherwise cataloged in a software bill of materials (SBOM).
 >     * Test Requirements: The assessor shall examine evidence to confirm that information is maintained that describes all software components and services comprising the software solution, including:
 >         * All proprietary software libraries, packages, modules, and/or code packaged in a manner that enables them to be tracked as a freestanding unit of software.
->         * All third-party and open-source frameworks, libraries, and code embedded in or used by the software during operation.
+>         * All third-party and Open Source frameworks, libraries, and code embedded in or used by the software during operation.
 >         * All third-party software dependencies, APIs, and services called by the software during operation.
 >     * Guidance: […] Knowing all of the components that comprise a software application or service, where they come from, and how they are updated and maintained is critical to minimizing and managing vulnerabilities in software applications. Without this information, it would be extremely difficult to identify and track vulnerabilities in software components that could expose the embedding software application to attacks. […]
 
 * (PCI-SSC) [PCI-SSF v1.2.1](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), Published May 2023
+
+
+## Information Security
+
+* ISO 27001
+    * 6.1.3
+    * 9.1
+    * 7.2
+    * 6.1.2
+    * 5.2
+    * Article 5.24, Article 5.25, Article 5.26
+    * …
+* CIS Controls V8
+* ISO 27036:2023 (3rd party risk)
 
 
 ## License and use of this document

@@ -1218,6 +1218,7 @@ The Supplier is a role used throughout the Supply-chain, but most often represen
 * (CISA-2024-10) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf), Third edition, sections 2.2.1.4, 2.2.2 and Appendix B; Dated 2024-10-15
 * (CPANSec-2024) CPAN Security Group commentary by Author. If you (dis)agree or have improvements, [share it with us](#document-status-%EF%B8%8F--draft)!
 * (CRA-Art-3)  [Cyber Resilience Act, Article 3](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136) Definitions, Dated 2024-03-12
+* (CRA-Art-18) [Cyber Resilience Act, Article 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=249) Obligations of Authorized Representatives, Dated 2024-03-12
 * (CRA-Art-20) [Cyber Resilience Act, Article 20](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=202) Obligations of distributors, Dated 2024-03-12
 * (CRA-Art-47) [Cyber Resilience Act, Article 47](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=249) Operational obligations of notified bodies, Dated 2024-03-12
 * (CRA-AII) [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303) Information and Instructions to the User, Dated 2024-03-12
@@ -1324,6 +1325,7 @@ Several people have been involved in the development of this document
 | CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                                           |                                                                                             |                          |
 | CE Support End Date                 | No       | CRA-AII(7)                                                   |                                                                                             |                          |
 | CE Technical Documentation          | No       | CRA-AII(8)                                                   |                                                                                             |                          |
+| CE Authorised Representative        | No       | CRA-Art-18                                                   |                                                                                             |                          |
 
 
 ### SBOM JSON Paths and data types
@@ -1366,3 +1368,4 @@ Several people have been involved in the development of this document
 | CE Declaration of Conformity        | URL          | bom.externalReferences[?(@.conformity-declaration)]                   |                         |          |         |
 | CE Support End Date                 | DateTime     | bom.externalReferences[?(@.support-horizon)]                          |                         |          |         |
 | CE Technical Documentation          | URL          | bom.externalReferences[?(@.documentation)]                            |                         |          |         |
+| CE Authorised Representative        | URL          |                                                                       |                         |          |         |

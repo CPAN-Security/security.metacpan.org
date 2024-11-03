@@ -20,7 +20,7 @@ mermaid: true
 > [!NOTE]
 > This document has two companion documents:
 >
-> * The CPANSec [glossary](glossary.md)
+> * The CPANSec [Glossary](glossary.md)
 > * The CPANSec [reading list](readinglist.md)
 > * A proposed overview of [project life-cycle statuses and needs](foss-project-lifecycle.md)
 >
@@ -495,13 +495,13 @@ An author or main developer of an Open Source component project.
 | 🟥  | License(s) (Primary)               | Yes      | CISA-2024-10                                |         |         |
 | 🟥  | Supplier Name (Maintainer)         | Yes      | CRA-AII(1), NTIA-SBOM, TR-03183, CRA-AV     |         |         |
 | 🟥  | Security contact (Primary)         | Yes      | CRA-AII(2)                                  |         |         |
-| 🟥  | Unique Product ID                  | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV               |         |         |
+| 🟥  | Unique Product Identifier          | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV               |         |         |
 | 🟥  | Purpose, Intended Use              | Yes      | CRA-AII(4)                                  |         |         |
 | 🟥  | Code Repository                    | Yes      |                                             |         |         |
 | 🟥  | Project Sustainability             | No       |                                             | CycloneDX 1.7 proposed | |
 | 🟥  | Code Commit Revision               | No       |                                             |         | Consider recommendation |
-| 🟥  | Intended for Commercial Use        | No       | CRA-Rec-15, CRA-Rec-18                      |         |         |
-| 🟥  | Open Source Software Steward       | No       | CRA-Rec-19                                  |         | Confirm CRA Article |
+| 🟥  | Intended for Commercial Use        | No       | CRA-Rec-15, CRA-Rec-19                      |         |         |
+| 🟥  | Open Source Software Steward       | No       | CRA-Rec-19                                  |         |         |
 | 🟥  | Security Attestation               | No       | CRA-Rec-21                                  |         | Confirm CRA Article |
 | 🟨  | Dependencies (Embedded)            | Yes      | CRA-AII(5), NTIA-SBOM                       |         |         |
 | 🟨  | Security contact (Embedded)        | Yes      | CRA-AII(2)                                  |         |         |
@@ -534,7 +534,7 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 | :-: | :----------------------------- | :------: | ------------------------------------------ | :------ | :------ |
 | 🟨  | Version                        | Yes      | NTIA-SBOM, TR-03183                        |         |         |
 | 🟨  | Dependencies (Embedded)        | Maybe    | CRA-AII(5), NTIA-SBOM                      |         |         |
-| 🟨  | Unique Product ID              | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |         |
+| 🟨  | Unique Product Identifier      | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |         |
 | 🟨  | Supplier Name (Custodian)      | Yes      | CRA-AII(1), NTIA-SBOM, TR-03183, CRA-AV    |         |         |
 | 🟨  | Project Sustainability         | No       |                                            | CycloneDX 1.7 proposed | |
 
@@ -630,12 +630,12 @@ Within, or on behalf of a [Language Ecosystem](#language-ecosystem) or a [Packag
 | Ops | Attribute name                     | Required | Required by            | Comment | FIXME   |
 | :-: | :--------------------------------- | :------: | ---------------------- | :------ | :------ |
 | 🟦  | Open Source Software Steward       | Yes      | CRA-Rec-19             |         |         |
-| 🟦  | Intended for Commercial Use        | Yes      | CRA-Rec-15, CRA-Rec-18 |         |         |
+| 🟦  | Intended for Commercial Use        | Yes      | CRA-Rec-15, CRA-Rec-19 |         |         |
 | 🟥  | Security Attestation               | Yes      | CRA-Rec-21             |         | Confirm with standardization body |
 
 * See also
   * [Maintainer](#maintainer), and
-  * [Open Source Software Steward](glossary.md#open-source-software-steward-%EF%B8%8F) in the glossary.
+  * [Open Source Software Steward](glossary.md#open-source-software-steward-%EF%B8%8F) in the Glossary.
 
 
 ----------------------------------------------------------------------
@@ -679,18 +679,18 @@ This role is necessary when...
 * Upstream Maintainer roles are not responsive or available, and thereby security fixes aren't applied there.
 * When downstream constraints and requirements call for it – e.g. when back-porting of fixes are needed due to downstream LTS requirements.
 
-| Ops | Attribute name                    | Required | Required by             | Comment | FIXME   |
-| :-: | :-------------------------------- | :------: | :---------------------- | :------ | :------ |
-| 🟦  | Security contact (Upstream)       | Yes      | CRA-AII(2)              |         | Confirm Role need |
-| 🟦  | Unique Product ID (Upstream)      | Yes      | CRA-AII(3), NTIA-SBOM   |         | Confirm Role need |
-| 🟦  | Version (Upstream)                | Yes      | NTIA-SBOM, TR-03183     |         | Confirm Role need |
-| 🟦  | Dependencies (Upstream, Embedded) | Yes      | CRA-AII(5), NTIA-SBOM   |         | Confirm if necessary |
-| 🟦  | Download location (Upstream)      | FIXME    |                         |         | Confirm Role need, req/spec |
-| 🟦  | SBOM Location (Upstream)          | No       | CRA-AII(9)              |         |         |
-| 🟦  | License(s)                        | Yes      |                         |         |         |
-| 🟨  | Version (Redistributed)           | Yes      | NTIA-SBOM, TR-03183     |         |         |
-| 🟨  | Unique Product ID (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if attribute is replaced or added |
-| 🟨  | Project Sustainability            | No       |                         | CycloneDX 1.7 proposed | |
+| Ops | Attribute name                            | Required | Required by             | Comment | FIXME   |
+| :-: | :---------------------------------------- | :------: | :---------------------- | :------ | :------ |
+| 🟦  | Security contact (Upstream)               | Yes      | CRA-AII(2)              |         | Confirm Role need |
+| 🟦  | Unique Product Identifier (Upstream)      | Yes      | CRA-AII(3), NTIA-SBOM   |         | Confirm Role need |
+| 🟦  | Version (Upstream)                        | Yes      | NTIA-SBOM, TR-03183     |         | Confirm Role need |
+| 🟦  | Dependencies (Upstream, Embedded)         | Yes      | CRA-AII(5), NTIA-SBOM   |         | Confirm if necessary |
+| 🟦  | Download location (Upstream)              | FIXME    |                         |         | Confirm Role need, req/spec |
+| 🟦  | SBOM Location (Upstream)                  | No       | CRA-AII(9)              |         |         |
+| 🟦  | License(s)                                | Yes      |                         |         |         |
+| 🟨  | Version (Redistributed)                   | Yes      | NTIA-SBOM, TR-03183     |         |         |
+| 🟨  | Unique Product Identifier (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if attribute is replaced or added |
+| 🟨  | Project Sustainability                    | No       |                         | CycloneDX 1.7 proposed | |
 
 * Examples
     * In Debian, there is a concept of "Non-Maintainer Uploads", where contributors are allowed to do one-time uploads to fix bugs under certain conditions and following some guidelines. (Source: [Debian developers reference](https://www.debian.org/doc/manuals/developers-reference/pkgs.en.html#non-maintainer-uploads-nmus), [perl5-porters message on NMUs](https://www.nntp.perl.org/group/perl.perl5.porters/2024/08/msg268757.html))
@@ -1071,7 +1071,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 
 * See also
    * [Provider](#provider)
-   * [Distributor](glossary.md#distributor) in the glossary.
+   * [Distributor](glossary.md#distributor) in the Glossary.
    * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](#references)
    * (CRA-Art-20) [CRA Article 20](#references)
 
@@ -1100,8 +1100,8 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 | 🟦  | Download location               | FIXME    |                          |         |         |
 
 * See also
-   * [Importer](glossary.md#importer) in the glossary.
-   * [Distributor](glossary.md#distributor) in the glossary.
+   * [Importer](glossary.md#importer) in the Glossary.
+   * [Distributor](glossary.md#distributor) in the Glossary.
 
 #### End-user
 
@@ -1159,7 +1159,7 @@ The Supplier is a role used throughout the Supply-chain, but most often represen
     * Please use a more precise term, like [Maintainer](#maintainer) or [Manufacturer](#manufacturer).
 
 * See also
-  * [Supplier](glossary.md#supplier) in the glossary.
+  * [Supplier](glossary.md#supplier) in the Glossary.
   * [Owner](#owner),
   * [Maintainer](#maintainer),
   * [Custodian](#custodian),
@@ -1225,7 +1225,7 @@ The Supplier is a role used throughout the Supply-chain, but most often represen
 * (CRA-AVII) [Cyber Resilience Act, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314) Contents of the Technical Documentation, Dated 2024-03-12
 * (CRA-Rec-15) [Cyber Resilience Act, Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17) Economic operators, Dated 2024-03-12
 * (CRA-Rec-18) [Cyber Resilience Act, Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20) Open Source Software Contributors, Dated 2024-03-12
-* (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Stewards, Dated 2024-03-12
+* (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Intended for Commercial Use, Dated 2024-03-12
 * (CRA-Rec-21) [Cyber Resilience Act, Recital 21](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25) Open Source Security Attestation, Dated 2024-03-12
 * (CSCRF) [Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)](https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html), (GV.SC.S5, page 89), Securities and Exchange Board of India, Published 2024-08-20
 * (EUBG-2022) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04))
@@ -1260,6 +1260,8 @@ The Supplier is a role used throughout the Supply-chain, but most often represen
 1. Make colors/boxes more colorblind-friendly
 1. Describe the Supply Chain Roles section (intention, use, how to read, etc.), including why it has been split up into different roles
 1. Add some words for each Role/section on what it can be used for
+1. Add a Rosetta stone
+1. Integrate better with the Glossary
 
 
 ## License and use of this document
@@ -1293,20 +1295,20 @@ Several people have been involved in the development of this document
 | Purpose, Intended Use               | Yes      | CRA-AII(4)                                                   |                                                                                             |                          |
 | Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, CSCRF, TR-03183 | (7.5) PackageSupplier                                                                       |                          |
 | Security contact                    | Yes      | CRA-AII(2)                                                   |                                                                                             |                          |
-| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, CSCRF                   | (11.1) Relationship: CONTAINS                                                               |                          |
 | Relationships                       | Yes      | CISA-2024-10                                                 |                                                                                             |                          |
 | Cryptographic Hash                  | Yes      | CISA-2024-10, CSCRF                                          | (7.10) PackageChecksum, (7.9) PackageVerificationCode                                       |                          |
 | Copyright Notice                    | Yes      | CISA-2024-10                                                 | (7.17) PackageCopyrightText                                                                 |                          |
 | License(s)                          | Yes      | CISA-2024-10, CSCRF                                          | (7.15) PackageLicenseDeclared, (7.13) PackageLicenseConcluded, (7.14) LicenseInfoFromFiles  |                          |
+| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, CSCRF                   | (11.1) Relationship: CONTAINS                                                               |                          |
+| Dependencies (Known unknowns)       | Yes      | CSCRF                                                        |                                                                                             |                          |
 | Encryption used                     | Yes      | CSCRF                                                        |                                                                                             |                          |
 | Frequency of updates                | Yes      | CSCRF                                                        |                                                                                             |                          |
-| Dependencies (Known unknown)        | Yes      | CSCRF                                                        |                                                                                             |                          |
 | Access control                      | Yes      | CSCRF                                                        |                                                                                             |                          |
 | Methods for accommodating errors    | Yes      | CSCRF                                                        |                                                                                             |                          |
 | Download location                   | No       |                                                              |                                                                                             |                          |
 | Code Commit Revision                | No       |                                                              |                                                                                             |                          |
 | Code Repository                     | No       |                                                              |                                                                                             |                          |
-| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                                       |                                                                                             |                          |
+| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-19                                       |                                                                                             |                          |
 | Open Source Software Steward        | No       | CRA-Rec-19                                                   |                                                                                             |                          |
 | Security Attestation                | No       | CRA-Rec-21                                                   |                                                                                             |                          |
 | SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183                            | (6.8) Creator                                                                               |                          |
@@ -1334,7 +1336,7 @@ Several people have been involved in the development of this document
 | Security contact (Maintainer)       | URL          | bom.metadata[supplier].contact.email, bom.externalReferences[].security-contact |               |          |         |
 | Supplier Name (Maintainer)          | Text, URL    | bom.metadata[supplier], bom.components[].authors[]                    | creationInfo.creators[] | Software.Package.suppliedBy | |
 | Supplier Name (Manufacturer)        | Text, URL    | bom.metadata[manufacturer], bom.components[].manufacturer             | creationInfo.creators[], packages[].originator, packages[].supplier | Software.Package.suppliedBy | |
-| Unique Product ID                   | PURL         | bom.components[].purl | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | |
+| Unique Product Identifier           | PURL         | bom.components[].purl | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | |
 | Version                             | Text         | bom.components[].version                                              | packages[].versionInfo  | Software.Package.packageVersion | |
 | Version (Redistributed)             | Text         | bom.metadata.version                                                  | packages[].versionInfo  | Software.Package.packageVersion | FIXME: Confirm this |
 | Code Commit Revision                | SHA1         |                                                                       |                         |          |         |

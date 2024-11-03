@@ -72,9 +72,9 @@ Manufacturers must provide a Software Bill of Materials (SBOM) upon request by a
 
 #### Authorised representatives of Manufacturers
 
-(Art 13 to Art 17, Art 18 for authorised representatives)
+Note: See Articles 13-17
 
-
+Obligations for Authorised representatives of Manufacturers are laid out in [Article 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=194).
 
 * …Testing necessary, provide technical documentation, as laid out in [Article 13(6)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164). ⚠️  FIXME: (Dis)confirm this.
 * …Vulnerability management

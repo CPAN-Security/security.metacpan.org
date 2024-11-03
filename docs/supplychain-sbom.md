@@ -429,15 +429,15 @@ Here, you'll get an overview of the most important ones, which attributes they c
 
 These are common across all roles, and considered to be _baseline_ because they are required independently of the Roles' needs.
 
-| Ops | Attribute name           | Required | Required by             | Comment | FIXME   |
-| :-: | :----------------------- | :------: | ----------------------- | :------ | :------ |
-| 🟥  | SBOM Type                | Yes      | CISA-2023, CISA-2024-9  |         |         |
-| 🟥  | SBOM Author              | Yes      | NTIA-SBOM, DE-TR.5.2.1  |         |         |
-| 🟥  | SBOM Creation Time-stamp | Yes      | NTIA-SBOM, DE-TR.5.2.1  |         |         |
-| 🟥  | SBOM Generation Tool     | No       |                         |         | Confirm req/spec |
-| 🟥  | SBOM Serial Number       | Yes      | CycloneDX 1.6, SPDX 2.3 |         |         |
-| 🟥  | SBOM Format              | Yes      | CycloneDX 1.6, SPDX 2.3 |         |         |
-| 🟥  | SBOM Release             | Yes      | CycloneDX 1.6, SPDX 2.3 |         |         |
+| Ops | Attribute name           | Required | Required by              | Comment | FIXME   |
+| :-: | :----------------------- | :------: | ------------------------ | :------ | :------ |
+| 🟥  | SBOM Type                | Yes      | CISA-2023-4, CISA-2024-9 |         |         |
+| 🟥  | SBOM Author              | Yes      | NTIA-SBOM, DE-TR.5.2.1   |         |         |
+| 🟥  | SBOM Creation Time-stamp | Yes      | NTIA-SBOM, DE-TR.5.2.1   |         |         |
+| 🟥  | SBOM Serial Number       | Yes      | CycloneDX 1.6, SPDX 2.3  |         |         |
+| 🟥  | SBOM Format              | Yes      | CycloneDX 1.6, SPDX 2.3  |         |         |
+| 🟥  | SBOM Release             | Yes      | CycloneDX 1.6, SPDX 2.3  |         |         |
+| 🟥  | SBOM Generation Tool     | No       |                          |         | Confirm req/spec |
 
 
 
@@ -507,7 +507,7 @@ An author or main developer of an Open Source component project.
 | 🟨  | Security contact (Embedded)        | Yes      | CRA-AII(2)                                 |         |         |
 | 🟨  | License(s) (Embedded)              | Yes      | CISA-2024-9                                |         |         |
 | 🟨  | SBOM Location                      | No       | CRA-AII(9)                                 |         |         |
-| 🟨  | SBOM Type                          | No       | CISA-2023, CISA-2024-9                     |         |         |
+| 🟨  | SBOM Type                          | No       | CISA-2023-4, CISA-2024-9                   |         |         |
 | 🟨  | SBOM Author                        | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
 | 🟨  | SBOM Creation Time-stamp           | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
 | 🟨  | SBOM Serial Number                 | Yes      | CycloneDX 1.6, SPDX 2.3                    |         |         |
@@ -957,7 +957,7 @@ stateDiagram-v2
 | 🟨  | SBOM Author                       | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
 | 🟨  | SBOM Creation Time-stamp          | Yes      | NTIA-SBOM, DE-TR.5.2.1                     |         |         |
 | 🟨  | SBOM Serial Number                | Yes      | CycloneDX 1.6, SPDX 2.3                    |         |         |
-| 🟨  | SBOM Type                         | No       | CISA-2023                                  |         | Confirm req/spec |
+| 🟨  | SBOM Type                         | No       | CISA-2023-4                                |         | Confirm req/spec |
 | 🟨  | SBOM Location                     | No       | CRA-AII(9)                                 |         |         |
 | 🟨  | SBOM Generation Tool              | No       |                                            |         | Consider recommendation |
 
@@ -1211,8 +1211,8 @@ The Supplier is a role used throughout the Supply-chain, but most often represen
 ## References
 
 * (CPANSec-2024) CPAN Security Group commentary by Author. If you agree or have improvements, [share it with us](#document-status-%EF%B8%8F--draft)!
-* (CISA-2023)   [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), published
-* (CISA-2024)   [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28.
+* (CISA-2023-4)   [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), published 2023-04-21
+* (CISA-2024)   [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), published 2024-03-28
 * (CRA-AII)     [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303) Information and Instructions to the User, Dated 2024-03-12
 * (CRA-AV)      [Cyber Resilience Act, Annex V](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=311) EU Declaration of Conformity, Dated 2024-03-12
 * (CRA-AVII)    [Cyber Resilience Act, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314) Contents of the Technical Documentation, Dated 2024-03-12
@@ -1223,7 +1223,7 @@ The Supplier is a role used throughout the Supply-chain, but most often represen
 * (CRA-Rec-18)  [Cyber Resilience Act, Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20) Open Source Software Contributors, Dated 2024-03-12
 * (CRA-Rec-19)  [Cyber Resilience Act, Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Stewards, Dated 2024-03-12
 * (DE-TR)       German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 2.0.0, published 2024-09-20.
-* (NTIA-2021)   [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30.
+* (NTIA-2021-3) [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30.
 * (NTIA-SBOM)   [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
 * (EUBG-2022)   [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04))
 * (CISA-2024-10) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf), Third edition, sections 2.2.1.4, 2.2.2 and Appendix B; Published 2024-10-15

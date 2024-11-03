@@ -17,6 +17,7 @@ mermaid: true
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 This document is background material and notes for the [CycloneDX OSS Sustainability WG](https://docs.google.com/document/d/1IZnHEwzz1N7LbChVkZTE_dfo3I2np8rULssq5I2wchM/edit).
+In this project we try to help both OSS project's Maintainers communicate their needs and requirements, as well as help the share important information that may assist their user's _business continuity challenges_.
 
 
 ## Project Need Indicators
@@ -64,10 +65,10 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Brand Management and Implementation
 1. **Bug Triage**
 1. **Code Review**
-    * Security review
     * Development process
     * Maintainability review
-1. **Code Writing**
+    * Security review
+1. **Code Writing** and development
     * Internationalization/I18N
 1. **Community Building and Management**
     * Culture and conduct
@@ -88,21 +89,21 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 1. **Event Organizing**
     * Conferences, Meetups, Hackathons or other gatherings for social knowledge-sharing
     * Online events, webinars or classes/training
-    * Social and networking events
     * Program committee work
+    * Social and networking events
 1. **Financial Management**
     * Fund-raising
 1. **Legal Counsel**
     * License Conflict Resolution
     * License Enforcement
-    * Trademark Registration
     * Trademark Defense
+    * Trademark Registration
 1. Mentorship (Ref: [MSFTOSS-2024](#references))
-    * Security
+    * Code contribution
+    * Documentation
     * Governance
     * Outreach and Communication
-    * Documentation
-    * Code contribution
+    * Security
 1. Open Source Steward (EU Cyber Resilience Act)
 1. Outreach
     * Industry/Stakeholder/OSPO Outreach and Assistance
@@ -111,22 +112,28 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * **Public Relations - Interviews with Technical Press**
     * **Social Media Management** and presence
     * **Speaking at Events** and Conference Presentations
-    * **Writing Articles**
     * **Website Development**
+    * **Writing Articles**
+1. Packaging
+    * Adaptation new packaging systems
+    * Container assembly
+    * Package maintenance
+    * Release management
+    * Tooling development
 1. **Quality Assurance and Testing**
-1. Technical infrastructure and hosting
-    * DNS and Email hosting
-    * Chat forum hosting
-    * Other hosted community services
 1. **Security-Related Activities**
     * Hardening
     * Writing automated security tests
 1. Skill and contribution gaps compensation (Ref: [MSFTOSS-2024](#references))
     * Language
-    * Technology/platform
     * Specialized skills
+    * Technology/platform
 1. **Teaching and Tutorial Building**
     * Course/training material development
+1. Technical infrastructure and hosting
+    * Chat forum hosting
+    * DNS and Email hosting
+    * Other hosted community services
 1. **Troubleshooting and Support**
     * **User Support and Answering Questions**
 1. **User Interface, User Experience, and Accessibility**
@@ -142,6 +149,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 | LEASTEFFORT  | no        | YES       | YES       | no                   | no                 | MINIMUM       | Maintainer   |
 | DEPRECATED   | no        | YES       | no        | no                   | no                 | SECURITY      | Maintainer   |
 | SECURITYONLY | no        | YES       | YES       | YES                  | no                 | SECURITY      | Maintainer   |
+| SUPERSEEDED  | no        | YES       | YES       | no                   | no                 | NONE          | Maintainer   |
 | UNMAINTAINED | no        | YES       | YES       | YES                  | no                 | NONE          | Maintainer   |
 
 
@@ -161,6 +169,9 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 1. SECURITYONLY – The project receives security fixes only
     * (number of maintainers is 1 or higher)
     * (number of maintainers increase may be desired)
+1. SUPERSEEDED – This project is considered by the Maintainer have been replaced by another project
+    * (number of maintainers is 0 or higher)
+    * (number of maintainers does not need to change)
 1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))
     * Response time expectations should be none
     * (number of maintainers is 1 or higher)
@@ -179,6 +190,8 @@ States in **bold** exist on CPAN.
 | DUAL         | no        | YES       | YES       | no                   | no                 | OK            | Ecosystem    |
 | **NOXFER**   | no        | YES       | no        | no                   | no                 | NONE          | Ecosystem    |
 | UNREACHABLE  | no        | YES       | YES       | no                   | no                 | ERROR         | Ecosystem    |
+
+
 
 ### Project State Indicators
 

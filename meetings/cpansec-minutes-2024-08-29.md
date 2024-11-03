@@ -1,3 +1,10 @@
+---
+layout: page
+toc: true
+meeting_time: August 29th, 2024 16:00 UTC
+title: Minutes 2024-08-29
+---
+
 ## Meeting details
 
 * August 29th, 2024 16:00 UTC on #cpansec-discussion on Matrix

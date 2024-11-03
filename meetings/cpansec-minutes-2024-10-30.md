@@ -7,11 +7,7 @@ title: Minutes 2024-10-30
 
 ## Meeting details
 
-* 2024-10-30 17:00 UTC on #cpansec-discussion on Matrix
-
-## 15:30 UTC – Pre-meeting socializing
-
-*   Discuss organizing projects, swimlanes, issues, whatever (…)
+* 2024-10-30 16:00 UTC on #cpansec-discussion on Matrix
 
 ## 16:10 UTC – Meeting start
 
@@ -28,10 +24,6 @@ title: Minutes 2024-10-30
     * @tux
     * @stigtsp
     * @garu
-*   Regrets
-    * 
-*   Partly Absent
-    * 
 
 ### Approve previous meeting minutes
 

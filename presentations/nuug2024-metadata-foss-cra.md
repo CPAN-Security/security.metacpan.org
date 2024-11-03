@@ -609,7 +609,7 @@ Note:
 | CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                         |
 | CE Support End Date                 | No       | CRA-AII(7)                                 |
 | CE Technical Documentation          | No       | CRA-AII(8)                                 |
-| Authorized Representative           | No       | CRA-Art-18                                 |
+| CE Authorized Representative        | No       | CRA-Art-18                                 |
 
 </div>
 

@@ -201,7 +201,7 @@ stateDiagram-v2
 
     %% Role activities
     classDef createsSBOM stroke:red,stroke-width:3px;
-    classDef updatesSBOM stroke:yellow,stroke-width:3px,stroke-dasharray:5,5;
+    classDef updatesSBOM stroke:yellow,stroke-width:3px,stroke-dasharray:15 5;
     classDef assemblesSBOM stroke:yellow,stroke-width:3px;
     classDef distributesSBOM stroke:green,stroke-width:3px;
     classDef verifiesSBOM stroke:#07f,stroke-width:3px;
@@ -449,7 +449,7 @@ stateDiagram-v2
 
     %%
     classDef createsSBOM stroke:red,stroke-width:3px;
-    classDef updatesSBOM stroke:yellow,stroke-width:3px,stroke-dasharray:5,5;
+    classDef updatesSBOM stroke:yellow,stroke-width:3px,stroke-dasharray:15 5;
     classDef assemblesSBOM stroke:yellow,stroke-width:3px;
     classDef distributesSBOM stroke:green,stroke-width:3px;
     classDef verifiesSBOM stroke:#07f,stroke-width:3px;
@@ -843,7 +843,7 @@ stateDiagram-v2
 
     %% Role activities
     classDef createsSBOM stroke:red,stroke-width:3px;
-    classDef updatesSBOM stroke:yellow,stroke-width:3px,stroke-dasharray:5,5;
+    classDef updatesSBOM stroke:yellow,stroke-width:3px,stroke-dasharray:15 5;
     classDef assemblesSBOM stroke:yellow,stroke-width:3px;
     classDef distributesSBOM stroke:green,stroke-width:3px;
     classDef verifiesSBOM stroke:#07f,stroke-width:3px;

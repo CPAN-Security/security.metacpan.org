@@ -75,6 +75,7 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 * (Ombredanne-2022) [Package URL and Version range spec: Towards mostly universal dependency resolution](https://archive.fosdem.org/2022/schedule/event/package_url_and_version_range_spec/) Presented at FOSDEM 2022, 15 minutes length.
 * (Video) [Software Identity And The Naming Of Things](https://www.youtube.com/watch?v=wzo81uccSfU) Presented at S4 Conference 2023.
 * (OpenSSF-2023-12) [OpenSSF Responds to the CISA RFC on Software Identification Ecosystem Analysis](https://openssf.org/blog/2023/12/11/openssf-responds-to-the-cisa-rfc-on-software-identification-ecosystem-analysis/) Published 2023-12-11.
+* (BOMctl) [SBOM Document Linking Scenarios](https://docs.google.com/document/d/1Dj-OAycyAH3d6A9vPJWldNoLRArRVB607to_0s5Fk8w/edit?tab=t.0#heading=h.f7ex7w4dum5t)
 
 
 ## Software Lifecycle

@@ -1267,7 +1267,7 @@ The Supplier is a role used throughout the Supply-chain, but most often represen
 
 ## License and use of this document
 
-* Version: 0.8.1
+* Version: 0.8.2
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
@@ -1306,6 +1306,9 @@ Several people have been involved in the development of this document
 | Frequency of updates                | Yes      | CSCRF                                                        |                    | :-I     | 
 | Access control                      | Yes      | CSCRF                                                        |                    |         | 
 | Methods for accommodating errors    | Yes      | CSCRF                                                        |                    | :-I     | 
+| Executable Property                 | Yes      | TR-03183                                                     |                    | :-I     |
+| Archive Property                    | Yes      | TR-03183                                                     |                    | :-I     |
+| Structured Property                 | Yes      | TR-03183                                                     |                    | :-I     |
 | Download location                   | No       |                                                              |                    |         | 
 | Code Commit Revision                | No       |                                                              |                    |         | 
 | Code Repository                     | No       |                                                              |                    |         | 

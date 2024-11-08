@@ -97,11 +97,28 @@ Note:
 
 ## CRA Applies to...
 
-* All **Manufacturers** that wish to place _Products with Digital Elements_ on the EU market.
-  * Connected devices
-  * Remote data processing solutions
-  * Non-tangible digital products
-  * _Related systems and services needed for operation_
+* All **Manufacturers**
+  * that wish to place _Products with Digital Elements_
+  * on the EU market
+  * _in the course of a commercial activity_
+
+<div style="font-size: large;">
+
+> * Background: [Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17)
+
+</div>
+
+Note:
+
+
+[comment]: # (|||)
+
+## Products with Digital Elements
+
+* Connected devices
+* Remote data processing solutions
+* Non-tangible digital products
+* _Related systems and services needed for operation_
 
 <div style="font-size: large;">
 
@@ -293,7 +310,7 @@ Note:
 
 Note:
 
-* Due diligence – to avoid these components compromise security
+* Due diligence – to avoid or fix the components that compromise security
 
 
 [comment]: # (|||)
@@ -370,11 +387,10 @@ Note:
 
 ### Obligations to Open Source Developers<br> – Status Quo
 
-* CRA **does not apply** to Developers if...
-    * they contribute code to projects they are **not responsible for**
-    * they are **not monetising** their product
-    * they 
-    * their product is ultimately **not intended for commercial activities**
+* CRA **does not apply** to Developers that...
+    * contribute code to projects they are **not responsible for**
+    * are **not monetising** their product
+    * make a product that is ultimately **not intended for commercial activities**
 
 <div style="font-size: large;">
 
@@ -424,29 +440,27 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-## Metadata
+## Metadata "today"
 
-* Open Source components and ecosystems are _universal_
-* Are there any "Best Practices" regarding Metadata? 😅
+* What "Best Practices" exist for Metadata? 😅
 
-"As much _optional_ as possible; As little _required_ as necessary"
+> As **much optional** as _possible_;<br> As **little required** as _necessary_.
 
 
 Note:
 
-* It makes sense to look at metadata requirements in general
-    * Not just CRA's
 * "Optional" isn't really an option any more
     * Some fields are actually _required_
 
 
 [comment]: # (||| data-auto-animate)
 
-## Metadata Headaches
+## Metadata "tomorrow"
 
-* New requirements: "Minimum Elements" or "Baseline Attributes"
-  * Some operate with multiple levels of "Requiredness"
-  * Minimum, Recommended, Aspirational
+* OSS components and ecosystems are _universal_
+* Requirements are coming from "everywhere"
+  * "Minimum Elements" or "Baseline Attributes"
+  * "Minimum" – "Recommended" – "Aspirational"
 
 <div style="font-size: large;">
 
@@ -458,8 +472,10 @@ Note:
 
 Note:
 
+* It's necessary to look at metadata requirements in general
+    * Not just from the CRA (Europe's)
 * "Required" attributes come in different forms
-  * Keep in mind what the _purpose_ of the metadata is – not just it's "requiredness"
+    * Keep in mind what the _purpose_ of the metadata is – not just it's "requiredness"
 
 
 [comment]: # (||| data-auto-animate)
@@ -467,13 +483,15 @@ Note:
 ## Metadata Headaches
 
 * No common glossary of terms
-* Needed: a "Metadata Rosetta Stone"
+    * Needed – a _Metadata Rosetta Stone_
+* Not following existing "Best Practices"
 
+> ~~As **much optional** as _possible_;<br> As **little required** as _necessary_.~~
 
 Note:
 
 * The current landscape is still a mess
-  * Which means that well-considered constructive implementations can become a good example for others to consider
+    * Which means that well-considered constructive implementations can become a good example for others to consider
 
 
 [comment]: # (|||)
@@ -487,10 +505,10 @@ Note:
 | Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183             |
 | **Version**  👈                     | Yes      | CISA-2024-10, CRA-AV, TR-03183                        |
 | Purpose, Intended Use               | Yes      | CRA-AII(4)                                            |
-| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
+| **Supplier** Name  👈               | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
 | Security contact                    | Yes      | CRA-AII(2)                                            |
 | Copyright Notice                    | Yes      | CISA-2024-10                                          |
-| License(s)                          | Yes      | CISA-2024-10, TR-03183                                |
+| License(s)                          | Yes      | CISA-2024-10, TR-03183, CSCRF                         |
 
 </div>
 
@@ -508,13 +526,13 @@ Note:
 
 <div style="font-size: x-large;">
 
-| Attribute name                      | Required | References                                    |
-| :---------------------------------- | :------: | --------------------------------------------: |
-| **Unique Product ID** 👈            | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10   |
-| Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183                        |
-| Primary Component Filename          | Yes      | TR-03183                                      |
-| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183 |
-| **Relationships**  👈               | Yes      | CISA-2024-10                                  |
+| Attribute name                      | Required | References                                           |
+| :---------------------------------- | :------: | ---------------------------------------------------: |
+| **Unique Product ID** 👈            | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10          |
+| Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183, CSCRF                        |
+| Primary Component Filename          | Yes      | TR-03183                                             |
+| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183, CSCRF |
+| **Relationships**  👈               | Yes      | CISA-2024-10                                         |
 
 </div>
 
@@ -526,8 +544,8 @@ Note:
     * Global uniqueness required
     * This is a mess, and very hard to solve. Best option for OSS today: Package URLs
 * Relationships: If a dependency is static, remote, provided, or dynamic
-   * "Primary", "Included in", "Heritage or Pedigree"
-   * Relationship completeness
+    * "Primary", "Included in", "Heritage or Pedigree"
+    * Relationship completeness
 
 
 [comment]: # (|||)
@@ -541,11 +559,12 @@ Note:
 | SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
 | SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
 | SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |
+| SBOM Generation Tool                | No       |                                            |
+| **SBOM Location**       👈          | Yes      | CRA-AII(9), TR-03183                       |
+| SBOM Primary Component              | No       | CycloneDX 1.6, SPDX 3.0                    |
 | SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    |
-| **SBOM Location**       👈          | Yes      | CRA-AII(9), TR-03183                       |
 | SBOM Type                           | No       | CISA-2023-4, CISA-2024-10                  |
-| SBOM Generation Tool                | No       |                                            |
 
 </div>
 
@@ -555,18 +574,53 @@ Note:
 * Location: Where to get the most recent SBOM
 * Type: "When" in a Supply Chain an SBOM was created
 
-
 [comment]: # (|||)
 
-### Other useful attributes
+### Attributes for Germany
 
 <div style="font-size: x-large;">
 
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| Download location                   | No       |                                            |
-| Code Commit Revision                | No       |                                            |
-| Code Repository                     | No       |                                            |
+| Executable Property                 | Yes      | TR-03183                                   |
+| Archive Property                    | Yes      | TR-03183                                   |
+| Structured Property                 | Yes      | TR-03183                                   |
+
+</div>
+
+Note:
+
+
+[comment]: # (|||)
+
+### Attributes for India
+
+<div style="font-size: x-large;">
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Dependencies (Known unknowns)       | Yes      | CSCRF                                      |
+| Encryption used                     | Yes      | CSCRF                                      |
+| Frequency of updates                | Yes      | CSCRF                                      |
+| Access control                      | Yes      | CSCRF                                      |
+| Methods for accommodating errors 👈 | Yes      | CSCRF                                      |
+
+</div>
+
+Note:
+
+
+[comment]: # (|||)
+
+### Useful attributes
+
+<div style="font-size: x-large;">
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Download location                   | No  👈   |                                            |
+| Code Commit Revision                | No  👈   |                                            |
+| Code Repository                     | No  👈   |                                            |
 
 </div>
 
@@ -626,7 +680,6 @@ Note:
 
 ## References
 
-
 <div style="font-size: large;">
 
 * (CISA-2023-4) [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), published 2023-04-21
@@ -640,6 +693,7 @@ Note:
 * (CRA-Rec-18) [Cyber Resilience Act, Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20) Open Source Software Contributors, Dated 2024-03-12
 * (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Stewards, Dated 2024-03-12
 * (CRA-Rec-21) [Cyber Resilience Act, Recital 21](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25) Open Source Security Attestation, Dated 2024-03-12
+* (CSCRF) [Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)](https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html), (GV.SC.S5, page 89), Securities and Exchange Board of India, Published 2024-08-20
 * (TR-03183) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products](https://bsi.bund.de/dok/TR-03183), Part 2: Software Bill of Materials (SBOM), Version 2.0.0, published 2024-09-20
 * (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
 
@@ -667,7 +721,7 @@ Note:
 ## Conclusions?
 
 * It's a mess
-* It's up to us to improve it
+* It's up to volunteers to improve it
 * ~"If it ain't broke, don't fix it"~
 * Don't be a bystander
 
@@ -686,19 +740,10 @@ Note:
 
 [comment]: # (!!!)
 
-## Join the work!
-
-* Pick something you are passionate about
-* Let's coordinate on #cpan-security on irc.perl.org! 😍
-* [https://security.metacpan.org/](https://security.metacpan.org/)
-
-
-[comment]: # (!!!)
-
 # Thanks!
 
 Salve J. Nilsen
 
 @sjn\@chaos.social
 
-🦆🦆🦆🦆
+🦆🦆

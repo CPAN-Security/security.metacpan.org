@@ -1352,7 +1352,7 @@ Several people have been involved in the development of this document
 | SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183                            |                                   |         | 
 | SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                                      |                                   |         | 
 | SBOM Generation Tool                | No       |                                                              |                                   |         | 
-| SBOM Location                       | No       | CRA-AII(9)                                                   |                                   |         | 
+| SBOM Location                       | Yes      | CRA-AII(9), TR-03183                                         |                                   |         |
 | SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                      |                                   |         | 
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                                      |                                   |         | 
 | SBOM Type                           | No       | CISA-2023, CISA-2024-10                                      |                                   |         | 

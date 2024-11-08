@@ -309,7 +309,6 @@ stateDiagram-v2
     ecosystem_lang         --> ecosystem_lang
     %%language_packager    --> ecosystem_lang
     environment_maintainer --> ecosystem_lang
-    ecosystem_package        --> ecosystem_package
 
     %%
     state "Collaboration Ecosystem" as ecosystem_repo {

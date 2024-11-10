@@ -21,7 +21,7 @@ NUUG 2024-11-12
 
 Salve J. Nilsen
 
-@sjn\@chaos.social
+🐘 Mastodon — @sjn\@chaos.social
 
 Note:
 
@@ -705,9 +705,11 @@ Note:
 
 ## Metadata Headaches
 
-* Lots of "opinions" from legislators & gov't orgs
+Lots of "opinions" from legislators & gov't orgs
+
 * ⚠️  Inconsistencies in Terms
 * ⚠️  Missing: More attributes needed to achieve security goals?
+* ⚠️  Too much: Unnecessary additions, leading to complexity
 
 
 Note:
@@ -744,6 +746,6 @@ Note:
 
 Salve J. Nilsen
 
-@sjn\@chaos.social
+🐘 Mastodon — @sjn\@chaos.social
 
 🦆🦆

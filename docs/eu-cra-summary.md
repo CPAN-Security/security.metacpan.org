@@ -24,6 +24,13 @@ This text attempts to summarize the most important parts of the CRA, for Open So
 For license information and acknowledgements, see the [end of this document](#license-and-use-of-this-document).
 
 
+### Purpose
+
+Fostering the development of secure products
+
+* _Harmonized standards_ create _presumption of conformance_.
+
+
 ### Manufacturers
 
 Manufacturers are obliged to _exercise due diligence when integrating components from third parties_, as laid out in **[Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163)**
@@ -79,17 +86,28 @@ Manufacturers must provide a Software Bill of Materials (SBOM) upon request by a
 
 ### Importers
 
-Importers shall place on the market only products with digital elements that comply with the essential requirements set out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297), and where the processes put in place by the manufacturer comply with the essential requirements set out in [Annex I, Part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300), as required in [Article 19(1))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=197)
-
+Importers shall place on the market only products with digital elements that comply with the essential requirements set out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297), and where the processes put in place by the manufacturer comply with the essential requirements set out in [Annex I, Part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300) – as laid out in [Article 19(1))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=197)
 
 
 ### Distributors
 
+When making a product with digital elements available on the market, distributors shall act with due care in relation to the requirements set out in this Regulation.
+
+Before making a product with digital elements available on the market, distributors shall verify that:
+
+* (a) the product with digital elements bears the CE marking;
+* (b) the manufacturer and the importer have complied with the obligations set out in [Article 13(15), (16), (18), (19) and (20)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=169) and [Article 19(4)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=199), and have provided all necessary documents to the distributor.
 
 
-### Open Source Stewards
+### Open Source Stewards ⚠️  FIXME: Not done
 
-Open Source Stewards are obliged to
+Open Source Software Stewards are…
+
+* […] legal persons who *provide support on a sustained basis* for the development […] of products which are intended for commercial activities, and who *play a main role in ensuring the viability of those products* […] ([Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22))
+  * […] should be subject to a light-touch and tailor-made regulatory regime.
+  * [and…] only cover […] free and open-source software that are ultimately intended for commercial activities.
+
+Open Source Stewards are obliged to…
 
 * …facilitate the Manufacturer's _due diligence_ obligation set out in [Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163) ⚠️  FIXME: (Dis)confirm this.
 * …provide a cybersecurity policy for voluntary reporting of vulnerabilities, as laid out in [Article 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=185)
@@ -104,13 +122,121 @@ FOSS Software may get a voluntary security attestation, as described in [Article
   * …so this Attestation becomes a "proof of due diligence exercised"? ⚠️  FIXME: (Dis)confirm this.
 * …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties.
 
+Furthermore, the OSS Software Stewards are only subject to a "light-touch" and "tailor-made" regulatory regime, ans are not to be considered as Manufacturers.
+
+Additionally,
+
+* The mere circumstances under which the product with digital elements has been developed, or how the development has been financed, should therefore not be taken into account when determining the commercial or non-commercial nature of that activity. ([Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=21))
+* […] the development of […] free and open-source software by *not-for-profit organisations* should not be considered to be a commercial activity provided that the organisation is set up in such a way that ensures that all earnings after costs are used to achieve not-for-profit objectives. ([Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=21))
+
+
+
+#### TODO: Open Source Steward
+
+* Article 24 Obligations
+
+* **Article 52**, Market surveillance and control of products (pages 253-259)
+  * **Section 3**, Market surveillance authorities […] shall also be responsible for carrying out market surveillance activities in relation to the obligations for open-source software stewards […].
+  * Section 11, Market surveillance authorities shall inform consumers of where to submit complaints that could indicate non-compliance with this Regulation […] and […] facilitate reporting of vulnerabilities, incidents and cyber threats […].
+
+* Article 26 Guidance
+
+
+
+
+> [!CAUTION]
+> * (CPANSec, 2024-09-11) The details and implementations around this concept has not been made available yet.
+
+
+### Maintainers
+
+* CRA does not apply to you, as long as…
+  * You are providing Free and Open Source Software (as mention in [Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=21))
+
+
+
+#### Who does the CRA apply to? ([Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17))
+
+This Regulation applies to [economic operators](glossary.md#economic-operator) only in relation to products with digital [elements made available on the market](glossary.md#making-available-on-the-market) hence supplied for distribution or use on the Union market _in the course of a commercial activity_.
+
+Supply _in the course of a commercial activity_ might be characterised […]
+
+* by charging a price for a product with digital elements […]
+* by charging a price for technical support services
+  * where this does not serve only the recuperation of actual costs,
+* by an intention to monetise,
+  * for instance by providing a software platform through which the manufacturer monetises other services,
+* by requiring as a condition for use the processing of personal data
+  * for reasons other than exclusively for improving the security, compatibility or interoperability of the software, or
+* by accepting donations
+  * exceeding the costs associated with the design, development and provision of a product with digital elements.
+
+Accepting donations without the intention of making a profit should not be considered to be a commercial activity
+
+
+#### On Open Source software _intended for use in the course of a commercial activity_ ([Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
+
+* Free and open-source software is understood as software the source code of which is openly shared
+  * and the licensing of which provides for all rights to make it
+    * freely accessible, usable, modifiable and redistributable.
+
+* Free and open-source software is developed, maintained and distributed openly,
+  * including via online platforms.
+
+* In relation to economic operators that fall within the scope of this Regulation,
+  * only free and open-source software made available on the market,
+    * and therefore supplied for distribution or use _in the course of a commercial activity,_
+  * should fall within the scope of this Regulation.
+
+* The mere circumstances under which the product with digital elements has been developed,
+  * or how the development has been financed,
+    * should therefore not be taken into account when determining the commercial or non-commercial nature of that activity.
+  * More specifically, for the purposes of this Regulation
+    * and in relation to the economic operators that fall within its scope,
+      * to ensure that there is a clear distinction between the development and supply phases,
+    * the provision of products with digital elements qualifying as free and open-source software
+      * that are not monetised by their manufacturers
+    * should not be considered to be a commercial activity.
+
+* Furthermore, **the supply of** products with digital elements
+  * qualifying as **free and open-source software components**
+    * **intended for integration by other manufacturers** into their own products with digital elements
+  * **should be considered making available on the market**
+    * **only if the component is monetised** by its original manufacturer.
+
+* For instance,
+  * the mere fact that an open-source software product with digital elements
+    * receives financial support from manufacturers
+    * or that manufacturers contribute to the development of such a product
+  * should not in itself determine that the activity is of commercial nature.
+
+* In addition,
+  * the mere presence of regular releases
+  * should not in itself lead to the conclusion that a product with digital elements
+    * is supplied in the course of a commercial activity.
+
+* Finally, for the purposes of this Regulation,
+  * the **development of** products with digital elements
+    * qualifying as **free and open-source software**
+    * **by not-for-profit organisations**
+    * **should not be considered to be a commercial activity**
+      * **provided** that the organisation is set up in such a way
+      * that ensures that **all earnings after costs are used to achieve not-for-profit objectives**.
+
+* This Regulation does not apply to
+  * natural or legal persons
+    * who contribute with source code to products with digital elements
+      * qualifying as free and open-source software
+      * that are not under their responsibility.
 
 
 #### Open questions
 
 * "Commission shall publish guidance to assist economic operators in applying this Regulation"
   * 
-* 
+* Who gives out attestations?
+  * Under what terms?
+  * Can these attestations be used as a "value add" to existing components in such a way that may be sold by Stewards to fund it's work and it's community.
 
 ## An idealized Open Source Steward Supply-Chain graph
 
@@ -168,7 +294,7 @@ graph TB
     is-legal-entity -->|No| cra-is-out-of-scope
     intended-commercial-use -->|No| cra-is-out-of-scope
     intended-commercial-use -->|Yes| product-supporter{"Providing<br>support for OSS<br>products?<br>CRA Recital (18)"}
-    product-supporter -->|Yes| cra-oss-steward("CRA in-scope<br>You are an Open-Source Software Steward<br>CRA Article 3 (14)")
+    product-supporter -->|Yes| cra-oss-steward("CRA in-scope<br>You are an Open Source Software Steward<br>CRA Article 3 (14)")
     product-supporter -->|No| cra-is-out-of-scope
 
     %% Based on the flowchart made by Maarten Aertsen (NLNetLabs) found at
@@ -192,8 +318,8 @@ graph TB
 * (CRA-Rec-15) [Cyber Resilience Act, Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17) Economic operators, Dated 2024-03-12
 * (CRA-Rec-18) [Cyber Resilience Act, Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20) Open Source Software Contributors, Dated 2024-03-12
 * (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Stewards, Dated 2024-03-12
-* (DE-TR) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products (part 2)](https://bsi.bund.de/dok/TR-03183), Version 1.1, published 2023-11-28.
-* (NTIA-2021) [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30.
+* (DE-TR) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products](https://bsi.bund.de/dok/TR-03183), Part 2: Software Bill of Materials (SBOM), Version 2.0.0, published 2024-09-20
+* (NTIA-2021) [SBOM Tool Classification Taxonomy](https://www.ntia.gov/files/ntia/publications/ntia_sbom_tooling_taxonomy-2021mar30.pdf), published 2021-03-30
 * (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
 
 * (CPANSec-2024) CPAN Security Group commentary by Author.
@@ -201,7 +327,7 @@ graph TB
 
 ## License and use of this document
 
-* Version: 0.5.2
+* Version: 0.5.3
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

@@ -33,19 +33,32 @@ This also applies to modules that are re-packaged for other native packaging eco
 
 ### Security
 
-1. Dependencies are up-to-date, and automated mechanisms to check for updates are in place and regularly checking
-2. Tests include an automated vulnerability check (e.g. using [CPAN::Audit](https://metacpan.org/pod/CPAN::Audit) or [Test::CVE](https://metacpan.org/pod/Test::CVE)) that are executed regularly
-3. Dependencies and related metadata are made available in a vendor-neutral SBOM format
+1. Dependencies are up-to-date, and automated mechanisms to check for updates are in place and regularly checking.
+2. Tests include an automated vulnerability database check (e.g. using [CPAN::Audit](https://metacpan.org/pod/CPAN::Audit) or [Test::CVE](https://metacpan.org/pod/Test::CVE)) that are executed regularly.
+3. Dependencies and related metadata are made available in a vendor-neutral SBOM format.
+4. Dependencies have a facility to apply custom security patches or other mitigations locally, in lieu of timely updates from upstream providers or maintainers.
 
 
 ### Sustainability
 
-1. Project completeness — Look for signs of documents and other artifacts that are commonly expected in open source projects. E.g.: `README`, `LICENSE`, `Changes` and `CONTRIBUTING` files; A public source code repository; A public bug tracker; A community communications channel.
+1. Project completeness — Look for signs of documents and other artifacts that are commonly expected in open source projects.
+    a. E.g.: `README`, `LICENSE`, `Changes` and `CONTRIBUTING` files;
+    b. A public source code repository;
+    c. A public bug tracker;
+    d. A community communications channel.
 2. Upstream placement in the [River of CPAN](https://neilb.org/2015/04/20/river-of-cpan.html) — An indication of this can be found on MetaCPAN's reverse dependency list ([example](https://metacpan.org/dist/Test-Simple/requires)).
-3. Bus-factor — How many active developers with indexing permissions exist? You can find this out on MetaCPAN ([example](https://metacpan.org/dist/Test-Simple) in left column).
+3. Number of maintainers ("Bus-factor") — How many active developers with indexing permissions exist?
+    a. You can find this out on MetaCPAN ([example](https://metacpan.org/dist/Test-Simple) in left column).
 4. Advocacy visibility — Is the project (or one of it's reverse dependencies) actively mentioned in social media or common community channels?
-5. Funding options — Does the project offer low-effort ways for users to donate to it? E.g. [Ko-fi](https://ko-fi.com/) or [Paypal](https://www.paypal.com/donate/buttons) donation links, or maybe even ~~[Github Sponsors](https://github.com/sponsors)~~, or ~~[Tidelift](https://tidelift.com/)~~
-6. Collaboration metrics — Forum activity; Issue triage and responsiveness; Merge requests.
+5. Funding options — Does the project offer low-effort ways for users to donate to it?
+    a. E.g. [Ko-fi](https://ko-fi.com/) or
+    b. [Paypal](https://www.paypal.com/donate/buttons) donation links, or
+    c. ~~[Github Sponsors](https://github.com/sponsors)~~, or
+    d. ~~[Tidelift](https://tidelift.com/)~~
+6. Collaboration metrics — For indicating presence of active contributors
+    a. Forum activity;
+    b. Issue triage and responsiveness;
+    c. Merge requests.
 
 
 ### Community responsiveness

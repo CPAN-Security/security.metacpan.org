@@ -242,7 +242,7 @@ States in **bold** exist on CPAN.
     * (number of maintainers is not relevant)
 1. UNREACHABLE – The project maintainers are not reachable
     * The project maintainer(s) has not been reachable through registered communication channels for a substantial time, due to reasons outside the control of the project.
-        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other Forces Majeures beyond the Maintainer's control.
+        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other _Forces Majeures_ beyond the Maintainer's control.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
     * (number of maintainers is not relevant)
 1. UNRESPONSIVE – Project Maintainers are reachable but actively not engaging
@@ -266,7 +266,7 @@ States in **bold** exist on CPAN.
 
 ## License and use of this document
 
-* Version: 0.2.0
+* Version: 0.2.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

@@ -63,11 +63,14 @@ title: Minutes 2024-11-15
 ### TLS/HTTPS/CSPRNG/DSA in core
 *   @rrwo, @stigtsp - CSPRNG and DSA should be in-scope (they suggest and hope)
 *   @timlegge - @leont has had progress
-    * Current idea is forking IO::Socket::SSL and adding a wrapper around it for other modules
+    * @leont and @timlegge met with PSC
+    * Current proposal is to 
+        * Create a new wrapper module in core
+        * Add cleaned up fork of Net::SSLeay and IO::Socket::SSL core modules
     * @leont published a new module: Crypt::Bear
 *   @stigtsp - how are we handling the CA cert package in core?
-    * @timlegge - FIXME
-*   @thibault - some work ongoing RNG in CORE; much discussion;
+    * @timlegge - Current plan is to use the system CA store (with override possible)
+*   @thibaultduponchelle - some work ongoing RNG in CORE; much discussion;
     * Discussion also twirls around how secure the RNG is w.r.t the usage environment (gaming, encryption, …)
 
 ### German Sovereign Tech fund

@@ -27,7 +27,7 @@ title: Minutes 2024-11-15
 *   Attendees
     * @sjn, @stigtsp, @tux, @thibaultduponchelle, @timlegge
 *   Regrets
-    * @rrwo
+    * @robrwo
 *   Partly Absent
     * 
 

@@ -28,8 +28,6 @@ title: Minutes 2024-11-15
     * @sjn, @stigtsp, @tux, @thibaultduponchelle, @timlegge
 *   Regrets
     * @robrwo
-*   Partly Absent
-    * 
 
 ### Approve previous meeting minutes
 
@@ -59,9 +57,8 @@ title: Minutes 2024-11-15
     *   …
 
 
-
 ### TLS/HTTPS/CSPRNG/DSA in core
-*   @rrwo, @stigtsp - CSPRNG and DSA should be in-scope (they suggest and hope)
+*   @robrwo, @stigtsp - CSPRNG and DSA should be in-scope (they suggest and hope)
 *   @timlegge - @leont has had progress
     * @leont and @timlegge met with PSC
     * Current proposal is to 
@@ -85,7 +82,7 @@ title: Minutes 2024-11-15
 *   @stigtsp - HTTP::Tiny 0.090 merged into Perl CORE, using system cacerts instead of Mozilla::CA
 
 ### CPAN Author's Security Policy Template/Guidelines
-*   @rrwo - working on initial draft
+*   @robrwo - working on initial draft
 
 ### Eclipse ORC WG
 *   @sjn - Nothing to report
@@ -111,7 +108,7 @@ title: Minutes 2024-11-15
 *   @stigtsp - three volunteers; courses with Mitre upcoming; good progress in preparations.
 
 ### Recruitment
-*   New members! Thibault Duponchelle (tib) and Robert 
+*   New members! Thibault Duponchelle (tib, @thibaultduponchelle) and Robert Rothenberg (rrwo, @robrwo)
 
 ### CPANSA feed
 *   Working again

@@ -92,6 +92,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Animation / motion graphics
     * Photography / videography
     * Audio design
+    * Apparel design (t-shirts, swag)
 1. **Documentation Authorship**
     * Automation and Completeness
     * Consistency, Voice and Tone

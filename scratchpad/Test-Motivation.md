@@ -3,10 +3,10 @@
 One of the first questions that are asked is "why should I test?", which is
 impossible to answer without the question "what should be tested?".
 
-With the SRA it is important to realize that those who release a product for
-(re)sale, are responsible for adding documentation about possible
-vulnerabilities of their own part of the release as well as for the software
-that is included from third parties or the software it runs on.
+With the Cyber Resilience Act (CRA) it is important to realize that those who
+release a product for (re)sale, are responsible for adding documentation about
+possible vulnerabilities of their own part of the release as well as for the
+software that is included from third parties or the software it runs on.
 
 With that in mind, those who create the release should know about possible
 CVEs and other vulnerabilities *before* doing the release.

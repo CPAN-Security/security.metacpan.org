@@ -56,6 +56,7 @@ toc: true
 * (NTIA-2021-11) [Software Suppliers Playbook: SBOM Production and Provision](https://www.ntia.gov/files/ntia/publications/software_suppliers_sbom_production_and_provision_-_final.pdf), (November 2021)
 * (SPDX-2.3) [Satisfying NTIA Minimum Elements for an SBOM using SPDX](https://spdx.github.io/spdx-spec/v2.3/how-to-use/#k22-mapping-ntia-minimum-elements-to-spdx-fields), (SPDX 2.3)
 * (SPDX-3.0) [Using SPDX to comply with Norms, Standards and Regulation](https://spdx.github.io/spdx-spec/v3.0/annexes/using-SPDX-to-comply-with-industry-guidance/#f1-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx-us-executive-order-14028), (SPDX 3.0)
+* (MITRE-2024-10) [Data Normalization Challenges and Mitigations in Software Bill of Materials Processing](https://www.mitre.org/news-insights/publication/data-normalization-challenges-mitigations-software-bill-materials-processing), (October 2024)
 
 See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
 

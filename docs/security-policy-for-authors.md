@@ -69,6 +69,15 @@ A minimal security policy should discuss
    >
    > We may also forward this issue to the CPAN Security Group.
 
+   It is important to advise users not to report security
+   vulnerabilities in public, e.g.
+
+   > Please *do not* use the public issue reporting system on RT for
+   > reporting security vulnerabilities.
+   >
+   > Please do not disclose the security vulnerability in public. That
+   > includes blogs, social media, forums, or conferences.
+
    Note: many modules include a "BUGS" section in their POD that
    describes how to report a bug.  These sections should include a
    subsection that advises how to safely report security issues, and

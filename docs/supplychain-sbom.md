@@ -544,12 +544,12 @@ A contributing author or developer of an Open Source component project, though n
 | 🟥  | Security contact (Primary)         | Yes      | CRA-AII(2)                                  |         |         |
 | 🟥  | Unique Product Identifier          | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV               |         |         |
 | 🟥  | Purpose, Intended Use              | Yes      | CRA-AII(4)                                  |         |         |
-| 🟥  | Code Repository                    | Yes      |                                             |         |         |
+| 🟥  | Code Repository                    | No       |                                             |         | Consider recommendation |
 | 🟥  | Project Sustainability             | No       |                                             | CycloneDX 1.7 proposed | |
 | 🟥  | Code Commit Revision               | No       |                                             |         | Consider recommendation |
 | 🟥  | Intended for Commercial Use        | No       | CRA-Rec-15, CRA-Rec-19                      |         |         |
 | 🟥  | Open Source Software Steward       | No       | CRA-Rec-19                                  |         |         |
-| 🟥  | Security Attestation               | No       | CRA-Rec-21                                  |         | Confirm CRA Article |
+| 🟥  | Security Attestation               | No       | CRA-Rec-21                                  |         |         |
 | 🟨  | Supplier Name (Maintainer)         | Yes      | CRA-AII(1), NTIA-SBOM, TR-03183, CRA-AV     |         |         |
 | 🟨  | Dependencies (Included)            | Yes      | CRA-AII(5), NTIA-SBOM                       |         |         |
 | 🟨  | Security contact (Included)        | Yes      | CRA-AII(2)                                  |         |         |
@@ -726,10 +726,11 @@ This role is necessary when...
 | 🟦  | Security contact (Upstream)               | Yes      | CRA-AII(2)              |         | Confirm Role need |
 | 🟦  | Unique Product Identifier (Upstream)      | Yes      | CRA-AII(3), NTIA-SBOM   |         | Confirm Role need |
 | 🟦  | Version (Upstream)                        | Yes      | NTIA-SBOM, TR-03183     |         | Confirm Role need |
-| 🟦  | Dependencies (Upstream, Included)         | Yes      | CRA-AII(5), NTIA-SBOM   |         | Confirm if necessary |
 | 🟦  | Download location (Upstream)              | No       |                         |         | Confirm Role need, req/spec |
 | 🟦  | SBOM Location (Upstream)                  | No       | CRA-AII(9)              |         |         |
 | 🟦  | License(s)                                | Yes      |                         |         |         |
+| 🟦  | Dependencies (Upstream)                   | Yes      | CRA-AII(5), NTIA-SBOM   |         | Confirm if necessary |
+| 🟨  | Dependencies (Included)                   | Yes      | CRA-AII(5), NTIA-SBOM   |         | Confirm if necessary |
 | 🟨  | Version (Redistributed)                   | Yes      | NTIA-SBOM, TR-03183     |         |         |
 | 🟨  | Unique Product Identifier (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if attribute is replaced or added |
 | 🟨  | Project Sustainability                    | No       |                         | CycloneDX 1.7 proposed | |
@@ -764,9 +765,12 @@ This role is necessary when...
 * Within an author environment, creates packages from their own project in preparation for publication in a downstream [Language Ecosystem](#language-ecosystem) (e.g. create a CPAN package for uploading to CPAN using the PAUSE interface).
 * Concerns themselves with correct package format and structure, and that package metadata is preserved and updated.
 
-| Ops | Attribute name          | Required | Required by                        | Comment | FIXME   |
-| :-: | :---------------------- | :------: | ---------------------------------- | :------ | :------ |
-| 🟥  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM              |         |         |
+| Ops | Attribute name                            | Required | Required by                        | Comment | FIXME   |
+| :-: | :---------------------------------------- | :------: | ---------------------------------- | :------ | :------ |
+| 🟦  | Security contact (Redistributed)          | Yes      | CRA-AII(2)                         |         | Confirm Role need |
+| 🟦  | Unique Product Identifier (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM              |         | Confirm Role need |
+| 🟦  | Version (Redistributed)                   | Yes      | NTIA-SBOM, TR-03183                |         | Confirm Role need |
+| 🟥  | Dependencies (Resolved)                   | Yes      | CRA-AII(5), NTIA-SBOM              |         |         |
 
 
 #### Assembler
@@ -780,7 +784,7 @@ This role is necessary when...
 
 | Ops | Attribute name          | Required | Required by           | Comment | FIXME   |
 | :-: | :---------------------- | :------: | --------------------- | :------ | :------ |
-| 🟥  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM |         |         |
+| 🟨  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM |         |         |
 
 #### Curator
 
@@ -799,8 +803,8 @@ This role is necessary when...
 
 | Ops | Attribute name                 | Required | Required by           | Comment | FIXME   |
 | :-: | :----------------------------- | :------: | --------------------- | :------ | :------ |
-| 🟥  | Download location (Repackaged) | No       |                       |         |         |
-| 🟥  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |         |
+| 🟨  | Download location (Repackaged) | No       |                       |         |         |
+| 🟨  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |         |
 
 
 #### Provider
@@ -824,8 +828,8 @@ Ensures the availability of packages or containers, that they are indexed correc
 
 | Ops | Attribute name                 | Required | Required by           | Comment | FIXME   |
 | :-: | :----------------------------- | :------: | --------------------- | :------ | :------ |
-| 🟦  | Download location (Repackaged) | No       |                       |         |         |
-| 🟦  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |         |
+| 🟩  | Download location (Repackaged) | No       |                       |         |         |
+| 🟩  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |         |
 
 
 

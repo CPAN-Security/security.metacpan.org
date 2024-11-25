@@ -43,7 +43,7 @@ Security issues in Perl modules that are maintained in both the core Perl distri
 
 ### CPAN Modules
 Security issues in Perl Modules, maintained by independent developers and published on CPAN/MetaCPAN, should be reported to the maintainer of the module in question.
-In the event that you are unable to contact the maintainer you may reach out to the CPAN Security Group at [cpan-security@perl.org](mailto:cpan-security@perl.org).
+In the event that you are unable to contact the maintainer you may reach out to the CPAN Security Group at [cpan-security@security.metacpan.org](mailto:cpan-security@security.metacpan.org).
 This address is a closed membership mailing list monitored by the CPAN Security Group who can assist in contacting the maintainer and triaging the issue.
 In general the CPAN Security Group does not fix the issue but may be able to facilitate getting the issue resolved.
 

@@ -225,6 +225,14 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Assumed, Implied, Phantom, Unstated)](#dependency-assumed-implied-phantom-unstated-%EF%B8%8F)
 
+#### Dependency (Optional)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> * See also
+>     * [Dependency (Static)](#dependency-static)
+
 #### Dependency (Unresolved, Required) ✍️
 
 > 1. (CPANSec-2024) A dependency that that needs to be resolved for a software component to function as expected.

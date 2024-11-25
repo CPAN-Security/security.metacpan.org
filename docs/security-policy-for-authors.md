@@ -43,20 +43,18 @@ e.g.
 
 > This is the Security Policy for the Perl 5 Foo-Bar distribution.
 
-## How to report a security vulnerability
+If the project has a web site, with this security policy posted on the
+website, then you should refer to that URL, e.g.
 
-It it worth prefacing instructions to check for the latest version at
-the project's home page.
-
-> Before reporting a security vulnerability, please ensure that you
-> check the latest version of this software for an updated security
-> policy, in particular updated contact information for the
-> maintainers.  It can be found at https://foobar.example.com.
+> The latest version of this Security Policy can be found on the
+> Foo-Bar website at https://foobar.example.com/security-policy
 
 (It is reasonable to link to the project's distribution page on
 MetaCPAN, e.g. https://metacpan.org/dist/Foo-Bar.)
 
-At the bare minimum, it should provide a current package maintainer's
+## How to report a security vulnerability
+
+At the bare minimum, the should provide a current package maintainer's
 email address (or ideally an alias that forwards to multiple
 maintainers, or a bug reporting system that supports special handling
 of security issues.
@@ -78,9 +76,9 @@ or [1]
 > at https://example.github.com/foobar. On the "Advisories" page you
 > can click on the "Report a vulnerability" button.
 
-It is also important that there be a *single point of contact*. Do not
-provide a list of multiple email addresses and ask that users email
-one or all of these addresses.
+We recommend there be a *single point of contact*. Do not provide a
+list of multiple email addresses or web pages and ask that users
+contact some or all of these addresses.
 
 Add note about also copying cpan-security on the notification if
 the security issue is a 0-day vulnerability or is otherwise urgent.

@@ -78,6 +78,10 @@ or [1]
 > at https://example.github.com/foobar. On the "Advisories" page you
 > can click on the "Report a vulnerability" button.
 
+It is also important that there be a *single point of contact*. Do not
+provide a list of multiple email addresses and ask that users email
+one or all of these addresses.
+
 Add note about also copying cpan-security on the notification if
 the security issue is a 0-day vulnerability or is otherwise urgent.
 For example

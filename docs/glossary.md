@@ -2,6 +2,9 @@
 layout: page
 title: Glossary of Terms
 description: List of terms used throughout CPANSec projects
+draft: true
+draft_text: What you see here is a DRAFT of the Glossary used by the CPAN Security Group (CPANSec).
+contribution_url: https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md
 toc: true
 ---
 
@@ -204,22 +207,31 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded-included-pre-resolved-%EF%B8%8F)
 
-#### Dependency (Implied, Assumed, Unstated) ✍️
+#### Dependency (Assumed, Implied, Phantom, Unstated) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-> 1. (CPANSec-2024) A dependency that is _unstated_.
+> 1. (CPANSec-2024) A dependency that is used but _unstated_.
 >     * An implied dependency is a component that is required to perform an action or functionality, but has not been explicitly stated as required.
 >     * An implied dependency should be considered as a bug in the component, and corrected as soon as possible.
->     * If a dependency has to be implied due to lacking capabilities in the tooling used to create the package, then this should be considered as a bug in the tooling.
+>     * If a dependency has to be implied due to lacking capabilities in the tooling used to create the package.
+>          * This should be considered as a bug in the tooling.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
 ##### Dependency (Detected during Analysis) ✍️
 
 > * See also
->     * [Dependency (Implied, Assumed, Unstated)](#dependency-implied-assumed-unstated-%EF%B8%8F)
+>     * [Dependency (Assumed, Implied, Phantom, Unstated)](#dependency-assumed-implied-phantom-unstated-%EF%B8%8F)
+
+#### Dependency (Optional)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> * See also
+>     * [Dependency (Static)](#dependency-static)
 
 #### Dependency (Unresolved, Required) ✍️
 
@@ -236,12 +248,12 @@ Please take this into account when commenting this document.
 ##### Requirement ✍️
 
 > * See also
->     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
+>     * [Dependency (Unresolved, Required)](#dependency-unresolved-required-%EF%B8%8F)
 
 ##### Pre-Requirement ✍️
 
 > * See also
->     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
+>     * [Dependency (Unresolved, Required)](#dependency-unresolved-required-%EF%B8%8F)
 
 #### Dependency (Resolved during Configuration) ✍️
 

@@ -60,16 +60,19 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 
 Needs in **bold** are found in [CHAOSS-2020](#references).
 
-1. Brand Development
-    * Brand Strategy
+1. Project Branding
+    * Brand Development and Strategy
     * Brand Management and Implementation
-1. **Bug Triage**
 1. **Code Review**
-    * Development process
+    * Development process review
     * Maintainability review
-    * Security review
+    * Secure Code review (SCR)
 1. **Code Writing** and development
+    * **Bug Triage**
+    * CI/CD configuration
+    * Feature implementation
     * Internationalization/I18N
+    * Test writing
 1. **Community Building and Management**
     * Culture and conduct
     * Diversity, Equity, Inclusion
@@ -79,12 +82,22 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 1. Content Creation
     * Audio or Video Editing
     * Podcast Hosting or Participation
+    * **Writing Articles** / Blogging
+    * Script writing
+    * Creating Infographics
+    * Writing Case studies / White papers
 1. **Creative Work and Design**
+    * Creative copywriting
+    * Visual / graphic design
+    * Animation / motion graphics
+    * Photography / videography
+    * Audio design
 1. **Documentation Authorship**
     * Automation and Completeness
-    * Consistency and Voice
-    * Indexing, Findability and SEO
+    * Consistency, Voice and Tone
+    * Indexing, Discoverability, Keyword Analysis and SEO
     * **Localization/L10N and Translation**
+    * Technical writing
     * User or Stakeholder Relevance
 1. **Event Organizing**
     * Conferences, Meetups, Hackathons or other gatherings for social knowledge-sharing
@@ -93,6 +106,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Social and networking events
 1. **Financial Management**
     * Fund-raising
+    * Grant management
 1. **Legal Counsel**
     * License Conflict Resolution
     * License Enforcement
@@ -104,39 +118,51 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Governance
     * Outreach and Communication
     * Security
-1. Open Source Steward (EU Cyber Resilience Act)
 1. Outreach
+    * Content Strategy, Planning and Auditing
     * Industry/Stakeholder/OSPO Outreach and Assistance
     * **Marketing and Campaign Advocacy**
     * Media relations
+    * Developer relations
     * **Public Relations - Interviews with Technical Press**
     * **Social Media Management** and presence
     * **Speaking at Events** and Conference Presentations
     * **Website Development**
-    * **Writing Articles**
 1. Packaging
-    * Adaptation new packaging systems
+    * Adaptation new packaging ecosystems
     * Container assembly
     * Package maintenance
     * Release management
     * Tooling development
 1. **Quality Assurance and Testing**
+    * Test data creation
+    * Increase code coverage
+1. Software and systems design review
+    * Review software architectural design patterns
+    * Review virtualized infrastructure design patterns
+    * Cryptography review
+    * Threat modeling (privacy, safety, security)
+    * API Modeling
+    * Data Modeling
+    * Dependency Review
+    * Sustainability Review
 1. **Security-Related Activities**
     * Hardening
     * Writing automated security tests
-1. Skill and contribution gaps compensation (Ref: [MSFTOSS-2024](#references))
-    * Language
-    * Specialized skills
-    * Technology/platform
 1. **Teaching and Tutorial Building**
     * Course/training material development
-1. Technical infrastructure and hosting
+    * E-learning module development
+1. Community infrastructure and hosting
     * Chat forum hosting
     * DNS and Email hosting
+    * Test infrastructure (CI/CD) hosting
     * Other hosted community services
 1. **Troubleshooting and Support**
     * **User Support and Answering Questions**
 1. **User Interface, User Experience, and Accessibility**
+    * UX/UI design
+    * Web / Mobile design
+    * Email & newsletter design
     * Accessibility audit
 
 ## Project Support Indicators
@@ -190,6 +216,7 @@ States in **bold** exist on CPAN.
 | DUAL         | no        | YES       | YES       | no                   | no                 | OK            | Ecosystem    |
 | **NOXFER**   | no        | YES       | no        | no                   | no                 | NONE          | Ecosystem    |
 | UNREACHABLE  | no        | YES       | YES       | no                   | no                 | ERROR         | Ecosystem    |
+| UNRESPONSIVE | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
 
 
 
@@ -197,14 +224,14 @@ States in **bold** exist on CPAN.
 
 1. COMPROMISED – This project has a prevailing and substantial security compromise
     * Project has removed from the index due to security issues that have prevailed for a substantial time.
-    * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
     * (number of maintainers is not relevant)
 1. CUSTODY – This project is under custodianship
     * The project is deemed as important for the ecosystem, and needs a trusted maintainer
     * (number of maintainers is 0)
 1. DELISTED
     * The project has been removed from the ecosystem index due to extraordinary circumstances
-    * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
 1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
     * This project is maintained by the language core team itself.
     * The project is both published as part of the core language, and through the language ecosystem.
@@ -215,9 +242,13 @@ States in **bold** exist on CPAN.
     * (number of maintainers is not relevant)
 1. UNREACHABLE – The project maintainers are not reachable
     * The project maintainer(s) has not been reachable through registered communication channels for a substantial time, due to reasons outside the control of the project.
-        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other Forces Majeures beyond the Maintainer's control.
-    * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
+        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other _Forces Majeures_ beyond the Maintainer's control.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
     * (number of maintainers is not relevant)
+1. UNRESPONSIVE – Project Maintainers are reachable but actively not engaging
+    * The project maintainers(s) have not been responsive to ecosystem concerns for a substantial time, due to non-technical reasons.
+        * e.g.: Maintainer does not respond to ecosystem concerns for personal reasons.
+    * The project is expected to revert to its previous state after normal interaction resumes.
 
 
 ## Other project states, claims and metadata
@@ -235,7 +266,7 @@ States in **bold** exist on CPAN.
 
 ## License and use of this document
 
-* Version: 0.2.0
+* Version: 0.2.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
@@ -259,4 +290,4 @@ Several people have been involved in the development of this document
 * (NEILB-2016) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html), Published 2016-02-13.
 * (PAUSE-2017) [The PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) Version 2 (section 4.5), published 2017-10-27.
 * (UNMAINTED-2016) ![No Maintenance Intended](http://unmaintained.tech/badge.svg) [unmaintained.tech](http://unmaintained.tech/), Published 2016-01-13.
-* (CASUAL-2023) ![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg) [casuallymaintained|tech](https://casuallymaintained.tech/), Published 2023-09-25.
+* (CASUAL-2023) ![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg) [casuallymaintained.tech](https://casuallymaintained.tech/), Published 2023-09-25.

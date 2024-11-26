@@ -33,19 +33,19 @@ Fostering the development of secure products
 
 ### Manufacturers
 
-Manufacturers are obliged to _exercise due diligence when integrating components from third parties_, as laid out in **[Article 13(5)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163)**
+Manufacturers are obliged to _exercise due diligence when integrating components from third parties_, as laid out in **[Article 13(5)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=35)**
 
-* …after the Manufacturer conducts a risk assessment, as laid out in [Article 13(2)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161)
-* …in accordance with essential requirements laid out in [Annex I, Part I](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
+* …after the Manufacturer conducts a risk assessment, as laid out in [Article 13(2)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=35)
+* …in accordance with essential requirements laid out in [Annex I, Part I](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=68)
   * The product is designed and developed in a way that ensures appropriate levels cybersecurity
   * …made available on the market without any known exploitable vulnerabilities
   * …made with a secure by default configuration
   * …made in such a way that security updates may be automatically applied within an appropriate time frame
   * …and more.
 
-Manufacturers must report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=187))
+Manufacturers must report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=41))
 
-* …in the way described in [Article 14](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176)
+* …in the way described in [Article 14(2)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=38)
   * …submit an early warning if actively exploited vulnerabilities within 24 hours of discovery
   * …submit all relevant details about the nature of the exploit, without delay and within 72 hours
   * …submit a final report including available mitigations, within 14 days.

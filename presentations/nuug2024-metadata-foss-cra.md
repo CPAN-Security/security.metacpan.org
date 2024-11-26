@@ -342,7 +342,7 @@ Note:
 * Take part in the EU early warning notification regime
     * **Early warning within 24h** after exploit discovery
     * **Vulnerability notification within 72h**, incl. corrective measures
-    * **Final report no later than a month after discovery**
+    * **Final report no later than a 14 days after discovery**
 * Incident reports submitted to a common EU reporting platform
 
 <div style="font-size: large;">

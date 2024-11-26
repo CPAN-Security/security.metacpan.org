@@ -127,7 +127,7 @@ title: Minutes 2024-11-15
 *   (none)
 
 ### Next meeting date, time and location
-*   Next meeting is Friday 2024-11-28 (28 Nov 2024) @ 16:00UTC in #cpansec-discussion on Matrix (17:00 Europe/Amsterdam)
+*   Next meeting is Wednesday 2024-11-27 @ 17:00UTC in #cpansec-discussion on Matrix (18:00 Europe/Amsterdam)
 
 ## 17:20 UTC – Meeting end
 

@@ -55,7 +55,7 @@ But `cpanm Requirement` will update `Requirement`:
 Note: This is not specific to the CPAN ecosystem, for instance `pip` and `gem` behave the same way.
 
 #### `--skip-satisfied`
-But `cpanm Requirement` will update `Requirement`:
+But `cpanm --skip-satisfied Requirement` will not update `Requirement`:
 1. Requirement@0.01
 2. cpanm --skip-satisfied Requirement
 3. Requirement@0.01

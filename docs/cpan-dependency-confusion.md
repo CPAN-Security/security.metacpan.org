@@ -108,7 +108,7 @@ GreyPAN/DarkPAN was simulated with the following tools:
 - Use reserved namespaces (`_Underscore::Trick` or `UN_DESCORE::Trick`) that can not resolve to public modules.
 
 ### Documented but unsafe
-`Local::*` is documented as a name space for private modules but as of today only reserved "by convention", see [Do not index Local::* (nor Local)](https://github.com/andk/pause/pull/541)
+`Local::*` is documented as a name space for private modules but as of November 2024 only reserved "by convention", see [Do not index Local::* (nor Local)](https://github.com/andk/pause/pull/541)
 
 ## Dependency version confusion between PANs
 ### Unsafe

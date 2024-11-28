@@ -20,7 +20,9 @@ See [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-var
 
 An attacker can "claim" a public namespace, install a high version (to take precedence in the index over a smaller local version number) and wait for vulnerable setups to install (and execute) their newly uploaded module.
 
+Not all uploads end into claiming a namespace or a new version of a module (both can be referred as "indexing"). Permissions on name (FIRSTCOME, COMAINT...) and status of release (development version) impacts the visibility of releases. Index and visual appearance in [MetaCPAN](https://metacpan.org/) would make it clear, highlight dev or "unauthorized" releases and finally, not installable. 
 
+See [PAUSE operating model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) for details.
 
 ## General about CPAN dependency management
 ### The mirror versus the indexer
@@ -219,6 +221,7 @@ From [PAUSE Naming Modules - Local::](https://pause.perl.org/pause/query?ACTION=
 - [Hacking with gems](https://www.youtube.com/watch?v=zEBReauO-vg) (2013)
 - [Dependency Confusion](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610) (2021)
 - [Distribution Confusion in PyPi](https://stiankri.substack.com/p/distribution-confusion-in-pypi) (2023)
+- [PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model)
 - [cpanm](https://metacpan.org/pod/App::cpanminus)
 - [cpm](https://metacpan.org/pod/App::cpm)
 - [CPANPLUS](https://metacpan.org/dist/CPANPLUS) 

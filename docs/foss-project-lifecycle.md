@@ -213,6 +213,7 @@ States in **bold** exist on CPAN.
 | :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
 | COMPROMISED  | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
 | CUSTODY      | YES       | no        | no        | YES                  | no                 | SECURITY      | Ecosystem    |
+| SUSPENDED    | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
 | DELISTED     | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
 | DUAL         | no        | YES       | YES       | no                   | no                 | OK            | Ecosystem    |
 | **NOXFER**   | no        | YES       | no        | no                   | no                 | NONE          | Ecosystem    |
@@ -230,9 +231,14 @@ States in **bold** exist on CPAN.
 1. CUSTODY – This project is under custodianship
     * The project is deemed as important for the ecosystem, and needs a trusted maintainer
     * (number of maintainers is 0)
-1. DELISTED
-    * The project has been removed from the ecosystem index due to extraordinary circumstances
+1. SUSPENDED
+    * The project has been made inaccessible from the ecosystem index due to breaking of terms or code of conduct.
+        * e.g.: Publishing spam, malware, copyright infringement, illegal material or other inappropriate content.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+1. DELISTED
+    * The project has been removed from the ecosystem index due to extraordinary circumstances.
+        * e.g.: hacking, sabotage, denial of service, repeated suspensions or other types of attacks against the ecosystem infrastructure.
+    * The project is expected to NOT revert to its previous state.
 1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
     * This project is maintained by the language core team itself.
     * The project is both published as part of the core language, and through the language ecosystem.

@@ -389,7 +389,7 @@ Please take this into account when commenting this document.
 > (Ref: [NTIA-2021](#references-and-terms), [EUBG-2022-3](#references-and-terms))
 
 
-### GrayPAN
+### GrayPAN/GreyPAN
 
 > 1. A GrayPAN is a publicly accessible CPAN, but published outside the CPAN infrastructure, resulting in a codebase that is factually public, but functionally non existent from the perspective of CPAN (e.g. own index).
 > (Ref [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-various-pans/))

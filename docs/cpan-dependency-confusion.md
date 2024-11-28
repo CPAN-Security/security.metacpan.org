@@ -12,10 +12,10 @@ This type of vulnerability was proved to affect other ecosystems (PyPI, RubyGems
 
 In the Perl ecosystem, it could be one or more of the following options:
 - Using a "DarkPAN" along with CPAN
-- Using a "GreyPAN" along with CPAN
+- Using a "GrayPAN" along with CPAN
 - Mixing manual installs (`make install`, "blib install"...) along with CPAN
 
-See [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-various-pans/) for details about DarkPAN and GreyPAN.
+See [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-various-pans/) for details about DarkPAN and GrayPAN.
 
 An attacker can "claim" a public namespace, install a high version (to take precedence in the index over a smaller local version number) and wait for vulnerable setups to install (and execute) their newly uploaded module.
 
@@ -94,7 +94,7 @@ PrivateAndPublicGreaterLocal@0.01
 
 `PrivateAndPublicGreaterCPAN` and `PrivateAndPublicGreaterLocal` are requirements that can be "confused" (if install ends up with `PrivateAndPublicGreaterCPAN@0.04` and/or `PrivateAndPublicGreaterLocal@0.02`) 
 
-GreyPAN/DarkPAN was simulated with the following tools:
+GrayPAN/DarkPAN was simulated with the following tools:
 - [pinto](https://metacpan.org/dist/Pinto) either targetted via HTTP `http://0.0.0.0:8000/` or `file:///data/darkpan` for `cpanm`, `cpm`, `carton`, `carmel` and `cpan`
 - [CPAN::Mini](https://metacpan.org/dist/CPAN-Mini) for `cpanplus` (cpanplus index fetch incompatible with pinto)
 - [StratoPAN](https://stratopan.com/)/[JFrog Artifactory](https://jfrog.com/artifactory/) for CPAN artifact manager proxy

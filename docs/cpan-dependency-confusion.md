@@ -1,7 +1,7 @@
 # CPAN dependency confusion
 ## Rationale 
-Take advantage of a wrongly configured setup that resolve to public module in place of expected private/local version, because of one of the following reasons:
-- Local module is not installed at time of running CPAN client
+Take advantage of an incorrectly configured setup that resolves a public module (published on CPAN) in place of the expected private/local version due to one of the following reasons:
+- Local module is not installed at the time of running the CPAN client
 - Public CPAN version is preferred to local
 - Using a CPAN repository (proxy) that can be confused
 
@@ -10,14 +10,14 @@ This type of vulnerability is presented in [Dependency Confusion](https://medium
 ## Background
 "Dependency confusion" takes advantage of mixing (semi-)private modules with public CPAN modules.
 
-In Perl ecosystem, it could be one or more of the following options:
+In the Perl ecosystem, it could be one or more of the following options:
 - Using a "DarkPAN" along with CPAN
 - Using a "GreyPAN" along with CPAN
 - Mixing manual installs (`make install`, "blib install"...) along with CPAN
 
 See [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-various-pans/) for details about DarkPAN and GreyPAN.
 
-An attacker can "claim" a public namespace, install a high version (to take precedence in index over a smaller local version) and wait for vulnerable setups to install (and execute) their newly uploaded module.
+An attacker can "claim" a public namespace, install a high version (to take precedence in the index over a smaller local version number) and wait for vulnerable setups to install (and execute) their newly uploaded module.
 
 ## General about CPAN dependency management
 ### The mirror versus the indexer
@@ -25,13 +25,13 @@ The notions of "mirror" and "indexer":
 - "mirror" - where module tarballs are stored
 - "indexer" - translate module to path and version
 
-These notions are not always well differenciated and their meaning heavily depends the CPAN client. For instance, from a pool (urllist), `CPAN.pm` will use only one mirror for both index and download of modules. On the other hand, `cpanm` will use MetaDB as index in priority and mirrors to download, and these notions are well decoupled. 
+These notions are not always well differenciated and their meaning heavily depends on the CPAN client. For instance, from a pool (urllist), `CPAN.pm` will use only one mirror for both indexing and downloading modules. On the other hand, `cpanm` will use MetaDB as the index in priority and the mirrors to download, and these notions are well decoupled. 
 
-Not all indexers are equals: 02packages only contains latest version of each module, making it [difficult to specify more complex constraints](https://github.com/miyagawa/Carmel/issues/55) (pinned or ranges).
+Not all indexers are equals: 02packages only contains the latest version of each module, making it [difficult to specify more complex constraints](https://github.com/miyagawa/Carmel/issues/55) (pinned or ranges).
 
 ### General characteristics about CPAN/PAUSE and installers
 - Module installs are ([often](https://blogs.perl.org/users/shoichi_kaji1/2017/03/make-your-cpan-module-static-installable.html)) "dynamic" (= some dependencies are only known at install)
-- Claiming namespace is case insensitive but index/install is case sensitive (important for TypoSquatting or confusions attacks based on modules/filenames collisions)
+- Claiming a namespace is case insensitive but index/install is case sensitive (important for TypoSquatting or confusions attacks based on modules/filenames collisions)
 
 ### Installer are not zealous
 #### "leafs" vs "requirements"
@@ -39,8 +39,8 @@ CPAN installers treats differently a "leaf" versus a "requirement".
 
 Specifying a module as a "leaf", e.g. `cpanm Requirement` is different from having it specified as a dependency (Makefile.PL/Build.PL, META.*, cpanfile...)
 
-- When explicitely targetting to install `Requirement`, `cpanm` (and others) will install latest, upgrading the module if present
-- When `Requirement` module is specified as a dependency, `cpanm` will not upgrade module if installed version satisfies the constraints
+- When explicitly targeting to install `Requirement`, `cpanm` (and others) will install the latest, upgrading the module if present
+- When `Requirement` module is specified as a dependency, `cpanm` will not upgrade the module if the installed version satisfies the constraints
 
 Installing with `cpanm --installdeps .` will not install anything:
 1. Requirement@0.01
@@ -52,7 +52,7 @@ But `cpanm Requirement` will update `Requirement`:
 2. cpanm Requirement
 3. Requirement@0.02
 
-Note: This is not specific to CPAN ecosystem, for instance `pip` and `gem` are behaving the same.
+Note: This is not specific to the CPAN ecosystem, for instance `pip` and `gem` behave the same way.
 
 #### `--skip-satisfied`
 But `cpanm Requirement` will update `Requirement`:
@@ -62,7 +62,7 @@ But `cpanm Requirement` will update `Requirement`:
  
 ## Simulations
 ### Setup
-For these tests, I'm recreating a setup with mix of private and public modules.
+For these tests, I'm recreating a setup with a mix of private and public modules.
 
 As a commodity, it is presented as a `cpanfile`:
 ```
@@ -72,9 +72,9 @@ requires 'Public', '0';
 requires 'PrivateAndPublicGreaterLocal', '0';
 ```
 
-It simulates a complex setup where installer has to install sometimes local requirements and sometimes remote ones. 
+It simulates a complex setup where the installer has to install some modules, sometimes local requirements and sometimes remote ones. 
 
-Specifying requirements in Makefile.PL, Build.PL or META.json/META.yml achieves the same and was used in some cases (e.g. CPAN/CPANPLUS)
+Specifying the requirements in Makefile.PL, Build.PL or META.json/META.yml achieves the same and was used in some cases (e.g. CPAN/CPANPLUS)
 
 On DarkPAN:
 ```
@@ -92,22 +92,23 @@ PrivateAndPublicGreaterLocal@0.01
 
 `Private` is only present on DarkPAN, `Public` is only present on CPAN.
 
-`PrivateAndPublicGreaterCPAN` and `PrivateAndPublicGreaterLocal` are requirements that can be "confused" (= if install ends up with `PrivateAndPublicGreaterCPAN@0.04` and/or `PrivateAndPublicGreaterLocal@0.02`) 
+`PrivateAndPublicGreaterCPAN` and `PrivateAndPublicGreaterLocal` are requirements that can be "confused" (if install ends up with `PrivateAndPublicGreaterCPAN@0.04` and/or `PrivateAndPublicGreaterLocal@0.02`) 
 
 GreyPAN/DarkPAN was simulated with the following tools:
 - [pinto](https://metacpan.org/dist/Pinto) either targetted via HTTP `http://0.0.0.0:8000/` or `file:///data/darkpan` for `cpanm`, `cpm`, `carton`, `carmel` and `cpan`
 - [CPAN::Mini](https://metacpan.org/dist/CPAN-Mini) for `cpanplus` (cpanplus index fetch incompatible with pinto)
 - [StratoPAN](https://stratopan.com/)/[JFrog Artifactory](https://jfrog.com/artifactory/) for CPAN artifact manager proxy
 
-## Dependency confusion when local is inexistent
+## Dependency confusion when local is non-existent
 ### Unsafe
-- Specifying private requirements in Makefile.PL, Build.PL, META.* or cpanfile/cpmfile is unsafe. Doing manual installs (via EUMM/MB or `cpanm tarball`) then relying on requirements being already satisfied (and CPAN client not being "zealous") to not install anything public is risky, to say the less.
+- Specifying the private requirements in Makefile.PL, Build.PL, META.* or cpanfile/cpmfile is unsafe. Doing manual installs (via EUMM/MB or `cpanm tarball`) and then relying on requirements being already satisfied (and CPAN client not being "zealous") to not install anything public is risky, to say the least.
 
 ### Safe
-- Do not specify private requirements in Makefile.PL, Build.PL, META.* or cpanfile/cpmfile. Specifying requirements is technically not required for runtime. Suboptimal because it makes dependencies implicit and shift right the verification of requirements.
-- Use reserved namespaces (`_Underscore::Trick` or `UN_DESCORE::Trick`) that can not resolve to public modules
+- Do not specify private requirements in Makefile.PL, Build.PL, META.* or cpanfile/cpmfile. Specifying requirements is technically not required for runtime. This is suboptimal because it makes dependencies implicit and shifts right the verification of requirements.
+- Use reserved namespaces (`_Underscore::Trick` or `UN_DESCORE::Trick`) that can not resolve to public modules.
 
-Also `Local::*` but as of today only reserved "by convention", see [Do not index Local::* (nor Local)](https://github.com/andk/pause/pull/541)
+### Documented but unsafe
+`Local::*` is documented as a name space for private modules but as of today only reserved "by convention", see [Do not index Local::* (nor Local)](https://github.com/andk/pause/pull/541)
 
 ## Dependency version confusion between PANs
 ### Unsafe
@@ -162,45 +163,45 @@ requires 'Private', '0',
 ```
 
 ## Deployment and lockfiles
-Lockfiles mostly refers to *deployment* phase that is out of scope of this document.
+Lockfiles mostly refers to the *deployment* phase that is out of scope of this document.
 
-`carton --deployment` and  `carton --cached` are not vulnerable, because the use dumped/recreated local index with local artefacts.
+`carton --deployment` and  `carton --cached` are not vulnerable, because they use dumped/recreated local index with local artefacts.
 
 ## CPAN Artifacts Repositories
 ### JFrog Artifactory
-JFrog is known to be vulnerable (internally) to this dependency confusion attacks with other ecosystems.
+JFrog is known to be vulnerable (internally) to these dependency confusion attacks with other ecosystems.
 
-Since JFrog Artifactory does not support CPAN as first class citizen but only "proxy" CPAN (as in "HTTP proxy"), CPAN is not vulnerable via this artifact repository manager.
+Since JFrog Artifactory does not support CPAN as a first class citizen but only a "proxy" CPAN (as in "HTTP proxy"), CPAN is not vulnerable via this artifact repository manager.
 
 ### StratoPAN
-Not affected, not doing fallback on public CPAN.
+Not affected, not doing fallback on the public CPAN.
 
 ## Mitigations
-Beyond technical CPAN client/options recommendations exposed earlier, sharing some more "shift left" guards and explicit security advices.
+Beyond technical CPAN client/options recommendations exposed earlier, sharing some more "shift left" guards and explicit security advice.
 
 ### PAUSE operational model 
 The way CPAN and PAUSE work, and the very "social" nature of this ecosystem makes it very difficult to attack CPAN via dependency confusions. 
 
-1. New authors don't get immediate account but are approved by an admin. With a priori approval like this, automatic creation of fake accounts is hence not possible.
-2. New uploads are not following an a priori control but publicly reviewed. Malware code can be spotted and claiming namespace with bad intention would be very likely reported rapidly. 
+1. New authors don't immediately get an account but are approved by an admin. With a priori approval like this, automatic creation of fake accounts is less likely.
+2. New uploads do not follow a priori control but are publicly reviewed. Malware code can be spotted and claiming namespaces with bad intention would likely be reported rapidly. 
 
-In this context, it sounds difficult for an attacker/malware module to go unnoticed and exploit dependency confusion.
+In this context, it seems difficult for an attacker/malware module to go unnoticed and exploit dependency confusion.
 
 ### Isolate private requirements
 - Use different files for private and public requirements (`cpanfile.private` / `cpanfile`)
 - Do not specify private requirements in Makefile.PL, Build.PL, META.* or cpanfile/cpmfile
 
-Both previous solutions are not optimal
+Both previous solutions are sub-optimal
 
 ### Naming
 #### Scoping like NPM
 Remediation for NPM ecosystem mentions [scoping](https://docs.npmjs.com/threats-and-mitigations#by-typosquatting--dependency-confusion) (naming packages like `@my-company/my-module`).
 A scope guarantees [protection of all names under it](https://docs.npmjs.com/package-scope-access-level-and-visibility) but also [can be tied to a registry](https://docs.npmjs.com/cli/v7/using-npm/scope#associating-a-scope-with-a-registry).
  
-CPAN operating model works differently and has no such scopes. Technically, being the first person to publish module offers FIRST COME permissions on the module name. Though it does not recusively protect all names under it, it effectively protects the fully qualified name forever. 
+The CPAN operating model works differently and has no such scopes. Technically, being the first person to publish a module offers FIRSTCOME permissions on the module name. Though it does not recusively protect all names under it, it effectively protects the fully qualified name forever. 
 
-Doing this ("placeholding") for private modules is an option, but it would be very unwise and very egoist to do that, effectively polluting CPAN namespace only for the sake of personal needs.
-Beyond these considerations, what you need is only to publish once (a very small version that never will interfer with your local versioning) to claim the namespace. Remember, it's not a scope. Claiming `Module` does not protect `Module::Foo` nor `Module::Bar`.
+Doing this ("placeholding") for private modules is an option, but it would be very unwise and very egoist to do that, effectively polluting the CPAN namespace for personal needs.
+Beyond these considerations, you need only publish once (a very small version that never will interfer with your local versioning) to claim the namespace. Remember, it's not a scope. Claiming `Module` does not protect `Module::Foo` nor `Module::Bar`.
 
 The module [install](https://metacpan.org/pod/install) somewhat fills this use case, like gem [bundle](https://rubygems.org/gems/bundle) in rubygems.
 

@@ -13,6 +13,7 @@ This type of vulnerability was proved to affect other ecosystems (PyPI, RubyGems
 In the Perl ecosystem, it could be one or more of the following options:
 - Using a "DarkPAN" along with CPAN
 - Using a "GrayPAN" along with CPAN
+- Using a "BackPAN" along with CPAN
 - Mixing manual installs (`make install`, "blib install"...) along with CPAN
 
 See [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-various-pans/) for details about DarkPAN and GrayPAN.

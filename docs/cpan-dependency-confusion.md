@@ -13,11 +13,14 @@ This type of vulnerability was proved to affect other ecosystems (PyPI, RubyGems
 In the Perl ecosystem, it could be one or more of the following options:
 - Using a "DarkPAN" along with CPAN
 - Using a "GrayPAN" along with CPAN
+- Using a "BackPAN" along with CPAN
 - Mixing manual installs (`make install`, "blib install"...) along with CPAN
 
 See [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-various-pans/) for details about DarkPAN and GrayPAN.
 
 An attacker can "claim" a public namespace, install a high version (to take precedence in the index over a smaller local version number) and wait for vulnerable setups to install (and execute) their newly uploaded module.
+
+
 
 ## General about CPAN dependency management
 ### The mirror versus the indexer
@@ -138,7 +141,7 @@ requires 'PublicAndPrivateGreaterCPAN', '0',
 #### cpanfile/carton
 - per req `mirror =>` alone (without `dist =>`) is silently ignored by carton
 - per file `mirror ""` is not used for index by carton
-- `PERL_CARTON_MIRROR="https://pause.local/" carton install` - safe but error prone (mirror is not explicited in requirements file)
+- `PERL_CARTON_MIRROR="https://pause.local/" carton install` - error prone (mirror is not explicited in requirements file)
 
 #### cpanfile/carmel
 - carmel is "experimental"

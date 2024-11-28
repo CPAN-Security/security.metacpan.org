@@ -27,4 +27,4 @@ Documents relevant to the CPAN Security Group.
 
 ## Other
 
-* [CPAN Dependency Confusion (study)](cpan-dependency-confusion.md) ⚠️  DRAFT
+* [CPAN Dependency Confusion (study)](cpan-dependency-confusion.md)

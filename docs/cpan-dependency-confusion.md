@@ -31,7 +31,7 @@ Not all indexers are equals: 02packages only contains the latest version of each
 
 ### General characteristics about CPAN/PAUSE and installers
 - Module installs are ([often](https://blogs.perl.org/users/shoichi_kaji1/2017/03/make-your-cpan-module-static-installable.html)) "dynamic" (= some dependencies are only known at install)
-- Claiming a namespace is case insensitive but index/install is case sensitive (important for TypoSquatting or confusions attacks based on modules/filenames collisions)
+- Claiming a namespace is case insensitive but index/install is case sensitive. It's important for TypoSquatting or attacks based on modules/filenames collisions (e.g. `GetOpt::Long` would overwrite `Getopt::Long` module on a Windows machine).
 
 ### Installer are not zealous
 #### "leafs" vs "requirements"

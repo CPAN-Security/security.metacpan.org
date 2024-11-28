@@ -192,6 +192,8 @@ The way CPAN and PAUSE work, and the very "social" nature of this ecosystem make
 
 In this context, it seems difficult for an attacker/malware module to go unnoticed and exploit dependency confusion.
 
+But still, PAUSE and CPAN have experienced some "raids" of spam, see for instance the [surge in spammy accounts (and uploads) in August 2018](https://www.nntp.perl.org/group/perl.modules/2018/08.html).
+
 ### Isolate private requirements
 - Use different files for private and public requirements (`cpanfile.private` / `cpanfile`)
 - Do not specify private requirements in Makefile.PL, Build.PL, META.* or cpanfile/cpmfile

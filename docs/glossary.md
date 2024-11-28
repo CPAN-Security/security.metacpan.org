@@ -389,6 +389,11 @@ Please take this into account when commenting this document.
 > (Ref: [NTIA-2021](#references-and-terms), [EUBG-2022-3](#references-and-terms))
 
 
+### GreyPAN
+
+> 1. A GreyPAN is a publicly accessible CPAN, but published outside the CPAN infrastructure, resulting in a codebase that is factually public, but functionally non existent from the perspective of CPAN (e.g. own index).
+>
+
 ### Hardware
 
 > 1. (CRA-2024-03) A physical electronic information system, or parts thereof capable of processing, storing or transmitting digital data.

@@ -5,7 +5,7 @@ Take advantage of an incorrectly configured setup that resolves a public module 
 - Public CPAN version is preferred to local
 - Using a CPAN repository (proxy) that can be confused
 
-This type of vulnerability is presented in [Dependency Confusion](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610) by [Alex Birsan](https://medium.com/@alex.birsan)
+This type of vulnerability was proved to affect other ecosystems (PyPI, RubyGems and NPM). This is presented in [Dependency Confusion](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610) by [Alex Birsan](https://medium.com/@alex.birsan).
 
 ## Background
 "Dependency confusion" takes advantage of mixing (semi-)private modules with public CPAN modules.

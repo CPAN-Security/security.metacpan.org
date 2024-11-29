@@ -24,3 +24,7 @@ Documents relevant to the CPAN Security Group.
 * Tech & legislation [Reading list](readinglist.md) ⚠️  DRAFT
 * [Glossary](glossary.md) of terms ⚠️  DRAFT
 * [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
+
+## Other
+
+* [CPAN Dependency Confusion (study)](cpan-dependency-confusion.md)

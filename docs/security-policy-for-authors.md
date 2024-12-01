@@ -88,7 +88,7 @@ For example
 
 > If this is a 0-day vulnerability that is actively being exploited,
 > then please copy the report to the CPAN Security Group at
-> <cpan-security@perl.org>.
+> <cpan-security@security.metacpan.org>.
 
 It is important to advise users not to report security
 vulnerabilities in public, e.g.
@@ -113,7 +113,7 @@ the author(s), to report to the CPAN Security Group.  For example
 > days).  However, this project is maintained by a small group of
 > volunteers in their spare time.  If you have not heard back from the
 > maintainers within 72 hours, then please forward the report to the
-> CPAN Security Group at <cpan-security@perl.org>.
+> CPAN Security Group at <cpan-security@security.metacpan.org>.
 
 It is reasonable that small projects with a single part time
 maintainer cannot promise a response time.  An alternative might be
@@ -123,7 +123,7 @@ maintainer cannot promise a response time.  An alternative might be
 > group of volunteers in their spare time, and we cannot guarantee a
 > rapid reponse.  If you have not heard back from the maintainers
 > within a week, then please forward the report to the CPAN Security
-> Group at <cpan-security@perl.org>.
+> Group at <cpan-security@security.metacpan.org>.
 
 Also add a note about what the initial response:
 
@@ -253,7 +253,7 @@ maintainer that should cover most cases.
 >
 > If this is a 0-day vulnerability that is actively being exploited,
 > then please copy the report to the CPAN Security Group at
-> <cpan-security@perl.org>.
+> <cpan-security@security.metacpan.org>.
 >
 > Please *do not* use the public issue reporting system on RT or
 > GitHub issues for reporting security vulnerabilities.
@@ -269,7 +269,7 @@ maintainer that should cover most cases.
 > group of volunteers in their spare time, and we cannot guarantee a
 > rapid reponse.  If you have not heard back from the maintainers
 > within a week, then please forward the report to the CPAN Security
-> Group at <cpan-security@perl.org>.
+> Group at <cpan-security@security.metacpan.org>.
 >
 > The project maintainers may forward this issue to the security
 > contacts for other projects where we believe it is relevant to

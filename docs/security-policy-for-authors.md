@@ -87,7 +87,7 @@ the security issue is a 0-day vulnerability or is otherwise urgent.
 For example
 
 > If this is a 0-day vulnerability that is actively being exploited,
-> then please copy the report to the CPAN Security Group at
+> then please copy the report to the CPAN Security Group (CPANSec) at
 > <cpan-security@security.metacpan.org>.
 
 It is important to advise users not to report security
@@ -97,8 +97,8 @@ vulnerabilities in public, e.g.
 > GitHub issues for reporting security vulnerabilities.
 >
 > Please do not disclose the security vulnerability until it has been
-> made public by the maintainers or the CPAN Security Group. That
-> includes blogs, social media, forums, or conferences.
+> made public by the maintainers or CPANSec. That includes blogs,
+> social media, forums, or conferences.
 
 ### What to expect for a response
 
@@ -106,14 +106,15 @@ vulnerabilities in public, e.g.
 Advise users on what to expect in terms of a response.  If there is a
 formal vulnerability workflow than refer to that section of the
 document.
+
 A recommendation that after a certain amount of time not hearing from
-the author(s), to report to the CPAN Security Group.  For example
+the author(s), to report to CPANSec.  For example
 
 > We aim to acknowledge to your security report within 72 hours (three
 > days).  However, this project is maintained by a small group of
 > volunteers in their spare time.  If you have not heard back from the
-> maintainers within 72 hours, then please forward the report to the
-> CPAN Security Group at <cpan-security@security.metacpan.org>.
+> maintainers within 72 hours, then please forward the report to
+> CPANSec at <cpan-security@security.metacpan.org>.
 
 It is reasonable that small projects with a single part time
 maintainer cannot promise a response time.  An alternative might be
@@ -122,8 +123,8 @@ maintainer cannot promise a response time.  An alternative might be
 > However, this project is maintained by a single person with a small
 > group of volunteers in their spare time, and we cannot guarantee a
 > rapid reponse.  If you have not heard back from the maintainers
-> within a week, then please forward the report to the CPAN Security
-> Group at <cpan-security@security.metacpan.org>.
+> within a week, then please forward the report to CPANSec at
+> <cpan-security@security.metacpan.org>.
 
 Also add a note about what the initial response:
 
@@ -140,8 +141,8 @@ other people. For example,
 > or system libraries, or downstream software that uses this
 > software.
 >
-> We may also forward this issue to the CPAN Security Group if they
-> have not already been copied on this.
+> We may also forward this issue to CPANSec if they have not
+> already been copied on this.
 
 
 ## What this policy applies to
@@ -252,15 +253,15 @@ maintainer that should cover most cases.
 > can reproduce the issue.
 >
 > If this is a 0-day vulnerability that is actively being exploited,
-> then please copy the report to the CPAN Security Group at
+> then please copy the report to the CPAN Security Group (CPANSec) at
 > <cpan-security@security.metacpan.org>.
 >
 > Please *do not* use the public issue reporting system on RT or
 > GitHub issues for reporting security vulnerabilities.
 >
 > Please do not disclose the security vulnerability before it has been
-> made public by the maintainers or CPAN Security Group. That includes
-> blogs, social media, forums, or conferences.
+> made public by the maintainers or CPANSec. That includes blogs,
+> social media, forums, or conferences.
 >
 > ## Response to Reports
 >
@@ -268,8 +269,8 @@ maintainer that should cover most cases.
 > However, this project is maintained by a single person with a small
 > group of volunteers in their spare time, and we cannot guarantee a
 > rapid reponse.  If you have not heard back from the maintainers
-> within a week, then please forward the report to the CPAN Security
-> Group at <cpan-security@security.metacpan.org>.
+> within a week, then please forward the report to CPANSec at
+> <cpan-security@security.metacpan.org>.
 >
 > The project maintainers may forward this issue to the security
 > contacts for other projects where we believe it is relevant to
@@ -277,8 +278,8 @@ maintainer that should cover most cases.
 > or system libraries, or downstream software that uses this
 > software.
 >
-> We may also forward this issue to the CPAN Security Group if they
-> have not already been copied on this.
+> We may also forward this issue to the CPANSec if they have not
+> already been copied on this.
 >
 > # What Software this Policy Applies to
 >

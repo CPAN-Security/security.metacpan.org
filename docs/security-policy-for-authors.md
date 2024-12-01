@@ -90,10 +90,22 @@ For example
 > then please copy the report to the CPAN Security Group at
 > <cpan-security@perl.org>.
 
+It is important to advise users not to report security
+vulnerabilities in public, e.g.
+
+> Please *do not* use the public issue reporting system on RT or
+> GitHub issues for reporting security vulnerabilities.
+>
+> Please do not disclose the security vulnerability until it has been
+> made public by the maintainers or the CPAN Security Group. That
+> includes blogs, social media, forums, or conferences.
+
+### What to expect for a response
+
+
 Advise users on what to expect in terms of a response.  If there is a
 formal vulnerability workflow than refer to that section of the
 document.
-
 A recommendation that after a certain amount of time not hearing from
 the author(s), to report to the CPAN Security Group.  For example
 
@@ -131,14 +143,6 @@ other people. For example,
 > We may also forward this issue to the CPAN Security Group if they
 > have not already been copied on this.
 
-It is important to advise users not to report security
-vulnerabilities in public, e.g.
-
-> Please *do not* use the public issue reporting system on RT for
-> reporting security vulnerabilities.
->
-> Please do not disclose the security vulnerability in public. That
-> includes blogs, social media, forums, or conferences.
 
 ## What this policy applies to
 
@@ -226,6 +230,101 @@ Where applicable, the workflow should be discussed, or a link provided
 to that document.
 
 For example, see [2].
+
+## Examples
+
+### Single Maintainer
+
+An example security policy for a CPAN distribution with a single
+maintainer that should cover most cases.
+
+> This is the Security Policy for the Perl 5 Foo-Bar distribution.
+>
+> The latest version of this Security Policy can be found on the
+> Foo-Bar website at https://example.metacpan.org/dist/Foo-Bar
+>
+> # How to Report a Security Vulnerability in Foo-Bar
+>
+> Security vulnerabilties can be reported by e-mail to the current
+> project maintainerS at <fobar@example.com>.
+>
+> Please include as may details, including code samples, so that we
+> can reproduce the issue.
+>
+> If this is a 0-day vulnerability that is actively being exploited,
+> then please copy the report to the CPAN Security Group at
+> <cpan-security@perl.org>.
+>
+> Please *do not* use the public issue reporting system on RT or
+> GitHub issues for reporting security vulnerabilities.
+>
+> Please do not disclose the security vulnerability before it has been
+> made public by the maintainers or CPAN Security Group. That includes
+> blogs, social media, forums, or conferences.
+>
+> ## Response to Reports
+>
+> We aim to acknowledge your security report as soon as possible.
+> However, this project is maintained by a single person with a small
+> group of volunteers in their spare time, and we cannot guarantee a
+> rapid reponse.  If you have not heard back from the maintainers
+> within a week, then please forward the report to the CPAN Security
+> Group at <cpan-security@perl.org>.
+>
+> The project maintainers may forward this issue to the security
+> contacts for other projects where we believe it is relevant to
+> them.  This may include embedded libraries or prerequisite modules
+> or system libraries, or downstream software that uses this
+> software.
+>
+> We may also forward this issue to the CPAN Security Group if they
+> have not already been copied on this.
+>
+> # What Software this Policy Applies to
+>
+> Any security vulnerabilities in Foo-Bar are covered by this policy.
+>
+> Security vulnerabilities are considered anything that allows users
+> to execute unauthorised code, access unahtorised resources, or to
+> have an adverse impact on accessibility or performance of a system.
+>
+> Security vulnerabilities in upstream software (embedded libraries,
+> prerequisite modules or system libraries, or in Perl), are not
+> convered by this policy.
+>
+> Security vulnerabilities in downstream software (any software that
+> uses Foo-Bar, or plugins to Foo-Bar thar are not included with the
+> Foo-Bar distribution) are  not covered by this policy.
+>
+> However, vulnerabilities in upstream software that can affect
+> Foo-Bar, or where Foo-Bar can be used to exploit vulnerabilities in
+> other software (upstream or downstream), are considered
+> vulnerabilities of Foo-Bar, and are covered by this policy.
+>
+> ## Supported Versions of Foo-Bar
+>
+> Security fixes will only be applied to the latest version of
+> Foo-Bar.
+>
+> Note that the Foo-Bar project only supports major versions of Perl
+> released in the past ten (10) years, even though Foo-Bar will run on
+> older versions of Perl. If a security fix requires us to increase
+> the minimum version of Perl that is supported, then we may do that.
+>
+> # Installation and Usage Issues
+>
+> The distribution metadata specifies minimum versions of
+> prerequisites that are required for Foo-Bar to work. However, some
+> of these prerequisites may have security vulnerabilities, and you
+> should ensure that you are using up-to-date versions of these
+> prerequisites.
+>
+> Where security vulnerabilities are known, the metadata may indicate
+> newer versions as recommended.
+>
+> ## Usage
+>
+> Please see the software documentation for further information.
 
 ## Notes
 

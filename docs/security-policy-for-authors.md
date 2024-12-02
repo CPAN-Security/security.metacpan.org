@@ -212,6 +212,8 @@ or,
 
 ## Installation and usage issues
 
+This is an optional section.
+
 It is also worth noting how it works with prerequisites, for example,
 
 > This software uses the zlib library for accessing gzip-encoded
@@ -244,6 +246,8 @@ It is acceptable to refer readers to specific sections of the module
 documentation rather than duplicate content.
 
 ## Workflow
+
+This is an optional section.
 
 Larger projects, or projects maintained by organisations with their
 own general security policies, may have a vulnerability workflow.

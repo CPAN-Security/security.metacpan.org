@@ -217,7 +217,7 @@ It is also worth noting how it works with prerequisites, for example,
 
 > This software uses the zlib library for accessing gzip-encoded
 > streams and files.  The minimum requirement is zlib v1.2.  However,
-> there may be security vulnerabilties and you should use v1.2.13 or
+> there may be security vulnerabilities and you should use v1.2.13 or
 > newer.
 
 or

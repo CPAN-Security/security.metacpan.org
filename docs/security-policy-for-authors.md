@@ -179,16 +179,12 @@ considered security issues.  For example,
 >
 > Security vulnerabilities in upstream software (embedded libraries,
 > prerequisite modules or system libraries, or in Perl), are not
-> convered by this policy.
+> convered by this policy unless they affect Foo-Bar, or Foo-Bar can
+> be used to exploit vulnerabilities in them.
 >
 > Security vulnerabilities in downstream software (any software that
 > uses Foo-Bar, or plugins to it that are not included with the
 > Foo-Bar distribution) are not covered by this policy.
->
-> However, vulnerabilities in upstream software that can affect
-> Foo-Bar, or where Foo-Bar can be used to exploit vulnerabilities in
-> other software (upstream or downstream), are considered
-> vulnerabilities of Foo-Bar, and are covered by this policy.
 
 ### Which versions of this software are supported?
 

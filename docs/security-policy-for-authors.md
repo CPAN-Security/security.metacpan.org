@@ -82,7 +82,7 @@ We recommend that there be a *single point of contact*.  Do not
 provide a list of multiple email addresses or web pages and ask that
 users contact some or all of these addresses.
 
-TODO ⚠ mention how the security contact information should be
+TODO ⚠️ mention how the security contact information should be
 consistent with distribution metadata
 
 Add note about also copying cpan-security on the notification if

@@ -59,8 +59,9 @@ MetaCPAN, e.g. https://metacpan.org/dist/Foo-Bar.)
 If your security policy is based on the advise of this document, then
 you should mention that, along with the version:
 
-> This text is based on CPANSec's Guidelines for Adding a Security
-> Policy https://security.metacpan.org/docs/ (version 0.1.3).
+> This text is based on the CPAN Security Group's Guidelines for
+> Adding a Security Policy https://security.metacpan.org/docs/
+> (version 0.1.3).
 
 TODO ⚠️ update the link when this is merged.
 

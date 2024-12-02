@@ -4,7 +4,7 @@ The purpose of including a Security Policy in a CPAN distribution is
 to advise users how to report security issues, and how these issues
 will be handled.
 
-Version: 0.1.3
+Version: 0.1.4
 
 Status: ⚠️ DRAFT
 
@@ -78,7 +78,7 @@ the package authors, who for older packages may be different.
 For example,
 
 > Security vulnerabilties can be reported by e-mail to the current
-> project maintainers at <fobar@example.com>.
+> project maintainer(s) at <fobar@example.com>.
 >
 > Please include as many details as possible, including code
 > samples, so that we can reproduce the issue.
@@ -124,41 +124,40 @@ Include a recommendation to report the issue to CPANSec after a
 certain amount of time without a response from the author(s).  For
 example
 
-> We aim to acknowledge to your security report within 72 hours (three
-> days).  However, this project is maintained by a small group of
-> volunteers in their spare time.  If you have not heard back from the
-> maintainers within 72 hours, then please forward the report to
-> CPANSec at <cpan-security@security.metacpan.org>.
+> The maintainer(s) aim to acknowledge to your security report within
+> 72 hours (three days).  However, this project is maintained by a
+> small group of volunteers in their spare time.  If you have not
+> heard back from the maintainers within 72 hours, then please forward
+> the report to CPANSec at <cpan-security@security.metacpan.org>.
 
 It is reasonable that small projects with a single part time
 maintainer cannot promise a response time.  An alternative might be
 
-> We aim to acknowledge your security report as soon as possible.
-> However, this project is maintained by a single person in their
-> spare time, and we cannot guarantee a rapid reponse.  If you have
-> not heard back from the maintainers within a week, then please send
-> a reminder to the maintainer and copy the report to CPANSec at
+> The maintainer(s) aim to acknowledge your security report as soon as
+> possible.  However, this project is maintained by a single person in
+> their spare time, and they cannot guarantee a rapid reponse.  If you
+> have not received a response from the them within a week, then
+> please send a reminder to them and copy the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
 
 Also add a note about what the initial response:
 
-> Please note that the initial response to your report will be an
+> Note that the initial response to your report will be an
 > acknowledgement, with a possible query for more information.  It
 > will not necessarily include any fixes for the issue.
 
 Also note on which conditions you may forward the security issue to
 other people.  For example,
 
-> The project maintainers may forward this issue to the security
+> The project maintainer(s) may forward this issue to the security
 > contacts for other projects where we believe it is relevant.  This
 > may include embedded libraries or prerequisite modules or system
 > libraries, or downstream software that uses this software.
 >
-> We may also forward this issue to CPANSec if they have not
+> They may also forward this issue to CPANSec if they have not
 > already been copied on this.
 
-
-## What this policy applies to
+## What Software this Policy Applies to
 
 This section discusses what software this applies to, and what are
 considered security issues in the software, and what are not
@@ -175,7 +174,7 @@ considered security issues.  For example,
 > convered by this policy.
 >
 > Security vulnerabilities in downstream software (any software that
-> uses Foo-Bar, or plugins to Foo-Bar that are not included with the
+> uses Foo-Bar, or plugins to it that are not included with the
 > Foo-Bar distribution) are not covered by this policy.
 >
 > However, vulnerabilities in upstream software that can affect
@@ -188,8 +187,8 @@ considered security issues.  For example,
 There should be a section or subsection that identifies which versions
 of the software will be supported for security fixes.  For example,
 
-> Security fixes will only be applied to the latest version of
-> Foo-Bar.
+> The maintainer(s) will only commit to releasing security fixes for
+> the latest version of Foo-Bar.
 >
 > Note that the Foo-Bar project only supports major versions of Perl
 > released in the past ten (10) years, even though Foo-Bar will run on
@@ -198,9 +197,9 @@ of the software will be supported for security fixes.  For example,
 
 or,
 
-> For security vulnerabilities, we will only guarantee support for the
-> last two major versions of Foo-Bar.  As of this release, that is
-> v1.4.x and v1.6x.
+> For security vulnerabilities, the maintainer(s) will only commit to
+> supporting for the last two major versions of Foo-Bar.  As of this
+> release, that is v1.4.x and v1.6x.
 
 ## Installation and usage issues
 
@@ -256,7 +255,7 @@ maintainer that should cover most cases.
 > The latest version of this Security Policy can be found on the
 > Foo-Bar website at https://example.metacpan.org/dist/Foo-Bar
 >
-> # How to Report a Security Vulnerability in Foo-Bar
+> # How to Report a Security Vulnerability
 >
 > Security vulnerabilties can be reported by e-mail to the current
 > project maintainers at <fobar@example.com>.
@@ -309,7 +308,7 @@ maintainer that should cover most cases.
 > convered by this policy.
 >
 > Security vulnerabilities in downstream software (any software that
-> uses Foo-Bar, or plugins to Foo-Bar that are not included with the
+> uses Foo-Bar, or plugins to it that are not included with the
 > Foo-Bar distribution) are not covered by this policy.
 >
 > However, vulnerabilities in upstream software that can affect

@@ -163,8 +163,7 @@ other people.  For example,
 > may include embedded libraries, system libraries, prerequisite
 > modules or downstream software that uses this software.
 >
-> They may also forward this issue to CPANSec if they have not
-> already been copied on this.
+> They may also forward this issue to CPANSec.
 
 ## What Software this Policy Applies to
 

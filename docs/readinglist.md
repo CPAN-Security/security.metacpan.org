@@ -173,6 +173,7 @@ This is not a exhaustive list!
 * Recitals (60-62): Support period (page 15)
 * Recital (63): Point of contact (page 15)
 * Recital (64): Secure by default (page 15)
+* Recital (77): Manufacturers should facilitate vulnerability analysis by drawing up an SBOM, though they are not obliged to make it public (page 18)
 * Recital (117): […] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […] (page 25)
 
 

@@ -4,13 +4,15 @@ The purpose of including a Security Policy in a CPAN distribution is
 to advise users how to report security issues, and how these issues
 will be handled.
 
+Version: 0.1.3
+
 Status: ⚠️ DRAFT
 
 ## The format of the security policy
 
-The security policy should be a text document with minimal
-formatting, either as a plain text `SECURITY` file, a markdown
-`SECURITY.md` file, or a POD format `SECURITY.pod` file.
+The security policy should be a text document with minimal formatting,
+either as a plain text `SECURITY-POLICY` file, a markdown
+`SECURITY-POLICY.md` file, or a POD format `SECURITY-POLICY.pod` file.
 
 (Using `SECURITY.txt` or `security.txt` is discouraged, as that is
 often associated with https://securitytxt.org/ which has a different
@@ -53,6 +55,14 @@ website, then you should refer to that URL, e.g.:
 
 (It is reasonable to link to the project's distribution page on
 MetaCPAN, e.g. https://metacpan.org/dist/Foo-Bar.)
+
+If your security policy is based on the advise of this document, then
+you should mention that, along with the version:
+
+> This text is based on CPANSec's Guidelines for Adding a Security
+> Policy https://security.metacpan.org/docs/ (version 0.1.3).
+
+TODO ⚠️ update the link when this is merged.
 
 ## How to report a security vulnerability
 

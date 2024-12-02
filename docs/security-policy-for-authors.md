@@ -215,7 +215,7 @@ Note that while security issues can occur due to unsafe defaults or
 the misuse of software libraries, it is still worth adding a section
 that highlights usage issues.  For example,
 
-> The "foo" method only validates that filenames passed to it exists.
+> The "foo" method only validates that filenames passed to it exist.
 > It cannot determine whether it should process those files.  You
 > should ensure that arbitrary filenames are not passed to it, and
 > should validate any external data that is used for generating the

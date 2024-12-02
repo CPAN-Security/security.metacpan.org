@@ -44,7 +44,7 @@ The file should have the following sections.
 This is a short one or two sentences that explain what this document
 is, e.g.
 
-> This is the Security Policy for the Perl 5 Foo-Bar distribution.
+> This is the Security Policy for the Perl Foo-Bar distribution.
 
 If the project has a web site, with this security policy posted on the
 website, then you should refer to that URL, e.g.:
@@ -257,7 +257,7 @@ For example, see [2].
 An example security policy for a CPAN distribution with a single
 maintainer that should cover most cases.
 
-> This is the Security Policy for the Perl 5 Foo-Bar distribution.
+> This is the Security Policy for the Perl Foo-Bar distribution.
 >
 > The latest version of this Security Policy can be found on the
 > Foo-Bar website at https://example.metacpan.org/dist/Foo-Bar

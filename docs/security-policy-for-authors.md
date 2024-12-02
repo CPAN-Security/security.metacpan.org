@@ -56,7 +56,7 @@ website, then you should refer to that URL, e.g.:
 (It is reasonable to link to the project's distribution page on
 MetaCPAN, e.g. https://metacpan.org/dist/Foo-Bar.)
 
-If your security policy is based on the advise of this document, then
+If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
 > This text is based on the CPAN Security Group's Guidelines for

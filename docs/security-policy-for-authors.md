@@ -201,7 +201,7 @@ of the software will be supported for security fixes.  For example,
 > Note that the Foo-Bar project only supports major versions of Perl
 > released in the past ten (10) years, even though Foo-Bar will run on
 > older versions of Perl.  If a security fix requires us to increase
-> the minimum version of Perl that is supported, then we may do that.
+> the minimum version of Perl that is supported, then we may do so.
 
 or,
 
@@ -336,7 +336,7 @@ maintainer that should cover most cases.
 > Note that the Foo-Bar project only supports major versions of Perl
 > released in the past ten (10) years, even though Foo-Bar will run on
 > older versions of Perl.  If a security fix requires us to increase
-> the minimum version of Perl that is supported, then we may do that.
+> the minimum version of Perl that is supported, then we may do so.
 >
 > # Installation and Usage Issues
 >

@@ -63,8 +63,6 @@ you should mention that, along with the version:
 > Adding a Security Policy https://security.metacpan.org/docs/
 > (version 0.1.3).
 
-TODO ⚠️ update the link when this is merged.
-
 ## How to report a security vulnerability
 
 At the bare minimum, it should provide a current package maintainer's
@@ -93,8 +91,8 @@ We recommend that there be a *single point of contact*.  Do not
 provide a list of multiple email addresses or web pages and ask that
 users contact some or all of these addresses.
 
-TODO ⚠️ mention how the security contact information should be
-consistent with distribution metadata
+Please ensure that the security contact information is consistent with
+distribution metadata, e.g. in the `META.json` file.
 
 Add note about also copying cpan-security on the notification if
 the security issue is a 0-day vulnerability or is otherwise urgent.

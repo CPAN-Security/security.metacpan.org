@@ -4,7 +4,7 @@ The purpose of including a Security Policy in a CPAN distribution is
 to advise users how to report security issues, and how these issues
 will be handled.
 
-Version: 0.1.4
+Version: 0.1.5
 
 Status: ⚠️ DRAFT
 

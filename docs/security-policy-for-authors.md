@@ -10,17 +10,16 @@ Status: ⚠️ DRAFT
 
 ## The format of the security policy
 
-The security policy should be a text document with minimal formatting,
-either as a plain text `SECURITY-POLICY` file, a markdown
-`SECURITY-POLICY.md` file, or a POD format `SECURITY-POLICY.pod` file.
+The security policy should be a text document with minimal formatting
+that can be read without a specialised reader, with the name
+`SECURITY-POLICY` and a suffix to indicate the markup (`.md` for
+markdown, `.pod` for POD or optionally `.txt`).
 
-(Using `SECURITY.txt` or `security.txt` is discouraged, as that is
-often associated with https://securitytxt.org/ which has a different
-purpose.)
+More complex markup formats like HTML are not recommended.
 
-The project's `README` file and module documentation should have
-sections that refers users to the security policy document, especially
-in the bug reporting sections.
+The name `SECURITY-POLICY` is intended to differentiate this from
+`security.txt` which has a specific machine-readable format and has
+a different different function [4].
 
 The file should have the following sections.
 
@@ -356,3 +355,5 @@ maintainer that should cover most cases.
 [2] [Perl security report handling policy](perlsecpolicy)
 
 [3] [CPAN::Meta::Spec](https://metacpan.org/pod/CPAN::Meta::Spec)
+
+[4] https://securitytxt.org/

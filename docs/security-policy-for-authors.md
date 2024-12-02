@@ -343,8 +343,8 @@ maintainer that should cover most cases.
 > The distribution metadata specifies minimum versions of
 > prerequisites that are required for Foo-Bar to work.  However, some
 > of these prerequisites may have security vulnerabilities, and you
-> should ensure that you are using up-to-date versions of these
-> prerequisites.
+> should ensure that you are using versions of these prerequisites
+> with no known relevant vulnerabilities (if not up-to-date versions).
 >
 > Where security vulnerabilities are known, the metadata may indicate
 > newer versions as recommended.

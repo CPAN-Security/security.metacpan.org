@@ -160,8 +160,8 @@ other people.  For example,
 
 > The project maintainer(s) may forward this issue to the security
 > contacts for other projects where we believe it is relevant.  This
-> may include embedded libraries or prerequisite modules or system
-> libraries, or downstream software that uses this software.
+> may include embedded libraries, system libraries, prerequisite
+> modules or downstream software that uses this software.
 >
 > They may also forward this issue to CPANSec if they have not
 > already been copied on this.

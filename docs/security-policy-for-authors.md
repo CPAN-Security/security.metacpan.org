@@ -202,7 +202,7 @@ of the software will be supported for security fixes.  For example,
 or,
 
 > For security vulnerabilities, the maintainer(s) will only commit to
-> supporting for the last two major versions of Foo-Bar.  As of this
+> supporting the last two major versions of Foo-Bar.  As of this
 > release, that is v1.4.x and v1.6x.
 
 ## Installation and usage issues

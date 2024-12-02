@@ -132,8 +132,8 @@ Include a recommendation to report the issue to CPANSec after a
 certain amount of time without a response from the author(s).  For
 example
 
-> The maintainer(s) aim to acknowledge to your security report within
-> 72 hours (three days).  However, this project is maintained by a
+> The maintainer(s) aim to acknowledge your security report within
+> three days (72 hours).  However, this project is maintained by a
 > small group of volunteers in their spare time.  If you have not
 > heard back from the maintainers within 72 hours, then please forward
 > the report to CPANSec at <cpan-security@security.metacpan.org>.

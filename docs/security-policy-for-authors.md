@@ -87,7 +87,7 @@ the package authors, who for older packages may be different.
 For example,
 
 > Security vulnerabilties can be reported by e-mail to the current
-> project maintainer(s) at <fobar@example.com>.
+> project maintainer(s) at <foobar@example.com>.
 >
 > Please include as many details as possible, including code
 > samples, so that we can reproduce the issue.
@@ -271,7 +271,7 @@ maintainer that should cover most cases.
 > # How to Report a Security Vulnerability
 >
 > Security vulnerabilties can be reported by e-mail to the current
-> project maintainers at <fobar@example.com>.
+> project maintainers at <foobar@example.com>.
 >
 > Please include as many details as possible, including code samples,
 > so that we can reproduce the issue.

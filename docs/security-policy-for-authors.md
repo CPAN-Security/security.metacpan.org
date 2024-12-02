@@ -92,7 +92,7 @@ provide a list of multiple email addresses or web pages and ask that
 users contact some or all of these addresses.
 
 Please ensure that the security contact information is consistent with
-distribution metadata, e.g. in the `META.json` file.
+distribution metadata, e.g. in the `META.json` file [3].
 
 Add note about also copying cpan-security on the notification if
 the security issue is a 0-day vulnerability or is otherwise urgent.
@@ -344,3 +344,5 @@ maintainer that should cover most cases.
 [1] https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository
 
 [2] [Perl security report handling policy](perlsecpolicy)
+
+[3] [CPAN::Meta::Spec](https://metacpan.org/pod/CPAN::Meta::Spec)

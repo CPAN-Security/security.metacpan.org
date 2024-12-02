@@ -8,7 +8,7 @@ Status: ⚠️ DRAFT
 
 ## The format of the security policy
 
-There security policy should be a text document with minimal
+The security policy should be a text document with minimal
 formatting, either as a plain text `SECURITY` file, a markdown
 `SECURITY.md` file, or a POD format `SECURITY.pod` file.
 
@@ -32,7 +32,7 @@ The file should have the following sections.
 
 3. What this policy applies to
 
-   What versions of the software are supported
+   Which versions of the software are supported
 
 4. Installation and usage issues
 
@@ -40,13 +40,13 @@ The file should have the following sections.
 
 ## Abstract
 
-This is short one or two sentences that explain what this document is,
-e.g.
+This is a short one or two sentences that explain what this document
+is, e.g.
 
 > This is the Security Policy for the Perl 5 Foo-Bar distribution.
 
 If the project has a web site, with this security policy posted on the
-website, then you should refer to that URL, e.g.
+website, then you should refer to that URL, e.g.:
 
 > The latest version of this Security Policy can be found on the
 > Foo-Bar website at https://foobar.example.com/security-policy
@@ -56,10 +56,10 @@ MetaCPAN, e.g. https://metacpan.org/dist/Foo-Bar.)
 
 ## How to report a security vulnerability
 
-At the bare minimum, the should provide a current package maintainer's
+At the bare minimum, it should provide a current package maintainer's
 email address (or ideally an alias that forwards to multiple
 maintainers, or a bug reporting system that supports special handling
-of security issues.
+of security issues).
 
 It is important to refer to the current project maintainers, and not
 the package authors, who for older packages may be different.
@@ -69,18 +69,18 @@ For example,
 > Security vulnerabilties can be reported by e-mail to the current
 > project maintainers at <fobar@example.com>.
 >
-> Please include as may details, including code samples, so that we
-> can reproduce the issue.
+> Please include as many details as possible, including code
+> samples, so that we can reproduce the issue.
 
 or [1]
 
 > Security vulnerabilities can be reported via our GitHub repository
-> at https://example.github.com/foobar. On the "Advisories" page you
+> at https://example.github.com/foobar.  On the "Advisories" page you
 > can click on the "Report a vulnerability" button.
 
-We recommend there be a *single point of contact*. Do not provide a
-list of multiple email addresses or web pages and ask that users
-contact some or all of these addresses.
+We recommend that there be a *single point of contact*.  Do not
+provide a list of multiple email addresses or web pages and ask that
+users contact some or all of these addresses.
 
 TODO ⚠ mention how the security contact information should be
 consistent with distribution metadata
@@ -90,7 +90,7 @@ the security issue is a 0-day vulnerability or is otherwise urgent.
 For example
 
 > If this is a 0-day vulnerability that is actively being exploited,
-> then please copy the report to the CPAN Security Group (CPANSec) at
+> please copy the report to the CPAN Security Group (CPANSec) at
 > <cpan-security@security.metacpan.org>.
 
 It is important to advise users not to report security
@@ -100,18 +100,18 @@ vulnerabilities in public, e.g.
 > GitHub issues for reporting security vulnerabilities.
 >
 > Please do not disclose the security vulnerability until it has been
-> made public by the maintainers or CPANSec. That includes blogs,
+> made public by the maintainers or CPANSec.  That includes blogs,
 > social media, forums, or conferences.
 
 ### What to expect for a response
 
-
-Advise users on what to expect in terms of a response.  If there is a
-formal vulnerability workflow than refer to that section of the
+Advise users what to expect in terms of a response.  If there is a
+formal vulnerability workflow then refer to that section of the
 document.
 
-A recommendation that after a certain amount of time not hearing from
-the author(s), to report to CPANSec.  For example
+Include a recommendation to report the issue to CPANSec after a
+certain amount of time without a response from the author(s).  For
+example
 
 > We aim to acknowledge to your security report within 72 hours (three
 > days).  However, this project is maintained by a small group of
@@ -123,26 +123,25 @@ It is reasonable that small projects with a single part time
 maintainer cannot promise a response time.  An alternative might be
 
 > We aim to acknowledge your security report as soon as possible.
-> However, this project is maintained by a single person with a small
-> group of volunteers in their spare time, and we cannot guarantee a
-> rapid reponse.  If you have not heard back from the maintainers
-> within a week, then please forward the report to CPANSec at
+> However, this project is maintained by a single person in their
+> spare time, and we cannot guarantee a rapid reponse.  If you have
+> not heard back from the maintainers within a week, then please
+> forward the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
 
 Also add a note about what the initial response:
 
 > Please note that the initial response to your report will be an
-> acknowledgement, with a possible query for more information. It
+> acknowledgement, with a possible query for more information.  It
 > will not necessarily include any fixes for the issue.
 
-Also note on what conditions you may forward the security issue to
-other people. For example,
+Also note on which conditions you may forward the security issue to
+other people.  For example,
 
 > The project maintainers may forward this issue to the security
-> contacts for other projects where we believe it is relevant to
-> them.  This may include embedded libraries or prerequisite modules
-> or system libraries, or downstream software that uses this
-> software.
+> contacts for other projects where we believe it is relevant.  This
+> may include embedded libraries or prerequisite modules or system
+> libraries, or downstream software that uses this software.
 >
 > We may also forward this issue to CPANSec if they have not
 > already been copied on this.
@@ -165,32 +164,31 @@ considered security issues.  For example,
 > convered by this policy.
 >
 > Security vulnerabilities in downstream software (any software that
-> uses Foo-Bar, or plugins to Foo-Bar thar are not included with the
-> Foo-Bar distribution) are  not covered by this policy.
+> uses Foo-Bar, or plugins to Foo-Bar that are not included with the
+> Foo-Bar distribution) are not covered by this policy.
 >
 > However, vulnerabilities in upstream software that can affect
 > Foo-Bar, or where Foo-Bar can be used to exploit vulnerabilities in
 > other software (upstream or downstream), are considered
 > vulnerabilities of Foo-Bar, and are covered by this policy.
 
-### What versions of this softeare are supported?
+### Which versions of this software are supported?
 
-There should be a section or subsection that identifies what versions
-of the software of the software will be supported for security fixes.
-For example,
+There should be a section or subsection that identifies which versions
+of the software will be supported for security fixes.  For example,
 
 > Security fixes will only be applied to the latest version of
 > Foo-Bar.
 >
 > Note that the Foo-Bar project only supports major versions of Perl
 > released in the past ten (10) years, even though Foo-Bar will run on
-> older versions of Perl. If a security fix requires us to increase
+> older versions of Perl.  If a security fix requires us to increase
 > the minimum version of Perl that is supported, then we may do that.
 
 or,
 
-> For security vulnerabilities, we will only guarantee support the
-> last two major versions of Foo-Bar. As of this release, that is
+> For security vulnerabilities, we will only guarantee support for the
+> last two major versions of Foo-Bar.  As of this release, that is
 > v1.4.x and v1.6x.
 
 ## Installation and usage issues
@@ -198,14 +196,14 @@ or,
 It is also worth noting how it works with prerequisites, for example,
 
 > This software uses the zlib library for accessing gzip-encoded
-> streams and files. The minimum requirement is zlib v1.2. However,
+> streams and files.  The minimum requirement is zlib v1.2.  However,
 > there may be security vulnerabilties and you should use v1.2.13 or
 > newer.
 
 or
 
 > The distribution metadata specifies minimum versions of
-> prerequisites that are required for Foo-Bar to work. However, some
+> prerequisites that are required for Foo-Bar to work.  However, some
 > of these prerequisites may have security vulnerabilities, and you
 > should ensure that you are using up-to-date versions of these
 > prerequisites.
@@ -217,7 +215,7 @@ Note that while security issues can occur due to unsafe defaults or
 the misuse of software libraries, it is still worth adding a section
 that highlights usage issues.  For example,
 
-> The "foo" method only validates that filenames passed to it exist.
+> The "foo" method only validates that filenames passed to it exists.
 > It cannot determine whether it should process those files.  You
 > should ensure that arbitrary filenames are not passed to it, and
 > should validate any external data that is used for generating the
@@ -250,9 +248,9 @@ maintainer that should cover most cases.
 > # How to Report a Security Vulnerability in Foo-Bar
 >
 > Security vulnerabilties can be reported by e-mail to the current
-> project maintainerS at <fobar@example.com>.
+> project maintainers at <fobar@example.com>.
 >
-> Please include as may details, including code samples, so that we
+> Please include as many details, including code samples, so that we
 > can reproduce the issue.
 >
 > If this is a 0-day vulnerability that is actively being exploited,
@@ -263,7 +261,7 @@ maintainer that should cover most cases.
 > GitHub issues for reporting security vulnerabilities.
 >
 > Please do not disclose the security vulnerability before it has been
-> made public by the maintainers or CPANSec. That includes blogs,
+> made public by the maintainers or CPANSec.  That includes blogs,
 > social media, forums, or conferences.
 >
 > ## Response to Reports
@@ -276,20 +274,19 @@ maintainer that should cover most cases.
 > <cpan-security@security.metacpan.org>.
 >
 > The project maintainers may forward this issue to the security
-> contacts for other projects where we believe it is relevant to
-> them.  This may include embedded libraries or prerequisite modules
-> or system libraries, or downstream software that uses this
-> software.
+> contacts for other projects where we believe it is relevant.  This
+> may include embedded libraries or prerequisite modules or system
+> libraries, or downstream software that uses this software.
 >
 > We may also forward this issue to the CPANSec if they have not
 > already been copied on this.
 >
-> # What Software this Policy Applies to
+> # Which Software this Policy Applies to
 >
 > Any security vulnerabilities in Foo-Bar are covered by this policy.
 >
 > Security vulnerabilities are considered anything that allows users
-> to execute unauthorised code, access unahtorised resources, or to
+> to execute unauthorised code, access unauthorised resources, or to
 > have an adverse impact on accessibility or performance of a system.
 >
 > Security vulnerabilities in upstream software (embedded libraries,
@@ -297,8 +294,8 @@ maintainer that should cover most cases.
 > convered by this policy.
 >
 > Security vulnerabilities in downstream software (any software that
-> uses Foo-Bar, or plugins to Foo-Bar thar are not included with the
-> Foo-Bar distribution) are  not covered by this policy.
+> uses Foo-Bar, or plugins to Foo-Bar that are not included with the
+> Foo-Bar distribution) are not covered by this policy.
 >
 > However, vulnerabilities in upstream software that can affect
 > Foo-Bar, or where Foo-Bar can be used to exploit vulnerabilities in
@@ -312,13 +309,13 @@ maintainer that should cover most cases.
 >
 > Note that the Foo-Bar project only supports major versions of Perl
 > released in the past ten (10) years, even though Foo-Bar will run on
-> older versions of Perl. If a security fix requires us to increase
+> older versions of Perl.  If a security fix requires us to increase
 > the minimum version of Perl that is supported, then we may do that.
 >
 > # Installation and Usage Issues
 >
 > The distribution metadata specifies minimum versions of
-> prerequisites that are required for Foo-Bar to work. However, some
+> prerequisites that are required for Foo-Bar to work.  However, some
 > of these prerequisites may have security vulnerabilities, and you
 > should ensure that you are using up-to-date versions of these
 > prerequisites.

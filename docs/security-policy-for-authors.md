@@ -148,7 +148,7 @@ maintainer cannot promise a response time.  An alternative might be
 > please send a reminder to them and copy the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
 
-Also add a note about what the initial response:
+Also add a note about the initial response:
 
 > Note that the initial response to your report will be an
 > acknowledgement, with a possible query for more information.  It

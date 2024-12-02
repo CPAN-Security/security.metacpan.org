@@ -125,8 +125,8 @@ maintainer cannot promise a response time.  An alternative might be
 > We aim to acknowledge your security report as soon as possible.
 > However, this project is maintained by a single person in their
 > spare time, and we cannot guarantee a rapid reponse.  If you have
-> not heard back from the maintainers within a week, then please
-> forward the report to CPANSec at
+> not heard back from the maintainers within a week, then please send
+> a reminder to the maintainer and copy the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
 
 Also add a note about what the initial response:
@@ -250,8 +250,8 @@ maintainer that should cover most cases.
 > Security vulnerabilties can be reported by e-mail to the current
 > project maintainers at <fobar@example.com>.
 >
-> Please include as many details, including code samples, so that we
-> can reproduce the issue.
+> Please include as many details as possible, including code samples,
+> so that we can reproduce the issue.
 >
 > If this is a 0-day vulnerability that is actively being exploited,
 > then please copy the report to the CPAN Security Group (CPANSec) at
@@ -267,11 +267,15 @@ maintainer that should cover most cases.
 > ## Response to Reports
 >
 > We aim to acknowledge your security report as soon as possible.
-> However, this project is maintained by a single person with a small
-> group of volunteers in their spare time, and we cannot guarantee a
-> rapid reponse.  If you have not heard back from the maintainers
-> within a week, then please forward the report to CPANSec at
+> However, this project is maintained by a single person in their
+> spare time, and we cannot guarantee a rapid response.  If you have
+> not heard back from the maintainers within a week, then please send
+> a reminder to the maintainer and copy the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
+>
+> Please note that the initial response to your report will be an
+> acknowledgement, with a possible query for more information.  It
+> will not necessarily include any fixes for the issue.
 >
 > The project maintainers may forward this issue to the security
 > contacts for other projects where we believe it is relevant.  This

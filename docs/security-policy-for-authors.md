@@ -62,6 +62,18 @@ you should mention that, along with the version:
 > Adding a Security Policy https://security.metacpan.org/docs/
 > (version 0.1.3).
 
+### Links from other module documentation
+
+If the module documentation or `README` has a section on reporting
+bugs, then wording should be added that refers users to the security
+policy, for example (in POD):
+
+    =head2 Reporting Security Vulnerabilities
+
+    Security issues should not be reported on the bugtracker website.
+    Please see F<SECURITY-POLICY.md> for instructions how to report
+    security vulnerabilities
+
 ## How to report a security vulnerability
 
 At the bare minimum, it should provide a current package maintainer's
@@ -110,16 +122,6 @@ vulnerabilities in public, e.g.
 > Please do not disclose the security vulnerability until it has been
 > made public by the maintainers or CPANSec.  That includes blogs,
 > social media, forums, or conferences.
-
-If the module documentation has a section on reporting bugs, then
-wording should be added that refers users to the security policy, for
-example,
-
-    =head2 Reporting Security Vulnerabilities
-
-    Security issues should not be reported on the bugtracker website.
-    Please see F<SECURITY-POLICY.md> for instructions how to report
-    security vulnerabilities
 
 ### What to expect for a response
 

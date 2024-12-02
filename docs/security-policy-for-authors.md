@@ -112,6 +112,16 @@ vulnerabilities in public, e.g.
 > made public by the maintainers or CPANSec.  That includes blogs,
 > social media, forums, or conferences.
 
+If the module documentation has a section on reporting bugs, then
+wording should be added that refers users to the security policy, for
+example,
+
+    =head2 Reporting Security Vulnerabilities
+
+    Security issues should not be reported on the bugtracker website.
+    Please see F<SECURITY-POLICY.md> for instructions how to report
+    security vulnerabilities
+
 ### What to expect for a response
 
 Advise users what to expect in terms of a response.  If there is a

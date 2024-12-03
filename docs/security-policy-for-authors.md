@@ -8,6 +8,14 @@ Version: 0.1.5
 
 Status: ⚠️ DRAFT
 
+## Why should authors add a security policy?
+
+TODO ⚠️
+
+## Why should authors work with CPANSec?
+
+TODO ⚠️ link to a document about what CPANSec does for CPAN authors.
+
 ## The format of the security policy
 
 The security policy should be a text document with minimal formatting

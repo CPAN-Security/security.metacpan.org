@@ -98,7 +98,7 @@ For example,
 > project maintainer(s) at <foobar@example.com>.
 >
 > Please include as many details as possible, including code
-> samples, so that we can reproduce the issue.
+> samples or text cases, so that we can reproduce the issue.
 
 or [1]
 
@@ -276,8 +276,8 @@ maintainer that should cover most cases.
 > Security vulnerabilties can be reported by e-mail to the current
 > project maintainers at <foobar@example.com>.
 >
-> Please include as many details as possible, including code samples,
-> so that we can reproduce the issue.
+> Please include as many details as possible, including code samples
+> or test cases, so that we can reproduce the issue.
 >
 > If this is a 0-day vulnerability that is actively being exploited,
 > then please copy the report to the CPAN Security Group (CPANSec) at

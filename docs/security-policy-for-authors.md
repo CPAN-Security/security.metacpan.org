@@ -106,6 +106,13 @@ or [1]
 > at https://example.github.com/foobar.  On the "Advisories" page you
 > can click on the "Report a vulnerability" button.
 
+or
+
+> Security vulnerabilities can be reported via our GitLab repository a
+> https://gitlab.com/foobarkeepers/foobar/issues.  When reporting the
+> issue, please check the tickbox on the form labelled "This issue is
+> confidential and should only be visible to team members".
+
 We recommend that there be a *single point of contact*.  Do not
 provide a list of multiple email addresses or web pages and ask that
 users contact some or all of these addresses.

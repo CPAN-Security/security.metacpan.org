@@ -127,9 +127,9 @@ vulnerabilities in public, e.g.
 > Please *do not* use the public issue reporting system on RT or
 > GitHub issues for reporting security vulnerabilities.
 >
-> Please do not disclose the security vulnerability until it has been
-> made public by the maintainers or CPANSec.  That includes blogs,
-> social media, forums, or conferences.
+> Please do not disclose the security vulnerability in public forums
+> until it has been made public by the maintainers or CPANSec.  That
+> includes patches or pull requests.
 
 ### What to expect for a response
 
@@ -286,9 +286,9 @@ maintainer that should cover most cases.
 > Please *do not* use the public issue reporting system on RT or
 > GitHub issues for reporting security vulnerabilities.
 >
-> Please do not disclose the security vulnerability before it has been
-> made public by the maintainers or CPANSec.  That includes blogs,
-> social media, forums, or conferences.
+> Please do not disclose the security vulnerability in public forums
+> until it has been made public by the maintainers or CPANSec.  That
+> includes patches or pull requests.
 >
 > ## Response to Reports
 >

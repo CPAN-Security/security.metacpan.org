@@ -165,6 +165,9 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Web / Mobile design
     * Email & newsletter design
     * Accessibility audit
+1. Mental health support
+    * Mental health first-aider
+
 
 ## Project Support Indicators
 

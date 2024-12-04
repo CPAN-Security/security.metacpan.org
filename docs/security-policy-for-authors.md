@@ -84,10 +84,10 @@ policy, for example (in POD):
 
 ## How to report a security vulnerability
 
-At the bare minimum, it should provide a current package maintainer's
-email address (or ideally an alias that forwards to multiple
-maintainers, or a bug reporting system that supports special handling
-of security issues).
+At the bare minimum, your security policy should provide a current
+package maintainer's email address (or ideally an alias that forwards
+to multiple maintainers, or a bug reporting system that supports
+special handling of security issues).
 
 It is important to refer to the current project maintainers, and not
 the package authors, who for older packages may be different.
@@ -120,13 +120,15 @@ users contact some or all of these addresses.
 Please ensure that the security contact information is consistent with
 distribution metadata, e.g. in the `META.json` file [3].
 
-Add note about also copying cpan-security on the notification if
-the security issue is a 0-day vulnerability or is otherwise urgent.
-For example
+Add note about also copying CPANSec on the notification if help is
+required triaging the issue, or if the issue is being actively
+exploited.  CPANSec provides support to reporters and maintainers in
+assessing the appropriate response, and in case the maintainer(s) are
+unreachable.  For example
 
-> If this is a 0-day vulnerability that is actively being exploited,
-> please copy the report to the CPAN Security Group (CPANSec) at
-> <cpan-security@security.metacpan.org>.
+> If you would like any help with triaging the issue, or if the issue
+> is being activly exploited, please copy the report to the CPAN
+> Security Group (CPANSec) at <cpan-security@security.metacpan.org>.
 
 It is important to advise users not to report security
 vulnerabilities in public, e.g.
@@ -135,8 +137,15 @@ vulnerabilities in public, e.g.
 > GitHub issues for reporting security vulnerabilities.
 >
 > Please do not disclose the security vulnerability in public forums
-> until it has been made public by the maintainers or CPANSec.  That
-> includes patches or pull requests.
+> until past any proposed date for public disclosure, or it has been
+> made public by the maintainers or CPANSec.  That includes patches or
+> pull requests.
+
+You can also link to the CPANSec page
+
+> For more information, see Report a Security Issue
+> https://security.metacpan.org/docs/report.html on the CPANSec
+> website.
 
 ### What to expect for a response
 
@@ -286,16 +295,21 @@ maintainer that should cover most cases.
 > Please include as many details as possible, including code samples
 > or test cases, so that we can reproduce the issue.
 >
-> If this is a 0-day vulnerability that is actively being exploited,
-> then please copy the report to the CPAN Security Group (CPANSec) at
-> <cpan-security@security.metacpan.org>.
+> If you would like any help with triaging the issue, or if the issue
+> is being activly exploited, please copy the report to the CPAN
+> Security Group (CPANSec) at <cpan-security@security.metacpan.org>.
 >
 > Please *do not* use the public issue reporting system on RT or
 > GitHub issues for reporting security vulnerabilities.
 >
 > Please do not disclose the security vulnerability in public forums
-> until it has been made public by the maintainers or CPANSec.  That
-> includes patches or pull requests.
+> until past any proposed date for public disclosure, or it has been
+> made public by the maintainers or CPANSec.  That includes patches or
+> pull requests.
+>
+> For more information, see
+> [Report a Security Issue](https://security.metacpan.org/docs/report.html)
+> on the CPANSec website.
 >
 > ## Response to Reports
 >

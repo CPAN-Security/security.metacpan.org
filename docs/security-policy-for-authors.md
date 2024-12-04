@@ -198,7 +198,7 @@ considered security issues.  For example,
 > Any security vulnerabilities in Foo-Bar are covered by this policy.
 >
 > Security vulnerabilities are considered anything that allows users
-> to execute unauthorised code, access unathorised resources, or to
+> to execute unauthorised code, access unauthorised resources, or to
 > have an adverse impact on accessibility or performance of a system.
 >
 > Security vulnerabilities in upstream software (embedded libraries,
@@ -337,7 +337,7 @@ maintainer that should cover most cases.
 > Any security vulnerabilities in Foo-Bar are covered by this policy.
 >
 > Security vulnerabilities are considered anything that allows users
-> to execute unauthorised code, access unathorised resources, or to
+> to execute unauthorised code, access unauthorised resources, or to
 > have an adverse impact on accessibility or performance of a system.
 >
 > Security vulnerabilities in upstream software (embedded libraries,

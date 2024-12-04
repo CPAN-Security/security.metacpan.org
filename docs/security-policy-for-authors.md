@@ -10,7 +10,9 @@ Status: ⚠️ DRAFT
 
 ## Why should authors add a security policy?
 
-TODO ⚠️
+A security policy tells users how to report security issues to the
+project maintainer(s), how the maintainer(s) will respond, and what
+software will be supported by them.
 
 ## Why should authors work with CPANSec?
 

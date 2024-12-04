@@ -35,7 +35,7 @@ toc: true
 ## Share your security metadata
 
 1. Add a [security.txt](https://securitytxt.org/) file to your project website
-1. Add a [security policy](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository#adding-a-security-policy-to-your-repository) to your Github project
+1. Add a [security policy](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/security-policy-for-authors.md) to your distribution.
 
 ## Add security tests to your code
 

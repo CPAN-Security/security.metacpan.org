@@ -16,7 +16,24 @@ software will be supported by them.
 
 ## Why should authors work with CPANSec?
 
-TODO ⚠️ link to a document about what CPANSec does for CPAN authors.
+The CPAN Security Group (CPANSec) a forum for coordinating and
+assisting in resolving security issues found on CPAN.  This includes:
+
+- Assisting authors and third-party developers in dealing with
+  vulnerabilities and general security advisories related to
+  distributions indexed on Perl’s package ecosystem, CPAN;
+
+- Acting as a trusted intermediator for reporting potential security
+  vulnerabilities to distributions, including managing and responsible
+  disclosure of embargoed security information for a reasonable amount
+  of time pertaining non-core distributions on CPAN, and communication
+  with package managers and distribution channels;
+
+- Sharing and documenting best security practices to authors and
+  users;
+
+See the [CPANSec Charter](https://security.metacpan.org/docs/charter.html)
+for more information.
 
 ## The format of the security policy
 

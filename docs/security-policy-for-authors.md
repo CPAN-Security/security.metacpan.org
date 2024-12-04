@@ -46,7 +46,7 @@ More complex markup formats like HTML are not recommended.
 
 The name `SECURITY-POLICY` is intended to differentiate this from
 `security.txt` which has a specific machine-readable format and has
-a different different function [4].
+a different function [4].
 
 The file should have the following sections.
 

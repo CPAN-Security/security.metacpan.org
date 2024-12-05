@@ -4,7 +4,7 @@ title: Pre-Release Disclosure
 toc: true
 ---
 
-Version: 1.0
+Version: 1.1
 
 ## Purpose
 

@@ -15,9 +15,11 @@ Documents relevant to the CPAN Security Group.
 
 ## Guides
 
-* [CPAN Author's guide](cpan-author-guide.md) ⚠️  DRAFT
-* [Risk assessment guide](risk-assessment-guide.md) ⚠️  DRAFT
-* [Risk mitigation guide](risk-mitigation-guide.md) ⚠️  DRAFT
+* [CPAN Author's guide](guides/cpan-author-guide.md) ⚠️  DRAFT
+* [Risk assessment guide](guides/risk-assessment-guide.md) ⚠️  DRAFT
+* [Risk mitigation guide](guides/risk-mitigation-guide.md) ⚠️  DRAFT
+
+See [guides/](guides/) for the full list of guides.
 
 ## Background info
 

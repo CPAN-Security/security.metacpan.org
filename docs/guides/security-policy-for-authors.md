@@ -11,7 +11,7 @@ toc: true
 > What you see here is a DRAFT of the Guidelines for Adding a Security Policy to Perl Distributions, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/cpan-author-guide/docs/security-policy-for-authors.md](https://github.com/CPAN-Security/security.metacpan.org/tree/cpan-author-guide/docs/security-policy-for-authors.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/guides/docs/guides/security-policy-for-authors.md](https://github.com/CPAN-Security/security.metacpan.org/tree/guides/docs/guides/security-policy-for-authors.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 

@@ -74,7 +74,7 @@ The file should have the following sections.
 5. Workflow.
 
 
-## Abstract
+### Abstract
 
 This is a short one or two sentences that explain what this document
 is, e.g.
@@ -97,20 +97,22 @@ you should mention that, along with the version:
 > Adding a Security Policy https://security.metacpan.org/docs/
 > (version 0.1.3).
 
-### Links from other module documentation
+#### Links from other module documentation
 
 If the module documentation or `README` has a section on reporting
 bugs, then wording should be added that refers users to the security
 policy, for example (in POD):
 
-    =head2 Reporting Security Vulnerabilities
+```pod
+=head2 Reporting Security Vulnerabilities
 
-    Security issues should not be reported on the bugtracker website.
-    Please see F<SECURITY-POLICY.md> for instructions how to report
-    security vulnerabilities
+Security issues should not be reported on the bugtracker website.
+Please see F<SECURITY-POLICY.md> for instructions how to report
+security vulnerabilities.
+```
 
 
-## How to report a security vulnerability
+### How to report a security vulnerability
 
 At the bare minimum, your security policy should provide a current
 package maintainer's email address (or ideally an alias that forwards
@@ -175,7 +177,7 @@ You can also link to the CPANSec page
 > https://security.metacpan.org/docs/report.html on the CPANSec
 > website.
 
-### What to expect for a response
+#### What to expect for a response
 
 Advise users what to expect in terms of a response.  If there is a
 formal vulnerability workflow then refer to that section of the
@@ -217,7 +219,7 @@ other people.  For example,
 >
 > They may also forward this issue to CPANSec.
 
-## What Software this Policy Applies to
+### What Software this Policy Applies to
 
 This section discusses what software this applies to, and what are
 considered security issues in the software, and what are not
@@ -238,7 +240,7 @@ considered security issues.  For example,
 > uses Foo-Bar, or plugins to it that are not included with the
 > Foo-Bar distribution) are not covered by this policy.
 
-### Which versions of this software are supported?
+#### Which versions of this software are supported?
 
 There should be a section or subsection that identifies which versions
 of the software will be supported for security fixes.  For example,
@@ -257,7 +259,7 @@ or,
 > supporting the last two major versions of Foo-Bar.  As of this
 > release, that is v1.4.x and v1.6x.
 
-## Installation and usage issues
+### Installation and usage issues
 
 This is an optional section.
 
@@ -292,7 +294,7 @@ that highlights usage issues.  For example,
 It is acceptable to refer readers to specific sections of the module
 documentation rather than duplicate content.
 
-## Workflow
+### Workflow
 
 This is an optional section.
 
@@ -307,100 +309,102 @@ For example, see [2].
 
 ### Single Maintainer
 
-An example security policy for a CPAN distribution with a single
+An example `SECURITY-POLICY.md` for a CPAN distribution with a single
 maintainer that should cover most cases.
 
-> This is the Security Policy for the Perl Foo-Bar distribution.
->
-> The latest version of this Security Policy can be found on the
-> Foo-Bar website at https://example.metacpan.org/dist/Foo-Bar
->
-> # How to Report a Security Vulnerability
->
-> Security vulnerabilities can be reported by e-mail to the current
-> project maintainers at <foobar@example.com>.
->
-> Please include as many details as possible, including code samples
-> or test cases, so that we can reproduce the issue.
->
-> If you would like any help with triaging the issue, or if the issue
-> is being actively exploited, please copy the report to the CPAN
-> Security Group (CPANSec) at <cpan-security@security.metacpan.org>.
->
-> Please *do not* use the public issue reporting system on RT or
-> GitHub issues for reporting security vulnerabilities.
->
-> Please do not disclose the security vulnerability in public forums
-> until past any proposed date for public disclosure, or it has been
-> made public by the maintainers or CPANSec.  That includes patches or
-> pull requests.
->
-> For more information, see
-> [Report a Security Issue](https://security.metacpan.org/docs/report.html)
-> on the CPANSec website.
->
-> ## Response to Reports
->
-> We aim to acknowledge your security report as soon as possible.
-> However, this project is maintained by a single person in their
-> spare time, and we cannot guarantee a rapid response.  If you have
-> not heard back from the maintainers within a week, then please send
-> a reminder to the maintainer and copy the report to CPANSec at
-> <cpan-security@security.metacpan.org>.
->
-> Please note that the initial response to your report will be an
-> acknowledgement, with a possible query for more information.  It
-> will not necessarily include any fixes for the issue.
->
-> The project maintainers may forward this issue to the security
-> contacts for other projects where we believe it is relevant.  This
-> may include embedded libraries or prerequisite modules or system
-> libraries, or downstream software that uses this software.
->
-> We may also forward this issue to the CPANSec if they have not
-> already been copied on this.
->
-> # Which Software this Policy Applies to
->
-> Any security vulnerabilities in Foo-Bar are covered by this policy.
->
-> Security vulnerabilities are considered anything that allows users
-> to execute unauthorised code, access unauthorised resources, or to
-> have an adverse impact on accessibility or performance of a system.
->
-> Security vulnerabilities in upstream software (embedded libraries,
-> prerequisite modules or system libraries, or in Perl), are not
-> covered by this policy unless they affect Foo-Bar, or Foo-Bar can
-> be used to exploit vulnerabilities in them.
->
-> Security vulnerabilities in downstream software (any software that
-> uses Foo-Bar, or plugins to it that are not included with the
-> Foo-Bar distribution) are not covered by this policy.
->
-> ## Supported Versions of Foo-Bar
->
-> Security fixes will only be applied to the latest version of
-> Foo-Bar.
->
-> Note that the Foo-Bar project only supports major versions of Perl
-> released in the past ten (10) years, even though Foo-Bar will run on
-> older versions of Perl.  If a security fix requires us to increase
-> the minimum version of Perl that is supported, then we may do so.
->
-> # Installation and Usage Issues
->
-> The distribution metadata specifies minimum versions of
-> prerequisites that are required for Foo-Bar to work.  However, some
-> of these prerequisites may have security vulnerabilities, and you
-> should ensure that you are using versions of these prerequisites
-> with no known relevant vulnerabilities (if not up-to-date versions).
->
-> Where security vulnerabilities are known, the metadata may indicate
-> newer versions as recommended.
->
-> ## Usage
->
-> Please see the software documentation for further information.
+```markdown
+This is the Security Policy for the Perl Foo-Bar distribution.
+
+The latest version of this Security Policy can be found on the
+Foo-Bar website at https://example.metacpan.org/dist/Foo-Bar
+
+# How to Report a Security Vulnerability
+
+Security vulnerabilities can be reported by e-mail to the current
+project maintainers at <foobar@example.com>.
+
+Please include as many details as possible, including code samples
+or test cases, so that we can reproduce the issue.
+
+If you would like any help with triaging the issue, or if the issue
+is being actively exploited, please copy the report to the CPAN
+Security Group (CPANSec) at <cpan-security@security.metacpan.org>.
+
+Please *do not* use the public issue reporting system on RT or
+GitHub issues for reporting security vulnerabilities.
+
+Please do not disclose the security vulnerability in public forums
+until past any proposed date for public disclosure, or it has been
+made public by the maintainers or CPANSec.  That includes patches or
+pull requests.
+
+For more information, see
+[Report a Security Issue](https://security.metacpan.org/docs/report.html)
+on the CPANSec website.
+
+## Response to Reports
+
+We aim to acknowledge your security report as soon as possible.
+However, this project is maintained by a single person in their
+spare time, and we cannot guarantee a rapid response.  If you have
+not heard back from the maintainers within a week, then please send
+a reminder to the maintainer and copy the report to CPANSec at
+<cpan-security@security.metacpan.org>.
+
+Please note that the initial response to your report will be an
+acknowledgement, with a possible query for more information.  It
+will not necessarily include any fixes for the issue.
+
+The project maintainers may forward this issue to the security
+contacts for other projects where we believe it is relevant.  This
+may include embedded libraries or prerequisite modules or system
+libraries, or downstream software that uses this software.
+
+We may also forward this issue to the CPANSec if they have not
+already been copied on this.
+
+# Which Software this Policy Applies to
+
+Any security vulnerabilities in Foo-Bar are covered by this policy.
+
+Security vulnerabilities are considered anything that allows users
+to execute unauthorised code, access unauthorised resources, or to
+have an adverse impact on accessibility or performance of a system.
+
+Security vulnerabilities in upstream software (embedded libraries,
+prerequisite modules or system libraries, or in Perl), are not
+covered by this policy unless they affect Foo-Bar, or Foo-Bar can
+be used to exploit vulnerabilities in them.
+
+Security vulnerabilities in downstream software (any software that
+uses Foo-Bar, or plugins to it that are not included with the
+Foo-Bar distribution) are not covered by this policy.
+
+## Supported Versions of Foo-Bar
+
+Security fixes will only be applied to the latest version of
+Foo-Bar.
+
+Note that the Foo-Bar project only supports major versions of Perl
+released in the past ten (10) years, even though Foo-Bar will run on
+older versions of Perl.  If a security fix requires us to increase
+the minimum version of Perl that is supported, then we may do so.
+
+# Installation and Usage Issues
+
+The distribution metadata specifies minimum versions of
+prerequisites that are required for Foo-Bar to work.  However, some
+of these prerequisites may have security vulnerabilities, and you
+should ensure that you are using versions of these prerequisites
+with no known relevant vulnerabilities (if not up-to-date versions).
+
+Where security vulnerabilities are known, the metadata may indicate
+newer versions as recommended.
+
+## Usage
+
+Please see the software documentation for further information.
+```
 
 ## References and Notes
 

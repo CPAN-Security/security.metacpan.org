@@ -225,6 +225,14 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Assumed, Implied, Phantom, Unstated)](#dependency-assumed-implied-phantom-unstated-%EF%B8%8F)
 
+#### Dependency (Optional)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> * See also
+>     * [Dependency (Static)](#dependency-static)
+
 #### Dependency (Unresolved, Required) ✍️
 
 > 1. (CPANSec-2024) A dependency that that needs to be resolved for a software component to function as expected.
@@ -380,6 +388,11 @@ Please take this into account when commenting this document.
 >
 > (Ref: [NTIA-2021](#references-and-terms), [EUBG-2022-3](#references-and-terms))
 
+
+### GrayPAN/GreyPAN
+
+> 1. A GrayPAN is a publicly accessible CPAN, but published outside the CPAN infrastructure, resulting in a codebase that is factually public, but functionally non existent from the perspective of CPAN (e.g. own index).
+> (Ref [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-various-pans/))
 
 ### Hardware
 

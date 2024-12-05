@@ -1,18 +1,31 @@
-# Guidelines for Adding a Security Policy to Perl Distributions
+---
+layout: page
+title: Guidelines for Adding a Security Policy to Perl Distributions
+description: A guide for including a Security Policy in a CPAN distribution is to advise users how to report security issues, and how these issues will be handled.
+toc: true
+---
 
-The purpose of including a Security Policy in a CPAN distribution is
-to advise users how to report security issues, and how these issues
-will be handled.
+## Document Status: ⚠️  DRAFT
 
-Version: 0.1.6
+> [!CAUTION]
+> What you see here is a DRAFT of the Guidelines for Adding a Security Policy to Perl Distributions, by the CPAN Security Group (CPANSec).
+> As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
+>
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/cpan-author-guide/docs/security-policy-for-authors.md](https://github.com/CPAN-Security/security.metacpan.org/tree/cpan-author-guide/docs/security-policy-for-authors.md)
+> - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
+> - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
-Status: ⚠️ DRAFT
+## Purpose
+
+The purpose of including a Security Policy in a CPAN distribution is to advise users how to report security issues, and how these issues will be handled.
+
 
 ## Why should authors add a security policy?
 
 A security policy tells users how to report security issues to the
 project maintainer(s), how the maintainer(s) will respond, and what
 software will be supported by them.
+
 
 ## Why should authors work with CPANSec?
 
@@ -35,6 +48,7 @@ assisting in resolving security issues found on CPAN.  This includes:
 See the [CPANSec Charter](https://security.metacpan.org/docs/charter.html)
 for more information.
 
+
 ## The format of the security policy
 
 The security policy should be a text document with minimal formatting
@@ -51,20 +65,14 @@ a different function [4].
 The file should have the following sections.
 
 1. Abstract
-
-   A short one or two sentences that explain what this document is.
-
+   - A short one or two sentences that explain what this document is.
 2. How to report a security vulnerability
-
-   How to contact the project maintainers, and what to expect as a reponse.
-
+   - How to contact the project maintainers, and what to expect as a response.
 3. What this policy applies to
-
-   Which versions of the software are supported
-
+   - Which versions of the software are supported
 4. Installation and usage issues
-
 5. Workflow.
+
 
 ## Abstract
 
@@ -101,6 +109,7 @@ policy, for example (in POD):
     Please see F<SECURITY-POLICY.md> for instructions how to report
     security vulnerabilities
 
+
 ## How to report a security vulnerability
 
 At the bare minimum, your security policy should provide a current
@@ -113,7 +122,7 @@ the package authors, who for older packages may be different.
 
 For example,
 
-> Security vulnerabilties can be reported by e-mail to the current
+> Security vulnerabilities can be reported by e-mail to the current
 > project maintainer(s) at <foobar@example.com>.
 >
 > Please include as many details as possible, including code
@@ -146,7 +155,7 @@ assessing the appropriate response, and in case the maintainer(s) are
 unreachable.  For example
 
 > If you would like any help with triaging the issue, or if the issue
-> is being activly exploited, please copy the report to the CPAN
+> is being actively exploited, please copy the report to the CPAN
 > Security Group (CPANSec) at <cpan-security@security.metacpan.org>.
 
 It is important to advise users not to report security
@@ -187,7 +196,7 @@ maintainer cannot promise a response time.  An alternative might be
 
 > The maintainer(s) aim to acknowledge your security report as soon as
 > possible.  However, this project is maintained by a single person in
-> their spare time, and they cannot guarantee a rapid reponse.  If you
+> their spare time, and they cannot guarantee a rapid response.  If you
 > have not received a response from the them within a week, then
 > please send a reminder to them and copy the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
@@ -222,7 +231,7 @@ considered security issues.  For example,
 >
 > Security vulnerabilities in upstream software (embedded libraries,
 > prerequisite modules or system libraries, or in Perl), are not
-> convered by this policy unless they affect Foo-Bar, or Foo-Bar can
+> covered by this policy unless they affect Foo-Bar, or Foo-Bar can
 > be used to exploit vulnerabilities in them.
 >
 > Security vulnerabilities in downstream software (any software that
@@ -308,14 +317,14 @@ maintainer that should cover most cases.
 >
 > # How to Report a Security Vulnerability
 >
-> Security vulnerabilties can be reported by e-mail to the current
+> Security vulnerabilities can be reported by e-mail to the current
 > project maintainers at <foobar@example.com>.
 >
 > Please include as many details as possible, including code samples
 > or test cases, so that we can reproduce the issue.
 >
 > If you would like any help with triaging the issue, or if the issue
-> is being activly exploited, please copy the report to the CPAN
+> is being actively exploited, please copy the report to the CPAN
 > Security Group (CPANSec) at <cpan-security@security.metacpan.org>.
 >
 > Please *do not* use the public issue reporting system on RT or
@@ -361,7 +370,7 @@ maintainer that should cover most cases.
 >
 > Security vulnerabilities in upstream software (embedded libraries,
 > prerequisite modules or system libraries, or in Perl), are not
-> convered by this policy unless they affect Foo-Bar, or Foo-Bar can
+> covered by this policy unless they affect Foo-Bar, or Foo-Bar can
 > be used to exploit vulnerabilities in them.
 >
 > Security vulnerabilities in downstream software (any software that
@@ -393,12 +402,30 @@ maintainer that should cover most cases.
 >
 > Please see the software documentation for further information.
 
-## Notes
+## References and Notes
 
-[1] https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository
+1. (CodeSecAdvisory) https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository
+1. (PerlSecPolicy) [Perl security report handling policy](perlsecpolicy)
+1. (CPANMetaSpec) [CPAN::Meta::Spec](https://metacpan.org/pod/CPAN::Meta::Spec)
+1. (Securitytxt) https://securitytxt.org/
 
-[2] [Perl security report handling policy](perlsecpolicy)
 
-[3] [CPAN::Meta::Spec](https://metacpan.org/pod/CPAN::Meta::Spec)
+## License and use of this document
 
-[4] https://securitytxt.org/
+* Version: 0.1.7
+* License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
+* Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
+
+You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.
+
+
+### Acknowledgements
+
+Several people have been involved in the development of this document
+
+* Robert Rothenberg (main author)
+* Alexander Hartmaier
+* Thibault Duponchelle
+* Timothy Legge
+* Stig Palmquist
+* Salve J. Nilsen

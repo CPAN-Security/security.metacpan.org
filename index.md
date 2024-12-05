@@ -30,11 +30,12 @@ If you care and would like to make a contribution, you can…
 
 ## Resources
 
-* [Documents & Guides](docs/), and other relevant resources
+* [Documents](docs/), and other relevant resources
     * **How to [Report a Security Issue](docs/report.md)**
     * [Pre-Release Disclosure Agreement](docs/pre-release-disclosure.md)
     * [Group charter](docs/charter.md) ⚠️  DRAFT
     * Standards and regulations [reading list](docs/readinglist.md) ⚠️  DRAFT
+    * [Guides](docs/guides/)
 * [Projects](https://github.com/orgs/CPAN-Security/projects) overview on Github
 * [Meetings](meetings/) information and minutes
 * [Presentations](presentations/) about us and our work

@@ -20,14 +20,14 @@ toc: true
 The purpose of including a Security Policy in a CPAN distribution is to advise users how to report security issues, and how these issues will be handled.
 
 
-## Why should authors add a security policy?
+### Why should authors add a security policy?
 
 A security policy tells users how to report security issues to the
 project maintainer(s), how the maintainer(s) will respond, and what
 software will be supported by them.
 
 
-## Why should authors work with CPANSec?
+### Why should authors work with CPANSec?
 
 The CPAN Security Group (CPANSec) a forum for coordinating and
 assisting in resolving security issues found on CPAN.  This includes:
@@ -60,7 +60,7 @@ More complex markup formats like HTML are not recommended.
 
 The name `SECURITY-POLICY` is intended to differentiate this from
 `security.txt` which has a specific machine-readable format and has
-a different function [4].
+a different function [\[4\]](#references-and-notes) (Securitytxt).
 
 The file should have the following sections.
 
@@ -130,7 +130,7 @@ For example,
 > Please include as many details as possible, including code
 > samples or text cases, so that we can reproduce the issue.
 
-or [1]
+or [\[1\]](#references-and-notes) (Github-Sec-Advisory)
 
 > Security vulnerabilities can be reported via our GitHub repository
 > at https://example.github.com/foobar.  On the "Advisories" page you
@@ -148,7 +148,8 @@ provide a list of multiple email addresses or web pages and ask that
 users contact some or all of these addresses.
 
 Please ensure that the security contact information is consistent with
-distribution metadata, e.g. in the `META.json` file [3].
+distribution metadata, e.g. in the `META.json` file
+[\[3\]](#references-and-notes) (CPAN-Meta-Spec).
 
 Add note about also copying CPANSec on the notification if help is
 required triaging the issue, or if the issue is being actively
@@ -303,7 +304,7 @@ own general security policies, may have a vulnerability workflow.
 Where applicable, the workflow should be discussed, or a link provided
 to that document.
 
-For example, see [2].
+For example, see [\[2\]](#references-and-notes) (Perl-Sec-Policy).
 
 ## Examples
 
@@ -408,10 +409,10 @@ Please see the software documentation for further information.
 
 ## References and Notes
 
-1. (CodeSecAdvisory) https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository
-1. (PerlSecPolicy) [Perl security report handling policy](perlsecpolicy)
-1. (CPANMetaSpec) [CPAN::Meta::Spec](https://metacpan.org/pod/CPAN::Meta::Spec)
-1. (Securitytxt) https://securitytxt.org/
+1. (Github-Sec-Advisory) [Configuring private vulnerability reporting for a repository](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository)
+2. (Perl-Sec-Policy) [Perl security report handling policy](https://perldoc.perl.org/perlsecpolicy)
+3. (CPAN-Meta-Spec) [CPAN::Meta::Spec](https://metacpan.org/pod/CPAN::Meta::Spec)
+4. (Securitytxt) https://securitytxt.org/
 
 
 ## License and use of this document

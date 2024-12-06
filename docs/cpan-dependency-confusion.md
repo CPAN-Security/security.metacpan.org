@@ -110,7 +110,7 @@ GrayPAN/DarkPAN was simulated with the following tools:
 
 ### Safe
 - Do not specify private requirements in Makefile.PL, Build.PL, META.* or cpanfile/cpmfile. Specifying requirements is technically not required for runtime. This is suboptimal because it makes dependencies implicit and shifts right the verification of requirements.
-- Use reserved namespaces (`_Underscore::Trick` or `UN_DESCORE::Trick`) that can not resolve to public modules.
+- Use reserved namespaces (`_Underscore::Trick`) that can not resolve to public modules.
 
 ### Documented but unsafe
 `Local::*` is documented as a name space for private modules but as of November 2024 only reserved "by convention", see [Do not index Local::* (nor Local)](https://github.com/andk/pause/pull/541)
@@ -214,7 +214,7 @@ The module [install](https://metacpan.org/pod/install) somewhat fills this use c
 
 #### Reserved namespaces
 Use reserved namespaces that can't resolve to public things:
-- `_Underscore::Trick` or `UN_DESCORE::Trick`
+- `_Underscore::Trick`
 - `Local::*` but as of today only reserved "by convention", see [Do not index Local::* (nor Local)](https://github.com/andk/pause/pull/541)
 
 From [PAUSE Naming Modules - Local::](https://pause.perl.org/pause/query?ACTION=pause_namingmodules#Local) and [The Perl Module Library (perlmodlib)](https://perldoc.perl.org/perlmodlib#Guidelines-for-Module-Creation)

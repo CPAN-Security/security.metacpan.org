@@ -24,13 +24,13 @@ In this project we try to help both OSS project's Maintainers communicate their 
 
 States in **bold** exist on CPAN.
 
-| Needs        | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| **NEEDHELP** | no        | YES       | YES       | YES                  | no                 | LOW           | Maintainer   |
-| **HANDOFF**  | no        | YES       | no        | YES                  | YES                | LOW           | Maintainer   |
-| **ADOPTME**  | YES       | no        | no        | YES                  | no                 | NONE          | Ecosystem    |
-| NEEDFUNDING  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
-| NEEDSUPPORT  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
+| Needs        | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| **NEEDHELP** | no        | YES       | YES       | LOW           | Maintainer   |
+| **HANDOFF**  | no        | YES       | no        | LOW           | Maintainer   |
+| **ADOPTME**  | YES       | no        | no        | NONE          | Ecosystem    |
+| NEEDFUNDING  | no        | YES       | YES       | LOW           | Maintainer   |
+| NEEDSUPPORT  | no        | YES       | YES       | LOW           | Maintainer   |
 
 
 1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))
@@ -92,6 +92,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Animation / motion graphics
     * Photography / videography
     * Audio design
+    * Apparel design (t-shirts, swag)
 1. **Documentation Authorship**
     * Automation and Completeness
     * Consistency, Voice and Tone
@@ -164,19 +165,21 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Web / Mobile design
     * Email & newsletter design
     * Accessibility audit
+1. Mental health support
+    * Mental health first-aider
+
 
 ## Project Support Indicators
 
-| Offers       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| MAINTAINED   | no        | YES       | YES       | no                   | no                 | OK            | Maintainer   |
-| CASUAL       | no        | YES       | YES       | YES                  | no                 | LOW           | Maintainer   |
-| DONE         | no        | YES       | no        | no                   | no                 | LOW           | Maintainer   |
-| LEASTEFFORT  | no        | YES       | YES       | no                   | no                 | MINIMUM       | Maintainer   |
-| DEPRECATED   | no        | YES       | no        | no                   | no                 | SECURITY      | Maintainer   |
-| SECURITYONLY | no        | YES       | YES       | YES                  | no                 | SECURITY      | Maintainer   |
-| SUPERSEEDED  | no        | YES       | YES       | no                   | no                 | NONE          | Maintainer   |
-| UNMAINTAINED | no        | YES       | YES       | YES                  | no                 | NONE          | Maintainer   |
+| Offers       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| MAINTAINED   | no        | YES       | YES       | OK            | Maintainer   |
+| CASUAL       | no        | YES       | YES       | LOW           | Maintainer   |
+| DONE         | no        | YES       | no        | LOW           | Maintainer   |
+| DEPRECATED   | no        | YES       | no        | NONE          | Maintainer   |
+| SECURITYONLY | no        | YES       | YES       | SECURITY      | Maintainer   |
+| SUPERSEEDED  | no        | YES       | YES       | NONE          | Maintainer   |
+| UNMAINTAINED | no        | YES       | YES       | NONE          | Maintainer   |
 
 
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
@@ -208,15 +211,16 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 
 States in **bold** exist on CPAN.
 
-| States       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| COMPROMISED  | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
-| CUSTODY      | YES       | no        | no        | YES                  | no                 | SECURITY      | Ecosystem    |
-| DELISTED     | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
-| DUAL         | no        | YES       | YES       | no                   | no                 | OK            | Ecosystem    |
-| **NOXFER**   | no        | YES       | no        | no                   | no                 | NONE          | Ecosystem    |
-| UNREACHABLE  | no        | YES       | YES       | no                   | no                 | ERROR         | Ecosystem    |
-| UNRESPONSIVE | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
+| States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| COMPROMISED  | no        | YES       | YES       | NONE          | Ecosystem    |
+| CUSTODY      | YES       | no        | no        | SECURITY      | Ecosystem    |
+| SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DUAL         | no        | YES       | YES       | OK            | Ecosystem    |
+| **NOXFER**   | no        | YES       | no        | NONE          | Ecosystem    |
+| UNREACHABLE  | no        | YES       | YES       | ERROR         | Ecosystem    |
+| UNRESPONSIVE | no        | YES       | YES       | NONE          | Ecosystem    |
 
 
 
@@ -229,9 +233,14 @@ States in **bold** exist on CPAN.
 1. CUSTODY – This project is under custodianship
     * The project is deemed as important for the ecosystem, and needs a trusted maintainer
     * (number of maintainers is 0)
-1. DELISTED
-    * The project has been removed from the ecosystem index due to extraordinary circumstances
+1. SUSPENDED
+    * The project has been made inaccessible from the ecosystem index due to breaking of terms or code of conduct.
+        * e.g.: Publishing spam, malware, copyright infringement, illegal material or other inappropriate content.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+1. DELISTED
+    * The project has been removed from the ecosystem index due to extraordinary circumstances.
+        * e.g.: hacking, sabotage, denial of service, repeated suspensions or other types of attacks against the ecosystem infrastructure.
+    * The project is expected to NOT revert to its previous state.
 1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
     * This project is maintained by the language core team itself.
     * The project is both published as part of the core language, and through the language ecosystem.

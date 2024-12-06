@@ -24,13 +24,13 @@ In this project we try to help both OSS project's Maintainers communicate their 
 
 States in **bold** exist on CPAN.
 
-| Needs        | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| **NEEDHELP** | no        | YES       | YES       | YES                  | no                 | LOW           | Maintainer   |
-| **HANDOFF**  | no        | YES       | no        | YES                  | YES                | LOW           | Maintainer   |
-| **ADOPTME**  | YES       | no        | no        | YES                  | no                 | NONE          | Ecosystem    |
-| NEEDFUNDING  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
-| NEEDSUPPORT  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
+| Needs        | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| **NEEDHELP** | no        | YES       | YES       | LOW           | Maintainer   |
+| **HANDOFF**  | no        | YES       | no        | LOW           | Maintainer   |
+| **ADOPTME**  | YES       | no        | no        | NONE          | Ecosystem    |
+| NEEDFUNDING  | no        | YES       | YES       | LOW           | Maintainer   |
+| NEEDSUPPORT  | no        | YES       | YES       | LOW           | Maintainer   |
 
 
 1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))
@@ -171,16 +171,15 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 
 ## Project Support Indicators
 
-| Offers       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| MAINTAINED   | no        | YES       | YES       | no                   | no                 | OK            | Maintainer   |
-| CASUAL       | no        | YES       | YES       | YES                  | no                 | LOW           | Maintainer   |
-| DONE         | no        | YES       | no        | no                   | no                 | LOW           | Maintainer   |
-| LEASTEFFORT  | no        | YES       | YES       | no                   | no                 | MINIMUM       | Maintainer   |
-| DEPRECATED   | no        | YES       | no        | no                   | no                 | SECURITY      | Maintainer   |
-| SECURITYONLY | no        | YES       | YES       | YES                  | no                 | SECURITY      | Maintainer   |
-| SUPERSEEDED  | no        | YES       | YES       | no                   | no                 | NONE          | Maintainer   |
-| UNMAINTAINED | no        | YES       | YES       | YES                  | no                 | NONE          | Maintainer   |
+| Offers       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| MAINTAINED   | no        | YES       | YES       | OK            | Maintainer   |
+| CASUAL       | no        | YES       | YES       | LOW           | Maintainer   |
+| DONE         | no        | YES       | no        | LOW           | Maintainer   |
+| DEPRECATED   | no        | YES       | no        | NONE          | Maintainer   |
+| SECURITYONLY | no        | YES       | YES       | SECURITY      | Maintainer   |
+| SUPERSEEDED  | no        | YES       | YES       | NONE          | Maintainer   |
+| UNMAINTAINED | no        | YES       | YES       | NONE          | Maintainer   |
 
 
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
@@ -212,16 +211,16 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 
 States in **bold** exist on CPAN.
 
-| States       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| COMPROMISED  | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
-| CUSTODY      | YES       | no        | no        | YES                  | no                 | SECURITY      | Ecosystem    |
-| SUSPENDED    | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
-| DELISTED     | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
-| DUAL         | no        | YES       | YES       | no                   | no                 | OK            | Ecosystem    |
-| **NOXFER**   | no        | YES       | no        | no                   | no                 | NONE          | Ecosystem    |
-| UNREACHABLE  | no        | YES       | YES       | no                   | no                 | ERROR         | Ecosystem    |
-| UNRESPONSIVE | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
+| States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| COMPROMISED  | no        | YES       | YES       | NONE          | Ecosystem    |
+| CUSTODY      | YES       | no        | no        | SECURITY      | Ecosystem    |
+| SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DUAL         | no        | YES       | YES       | OK            | Ecosystem    |
+| **NOXFER**   | no        | YES       | no        | NONE          | Ecosystem    |
+| UNREACHABLE  | no        | YES       | YES       | ERROR         | Ecosystem    |
+| UNRESPONSIVE | no        | YES       | YES       | NONE          | Ecosystem    |
 
 
 
@@ -252,7 +251,7 @@ States in **bold** exist on CPAN.
     * (number of maintainers is not relevant)
 1. UNREACHABLE – The project maintainers are not reachable
     * The project maintainer(s) has not been reachable through registered communication channels for a substantial time, due to reasons outside the control of the project.
-        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other Forces Majeures beyond the Maintainer's control.
+        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other *Forces Majeures* beyond the Maintainer's control.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
     * (number of maintainers is not relevant)
 1. UNRESPONSIVE – Project Maintainers are reachable but actively not engaging

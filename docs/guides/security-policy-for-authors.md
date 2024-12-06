@@ -412,7 +412,7 @@ Please see the software documentation for further information.
 1. (Github-Sec-Advisory) [Configuring private vulnerability reporting for a repository](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository)
 2. (Perl-Sec-Policy) [Perl security report handling policy](https://perldoc.perl.org/perlsecpolicy)
 3. (CPAN-Meta-Spec) [CPAN::Meta::Spec](https://metacpan.org/pod/CPAN::Meta::Spec)
-4. (Securitytxt) https://securitytxt.org/
+4. (Securitytxt) [https://securitytxt.org/](https://securitytxt.org/)
 
 
 ## License and use of this document

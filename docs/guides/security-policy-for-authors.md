@@ -313,7 +313,6 @@ For example, see [\[2\]](#references-and-notes) (Perl-Sec-Policy).
 An example `SECURITY-POLICY.md` for a CPAN distribution with a single
 maintainer that should cover most cases.
 
-<<<<<<< HEAD
 ```markdown
 This is the Security Policy for the Perl Foo-Bar distribution.
 

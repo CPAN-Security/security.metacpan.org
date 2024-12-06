@@ -2,7 +2,7 @@
 layout: page
 permalink: /meetings/
 toc: false
-next_meeting_time: November 27th, 2024 17:00 UTC
+next_meeting_time: December 11th, 2024 16:00 UTC
 title: CPANSec meeting details & minutes
 ---
 
@@ -36,7 +36,8 @@ title: CPANSec meeting details & minutes
 * [2024-10-02](cpansec-minutes-2024-10-02.md)
 * [2024-10-30](cpansec-minutes-2024-10-30.md)
 * [2024-11-15](cpansec-minutes-2024-11-15.md)
-* [2024-11-27]()
+* [2024-11-27](cpansec-minutes-2024-11-27.md)
+* [2024-12-11]()
 
 ### Under review
 

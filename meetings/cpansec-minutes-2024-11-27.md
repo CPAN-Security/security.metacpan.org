@@ -109,7 +109,7 @@ title: Minutes 2024-11-27
 *   @timlegge - Mitre confirmed receipt of the CNA request form and will be reviewed soon.
 
 ### Recruitment
-*   We could use more visibility. We could learn from Raku
+*   Nothing to report
 
 ### Other
 *   Discussion about a matrix of security-related items for CPAN releases

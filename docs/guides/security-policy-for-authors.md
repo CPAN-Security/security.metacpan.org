@@ -93,9 +93,9 @@ MetaCPAN, e.g. https://metacpan.org/dist/Foo-Bar.)
 If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
-> This text is based on the CPAN Security Group's Guidelines for
-> Adding a Security Policy https://security.metacpan.org/docs/
-> (version 0.1.3).
+> This text is based on the CPAN Security Group's Guidelines for Adding
+> a Security Policy to Perl Distributions (version 0.1.8)
+> https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 #### Links from other module documentation
 
@@ -313,12 +313,15 @@ For example, see [\[2\]](#references-and-notes) (Perl-Sec-Policy).
 An example `SECURITY-POLICY.md` for a CPAN distribution with a single
 maintainer that should cover most cases.
 
-<<<<<<< HEAD
 ```markdown
 This is the Security Policy for the Perl Foo-Bar distribution.
 
 The latest version of this Security Policy can be found on the
 Foo-Bar website at https://example.metacpan.org/dist/Foo-Bar
+
+This text is based on the CPAN Security Group's Guidelines for Adding
+a Security Policy to Perl Distributions (version 0.1.8)
+https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 # How to Report a Security Vulnerability
 
@@ -346,24 +349,23 @@ on the CPANSec website.
 
 ## Response to Reports
 
-We aim to acknowledge your security report as soon as possible.
-However, this project is maintained by a single person in their
-spare time, and we cannot guarantee a rapid response.  If you have
-not heard back from the maintainers within a week, then please send
-a reminder to the maintainer and copy the report to CPANSec at
+The maintainer(s) aim to acknowledge your security report as soon as
+possible.  However, this project is maintained by a single person in
+their spare time, and they cannot guarantee a rapid response.  If you
+have not received a response from the them within a week, then
+please send a reminder to them and copy the report to CPANSec at
 <cpan-security@security.metacpan.org>.
 
 Please note that the initial response to your report will be an
 acknowledgement, with a possible query for more information.  It
 will not necessarily include any fixes for the issue.
 
-The project maintainers may forward this issue to the security
+The project maintainer(s) may forward this issue to the security
 contacts for other projects where we believe it is relevant.  This
-may include embedded libraries or prerequisite modules or system
-libraries, or downstream software that uses this software.
+may include embedded libraries, system libraries, prerequisite
+modules or downstream software that uses this software.
 
-We may also forward this issue to the CPANSec if they have not
-already been copied on this.
+They may also forward this issue to CPANSec.
 
 # Which Software this Policy Applies to
 
@@ -384,8 +386,8 @@ Foo-Bar distribution) are not covered by this policy.
 
 ## Supported Versions of Foo-Bar
 
-Security fixes will only be applied to the latest version of
-Foo-Bar.
+The maintainer(s) will only commit to releasing security fixes for
+the latest version of Foo-Bar.
 
 Note that the Foo-Bar project only supports major versions of Perl
 released in the past ten (10) years, even though Foo-Bar will run on
@@ -397,8 +399,8 @@ the minimum version of Perl that is supported, then we may do so.
 The distribution metadata specifies minimum versions of
 prerequisites that are required for Foo-Bar to work.  However, some
 of these prerequisites may have security vulnerabilities, and you
-should ensure that you are using versions of these prerequisites
-with no known relevant vulnerabilities (if not up-to-date versions).
+should ensure that you are using up-to-date versions of these
+prerequisites.
 
 Where security vulnerabilities are known, the metadata may indicate
 newer versions as recommended.
@@ -418,7 +420,7 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 0.1.7
+* Version: 0.1.8
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

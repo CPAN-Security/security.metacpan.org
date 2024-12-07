@@ -30,3 +30,4 @@ See [guides/](guides/) for the full list of guides.
 ## Other
 
 * [CPAN Dependency Confusion (study)](cpan-dependency-confusion.md)
+* [CPAN StarJacking (study)](cpan-starjacking.md)

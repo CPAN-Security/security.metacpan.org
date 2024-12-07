@@ -209,7 +209,7 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %% Open Source Project Environment
-    state "🟥 Author" as opensource_author
+    state "🟥 Author<br>🟥 Owner" as opensource_author
     state "🟨 Maintainer<br>🟨 Custodian" as opensource_maintainer
     state "🟨🟦 Packager (Maintainer)" as language_packager
     %%
@@ -223,7 +223,7 @@ stateDiagram-v2
     state "🟦 Authenticator" as language_authenticator
     state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
-    state "🟩 Reservoir" as language_distributor
+    state "🟩 Archive" as language_distributor
     %%
     class language_authenticator updatesSBOM
     class language_packager assemblesSBOM
@@ -245,7 +245,7 @@ stateDiagram-v2
     %% FIXME: package_steward not useful/necessary?
     state "🟥🟦 Open Source Software Steward 🆕" as package_steward
     state "🟨 Curator" as package_curator
-    state "🟩 Depot" as package_distributor
+    state "🟩 Repository" as package_distributor
     %%
     class package_authenticator updatesSBOM
     class package_patcher updatesSBOM
@@ -458,7 +458,7 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %% OSS Project Environment
-    state "🟥 Author" as opensource_author
+    state "🟥 Author<br>🟥 Owner" as opensource_author
     state "🟥🟨 Maintainer<br>🟨 Custodian" as opensource_maintainer
     state "🟨🟦 Packager (Maintainer)" as language_packager
     %%

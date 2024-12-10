@@ -15,7 +15,7 @@ title: CPANSec meeting details & minutes
     * The meeting is primarily for sharing progress; If you have lots of questions, please ask them before/after the timeboxed period.
     * Changes in how we organize ourselves and work are discussed and decided under the "Operating changes" agenda item.
 * **Location**: Online, in the [CPANSec Matrix channel](https://matrix.to/#/#cpansec-discussion:matrix.org), using the Jitsi widget for video conferencing
-* **Agenda**: Announced in the IRC and Matrix channels
+* **Agenda**: Announced in the IRC and Matrix channels before each meeting; The agenda is made collaboratively before each meeting — Please join our channels to contribute!
 
 
 ## Meeting minutes

@@ -1,8 +1,8 @@
 ---
 layout: page
 toc: true
-meeting_time: 2024-11-15 16:00 UTC
-title: Minutes 2024-11-15
+meeting_time: 2024-12-11 16:00 UTC
+title: Minutes 2024-12-11
 ---
 
 ## Agenda & Meeting Details
@@ -95,7 +95,7 @@ title: Minutes 2024-11-15
 *   (none)
 
 ### Next meeting date, time and location
-*   Next meeting is Friday 2025-01-08 (8 Jan 2025) @ 16:00UTC in #cpansec-discussion on Matrix (17:00 Europe/Amsterdam)
+*   Next meeting is Friday 2025-01-08 (8 Jan 2025) @ 16:00UTC (17:00 Europe/Amsterdam) in #cpansec-discussion on Matrix
 
 ## 17:03 UTC – Meeting end
 

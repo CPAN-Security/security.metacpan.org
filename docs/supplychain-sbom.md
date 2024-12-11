@@ -232,7 +232,7 @@ stateDiagram-v2
     class language_distributor distributesSBOM
 
     %% Collaboration Ecosystem
-    state "🟩 Depositary" as repository_distributor
+    state "🟩 Depositary<br>🟩 Forge" as repository_distributor
     state "🟨 Contributor" as external_contributor
     %%
     class repository_distributor distributesSBOM

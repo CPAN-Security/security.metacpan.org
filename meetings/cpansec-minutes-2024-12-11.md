@@ -68,7 +68,7 @@ title: Minutes 2024-12-11
     * Kwalitee/CPANTS
 
 ### Author guide to generating random values for security
-*   @robrwo – Guite to be started together with @stigtsp
+*   @robrwo – Guide to be started together with @stigtsp
 
 ### CPAN Steward org
 *   @sjn - Proposing that CPANSec makes a bid to become it

@@ -237,6 +237,8 @@ From [PAUSE Naming Modules - Local::](https://pause.perl.org/pause/query?ACTION=
 - [PerlRocks](https://github.com/gugod/perlrocks)
 - [Carl](https://github.com/skaji/Carl)
 - [anton](https://github.com/tokuhirom/anton)
+- [PAUSE will continue to index Local::*](https://github.com/andk/pause/issues/368#issuecomment-1528700242) (2023)
+- [Do not index Local:: namespace (nor Local)](https://github.com/andk/pause/pull/541) (2024)
 - [x_static_install](https://blogs.perl.org/users/shoichi_kaji1/2017/03/make-your-cpan-module-static-installable.html)
 - [CPAN always tries file:// first](https://metacpan.org/pod/CPAN#The-urllist-parameter-has-CD-ROM-support)
 - [CPANPLUS Can I use local mirror](https://perl.mines-albi.fr/perl5.6.1/site_perl/5.6.1/CPANPLUS/FAQ.html#can%20i%20use%20a%20local%20mirror%20(such%20as%20a%20cd),%20but%20fall%20back%20to%20a%20public%20mirror%20if%20my%20files%20are%20out%20of%20date)

@@ -72,14 +72,14 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * CI/CD configuration
     * Feature implementation
     * Internationalization/I18N
-    * Test writing
+    * Security hardening
 1. **Community Building and Management**
     * Culture and conduct
     * Diversity, Equity, Inclusion
     * Forum management, moderation and support
     * Governance development
     * Recruitment and on-boarding
-1. Content Creation
+1. Informational Content Creation
     * Audio or Video Editing
     * Podcast Hosting or Participation
     * **Writing Articles** / Blogging
@@ -93,7 +93,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Photography / videography
     * Audio design
     * Apparel design (t-shirts, swag)
-1. **Documentation Authorship**
+1. **Documentation Writing**
     * Automation and Completeness
     * Consistency, Voice and Tone
     * Indexing, Discoverability, Keyword Analysis and SEO
@@ -101,7 +101,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Technical writing
     * User or Stakeholder Relevance
 1. **Event Organizing**
-    * Conferences, Meetups, Hackathons or other gatherings for social knowledge-sharing
+    * Conferences, Meetups, Hackathons or other gatherings for knowledge-sharing
     * Online events, webinars or classes/training
     * Program committee work
     * Social and networking events
@@ -109,6 +109,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Fund-raising
     * Grant management
 1. **Legal Counsel**
+    * Licensing and other legal advice
     * License Conflict Resolution
     * License Enforcement
     * Trademark Defense
@@ -119,6 +120,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Governance
     * Outreach and Communication
     * Security
+    * Language, technology or platform
 1. Outreach
     * Content Strategy, Planning and Auditing
     * Industry/Stakeholder/OSPO Outreach and Assistance
@@ -129,15 +131,19 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * **Social Media Management** and presence
     * **Speaking at Events** and Conference Presentations
     * **Website Development**
-1. Packaging
+1. Packaging and containerization
     * Adaptation new packaging ecosystems
     * Container assembly
     * Package maintenance
     * Release management
     * Tooling development
 1. **Quality Assurance and Testing**
-    * Test data creation
+    * Error testing
     * Increase code coverage
+    * Security test writing
+    * Test writing
+    * Test data creation
+    * UI/UX Testing
 1. Software and systems design review
     * Review software architectural design patterns
     * Review virtualized infrastructure design patterns
@@ -147,9 +153,6 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Data Modeling
     * Dependency Review
     * Sustainability Review
-1. **Security-Related Activities**
-    * Hardening
-    * Writing automated security tests
 1. **Teaching and Tutorial Building**
     * Course/training material development
     * E-learning module development

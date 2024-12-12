@@ -82,9 +82,6 @@ title: Minutes 2024-12-11
     * Find a way to make CPANSec's work sustainable. We expect a large increase in activity as a consequence of the Cyber Resilience Act coming into effect Dec 10th 2024. This may include the possiblity as setting up CPANSec as a Steward on behalf of the CPAN ecosystem.
     * In the first few months, we'll have to look into ways to help the Perl/CPAN toolchain community get up to speed on the the coming consequences of the CRA, in such a way that necessary decisions can be made. A natural deadline for this is the PTS in Leipzig in May.
 
-### Other
-*   @sjn – let's set up git commit messages on IRC again!
-
 ### Upcoming events and deadlines
 1. [FOSDEM Fringe 2025](https://fosdem.org/2025/fringe/) - Friday January 31st, Brussels
     * Related: [EU Open Source Week](https://opensourceweek.eu/)

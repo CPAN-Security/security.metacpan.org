@@ -28,7 +28,8 @@ Members need to agree to the following before getting access to information abou
 This information is not to be discussed on public channels such as IRC, Mastodon, or similar.
 
 3. Patches or PoCs are not to be kept on public GIT or CPAN repos available to anyone else, or similar.
-Testing of patches must be in a staged private environment isolated to your system. These patches should only be made available publicly after the public release date of the vulnerability.
+Testing of patches must be in a staged private environment isolated to your system.
+These patches should only be made available publicly after the public release date of the vulnerability.
 
 4. The deployment of the patches and/or mitigations for pre-release vulnerabilities is NOT permitted to any system during the embargo, with the exception of CRITICAL vulnerabilities that threaten the integrity of PAUSE, CPAN or MetaCPAN.
 

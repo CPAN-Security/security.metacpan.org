@@ -99,7 +99,7 @@ title: Minutes 2024-10-30
     * Advisory Location; TODO: likely a git repo or mailing list
 
 ### Recruitment
-*   @tux - @rrwo, @jjatria, @tib were positive
+*   @tux - @robrwo, @jjatria, @tib were positive
 
 ### CPANSA feed
 *   @garu - old feed fixed, new feed underway.

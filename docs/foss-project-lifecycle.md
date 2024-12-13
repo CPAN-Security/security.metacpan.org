@@ -137,11 +137,12 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Package maintenance
     * Release management
     * Tooling development
-1. **Quality Assurance and Testing**
-    * Error testing
+1. **Quality Assurance and Testing writing**
+    * Error and exception testing
     * Increase code coverage
-    * Security test writing
-    * Test writing
+    * Performance testing
+    * Security testing
+    * Unit and integration testing
     * Test data creation
     * UI/UX Testing
 1. Software and systems design review

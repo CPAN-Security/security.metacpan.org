@@ -5,11 +5,15 @@ Tuesday 2024-12-17 @ 18:00 UTC / 19:00 CET
 FOSS Funders
 
 
-## Quotes
+## Claims & Quotes
 
-> _Contributions_ is the life-blood of Open Source projects.
-> Funding is useful, but mainly a proxy for solving any real issues.
-> Projects still need people who _care_ and _contribute_.
+> 1. _Contributions_ is the life-blood of Open Source projects.
+> 2. Funding is useful, but mainly a tool for making "boring things" happen.
+>   * Projects still need _competent_ people who _care_ enough to _contribute_.
+>   * Funding can help, but not without the right people caring enough about the right issues.
+> 3. Metrics is useful, but mainly for creating situation awareness.
+>   * And the time you learn something from metric, it may be too late to address any root causes.
+>   * Situation awareness is useless if one fails to act on it in time.
 
 
 ## Questions

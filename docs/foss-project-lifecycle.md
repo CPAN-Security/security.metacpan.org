@@ -171,6 +171,10 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Accessibility audit
 1. Mental health support
     * Mental health first-aider
+1. Commercial customer support
+    * Indemnification
+    * Hosting
+    * Consulting
 
 
 ## Project Support Indicators

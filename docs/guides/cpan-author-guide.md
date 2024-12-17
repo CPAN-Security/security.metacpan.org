@@ -11,7 +11,7 @@ toc: true
 > What you see here is a DRAFT of the `CPAN Author's Security Guide` by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/cpan-author-guide.md](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/cpan-author-guide.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/guides/docs/guides/cpan-author-guide.md](https://github.com/CPAN-Security/security.metacpan.org/blob/guides/docs/guides/cpan-author-guide.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
@@ -35,7 +35,8 @@ toc: true
 ## Share your security metadata
 
 1. Add a [security.txt](https://securitytxt.org/) file to your project website
-1. Add a [security policy](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository#adding-a-security-policy-to-your-repository) to your Github project
+1. Add a [distribution security policy](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/guides/security-policy-for-authors.md) to your distribution.
+   1. Add the same to your project repository ([Github instructions](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)).
 
 ## Add security tests to your code
 

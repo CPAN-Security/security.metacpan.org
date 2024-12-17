@@ -15,12 +15,18 @@ Documents relevant to the CPAN Security Group.
 
 ## Guides
 
-* [CPAN Author's guide](cpan-author-guide.md) ⚠️  DRAFT
-* [Risk assessment guide](risk-assessment-guide.md) ⚠️  DRAFT
-* [Risk mitigation guide](risk-mitigation-guide.md) ⚠️  DRAFT
+* [CPAN Author's guide](guides/cpan-author-guide.md) ⚠️  DRAFT
+* [CPAN Author's Security Policy guide](security-policy-for-authors.md) ⚠️  DRAFT
+* [Risk assessment guide](guides/risk-assessment-guide.md) ⚠️  DRAFT
+
+See [guides/](guides/) for the full list of guides.
 
 ## Background info
 
 * Tech & legislation [Reading list](readinglist.md) ⚠️  DRAFT
 * [Glossary](glossary.md) of terms ⚠️  DRAFT
 * [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
+
+## Other
+
+* [CPAN Dependency Confusion (study)](cpan-dependency-confusion.md)

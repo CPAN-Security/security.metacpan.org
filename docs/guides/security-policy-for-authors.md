@@ -53,14 +53,16 @@ for more information.
 
 The security policy should be a text document with minimal formatting
 that can be read without a specialised reader, with the name
-`SECURITY-POLICY` and a suffix to indicate the markup (`.md` for
-markdown, `.pod` for POD or optionally `.txt`).
+`SECURITY` or `SECURITY-POLICY` and a suffix to indicate the markup
+(`.md` for markdown, `.pod` for POD or optionally `.txt`).
 
 More complex markup formats like HTML are not recommended.
 
-The name `SECURITY-POLICY` is intended to differentiate this from
-`security.txt` which has a specific machine-readable format and has
-a different function [\[4\]](#references-and-notes) (Securitytxt).
+The all caps filename is intended to indicate that this is an
+important document on par with `README`, `LICENSE` and `INSTALL`.
+This will also differentiate the file from `security.txt` which has a
+specific machine-readable format and has a different function
+[\[4\]](#references-and-notes) (Securitytxt).
 
 The file should have the following sections.
 
@@ -420,7 +422,7 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 0.1.8
+* Version: 0.1.9
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

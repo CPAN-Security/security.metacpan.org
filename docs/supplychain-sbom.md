@@ -1326,47 +1326,47 @@ Several people have been involved in the development of this document
 
 ### SBOM Attribute names and obligation sources
 
-| Attribute name                      | Required | References                                                     | Authority                                                              | Comment |
-| :---------------------------------- | :------: | -------------------------------------------------------------: | :--------------------------------------------------------------------- | :------ |
-| Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183-2                    | 🟥&nbsp;Author, 🟥&nbsp;Maintainer                                     |         |
-| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10                    | 🟥&nbsp;Maintainer                                                     |         |
-| Version                             | Yes      | CISA-2024-10, CRA-AV, TR-03183-2                               | 🟥&nbsp;Maintainer                                                     |         |
-| Purpose, Intended Use               | Yes      | CRA-AII(4)                                                     | 🟥&nbsp;Maintainer                                                     |         |
-| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, CSCRF, TR-03183-2 | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Integrator, 🟥&nbsp;Manufacturer |  |
-| Security contact                    | Yes      | CRA-AII(2)                                                     | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Builder |         |
-| Cryptographic Hash                  | Yes      | CISA-2024-10, CSCRF                                            | 🟥&nbsp;Maintainer, 🟨&nbsp;Builder                                    |         |
-| Copyright Notice                    | Yes      | CISA-2024-10                                                   | 🟥&nbsp;Author, 🟥&nbsp;Manufacturer                                   |         |
-| License(s)                          | Yes      | CISA-2024-10, CSCRF                                            | 🟥&nbsp;Author, 🟥&nbsp;Manufacturer                                   |         |
-| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, CSCRF, PCI-SSF            | 🟥&nbsp;Maintainer                                                     |         |
-| Dependencies (Known unknowns)       | Yes      | CSCRF                                                          |                                                                        | 🙄 Write a bug report! |
-| Dependency Relationships            | Yes      | CISA-2024-10                                                   | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                   |         |
-| Encryption used                     | Yes      | CSCRF                                                          | 🟥&nbsp;Maintainer, 🟨&nbsp;Builder                                    |         |
-| Frequency of updates                | Yes      | CSCRF                                                          | 🟥&nbsp;Maintainer                                                     | 😬 Start funding OSS! |
-| Access control                      | Yes      | CSCRF                                                          |                                                                        |         |
-| Methods for accommodating errors    | Yes      | CSCRF                                                          |                                                                        | 🤨 Write a bug report! |
-| Executable Property                 | Yes      | TR-03183-2                                                     |                                                                        | 😑      |
-| Archive Property                    | Yes      | TR-03183-2                                                     |                                                                        | 😑      |
-| Structured Property                 | Yes      | TR-03183-2                                                     |                                                                        | 😑      |
-| Download location                   | No       |                                                                | 🟥&nbsp;Maintainer, 🟨&nbsp;Curator                                    |         |
-| Code Commit Revision                | No       |                                                                | 🟥&nbsp;Maintainer                                                     |         |
-| Code Repository                     | No       |                                                                | 🟥&nbsp;Maintainer                                                     |         |
-| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-19                                         | 🟥&nbsp;Author, 🟥&nbsp;Maintainer                                     |         |
-| Open Source Software Steward        | No       | CRA-Rec-19                                                     | 🟥&nbsp;Author, 🟥&nbsp;Maintainer                                     |         |
-| Security Attestation                | No       | CRA-Rec-21                                                     | 🟥&nbsp;Open Source Software Steward                                   |         |
-| SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183-2                            |                                                                        |         |
-| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183-2                            |                                                                        |         |
-| SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                                        |                                                                        |         |
-| SBOM Generation Tool                | No       |                                                                |                                                                        |         |
-| SBOM Location                       | Yes      | CRA-AII(9), TR-03183-2                                         |                                                                        |         |
-| SBOM Primary Component              | No       | CycloneDX 1.6, SPDX 3.0                                        | 🟨&nbsp;Builder, 🟨&nbsp;Packager                                      |         |
-| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                        |                                                                        |         |
-| SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                                        |                                                                        |         |
-| SBOM Type                           | No       | CISA-2023, CISA-2024-10                                        |                                                                        |         |
-| CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                                          | 🟥&nbsp;Manufacturer                                                   |         |
-| CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                                             | 🟥&nbsp;Manufacturer                                                   |         |
-| CE Support End Date                 | No       | CRA-AII(7)                                                     | 🟥&nbsp;Manufacturer                                                   |         |
-| CE Technical Documentation          | No       | CRA-AII(8)                                                     | 🟥&nbsp;Manufacturer                                                   |         |
-| CE Authorised Representative        | No       | CRA-Art-18                                                     | 🟥&nbsp;Manufacturer                                                   |         |
+| Attribute name                      | Required | Obligation References                                          | Upstream Metadata Authority                                             | Comment |
+| :---------------------------------- | :------: | -------------------------------------------------------------: | :---------------------------------------------------------------------- | :------ |
+| Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183-2                    | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Packager                    |         |
+| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10                    | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
+| Version                             | Yes      | CISA-2024-10, CRA-AV, TR-03183-2                               | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
+| Purpose, Intended Use               | Yes      | CRA-AII(4)                                                     | 🟥&nbsp;Maintainer                                                      |         |
+| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, CSCRF, TR-03183-2 | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Packager |         |
+| Security contact                    | Yes      | CRA-AII(2)                                                     | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Builder  |         |
+| Cryptographic Hash                  | Yes      | CISA-2024-10, CSCRF                                            | 🟥&nbsp;Maintainer, 🟨&nbsp;Builder                                     |         |
+| Copyright Notice                    | Yes      | CISA-2024-10                                                   | 🟥&nbsp;Author                                                          |         |
+| License(s)                          | Yes      | CISA-2024-10, CSCRF                                            | 🟥&nbsp;Author                                                          |         |
+| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, CSCRF, PCI-SSF            | 🟥&nbsp;Maintainer                                                      |         |
+| Dependencies (Known unknowns)       | Yes      | CSCRF                                                          | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    | 🙄 Write a bug report! |
+| Dependency Relationships            | Yes      | CISA-2024-10                                                   | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
+| Encryption used                     | Yes      | CSCRF                                                          | 🟥&nbsp;Maintainer, 🟨&nbsp;Builder                                     |         |
+| Frequency of updates                | Yes      | CSCRF                                                          | 🟥&nbsp;Maintainer                                                      | 😬 Start funding OSS! |
+| Access control                      | Yes      | CSCRF                                                          |                                                                         |         |
+| Methods for accommodating errors    | Yes      | CSCRF                                                          |                                                                         | 🤨 Write a bug report! |
+| Executable Property                 | Yes      | TR-03183-2                                                     |                                                                         | 😑      |
+| Archive Property                    | Yes      | TR-03183-2                                                     |                                                                         | 😑      |
+| Structured Property                 | Yes      | TR-03183-2                                                     |                                                                         | 😑      |
+| Download location                   | No       |                                                                | 🟥&nbsp;Maintainer, 🟨&nbsp;Curator                                     |         |
+| Code Commit Revision                | No       |                                                                | 🟥&nbsp;Maintainer                                                      |         |
+| Code Repository                     | No       |                                                                | 🟥&nbsp;Maintainer                                                      |         |
+| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-19                                         | 🟥&nbsp;Author, 🟨&nbsp;Maintainer                                      |         |
+| Open Source Software Steward        | No       | CRA-Rec-19                                                     | 🟥&nbsp;Author, 🟨&nbsp;Maintainer                                      |         |
+| Security Attestation                | No       | CRA-Rec-21                                                     | 🟥&nbsp;Open Source Software Steward                                    |         |
+| SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183-2                            |                                                                         |         |
+| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183-2                            |                                                                         |         |
+| SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                                        |                                                                         |         |
+| SBOM Generation Tool                | No       |                                                                |                                                                         |         |
+| SBOM Location                       | Yes      | CRA-AII(9), TR-03183-2                                         |                                                                         |         |
+| SBOM Primary Component              | No       | CycloneDX 1.6, SPDX 3.0                                        | 🟨&nbsp;Builder, 🟨&nbsp;Packager                                       |         |
+| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                        |                                                                         |         |
+| SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                                        |                                                                         |         |
+| SBOM Type                           | No       | CISA-2023, CISA-2024-10                                        |                                                                         |         |
+| CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                                          | 🟥&nbsp;Manufacturer                                                    |         |
+| CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                                             | 🟥&nbsp;Manufacturer                                                    |         |
+| CE Support End Date                 | No       | CRA-AII(7)                                                     | 🟥&nbsp;Manufacturer                                                    |         |
+| CE Technical Documentation          | No       | CRA-AII(8)                                                     | 🟥&nbsp;Manufacturer                                                    |         |
+| CE Authorised Representative        | No       | CRA-Art-18                                                     | 🟥&nbsp;Manufacturer                                                    |         |
 
 
 ### SBOM JSON Paths and data types
@@ -1381,7 +1381,7 @@ Several people have been involved in the development of this document
 | Supplier Name (Manufacturer)        | Text, URL    | bom.metadata[manufacturer], bom.components[].manufacturer             | creationInfo.creators[], packages[].originator, packages[].supplier | Software.Package.suppliedBy | |
 | Unique Product Identifier           | PURL         | bom.components[].purl | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | |
 | Version                             | Text         | bom.components[].version                                              | packages[].versionInfo  | Software.Package.packageVersion | |
-| Version (Redistributed)             | Text         | bom.metadata.version                                                  | packages[].versionInfo  | Software.Package.packageVersion | FIXME: Confirm this |
+| Version (Redistributed)             | Text         | bom.metadata.version                                                  | packages[].versionInfo  | Software.Package.packageVersion | FIXME – confirm |
 | Code Commit Revision                | SHA1         |                                                                       |                         |          |         |
 | Code Repository                     | URL          | bom.metadata.component.externalReferences[].vcs | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator | |
 | Dependencies                        | List         | bom.components[], bom.dependencies[]                                  | relationships[].[spdxElementId,relatedSpdxElement] | |

@@ -3,10 +3,6 @@ title: CPAN Security Group
 layout: home
 toc: false
 list_title: CPANSec News
-github_username: CPAN-Security
-mastodon:
-    username: cpan_security
-    instance: perl.social
 ---
 Welcome to the [CPAN Security Group](https://security.metacpan.org/).
 This is a community effort for supporting and responding to security incidents on CPAN – the Comprehensive Perl Archive Network.

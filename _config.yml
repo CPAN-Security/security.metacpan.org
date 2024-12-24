@@ -13,6 +13,12 @@ header_pages:
   - presentations/README.md
 
 repository: CPAN-Security/security.metacpan.org
+github_username: CPAN-Security
+## Friendica links not supported yet in minima template
+#mastodon:
+#  - { username: cpan_security, instance: perl.social }
+#friendica:
+#  - { username: cpan_security, instance: perl.social }
 
 paginate: 4
 paginate_path: "/news/all/page:num"

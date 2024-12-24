@@ -151,7 +151,7 @@ Additionally,
 ### Maintainers
 
 * CRA does not apply to you, as long as…
-  * You are providing Free and Open Source Software (as mention in [Recital 18](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=4))
+  * You are providing Free and Open Source Software (as mentioned in [Recital 18](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=4))
 
 
 

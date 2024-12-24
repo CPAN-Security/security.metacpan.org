@@ -2,7 +2,7 @@
 layout: page
 permalink: /meetings/
 toc: false
-next_meeting_time: August 29th, 2024 16:00 UTC
+next_meeting_time: January 8th, 2025 16:00 UTC
 title: CPANSec meeting details & minutes
 ---
 
@@ -15,7 +15,7 @@ title: CPANSec meeting details & minutes
     * The meeting is primarily for sharing progress; If you have lots of questions, please ask them before/after the timeboxed period.
     * Changes in how we organize ourselves and work are discussed and decided under the "Operating changes" agenda item.
 * **Location**: Online, in the [CPANSec Matrix channel](https://matrix.to/#/#cpansec-discussion:matrix.org), using the Jitsi widget for video conferencing
-* **Agenda**: Announced in the IRC and Matrix channels
+* **Agenda**: Announced in the IRC and Matrix channels before each meeting; The agenda is made collaboratively before each meeting — Please join our channels to contribute!
 
 
 ## Meeting minutes
@@ -32,7 +32,13 @@ title: CPANSec meeting details & minutes
 * [2024-07-18](cpansec-minutes-2024-07-18.md)
 * [2024-08-01](cpansec-minutes-2024-08-01.md)
 * [2024-08-15](cpansec-minutes-2024-08-15.md)
-* [2024-08-29]()
+* [2024-08-29](cpansec-minutes-2024-08-29.md)
+* [2024-10-02](cpansec-minutes-2024-10-02.md)
+* [2024-10-30](cpansec-minutes-2024-10-30.md)
+* [2024-11-15](cpansec-minutes-2024-11-15.md)
+* [2024-11-27](cpansec-minutes-2024-11-27.md)
+* [2024-12-11](cpansec-minutes-2024-12-11.md)
+* [2025-01-08](cpansec-minutes-2025-01-08.md)
 
 ### Under review
 

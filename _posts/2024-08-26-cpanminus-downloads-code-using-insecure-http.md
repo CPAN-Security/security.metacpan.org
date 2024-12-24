@@ -69,6 +69,24 @@ $ perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|f
 - [CPAN.pm](https://metacpan.org/dist/CPAN) (`cpan`) 2.35 or later will use HTTPS with certificate verification if TLS support is available  
 - [App::cpm](https://metacpan.org/pod/App::cpm) (`cpm`) uses HTTPS sources by default
 
+### Note on LWP::UserAgent
+
+It was [reported](https://github.com/Perl/docker-perl/issues/169) to docker-perl
+that cpanminus will fail at downloading from https sources if LWP::UserAgent is
+installed without LWP::Protocol::https.
+
+If you encounter errors like `LWP will support https URLs if the
+LWP::Protocol::https module is installed.`, you can pass `--no-lwp` as a command
+line argument, or apply an additional patch to the executable:
+
+```sh
+$ perl -pi -E 's{try_lwp=>1}{try_lwp=>0}g' /path/to/cpanm 
+```
+
+This will disable LWP::UserAgent support, use `curl`, `wget` or `HTTP::Tiny`
+instead.
+
+
 ## Links
 
 - [NVD - CVE-2024-45321](https://nvd.nist.gov/vuln/detail/CVE-2024-45321)
@@ -79,3 +97,4 @@ $ perl -pi -E 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|f
 ## Changes
 - 2024-08-27: Add reference to CVE-2024-45321, add excerpt, fix typos, add note about CPAN.pm version.
 - 2024-08-27: Minor rewording for the `--from` cpanm option explanation.
+- 2024-10-02: Add note about LWP::UserAgent and `--no-lwp` workaround

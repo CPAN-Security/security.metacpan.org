@@ -1,3 +1,10 @@
+---
+layout: page
+toc: true
+meeting_time: February 24th, 2024 15:00 UTC
+title: Minutes 2024-02-24
+---
+
 # Meeting Minutes 2024-02-24
 
 For additions or corrections, please reply to invitation mail or contact the meeting organizer ([@oalders](https://github.com/oalders)) or their secretary ([@timlegge](https://github.com/timlegge)).

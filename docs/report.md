@@ -4,6 +4,8 @@ title: Report Security Issue
 toc: true
 ---
 
+> Update: The CPANSec vulnerability contact email address has changed to [cpan-security@security.metacpan.org](mailto:cpan-security@security.metacpan.org)
+
 ## I've found a vulnerability in Perl
 
 The Perl project takes security issues seriously.
@@ -15,7 +17,7 @@ We will coordinate with the Perl security team if necessary.
 
 ## I've found malware on CPAN
 
-Please contact our security team on [cpan-security@perl.org](mailto:cpan-security@perl.org) privately, with the following information:
+Please contact our security team on [cpan-security@security.metacpan.org](mailto:cpan-security@security.metacpan.org) privately, with the following information:
 
 - Distribution name, version, and download URL
 - Description of malicious behavior
@@ -58,15 +60,15 @@ Also consider proposing a date for public disclosure, this is usually 30 days or
 ### Step 2: Contact the Author
 
 Send the vulnerability report to the distribution author by email or other private channels.
-You can CC our team on [cpan-security@perl.org](mailto:cpan-security@perl.org) on the report if you would like us to help in triaging the issue, register CVE identifiers, or for any other reason.
+You can CC our team on [cpan-security@security.metacpan.org](mailto:cpan-security@security.metacpan.org) on the report if you would like us to help in triaging the issue, register CVE identifiers, or for any other reason.
 
 The authors email address is usually available in the documentation, or on their page on [metacpan.org](https://metacpan.org/).
 
-When authors receive a vulnerability reports, they will usually need some time to:
+When authors receive a vulnerability report, they will usually need some time to:
 
-- Confirm the problem and assess severity
-- Check the code to find any potential similar problems
-- Prepare fixes and coordinate a release
+- Confirm the problem and assess severity;
+- Check the code to find any potential similar problems;
+- Prepare fixes and coordinate a release.
 
 Please allow for some time for authors and potential downstream distributions to coordinate fixes before going public.
 It is not unusual for authors to request extensions to any proposed disclosure date.
@@ -74,15 +76,15 @@ It is not unusual for authors to request extensions to any proposed disclosure d
 
 #### If the Author is unresponsive
 
-If the author is unresponsive, or you are concerned that the issue is not being handled, or for other reasons, then please send the report to [cpan-security@perl.org](mailto:cpan-security@perl.org) so we can coordinate with authors and relevant community members directly.
+If the author is unresponsive, or you are concerned that the issue is not being handled, or for other reasons, then please send the report to [cpan-security@security.metacpan.org](mailto:cpan-security@security.metacpan.org) so we can coordinate with authors and relevant community members directly.
 
-If you wish that we keep your identity private, please state this in the first line  the email to us.
+If you wish that we keep your identity private, please state this in the first line of your email to us.
 You do not need to provide any rationale.
 
 
 ### Step 3: Disclosure
 
-When disclosure has been agreed by the parties, or if details of the vulnerability has otherwise been made public, the CPAN Security Group will take following actions:
+When disclosure has been agreed by the parties, or if details of the vulnerability have otherwise been made public, the CPAN Security Group will take following actions:
 
 1. Add a public record to CPAN vulnerability databases
 2. Register a CVE number, if relevant

@@ -1,4 +1,4 @@
-all: tprc2023-cpan-sec-lightning-talk/index.html perlkohacon-cpan-sec-lightning-talk/index.html pts2023-nis2-cra-intro/index.html perlkohacon-cpan-sbom-talk/index.html fosdem2024-cpan-sec-talk/index.html fosdem2024-sbom-in-open-source-ecosystems-talk/index.html pts2024-cra-update/index.html
+all: tprc2023-cpan-sec-lightning-talk/index.html perlkohacon-cpan-sec-lightning-talk/index.html pts2023-nis2-cra-intro/index.html perlkohacon-cpan-sbom-talk/index.html fosdem2024-cpan-sec-talk/index.html fosdem2024-sbom-in-open-source-ecosystems-talk/index.html pts2024-cra-update/index.html lpw2024-metadata-cpan-foss-cra/index.html nuug2024-metadata-foss-cra/index.html
 
 
 tprc2023-cpan-sec-lightning-talk/index.html: tprc2023-cpan-sec-lightning-talk.md
@@ -21,3 +21,9 @@ pts2023-nis2-cra-intro/index.html: pts2023-nis2-cra-intro.md
 
 pts2024-cra-update/index.html: pts2024-cra-update.md
 	mdslides pts2024-cra-update.md --include ../media
+
+lpw2024-metadata-cpan-foss-cra/index.html: lpw2024-metadata-cpan-foss-cra.md
+	mdslides lpw2024-metadata-cpan-foss-cra.md --include ../media
+
+nuug2024-metadata-foss-cra/index.html: nuug2024-metadata-foss-cra.md
+	mdslides nuug2024-metadata-foss-cra.md --include ../media

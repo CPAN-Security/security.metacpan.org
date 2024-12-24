@@ -2,6 +2,9 @@
 layout: page
 title: Glossary of Terms
 description: List of terms used throughout CPANSec projects
+draft: true
+draft_text: What you see here is a DRAFT of the Glossary used by the CPAN Security Group (CPANSec).
+contribution_url: https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md
 toc: true
 ---
 
@@ -204,22 +207,31 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded-included-pre-resolved-%EF%B8%8F)
 
-#### Dependency (Implied, Assumed, Unstated) ✍️
+#### Dependency (Assumed, Implied, Phantom, Unstated) ✍️
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-> 1. (CPANSec-2024) A dependency that is _unstated_.
+> 1. (CPANSec-2024) A dependency that is used but _unstated_.
 >     * An implied dependency is a component that is required to perform an action or functionality, but has not been explicitly stated as required.
 >     * An implied dependency should be considered as a bug in the component, and corrected as soon as possible.
->     * If a dependency has to be implied due to lacking capabilities in the tooling used to create the package, then this should be considered as a bug in the tooling.
+>     * If a dependency has to be implied due to lacking capabilities in the tooling used to create the package.
+>          * This should be considered as a bug in the tooling.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
 ##### Dependency (Detected during Analysis) ✍️
 
 > * See also
->     * [Dependency (Implied, Assumed, Unstated)](#dependency-implied-assumed-unstated-%EF%B8%8F)
+>     * [Dependency (Assumed, Implied, Phantom, Unstated)](#dependency-assumed-implied-phantom-unstated-%EF%B8%8F)
+
+#### Dependency (Optional)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> * See also
+>     * [Dependency (Static)](#dependency-static)
 
 #### Dependency (Unresolved, Required) ✍️
 
@@ -236,12 +248,12 @@ Please take this into account when commenting this document.
 ##### Requirement ✍️
 
 > * See also
->     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
+>     * [Dependency (Unresolved, Required)](#dependency-unresolved-required-%EF%B8%8F)
 
 ##### Pre-Requirement ✍️
 
 > * See also
->     * [Dependency (Unresolved)](#dependency-unresolved-required-requirement-pre-requirement-%EF%B8%8F)
+>     * [Dependency (Unresolved, Required)](#dependency-unresolved-required-%EF%B8%8F)
 
 #### Dependency (Resolved during Configuration) ✍️
 
@@ -376,6 +388,11 @@ Please take this into account when commenting this document.
 >
 > (Ref: [NTIA-2021](#references-and-terms), [EUBG-2022-3](#references-and-terms))
 
+
+### GrayPAN/GreyPAN
+
+> 1. A GrayPAN is a publicly accessible CPAN, but published outside the CPAN infrastructure, resulting in a codebase that is factually public, but functionally non existent from the perspective of CPAN (e.g. own index).
+> (Ref [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-various-pans/))
 
 ### Hardware
 
@@ -886,7 +903,7 @@ This glossary is partly based on terms from the following sources.
 - (CISA-2024-3) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
 - (PCISSF-2023) [PCI Software Security Framework](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), published May 2023.
 - (CDXAG-2024) [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf), Second edition, Appendix A, published April 2024.
-- (CISA-2024-9) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](), Sections 2.2.1.4, 2.2.2, and Appendix B, Published 2024-09-03
+- (CISA-2024-9) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](), Third edition, Sections 2.2.1.4, 2.2.2, and Appendix B, Published 2024-09-03
     - FIXME: Replace after publishing: [draft document](https://docs.google.com/document/d/1z8hKtPxs5OWaspst120NHN9XXgyULGl2aKdSebwIYPc/edit)
 - (EUBG-2022-3) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)#page=34), Chapter 3 (pages 34-46), published 2022-06-29.
 - (NIXOS-2024) [Nix concepts](https://zero-to-nix.com/concepts), as of 2024-08-15

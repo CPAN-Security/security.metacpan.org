@@ -16,34 +16,23 @@ mermaid: true
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
-
-## Table of life-cycle states
-
-States in **bold** already exist on CPAN.
-
-| State        | Maint = 0 | Maint = 1 | Maint >= 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| ------------ | --------- | --------- | ---------- | -------------------- | ------------------ | ------------- | ------------ |
-| **NEEDHELP** | no        | YES       | YES        | YES                  | no                 | LOW           | Maintainer   |
-| **HANDOFF**  | no        | YES       | no         | YES                  | YES                | LOW           | Maintainer   |
-| **ADOPTME**  | YES       | no        | no         | YES                  | no                 | NONE          | Ecosystem    |
-| CUSTODY      | YES       | no        | no         | YES                  | no                 | LOW           | Ecosystem    |
-| ACTIVE       | no        | YES       | YES        | no                   | no                 | OK            | Maintainer   |
-| DONE         | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer   |
-| UNMAINTAINED | no        | YES       | YES        | no                   | no                 | NONE          | Maintainer   |
-| CASUAL       | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer   |
-| NEEDFUNDING  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer   |
-| NEEDSUPPORT  | no        | YES       | YES        | no                   | no                 | LOW           | Maintainer   |
-| **NOXFER**   | no        | YES       | YES        | no                   | no                 | NONE          | Ecosystem    |
-| COMPROMISED  | YES       | YES       | YES        | no                   | no                 |               | Ecosystem    |
-| DISCOURAGED  | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem    |
-| DELISTED     | YES       | YES       | YES        | no                   | no                 | NONE          | Ecosystem    |
+This document is background material and notes for the [CycloneDX OSS Sustainability WG](https://docs.google.com/document/d/1IZnHEwzz1N7LbChVkZTE_dfo3I2np8rULssq5I2wchM/edit).
+In this project we try to help both OSS project's Maintainers communicate their needs and requirements, as well as help the share important information that may assist their user's _business continuity challenges_.
 
 
-### State indicators
+## Project Need Indicators
 
-1. ACTIVE – The project is maintained (default state)
-    * (number of maintainers is higher than 0)
-    * (number of maintainers does not need to change)
+States in **bold** exist on CPAN.
+
+| Needs        | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| **NEEDHELP** | no        | YES       | YES       | LOW           | Maintainer   |
+| **HANDOFF**  | no        | YES       | no        | LOW           | Maintainer   |
+| **ADOPTME**  | YES       | no        | no        | NONE          | Ecosystem    |
+| NEEDFUNDING  | no        | YES       | YES       | LOW           | Maintainer   |
+| NEEDSUPPORT  | no        | YES       | YES       | LOW           | Maintainer   |
+
+
 1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))
     * (number of maintainers is higher than 0)
     * (number of maintainers is too low)
@@ -54,26 +43,6 @@ States in **bold** already exist on CPAN.
     * The project needs a new maintainer
     * (number of maintainers is 0)
     * (number of maintainers is too low)
-1. NOXFER – The project is prevented from being transferred to new maintainers (Ref: [PAUSE-2017](#references))
-    * The project has been prevented from being adopted, but may still be forked
-    * (number of maintainers is not relevant)
-1. CUSTODY – This project is under custodianship
-    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
-    * (number of maintainers is 0)
-1. DONE – The project is considered "Done", and while it is maintained, no further development is needed or expected
-    * (number of maintainers is 1 or higher)
-    * (number of maintainers does not need to change)
-1. DEPRECATED – The project maintainer recommends that this project is not to be used
-    * (number of maintainers is 0)
-    * (number of maintainers does not need to change)
-1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))
-    * Response time expectations should be none
-    * (number of maintainers is 1 or higher)
-    * (number of maintainers does not need to change)
-1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
-    * Response time expectations should be low
-    * (number of maintainers is 1 or higher)
-    * (number of maintainers does not need to change)
 1. NEEDFUNDING – This project needs funding
     * Workload is unsustainable with only a volunteer-level commitment
     * (number of maintainers is 1 or higher)
@@ -83,73 +52,215 @@ States in **bold** already exist on CPAN.
     * Examples: Branding development; Code security audit; Event organizing; Documentation writing;
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
-1. COMPROMISED
-    * Project has removed from the index due to security issues
-1. DELISTED
-    * Removed from the ecosystem index for some reason
-1. DUAL
-    * Equivalent to the P5P special user on CPAN (Ref: [PAUSE-2017](#references))
-    * Used to specify modules that are both published as part of the core language, and through a language ecosystem
+    * See [Enumeration of NEEDSUPPORT items](#enumeration-of-needsupport-items) for examples
 
-
-### List of Support Types
+### Enumeration of NEEDSUPPORT items
 
 When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
 
-1. Brand Development
-    * Strategy
-    * Implementation
-    * Hosting & legal
-1. Bug or issue triage
-1. Outreach & marketing
-    * Article writing
-    * Podcast hosting or participation
-    * Conference presentations
-    * SoMe presence
-1. Code review
-    * Security review
-    * Development process
-    * Maintainability
-1. Documentation
-    * Completeness
-    * Consistency and Voice
-    * User or Stakeholder Relevance
-    * Indexing, Findability & SEO
+Needs in **bold** are found in [CHAOSS-2020](#references).
+
+1. Project Branding
+    * Brand Development and Strategy
+    * Brand Management and Implementation
+1. **Code Review**
+    * Development process review
+    * Maintainability review
+    * Secure Code review (SCR)
+1. **Code Writing** and development
+    * **Bug Triage**
+    * CI/CD configuration
+    * Feature implementation
     * Internationalization/I18N
-    * Localization/L10N and Translation (Ref: [CHAOSS-2020](#references))
-1. Community management & development
-    * Governance development
-    * Culture & conduct
+    * Security hardening
+1. **Community Building and Management**
+    * Culture and conduct
     * Diversity, Equity, Inclusion
     * Forum management, moderation and support
-    * Outreach & recruitment
-1. Technical infrastructure and hosting
-    * Email
-    * Chat forum
-    * DNS
-    * Other hosted community services
-1. Event organizing
+    * Governance development
+    * Recruitment and on-boarding
+1. Informational Content Creation
+    * Audio or Video Editing
+    * Podcast Hosting or Participation
+    * **Writing Articles** / Blogging
+    * Script writing
+    * Creating Infographics
+    * Writing Case studies / White papers
+1. **Creative Work and Design**
+    * Creative copywriting
+    * Visual / graphic design
+    * Animation / motion graphics
+    * Photography / videography
+    * Audio design
+    * Apparel design (t-shirts, swag)
+1. **Documentation Writing**
+    * Automation and Completeness
+    * Consistency, Voice and Tone
+    * Indexing, Discoverability, Keyword Analysis and SEO
+    * **Localization/L10N and Translation**
+    * Technical writing
+    * User or Stakeholder Relevance
+1. **Event Organizing**
     * Conferences, Meetups, Hackathons or other gatherings for knowledge-sharing
     * Online events, webinars or classes/training
-    * Socializing
-1. Industry/Stakeholder/OSPO assistance
-1. Fundraising
-1. Media relations
-1. Security contact
-1. Course/training material development
-1. Open Source Steward (EU Cyber Resilience Act)
-1. Legal counsel
-    * License conflict resolution
-    * License enforcement
+    * Program committee work
+    * Social and networking events
+1. **Financial Management**
+    * Fund-raising
+    * Grant management
+1. **Legal Counsel**
+    * Licensing and other legal advice
+    * License Conflict Resolution
+    * License Enforcement
+    * Trademark Defense
+    * Trademark Registration
 1. Mentorship (Ref: [MSFTOSS-2024](#references))
-    * Security
+    * Code contribution
+    * Documentation
     * Governance
-    * Outreach & Communication
-1. Skill & contribution gaps compensation (Ref: [MSFTOSS-2024](#references))
-    * Language
-    * Technology/platform
-    * Specialized skills
-1. User Interface, User Experience, and Accessibility (Ref: [CHAOSS-2020](#references))
+    * Outreach and Communication
+    * Security
+    * Language, technology or platform
+1. Outreach
+    * Content Strategy, Planning and Auditing
+    * Industry/Stakeholder/OSPO Outreach and Assistance
+    * **Marketing and Campaign Advocacy**
+    * Media relations
+    * Developer relations
+    * **Public Relations - Interviews with Technical Press**
+    * **Social Media Management** and presence
+    * **Speaking at Events** and Conference Presentations
+    * **Website Development**
+1. Packaging and containerization
+    * Adaptation new packaging ecosystems
+    * Container assembly
+    * Package maintenance
+    * Release management
+    * Tooling development
+1. **Quality Assurance and Testing**
+    * Error testing
+    * Increase code coverage
+    * Security test writing
+    * Test writing
+    * Test data creation
+    * UI/UX Testing
+1. Software and systems design review
+    * Review software architectural design patterns
+    * Review virtualized infrastructure design patterns
+    * Cryptography review
+    * Threat modeling (privacy, safety, security)
+    * API Modeling
+    * Data Modeling
+    * Dependency Review
+    * Sustainability Review
+1. **Teaching and Tutorial Building**
+    * Course/training material development
+    * E-learning module development
+1. Community infrastructure and hosting
+    * Chat forum hosting
+    * DNS and Email hosting
+    * Test infrastructure (CI/CD) hosting
+    * Other hosted community services
+1. **Troubleshooting and Support**
+    * **User Support and Answering Questions**
+1. **User Interface, User Experience, and Accessibility**
+    * UX/UI design
+    * Web / Mobile design
+    * Email & newsletter design
+    * Accessibility audit
+1. Mental health support
+    * Mental health first-aider
+
+
+## Project Support Indicators
+
+| Offers       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| MAINTAINED   | no        | YES       | YES       | OK            | Maintainer   |
+| CASUAL       | no        | YES       | YES       | LOW           | Maintainer   |
+| DONE         | no        | YES       | no        | LOW           | Maintainer   |
+| DEPRECATED   | no        | YES       | no        | NONE          | Maintainer   |
+| SECURITYONLY | no        | YES       | YES       | SECURITY      | Maintainer   |
+| SUPERSEEDED  | no        | YES       | YES       | NONE          | Maintainer   |
+| UNMAINTAINED | no        | YES       | YES       | NONE          | Maintainer   |
+
+
+1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
+    * Response time expectations should be low
+    * (number of maintainers is 1 or higher)
+    * (number of maintainers increase may be desired)
+1. DEPRECATED – The project maintainer recommends that this project is not to be used
+    * (number of maintainers is 0)
+    * (number of maintainers does not need to change)
+1. DONE – The project is considered "Done", and while it is maintained, no further development is needed or expected
+    * (number of maintainers is 1 or higher)
+    * (number of maintainers does not need to change)
+1. MAINTAINED – The project is maintained (default state)
+    * (number of maintainers is higher than 0)
+    * (number of maintainers increase may be desired)
+1. SECURITYONLY – The project receives security fixes only
+    * (number of maintainers is 1 or higher)
+    * (number of maintainers increase may be desired)
+1. SUPERSEEDED – This project is considered by the Maintainer have been replaced by another project
+    * (number of maintainers is 0 or higher)
+    * (number of maintainers does not need to change)
+1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))
+    * Response time expectations should be none
+    * (number of maintainers is 1 or higher)
+    * (number of maintainers increase may be desired)
+
+
+## Project Ecosystem States
+
+States in **bold** exist on CPAN.
+
+| States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| COMPROMISED  | no        | YES       | YES       | NONE          | Ecosystem    |
+| CUSTODY      | YES       | no        | no        | SECURITY      | Ecosystem    |
+| SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DUAL         | no        | YES       | YES       | OK            | Ecosystem    |
+| **NOXFER**   | no        | YES       | no        | NONE          | Ecosystem    |
+| UNREACHABLE  | no        | YES       | YES       | ERROR         | Ecosystem    |
+| UNRESPONSIVE | no        | YES       | YES       | NONE          | Ecosystem    |
+
+
+
+### Project State Indicators
+
+1. COMPROMISED – This project has a prevailing and substantial security compromise
+    * Project has removed from the index due to security issues that have prevailed for a substantial time.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+    * (number of maintainers is not relevant)
+1. CUSTODY – This project is under custodianship
+    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
+    * (number of maintainers is 0)
+1. SUSPENDED
+    * The project has been made inaccessible from the ecosystem index due to breaking of terms or code of conduct.
+        * e.g.: Publishing spam, malware, copyright infringement, illegal material or other inappropriate content.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+1. DELISTED
+    * The project has been removed from the ecosystem index due to extraordinary circumstances.
+        * e.g.: hacking, sabotage, denial of service, repeated suspensions or other types of attacks against the ecosystem infrastructure.
+    * The project is expected to NOT revert to its previous state.
+1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
+    * This project is maintained by the language core team itself.
+    * The project is both published as part of the core language, and through the language ecosystem.
+    * Equivalent to the P5P special user on CPAN (Ref: [PAUSE-2017](#references))
+1. NOXFER – The project is prevented from being transferred to new maintainers (Ref: [PAUSE-2017](#references))
+    * The project maintainer has requested that this project is to be prevented from being adopted.
+    * The project may still be forked under a new name.
+    * (number of maintainers is not relevant)
+1. UNREACHABLE – The project maintainers are not reachable
+    * The project maintainer(s) has not been reachable through registered communication channels for a substantial time, due to reasons outside the control of the project.
+        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other _Forces Majeures_ beyond the Maintainer's control.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+    * (number of maintainers is not relevant)
+1. UNRESPONSIVE – Project Maintainers are reachable but actively not engaging
+    * The project maintainers(s) have not been responsive to ecosystem concerns for a substantial time, due to non-technical reasons.
+        * e.g.: Maintainer does not respond to ecosystem concerns for personal reasons.
+    * The project is expected to revert to its previous state after normal interaction resumes.
 
 
 ## Other project states, claims and metadata
@@ -167,7 +278,7 @@ When a project signals they NEEDSUPPORT, this can imply any of a number of activ
 
 ## License and use of this document
 
-* Version: 0.1.1
+* Version: 0.2.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
@@ -190,5 +301,5 @@ Several people have been involved in the development of this document
 * (MSFTOSS-2024) [5 things we learned from sponsoring a sampling of our open source dependencies](https://opensource.microsoft.com/blog/2024/06/27/5-things-we-learned-from-sponsoring-a-sampling-of-our-open-source-dependencies/), Published 2024-06-27.
 * (NEILB-2016) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html), Published 2016-02-13.
 * (PAUSE-2017) [The PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) Version 2 (section 4.5), published 2017-10-27.
-* (UNMAINTED-2016) [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/), Published 2016-01-13.
-* (CASUAL-2023) [![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg)](https://casuallymaintained.tech/), Published 2023-09-25.
+* (UNMAINTED-2016) ![No Maintenance Intended](http://unmaintained.tech/badge.svg) [unmaintained.tech](http://unmaintained.tech/), Published 2016-01-13.
+* (CASUAL-2023) ![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg) [casuallymaintained.tech](https://casuallymaintained.tech/), Published 2023-09-25.

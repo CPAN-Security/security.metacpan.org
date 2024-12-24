@@ -219,7 +219,7 @@ ircs://irc.perl.org#cpan-security
 
 https://security.metacpan.org/
 
-mailto:cpan-security@perl.org
+mailto:cpan-security@security.metacpan.org
 
 
 Note:

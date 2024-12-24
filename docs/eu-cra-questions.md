@@ -42,15 +42,25 @@
 * What are the concrete demands for metadata required for liable parties to actually live up to the obligations set by the CRA?
     * To which extent these metadata have to be up-to-date and authoritative (e.g. if a component author changes it's license, what happens?)
 
+## Attestation
+
+* How are the OSS Steward Attestation Programmes intended to work?
+
 ## Manufacturer?
 
 * Does receiving money that isn't in the form of donations turn an OSS Maintainer into a Manufacturer?
 * Does earning money on publishing an open source component into an OSS ecosystem automatically make one a Manufacturer?
 * Under what circumstances can a Steward become a Manufacturer?
 * What role or purpose will the attestation regime described in Recital 21 have?
-* 
 
-# (wishlist)
+## OSS Steward Organization forms
 
-* funding is needed
-
+* What types of organizations may become OSS Stewards?
+    * Charities
+    * Non-profits
+    * Not-for-profit organizations
+    * For benefit corporations
+* What kind of funding structures are accepted for OSS Stewards?
+    * Sales, fees, membership dues
+    * Donations, grants, fund-raising
+    * Business activities like Due Diligence consulting services

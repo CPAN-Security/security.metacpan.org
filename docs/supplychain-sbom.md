@@ -142,6 +142,7 @@ stateDiagram-v2
     ecosystem_repo           --> environment_maintainer
     ecosystem_repo           --> environment_contributor
     ecosystem_lang           --> ecosystem_package
+    ecosystem_lang           --> environment_manufacturer
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
     ecosystem_repo           --> environment_manufacturer
@@ -236,7 +237,7 @@ stateDiagram-v2
     state "🟨 Contributor" as external_contributor
     %%
     class repository_distributor distributesSBOM
-    class external_contributor ignoresSBOM
+    class external_contributor updatesSBOM
 
     %% Package Ecosystem
     state "🟦 Authenticator" as package_authenticator
@@ -271,7 +272,7 @@ stateDiagram-v2
 
     %% Production Environment
     state "🟨 Deployer" as prod_deployer
-    state "🟦 End-user, Consumer" as external_consumer
+    state "End-user, Consumer" as external_consumer
     %%
     class prod_deployer assemblesSBOM
     class external_consumer ignoresSBOM
@@ -1324,9 +1325,9 @@ Several people have been involved in the development of this document
 
 ## Appendix
 
-### SBOM Attribute names and obligation sources
+### SBOM Metadata Attributes and obligation sources
 
-| Attribute name                      | Required | Obligation References                                          | Upstream Metadata Authority                                             | Comment |
+| Attribute name                      | Required | Obligation References                                          | Upstream Attribute Source                                               | Comment |
 | :---------------------------------- | :------: | -------------------------------------------------------------: | :---------------------------------------------------------------------- | :------ |
 | Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183-2                    | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Packager                    |         |
 | Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10                    | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |

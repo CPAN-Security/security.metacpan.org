@@ -89,8 +89,11 @@ website, then you should refer to that URL, e.g.:
 > The latest version of this Security Policy can be found on the
 > Foo-Bar website at https://foobar.example.com/security-policy
 
-(It is reasonable to link to the project's distribution page on
-MetaCPAN, e.g. https://metacpan.org/dist/Foo-Bar.)
+If the project does not have a dedicated website, then a link to the
+project's software repository should be used, e.g.
+
+> The latest version of the Security Policy can be found in the git
+> repository for Foo-Bar in the main branch at https://example.github.com/foobar
 
 If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
@@ -318,8 +321,8 @@ maintainer that should cover most cases.
 ```markdown
 This is the Security Policy for the Perl Foo-Bar distribution.
 
-The latest version of this Security Policy can be found on the
-Foo-Bar website at https://example.metacpan.org/dist/Foo-Bar
+The latest version of the Security Policy can be found in the
+[git repository for Foo-Bar](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
 a Security Policy to Perl Distributions (version 0.1.8)

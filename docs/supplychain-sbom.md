@@ -557,12 +557,13 @@ A contributing author or developer of an Open Source component project, though n
 | 🟨  | License(s) (Included)              | Yes      | CISA-2024-10                                |         |         |
 
 * See also
+  * [Owner](#owner)
   * [Integrator](#integrator)
 
 
 #### Custodian
 
-A role that operates as a temporary replacement of a [Maintainer](#maintainer), or works on their behalf in the case the Maintainer is not available, or the project does not have an Maintainer.
+A role that operates as a temporary replacement of a [Maintainer](#maintainer), or [Owner](#owner), or works on their behalf in the case they are not available, or the project does not have any.
 
 * Operates on behalf of a [Maintainer](#maintainer) in a [Language Ecosystem](#language-ecosystem) or [Package Ecosystem](#package-ecosystem).
 * A type of low-effort [Maintainer](#maintainer) with reduced responsibilities, working as a stand-in of the actual Maintainer.
@@ -983,6 +984,7 @@ A business or institution that is responsible for developing and building the ap
 | 🟥  | Primary Component Name            | Yes      | NTIA-SBOM, TR-03183-2, CRA-AV                   |         |         |
 | 🟥  | Version                           | Yes      | NTIA-SBOM, TR-03183-2                           |         |         |
 | 🟥  | Dependencies                      | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183-2 |         |         |
+| 🟥  | Dependency Relationships          | Yes      | CISA-2024-10                                    |         |         |
 | 🟥  | Security contact                  | Yes      | CRA-AII(2)                                      |         | Confirm attribute variations |
 | 🟥  | Unique Product ID                 | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV                   |         |         |
 | 🟥  | Purpose, Intended Use             | Yes      | CRA-AII(4)                                      |         |         |
@@ -991,7 +993,6 @@ A business or institution that is responsible for developing and building the ap
 | 🟥  | Code Commit Revision              | No       |                                                 |         | Consider recommendation |
 | 🟥  | Cryptographic Hash                | Yes      | CISA-2024-10, TR-03183-2                        |         |         |
 | 🟥  | Primary Component Filename        | Yes      | TR-03183-2                                      |         |         |
-| 🟥  | Depenency Relationships           | Yes      | CISA-2024-10                                    |         |         |
 | 🟥  | License (Primary)                 | Yes      | CISA-2024-10                                    |         |         |
 | 🟨  | Supplier Name (Integrator)        | Yes      | CRA-AII(1), NTIA-SBOM, TR-03183-2, CRA-AV       |         |         |
 | 🟨  | License(s) (Included, Dependency) | Yes      | CISA-2024-10                                    |         |         |
@@ -1007,6 +1008,7 @@ A business or institution that is responsible for developing and building the ap
 
 * See also
   * [Integrator](#integrator)
+
 
 #### Publisher
 
@@ -1040,7 +1042,7 @@ A business or institution that is responsible for developing and building the ap
 ### Production Environment
 
 > [!NOTE]
-> * FIXME – Add examples of physical products
+> * FIXME – Add examples of physical products, services that apply
 
 The environment and systems where a product or service is executed on behalf of a customer, and thereby made available to their users.
 
@@ -1230,6 +1232,7 @@ The Supplier is a term used throughout the Supply-chain, but most often represen
 #### Author
 
 * See also
+  * [Owner](#owner)
   * [Maintainer](#maintainer)
 
 #### SecOps

@@ -10,7 +10,8 @@ on:
       [closed, assigned, converted_to_draft, ready_for_review, review_requested]
   pull_request_review:
     types: [submitted]
-
+  push:
+    branches: [main]
 jobs:
   notify:
     runs-on: ubuntu-latest

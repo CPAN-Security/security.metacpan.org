@@ -53,15 +53,15 @@ for more information.
 
 The security policy should be a text document with minimal formatting
 that can be read without a specialised reader, with the name
-`SECURITY` or `SECURITY-POLICY` and a suffix to indicate the markup
-(`.md` for markdown, `.pod` for POD or optionally `.txt`).
+`SECURITY` and a suffix to indicate the markup (`.md` for markdown,
+`.pod` for POD or optionally `.txt`).
 
 More complex markup formats like HTML are not recommended.
 
 The all caps filename is intended to indicate that this is an
-important document on par with `README`, `LICENSE` and `INSTALL`.
-This will also differentiate the file from `security.txt` which has a
-specific machine-readable format and has a different function
+important document on par with `README`, `LICENSE`, `INSTALL` and
+`CONTRIBUTING`.  This will also differentiate the file from `security.txt`
+which has a specific machine-readable format and has a different function
 [\[4\]](#references-and-notes) (Securitytxt).
 
 The file should have the following sections.
@@ -81,7 +81,7 @@ The file should have the following sections.
 This is a short one or two sentences that explain what this document
 is, e.g.
 
-> This is the Security Policy for the Perl Foo-Bar distribution.
+> This is the Security Policy for the CPAN distribution `Foo-Bar`.
 
 If the project has a web site, with this security policy posted on the
 website, then you should refer to that URL, e.g.:
@@ -99,7 +99,7 @@ If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
 > This text is based on the CPAN Security Group's Guidelines for Adding
-> a Security Policy to Perl Distributions (version 0.1.9)
+> a Security Policy to Perl Distributions (version 0.2.0)
 > https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 #### Links from other module documentation
@@ -112,8 +112,8 @@ policy, for example (in POD):
 =head2 Reporting Security Vulnerabilities
 
 Security issues should not be reported on the bugtracker website.
-Please see F<SECURITY-POLICY.md> for instructions how to report
-security vulnerabilities.
+Please see F<SECURITY.md> for instructions how to report security
+vulnerabilities.
 ```
 
 
@@ -179,7 +179,7 @@ vulnerabilities in public, e.g.
 
 You can also link to the CPANSec page
 
-> For more information, see Report a Security Issue
+> For more information, see _Report a Security Issue_
 > https://security.metacpan.org/docs/report.html on the CPANSec
 > website.
 
@@ -263,7 +263,7 @@ or,
 
 > For security vulnerabilities, the maintainer(s) will only commit to
 > supporting the last two major versions of Foo-Bar.  As of this
-> release, that is v1.4.x and v1.6x.
+> release, that is `v1.4.x` and `v1.6.x`.
 
 ### Installation and usage issues
 
@@ -315,7 +315,7 @@ For example, see [\[2\]](#references-and-notes) (Perl-Sec-Policy).
 
 ### Single Maintainer
 
-An example `SECURITY-POLICY.md` for a CPAN distribution with a single
+An example `SECURITY.md` for a CPAN distribution with a single
 maintainer that should cover most cases.
 
 ```markdown
@@ -325,7 +325,7 @@ The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
-a Security Policy to Perl Distributions (version 0.1.9)
+a Security Policy to Perl Distributions (version 0.2.0)
 https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 # How to Report a Security Vulnerability
@@ -425,7 +425,7 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 0.1.9
+* Version: 0.2.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

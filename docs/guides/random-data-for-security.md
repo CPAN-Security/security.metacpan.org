@@ -192,3 +192,23 @@ December 2024.
 [RFC 4086](https://www.rfc-editor.org/info/rfc4086), June 2005.
 
 [Predict Random Numbers](https://www.perlmonks.org/?node_id=151595), Perl Monks, March 2002.
+
+## License and use of this document
+
+* Version: 0.1.0
+* License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
+* Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
+
+You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.
+
+### Acknowledgements
+
+Several people have been involved in the development of this document
+
+* Robert Rothenberg (main author)
+* Alexander Hartmaier
+* H. Merijn Brand
+* Salve J. Nilsen
+* Stig Palmquist
+* Thibault Duponchelle
+* Timothy Legge

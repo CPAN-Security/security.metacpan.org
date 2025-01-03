@@ -18,7 +18,7 @@ random number generator.  That includes:
 - session tokens
 - nonces
 
-The built-in `[rand](https://perldoc.perl.org/functions/rand)` function is not fit for security purposes: it is seeded
+The built-in [rand](https://perldoc.perl.org/functions/rand) function is not fit for security purposes: it is seeded
 by only 32-bits (4 bytes), and the [output can be predicted easily](https://www.perlmonks.org/?node_id=151595).
 
 A cryptographic-strength pseudo-random number generator (PRNG) won't improve security if it was seeded with data from
@@ -119,7 +119,7 @@ printable string, for example as
 - a nonce for a web site's Content Security Policy
 
 The simplest way to convert a string of random bytes into something readable is to use the built-in
-`[pack](https://perldoc.perl.org/functions/pack)` and `[unpack](https://perldoc.perl.org/functions/unpack)` functions.
+[pack](https://perldoc.perl.org/functions/pack) and [unpack](https://perldoc.perl.org/functions/unpack) functions.
 To convert some data into a string of hex digits, use
 
     my $str = unpack("H*", $bytes);
@@ -195,7 +195,7 @@ December 2024.
 
 ## License and use of this document
 
-* Version: 0.1.0
+* Version: 0.1.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

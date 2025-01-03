@@ -195,7 +195,7 @@ December 2024.
 
 ## License and use of this document
 
-* Version: 0.1.1
+* Version: 0.1.2
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

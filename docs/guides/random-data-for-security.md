@@ -93,7 +93,7 @@ For example,
 
     my $bytes = Crypt::PRNG->new->bytes(32);
 
-will return 246 bits of random data.
+will return 256 bits of random data.
 
 ### Math::Random::ISAAC
 
@@ -195,7 +195,7 @@ December 2024.
 
 ## License and use of this document
 
-* Version: 0.1.2
+* Version: 0.1.3
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

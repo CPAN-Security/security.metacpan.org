@@ -40,7 +40,7 @@ and which (generally) have good defaults.
 The simplest to use, is [Crypt::URandom](https://metacpan.org/pod/Crypt::URandom).  It is a lightweight module that
 reads from a random data source on a variety of systems, using the `/dev/urandom` device or equivalents on other
 operating systems, including Windows.  Newer versions will also use the `getrandom` or `getentropy` calls on systems
-without `/dev/urandom`.
+that support those calls.
 
 To obtain 256-bits (32 bytes) of data:
 

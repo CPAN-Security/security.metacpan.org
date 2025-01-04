@@ -99,7 +99,7 @@ If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
 > This text is based on the CPAN Security Group's Guidelines for Adding
-> a Security Policy to Perl Distributions (version 0.2.0)
+> a Security Policy to Perl Distributions (version 0.2.1)
 > https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 #### Links from other module documentation
@@ -205,7 +205,7 @@ maintainer cannot promise a response time.  An alternative might be
 > The maintainer(s) aim to acknowledge your security report as soon as
 > possible.  However, this project is maintained by a single person in
 > their spare time, and they cannot guarantee a rapid response.  If you
-> have not received a response from the them within a week, then
+> have not received a response from them within a week, then
 > please send a reminder to them and copy the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
 
@@ -325,7 +325,7 @@ The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
-a Security Policy to Perl Distributions (version 0.2.0)
+a Security Policy to Perl Distributions (version 0.2.1)
 https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 # How to Report a Security Vulnerability
@@ -357,7 +357,7 @@ on the CPANSec website.
 The maintainer(s) aim to acknowledge your security report as soon as
 possible.  However, this project is maintained by a single person in
 their spare time, and they cannot guarantee a rapid response.  If you
-have not received a response from the them within a week, then
+have not received a response from them within a week, then
 please send a reminder to them and copy the report to CPANSec at
 <cpan-security@security.metacpan.org>.
 
@@ -425,7 +425,7 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 0.2.0
+* Version: 0.2.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

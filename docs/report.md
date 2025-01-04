@@ -43,7 +43,6 @@ It's important that you **do not** post information about it on:
 - social media or chat channels, like IRC or Mastodon
 - mailing lists or discussion forums
 
-
 ### Step 1: Prepare a Report
 
 Please provide a detailed description of the steps required to reproduce the vulnerability.
@@ -54,12 +53,20 @@ The following information is required:
 - Proof of concept code, or a description on how to reproduce
 - Logs, code lines, screenshots and other context if relevant
 
+Please ensure any sensitive data such as passwords, authentication tokens, or personal data is not included in the report.
+
 Also consider proposing a date for public disclosure, this is usually 30 days or longer.
 
 
-### Step 2: Contact the Author
+### Step 2: Contact the Maintainer
 
-Send the vulnerability report to the distribution author by email or other private channels.
+Check the distribution for a security policy that advises how to report a security vulnerability.
+It is usually a file called `SECURITY.md`, or there may be a section in the `README` or main module documentation.
+
+If there is no security policy, look in the `README` or main module documentation for an email address of the current maintainer (who may be different from the original author).
+You can also check MetaCPAN to see who uploaded the latest version.
+
+Send the vulnerability report to the distribution maintainer by email or other private channels as outlined in the security policy.
 You can CC our team on [cpan-security@security.metacpan.org](mailto:cpan-security@security.metacpan.org) on the report if you would like us to help in triaging the issue, register CVE identifiers, or for any other reason.
 
 The authors email address is usually available in the documentation, or on their page on [metacpan.org](https://metacpan.org/).

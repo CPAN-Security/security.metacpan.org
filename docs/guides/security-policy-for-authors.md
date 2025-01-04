@@ -131,9 +131,6 @@ For example,
 
 > Security vulnerabilities can be reported by e-mail to the current
 > project maintainer(s) at <foobar@example.com>.
->
-> Please include as many details as possible, including code
-> samples or text cases, so that we can reproduce the issue.
 
 or [\[1\]](#references-and-notes) (Github-Sec-Advisory)
 
@@ -156,11 +153,18 @@ Please ensure that the security contact information is consistent with
 distribution metadata, e.g. in the `META.json` file
 [\[3\]](#references-and-notes) (CPAN-Meta-Spec).
 
-Add note about also copying CPANSec on the notification if help is
-required triaging the issue, or if the issue is being actively
-exploited.  CPANSec provides support to reporters and maintainers in
-assessing the appropriate response, and in case the maintainer(s) are
-unreachable.  For example
+Add a reminder to include details for verifying the bug:
+
+> Please include as many details as possible, including code samples
+> or test cases, so that we can reproduce the issue.  Check that your
+> report does not expose any sensitive data, such as passwords,
+> tokens, or personal information.
+
+We recommend that you add note about also copying CPANSec on the
+notification if help is required triaging the issue, or if the issue
+is being actively exploited.  CPANSec provides support to reporters
+and maintainers in assessing the appropriate response, and in case the
+maintainer(s) are unreachable.  For example
 
 > If you would like any help with triaging the issue, or if the issue
 > is being actively exploited, please copy the report to the CPAN
@@ -334,7 +338,9 @@ Security vulnerabilities can be reported by e-mail to the current
 project maintainers at <foobar@example.com>.
 
 Please include as many details as possible, including code samples
-or test cases, so that we can reproduce the issue.
+or test cases, so that we can reproduce the issue.  Check that your
+report does not expose any sensitive data, such as passwords,
+tokens, or personal information.
 
 If you would like any help with triaging the issue, or if the issue
 is being actively exploited, please copy the report to the CPAN

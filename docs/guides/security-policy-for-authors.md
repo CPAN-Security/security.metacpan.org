@@ -99,7 +99,7 @@ If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
 > This text is based on the CPAN Security Group's Guidelines for Adding
-> a Security Policy to Perl Distributions (version 0.2.2)
+> a Security Policy to Perl Distributions (version 0.2.3)
 > https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 #### Links from other module documentation
@@ -229,7 +229,7 @@ other people.  For example,
 >
 > They may also forward this issue to CPANSec.
 
-### What Software this Policy Applies to
+### What Software This Policy Applies To
 
 This section discusses what software this applies to, and what are
 considered security issues in the software, and what are not
@@ -329,7 +329,7 @@ The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
-a Security Policy to Perl Distributions (version 0.2.2)
+a Security Policy to Perl Distributions (version 0.2.3)
 https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 # How to Report a Security Vulnerability
@@ -378,7 +378,7 @@ modules or downstream software that uses this software.
 
 They may also forward this issue to CPANSec.
 
-# Which Software this Policy Applies to
+# Which Software This Policy Applies To
 
 Any security vulnerabilities in Foo-Bar are covered by this policy.
 
@@ -431,7 +431,7 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 0.2.2
+* Version: 0.2.3
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

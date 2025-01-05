@@ -438,3 +438,4 @@ Several people have been involved in the development of this document
 * Timothy Legge
 * Stig Palmquist
 * Salve J. Nilsen
+* Brian D Foy

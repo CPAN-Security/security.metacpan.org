@@ -64,7 +64,7 @@ Here are some of the things we care about!
 * We register CVEs and **notify** stakeholders; **coordinate** and triage vuln reports; **help** authors and reporters, so **vulns don't get ignored**
     * CVE-2023-7101 **Spreadsheet::ParseExcel** (RCE affecting Barracuda Email Appliances)
     * CVE-2024-23525 & CVE-2024-22368 **Spreadsheet::ParseXLSX**
-* Pre-release coordination via cpan-security@perl.org, and tools like CC/VINCE
+* Pre-release coordination via cpan-security@security.metacpan.org, and tools like CC/VINCE
 
 
 Note:
@@ -306,7 +306,7 @@ We need volunteers!
 
 https://security.metacpan.org/
 
-mailto:cpan-security@perl.org
+mailto:cpan-security@security.metacpan.org
 
 
 Note:

@@ -249,37 +249,34 @@ stateDiagram-v2
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
-    state "🟥 Attestation Authority 🆕" as authority_attestation
     state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
-    state "🟥🟨🟦🟪 Manufacturer (Integrator) 🆕" as environment_manufacturer
-    state "🟦 Auditor 🆕\n🟦 Importer 🆕\n🟦 Distributor 🆕" as authority_auditor
+    state "🟥🟨🟦🟪 Manufacturer 🆕" as environment_manufacturer
+    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
     ecosystem_repo           --> environment_contributor
+    ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
     ecosystem_repo           --> environment_manufacturer
     environment_maintainer   --> ecosystem_repo
     environment_maintainer   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
-    ecosystem_lang           --> ecosystem_lang
-    ecosystem_lang           --> ecosystem_package
     ecosystem_package        --> ecosystem_package
-    ecosystem_package        --> ecosystem_steward
     ecosystem_lang           --> ecosystem_steward
-    authority_attestation    --> ecosystem_steward
-    ecosystem_package        --> environment_manufacturer
+    ecosystem_package        --> ecosystem_steward
     ecosystem_steward        --> environment_manufacturer
     environment_manufacturer --> authority_auditor
+    ecosystem_package        --> environment_manufacturer
+    ecosystem_lang           --> ecosystem_lang
     authority_auditor        --> [*]
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0
 ```
 
-
-## Are you… a Manufacturer, Steward or Author?
+## Are you… a Manufacturer, Steward or Maintainer?
 
 ```mermaid
 graph TB

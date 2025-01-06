@@ -151,16 +151,28 @@ Please take this into account when commenting this document.
 ### Dependency ⚠️  ✍️
 
 > [!CAUTION]
-> * (CPANSec-2024) Dependencies may be declared/stated/referenced or included/embedded or assumed/implied/detected, development phase-specific (e.g. developer, build, test, deploy, or runtime-specific), dynamic or static, unresolved or resolved, direct or transitive, or required, recommended or suggested.
->     * The NTIA-2021 definition above is therefore not only **wrong**, but also **entirely insufficient** — is for any practical purpose useless and should not be used.
->     * The SLSA-2023 definition above is preferrable, though it doesn't sufficiently distinguish between stated, embedded and assumed dependencies.
+> * (CPANSec-2024) Dependencies may be declared/stated/referenced or included/embedded or assumed/implied/detected, development phase-specific (e.g. developer, config, build, test, deploy, or runtime-specific), dynamic or static, unresolved or resolved, direct or transitive, or required, recommended or suggested.
+>     * The NTIA-2021 definition below is therefore not only **wrong**, but also **entirely insufficient** — is for any practical purpose useless and should not be used.
+>     * The SLSA-2023 definition below is preferred, though it doesn't sufficiently distinguish between stated, included and assumed dependencies.
+>     * Please consider using the CPANSec-2024 definition
 
+> 1. (CPANSec-2024) A dependency is a _resolved_ Requirement.
+>     * This means the component that is depended upon (required) has been made available for use by the depending software so it may function as expected.
+>     * Dependencies exist _after_ they have been made available to the depending software.
+>     * If a dependency is unmet (not made available, deployed, installed), then it is called a _Requirement_.
+>     * A dependency can come in many forms,
+>         * Static, Dynamic, Resource or Service
+>         * Included (Embedded), Direct or Transitive
+>         * Assumed (Phantom) or Unused (Zombie)
+>         * In-ecosystem or Out-of-ecosystem
+>         * Optional, Virtual or Resolved
+>         * Unresolved, or Resolved during Development, Configuration, Build, Test, Deploy or at Runtime
 > 1. (SLSA-2023) An [Artifact](#artifact) that is an input to a build process but that is not a source.
 >     * In the SLSA model, it is always a package.
 >     * E.g. an Alpine package ([package](#package---)) distributed on Alpine Linux ([platform](#platform)).
 > 1. ⚠️  (NTIA-2021) Characterizing the relationship that an upstream component X is included in software Y.
 >
-> (Ref: [SLSA-2023](#references-and-terms), NTIA-2021, CPANSec-2024)
+> (Ref: [SLSA-2023](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
 #### Dependency (Direct) ✍️
 
@@ -191,7 +203,7 @@ Please take this into account when commenting this document.
 >
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
-#### Dependency (Embedded, Included, Pre-resolved) ✍️
+#### Dependency (Embedded, Included, Pre-resolved, Contained) ✍️
 
 > 1. (CPANSec-2024) A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package.
 >
@@ -222,7 +234,7 @@ Please take this into account when commenting this document.
 
 ##### Dependency (Detected during Analysis) ✍️
 
-> * See also
+> * See
 >     * [Dependency (Assumed, Implied, Phantom, Unstated)](#dependency-assumed-implied-phantom-unstated-%EF%B8%8F)
 
 #### Dependency (Optional)
@@ -233,27 +245,10 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Static)](#dependency-static)
 
-#### Dependency (Unresolved, Required) ✍️
+#### Dependency (Unresolved, Required)
 
-> 1. (CPANSec-2024) A dependency that that needs to be resolved for a software component to function as expected.
->     * Requirements are expected to be resolved by the Builder or Packager of the component.
->     * An unresolved dependency has always a version constraint associated with it (implied or explicitly), to be used during dependency resolution.
->
-> (Ref: [CPANSec-2024](#references-and-terms))
->
 > * See also
->     * [Pre-Requirement](#pre-requirement)
 >     * [Requirement](#requirement)
-
-##### Requirement ✍️
-
-> * See also
->     * [Dependency (Unresolved, Required)](#dependency-unresolved-required-%EF%B8%8F)
-
-##### Pre-Requirement ✍️
-
-> * See also
->     * [Dependency (Unresolved, Required)](#dependency-unresolved-required-%EF%B8%8F)
 
 #### Dependency (Resolved during Configuration) ✍️
 
@@ -325,10 +320,35 @@ Please take this into account when commenting this document.
 #### Dependency (Virtual)
 
 > [!NOTE]
-> * (CPANSec) A dependency that is present, but cannot be represented by an actual software package.
->     * e.g. The OS kernel and base file-system and services that have to be in place before the first regular package may be installed.
 > * FIXME: Expand on this topic
 
+> 1. (CPANSec-2024) A dependency that is present, but cannot be represented by an actual software package.
+>     * e.g. The OS kernel and base file-system and services that have to be in place before the first regular package may be installed.
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
+
+#### Dependency (Unused, Zombie)
+
+> 1. (CPANSec-2024) A dependency that has been resolved and installed, but is not in use anywhere (any more).
+>     * May be a build artifact left over after earlier stages in the build process (e.g. development, configure, or testing)
+>     * May be misused or exploited for downgrade attacks or expose other vulnerabilities or sensitive data.
+>     * Recommended to be removed before deployment or packaging.
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
+
+### Requirement ✍️
+
+> 1. (CPANSec-2024) A dependency that that needs to be resolved (be made available) for a software component to function as expected.
+>     * Requirements are expected to be resolved by the Builder, Packager or Integrator of the component.
+>     * An unresolved dependency has always a version constraint associated with it (implied or explicitly), to be used during dependency resolution.
+>     * Also referred to as a "prereq", "dependency".
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
+
+### Pre-Requirement
+
+> * See
+>     * [Requirement](#requirement)
 
 ### Distributor ⚠️
 
@@ -427,17 +447,17 @@ Please take this into account when commenting this document.
 > * FIXME: Add some clarification regarding Manufacturers, Importers, Distributors and Open Source Stewards.
 
 > 1. (CRA-2024-03) The supply of a product with digital elements for distribution or use on the European Union market in the course of a commercial activity, whether in return for payment or free of charge.
-> 1. (EUBG-2022) A product is made available on the market when supplied for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge.
+> 1. (EUBG-2022-2, Chapter 2.2) A product is made available on the market when supplied for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge.
 >     * The concept of making available refers to each individual product.
 >     * A product is made available on the market when supplied for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge.
 >     * Such supply includes any offer for distribution, consumption or use on the Union market which could result in actual supply in relation to products already manufactured (e.g. an invitation to purchase, advertising campaigns).
 >
-> (Ref: [CRA-2024-03](#references-and-terms), EUBG-2022)
+> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-2](#references-and-terms))
 
 ### Manufacturer
 
 > 1. (CRA-2024-03) Any natural or legal person who develops or manufactures products with digital elements or has products with digital elements designed, developed or manufactured, and markets them under his or her name or trademark, whether for payment, monetisation or free of charge.
-> 1. (EUBG-2022-3) The manufacturer is any natural or legal person who manufactures a product or has a product designed or manufactured, and places it on the market under his own name or trademark.
+> 1. (EUBG-2022-3, Chapter 3.1) The manufacturer is any natural or legal person who manufactures a product or has a product designed or manufactured, and places it on the market under his own name or trademark.
 >     * The manufacturer is responsible for the conformity assessment of the product and is subject to a series of obligations including traceability requirements.
 >     * When placing a product on the Union market, the responsibilities of a manufacturer are the same whether he is established outside the European Union or in a Member State.
 >     * The manufacturer must cooperate with the competent national authorities in charge of market surveillance in case of a product presenting a risk or being non-compliant.
@@ -502,12 +522,12 @@ Please take this into account when commenting this document.
 ### Placing on the market
 
 > 1. (CRA-2024-03) The first making available of a product with digital elements on the Union market.
-> 1. (EUBG-2022) A product is placed on the market when it is made available for the first time on the Union market.
+> 1. (EUBG-2022-2, Chapter 2.3) A product is placed on the market when it is made available for the first time on the Union market.
 >     * According to Union harmonisation legislation, each individual product can only be placed once on the Union market.
 >     * Products made available on the market must comply with the applicable Union harmonisation legislation at the moment of placing on the market.
 >
 >
-> (Ref: [CRA-2024-03](#references-and-terms), EUBG-2022)
+> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-2](#references-and-terms))
 
 
 ### Point of origin ⚠️  ✍️
@@ -524,12 +544,15 @@ Please take this into account when commenting this document.
 > [!CAUTION]
 > * FIXME: Find a better definition! The one in the Blue Guide is more of an explanation with context. In the meantime, please read the Blue Guide text.
 
-> 1. (EUBG-2022)
+> 1. (EUBG-2022-4, Chapters 4.1.2.2, 4.1.2.3)
 >     * The terms ‘standard’, ‘national standard’, ‘European standard’, ‘harmonised standard’ and ‘international standard’ are subject to concrete definitions in Article 2 of Regulation (EU) No 1025/2012.
 >     * Standards are technical specifications and are therefore useful and effective in promoting and disseminating good technical practises and technical solutions.
 >     * Standards are in themselves of voluntary application.
 >     * Harmonised standards are European standards adopted on the basis of a request made by the Commission for the application of Union harmonisation legislation.
 >     * If references of harmonised standards have been published in the Official Journal of the European Union (OJEU), they provide a presumption of conformity with the essential or other legislative requirements they aim to cover.
+>
+>
+> (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-4](#references-and-terms))
 
 
 ### Procurement ✍️
@@ -905,7 +928,9 @@ This glossary is partly based on terms from the following sources.
 - (CDXAG-2024) [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf), Second edition, Appendix A, published April 2024.
 - (CISA-2024-9) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](), Third edition, Sections 2.2.1.4, 2.2.2, and Appendix B, Published 2024-09-03
     - FIXME: Replace after publishing: [draft document](https://docs.google.com/document/d/1z8hKtPxs5OWaspst120NHN9XXgyULGl2aKdSebwIYPc/edit)
-- (EUBG-2022-3) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022XC0629(04)#page=34), Chapter 3 (pages 34-46), published 2022-06-29.
+- (EUBG-2022-2) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04)#d1e2047-1-1) Chapter 2.2, published 2022-06-29.
+- (EUBG-2022-3) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04)#d1e3120-1-1) Chapter 3.1, published 2022-06-29.
+- (EUBG-2022-4) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04)#d1e4315-1-1) Chapter 4.3, published 2022-06-29.
 - (NIXOS-2024) [Nix concepts](https://zero-to-nix.com/concepts), as of 2024-08-15
 
 ## About this document

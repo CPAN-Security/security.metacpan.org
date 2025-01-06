@@ -46,14 +46,17 @@ To help in this shift, CPANSec has put together several guides intended to assis
 ### Keep your security metadata up-to-date
 
 1. Read the [CPAN::META::Spec](https://metacpan.org/pod/CPAN::Meta::Spec) and make sure all relevant fields are correct and up-to-date
-1. Ensure also that your list of dependencies is complete and correct
+1. Ensure also that your list of requirements (dependencies) is complete, up-to-date, correct and takes into account any security issues
+    * This also means unused (zombie) requirements are removed
+    * This includes embedded/included and transitive dependencies
+    * This also means reducing assumed (phantom) dependencies to none, by making them explicit
 
 
 ### Share your security metadata
 
 1. Add a [security.txt](https://securitytxt.org/) file to your project website
-1. Add a [distribution security policy](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/guides/security-policy-for-authors.md) to your distribution.
-   1. Add the same to your project repository ([Github instructions](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)).
+1. Add a [distribution security policy](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/guides/security-policy-for-authors.md) to your distribution
+   1. Add the same to your project repository ([Github instructions](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository))
 
 
 ### Add security tests to your code
@@ -64,12 +67,13 @@ To help in this shift, CPANSec has put together several guides intended to assis
 
 ### Practice symbol import discipline
 
-1. Use [App::perlimports](https://www.olafalders.com/2024/04/15/getting-started-with-perlimports/) to get a better idea of what symbols you are using.
+1. Use [App::perlimports](https://www.olafalders.com/2024/04/15/getting-started-with-perlimports/) to get a better idea of what symbols you are using
 
 
 ### Reduce the amount transitive dependencies
 
-1. The more modules you depend on, the larger the attack surface you may have to defend.
+1. The more modules you depend on, the larger the attack surface you may have to defend
+    * If necessary, help your upstream maintainers to trim down their dependency graph
 
 
 ## Ensure your project is sustainable
@@ -79,13 +83,13 @@ To help in this shift, CPANSec has put together several guides intended to assis
 1. Have a succession plan
     * Describe who among your co-maintainers will take over your project if you become permanently unavailable
 1. Communicate these clearly through common channels
-    * Keep an up-to-date list of co-maintainers and contributors in your repository
-    * Add a `CONTRIBUTING.md` file
+    * Keep an up-to-date list of co-maintainers and contributors in your repository, e.g. in an 'Acknowledgements' or 'Contributors' section in the documentation
+    * Add a `CONTRIBUTING.md` file, to make it easier for both new and old contributors to help
 
 
 ## Select an appropriate Open Source license
 
-1. Pick an OSI-approved Open Source license, and add it both to your project repo and other metadata.
+1. Pick an OSI-approved Open Source license, and add it both to your project repo and other metadata
 
 
 # Relevant documentation and guides
@@ -93,11 +97,12 @@ To help in this shift, CPANSec has put together several guides intended to assis
 * SEI CERT [Secure Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
 * [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
 * [CISA Product Security Bad Practices guide](https://www.cisa.gov/resources-tools/resources/product-security-bad-practices)
+    * …on [Github Discussions](https://github.com/cisagov/bad-practices/discussions)
 
 
 ## License and use of this document
 
-* Version: 0.6.0
+* Version: 0.6.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

@@ -1,6 +1,6 @@
 ---
-toc: false
-layout: default
+toc: true
+layout: page
 title: Documents & Guides
 permalink: /docs/
 ---

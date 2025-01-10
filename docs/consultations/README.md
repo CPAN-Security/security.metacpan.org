@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: page
 toc: false
 title: Public consultations
 permalink: /docs/consultations/
 ---
 This folder contains replies to public consultations and hearings that CPANSec has participated in.
 
-### NIS 2
+## NIS 2
 
 Feedback on [ENISA implementing guidance for NIS 2 security measures](https://www.enisa.europa.eu/publications/implementation-guidance-on-nis-2-security-measures)
 

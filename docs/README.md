@@ -15,12 +15,19 @@ Documents relevant to the CPAN Security Group.
 
 ## Guides
 
-* [CPAN Author's guide](guides/cpan-author-guide.md) ⚠️  DRAFT
+* [CPAN Author's Secure Coding Guide](guides/cpan-author-guide.md) ⚠️  DRAFT
 * [CPAN Author's Guide to Random Data for Security](guides/random-data-for-security.md)
 * [CPAN Author's Security Policy guide](guides/security-policy-for-authors.md)
-* [Risk assessment guide](guides/risk-assessment-guide.md) ⚠️  DRAFT
 
 See [guides/](guides/) for the full list of guides.
+
+## Studies
+
+* [CPAN Dependency Confusion study](cpan-dependency-confusion.md)
+
+## Consultations
+
+* Consultations are in the [consultations/](consultations/) folder.
 
 ## Background info
 
@@ -28,6 +35,3 @@ See [guides/](guides/) for the full list of guides.
 * [Glossary](glossary.md) of terms ⚠️  DRAFT
 * [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
 
-## Other
-
-* [CPAN Dependency Confusion (study)](cpan-dependency-confusion.md)

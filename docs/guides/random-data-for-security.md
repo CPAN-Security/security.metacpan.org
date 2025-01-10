@@ -48,6 +48,9 @@ To obtain 256-bits (32 bytes) of data:
 
     my $bytes = urandom(32);
 
+Since this is a wrapper around the operating system's random data source, there is no worry about child processes
+with the same parent returning the same data (i.e., it is "fork safe").
+
 It is important to note that there is a common misconception that `/dev/urandom` is insecure. This is untrue, as
 `/dev/random` and `/dev/urandom` use the same entropy pool and PRNG internally.  In newer Linux kernels, `/dev/random` no
 longer blocks and is an alias for `/dev/urandom`.

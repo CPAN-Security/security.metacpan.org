@@ -35,6 +35,10 @@ Modern operating systems provide access to random data:
 These sources are easy to access from Perl using several modules.  We are listing a few here that are lightweight,
 and which (generally) have good defaults.
 
+It's also preferable to use existing and up-to-date modules than to roll your own method for reading random
+data. The benefits of reducing non-core dependencies are outweighed by potential bugs introduced by duplicating code
+that needs to be maintained separately.
+
 ### Crypt::URandom
 
 The simplest to use, is [Crypt::URandom](https://metacpan.org/pod/Crypt::URandom).  It is a lightweight module that

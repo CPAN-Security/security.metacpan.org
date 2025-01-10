@@ -6,12 +6,10 @@ permalink: /docs/
 ---
 Documents relevant to the CPAN Security Group.
 
-## Instructions and rules
+## Instructions
 
 * [Incident Reporting](report.md) instructions
 * [Pre-release Disclosure Agreement](pre-release-disclosure.md)
-* [Charter](charter.md) ⚠️  DRAFT
-* Standards of Conduct (TBD)
 
 ## Guides
 
@@ -24,14 +22,18 @@ See [guides/](guides/) for the full list of guides.
 ## Studies
 
 * [CPAN Dependency Confusion study](cpan-dependency-confusion.md)
+* [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
 
 ## Consultations
 
-* Consultations are in the [consultations/](consultations/) folder.
+Replies to public consultations and hearings are found in the [consultations/](consultations/) folder.
 
-## Background info
+## Rules and bylaws
+
+* [Charter](charter.md) ⚠️  DRAFT
+* Standards of Conduct (TBD)
+
+## Other background info
 
 * Tech & legislation [Reading list](readinglist.md) ⚠️  DRAFT
 * [Glossary](glossary.md) of terms ⚠️  DRAFT
-* [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
-

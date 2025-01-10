@@ -137,6 +137,9 @@ We can also encode the string using [MIME::Base64](https://metacpan.org/pod/MIME
 There are times where you may want a more restricted alphabet, such as base-62. There are modules that let you generate
 random strings with custom alphabets or URL-safe encodings.
 
+Note that returning a message digest of random bytes adds no security.  Likewise, mixing random data with other
+information such as a timestamp or PID is unnecessary, and may even compromise the security of your token.
+
 ### Crypt::URandom::Token
 
 [Crypt::URandom::Token](https://metacpan.org/pod/Crypt::URandom::Token) will generate strings for a specific alphabet

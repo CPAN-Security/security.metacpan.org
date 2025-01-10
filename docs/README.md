@@ -24,9 +24,9 @@ See [guides/](guides/) for the full list of guides.
 * [CPAN Dependency Confusion study](cpan-dependency-confusion.md)
 * [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
 
-## Consultations
+## Consultations and hearings
 
-Replies to public consultations and hearings are found in the [consultations/](consultations/) folder.
+CPANSec's replies to public consultations and hearings are found in the [consultations/](consultations/) folder.
 
 ## Rules and bylaws
 

@@ -1,9 +1,11 @@
 ---
-layout: page
+layout: default
 title: Guides for CPAN Authors
 toc: false
 permalink: /docs/guides/
 ---
+
+This is the full list of guides published by CPANSec.
 
 * [CPAN Author's Secure Coding Guide](cpan-author-guide.md) ⚠️  DRAFT
 * [CPAN Author's Guide to Random Data for Security](random-data-for-security.md)

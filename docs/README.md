@@ -1,7 +1,7 @@
 ---
-layout: page
-title: Documents & Guides
 toc: false
+layout: default
+title: Documents & Guides
 permalink: /docs/
 ---
 Documents relevant to the CPAN Security Group.
@@ -26,7 +26,7 @@ See [guides/](guides/) for the full list of guides.
 
 ## Consultations and hearings
 
-CPANSec's replies to public consultations and hearings are found in the [consultations/](consultations/) folder.
+See the [consultations/](consultations/) folder for CPANSec's replies to public consultations and hearings.
 
 ## Rules and bylaws
 

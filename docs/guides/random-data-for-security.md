@@ -138,7 +138,7 @@ There are times where you may want a more restricted alphabet, such as base-62. 
 random strings with custom alphabets or URL-safe encodings.
 
 Note that returning a message digest of random bytes adds no security.  Likewise, mixing random data with other
-information such as a timestamp or PID is unnecessary, and may even compromise the security of your token.
+information such as a timestamp or PID is unnecessary and does not improve the security.
 
 ### Crypt::URandom::Token
 

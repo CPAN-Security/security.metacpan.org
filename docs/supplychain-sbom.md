@@ -6,8 +6,7 @@ toc: true
 mermaid: true
 ---
 
-## Document status: ⚠️  DRAFT
-
+## Document status: ⚠️  DRAFT {#document-status}
 
 > [!CAUTION]
 > What you see here is a DRAFT of the Supply-chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
@@ -27,7 +26,7 @@ mermaid: true
 > Please refer to them as needed.
 
 
-## About this document (TL;DR)
+## About this document (TL;DR) {#about}
 
 This document offers **an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains**.
 
@@ -133,7 +132,6 @@ stateDiagram-v2
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem" as ecosystem_package
-    %%state "🟥 Attestation Authority 🆕" as authority_attestation
     state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
     state "🟥🟨🟦🟪 Manufacturer 🆕" as environment_manufacturer
     state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
@@ -149,7 +147,6 @@ stateDiagram-v2
     environment_maintainer   --> ecosystem_repo
     environment_maintainer   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
-    %%authority_attestation    --> ecosystem_steward
     ecosystem_package        --> ecosystem_package
     ecosystem_lang           --> ecosystem_steward
     ecosystem_package        --> ecosystem_steward
@@ -174,14 +171,14 @@ This may change in later revisions of this document.
 
 Some of the information here is based on CISA's "SBOM Sharing Roles and Considerations" recommendations ([CISA-2024](#references)) and other public documents, [referenced](#references) below.
 
-We also distinguish between SBOM Authors that are _Authoritative_ sources for Attributes and _Non-authoritative_ sources, in addition SBOM Distributors and Consumers.
+We also distinguish between SBOM Authors that are _Authoritative_ sources for Attributes ("[SBOM Author](#sbom-author-role)") and _Non-authoritative_ sources ("[SBOM Contributor](#sbom-contributor-role)"), in addition SBOM Distributors and Consumers.
 The Authoritative/Non-authoritative distinction is important so everyone is clear about where a given Metadata Attribute originally comes from.
 This distinction is _not commonly used_ in the referenced material.
 
 And finally, we acknowledge that some situations may call for an SBOM Censor, which is the time of writing is _not a commonly used term_ in the referenced material.
 
-* 🟥 SBOM Author (Authoritative) – **Creates**, defines, signs Metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
-* 🟨 SBOM Author (Non-authoritative) – **Assembles**, **updates**, merges, refines, maintains, attests, annotates Metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Correct**_.
+* 🟥 SBOM Author (Authoritative metadata provider) – **Creates**, defines, signs Metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
+* 🟨 SBOM Contributor (Non-authoritative metadata provider) – **Assembles**, **updates**, merges, refines, maintains, attests, annotates Metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Corrected**_.
 * 🟩 SBOM Distributor – **Distributes**, curates, indexes Metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
 * 🟦 SBOM Consumer – **Verifies**, consumes, aggregates, validates, surveys, analyzes or reports Metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
 * 🟪 SBOM Censor – **Censors**, redacts, deletes, anonymizes or filters Metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
@@ -535,7 +532,7 @@ A contributing author or developer of an Open Source component project, though n
 * Has the final say on the original contents of the package, and it's name-spaces.
 * The Maintainer _can_ be a group of people (having co-maintainers), though a single point of responsibility is common.
 * If a Maintainer has upstream (reverse) dependencies, the Maintainer is also considered to be an [Developer](#developer) (as seen from the upstream Maintainer's perspective).
-* Not to be confused with the [SBOM Author](#sbom-author--role-) role.
+* Not to be confused with the [SBOM Author](#sbom-author-role) role.
 * Other common names for this role include Author, Developer, [Owner](#owner--supplier-).
 
 | Ops | Attribute name                     | Required | Required by                                 | Comment | FIXME   |

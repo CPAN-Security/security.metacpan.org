@@ -65,6 +65,9 @@ The file should have the following sections.
 4. Installation and usage issues
 5. Workflow.
 
+Sections 2 (How to report a security vulnerability) and 3 (Which
+versions of the software are supported) are the most important, and
+must be present in a security policy.
 
 ### Abstract
 

@@ -20,6 +20,12 @@ title: CPANSec meeting details & minutes
 
 ## Meeting minutes
 
+### 2025
+* [2025-01-08](cpansec-minutes-2025-01-08.md)
+* [2025-01-22](cpansec-minutes-2025-01-22.md)
+
+
+### 2024
 * [2024-01-06](cpansec-minutes-2024-01-06.md)
 * [2024-01-20](cpansec-minutes-2024-01-20.md)
 * [2024-02-10](cpansec-minutes-2024-02-10.md)
@@ -38,7 +44,6 @@ title: CPANSec meeting details & minutes
 * [2024-11-15](cpansec-minutes-2024-11-15.md)
 * [2024-11-27](cpansec-minutes-2024-11-27.md)
 * [2024-12-11](cpansec-minutes-2024-12-11.md)
-* [2025-01-08](cpansec-minutes-2025-01-08.md)
 
 ### Under review
 

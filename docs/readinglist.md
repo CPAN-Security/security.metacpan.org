@@ -17,7 +17,7 @@ toc: true
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
-## Software Bills of Materials (SBOM)
+## Software Bills of Materials (SBOM) {#sbom}
 
 * (NTIA-2021-7) [The Minimum Elements For a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf) (July 2021)
 * (CISA-2023-12) (NSA, ODNI, CISA) [Securing the Software Supply Chain: Recommended Practices for Managing OSS and SBOMs](https://media.defense.gov/2023/Dec/11/2003355557/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN%20RECOMMENDED%20PRACTICES%20FOR%20MANAGING%20OPEN%20SOURCE%20SOFTWARE%20AND%20SOFTWARE%20BILL%20OF%20MATERIALS.PDF) (December 2023)
@@ -61,7 +61,7 @@ toc: true
 See also the [Regulations, directives and laws](#regulations--directives-and-laws) section below.
 
 
-## Software identification (naming & versioning)
+## Software identification (naming & versioning) {#swid}
 
 * [PURL Specification](https://github.com/package-url/purl-spec)
 * (CPAN) [URI::PackageURL](https://github.com/giterlizzi/perl-URI-PackageURL)
@@ -79,7 +79,7 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 * (BOMctl) [SBOM Document Linking Scenarios](https://docs.google.com/document/d/1Dj-OAycyAH3d6A9vPJWldNoLRArRVB607to_0s5Fk8w/edit?tab=t.0#heading=h.f7ex7w4dum5t)
 
 
-## Software Lifecycle
+## Software Lifecycle {#lifecycle}
 
 * (OWASP) [Common Lifecycle Enumeration](https://owasp.org/www-project-common-lifecycle-enumeration/)
 * (MPO) [Defining End of Life for Medical Devices](https://www.mpo-mag.com/issues/2023-09-01/view_columns/defining-end-of-life-for-medical-devices/), MPO Magazine, 2023-09-06
@@ -88,7 +88,7 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 * (MSFTOSS-2024) [5 things we learned from sponsoring a sampling of our open source dependencies](https://opensource.microsoft.com/blog/2024/06/27/5-things-we-learned-from-sponsoring-a-sampling-of-our-open-source-dependencies/), Published 2024-06-27.
 
 
-## Provenance & Supply Chain Security
+## Provenance & Supply Chain Security {#provenance}
 
 * (OpenSSF-2024-3) [Principles for Package Repository Security](https://repos.openssf.org/principles-for-package-repository-security) (Feb 2024)
 * (OpenSSF-2023-7) [Build Provenance for All Package Registries](https://repos.openssf.org/build-provenance-for-all-package-registries) (July 2023)
@@ -98,26 +98,26 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 * (SLSA) [SLSA v1.0 Infrastructure provider's quick-start guide](https://slsa.dev/how-to-infra)
 
 
-## Transparency Logs
+## Transparency Logs {#transparency}
 
 * (OpenSSF) [Sigstore home](https://openssf.org/community/sigstore/)
 * (OpenSSF) [Sigstore: Simplifying Code Signing for Open Source Ecosystems](https://openssf.org/blog/2023/11/21/sigstore-simplifying-code-signing-for-open-source-ecosystems/)
 * (Chainguard.dev) [Life of a Sigstore signature](https://www.chainguard.dev/unchained/life-of-a-sigstore-signature)
 
 
-## Regulations, directives and laws
+## Regulations, directives and laws {#laws}
 
 There are several relevant legislations regarding cybersecurity in Open Source ecosystems and supply chains.
 This is not a exhaustive list!
 
 
-### USA – EO 14028
+### USA – EO 14028 {#eo14028}
 
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) (EO 14028, 2021-05-12)
     * Section 4: Enhancing Software Supply Chain Security
 
 
-### EU and EEA – NIS2
+### EU and EEA – NIS2 {#nis2}
 
 [Directive 2022/2555, Network and Information Security Directive 2](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555&qid=1710318619717) (NIS2; Published 2022-12-27)
 
@@ -143,7 +143,7 @@ This is not a exhaustive list!
 * [Draft act](https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14241-Cybersecurity-risk-management-reporting-obligations-for-digital-infrastructure-providers-and-ICT-service-managers_en)
 
 
-### EU and EEA – CRA
+### EU and EEA – CRA {#cra}
 
 (EU) [Regulation 2024/2847 (Cyber Resilience Act)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402847) (Published 2024-11-20)
 
@@ -252,7 +252,7 @@ Annexes are technical materials presented separately from the main text, and hav
 * (EU) The '[Blue Guide](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.247.01.0001.01.ENG&toc=OJ%3AC%3A2022%3A247%3ATOC)' on the implementation of EU product rules (2022/C 247/01). Published 2022-06-29; [PDF](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04))
 * (EU) [CRA Corrigendum](https://draftable.com/compare/ShyQnqhNqFGP) comparison. Published 2024-09-03; [Original PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130-FNL-COR01_EN.pdf)
 
-### EU and EEA – PLD
+### EU and EEA – PLD {#pld}
 
 (EU) Product Liability Directive (PLD)
 
@@ -260,7 +260,7 @@ Annexes are technical materials presented separately from the main text, and hav
 * (EU) [Product Liability Directive](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.html) (85/374/EEC), Published 2024-03-12 by the EU Parliament ([PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0132_EN.pdf))
 * (EU) [PLD Corrigendum](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130-FNL-COR01_EN.pdf) (PDF); Published 2024-09-03;
 
-### EU and EEA – DORA
+### EU and EEA – DORA {#dora}
 
 (EU) [Digital Operational Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554&qid=1710317679922): Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations (DORA, 2022-12-14)
 
@@ -270,14 +270,14 @@ Annexes are technical materials presented separately from the main text, and hav
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-cross-sectoral-financial-services-act-1)
 
 
-## Other informative articles and guides
+## Other informative articles and guides {#other}
 
 * (Checkmarx) [Preparing for Europe’s Most Extensive Cybersecurity Directive, NIS2 – What AppSec teams need to know](https://checkmarx.com/blog/preparing-for-europes-most-extensive-cybersecurity-directive-nis2-what-appsec-teams-need-to-know/)
 * (CPAN) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html) – describing the different personas or roles involved in the life-cycle of a CPAN distribution.
 * (CISA) [Software Acquisition Guide](https://www.cisa.gov/resources-tools/resources/software-acquisition-guide-government-enterprise-consumers-software-assurance-cyber-supply-chain)
 
 
-## PCI-SSF
+## PCI-SSF {#pcissf}
 
 The Payment Card Industry Software Security Framework v1.2.1, Control Objective C.1, states
 
@@ -308,9 +308,9 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 * ISO 27036:2023 (3rd party risk)
 
 
-## License and use of this document
+## License and use of this document {#license}
 
-* Version: 0.5.1
+* Version: 0.5.2
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@cpan.org>, Some rights reserved.
 

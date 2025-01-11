@@ -11,6 +11,7 @@ on:
   pull_request_review:
     types: [submitted]
   push:
+    branches: [main]
 jobs:
   notify:
     runs-on: ubuntu-latest

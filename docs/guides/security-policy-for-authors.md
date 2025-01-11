@@ -5,16 +5,6 @@ description: A guide for including a Security Policy in a CPAN distribution is t
 toc: true
 ---
 
-## Document Status: ⚠️  DRAFT
-
-> [!CAUTION]
-> What you see here is a DRAFT of the Guidelines for Adding a Security Policy to Perl Distributions, by the CPAN Security Group (CPANSec).
-> As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
->
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/guides/docs/guides/security-policy-for-authors.md](https://github.com/CPAN-Security/security.metacpan.org/tree/guides/docs/guides/security-policy-for-authors.md)
-> - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
-> - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
-
 ## Purpose
 
 The purpose of including a Security Policy in a CPAN distribution is to advise users how to report security issues, and how these issues will be handled.
@@ -99,7 +89,7 @@ If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
 > This text is based on the CPAN Security Group's Guidelines for Adding
-> a Security Policy to Perl Distributions (version 0.2.2)
+> a Security Policy to Perl Distributions (version 1.0.0)
 > https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 #### Links from other module documentation
@@ -229,7 +219,7 @@ other people.  For example,
 >
 > They may also forward this issue to CPANSec.
 
-### What Software this Policy Applies to
+### What Software This Policy Applies To
 
 This section discusses what software this applies to, and what are
 considered security issues in the software, and what are not
@@ -329,7 +319,7 @@ The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
-a Security Policy to Perl Distributions (version 0.2.2)
+a Security Policy to Perl Distributions (version 1.0.0)
 https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 # How to Report a Security Vulnerability
@@ -378,7 +368,7 @@ modules or downstream software that uses this software.
 
 They may also forward this issue to CPANSec.
 
-# Which Software this Policy Applies to
+# Which Software This Policy Applies To
 
 Any security vulnerabilities in Foo-Bar are covered by this policy.
 
@@ -431,7 +421,7 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 0.2.2
+* Version: 1.0.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 
@@ -448,3 +438,4 @@ Several people have been involved in the development of this document
 * Timothy Legge
 * Stig Palmquist
 * Salve J. Nilsen
+* brian d foy

@@ -245,19 +245,28 @@ considered security issues.  For example,
 There should be a section or subsection that identifies which versions
 of the software will be supported for security fixes.  For example,
 
-> The maintainer(s) will only commit to releasing security fixes for
-> the latest version of Foo-Bar.
->
+> The maintainer(s) will will release security fixes for the latest
+> version of Foo-Bar.
+
+or if there are multiple versions that will be supported, that should
+be noted. For example,
+
+> For security vulnerabilities, the maintainer(s) will release fixes
+> for the last two major versions of Foo-Bar.  As of this release,
+> that is `v1.4.x` and `v1.6.x`.
+
+(Note a disadvantage of mentioning specific versions in a security
+policy is that it will need to be updated with each release.)
+
+If the maintainers only support specific Perl versions, e.g. Perl
+versions released in the last ten years, then that should be noted in
+the security policy (as well as the module documentation).
+
 > Note that the Foo-Bar project only supports major versions of Perl
 > released in the past ten (10) years, even though Foo-Bar will run on
 > older versions of Perl.  If a security fix requires us to increase
-> the minimum version of Perl that is supported, then we may do so.
-
-or,
-
-> For security vulnerabilities, the maintainer(s) will only commit to
-> supporting the last two major versions of Foo-Bar.  As of this
-> release, that is `v1.4.x` and `v1.6.x`.
+> the minimum version of Perl that is supported, then the
+> maintainer(s) may do so.
 
 ### Installation and usage issues
 
@@ -387,13 +396,14 @@ Foo-Bar distribution) are not covered by this policy.
 
 ## Supported Versions of Foo-Bar
 
-The maintainer(s) will only commit to releasing security fixes for
-the latest version of Foo-Bar.
+The maintainer(s) will will release security fixes for the latest
+version of Foo-Bar.
 
 Note that the Foo-Bar project only supports major versions of Perl
 released in the past ten (10) years, even though Foo-Bar will run on
-older versions of Perl.  If a security fix requires us to increase
-the minimum version of Perl that is supported, then we may do so.
+older versions of Perl.  If a security fix requires us to increase the
+minimum version of Perl that is supported, then the maintainer(s) may
+do so.
 
 # Installation and Usage Issues
 

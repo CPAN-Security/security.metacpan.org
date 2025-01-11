@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CPAN Author's Guide to Secure Software Development
+title: CPANSec's Guide to Secure Software Development
 description: A guide for CPAN distribution authors to writing secure code
 toc: true
 ---
@@ -16,28 +16,21 @@ toc: true
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
-## On Secure Software Development on CPAN
+## The need for Secure Software Development on CPAN
 
 As of December 2024, we have new guidelines and legislation introduced in the EU ([NIS2](/docs/readinglist.md#) and the [Cyber Resilience Act](/docs/readinglist.md#)), with US equivalents ([EO 14028](/docs/readinglist.md#)), introducing new requirements regarding software security.
 These requirements are directed at many businesses and institutions to raise the baseline level of security in the software they produce and in sectors they operate.
 A substantial part of these depend on software published on CPAN.
 This means there is now a greater need for CPAN distributions to take their security posture into account.
 
-To help in this shift, CPANSec has put together several guides intended to assist any developers publishing on CPAN to improve their distributions and code.
+To help in this shift, CPANSec has put together several [guides](./) intended to assist any developers publishing on CPAN to improve their distributions and code.
 
 
-## Introduction to _secure software_
+### _Secure by Design_ and _Secure by Default_
 
-1. Read the [perlsec](https://perldoc.perl.org/perlsec) page to familiarize yourself with Perl's security features
-1. Read the OpenSSF [Open Source Best Practices Badge](https://www.bestpractices.dev/en) program, and
-    * Try to at least achieve a [passing badge](https://www.bestpractices.dev/en/criteria/0).
-    * (You can also see how well [other Perl projects](https://www.bestpractices.dev/en/projects?q=perl) do in this regard!)
-
-
-## _Secure by Design_ and _Secure by Default_
-
-* EU Cyber Resilience Act, [Annex I, Part I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_I)
-* [CISA's Secure by Design Pledge](https://www.cisa.gov/securebydesign/pledge)
+1. EU Cyber Resilience Act, [Annex I, Part I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_I)
+    * A good illustration of what is expected from CPAN users
+1. [CISA's Secure by Design Pledge](https://www.cisa.gov/securebydesign/pledge)
 
 
 ## Improving your distribution
@@ -63,6 +56,7 @@ To help in this shift, CPANSec has put together several guides intended to assis
 
 1. Learn how to use [perltaint](https://perldoc.perl.org/perlsec#Laundering-and-Detecting-Tainted-Data) to detect and defang input from untrusted sources
 1. Add [tests for taintedness](https://metacpan.org/pod/Test::Taint) to your codebase, to verify that your code actually handles untrusted input as expected
+1. Check out CPANSec's [guide to vulnerability testing](vulnerability-testing.md)
 
 
 ### Practice symbol import discipline
@@ -76,7 +70,7 @@ To help in this shift, CPANSec has put together several guides intended to assis
     * If necessary, help your upstream maintainers to trim down their dependency graph
 
 
-## Ensure your project is sustainable
+### Ensure your project is sustainable
 
 1. Have at least one other trusted co-maintainer
     * You can add a co-maintainer in PAUSE
@@ -87,16 +81,39 @@ To help in this shift, CPANSec has put together several guides intended to assis
     * Add a `CONTRIBUTING.md` file, to make it easier for both new and old contributors to help
 
 
-## Select an appropriate Open Source license
+### Select an appropriate Open Source license
 
 1. Pick an OSI-approved Open Source license, and add it both to your project repo and other metadata
 
 
-# Relevant documentation and guides
+## Improving your code
 
-* SEI CERT [Secure Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
-* [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
-* [CISA Product Security Bad Practices guide](https://www.cisa.gov/resources-tools/resources/product-security-bad-practices)
+### Use a secure Random Number Generator
+
+1. Read the [CPAN Author’s Guide to Random Data for Security](random-data-for-security.md)
+
+
+### Use safe cryptographic algorithms
+
+> [!NOTE]
+> TODO
+
+
+### Use certificates correctly
+
+> [!NOTE]
+> TODO
+
+
+## Further reading {#more}
+
+1. Perl's [perlsec](https://perldoc.perl.org/perlsec) documentation
+1. OpenSSF [Open Source Best Practices Badge](https://www.bestpractices.dev/en) program
+    * Try to at least achieve a [passing badge](https://www.bestpractices.dev/en/criteria/0).
+    * (You can also see how well [other Perl projects](https://www.bestpractices.dev/en/projects?q=perl) do in this regard!)
+1. SEI CERT [Secure Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
+1. [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
+1. [CISA Product Security Bad Practices guide](https://www.cisa.gov/resources-tools/resources/product-security-bad-practices)
     * …on [Github Discussions](https://github.com/cisagov/bad-practices/discussions)
 
 

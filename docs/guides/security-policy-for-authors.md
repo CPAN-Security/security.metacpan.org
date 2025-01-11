@@ -268,6 +268,9 @@ the security policy (as well as the module documentation).
 > the minimum version of Perl that is supported, then the
 > maintainer(s) may do so.
 
+If the software uses or embeds external libraries, then the supported
+versions of those libraries should also be noted.
+
 ### Installation and usage issues
 
 This is an optional section.

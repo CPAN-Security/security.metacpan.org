@@ -58,7 +58,7 @@ title: Minutes 2024-11-15
 
 
 ### TLS/HTTPS/CSPRNG/DSA in core
-*   @robrwo, @stigtsp - CSPRNG and DSA should be in-scope (they suggest and hope)
+*   @rrwo, @stigtsp - CSPRNG and DSA should be in-scope (they suggest and hope)
 *   @timlegge - @leont has had progress
     * @leont and @timlegge met with PSC
     * Current proposal is to 

@@ -26,10 +26,10 @@ title: Minutes 2025-01-08
 *   Attendees
     * @sjn, @robrwo. @tux, @leont, @timlegge, @stigtsp
 *   Regrets
-    * 
+    * …
 
 ### Approve previous meeting minutes
-*   Previous meeting minutes was approved by XXX and merged by XXX
+*   Previous meeting minutes was approved by @timlegge and @robrwo, and merged by @sjn
 
 
 ### Quick summary of current work (Grouped by project)

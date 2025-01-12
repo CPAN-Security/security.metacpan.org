@@ -8,7 +8,7 @@ contribution_url: https://github.com/CPAN-Security/security.metacpan.org/blob/ma
 toc: true
 ---
 
-## Document status: ⚠️  DRAFT
+## Document status: ⚠️  DRAFT {#document-status}
 
 > [!CAUTION]
 > What you see here is a DRAFT of the Glossary used by the CPAN Security Group (CPANSec).
@@ -35,7 +35,7 @@ Please take this into account when commenting this document.
 
 ## Glossary
 
-### Artifact ✍️
+### Artifact ✍️ {#artifact}
 
 > [!NOTE]
 > Component and Artifact seem to have overlapping definitions.
@@ -44,7 +44,7 @@ Please take this into account when commenting this document.
 > 1. (SLSA-2023) An immutable blob of data; primarily refers to [software](#software), but SLSA can be used for any artifact.
 >     * E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
 >
-> See also: [Component](#component-).
+> See also: [Component](#component).
 >
 > (Ref: [SLSA-2023](#references-and-terms), CPANSec-2024)
 
@@ -77,7 +77,7 @@ Please take this into account when commenting this document.
 > (Ref: [SLSA-2023](#references-and-terms))
 
 
-### CE Marking ⚠️
+### CE Marking ⚠️  {#ce-marking}
 
 > 1. (CRA-2024-03) A marking by which a manufacturer indicates that a product with digital elements and the processes put in place by the manufacturer are in conformity with the essential requirements set out in [EU Cyber Resilience Act, Annex I](#other-supporting-matter) and other applicable European Union harmonization legislation providing for its affixing.
 >
@@ -91,7 +91,7 @@ Please take this into account when commenting this document.
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024)
 
 
-### Component ✍️
+### Component ✍️ {#component}
 
 > [!NOTE]
 > 1. (CPANSec) Component and Artifact seem to have overlapping definitions.
@@ -100,7 +100,7 @@ Please take this into account when commenting this document.
 > 1. (CRA-2024-03) Software or hardware intended for integration into an [electronic information system](#electronic-information-system).
 > 1. (NTIA-2021) A unit of software defined by a supplier at the time the component is built, packaged, or delivered. Many components contain sub-components. Examples of components include a software product, a device, a library, or a single file.
 >
-> See also: [Artifact](#artifact-).
+> See also: [Artifact](#artifact).
 >
 > (Ref: [CRA-2024-03](#references-and-terms), NTIA-2021, CPANSec-2024)
 
@@ -111,18 +111,18 @@ Please take this into account when commenting this document.
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024)
 
-#### Component, second-party ✍️
+#### Component, second-party ✍️ {#second-party}
 
 > 1. (CPANSec-2024) Any software component created through the interaction with a second party, including open source, "source available", and proprietary software where the source is made available for either inspection, use, modification, building or sharing.
 >     * Open Source software components that an application has as dependencies should be considered as "second-party" components or dependencies, since the application owner has an ongoing relationship with the FOSS component project, by the fact that the owner has accepted the open source project's license.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Component, third-party ✍️
+#### Component, third-party ✍️ {#third-party}
 
 > 1. (SCVS-2020, CDXAG-2024) Any software component not directly created including open source, "source available", and commercial or proprietary software.
 > 1. (CPANSec-2024) Any software component not directly created including "source available", commercial or proprietary software.
->     * See [Component, second-party](#component--second-party-).
+>     * See [Component, second-party](#second-party).
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
@@ -140,15 +140,15 @@ Please take this into account when commenting this document.
 >     * [End-user](#end-user)
 
 
-### CycloneDX ✍️
+### CycloneDX ✍️ {#cyclonedx}
 
 > 1. (SCVS-2020) An OWASP managed software bill of materials specification designed to be lightweight and security-focused.
->     * CycloneDX is considered to be one of the three [SBOM](#sbom--software-bill-of-materials-) formats, together with [SWID](#software-identification--swid-) and [SPDX](#software-package-data-exchange--spdx-).
+>     * CycloneDX is considered to be one of the three [SBOM](#sbom) formats, together with [SWID](#swid) and [SPDX](#spdx).
 >
 > (Ref: [SCVS-2020](#references-and-terms))
 
 
-### Dependency ⚠️  ✍️
+### Dependency ⚠️  ✍️ {#dependency}
 
 > [!CAUTION]
 > * (CPANSec-2024) Dependencies may be declared/stated/referenced or included/embedded or assumed/implied/detected, development phase-specific (e.g. developer, config, build, test, deploy, or runtime-specific), dynamic or static, unresolved or resolved, direct or transitive, or required, recommended or suggested.
@@ -169,18 +169,18 @@ Please take this into account when commenting this document.
 >         * Unresolved, or Resolved during Development, Configuration, Build, Test, Deploy or at Runtime
 > 1. (SLSA-2023) An [Artifact](#artifact) that is an input to a build process but that is not a source.
 >     * In the SLSA model, it is always a package.
->     * E.g. an Alpine package ([package](#package---)) distributed on Alpine Linux ([platform](#platform)).
+>     * E.g. an Alpine package ([package](#package)) distributed on Alpine Linux ([platform](#platform)).
 > 1. ⚠️  (NTIA-2021) Characterizing the relationship that an upstream component X is included in software Y.
 >
 > (Ref: [SLSA-2023](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Direct) ✍️
+#### Dependency (Direct) ✍️ {#dependency-direct}
 
 > 1. (SCVS-2020, CDXAG-2024) A software component that is referenced by a program itself.
 > 1. (CPANSec-2024) A [software](#software) program, library, plugin, service, resource or component that is required for another software program or component to function as expected.
 >
 > * See also
->     * For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive-).
+>     * For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive).
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
@@ -192,34 +192,34 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Static)](#dependency-static)
 
-#### Dependency (Transitive) ✍️
+#### Dependency (Transitive) ✍️ {#dependency-transitive}
 
 > 1. (SCVS-2020) A software component that is indirectly used by a program by means of being a dependency of a dependency.
 > 1. (NTIA-2021) Characterizing the relationship that if an upstream component X is included in software Y and component Z is included in component X then component Z is included in software Y.
 > 1. (CPANSec-2024) Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
 >
 > * See also
->    * [Dependency (Direct)](#dependency-direct-).
+>    * [Dependency (Direct)](#dependency-direct).
 >
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
-#### Dependency (Embedded, Included, Pre-resolved, Contained) ✍️
+#### Dependency (Contained; Embedded, Included, Pre-resolved) ✍️ {#dependency-contained}
 
 > 1. (CPANSec-2024) A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-##### Dependency (Pinned at Source) ✍️
+##### Dependency (Pinned at Source) ✍️ {#dependency-pinned}
 
-> * See also
->     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded-included-pre-resolved-%EF%B8%8F)
+> * See
+>     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded)
 
 ##### Dependency (Resolved at Source) ✍️
 
-> * See also
->     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded-included-pre-resolved-%EF%B8%8F)
+> * See
+>     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded)
 
-#### Dependency (Assumed, Implied, Phantom, Unstated) ✍️
+#### Dependency (Phantom; Assumed, Implied, Unstated) ✍️ {#dependency-phantom}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -245,53 +245,53 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Static)](#dependency-static)
 
-#### Dependency (Unresolved, Required)
+#### Dependency (Unresolved, Required) {#dependency-unresolved}
 
-> * See also
+> * See
 >     * [Requirement](#requirement)
 
-#### Dependency (Resolved during Configuration) ✍️
+#### Dependency (Resolved during Configuration) ✍️ {#dependency-configuration-time}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved during Build) ✍️
+#### Dependency (Resolved during Build) ✍️ {#dependency-build-time}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved during Deploy) ✍️
+##### Dependency (Pinned during Build) ✍️ {#dependency-build-pinned)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved at Runtime) ✍️
+#### Dependency (Resolved during Deploy) ✍️ {#dependency-deploy-time}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Pinned during Build) ✍️
+#### Dependency (Resolved at Runtime) ✍️ {#dependency-runtime}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (In-ecosystem) ✍️
+#### Dependency (In-ecosystem) ✍️ {#dependency-in-ecosystem}
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> * See
+>     * [Dependency (Out-of-ecosystem)](#dependency-out-of-ecosystem)
+
+#### Dependency (Out-of-ecosystem) ✍️ {#dependency-out-of-ecosystem}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > * See also
->     * [Dependency (Out-of-ecosystem)](#dependency-out-of-ecosystem-%EF%B8%8F)
+>     * [Dependency (In-ecosystem)](#dependency-in-ecosystem)
 
-#### Dependency (Out-of-ecosystem) ✍️
-
-> [!NOTE]
-> * FIXME: Expand on this topic
-
-> * See also
->     * [Dependency (In-ecosystem)](#dependency-in-ecosystem-%EF%B8%8F)
-
-#### Dependency (Service) ✍️
+#### Dependency (Service) ✍️ {#dependency-service}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -327,7 +327,7 @@ Please take this into account when commenting this document.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Unused, Zombie)
+#### Dependency (Zombie; Unused) {#dependency-zombie}
 
 > 1. (CPANSec-2024) A dependency that has been resolved and installed, but is not in use anywhere (any more).
 >     * May be a build artifact left over after earlier stages in the build process (e.g. development, configure, or testing)
@@ -336,7 +336,7 @@ Please take this into account when commenting this document.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-### Requirement ✍️
+### Requirement ✍️ {#requirement}
 
 > 1. (CPANSec-2024) A dependency that that needs to be resolved (be made available) for a software component to function as expected.
 >     * Requirements are expected to be resolved by the Builder, Packager or Integrator of the component.
@@ -350,7 +350,16 @@ Please take this into account when commenting this document.
 > * See
 >     * [Requirement](#requirement)
 
-### Distributor ⚠️
+### Distributor ✍️ {#distributor}
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+> 1. (CPANSec-2024) The Role that is tasked with ensuring a component artifact is available for download by anyone downstream.
+>
+> (Ref: [CPANSec-2024](#references-and-terms), [Distributor](#distributor))
+
+#### Distributor (CRA) ⚠️  {#distributor-cra}
 
 > [!WARNING]
 > 1. (CPANSec-2024) The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
@@ -366,15 +375,9 @@ Please take this into account when commenting this document.
 >     *  Distributors are subject to specific obligations and have a key role to play in the context of market surveillance.
 >
 > * See also:
->     * [Provider](#provider)
+>     * [Distributor](#distributor)
 >
 > (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms), [CPANSec-2024](#references-and-terms))
-
-#### Provider ✍️
-
-> 1. (CPANSec-2024) The Role that is tasked with ensuring a component artifact is available for download by anyone downstream.
->
-> (Ref: [CPANSec-2024](#references-and-terms), [Distributor](#distributor))
 
 
 ### Downstream
@@ -409,7 +412,7 @@ Please take this into account when commenting this document.
 > (Ref: [NTIA-2021](#references-and-terms), [EUBG-2022-3](#references-and-terms))
 
 
-### GrayPAN/GreyPAN
+### GrayPAN/GreyPAN {#greypan}
 
 > 1. A GrayPAN is a publicly accessible CPAN, but published outside the CPAN infrastructure, resulting in a codebase that is factually public, but functionally non existent from the perspective of CPAN (e.g. own index).
 > (Ref [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-various-pans/))
@@ -421,7 +424,7 @@ Please take this into account when commenting this document.
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
-### Importer
+### Importer (CRA)
 
 > 1. (CRA-2024-03) A natural or legal person established in the Union who places on the market a product with digital elements that bears the name or trademark of a natural or legal person established outside the European Union.
 > 1. (EUBG-2022-3) The importer is a natural or legal person established in the Union who places a product from a third country on the EU market.
@@ -440,7 +443,7 @@ Please take this into account when commenting this document.
 >     * [SBOM Types](#sbom-types)
 
 
-### Making available on the market
+### Making available on the market (CRA)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -454,7 +457,7 @@ Please take this into account when commenting this document.
 >
 > (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-2](#references-and-terms))
 
-### Manufacturer
+### Manufacturer (CRA)
 
 > 1. (CRA-2024-03) Any natural or legal person who develops or manufactures products with digital elements or has products with digital elements designed, developed or manufactured, and markets them under his or her name or trademark, whether for payment, monetisation or free of charge.
 > 1. (EUBG-2022-3, Chapter 3.1) The manufacturer is any natural or legal person who manufactures a product or has a product designed or manufactured, and places it on the market under his own name or trademark.
@@ -472,20 +475,20 @@ Please take this into account when commenting this document.
 > (Ref: [NTIA-2021](#references-and-terms))
 
 
-### Open-source software steward ⚠️
+### Open source software steward ⚠️  {#oss-steward}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 > * FIXME: This is a definition that was added to the CRA on 2023-12-20, meaning it may change in the final version of the regulation.
 
-> 1. (CRA-2024-03) Any legal person, other than a [manufacturer](#manufacturer), which has the purpose or objective to systematically provide support on a sustained basis for the development of specific products with digital elements qualifying as free and open-source software that are intended for commercial activities, and ensures the viability of those products.
+> 1. (CRA-2024-03) Any legal person, other than a [manufacturer](#manufacturer), which has the purpose or objective to systematically provide support on a sustained basis for the development of specific products with digital elements qualifying as free and open source software that are intended for commercial activities, and ensures the viability of those products.
 >
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
-### Package ⚠️  ✍️
+### Package ⚠️  ✍️ {#package}
 
-> 1. (SLSA-2023) [An] [Artifact](#artifact-) that is “published” for use by others.
+> 1. (SLSA-2023) [An] [Artifact](#artifact) that is “published” for use by others.
 >     * In the model, it is always the output of a build process, though that build process can be a no-op.
 >     * E.g. a Docker image (package) distributed on DockerHub (platform).
 >     * E:g. a ZIP file containing source code is a package, not a source, because it is built from some other source, such as a git commit.
@@ -495,7 +498,7 @@ Please take this into account when commenting this document.
 > (Ref: [SLSA-2023](#references-and-terms), CPANSec-2024)
 
 
-### Package manager ✍️
+### Package manager ✍️ {#package-manager}
 
 > 1. (SCVS-2020, CDXAG-2024) A distribution mechanism that makes software artifacts discoverable by requesters of a specific package ecosystem.
 > 1. (CPANSec-2024) A distribution mechanism that makes software artifacts discoverable and installable by users of a specific package ecosystem.
@@ -503,7 +506,7 @@ Please take this into account when commenting this document.
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
-### Package URL (PURL)
+### Package URL (PURL) {#purl}
 
 > 1. (SCVS-2020, CDXAG-2024) An ecosystem-agnostic specification which standardizes the syntax and location information of software components.
 >    * (CPANSec-2024) The PURL spec can be found in [GitHub](https://github.com/package-url/purl-spec). As it is an open source project it is constantly evolving.
@@ -519,7 +522,7 @@ Please take this into account when commenting this document.
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, NTIA-2021)
 
 
-### Placing on the market
+### Placing on the market (CRA)
 
 > 1. (CRA-2024-03) The first making available of a product with digital elements on the Union market.
 > 1. (EUBG-2022-2, Chapter 2.3) A product is placed on the market when it is made available for the first time on the Union market.
@@ -530,16 +533,16 @@ Please take this into account when commenting this document.
 > (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-2](#references-and-terms))
 
 
-### Point of origin ⚠️  ✍️
+### Point of origin ⚠️  ✍️ {#point-of-origin}
 
 > 1. (SCVS-2020, CDXAG-2024) The supplier and associated metadata from which a software component has been procured, transmitted, or received.
 >     * Package repositories, release distribution platforms, and version control history are examples of various points of origin.
-> 1. (CPANSec-2024) Discouraged term – Confusing definition, having common meaning with both [Source](#source---), [Manufacturer](#manufacturer) and [Distributor](#distrubutor-). 
+> 1. (CPANSec-2024) Discouraged term – Confusing definition, having common meaning with both [Source](#source), [Manufacturer](#manufacturer) and [Distributor](#distrubutor). 
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
-### Presumption of Conformity
+### Presumption of Conformity (CRA)
 
 > [!CAUTION]
 > * FIXME: Find a better definition! The one in the Blue Guide is more of an explanation with context. In the meantime, please read the Blue Guide text.
@@ -555,7 +558,7 @@ Please take this into account when commenting this document.
 > (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-4](#references-and-terms))
 
 
-### Procurement ✍️
+### Procurement ✍️ {#procurement}
 
 > 1. (SCVS-2020, CDXAG-2024) The process of agreeing to terms and acquiring software or services for later use.
 >     * (CPANSec-2024) This includes agreeing to Open Source licenses.
@@ -563,36 +566,36 @@ Please take this into account when commenting this document.
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
-### Product with digital elements
+### Product with digital elements (CRA)
 
 > 1. (CRA-2024-03) A software or hardware product and its [Remote Data Processing](#remote-data-processing) solutions, including software or hardware components being placed on the market separately.
 >
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
-### Provenance ✍️
+### Provenance ✍️ {#provenance}
 
 > 1. (SCVS-2020, CDXAG-2024) The [chain of custody](#chain-of-custody) and origin of a software component.
->     * Provenance incorporates the [point of origin](#point-of-origin-) through distribution as well as derivatives in the case of software that has been modified.
+>     * Provenance incorporates the [point of origin](#point-of-origin) through distribution as well as derivatives in the case of software that has been modified.
 > 1. (NTIA-2021) Data about the chain of custody of the software and all of the constituent components, potentially including data about the authors and locations from where the components were obtained.
 >
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
 
-### Remote Data Processing
+### Remote Data Processing (CRA)
 
 > 1. (CRA-2024-03) Data processing at a distance the software for which is designed and developed by the manufacturer, or under the responsibility of the manufacturer, and the absence of which would prevent the product with digital elements from performing one of its functions.
 >
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
-### Second-party component ✍️
+### Second-party component ✍️ {#second-party-component}
 
-> * See also
->     * [Component, second-party](#component-second-party-).
+> * See
+>     * [Component, second-party](#second-party).
 
 
-### SBOM (Software Bill of Materials)
+### SBOM (Software Bill of Materials) {#sbom}
 
 > 1. (CRA-2024-03) A formal record containing details and supply chain relationships of components included in the software elements of a product with digital elements.
 > 1. (SCVS-2020, CDXAG-2024) A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software.
@@ -605,84 +608,84 @@ Please take this into account when commenting this document.
 
 ### SBOM Attributes
 
-#### SBOM Author Name (Attribute)
+#### SBOM Author Name (Attribute) {#sbom-author}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### SBOM Timestamp (Attribute)
+#### SBOM Timestamp (Attribute) {#sbom-timestamp}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### SBOM Type (Attribute)
+#### SBOM Type (Attribute) {#sbom-type}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### SBOM Primary Component (Attribute)
+#### SBOM Primary Component (Attribute) {#sbom-primary-component}
 
 > 1. (CISA-2024-9) The Primary Component, or root of dependencies, is the subject of the SBOM or the foundational component being described in the SBOM.
 >     * […] component attributes […] are also identified for this component, just as they are for the direct and transitive components.
 >
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### Component Name (Attribute)
+#### Component Name (Attribute) {#component-name}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### Version (Attribute)
+#### Version (Attribute) {#version}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### Supplier Name (Attribute)
+#### Supplier Name (Attribute) {#supplier-name}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### Cryptographic Hash (Attribute)
+#### Cryptographic Hash (Attribute) {#cryptographic-hash}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### Unique Identifier (Attribute)
+#### Unique Identifier (Attribute) {#unique-identifier}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### Relationships (Attribute)
+#### Relationships (Attribute) {#relationships}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### License (Attribute)
+#### License (Attribute) {#license}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
 > (Ref: [CISA-2024-9](#references-and-terms))
 
-#### Copyright Holder (Attribute)
+#### Copyright Holder (Attribute) {#copyright-holder}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -698,21 +701,21 @@ Please take this into account when commenting this document.
 >
 > (Ref: [CISA-2024-3](#references-and-terms))
 
-#### SBOM Assembler (Role) ✍️
+#### SBOM Assembler (Role) ✍️ {#sbom-assembler-role}
 
-> 1. (CPANSec-2024) An 🟨 [SBOM Author (Non-authoritative)](#sbom-author--non-authoritative-)
->    * MAY consume [Source SBOM](#source-sbom--type-), [Build SBOM](#build-sbom--type-) and/or [Deployed SBOM](#deployed-sbom--type-) type documents
->    * SHOULD produce [Build SBOM](#build-sbom--type-) and/or [Deployed SBOM](#deployed-sbom--type-) type documents
+> 1. (CPANSec-2024) An 🟨 [SBOM Contributor](#sbom-contributor) (Non-authoritative metadata provider) that produces an SBOM that contains any resolved dependencies as part of a build, packaging or container assembly process.
+>    * MAY consume [Source SBOM](#source-sbom-type), [Build SBOM](#build-sbom-type) and/or [Deployed SBOM](#deployed-sbom-type) type documents
+>    * SHOULD produce [Build SBOM](#build-sbom-type) and/or [Deployed SBOM](#deployed-sbom-type) type documents
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### SBOM Author (Authoritative) (Role) ✍️
+#### SBOM Author (Authoritative Metadata provider) (Role) ✍️ {#sbom-author-role}
 
 > [!NOTE]
-> 1. (CPANSec-2024) SBOM Authors who are not authoritative sources, but instead gather SBOM metadata from different dependencies, may be referred to as an [SBOM Assembler](glossary#sbom-assembler--role-).
+> 1. (CPANSec-2024) SBOM Authors who are not authoritative sources, but instead gather SBOM metadata from different dependencies, may be referred to as an [SBOM Assembler](glossary#sbom-assembler-role).
 > 1. (CPANSec-2024) SBOM Authors may also collect, assemble, update, or annotate SBOM metadata — _They make sure the metadata and related artifacts are **Current**_.
 >     * They may for example collect SBOMs throughout build dependency resolution, and assemble (merge), translate (transform), to produce SBOMs for analysis or audit purposes. (NTIA-2021, "Transform" category, paraphrased)
-> 1. (CPANSec-2024) An SBOM Author who is tasked with removing (censoring) sensitive information from SBOM documents may be called [SBOM Censor](glossary#sbom-censor--role-)
+> 1. (CPANSec-2024) An SBOM Author who is tasked with removing (censoring) sensitive information from SBOM documents may be called [SBOM Censor](glossary#sbom-censor-role)
 
 > 1. (CPANSec-2024) 🟥 SBOM Author (Authoritative).
 >     * An authoritative source of an SBOM, or an SBOM metadata attributes.
@@ -724,10 +727,10 @@ Please take this into account when commenting this document.
 >
 > (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
-#### SBOM Author (Non-authoritative) (Role)
+#### SBOM Contributor (Non-authoritative metadata provider) (Role) {#sbom-contributor-role}
 
 > 1. (CPANSec-2024) 🟨 SBOM Author (Non-authoritative)
->     * A non-authoritative [SBOM Author](#sbom-author--role-).
+>     * A non-authoritative [SBOM Author](#sbom-author-role).
 > 1. (CPANSec-2024) Someone that gathers, assembles or updates SBOMs from different sources into a new SBOM.
 >     * This is a _informal_ Role separate from "SBOM Author" for clarifying the responsibility when the Role intends to _gather_, _assemble_ or _update_ metadata attributes, instead of being the authoritative _creator_ of an attributes.
 >     * This assumes some attributes may be in need of updating as an SBOM is passed down a supply-chain – for example to correct upstream assumptions like 'Download location', add missing attributes, or update the list of resolved dependencies.
@@ -735,12 +738,12 @@ Please take this into account when commenting this document.
 > 
 > (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
-#### SBOM Distributor (Role)
+#### SBOM Distributor (Role) {#sbom-distributor-role}
 
 > 1. (CPANSec-2024) 🟩 SBOM Distributor.
 >     * SBOM Distributor roles distribute, curate, or index SBOM metadata — _They make sure the metadata and related artifacts are made **Available** to others_.
 >     * They don't have any specific metadata attributes that are commonly used across the different supply-chain consumer roles, beyond ensuring that SBOMs are available for others to use and refer to.
-> 1. (CISA-2024-3) Receives SBOMs for the purpose of sharing them with [SBOM Consumers](#sbom-consumer--role-) or other Distributors.
+> 1. (CISA-2024-3) Receives SBOMs for the purpose of sharing them with [SBOM Consumers](#sbom-consumer-role) or other Distributors.
 > 1. (CISA-2023) Additionally, an SBOM Distributor may care about the following activities.
 >     * Discovery: Mechanism used by the consumer to know the SBOM exists and how to access it.
 >     * Access: Access control mechanisms used by the author or provider to regulate who can view or use an SBOM.
@@ -748,7 +751,7 @@ Please take this into account when commenting this document.
 > 
 > (Ref: [CISA-2023](#references-and-terms), [CISA-2024-3](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
-#### SBOM Consumer (Role)
+#### SBOM Consumer (Role) {#sbom-consumer-role}
 
 > 1. (CPANSec-2024) 🟦 SBOM Consumer.
 >     * SBOM Consumer roles gather, inspect, analyze, aggregate or verify SBOM metadata — _They make sure metadata and related artifacts are **Useful**, **Complete**, **Correct** or **Compliant**_.
@@ -759,7 +762,7 @@ Please take this into account when commenting this document.
 > 
 > (Ref: [CISA-2024-3](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
-#### SBOM Censor (Role)
+#### SBOM Censor (Role) {#sbom-censor-role}
 
 > 1. (CPANSec-2024) 🟪 SBOM Censor.
 >     * An [SBOM Author](#sbom-author) that removes or anonymizes sensitive metadata from an SBOM before distribution.
@@ -773,25 +776,25 @@ Please take this into account when commenting this document.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Design SBOM (Type)
+#### Design SBOM (Type) {#sbom-design-type}
 
 > 1. (CISA-2023) SBOM of intended, planned software project or product with included components (some of which may not yet exist) for a new software artifact.
 >
 > (Ref: [CISA-2023](#references-and-terms))
 
-#### Source SBOM (Type)
+#### Source SBOM (Type) {#sbom-source-type}
 
 > 1. (CISA-2023) SBOM created directly from the development environment, source files, and included dependencies used to build an product artifact.
 >
 > (Ref: [CISA-2023](#references-and-terms))
 
-#### Build SBOM (Type)
+#### Build SBOM (Type) {#sbom-build-type}
 
 > 1. (CISA-2023) SBOM generated as part of the process of building the software to create a releasable artifact (e.g., executable or package) from data such as source files, dependencies, built components, build process ephemeral data, and other SBOMs.
 >
 > (Ref: [CISA-2023](#references-and-terms))
 
-#### Analyzed SBOM (Type)
+#### Analyzed SBOM (Type) {#sbom-analyzed-type}
 
 > 1. (CISA-2023) SBOM generated through analysis of artifacts (e.g., executables, packages, containers, and virtual machine images) after its build.
 >     * Such analysis generally requires a variety of heuristics.
@@ -799,14 +802,14 @@ Please take this into account when commenting this document.
 >
 > (Ref: [CISA-2023](#references-and-terms))
 
-#### Deployed SBOM (Type)
+#### Deployed SBOM (Type) {#sbom-deployed-type}
 
 > 1. (CISA-2023) SBOM provides an inventory of software that is present on a system.
 >     * This may be an assembly of other SBOMs that combines analysis of configuration options, and examination of execution behavior in a (potentially simulated) deployment environment.
 >
 > (Ref: [CISA-2023](#references-and-terms))
 
-#### Runtime SBOM (Type)
+#### Runtime SBOM (Type) {#sbom-runtime-type}
 
 > 1. (CISA-2023) SBOM generated through instrumenting the system running the software, to capture only components present in the system, as well as external call-outs or dynamically loaded components.
 >    *  In some contexts, this may also be referred to as an “Instrumented” or “Dynamic” SBOM.
@@ -821,29 +824,29 @@ Please take this into account when commenting this document.
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
-### Software Bill of Materials (SBOM)
+### Software Bill of Materials (SBOM) {#software-bill-of-materials}
 
-> * See also
->     * [SBOM (Software Bill of Materials](#sbom--software-bill-of-materials-).
+> * See
+>     * [SBOM (Software Bill of Materials)](#sbom).
 
 
-### Software Identification (SWID)
+### Software Identification (SWID) {#swid}
 
 > 1. (SCVS-2020) An ISO standard that formalizes how software is tagged.
->    * SWID is considered to be one of three [SBOM](#sbom--software-bill-of-materials-) formats, together with [CycloneDX](#cyclonedx--) and [SPDX](#software-package-data-exchange--spdx-).
+>    * SWID is considered to be one of three [SBOM](#sbom) formats, together with [CycloneDX](#cyclonedx) and [SPDX](#spdx).
 >
 > (Ref: [SCVS-2020](#references-and-terms))
 
 
-### Software Package Data Exchange (SPDX)
+### Software Package Data Exchange (SPDX) {#spdx}
 
 > 1. (SCVS-2020) A Linux Foundation project which produces a [software bill of materials](#sbom-software-bill-of-materials) specification and a standardized list of open source licenses.
->     * SPDX is considered to be one of three [SBOM](#sbom--software-bill-of-materials-) formats, together with [CycloneDX](#cyclonedx--) and [SWID](#software-identification--swid-).
+>     * SPDX is considered to be one of three [SBOM](#sbom) formats, together with [CycloneDX](#cyclonedx) and [SWID](#swid).
 >
 > (Ref: [SCVS-2020](#references-and-terms))
 
 
-### Source ⚠️  ✍️
+### Source ⚠️  ✍️ {#source}
 
 > 1. (SLSA-2023) An [artifact](#artifact) that was directly authored ~~or reviewed~~ by persons, without modification.
 >     * It is the beginning of the supply chain; we do not trace the provenance back any further.
@@ -854,11 +857,11 @@ Please take this into account when commenting this document.
 
 ### SPDX (Software Package Data Exchange)
 
-> * See also
->     * [Software Package Data Exchange (SPDX)](#software-package-data-exchange--spdx-).
+> * See
+>     * [Software Package Data Exchange (SPDX)](#spdx).
 
 
-### Substantial Modification
+### Substantial Modification (CRA)
 
 > 1. (CRA-2024-03) A change to the product with digital elements following its placing on the market, which affects the compliance of the product with digital elements with the essential requirements set out in the EU Cyber Resilience Act, Annex I, Part I, or which results in a modification to the intended purpose for which the product with digital elements has been assessed.
 >     * Where products with digital elements are subsequently modified, by physical or digital means, in a way that is not foreseen by the manufacturer [...], the modification should be considered as substantial. (CRA-2024-03, Recital 38)
@@ -867,7 +870,7 @@ Please take this into account when commenting this document.
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
-### Supplier ⚠️
+### Supplier ⚠️  {#supplier}
 
 > [!CAUTION]
 > * (CPANSec-2024) The term 'Supplier' is not well defined, and should be either avoided in favor of a more precise term, or otherwise be disambiguated.
@@ -886,22 +889,22 @@ Please take this into account when commenting this document.
 > (Ref: [NTIA-2021](#references-and-terms), CDXAG-2024)
 
 
-### SWID (Software Identification)
+### SWID (Software Identification) {#software-identification-id}
 
-> * See also
->     * [Software Identification (SWID)](#software-identification--swid-).
+> * See
+>     * [Software Identification (SWID)](#swid).
 
 
-### Third-party component ✍️
+### Third-party component ✍️ {#third-party-component}
 
-> * See also
->     * [Component, third-party](#component-third-party-).
+> * See
+>     * [Component, third-party](#third-party).
 
 
 ### Transitive Dependency
 
-> * See also
->     * [Dependency (Transitive)](#dependency--transitive-)
+> * See
+>     * [Dependency (Transitive)](#dependency-transitive)
 
 
 ### Vendor
@@ -915,7 +918,7 @@ Please take this into account when commenting this document.
 
 This glossary is partly based on terms from the following sources.
 
-- (CPANSec-2024) – These are commentary and proposed improvements made by the author(s) of this document. If you agree or have improvements, [share it with us](#document-status-%EF%B8%8F--draft)!
+- (CPANSec-2024) – These are commentary and proposed improvements made by the author(s) of this document. If you agree or have improvements, [share it with us](#document-status)!
 - (CISA-2023) CISA [Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom) (Public Domain)
 - (SCVS-2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
 - (SLSA-2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)

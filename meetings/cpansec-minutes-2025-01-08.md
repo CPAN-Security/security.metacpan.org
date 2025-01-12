@@ -77,10 +77,10 @@ title: Minutes 2025-01-08
 - @tux - SQLite CVE was closed in [CPANSA DB](https://metacpan.org/release/BDFOY/CPANSA-DB-20250104.001/source/Changes#L7)
 
 ### Author guide to generating random values for security
-- @robrwo - Online
+- @robrwo - Guide is published
    - Link posted on security.metacpan.org front page
-   - No feedback
-   - New version of Crypt::URandom (the main module recommended), but lots of issues with that.
+   - No feedback received
+   - Crypt::URandom (the main module recommended) still has issues to be worked on.
    - Maybe promote it on blogs.perl.org by late Jan
    - PR for Perl to change docs for recommended modules
 - @stigtsp - summarizing this work is useful/positive
@@ -90,7 +90,7 @@ title: Minutes 2025-01-08
   - Out of draft
   - @robrwo posted about it on blogs.perl.org. That post, and a link to original guidelines posted by briandfoy on Reddit.
   - 65 distributions on CPAN have a SECURITY.md as of 7 Jan
-  - PR for MetaCPAN to highlight the document like it does README, LICENSE etc
+  - [Issue raised in MetaCPAN](https://github.com/metacpan/metacpan-web/issues/3246) to highlight the document like it does README, LICENSE etc
   - Most important: we are getting feedback
 - @tux - Software::Security::Policy::Individual - do we need ::Team (or other name)?
   - team policies to be documented: active teams, active groups, active Github projects with more maintainers but no single person to address for vulnerabilities (hidden Github security issues)

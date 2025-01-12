@@ -411,8 +411,8 @@ version of Foo-Bar.
 
 Note that the Foo-Bar project only supports major versions of Perl
 released in the past ten (10) years, even though Foo-Bar will run on
-older versions of Perl.  If a security fix requires us to increase the
-minimum version of Perl that is supported, then the maintainer(s) may
+older versions of Perl.  If a security fix requires the maintainers to
+increase the minimum version of Perl that is supported, then they may
 do so.
 
 # Installation and Usage Issues

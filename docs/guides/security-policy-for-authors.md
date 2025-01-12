@@ -262,14 +262,18 @@ be noted. For example,
 policy is that it will need to be updated with each release.)
 
 If the maintainers only support specific Perl versions, e.g. Perl
-versions released in the last ten years, then that should be noted in
-the security policy (as well as the module documentation).
+versions released in the last ten years, then they might want that to
+be noted in the security policy. For example,
 
 > Note that the Foo-Bar project only supports major versions of Perl
 > released in the past ten (10) years, even though Foo-Bar will run on
-> older versions of Perl.  If a security fix requires us to increase
-> the minimum version of Perl that is supported, then the
-> maintainer(s) may do so.
+> older versions of Perl.  If a security fix requires the maintainers
+> to increase the minimum version of Perl that is supported, then they
+> may do so.
+
+Note that if a Perl version support policy is mentioned elsewhere in
+the module documentation, then the above statement may be considered
+unnecessary.
 
 If the software uses or embeds external libraries, then the supported
 versions of those libraries should also be noted.

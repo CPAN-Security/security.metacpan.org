@@ -59,8 +59,8 @@ title: Minutes 2025-01-08
 
 ### TLS/HTTPS/CSPRNG/DSA in core
 - @leont - Worked on BearSSL & OpenSSL
-  - cleaning up CORE is required but tedious
-  - @sjn - is funding wanted/useful
+  - cleaning up Crypt::OpenSSL/Net::SSLeay (and to a lesser extent, IO::Socket::TCP/IO::Socket::SSL) is required but tedious.
+- @sjn - is funding wanted/useful?
 
 ### Funding drive
 - [German Sovereign Tech fund](https://www.sovereign.tech/programs/fund)
@@ -80,7 +80,7 @@ title: Minutes 2025-01-08
 - @robrwo - Online
    - Link posted on security.metacpan.org front page
    - No feedback
-   - New version of Crypt::URandom (the main module recommended), but lots of issues with that
+   - New version of Crypt::URandom (the main module recommended), but lots of issues with that.
    - Maybe promote it on blogs.perl.org by late Jan
    - PR for Perl to change docs for recommended modules
 - @stigtsp - summarizing this work is useful/positive

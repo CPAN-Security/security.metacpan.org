@@ -65,6 +65,9 @@ The file should have the following sections.
 4. Installation and usage issues
 5. Workflow.
 
+Sections 2 (How to report a security vulnerability) and 3 (Which
+versions of the software are supported) are the most important, and
+must be present in a security policy.
 
 ### Abstract
 
@@ -89,7 +92,7 @@ If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
 > This text is based on the CPAN Security Group's Guidelines for Adding
-> a Security Policy to Perl Distributions (version 1.0.0)
+> a Security Policy to Perl Distributions (version 1.1.0)
 > https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 #### Links from other module documentation
@@ -245,19 +248,35 @@ considered security issues.  For example,
 There should be a section or subsection that identifies which versions
 of the software will be supported for security fixes.  For example,
 
-> The maintainer(s) will only commit to releasing security fixes for
-> the latest version of Foo-Bar.
->
+> The maintainer(s) will release security fixes for the latest version
+> of Foo-Bar.
+
+or if there are multiple versions that will be supported, that should
+be noted. For example,
+
+> For security vulnerabilities, the maintainer(s) will release fixes
+> for the last two major versions of Foo-Bar.  As of this release,
+> that is `v1.4.x` and `v1.6.x`.
+
+(Note a disadvantage of mentioning specific versions in a security
+policy is that it will need to be updated with each release.)
+
+If the maintainers only support specific Perl versions, e.g. Perl
+versions released in the last ten years, then they might want that to
+be noted in the security policy. For example,
+
 > Note that the Foo-Bar project only supports major versions of Perl
 > released in the past ten (10) years, even though Foo-Bar will run on
-> older versions of Perl.  If a security fix requires us to increase
-> the minimum version of Perl that is supported, then we may do so.
+> older versions of Perl.  If a security fix requires the maintainers
+> to increase the minimum version of Perl that is supported, then they
+> may do so.
 
-or,
+Note that if a Perl version support policy is mentioned elsewhere in
+the module documentation, then the above statement may be considered
+unnecessary.
 
-> For security vulnerabilities, the maintainer(s) will only commit to
-> supporting the last two major versions of Foo-Bar.  As of this
-> release, that is `v1.4.x` and `v1.6.x`.
+If the software uses or embeds external libraries, then the supported
+versions of those libraries should also be noted.
 
 ### Installation and usage issues
 
@@ -319,7 +338,7 @@ The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
-a Security Policy to Perl Distributions (version 1.0.0)
+a Security Policy to Perl Distributions (version 1.1.0)
 https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 # How to Report a Security Vulnerability
@@ -387,13 +406,14 @@ Foo-Bar distribution) are not covered by this policy.
 
 ## Supported Versions of Foo-Bar
 
-The maintainer(s) will only commit to releasing security fixes for
-the latest version of Foo-Bar.
+The maintainer(s) will release security fixes for the latest version
+of Foo-Bar.
 
 Note that the Foo-Bar project only supports major versions of Perl
 released in the past ten (10) years, even though Foo-Bar will run on
-older versions of Perl.  If a security fix requires us to increase
-the minimum version of Perl that is supported, then we may do so.
+older versions of Perl.  If a security fix requires the maintainers to
+increase the minimum version of Perl that is supported, then they may
+do so.
 
 # Installation and Usage Issues
 
@@ -421,7 +441,7 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 1.0.0
+* Version: 1.1.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 
@@ -439,3 +459,5 @@ Several people have been involved in the development of this document
 * Stig Palmquist
 * Salve J. Nilsen
 * brian d foy
+* Leon Timmermans
+* Graham Knop

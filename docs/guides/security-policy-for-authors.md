@@ -248,8 +248,8 @@ considered security issues.  For example,
 There should be a section or subsection that identifies which versions
 of the software will be supported for security fixes.  For example,
 
-> The maintainer(s) will will release security fixes for the latest
-> version of Foo-Bar.
+> The maintainer(s) will release security fixes for the latest version
+> of Foo-Bar.
 
 or if there are multiple versions that will be supported, that should
 be noted. For example,
@@ -406,8 +406,8 @@ Foo-Bar distribution) are not covered by this policy.
 
 ## Supported Versions of Foo-Bar
 
-The maintainer(s) will will release security fixes for the latest
-version of Foo-Bar.
+The maintainer(s) will release security fixes for the latest version
+of Foo-Bar.
 
 Note that the Foo-Bar project only supports major versions of Perl
 released in the past ten (10) years, even though Foo-Bar will run on

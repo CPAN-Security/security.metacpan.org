@@ -59,6 +59,9 @@ To help in this shift, CPANSec has put together several [guides](./) intended to
 1. Check out CPANSec's [guide to vulnerability testing](vulnerability-testing.md)
 
 
+* See also:
+    * [OWASP Authorization Testing Automation Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Testing_Automation_Cheat_Sheet.html)
+
 ### Practice symbol import discipline
 
 1. Use [App::perlimports](https://www.olafalders.com/2024/04/15/getting-started-with-perlimports/) to get a better idea of what symbols you are using
@@ -125,6 +128,7 @@ To help in this shift, CPANSec has put together several [guides](./) intended to
 1. [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
 1. [CISA Product Security Bad Practices guide](https://www.cisa.gov/resources-tools/resources/product-security-bad-practices)
     * …on [Github Discussions](https://github.com/cisagov/bad-practices/discussions)
+1. [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
 
 
 ## License and use of this document

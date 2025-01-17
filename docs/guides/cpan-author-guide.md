@@ -105,6 +105,16 @@ To help in this shift, CPANSec has put together several [guides](./) intended to
 > TODO
 
 
+### Use strong password encryption
+
+> [!NOTE]
+> TODO
+
+* See also:
+    * [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+    * [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+
+
 ## Further reading {#more}
 
 1. Perl's [perlsec](https://perldoc.perl.org/perlsec) documentation

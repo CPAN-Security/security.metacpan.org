@@ -26,8 +26,8 @@ title: Test page
 
 ### H3
 
-[Foo*bar]:docs/glossary.md#author 'title (with parens)'
-[Foo*baz]:docs/glossary.md#maintainer 'Someone who maintains a project'
+[Foo*bar]:../docs/glossary.md#author 'title (with parens)'
+[Foo*baz]:../docs/glossary.md#maintainer 'Someone who maintains a project'
 
 We make a link with [Foo*bar] in it
 

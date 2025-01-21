@@ -1,10 +1,20 @@
 ---
-toc: false
+toc: true
 type: page
 title: Test page
 ---
 
+* https://kramdown.gettalong.org/quickref.html
+* https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
+
 # H1
+
+<!-- Does not work -->
+{::warning}
+don't break it!
+{:/warning}
+
 
 !!! note this is a note
 
@@ -12,6 +22,8 @@ title: Test page
 
 > **Note:** more notes
 
+> [!NOTE]
+> test note
 
 ## H2
 
@@ -36,3 +48,60 @@ We make a link with [Foo*bar] in it
 
 [Foo*bar]{: #foo-id}
 : definition with [Foo*baz] in it
+
+### H3
+
+<details>
+
+<summary>Click me</summary>
+  
+### Heading
+
+1. Foo
+2. Bar
+   * Baz
+   * Qux
+
+### Some Javascript
+
+```js
+  function logSomething(something) {
+    console.log('Something', something);
+  }
+```
+
+</details>
+
+<details>
+
+<summary>Click me</summary>
+
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Row 1    | Row 1    |
+| Row 2    | Row 2    |
+  
+</details>
+
+
+## H2
+
+Here is a simple footnote[^1]. No mention of SBOM.
+
+[^1]: My ref.
+
+
+## H2
+
+A named footnote[^foo].
+
+[^foo]: New ref with foo, but no HTML.
+
+
+### H3
+
+This is an HTML
+example.
+
+*[HTML]: Hyper Text Markup Language
+*[SBOM]: Software Bill of Materials – a common machine-readable set of standards for storing and communicating metadata

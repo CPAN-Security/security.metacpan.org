@@ -1,0 +1,124 @@
+---
+layout: page
+toc: true
+meeting_time: 2025-01-22 16:00 UTC
+title: Minutes 2025-01-22
+---
+
+## Agenda & Meeting Details
+
+* 2025-01-22 16:00 UTC on #cpansec-discussion on Matrix
+
+## 15:30 UTC – Pre-meeting socializing
+
+*   Socializing & getting up to speed before the meeting starts properly
+*   Discuss organizing projects, swimlanes and issues (...)
+
+## 16:05 UTC – Meeting start
+
+### Welcome
+
+*   Meeting chair: 
+*   Meeting scribe: 
+
+### Attendees, absents & regrets
+
+*   Attendees
+    * @sjn, 
+*   Regrets
+    * @thibaultduponchelle
+
+### Approve previous meeting minutes
+*   Previous meeting minutes was approved by XXX and merged by XXX
+
+
+### Quick summary of current work (Grouped by project)
+, 
+1.  [CPAN Metadata & Software Bills of Materials](https://github.com/orgs/CPAN-Security/projects/1)
+    *   …
+2.  [CPAN Privacy and Compliance](https://github.com/orgs/CPAN-Security/projects/9)
+    *   …
+3.  [CPAN Provenance & Supply Chain Security](https://github.com/orgs/CPAN-Security/projects/3)
+    *   …
+4.  [CPAN Security Outreach & Information](https://github.com/orgs/CPAN-Security/projects/12)
+    *   …
+5.  [CPAN Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11)
+    *   …
+6.  [CPAN Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
+    *   …
+7.  [CPAN Transparency Logs](https://github.com/orgs/CPAN-Security/projects/2)
+    *   …
+8.  [CPAN Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10)
+    *   …
+9.  [CPANSec Governance, Policy & Funding](https://github.com/orgs/CPAN-Security/projects/7)
+    *   …
+10. [CPAN Secure by Default](https://github.com/orgs/CPAN-Security/projects/15)
+    *   …
+11. [CPAN Software Composition Analysis](https://github.com/orgs/CPAN-Security/projects/6)
+    *   …
+
+### TLS/HTTPS/CSPRNG/DSA in core
+- 
+
+### Funding drive
+- @sjn will work on that after FOSDEM - will need to know who is open to do (funded) work
+    - @stigtsp 1d/w
+
+### Ongoing vulnerabilities
+- 
+
+### Author guide to generating random values for security
+- 
+
+### CPAN Author's Security Policy Guidelines
+- 
+
+### CPAN Meta Spec, Requirements and PURLs
+- 
+
+### NIS2 consultation
+- @sjn - meeting with ENISA scheduled next week
+
+### Eclipse ORC WG
+- @sjn - preparations for workshop Jan 30th in Brussels 
+
+### CycloneDX 1.7 Sustainability fields
+- @sjn - Meeting with simbabque to prepare addition of mental health fields to spec
+
+### SBOM/Supply Chain
+- @sjn - currently preparing FOSDEM SBOM devroom talk about this
+
+### CPAN Steward org
+- @sjn - had a meeting with @leont; started the process for setting up a WG
+
+### CNA Update
+-
+
+### Recruitment
+- @sjn - CPANSec stickers for FOSDEM done, ordered and received!
+
+### Perl Toolchain Summit 2025
+- 
+
+### Other
+- @sjn - IRC notifications working again
+- @tux - contacted author of Kwalitee w.r.t. SECURITY.md, CONTRIBUTING.md
+- @sjn - LF/OpenSSF survey about cybersecurity awareness around CRA. Please participate: https://www.research.net/r/MRB33VK
+
+### Upcoming events and deadlines
+1. [FOSDEM Fringe 2025](https://fosdem.org/2025/fringe/) - Friday January 31st, Brussels
+    * Related: [EU Open Source Week](https://opensourceweek.eu/)
+1. [FOSDEM 2025](https://fosdem.org/2025/) - 2025-02-(01-02), Brussels - three relevant devrooms!
+1. [PTS 2025](https://perltoolchainsummit.org/pts2025/) - Thursday 2025-05-01 … Sunday 2025-05-04 in Leipzig, Germany
+1. [gpw2025](https://act.yapc.eu/gpw2025/) - 2025-05-(12-14) in Munich, Germany.
+1. TPRC in North America - should any of us propose a talk?
+
+### Operating changes
+*   (none)
+
+### Next meeting date, time and location
+*   Next meeting is Wednesday 2025-02-05 (05 Feb 2025) @ 16:00UTC in #cpansec-discussion on Matrix (17:00 Europe/Amsterdam)
+
+## 17:27 UTC – Meeting end
+
+## 17:30  UTC – End

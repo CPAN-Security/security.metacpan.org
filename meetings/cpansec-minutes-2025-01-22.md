@@ -29,7 +29,7 @@ title: Minutes 2025-01-22
     * @thibaultduponchelle, @robrwo
 
 ### Approve previous meeting minutes
-*   Previous meeting minutes was approved by XXX and merged by XXX
+*   Previous meeting minutes was approved by @timlegge and @robrwo, and merged by @sjn
 
 
 ### Quick summary of current work (Grouped by project)
@@ -70,12 +70,12 @@ title: Minutes 2025-01-22
 - @timlegge - @robrwo working on RNG-related ongoing issues; CVE's to be registered by CPANSec CNA when it's active
 
 ### Author guide to generating random values for security
-- @tux - is a seperate version needed for generating passwords? Related? Subsection? (Creating, Storing)
+- @tux - is a separate version needed for generating passwords? Related? Subsection? (Creating, Storing)
     - We'll see how the random-data-for-security.md doc evolves, and adopt
     - Expand on the curated lists of modules with both positive an negative recommendations
 
 ### CPAN Author's Security Policy Guidelines
-- @timlegge - @leont's Dist::Zilla pluging in the works
+- @timlegge - @leont's Dist::Zilla plugin in the works
 - @stigtsp - Minimal (TLDR) version of policy wanted
 - @tux - Team document template wanted; Help needed
 
@@ -90,14 +90,15 @@ title: Minutes 2025-01-22
 - @sjn - preparations for workshop Jan 30th in Brussels
 
 ### CycloneDX 1.7 Sustainability fields
-- @sjn - Meeting with simbabque to prepare addition of mental health fields to spec
+- @sjn - Meeting with @simbabque to prepare addition of mental health fields to spec
 
 ### SBOM/Supply Chain
 - @sjn - currently preparing FOSDEM SBOM devroom talk about this
 - @tux - we need tools for working with SBOMs. *correct* SBOMs.
 
 ### CPAN Steward org
-- @sjn - had a meeting with @leont; started the process for setting up a WG on TPRF. No progress yet.
+- @sjn - had a meeting with @leont; started the process for setting up a WG on TPRF.
+    - No progress yet.
 
 ### CNA Update
 - @stigtsp and @timlegge have "finished" most of the homework and will submit this week
@@ -107,18 +108,19 @@ title: Minutes 2025-01-22
 - @sjn - CPANSec stickers for FOSDEM done, ordered and received!
 
 ### Perl Toolchain Summit 2025
-- @tux - ideas are already fleshing out on #pts. Looks like hot topic will be CPANTESTERS, which is currently very broken
+- @tux - Topic ideas are already being discussed in #pts on irc.perl.org.
+    - Looks like one hot topic will be CPAN Testers, which is currently very broken
 - @tux - 3rd-wave voting ends 2025-01-31
 - @sjn - Create document on what issues need to be decided on/discussed at PTS
+
+### Testing & Kwalitee?
+- @tux - This is a topic to discuss in the next many meetings
 
 ### Other
 - @sjn - IRC notifications working again; Please give feedback on usability/noise
 - @tux - contacted author of Kwalitee w.r.t. `SECURITY.md`, `CONTRIBUTING.md` : all are added to website
 - @tux - promised to start on `CVE.SKIP` like support in Test::CVE, but nothing happened yet
 - @sjn - LF/OpenSSF survey about cybersecurity awareness around CRA. Please participate: https://www.research.net/r/MRB33VK
-
-### Testing & Kwalitee?
-- @tux - This is a topic to discuss in the next many meetings
 
 ### Upcoming events and deadlines
 1. [FOSDEM Fringe 2025](https://fosdem.org/2025/fringe/) - Friday January 31st, Brussels
@@ -132,7 +134,7 @@ title: Minutes 2025-01-22
 *   (none)
 
 ### Next meeting date, time and location
-*   Next meeting is Wednesday 2025-02-05 (05 Feb 2025) @ 16:00UTC in #cpansec-discussion on Matrix (17:00 Europe/Amsterdam)
+*   Next meeting is Wednesday 2025-02-05 @ 16:00UTC in #cpansec-discussion on Matrix (17:00 Europe/Amsterdam)
 
 ## 16:59 UTC – Meeting end
 

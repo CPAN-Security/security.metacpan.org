@@ -72,7 +72,7 @@ title: Minutes 2025-01-22
 ### Author guide to generating random values for security
 - @tux - is a separate version needed for generating passwords? Related? Subsection? (Creating, Storing)
     - We'll see how the random-data-for-security.md doc evolves, and adopt
-    - Expand on the curated lists of modules with both positive an negative recommendations
+    - Expand on the curated lists of modules with both positive and negative recommendations
 
 ### CPAN Author's Security Policy Guidelines
 - @timlegge - @leont's Dist::Zilla plugin in the works
@@ -81,7 +81,7 @@ title: Minutes 2025-01-22
 
 ### CPAN Meta Spec, Requirements and PURLs
 - @sjn - picking up CPAN::Meta::Spec after FOSDEM
-- @stigtsp - PURLS add to CVEs
+- @stigtsp - PURLs add to CVEs
 
 ### NIS2 consultation
 - @sjn - meeting with ENISA scheduled next week

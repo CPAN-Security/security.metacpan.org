@@ -18,15 +18,15 @@ title: Minutes 2025-01-22
 
 ### Welcome
 
-*   Meeting chair: 
-*   Meeting scribe: 
+*   Meeting chair: @timlegge
+*   Meeting scribe: @sjn
 
 ### Attendees, absents & regrets
 
 *   Attendees
-    * @sjn, 
+    * @sjn, @timlegge, @tux, @stigtsp
 *   Regrets
-    * @thibaultduponchelle
+    * @thibaultduponchelle, @robrwo
 
 ### Approve previous meeting minutes
 *   Previous meeting minutes was approved by XXX and merged by XXX
@@ -58,52 +58,67 @@ title: Minutes 2025-01-22
     *   …
 
 ### TLS/HTTPS/CSPRNG/DSA in core
-- 
+- No real news. From the PSC minutes: "We briefly touched on feedback on our preliminary plan for TLS in core, suggesting that an even simpler approach may be possible. We will pick this back up in a future call."
 
 ### Funding drive
 - @sjn will work on that after FOSDEM - will need to know who is open to do (funded) work
     - @stigtsp 1d/w
+    - Explore options with Ovid's company
+    - @sjn is contact point with regard to funding
 
 ### Ongoing vulnerabilities
-- 
+- @timlegge - @robrwo working on RNG-related ongoing issues; CVE's to be registered by CPANSec CNA when it's active
 
 ### Author guide to generating random values for security
-- 
+- @tux - is a seperate version needed for generating passwords? Related? Subsection? (Creating, Storing)
+    - We'll see how the random-data-for-security.md doc evolves, and adopt
+    - Expand on the curated lists of modules with both positive an negative recommendations
 
 ### CPAN Author's Security Policy Guidelines
-- 
+- @timlegge - @leont's Dist::Zilla pluging in the works
+- @stigtsp - Minimal (TLDR) version of policy wanted
+- @tux - Team document template wanted; Help needed
 
 ### CPAN Meta Spec, Requirements and PURLs
-- 
+- @sjn - picking up CPAN::Meta::Spec after FOSDEM
+- @stigtsp - PURLS add to CVEs
 
 ### NIS2 consultation
 - @sjn - meeting with ENISA scheduled next week
 
 ### Eclipse ORC WG
-- @sjn - preparations for workshop Jan 30th in Brussels 
+- @sjn - preparations for workshop Jan 30th in Brussels
 
 ### CycloneDX 1.7 Sustainability fields
 - @sjn - Meeting with simbabque to prepare addition of mental health fields to spec
 
 ### SBOM/Supply Chain
 - @sjn - currently preparing FOSDEM SBOM devroom talk about this
+- @tux - we need tools for working with SBOMs. *correct* SBOMs.
 
 ### CPAN Steward org
-- @sjn - had a meeting with @leont; started the process for setting up a WG
+- @sjn - had a meeting with @leont; started the process for setting up a WG on TPRF. No progress yet.
 
 ### CNA Update
--
+- @stigtsp and @timlegge have "finished" most of the homework and will submit this week
+- @timlegge - Need to take https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/cna-disclosure-policy.md out of draft
 
 ### Recruitment
 - @sjn - CPANSec stickers for FOSDEM done, ordered and received!
 
 ### Perl Toolchain Summit 2025
-- 
+- @tux - ideas are already fleshing out on #pts. Looks like hot topic will be CPANTESTERS, which is currently very broken
+- @tux - 3rd-wave voting ends 2025-01-31
+- @sjn - Create document on what issues need to be decided on/discussed at PTS
 
 ### Other
-- @sjn - IRC notifications working again
-- @tux - contacted author of Kwalitee w.r.t. SECURITY.md, CONTRIBUTING.md
+- @sjn - IRC notifications working again; Please give feedback on usability/noise
+- @tux - contacted author of Kwalitee w.r.t. `SECURITY.md`, `CONTRIBUTING.md` : all are added to website
+- @tux - promised to start on `CVE.SKIP` like support in Test::CVE, but nothing happened yet
 - @sjn - LF/OpenSSF survey about cybersecurity awareness around CRA. Please participate: https://www.research.net/r/MRB33VK
+
+### Testing & Kwalitee?
+- @tux - This is a topic to discuss in the next many meetings
 
 ### Upcoming events and deadlines
 1. [FOSDEM Fringe 2025](https://fosdem.org/2025/fringe/) - Friday January 31st, Brussels
@@ -119,6 +134,6 @@ title: Minutes 2025-01-22
 ### Next meeting date, time and location
 *   Next meeting is Wednesday 2025-02-05 (05 Feb 2025) @ 16:00UTC in #cpansec-discussion on Matrix (17:00 Europe/Amsterdam)
 
-## 17:27 UTC – Meeting end
+## 16:59 UTC – Meeting end
 
-## 17:30  UTC – End
+## 17:00 UTC – End

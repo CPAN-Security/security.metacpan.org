@@ -474,7 +474,7 @@ stateDiagram-v2
     class opensource_author createsSBOM
     class opensource_maintainer createsSBOM
     class ecosystem_repo distributesSBOM
-    class ecosystem_language updatesSBOM
+    class ecosystem_lang updatesSBOM
 
     [*] --> environment_opensource
 
@@ -1341,7 +1341,7 @@ Several people have been involved in the development of this document
 | Copyright Notice                    | Yes      | CISA-2024-10                                                                       | 🟥&nbsp;Author                                                          |         |
 | License(s)                          | Yes      | CISA-2024-10, CSCRF                                                                | 🟥&nbsp;Author                                                          |         |
 | Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, CSCRF, PCI-SSF, METI-2023                     | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
-| Dependencies (Known unknowns)       | Yes      | CSCRF                                                                              | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager, 🟨&nbsp;Manufacturer              | 🙄 Write a bug report! |
+| Dependencies (Known unknowns)       | Yes      | CSCRF                                                                              | 🟨&nbsp;Packager, 🟨&nbsp;Manufacturer                                  | 🙄 Write a bug report! |
 | Dependency Relationships            | Yes      | CISA-2024-10, PCI-SSF                                                              | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
 | Encryption used                     | Yes      | CSCRF                                                                              | 🟥&nbsp;Maintainer, 🟨&nbsp;Builder                                     |         |
 | Frequency of updates                | Yes      | CSCRF                                                                              | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Builder  | 😬 Start funding OSS! |
@@ -1370,6 +1370,79 @@ Several people have been involved in the development of this document
 | SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                                            |                                                                         |         |
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                                                            |                                                                         |         |
 | SBOM Type                           | No       | CISA-2023, CISA-2024-10                                                            |                                                                         |         |
+
+#### Graphical overview of SBOM Metadata Attributes
+
+```mermaid
+stateDiagram-v2
+    direction TB
+
+    state "🟥🟨🟦 Maintainer" as environment_maintainer
+    note right of environment_maintainer
+       Primary Component Name
+       Unique Product Identifier
+       Version
+       Purpose, Intended Use
+       Supplier Name
+       Security contact
+       Cryptographic Hash
+       Copyright Notice
+       License(s)
+       Dependencies
+       Dependency Relationships
+       Encryption Used
+       Frequncy of Updates
+       Intended for Commercial Use
+       Open Source Software Steward
+    end note
+
+    state "🟨 Contributor" as environment_contributor
+    state "🟩 Collaboration Ecosystem" as ecosystem_repo
+    state "🟨🟩 Language Ecosystem" as ecosystem_lang
+    state "🟨🟩 Package Ecosystem" as ecosystem_package
+    note left of ecosystem_package
+       Primary Component Name
+       Unique Product Identifier
+       Version
+       Supplier Name
+       Security contact
+       Cryptographic Hash
+       Dependencies
+       Dependencies (known unknowns)
+       Dependency Relationships
+       Encryption Used
+       Frequncy of Updates
+       Intended for Commercial Use
+       Open Source Software Steward
+    end note
+
+    state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
+    state "🟥🟨🟦🟪 Manufacturer 🆕" as environment_manufacturer
+    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
+
+    [*]                      --> environment_maintainer
+    ecosystem_repo           --> environment_maintainer
+    ecosystem_repo           --> environment_contributor
+    ecosystem_lang           --> ecosystem_package
+    ecosystem_lang           --> environment_manufacturer
+    ecosystem_repo           --> ecosystem_package
+    ecosystem_repo           --> ecosystem_lang
+    ecosystem_repo           --> environment_manufacturer
+    environment_maintainer   --> ecosystem_repo
+    environment_maintainer   --> ecosystem_lang
+    environment_contributor  --> ecosystem_repo
+    ecosystem_package        --> ecosystem_package
+    ecosystem_lang           --> ecosystem_steward
+    ecosystem_package        --> ecosystem_steward
+    ecosystem_steward        --> environment_manufacturer
+    environment_manufacturer --> authority_auditor
+    ecosystem_package        --> environment_manufacturer
+    ecosystem_lang           --> ecosystem_lang
+    authority_auditor        --> [*]
+
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licensed CC-BY-SA-4.0
+```
 
 
 ### SBOM JSON Paths and data types

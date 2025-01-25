@@ -504,13 +504,15 @@ This environment represents one or more developers that publish an Open Source c
 
 #### Author
 
-The legal owner of an Open Source project or a product.
+The initial creator and main developer of an Open Source project or a product.
 
-* Operates in an [OSS Project Environment](#oss-project-environment) or [Integrator Environment](#integrator-environment).
+* Operates in an [OSS Project Environment](#oss-project-environment).
 * Has the legal ownership rights and liabilities for the component.
-    * May be equivalent to the Copyright Holder metadata attribute.
-* Is usually the [Maintainer](#maintainer) or [Manufacturer](#manufacturer), a business or some other type of legal entity or person.
+    * May be equivalent to the [Copyright Holder](glossary.md#copyright-holder) metadata attribute.
+* Is usually also considered a [Maintainer](#maintainer)
+* May also be considered a [Manufacturer](#manufacturer), if they are somehow monetizing the component with the intention of earning a profit.
 * May decide the name of the project and other project parameters for (or on behalf of) the [Maintainer](#maintainer) or [Integrator](#integrator).
+* Not to be confused with the [SBOM Author](#sbom-author-role) role.
 
 | Ops | Attribute name                  | Required | Required by                         | Comment | FIXME   |
 | :-: | :------------------------------ | :------: | :---------------------------------- | :------ | :------ |
@@ -524,16 +526,15 @@ The legal owner of an Open Source project or a product.
 
 #### Maintainer
 
-A contributing author or developer of an Open Source component project, though not necessarily the original [Author](#author).
+A leading developer of an Open Source component project, though not necessarily the original [Author](#author).
 
 * Operates within an [OSS Project Environment](#oss-project-environment).
-* Is usually the initial and/or main creator of the component in question.
-* Typically works on all aspects of the code, including features, bug fixes, tests and security issues.
+* Is often the initial and/or main creator ([Author](#author)) of the component in question.
+* Typically works on all aspects of the code, including planning, design, features, bug fixes, tests and security issues.
 * Has the final say on the original contents of the package, and it's name-spaces.
 * The Maintainer _can_ be a group of people (having co-maintainers), though a single point of responsibility is common.
 * If a Maintainer has upstream (reverse) dependencies, the Maintainer is also considered to be an [Developer](#developer) (as seen from the upstream Maintainer's perspective).
-* Not to be confused with the [SBOM Author](#sbom-author-role) role.
-* Other common names for this role include Author, Developer, [Owner](#owner--supplier-).
+* Other common names for this role include Author, Developer, [Owner](#owner).
 
 | Ops | Attribute name                     | Required | Required by                                 | Comment | FIXME   |
 | :-: | :--------------------------------- | :------: | ------------------------------------------- | :------ | :------ |
@@ -811,16 +812,11 @@ This role is necessary when...
 > [!CAUTION]
 > * FIXME – Not done
 
-> [!NOTE]
-> * (CPANSec-2024) This term is used in place of the [Distributor](#distributor) Role when referring to Open Source Ecosystem component suppliers.
->     * This is done to disambiguate it from the [Distributor](#distributor) Role as used in the EU Cyber Resilience Act.
-> * (CPANSec-2024) Providers take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
->     * If SBOM metadata is expected to accompany the packages or containers in question, the Provider makes sure this happens.
-
 Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
 Ensures the availability of packages or containers, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 * See also
+   * [Provider](glossary.md#provider) in the Glossary
    * [Distributor](#distributor)
    * [CISA SBOM Sharing Roles and Considerations](#references) (CISA-2024)
    * [CRA Article 20](#references) (CRA-Art-20)
@@ -942,7 +938,7 @@ A business or institution that is responsible for developing and building the ap
 
 > [!NOTE]
 > Manufacturer has a specific defined meaning in the EU Cyber Resilience Act (CRA), so until this definition is established, be careful when using the term.
-> These attributes are in addition to the attributes listed under [Owner](#owner--supplier-).
+> These attributes are in addition to the attributes listed under [Owner](#owner).
 > SPDX 2.3 doesn't support the CE attributes. SPDX 3.0 should be used at a future date.
 
 * A role within an [Integrator Environment](#integrator-environment).
@@ -957,7 +953,7 @@ A business or institution that is responsible for developing and building the ap
 | 🟥  | CE Conformity Assessment Body | Yes      | CRA Article 47.1, CRA-AV           |         |         |
 
 * See also
-  * [Owner](#owner--supplier-)
+  * [Owner](#owner)
 
 
 #### Integrator
@@ -1061,7 +1057,7 @@ The environment and systems where a product or service is executed on behalf of 
 > [!NOTE]
 > Mentioned once in the EU Cyber Resilience Act.
 
-* See also
+* See
   * [Deployer](#deployer)
 
 
@@ -1094,17 +1090,18 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 #### Distributor
 
 > [!CAUTION]
-> * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor,
+> * Confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor,
 
 * Distributor is a term commonly used throughout Open Source Ecosystems, but
-    * Distributors have additional requirements and considerations laid out in CISA-2024.
-    * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+    * (CISA-2024) Distributors have additional requirements and considerations laid out in CISA-2024.
+    * (CRA-Art-20) Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+* (CPANSec-2024) Use the term [Provider](#provider) for roles who make package artifacts available for downstream users.
+
+> (Ref: [CISA-2024](#references), [CRA-Art-20](#references),([CPANSec-2024](#references))
 
 * See also
    * [Provider](#provider)
    * [Distributor](glossary.md#distributor) in the Glossary
-   * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](#references)
-   * (CRA-Art-20) [CRA Article 20](#references)
 
 
 #### Importer
@@ -1187,7 +1184,7 @@ The Supplier is a term used throughout the Supply-chain, but most often represen
 
 * This term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
 * (CPANSec) This term is confusing, as it doesn't distinguish between the different types of "Suppliers" that may be involved in the creation of a product.
-    * Please use a more precise term, like [Author](#author), [Maintainer](#maintainer) or [Manufacturer](#manufacturer).
+    * Please use a more precise term, like [Owner](#owner), [Author](#author), [Maintainer](#maintainer) or [Manufacturer](#manufacturer).
 
 * See also
   * [Supplier](glossary.md#supplier) in the Glossary
@@ -1226,26 +1223,31 @@ The Supplier is a term used throughout the Supply-chain, but most often represen
   * [Custodian](#custodian)
   * [Open Source Software Steward](#open-source-software-steward)
 
-#### Author
-
-* See also
-  * [Owner](#owner)
-  * [Maintainer](#maintainer)
-
 #### SecOps
 
-* See also
+* See
   * [Analyst](#analyst)
 
 #### Pentester
 
-* See also
+* See
   * [Analyst](#analyst)
 
 #### Janitor
 
-* See also
+* See
   * [Custodian](#custodian)
+
+#### Owner
+
+The legal owner of the component or project.
+
+* May be a business or other entity, distinct from the component [Author](#author).
+
+* See also
+  * [Author](#author)
+  * [Copyright Holder](glossary.md#copyright-holder)
+
 
 ----------------------------------------------------------------------
 

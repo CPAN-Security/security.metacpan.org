@@ -51,11 +51,11 @@ Where: Physical Location: DG CONNECT (Rue de la Loi 51, Brussels);
 ### Incident Day (Hour 0-2)
 ### Incident Day (Hours 3-6)
 
-1. ENISA focuses on understanding the scope
+> * ENISA focuses on understanding the scope
 
-1. On CPAN, we talk about the river concept.
+1. (@tux) On CPAN, we talk about the river concept.
    * Up-river is CORE, which has huge impact on every module on CPAN, downriver might have less impact.
-1. A scope might be small initially, but when a release has many direct and/or indirect dependencies, that scope might explode.
+1. (@tux) A scope might be small initially, but when a release has many direct and/or indirect dependencies, that scope might explode.
    * (`ExtUtils::MakeMaker`, `Test::Simple`, `Moose`, `DBI`, …).
    * As a consequence, you might have to deal with many authors.
 

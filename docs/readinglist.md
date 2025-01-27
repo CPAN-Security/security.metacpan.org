@@ -185,9 +185,9 @@ This is not a exhaustive list!
     * **Article 3**, Definitions (pages 29-31)
     * Article 9, Point 1. (b-c), Stakeholder consultation (page 34)
 * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
-    * **Article 13**, Obligations of Manufacturers (pages 35-38)
+    * **[Article 13](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_13.tit_1)**, Obligations of Manufacturers (pages 35-38)
         * **Paragraph 5**, "Manufacturers shall exercise due diligence when integrating components" (page 35)
-        * Paragraph 6, "[…] they shall share the relevant code or documentation […]" (page 36)
+        * [Paragraph 6](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.006), "[…] they shall share the relevant code or documentation with the person […] maintaining the component" (page 36)
         * Paragraph 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 36-37)
     * **Article 14**, Reporting obligations of manufacturers (pages 38-40)
         * Paragraph 1, "A manufacturer shall notify any actively exploited vulnerability contained in the product […] that it becomes aware of" (page 38)

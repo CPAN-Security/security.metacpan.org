@@ -13,6 +13,6 @@ Feedback on [ENISA implementing guidance for NIS 2 security measures](https://ww
 * [Chapter 5 (Supply-chain security)](Feedback-on-implementing-guidance-for-NIS-2-security-measures-chapter-5.pdf)
     * in cooperation with OpenSSF, FSFE, NLnet Labs and GitHub
     * Submitted 2024-11-26
-* [Chapters 3 and 6 (Incident handling and Secure software development)](Feedback-on-implementing-guidance-for-NIS-2-security-measures-chapters-3-and-5.pdf)
+* [Chapters 3 and 6 (Incident handling and Secure software development)](Feedback-on-implementing-guidance-for-NIS-2-security-measures-chapters-3-and-6.pdf)
     * in cooperation with Hackeriet and Gurusoft AS
     * Submitted 2025-01-09

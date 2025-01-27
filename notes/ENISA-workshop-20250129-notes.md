@@ -6,8 +6,12 @@ toc: true
 
 # Notes on «Open Source: Scenario Based Discussion»
 
-These are notes for the «ENISA Workshop on "vulnerability handling in the context of open source software"».
-Source document is available in the [CPANSec-GPF](https://github.com/CPAN-Security/CPANSec-GPF/blob/main/events/DG-CONNECT-tabletop-2025-01-29/Open-Source%20Discussion%20Scenario%2029Jan.docx) repo (private).
+* These are notes for the «ENISA Workshop on "vulnerability handling in the context of open source software"».
+    * Original document is available in the [CPANSec-GPF](https://github.com/CPAN-Security/CPANSec-GPF/blob/main/events/DG-CONNECT-tabletop-2025-01-29/Open-Source%20Discussion%20Scenario%2029Jan.docx) repo (private).
+* To update, please use [Working document for collaborative editing](https://cryptpad.fr/code/#/2/code/edit/50GScuKt2Kr3zIsYxw29ZK3J/)
+    * This document will be periodically be synced with the [notes on github](https://github.com/CPAN-Security/security.metacpan.org/blob/enisa-workshop/notes/ENISA-workshop-20250129-notes.md).
+
+
 
 ## Meeting details
 
@@ -151,8 +155,8 @@ Source document is available in the [CPANSec-GPF](https://github.com/CPAN-Securi
 
 ### 6. Future Preparedness
 
-> 6.1 _How can the open-source groups participate in simulations or drills to prepare for future incidents?_
+> 6.1 How can the open-source groups participate in simulations or drills to prepare for future incidents?
 
 
-> 6.2 _What role can automation play in identifying and escalating critical vulnerabilities for coordinated response?_
+> 6.2 What role can automation play in identifying and escalating critical vulnerabilities for coordinated response?
 

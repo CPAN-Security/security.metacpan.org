@@ -11,8 +11,8 @@ Source document is available in the [CPANSec-GPF](https://github.com/CPAN-Securi
 
 ## Meeting details
 
-When: 2025-01-29, 14:00 – 17:00 CET (Brussels & online participation);
-Where: Physical Location: DG CONNECT (Rue de la Loi 51, Brussels);
+* When: 2025-01-29, 14:00 – 17:00 CET (Brussels & online participation);
+* Where: Physical Location: DG CONNECT (Rue de la Loi 51, Brussels);
 
 
 ## Proposed Specifications

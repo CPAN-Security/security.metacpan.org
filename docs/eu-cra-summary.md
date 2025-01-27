@@ -17,6 +17,38 @@ mermaid: true
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
 
+[Chapter I]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#cpt_I 'General Provisions'
+[Article 3]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_3 'Definitions'
+[Article 9(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_9.tit_1 'Stakeholder consultation'
+
+[Chapter II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#cpt_II 'Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software'
+[Article 13]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_13 'Obligations of Manufacturers'
+[Article 13(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.002 'Manufacturers shall undertake a cybersecurity risk assessment'
+[Article 13(5)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.005 'Manufacturers shall exercise due diligence when integrating components, including FOSS'
+[Article 13(5)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.006 'Manufacturers shall share relevant code or documentation with the maintainer of the component'
+[Article 13(12)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.012 'Manufacturers shall before placing a product on the market, draw up technical documentation'
+[Article 14]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_14 'Reporting obligations of manufacturers'
+[Article 14(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.001 'A manufacturer shall notify any actively exploited vulnerability contained in the product […] that it becomes aware of'
+[Article 14(3)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.003 'A manufacturer shall notify any severe incident having an impact on the security of the product […] that it becomes aware of'
+[Article 14(8)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.008 'After becoming aware of an actively exploited vulnerability or a severe incident, the manufacturer shall inform the impacted users of the product, and where appropriate all users, […] and, […] about risk mitigation and any corrective measures that the users can deploy'
+[Article 15]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_15 'Voluntary reporting'
+[Article 19]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_19 'Obligations of importers'
+[Article 20]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_20 'Obligations of distributors'
+[Article 21]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_21 'Cases in which obligations of manufacturers apply to importers and distributors'
+[Article 22]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_22 'Other cases in which obligations of manufacturers apply'
+
+[Chapter III]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#cpt_III 'Conformity of the product with digital elements'
+[Article 24]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24 'Obligations of open-source software stewards'
+[Article 25]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25 'Security attestation of free and open-source software'
+[Article 26]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_26 'Guidance'
+
+[Annex I]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_I 'Essential Cybersecurity Requirements'
+[Annex I, Part I]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#d1e47-68-1 'Cybersecurity requirements relating to the properties of products with digital elements'
+[Annex I, Part II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#d1e143-68-1 'Vulnerability handling requirements'
+[Annex II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[Annex VII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_VII 'Content of the Technical Documentation'
+
+
 ## About this document
 
 This text attempts to summarize the most important parts of the CRA, for Open Source ecosystems.
@@ -33,7 +65,7 @@ Fostering the development of secure products
 
 ### Manufacturers
 
-Manufacturers are obliged to _exercise due diligence when integrating components from third parties_, as laid out in **[Article 13(5)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=35)**
+Manufacturers are obliged to _exercise due diligence when integrating components from third parties_, as laid out in [Article 13(5)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=35)
 
 * …after the Manufacturer conducts a risk assessment, as laid out in [Article 13(2)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=35)
 * …in accordance with essential requirements laid out in [Annex I, Part I](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=68)
@@ -50,9 +82,13 @@ Manufacturers must report on actively exploited vulnerabilities and severe incid
   * …submit all relevant details about the nature of the exploit, without delay and within 72 hours
   * …submit a final report including available mitigations, within 14 days.
 
-Manufacturers are required to **report discovered vulnerabilities in components to their maintainers**, as laid out in [Article 13(6)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=36)
+Manufacturers are required to **report discovered vulnerabilities in components to their maintainers**,
+and **share modifications developed to address the vulnerability with their maintainers**,
+as laid out in [Article 13(6)]:
 
-* …in accordance with instructions laid out in [Annex I, part II](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=68)
+Manufacturers shall, upon identifying a vulnerability in a component, including in an open source-component, […]
+
+* …in accordance with instructions laid out in [Annex I, part II]
   * …identify and document the vulnerability, including by drawing up an SBOM covering at minimum the top-level dependencies involved
   * …depending on risk posed, provide without delay a security update that addresses the vulnerability
   * …apply regular tests and reviews of the security of the product
@@ -60,7 +96,11 @@ Manufacturers are required to **report discovered vulnerabilities in components 
   * …publish and enforce a policy for coordinated vulnerability disclosure
   * …facilitate information sharing about vulnerabilities in the product and the components it uses
   * …provide mechanisms to securely distribute fixes in a timely manner
-  * …
+* …report the vulnerability to the person […] maintaining the component,
+* …and address and remediate the vulnerability in accordance with the vulnerability handling requirements set out in [Annex I, part II].
+* …and where manufacturers have developed a […] modification to address the vulnerability in that component,
+  * they shall share the relevant code or documentation with the person […] maintaining the component, […].
+
 
 Manufacturers are to draw up the EU declaration of conformity in accordance with [Article 28](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=45) and affix the CE marking in accordance with [Article 30](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=48) as laid out in [Article 13(12)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=36))
 

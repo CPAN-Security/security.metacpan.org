@@ -183,15 +183,16 @@ This is not a exhaustive list!
 
 * Chapter I
     * **Article 3**, Definitions (pages 29-31)
-    * Article 9, Point 1. (b-c), Stakeholder consultation (page 34)
+    * Article 9(1)(b-c), Stakeholder consultation (page 34)
 * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
     * **Article 13**, Obligations of Manufacturers (pages 35-38)
+        * Paragraph 2, "Manufacturers shall undertake a cybersecurity risk assessment"
         * **Paragraph 5**, "Manufacturers shall exercise due diligence when integrating components" (page 35)
-        * Paragraph 6, "[…] they shall share the relevant code or documentation […]" (page 36)
+        * Paragraph 6, "[…] they shall share relevant code or documentation […]" (page 36)
         * Paragraph 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 36-37)
     * **Article 14**, Reporting obligations of manufacturers (pages 38-40)
         * Paragraph 1, "A manufacturer shall notify any actively exploited vulnerability contained in the product […] that it becomes aware of" (page 38)
-        * Paragraph 3, "A manufacturer shall notify any severe incident having an impact on the security of the product […] that it becomes aware of" (page 39
+        * Paragraph 3, "A manufacturer shall notify any severe incident having an impact on the security of the product […] that it becomes aware of" (page 39)
         * Paragraph 8, "After becoming aware of an actively exploited vulnerability or a severe incident, the manufacturer shall inform the impacted users of the product, and where appropriate all users, […] and, […] about risk mitigation and any corrective measures that the users can deploy" (page 40)
     * **Article 15**, Voluntary reporting (page 40)
     * Article 16, Establishment of a single reporting platform (page 41)

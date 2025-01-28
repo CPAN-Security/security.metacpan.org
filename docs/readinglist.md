@@ -183,15 +183,16 @@ This is not a exhaustive list!
 
 * Chapter I
     * **Article 3**, Definitions (pages 29-31)
-    * Article 9, Point 1. (b-c), Stakeholder consultation (page 34)
+    * Article 9(1)(b-c), Stakeholder consultation (page 34)
 * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
     * **Article 13**, Obligations of Manufacturers (pages 35-38)
+        * Paragraph 2, "Manufacturers shall undertake a cybersecurity risk assessment"
         * **Paragraph 5**, "Manufacturers shall exercise due diligence when integrating components" (page 35)
-        * Paragraph 6, "[…] they shall share the relevant code or documentation […]" (page 36)
+        * Paragraph 6, "[…] they shall share relevant code or documentation […]" (page 36)
         * Paragraph 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 36-37)
     * **Article 14**, Reporting obligations of manufacturers (pages 38-40)
         * Paragraph 1, "A manufacturer shall notify any actively exploited vulnerability contained in the product […] that it becomes aware of" (page 38)
-        * Paragraph 3, "A manufacturer shall notify any severe incident having an impact on the security of the product […] that it becomes aware of" (page 39
+        * Paragraph 3, "A manufacturer shall notify any severe incident having an impact on the security of the product […] that it becomes aware of" (page 39)
         * Paragraph 8, "After becoming aware of an actively exploited vulnerability or a severe incident, the manufacturer shall inform the impacted users of the product, and where appropriate all users, […] and, […] about risk mitigation and any corrective measures that the users can deploy" (page 40)
     * **Article 15**, Voluntary reporting (page 40)
     * Article 16, Establishment of a single reporting platform (page 41)
@@ -202,7 +203,6 @@ This is not a exhaustive list!
     * **Article 21**, Cases in which obligations of manufacturers apply to importers and distributors (page 44)
     * **Article 22**, Other cases in which obligations of manufacturers apply (page 45)
     * Article 23, Identification of economic operators (page 45)
-* Chapter II – Obligations of open-source software stewards (page 45-46)
     * **Article 24**, Obligations of open-source software stewards (page 45)
     * **Article 25**, Security attestation of free and open-source software (page 45)
     * **Article 26**, Guidance (page 46)
@@ -220,7 +220,7 @@ This is not a exhaustive list!
         * Section 11, Market surveillance authorities shall inform consumers of where to submit complaints that could indicate non-compliance with this Regulation […] and […] facilitate reporting of vulnerabilities, incidents and cyber threats […]. (page 57)
     * **Article 54**, Procedure […] concerning products […] presenting a significant cybersecurity risk (pages 58-59)
         * Section 1, [If a market authority finds] sufficient reason to consider that a product […], including its vulnerability handling, presents a significant cybersecurity risk, […] it shall […] carry out an evaluation of the product […] concerned in respect of its compliance with all the requirements laid down in this Regulation. (page 58)
-        * Section 5, [If the economic operator] not take adequate corrective action […], the market surveillance authority shall take all appropriate provisional measures to prohibit or restrict that product […] from being made available […], to withdraw it from that market or to recall it. (page 59)
+        * Section 5, [If the economic operator does] not take adequate corrective action […], the market surveillance authority shall take all appropriate provisional measures to prohibit or restrict that product […] from being made available […], to withdraw it from that market or to recall it. (page 59)
     * **Article 58**, Formal non-compliance (page 62)
 * Chapter VII — Confidentiality and Penalties (pages 64-65)
     * Article 64 — Penalties (page 64-65)

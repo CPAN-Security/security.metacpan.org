@@ -51,7 +51,7 @@ mermaid: true
 [Article 13]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_13 'Obligations of Manufacturers'
 [Article 13(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.002 'Manufacturers shall undertake a cybersecurity risk assessment'
 [Article 13(5)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.005 'Manufacturers shall exercise due diligence when integrating components, including FOSS'
-[Article 13(5)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.006 'Manufacturers shall share relevant code or documentation with the maintainer of the component'
+[Article 13(6)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.006 'Manufacturers shall share relevant code or documentation with the supplier or maintainer of the component'
 [Article 13(12)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.012 'Manufacturers shall before placing a product on the market, draw up technical documentation'
 [Article 13(14)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.014 'Manufacturers shall ensure that their products is identifiable'
 [Article 13(15)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.015 'Manufacturers shall ensure that their products is identifiable'
@@ -62,6 +62,7 @@ mermaid: true
 [Article 13(20)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.020 'Manufacturers shall provide a copy of or the exact internet addrees to the EU declaration of conformity'
 [Article 14]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_14 'Reporting obligations of manufacturers'
 [Article 14(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.001 'A manufacturer shall notify any actively exploited vulnerability contained in the product […] that it becomes aware of'
+[Article 14(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.002 'A manufacturer shall notify within 24 hours, 72 hours and 14 days'
 [Article 14(3)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.003 'A manufacturer shall notify any severe incident having an impact on the security of the product […] that it becomes aware of'
 [Article 14(8)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.008 'After becoming aware of an actively exploited vulnerability or a severe incident, the manufacturer shall inform the impacted users of the product, and where appropriate all users, […] and, […] about risk mitigation and any corrective measures that the users can deploy'
 [Article 15]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_15 'Voluntary reporting'
@@ -121,7 +122,7 @@ Manufacturers are obliged to _exercise due diligence when integrating components
   * …made in such a way that security updates may be automatically applied within an appropriate time frame
   * …and more.
 
-Manufacturers must report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16]
+Manufacturers must report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform, as laid out in [Article 16]
 
 * …in the way described in [Article 14(2)]
   * …submit an early warning if actively exploited vulnerabilities within 24 hours of discovery
@@ -153,12 +154,12 @@ Manufacturers are to draw up the EU declaration of conformity in accordance with
 * …to indicate conformity prior to entering the market ([Article 30(3)])
 * …and keep records for ten years, as laid out in [Article 23(2)]
 
-Manufacturers must provide a Software Bill of Materials (SBOM) upon request by authorities, as laid out in [Recital (78)]
+Manufacturers must provide a Software Bill of Materials (SBOM) upon request by authorities, as laid out in [Recital (77)]
 * …but no need for making these public.
 
-#### Authorised representatives of Manufacturers
+#### Authorised representatives of Manufacturers  ⚠️  FIXME: Not done
 
-Note: See Articles 13-17
+> [!NOTE] See [Article 13], [Article 14], [Article 15], [Article 16], and [Article 17] for context.
 
 Obligations for Authorised representatives of Manufacturers are laid out in [Article 18]
 
@@ -175,14 +176,14 @@ Obligations for Authorised representatives of Manufacturers are laid out in [Art
 Importers shall place on the market only products with digital elements that comply with the essential requirements set out in [Annex I, Part I] and where the processes put in place by the manufacturer comply with the essential requirements set out in [Annex I, Part II] – as laid out in [Article 19(1)]
 
 
-### Distributors
+### Distributors ⚠️  FIXME: Not done
 
 When making a product with digital elements available on the market, distributors shall act with due care in relation to the requirements set out in this Regulation.
 
 Before making a product with digital elements available on the market, distributors shall verify that:
 
 * (a) the product with digital elements bears the CE marking;
-* (b) the manufacturer and the importer have complied with the obligations set out in [Article 13(15)], [Article (16)], [Article (18)], [Article (19)] and [Article (20)] and have provided all necessary documents to the distributor.
+* (b) the manufacturer and the importer have complied with the obligations set out in [Article 13(15)], [Article 16], [Article 18], [Article 19] and [Article 20] and have provided all necessary documents to the distributor.
 
 
 ### Open Source Stewards ⚠️  FIXME: Not done

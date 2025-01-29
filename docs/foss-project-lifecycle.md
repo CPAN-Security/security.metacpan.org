@@ -137,11 +137,12 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Package maintenance
     * Release management
     * Tooling development
-1. **Quality Assurance and Testing**
-    * Error testing
+1. **Quality Assurance and Testing writing**
+    * Error and exception testing
     * Increase code coverage
-    * Security test writing
-    * Test writing
+    * Performance testing
+    * Security testing
+    * Unit and integration testing
     * Test data creation
     * UI/UX Testing
 1. Software and systems design review
@@ -170,19 +171,25 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Accessibility audit
 1. Mental health support
     * Mental health first-aider
+1. Commercial services
+    * Indemnification
+    * Hosting
+    * Consulting
+    * Support
 
 
 ## Project Support Indicators
 
-| Offers       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
-| MAINTAINED   | no        | YES       | YES       | OK            | Maintainer   |
-| CASUAL       | no        | YES       | YES       | LOW           | Maintainer   |
-| DONE         | no        | YES       | no        | LOW           | Maintainer   |
-| DEPRECATED   | no        | YES       | no        | NONE          | Maintainer   |
-| SECURITYONLY | no        | YES       | YES       | SECURITY      | Maintainer   |
-| SUPERSEEDED  | no        | YES       | YES       | NONE          | Maintainer   |
-| UNMAINTAINED | no        | YES       | YES       | NONE          | Maintainer   |
+| Offers             | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| MAINTAINED         | no        | YES       | YES       | OK            | Maintainer   |
+| FOR_COMMECRIAL_USE | no        | YES       | YES       | OK            | Maintainer   |
+| CASUAL             | no        | YES       | YES       | LOW           | Maintainer   |
+| DONE               | no        | YES       | no        | LOW           | Maintainer   |
+| DEPRECATED         | no        | YES       | no        | NONE          | Maintainer   |
+| SECURITYONLY       | no        | YES       | YES       | SECURITY      | Maintainer   |
+| SUPERSEEDED        | no        | YES       | YES       | NONE          | Maintainer   |
+| UNMAINTAINED       | no        | YES       | YES       | NONE          | Maintainer   |
 
 
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
@@ -206,6 +213,10 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * (number of maintainers does not need to change)
 1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))
     * Response time expectations should be none
+    * (number of maintainers is 1 or higher)
+    * (number of maintainers increase may be desired)
+1. FOR_COMMERCIAL_USE – This project is _intended for commercial use_ in accordance with the EU Cyber Resilience Act, Recital 19 (Ref: [CRA-Rec-19](#references))
+    * Response time expectations should be high for commercial users
     * (number of maintainers is 1 or higher)
     * (number of maintainers increase may be desired)
 
@@ -274,6 +285,7 @@ States in **bold** exist on CPAN.
 1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (Annex II, point 8)
 1. CE_CONFORMITY_BODY – A URL pointing to the Conformity Assessment Body where this component has been registered (CRA Article 22(4) and Article 58(1))
 1. CE_SUPPORT_END_DATE – The date for when the support for the component expires (Annex II, point 7)
+1. Add language that underlines the "non-transactional" relationships of Open Source
 
 
 ## License and use of this document
@@ -303,3 +315,4 @@ Several people have been involved in the development of this document
 * (PAUSE-2017) [The PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) Version 2 (section 4.5), published 2017-10-27.
 * (UNMAINTED-2016) ![No Maintenance Intended](https://unmaintained.tech/badge.svg) [unmaintained.tech](https://unmaintained.tech/), Published 2016-01-13.
 * (CASUAL-2023) ![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg) [casuallymaintained.tech](https://casuallymaintained.tech/), Published 2023-09-25.
+* (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=5) Open Source Software Intended for Commercial Use, dated 2024-11-20

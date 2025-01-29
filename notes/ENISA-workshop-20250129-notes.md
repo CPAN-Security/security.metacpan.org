@@ -25,7 +25,7 @@ These are notes for the «ENISA Workshop on "vulnerability handling in the conte
 
 ### Proposed Specifications
 
-1.
+1. 
 
 #### Objective
 
@@ -63,15 +63,15 @@ These are notes for the «ENISA Workshop on "vulnerability handling in the conte
 
 ### CRA Compliance Expectations and Gaps
 
-1.
+1. 
 
 ## Scenario-Based discussion
 
-1.
+1. 
 
 ### Simulated Incident Timeline
 
-1.
+1. 
 
 #### Incident Day (Hour 0-2)
 
@@ -201,18 +201,18 @@ These are notes for the «ENISA Workshop on "vulnerability handling in the conte
 > 2.3. What processes we should set up to support the reporting until the ENISA’s CRA reporting platform is available?
 
 1. (@tux) A process to set-up might involve a cross-product info-sharing workforce, where e.g. Perl folk find the cause, and the Go people find the solution and the python people write up the explanation (shuffle the languages to your preference).
-      * The focus would be purely technical.
+   * The focus would be purely technical.
 2. (@abraxxa) The CRA article 16 only talks about manufacturers, which are defined in article 3 as those who put a product on the market. Vulnerabilites are often found in components of those products, so most of the time the affected products have to be determined, not the other way round.
 
 #### 3. Coordination and Communication
 
 > 3.1 Should CISA take the lead in coordinating the exchange of information with ENISA instead of the open-source foundations themselves?
 
-1.
+1. 
 
 > 3.2 What tools (e.g., Slack channels, shared dashboards) are most effective for cross-border and cross-industry collaboration?
 
-1.
+1. 
 
 > 3.3 How do we ensure that vendors and other impacted parties don’t overwhelm open-source maintainers during the incident response?
 
@@ -220,27 +220,27 @@ These are notes for the «ENISA Workshop on "vulnerability handling in the conte
 
 > 3.4 Should ENISA and CISA coordinate with the open-source community before producing LTTs for public use?
 
-1.
+1. 
 
 #### 4. Incident Mitigation and Industry-Wide Fixing
 
 > 4.1 How can CISA and ENISA ensure that their downstream impact analysis results are effectively communicated to upstream open-source contributors?
 
-1.
+1. 
 
 > 4.2 What steps can be taken to prioritize fixes for the most critical users (e.g., critical infrastructure)?
 
-1.
+1. 
 
 #### 5. Post-Mortem and Feedback Loops
 
 > 5.1 What methods can be used to collect lessons learned without overburdening open-source contributors?
 
-1.
+1. 
 
 > 5.2 How can post-mortem insights inform better CRA compliance mechanisms and reporting processes?
 
-1.
+1. 
 
 #### 6. Future Preparedness
 

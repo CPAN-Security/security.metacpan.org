@@ -224,10 +224,12 @@ This is not a exhaustive list!
     * **Article 58**, Formal non-compliance (page 62)
 * Chapter VII — Confidentiality and Penalties (pages 64-65)
     * Article 64 — Penalties (page 64-65)
+        * **Section 4**, Supplying incorrect, incomplete or misleading information may be fined up to 5M EUR or 1% of global turnover (page 65)
         * **Section 10(b)**, Rules on administrative fines shall not apply to Open Source Software Stewards (page 65)
 * Chapter VIII — Transitional and final provisions (pages 65-67)
     * Article 71 — Entry into force and application (pages 66-67)
         * Section 2, This Regulation shall apply from 11 December 2027. However, Article 14 shall apply from 11 September 2026 and Chapter IV (Articles 35 to 51) shall apply from 11 June 2026. (page 67)
+
 
 #### CRA Annexes
 

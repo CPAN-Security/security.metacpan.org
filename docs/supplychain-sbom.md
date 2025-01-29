@@ -474,7 +474,7 @@ stateDiagram-v2
     class opensource_author createsSBOM
     class opensource_maintainer createsSBOM
     class ecosystem_repo distributesSBOM
-    class ecosystem_language updatesSBOM
+    class ecosystem_lang updatesSBOM
 
     [*] --> environment_opensource
 
@@ -504,13 +504,15 @@ This environment represents one or more developers that publish an Open Source c
 
 #### Author
 
-The legal owner of an Open Source project or a product.
+The initial creator and main developer of an Open Source project or a product.
 
-* Operates in an [OSS Project Environment](#oss-project-environment) or [Integrator Environment](#integrator-environment).
+* Operates in an [OSS Project Environment](#oss-project-environment).
 * Has the legal ownership rights and liabilities for the component.
-    * May be equivalent to the Copyright Holder metadata attribute.
-* Is usually the [Maintainer](#maintainer) or [Manufacturer](#manufacturer), a business or some other type of legal entity or person.
+    * May be equivalent to the [Copyright Holder](glossary.md#copyright-holder) metadata attribute.
+* Is usually also considered a [Maintainer](#maintainer)
+* May also be considered a [Manufacturer](#manufacturer), if they are somehow monetizing the component with the intention of earning a profit.
 * May decide the name of the project and other project parameters for (or on behalf of) the [Maintainer](#maintainer) or [Integrator](#integrator).
+* Not to be confused with the [SBOM Author](#sbom-author-role) role.
 
 | Ops | Attribute name                  | Required | Required by                         | Comment | FIXME   |
 | :-: | :------------------------------ | :------: | :---------------------------------- | :------ | :------ |
@@ -524,16 +526,15 @@ The legal owner of an Open Source project or a product.
 
 #### Maintainer
 
-A contributing author or developer of an Open Source component project, though not necessarily the original [Author](#author).
+A leading developer of an Open Source component project, though not necessarily the original [Author](#author).
 
 * Operates within an [OSS Project Environment](#oss-project-environment).
-* Is usually the initial and/or main creator of the component in question.
-* Typically works on all aspects of the code, including features, bug fixes, tests and security issues.
+* Is often the initial and/or main creator ([Author](#author)) of the component in question.
+* Typically works on all aspects of the code, including planning, design, features, bug fixes, tests and security issues.
 * Has the final say on the original contents of the package, and it's name-spaces.
 * The Maintainer _can_ be a group of people (having co-maintainers), though a single point of responsibility is common.
 * If a Maintainer has upstream (reverse) dependencies, the Maintainer is also considered to be an [Developer](#developer) (as seen from the upstream Maintainer's perspective).
-* Not to be confused with the [SBOM Author](#sbom-author-role) role.
-* Other common names for this role include Author, Developer, [Owner](#owner--supplier-).
+* Other common names for this role include Author, Developer, [Owner](#owner).
 
 | Ops | Attribute name                     | Required | Required by                                 | Comment | FIXME   |
 | :-: | :--------------------------------- | :------: | ------------------------------------------- | :------ | :------ |
@@ -811,16 +812,11 @@ This role is necessary when...
 > [!CAUTION]
 > * FIXME – Not done
 
-> [!NOTE]
-> * (CPANSec-2024) This term is used in place of the [Distributor](#distributor) Role when referring to Open Source Ecosystem component suppliers.
->     * This is done to disambiguate it from the [Distributor](#distributor) Role as used in the EU Cyber Resilience Act.
-> * (CPANSec-2024) Providers take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements. (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
->     * If SBOM metadata is expected to accompany the packages or containers in question, the Provider makes sure this happens.
-
 Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
 Ensures the availability of packages or containers, that they are indexed correctly, and that any related metadata is up-to-date, correct and available.
 
 * See also
+   * [Provider](glossary.md#provider) in the Glossary
    * [Distributor](#distributor)
    * [CISA SBOM Sharing Roles and Considerations](#references) (CISA-2024)
    * [CRA Article 20](#references) (CRA-Art-20)
@@ -942,7 +938,7 @@ A business or institution that is responsible for developing and building the ap
 
 > [!NOTE]
 > Manufacturer has a specific defined meaning in the EU Cyber Resilience Act (CRA), so until this definition is established, be careful when using the term.
-> These attributes are in addition to the attributes listed under [Owner](#owner--supplier-).
+> These attributes are in addition to the attributes listed under [Owner](#owner).
 > SPDX 2.3 doesn't support the CE attributes. SPDX 3.0 should be used at a future date.
 
 * A role within an [Integrator Environment](#integrator-environment).
@@ -957,7 +953,7 @@ A business or institution that is responsible for developing and building the ap
 | 🟥  | CE Conformity Assessment Body | Yes      | CRA Article 47.1, CRA-AV           |         |         |
 
 * See also
-  * [Owner](#owner--supplier-)
+  * [Owner](#owner)
 
 
 #### Integrator
@@ -1061,7 +1057,7 @@ The environment and systems where a product or service is executed on behalf of 
 > [!NOTE]
 > Mentioned once in the EU Cyber Resilience Act.
 
-* See also
+* See
   * [Deployer](#deployer)
 
 
@@ -1094,17 +1090,18 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 #### Distributor
 
 > [!CAUTION]
-> * FIXME – Possible confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor,
+> * Confusion between EU CRA's idea of a Distributor, and an OSS Package Distributor,
 
 * Distributor is a term commonly used throughout Open Source Ecosystems, but
-    * Distributors have additional requirements and considerations laid out in CISA-2024.
-    * Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+    * (CISA-2024) Distributors have additional requirements and considerations laid out in CISA-2024.
+    * (CRA-Art-20) Distributors have additional requirements around compliance, laid out in the EU Cyber Resilience Act Article 20.
+* (CPANSec-2024) Use the term [Provider](#provider) for roles who make package artifacts available for downstream users.
+
+> (Ref: [CISA-2024](#references), [CRA-Art-20](#references),([CPANSec-2024](#references))
 
 * See also
    * [Provider](#provider)
    * [Distributor](glossary.md#distributor) in the Glossary
-   * (CISA-2024) [CISA SBOM Sharing Roles and Considerations](#references)
-   * (CRA-Art-20) [CRA Article 20](#references)
 
 
 #### Importer
@@ -1187,7 +1184,7 @@ The Supplier is a term used throughout the Supply-chain, but most often represen
 
 * This term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
 * (CPANSec) This term is confusing, as it doesn't distinguish between the different types of "Suppliers" that may be involved in the creation of a product.
-    * Please use a more precise term, like [Author](#author), [Maintainer](#maintainer) or [Manufacturer](#manufacturer).
+    * Please use a more precise term, like [Owner](#owner), [Author](#author), [Maintainer](#maintainer) or [Manufacturer](#manufacturer).
 
 * See also
   * [Supplier](glossary.md#supplier) in the Glossary
@@ -1226,26 +1223,31 @@ The Supplier is a term used throughout the Supply-chain, but most often represen
   * [Custodian](#custodian)
   * [Open Source Software Steward](#open-source-software-steward)
 
-#### Author
-
-* See also
-  * [Owner](#owner)
-  * [Maintainer](#maintainer)
-
 #### SecOps
 
-* See also
+* See
   * [Analyst](#analyst)
 
 #### Pentester
 
-* See also
+* See
   * [Analyst](#analyst)
 
 #### Janitor
 
-* See also
+* See
   * [Custodian](#custodian)
+
+#### Owner
+
+The legal owner of the component or project.
+
+* May be a business or other entity, distinct from the component [Author](#author).
+
+* See also
+  * [Author](#author)
+  * [Copyright Holder](glossary.md#copyright-holder)
+
 
 ----------------------------------------------------------------------
 
@@ -1255,11 +1257,11 @@ The Supplier is a term used throughout the Supply-chain, but most often represen
 * (CISA-2023-4) [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), dated 2023-04-21
 * (CISA-2024-10) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf), Third edition, sections 2.2.1.4, 2.2.2 and Appendix B; dated 2024-10-15
 * (CPANSec-2024) CPAN Security Group commentary by Author. If you (dis)agree or have improvements, [share it with us](#document-status-%EF%B8%8F--draft)!
-* (CRA-AII)    [Cyber Resilience Act, Annex II](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II) Information and Instructions to the User, dated 2024-11-20
+* (CRA-Art-3)  [Cyber Resilience Act, Article 3](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_3) Definitions, dated 2024-11-20
 * (CRA-Art-18) [Cyber Resilience Act, Article 18](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_18) Obligations of Authorized Representatives, dated 2024-11-20
 * (CRA-Art-20) [Cyber Resilience Act, Article 20](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_20) Obligations of distributors, dated 2024-11-20
-* (CRA-Art-3)  [Cyber Resilience Act, Article 3](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_3) Definitions, dated 2024-11-20
 * (CRA-Art-47) [Cyber Resilience Act, Article 47](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_47) Operational obligations of notified bodies, dated 2024-11-20
+* (CRA-AII)    [Cyber Resilience Act, Annex II](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II) Information and Instructions to the User, dated 2024-11-20
 * (CRA-AV)     [Cyber Resilience Act, Annex V](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V) EU Declaration of Conformity, dated 2024-11-20
 * (CRA-AVII)   [Cyber Resilience Act, Annex VII](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_VII) Contents of the Technical Documentation, dated 2024-11-20
 * (CRA-Rec-15) [Cyber Resilience Act, Recital 15](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_15) Economic operators, dated 2024-11-20
@@ -1341,7 +1343,7 @@ Several people have been involved in the development of this document
 | Copyright Notice                    | Yes      | CISA-2024-10                                                                       | 🟥&nbsp;Author                                                          |         |
 | License(s)                          | Yes      | CISA-2024-10, CSCRF                                                                | 🟥&nbsp;Author                                                          |         |
 | Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, CSCRF, PCI-SSF, METI-2023                     | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
-| Dependencies (Known unknowns)       | Yes      | CSCRF                                                                              | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager, 🟨&nbsp;Manufacturer              | 🙄 Write a bug report! |
+| Dependencies (Known unknowns)       | Yes      | CSCRF                                                                              | 🟨&nbsp;Packager, 🟨&nbsp;Manufacturer                                  | 🙄 Write a bug report! |
 | Dependency Relationships            | Yes      | CISA-2024-10, PCI-SSF                                                              | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
 | Encryption used                     | Yes      | CSCRF                                                                              | 🟥&nbsp;Maintainer, 🟨&nbsp;Builder                                     |         |
 | Frequency of updates                | Yes      | CSCRF                                                                              | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Builder  | 😬 Start funding OSS! |
@@ -1370,6 +1372,79 @@ Several people have been involved in the development of this document
 | SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                                            |                                                                         |         |
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                                                            |                                                                         |         |
 | SBOM Type                           | No       | CISA-2023, CISA-2024-10                                                            |                                                                         |         |
+
+#### Graphical overview of SBOM Metadata Attributes
+
+```mermaid
+stateDiagram-v2
+    direction TB
+
+    state "🟥🟨🟦 Maintainer" as environment_maintainer
+    note right of environment_maintainer
+       Primary Component Name
+       Unique Product Identifier
+       Version
+       Purpose, Intended Use
+       Supplier Name
+       Security contact
+       Cryptographic Hash
+       Copyright Notice
+       License(s)
+       Dependencies
+       Dependency Relationships
+       Encryption Used
+       Frequncy of Updates
+       Intended for Commercial Use
+       Open Source Software Steward
+    end note
+
+    state "🟨 Contributor" as environment_contributor
+    state "🟩 Collaboration Ecosystem" as ecosystem_repo
+    state "🟨🟩 Language Ecosystem" as ecosystem_lang
+    state "🟨🟩 Package Ecosystem" as ecosystem_package
+    note left of ecosystem_package
+       Primary Component Name
+       Unique Product Identifier
+       Version
+       Supplier Name
+       Security contact
+       Cryptographic Hash
+       Dependencies
+       Dependencies (known unknowns)
+       Dependency Relationships
+       Encryption Used
+       Frequncy of Updates
+       Intended for Commercial Use
+       Open Source Software Steward
+    end note
+
+    state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
+    state "🟥🟨🟦🟪 Manufacturer 🆕" as environment_manufacturer
+    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
+
+    [*]                      --> environment_maintainer
+    ecosystem_repo           --> environment_maintainer
+    ecosystem_repo           --> environment_contributor
+    ecosystem_lang           --> ecosystem_package
+    ecosystem_lang           --> environment_manufacturer
+    ecosystem_repo           --> ecosystem_package
+    ecosystem_repo           --> ecosystem_lang
+    ecosystem_repo           --> environment_manufacturer
+    environment_maintainer   --> ecosystem_repo
+    environment_maintainer   --> ecosystem_lang
+    environment_contributor  --> ecosystem_repo
+    ecosystem_package        --> ecosystem_package
+    ecosystem_lang           --> ecosystem_steward
+    ecosystem_package        --> ecosystem_steward
+    ecosystem_steward        --> environment_manufacturer
+    environment_manufacturer --> authority_auditor
+    ecosystem_package        --> environment_manufacturer
+    ecosystem_lang           --> ecosystem_lang
+    authority_auditor        --> [*]
+
+    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licensed CC-BY-SA-4.0
+```
 
 
 ### SBOM JSON Paths and data types

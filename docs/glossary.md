@@ -162,7 +162,7 @@ Please take this into account when commenting this document.
 >     * If a dependency is unmet (not made available, deployed, installed), then it is called a _Requirement_.
 >     * A dependency can come in many forms,
 >         * Static, Dynamic, Resource or Service
->         * Included (Embedded), Direct or Transitive
+>         * Included (Embedded, Bundled), Direct or Transitive
 >         * Assumed (Phantom) or Unused (Zombie)
 >         * In-ecosystem or Out-of-ecosystem
 >         * Optional, Virtual or Resolved

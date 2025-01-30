@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Metadata, Open Source Supply Chains, and EU's Cyber Resilience Act</title>
+<title>Where in the OSS Supply Chain do SBOM attributes come from?</title>
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 <link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
@@ -22,13 +22,16 @@
 
 
 
-## Metadata, Open Source Supply Chains, and EU's Cyber Resilience Act
+## Where in the OSS Supply Chain do SBOM attributes come from?
 
-NUUG 2024-11-12
+FOSDEM 2025
 
 Salve J. Nilsen
 
 🐘 Mastodon — @sjn\@chaos.social
+
+
+[Article 47]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_47 'Operational obligations of notified bodies'
 
 Note:
 
@@ -36,15 +39,12 @@ Note:
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## New laws, new obligations
+## 
 
-* Cyber Resilience Act is arriving in the next weeks
-* 1st law to affect Open Source projects substantially
 
 
 Note:
 
-* This talk is more about _the future_ of open source communities, than the present
 
 </textarea></section>
 <section>
@@ -56,7 +56,7 @@ Note:
 </textarea></section>
 <section data-markdown  data-auto-animate><textarea data-template>
 
-## (I am not a lawyer)
+## (I am not a ~lawyer~)
 
 * (Also, I am not an "authority")
 
@@ -64,7 +64,16 @@ Note:
 </textarea></section>
 <section data-markdown  data-auto-animate><textarea data-template>
 
-## (I am not a lawyer)
+## (I am not a ~lawyer~)
+
+* (Also, I am not an ~"authority"~)
+* I'm a _volunteer_
+
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+## (I am not a ~lawyer~)
 
 * (Also, I am not an ~"authority"~)
 * I'm a _volunteer_
@@ -75,405 +84,31 @@ Note:
 <section>
 <section data-markdown  ><textarea data-template>
 
-## EU Cyber Resilience Act
+## These findings are _preliminary_
 
-* Approved by the EU Parliament Mar 12th 2024
-* Adopted by the EU Commission on **Oct 10th 2024**
-* Published in the official EU Journal [soon]
-* **Takes effect 36 months after publication**
-
-<div style="font-size: large;">
-
-> * [Council adoption](https://www.consilium.europa.eu/en/press/press-releases/2024/10/10/cyber-resilience-act-council-adopts-new-law-on-security-requirements-for-digital-products/) announcement – 2024-10-10
-
-</div>
-
-Note:
-
-* Into full effect by the end of 2027
-* This talk is to...
-    * _help you_ prepare, and
-    * for you to _help us_ prepare
 
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
-## The goal of the CRA?
-
-* **Increase the general Cybersecurity across Europe**
-* To ensure _Products with Digital Elements_ are safe before placement on the market
+## 
 
 Note:
 
-* Details in the upcoming slides
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-## CRA Applies to...
-
-* All **Manufacturers**
-  * that wish to place _Products with Digital Elements_
-  * on the EU market
-  * _in the course of a commercial activity_
-
-<div style="font-size: large;">
-
-> * Background: [Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17)
-
-</div>
-
-Note:
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-## Products with Digital Elements
-
-* Connected devices
-* Remote data processing solutions
-* Non-tangible digital products
-* _Related systems and services needed for operation_
-
-<div style="font-size: large;">
-
-> * Background: [Recital 9](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=10)
-> * Product with Digital Elements: [Article 3 (1), (4), (6), (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136)
-> * Placing on the market: [Article 3 (21)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=140)
-
-</div>
-
-Note:
-
-* Devices, components
-* routers, cameras, fridges, toys, etc.
-* Anything which has software may be affected!
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-## CRA **does not** apply to...
-
-* Software that is purely _part of a service_
-* Software that is covered by other regulation (NIS2, AI Act, Medical device regulations, etc.)
-* Software that is Open Source*
-
-<div style="font-size: large;">
-
-> * [Recital 12](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=13)
-> * [Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=21)
-
-</div>
-
-</textarea></section>
-</section>
-<section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-## Six "Roles"
-
-* Manufacturer
-* Distributor, Importer and Market Authorities
-* Open Source Software Steward
-* Open Source Developers
 
 
 </textarea></section>
 <section data-markdown  data-auto-animate><textarea data-template>
 
-## Six "Roles"
-
-* Manufacturer
-* Distributor, Importer and Market Authorities ❌
-* Open Source Software Steward ❌
-* Open Source Developers
-
-
-</textarea></section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-## Six "Roles"
-
-* Manufacturer 🔍
-* Distributor, Importer and Market Authorities ❌
-* Open Source Software Steward ❌
-* Open Source Developers
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-## Manufacturer
-
-* A natural or legal person who
-    * **develops or manufactures** products with digital elements
-    * or **has** products with digital elements **designed, developed or manufactured**,
-    * and **markets them under its name** or trademark,
-    * whether for payment, monetisation or free of charge
+##
 
 <div style="font-size: large;">
 
-> * [Article 3 (12), (13)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=138)
-
-</div>
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-### Obligations of Manufacturers<br> — Conformance
-
-![CE Mark](media/280px-Conformité_Européenne.png)
-
-* Place a CE mark on their products
-
-<div style="font-size: large;">
-
-> * [Article 28](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=218)
-
-</div>
-
-
-Note:
-
-* "I am following EU Law"
-* "Presumption of Conformance" when following EU Standards
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-
-### — Support period
-
-* Determine the product support period
-    * Default is 5 years, but should reflect expected use time
-    * Support period can also set by authorities
-* Security fixes must remain available for 10 years after issuing
-
-<div style="font-size: large;">
-
-> * [Article 13 (8)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=165)
-> * [Article 13 (9)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=166)
-
-</div>
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-### — Point of Contact
-
-* Set up a single point of contact
-
-<div style="font-size: large;">
-
-> * [Annex II.2](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303)
-
-</div>
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-### — Unique ID
-
-* Create a unique identification of their product
-
-<div style="font-size: large;">
-
-> * [Annex II (3)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303)
-
-</div>
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-### — Build & Dependencies
-
-* Be able to identify and document vulnerabilities and components contained in products
-* Describe how the product is put together
-
-<div style="font-size: large;">
-
-> * [Annex I, Part II (1)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
-> * [Annex VII.2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314)
-
-</div>
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-### — Produce SBOMs
-
-* Produce SBOMs upon request by regulators
-    * At minimum, top level dependencies
-
-<div style="font-size: large;">
-
-> * [Recital 22](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=26)
-> * [Annex I, Part II (1)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300)
-
-</div>
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-### — No Vulnerabilities
-
-* Product has **no known vulnerabilities**
-* Product is **secure by default**, and **secure by design**
-* 😍 Exercise due diligence when integrating third party components
-* 😍 Report vulnerabilities to the Manufacturer or Open Source maintainer
-
-<div style="font-size: large;">
-
-> * [Article 13.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=161)
-> * [Annex I, Part I (2 (a))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
-> * [Recital 65](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=73)
-> * [Article 13.5](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=163)
-> * [Article 13.6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164)
 
 </div>
 
 Note:
 
-* Due diligence – to avoid or fix the components that compromise security
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-### — Offer timely security updates
-
-* Make security updates available to customers effectively for the duration of the support period
-* Ensure vulnerabilities can be addressed through security updates
-
-<div style="font-size: large;">
-
-> * [Article 13.8](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=165)
-> * [Annex I part II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=300)
-> * [Annex I, Part I (2 (c))](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=297)
-> * [Annex I, Part II (7)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=302)
-
-</div>
-
-
-Note:
-
-* Address vulnerabilities _in a timely manner_
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-### — Early warning system
-
-* Take part in the EU early warning notification regime
-    * **Early warning within 24h** after exploit discovery
-    * **Vulnerability notification within 72h**, incl. corrective measures
-    * **Final report no later than a 14 days after discovery**
-* Incident reports submitted to a common EU reporting platform
-
-<div style="font-size: large;">
-
-> * [Article 13.6](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=164)
-> * [Article 14.1](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=176)
-> * [Article 14.2 (a)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177)
-> * [Article 14.2 (b)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=177)
-> * [Article 14.2 (c)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=178)
-
-</div>
-
-
-</textarea></section>
-</section>
-<section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-## Six "Roles"
-
-* Manufacturer 🔍
-* Distributor, Importer and Market Authorities ❌
-* Open Source Software Steward ❌
-* Open Source Developers
-
-
-</textarea></section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-## Six "Roles"
-
-* Manufacturer ✅
-* Distributor, Importer and Market Authorities ❌
-* Open Source Software Steward ❌
-* Open Source Developers 🔍
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-## Open Source Developers
-
-* CRA doesn't really talk about Open Source **Developers**
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-### Obligations to Open Source Developers<br> – Status Quo
-
-* CRA **does not apply** to Developers that...
-    * contribute code to projects they are **not responsible for**
-    * are **not monetising** their product
-    * make a product that is ultimately **not intended for commercial activities**
-
-<div style="font-size: large;">
-
-> * [Recital (18)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20))
-> * [Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22))
-
-</div>
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-### – With an Open Source Steward
-
-* CRA **applies voluntarily** if the Developer decides...
-    * their product **is ultimately intended** for commercial activities
-
-<div style="font-size: large;">
-
-> * [Recital (19)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22)
-
-</div>
-
-</textarea></section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-## Six "Roles"
-
-* Manufacturer ✅
-* Distributor, Importer and Market Authorities ❌
-* Open Source Software Steward ❌
-* Open Source Developers 🔍
-
-
-</textarea></section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-## Six "Roles"
-
-* Manufacturer ✅
-* Distributor, Importer and Market Authorities ❌
-* Open Source Software Steward ❌
-* Open Source Developers ✅
 
 
 </textarea></section>
@@ -488,22 +123,6 @@ Note:
 <section data-markdown  data-auto-animate><textarea data-template>
 
 ## Metadata "today"
-
-* What "Best Practices" exist for Metadata? 😅
-
-> As **much optional** as _possible_;<br> As **little required** as _necessary_.
-
-
-Note:
-
-* "Optional" isn't really an option any more
-    * Some fields are actually _required_
-
-
-</textarea></section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-## Metadata "tomorrow"
 
 * OSS components and ecosystems are _universal_
 * Requirements are coming from "everywhere"
@@ -716,7 +335,7 @@ Note:
 
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                      |
+| CE Conformity Assessment Body       | No       | [CRA-Art-47] (1), CRA-AV                   |
 | CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                         |
 | CE Support End Date                 | No       | CRA-AII(7)                                 |
 | CE Technical Documentation          | No       | CRA-AII(8)                                 |
@@ -742,15 +361,15 @@ Note:
 
 * (CISA-2023-4) [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), published 2023-04-21
 * (CISA-2024-10) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf), Third edition, sections 2.2.1.4, 2.2.2 and Appendix B; Published 2024-10-15
-* (CRA-AII) [Cyber Resilience Act, Annex II](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=303) Information and Instructions to the User, Dated 2024-03-12
-* (CRA-AV) [Cyber Resilience Act, Annex V](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=311) EU Declaration of Conformity, Dated 2024-03-12
-* (CRA-AVII) [Cyber Resilience Act, Annex VII](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=314) Contents of the Technical Documentation, Dated 2024-03-12
-* (CRA-Art-18) [Cyber Resilience Act, Article 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=249) Obligations of Authorized Representatives, Dated 2024-03-12
-* (CRA-Art-47) [Cyber Resilience Act, Article 47](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=249) Operational obligations of notified bodies, Dated 2024-03-12
-* (CRA-Rec-15) [Cyber Resilience Act, Recital 15](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=17) Economic operators, Dated 2024-03-12
-* (CRA-Rec-18) [Cyber Resilience Act, Recital 18](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=20) Open Source Software Contributors, Dated 2024-03-12
-* (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=22) Open Source Software Stewards, Dated 2024-03-12
-* (CRA-Rec-21) [Cyber Resilience Act, Recital 21](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=25) Open Source Security Attestation, Dated 2024-03-12
+* (CRA-AII) [Cyber Resilience Act, Annex II](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II) Information and Instructions to the User
+* (CRA-AV) [Cyber Resilience Act, Annex V](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V) EU Declaration of Conformity
+* (CRA-AVII) [Cyber Resilience Act, Annex VII](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_VII) Contents of the Technical Documentation
+* (CRA-Art-18) [Cyber Resilience Act, Article 18](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_18) Obligations of Authorized Representatives
+* (CRA-Art-47) [Cyber Resilience Act, Article 47](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_47) Operational obligations of notified bodies
+* (CRA-Rec-15) [Cyber Resilience Act, Recital 15](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_15) Economic operators
+* (CRA-Rec-18) [Cyber Resilience Act, Recital 18](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_18) Open Source Software Contributors
+* (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_19) Open Source Software Stewards
+* (CRA-Rec-21) [Cyber Resilience Act, Recital 21](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_21) Open Source Security Attestation
 * (CSCRF) [Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)](https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html), (GV.SC.S5, page 89), Securities and Exchange Board of India, Published 2024-08-20
 * (TR-03183) German Technical Requirement [TR-03183 Cyber Resilience Requirements for Manufacturers and Products](https://bsi.bund.de/dok/TR-03183), Part 2: Software Bill of Materials (SBOM), Version 2.0.0, published 2024-09-20
 * (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12

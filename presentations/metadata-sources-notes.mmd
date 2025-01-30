@@ -1,0 +1,86 @@
+stateDiagram-v2
+    direction TB
+
+    state "🟥🟨 Maintainer" as environment_maintainer
+    state "🟨 Contributor" as environment_contributor
+    state "🟩 Collab Ecosystem" as ecosystem_repo
+    state "🟨🟩 Language Ecosystem" as ecosystem_lang
+    state "🟨🟩 Package Ecosystem<br>🟩 Container Ecosystem" as ecosystem_package
+    %%state "🟨🟩 Package Ecosystem" as ecosystem_package
+    %%state "🟩 Container Ecosystem" as ecosystem_container
+    state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
+    state "🆕🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
+    state "🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
+
+    [*]                      --> environment_maintainer
+    ecosystem_repo           --> environment_maintainer
+    ecosystem_lang           --> ecosystem_package
+    ecosystem_repo           --> ecosystem_package
+    ecosystem_repo           --> ecosystem_lang
+    %%ecosystem_repo           --> ecosystem_container
+    ecosystem_repo           --> environment_manufacturer
+    ecosystem_repo           --> environment_contributor
+    environment_contributor  --> ecosystem_repo           
+    environment_maintainer   --> ecosystem_lang
+    environment_maintainer   --> ecosystem_repo
+    %%ecosystem_package        --> ecosystem_container
+    %%ecosystem_lang           --> ecosystem_container
+    ecosystem_lang           --> ecosystem_steward
+    ecosystem_lang           --> environment_manufacturer
+    ecosystem_steward        --> environment_manufacturer
+    ecosystem_package        --> ecosystem_steward
+    %%ecosystem_container      --> ecosystem_steward
+    environment_manufacturer --> authority_auditor
+    %%ecosystem_container      --> environment_manufacturer
+    ecosystem_package        --> environment_manufacturer
+    %%ecosystem_lang           --> ecosystem_lang
+    %%ecosystem_package        --> ecosystem_package
+    authority_auditor        --> [*]
+
+    note left of environment_maintainer
+    **SBOM Author…**
+      🟥&nbsp;Creates
+      🟨&nbsp;Contributes
+      🟩&nbsp;Distributes
+      🟦&nbsp;Verifies
+      🟪&nbsp;Censors
+    end note
+
+    note right of environment_maintainer
+       🟥&nbsp;Primary Component Name
+       🟥&nbsp;Version
+       🟥&nbsp;Purpose, Intended Use
+       🟥&nbsp;Supplier Name
+       🟥&nbsp;Security contact
+       🟥&nbsp;Cryptographic Hash
+       🟥&nbsp;Copyright Notice
+       🟥&nbsp;License(s)
+       🟥&nbsp;Dependencies
+       🟥&nbsp;Dependency Relationships
+       🟥&nbsp;Encryption Used
+       🟥&nbsp;Frequency of Updates
+       🟥&nbsp;Intended for Commercial Use
+       🟥&nbsp;Open Source Software Steward
+    end note
+
+    note left of ecosystem_package
+       🟨&nbsp;Primary Component Nam🟥e
+       🟨&nbsp;Unique Product Identifier
+       🟨&nbsp;Version
+       🟨&nbsp;Supplier Name
+       🟨&nbsp;Security contact
+       🟨&nbsp;Cryptographic Hash
+       🟨&nbsp;Dependencies
+       🟨&nbsp;Dependencies (known unknowns)
+       🟨&nbsp;Dependency Relationships
+       🟨&nbsp;Frequency of Updates
+    end note
+
+    note left of ecosystem_steward
+       🟦&nbsp;Intended for Commercial Use
+       🟦&nbsp;Open Source Software Steward
+       🟥&nbsp;Security Attestation
+    end note
+
+    %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
+    %% Some rights reserved. Licensed CC-BY-SA-4.0

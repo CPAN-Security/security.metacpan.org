@@ -24,7 +24,6 @@ Salve J. Nilsen
 🐘 Mastodon — @sjn\@chaos.social
 
 
-[Article 47]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_47 'Operational obligations of notified bodies'
 
 Note:
 
@@ -145,6 +144,8 @@ Note:
 
 <div style="font-size: x-large;">
 
+[CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
+
 | Attribute name                      | Required | References                                            |
 | :---------------------------------- | :------: | ----------------------------------------------------: |
 | Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183             |
@@ -153,7 +154,7 @@ Note:
 | **Supplier** Name  👈               | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
 | Security contact                    | Yes      | CRA-AII(2)                                            |
 | Copyright Notice                    | Yes      | CISA-2024-10                                          |
-| License(s)                          | Yes      | CISA-2024-10, TR-03183, CSCRF                         |
+| License(s)                          | Yes      | CISA-2024-10, TR-03183, [CSCRF]                       |
 
 </div>
 
@@ -171,13 +172,15 @@ Note:
 
 <div style="font-size: x-large;">
 
-| Attribute name                      | Required | References                                           |
-| :---------------------------------- | :------: | ---------------------------------------------------: |
-| **Unique Product ID** 👈            | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10          |
-| Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183, CSCRF                        |
-| Primary Component Filename          | Yes      | TR-03183                                             |
-| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183, CSCRF |
-| **Relationships**  👈               | Yes      | CISA-2024-10                                         |
+[CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
+
+| Attribute name                      | Required | References                                             |
+| :---------------------------------- | :------: | -----------------------------------------------------: |
+| **Unique Product ID** 👈            | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10            |
+| Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183, [CSCRF]                        |
+| Primary Component Filename          | Yes      | TR-03183                                               |
+| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183, [CSCRF] |
+| **Relationships**  👈               | Yes      | CISA-2024-10                                           |
 
 </div>
 
@@ -221,13 +224,15 @@ Note:
 
 [comment]: # (|||)
 
-### Attributes for Germany
+### Integrators in Germany
 
 <div style="font-size: x-large;">
 
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| Executable Property                 | Yes      | TR-03183                                   |
+| Executable Property                 | Yes      | [TR-03183]                                 |
 | Archive Property                    | Yes      | TR-03183                                   |
 | Structured Property                 | Yes      | TR-03183                                   |
 
@@ -238,13 +243,15 @@ Note:
 
 [comment]: # (|||)
 
-### Attributes for India
+### Integrators in the Indian Financial Sector
 
 <div style="font-size: x-large;">
 
+[CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
+
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| Dependencies (Known unknowns)       | Yes      | CSCRF                                      |
+| Dependencies (Known unknowns)       | Yes      | [CSCRF]                                    |
 | Encryption used                     | Yes      | CSCRF                                      |
 | Frequency of updates                | Yes      | CSCRF                                      |
 | Access control                      | Yes      | CSCRF                                      |
@@ -257,7 +264,7 @@ Note:
 
 [comment]: # (|||)
 
-### Useful attributes
+### Actually Useful Attributes
 
 <div style="font-size: x-large;">
 
@@ -283,11 +290,16 @@ Note:
 
 <div style="font-size: x-large;">
 
+[CRA-Rec-15]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_15 'CRA applies to economic operators that have an intention to monetise a product'
+[CRA-Rec-18]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_18 'Open Source Software Contributors'
+[CRA-Rec-19]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_19 'Open Source Software Stewards, light-touch regulatory regime, and CE mark implications'
+[CRA-Rec-21]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_21 'Voluntary security attestation programs for Open Source projects'
+
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-18                     |
-| Open Source Software Steward        | No       | CRA-Rec-19                                 |
-| **Security Attestation**  👈        | No       | CRA-Rec-21                                 |
+| Intended for Commercial Use         | No       | [CRA-Rec-15], [CRA-Rec-18]                 |
+| Open Source Software Steward        | No       | [CRA-Rec-19]                               |
+| **Security Attestation**  👈        | No       | [CRA-Rec-21]                               |
 
 </div>
 
@@ -302,13 +314,19 @@ Note:
 
 <div style="font-size: x-large;">
 
+[CRA-Art-18]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_18 'Authorised representatives'
+[CRA-Art-47]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_47 'Operational obligations of notified bodies'
+[CRA-AII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[CRA-AV]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V 'EU Declaration of Conformity'
+
+
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| CE Conformity Assessment Body       | No       | [CRA-Art-47] (1), CRA-AV                   |
-| CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                         |
+| CE Conformity Assessment Body       | No       | [CRA-Art-47]\(1), [CRA-AV]                 |
+| CE Declaration of Conformity        | No       | [CRA-AII]\(6), CRA-AV                      |
 | CE Support End Date                 | No       | CRA-AII(7)                                 |
 | CE Technical Documentation          | No       | CRA-AII(8)                                 |
-| CE Authorized Representative        | No       | CRA-Art-18                                 |
+| CE Authorized Representative        | No       | [CRA-Art-18]                               |
 
 </div>
 

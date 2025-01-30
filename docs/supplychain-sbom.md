@@ -38,7 +38,7 @@ This document offers **an overview of [Open Source Software](glossary.md#open-so
 * …Enumerating and describing the Metadata Attributes these Roles typically care about.
 * …Noting the ways each Role may Operate on any given Metadata Attribute,
     * 🟥 Create (authoritative),
-    * 🟨 Assemble or Update (non-authoritative),
+    * 🟨 Assemble or Update (contributing),
     * 🟩 Distribute,
     * 🟦 Verify, or
     * 🟪 Censor
@@ -127,36 +127,52 @@ To improve by ensuring that the metadata they need is available, updated and aut
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 Maintainer" as environment_maintainer
+    state "🟥🟨 Maintainer" as environment_maintainer
     state "🟨 Contributor" as environment_contributor
-    state "🟩 Collaboration Ecosystem" as ecosystem_repo
+    state "🟩 Collab Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem" as ecosystem_package
-    state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
-    state "🟥🟨🟦🟪 Manufacturer 🆕" as environment_manufacturer
-    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
+    state "🟨🟩 Package Ecosystem<br>🟩 Container Ecosystem" as ecosystem_package
+    %%state "🟨🟩 Package Ecosystem" as ecosystem_package
+    %%state "🟩 Container Ecosystem" as ecosystem_container
+    state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
+    state "🆕🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
+    state "🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
-    ecosystem_repo           --> environment_contributor
     ecosystem_lang           --> ecosystem_package
-    ecosystem_lang           --> environment_manufacturer
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
+    %%ecosystem_repo           --> ecosystem_container
     ecosystem_repo           --> environment_manufacturer
-    environment_maintainer   --> ecosystem_repo
+    ecosystem_repo           --> environment_contributor
+    environment_contributor  --> ecosystem_repo           
     environment_maintainer   --> ecosystem_lang
-    environment_contributor  --> ecosystem_repo
-    ecosystem_package        --> ecosystem_package
+    environment_maintainer   --> ecosystem_repo
+    %%ecosystem_package        --> ecosystem_container
+    %%ecosystem_lang           --> ecosystem_container
     ecosystem_lang           --> ecosystem_steward
-    ecosystem_package        --> ecosystem_steward
+    ecosystem_lang           --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
+    ecosystem_package        --> ecosystem_steward
+    %%ecosystem_container      --> ecosystem_steward
     environment_manufacturer --> authority_auditor
+    %%ecosystem_container      --> environment_manufacturer
     ecosystem_package        --> environment_manufacturer
-    ecosystem_lang           --> ecosystem_lang
+    %%ecosystem_lang           --> ecosystem_lang
+    %%ecosystem_package        --> ecosystem_package
     authority_auditor        --> [*]
 
-    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %%note left of environment_maintainer
+    %%  **SBOM Author…**
+    %%  🟥&nbsp;Creates
+    %%  🟨&nbsp;Contributes
+    %%  🟩&nbsp;Distributes
+    %%  🟦&nbsp;Verifies
+    %%  🟪&nbsp;Censors
+    %%end note
+
+    %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0
 ```
 
@@ -1369,80 +1385,64 @@ Several people have been involved in the development of this document
 | SBOM Generation Tool                | No       |                                                                                    |                                                                         |         |
 | SBOM Location                       | Yes      | CRA-AII(9), TR-03183-2                                                             |                                                                         |         |
 | SBOM Primary Component              | No       | CycloneDX 1.6, SPDX 3.0                                                            |                                                                         |         |
-| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                                            |                                                                         |         |
+| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                                            |                                                                        |         |
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                                                            |                                                                         |         |
 | SBOM Type                           | No       | CISA-2023, CISA-2024-10                                                            |                                                                         |         |
 
 #### Graphical overview of SBOM Metadata Attributes
 
 ```mermaid
+%%{init: { 'logLevel': 'debug', 'Renderer': 'elk' } }%%
 stateDiagram-v2
     direction TB
+    
 
-    state "🟥🟨🟦 Maintainer" as environment_maintainer
-    note right of environment_maintainer
-       Primary Component Name
-       Unique Product Identifier
-       Version
-       Purpose, Intended Use
-       Supplier Name
-       Security contact
-       Cryptographic Hash
-       Copyright Notice
-       License(s)
-       Dependencies
-       Dependency Relationships
-       Encryption Used
-       Frequncy of Updates
-       Intended for Commercial Use
-       Open Source Software Steward
-    end note
-
+    state "🟥🟨 Maintainer" as environment_maintainer
     state "🟨 Contributor" as environment_contributor
-    state "🟩 Collaboration Ecosystem" as ecosystem_repo
+    state "🟩 Collab Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem" as ecosystem_package
-    note left of ecosystem_package
-       Primary Component Name
-       Unique Product Identifier
-       Version
-       Supplier Name
-       Security contact
-       Cryptographic Hash
-       Dependencies
-       Dependencies (known unknowns)
-       Dependency Relationships
-       Encryption Used
-       Frequncy of Updates
-       Intended for Commercial Use
-       Open Source Software Steward
-    end note
-
-    state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
-    state "🟥🟨🟦🟪 Manufacturer 🆕" as environment_manufacturer
-    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
+    state "🟨🟩 Package Ecosystem<br>🟩 Container Ecosystem" as ecosystem_package
+    %%state "🟨🟩 Package Ecosystem" as ecosystem_package
+    %%state "🟩 Container Ecosystem" as ecosystem_container
+    state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
+    state "🆕🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
+    state "🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
 
     [*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
-    ecosystem_repo           --> environment_contributor
     ecosystem_lang           --> ecosystem_package
-    ecosystem_lang           --> environment_manufacturer
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
+    %%ecosystem_repo           --> ecosystem_container
     ecosystem_repo           --> environment_manufacturer
-    environment_maintainer   --> ecosystem_repo
+    ecosystem_repo           --> environment_contributor
+    environment_contributor  --> ecosystem_repo           
     environment_maintainer   --> ecosystem_lang
-    environment_contributor  --> ecosystem_repo
-    ecosystem_package        --> ecosystem_package
+    environment_maintainer   --> ecosystem_repo
+    %%ecosystem_package        --> ecosystem_container
+    %%ecosystem_lang           --> ecosystem_container
     ecosystem_lang           --> ecosystem_steward
-    ecosystem_package        --> ecosystem_steward
+    ecosystem_lang           --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
+    ecosystem_package        --> ecosystem_steward
+    %%ecosystem_container      --> ecosystem_steward
     environment_manufacturer --> authority_auditor
+    %%ecosystem_container      --> environment_manufacturer
     ecosystem_package        --> environment_manufacturer
-    ecosystem_lang           --> ecosystem_lang
+    %%ecosystem_lang           --> ecosystem_lang
+    %%ecosystem_package        --> ecosystem_package
     authority_auditor        --> [*]
 
-    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    note left of environment_maintainer
+    **SBOM Author…**
+      🟥&nbsp;Creates
+      🟨&nbsp;Contributes
+      🟩&nbsp;Distributes
+      🟦&nbsp;Verifies
+      🟪&nbsp;Censors
+    end note
+
+    %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0
 ```
 

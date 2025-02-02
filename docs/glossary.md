@@ -203,7 +203,7 @@ Please take this into account when commenting this document.
 >
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
-#### Dependency (Contained; Embedded, Included, Pre-resolved) ✍️ {#dependency-contained}
+#### Dependency (Contained; Embedded, Included, Pre-resolved, Vendored) ✍️ {#dependency-contained}
 
 > 1. (CPANSec-2024) A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package.
 >

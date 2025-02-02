@@ -300,10 +300,10 @@ Contributions appreciated!
 
 </div>
 
-### Ecosystem People
+**Ecosystem People**
 
 
-[comment]: # (||| data-auto-animate)
+[comment]: # (!!! data-auto-animate)
 
 <div style="float: left; scale: 100%">
 
@@ -467,10 +467,11 @@ Contributions appreciated!
 
 </div>
 
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
 
 ## Metadata Attributes
 
-### BSI TR-03183
+### BSI [TR-03183] 2.0
 
 <div style="font-size: x-large;">
 
@@ -511,6 +512,10 @@ Contributions appreciated!
 
 </div>
 
+Note:
+
+* Bundesamt für Sicherheit in der Informationstechnik
+* Technical Guideline TR-03183: Cyber Resilience Requirements for Manufacturers and Products
 
 [comment]: # (||| data-auto-animate)
 
@@ -520,10 +525,11 @@ Contributions appreciated!
 
 </div>
 
+[CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
 
 ## Metadata Attributes
 
-### CSCRF
+### SEBI [CSCRF]
 
 <div style="font-size: x-large;">
 
@@ -568,8 +574,13 @@ Contributions appreciated!
 
 </div>
 
+notes:
 
-[comment]: # (||| data-auto-animate)
+* Securities and Exchange Board of India
+* Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)
+
+
+[comment]: # (!!! data-auto-animate)
 
 <div style="float: left; scale: 100%">
 
@@ -587,17 +598,17 @@ Contributions appreciated!
    * Tooling
    * Services
    * Specs
-
-* Ecosystem constraints
-   * Volunteer work
+* Open Source Constraints
    * Break nothing
    * Preserve compatibility
    * No-fuzz upgrades
-   * Information & teaching
-
-* **Contribution = life-blood**
+   * Information & outreach
+* As volunteers!
+   * **Contribution = life-blood**
 
 </div>
+
+<br>
 
 ### _Well volunteered!_
 
@@ -613,14 +624,96 @@ Contributions appreciated!
 
 ### _Well volunteered!_
 
-* Who is going to volunteer?
+<div style="font-size: x-large;">
 
-* What should they volunteer?
+* Access control
+* Archive Property
+* CE Authorised Representative
+* CE Conformity Assessment Body
+* CE Declaration of Conformity
+* CE Support End Date
+* CE Technical Documentation
+* Copyright Notice
+* Cryptographic Hash
+* Dependencies (Known unknowns)
+* **Dependencies**
+* **Dependency Relationships**
+* Encryption used
+* Executable Property
+* Frequency of updates
+* Intended for Commercial Use
+* **License(s)**
+* Methods for accommodating errors
+
+
+* Open Source Software Steward
+* **Primary Component Name**
+* **Purpose, Intended Use**
+* SBOM Author
+* SBOM Creation Time-stamp
+* SBOM Format
+* SBOM Generation Tool
+* SBOM Location
+* SBOM Primary Component
+* SBOM Release
+* SBOM Serial Number
+* SBOM Type
+* Security Attestation
+* Security contact
+* Structured Property
+* **Supplier Name**
+* Unique Product Identifier
+* **Version**
+
+</div>
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+## (Ecosystem response)
+
+### _Well volunteered!_
+
+Who?
+
+* Ecosystem people
+* Standards people
+* Regulators
+
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+## (Ecosystem response)
+
+### _Well volunteered!_
+
+Who?
+
+* Ecosystem people
+* Standards people
+* Regulators
+
+<br>
+<br>
+
+**"Where do SBOM attributes come from?"**
 
 
 [comment]: # (!!! data-auto-animate)
 
-### Useful Component Attributes
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+### Component Attributes
 
 <div style="font-size: x-large;">
 
@@ -650,17 +743,17 @@ Note:
 
 [comment]: # (|||)
 
-### Useful Dependency Attributes
+### Dependency Attributes
 
 <div style="font-size: x-large;">
 
-[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resiliencee Requirements for Manufacturers and Products, Part 2'
 [NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
 [CISA-2023-4]:https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom 'CISA Types of Software Bill of Materials (SBOM)'
 [CISA-2024-10]:https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf 'CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)'
 [CRA-AII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
 [CRA-AV]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V 'EU Declaration of Conformity'
-[CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
+[CSCRF]:https://www.sebi.gov.in/legal/cireculars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
 
 | Attribute name                      | Required | References                                             |
 | :---------------------------------- | :------: | -----------------------------------------------------: |
@@ -668,7 +761,7 @@ Note:
 | Cryptographic Hash                  | Yes      | CISA-2024-10, [TR-03183], [CSCRF]                      |
 | Primary Component Filename          | Yes      | TR-03183                                               |
 | Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183, CSCRF   |
-| Relationships                       | Yes      | CISA-2024-10                                           |
+| Dependency Relationships            | Yes      | CISA-2024-10                                           |
 
 </div>
 
@@ -678,7 +771,7 @@ Note:
 
 [comment]: # (|||)
 
-### Useful SBOM Attributes
+### SBOM Attributes
 
 <div style="font-size: x-large;">
 
@@ -686,7 +779,7 @@ Note:
 [NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
 [CISA-2023-4]:https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom 'CISA Types of Software Bill of Materials (SBOM)'
 [CISA-2024-10]:https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf 'CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)'
-[Annex II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[CRA-AII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
 
 
 | Attribute name                      | Required | References                                 |
@@ -708,7 +801,7 @@ Note:
 
 [comment]: # (|||)
 
-### Useful Open Source Steward Attributes
+### Open Source Steward Attributes
 
 <div style="font-size: x-large;">
 
@@ -727,12 +820,10 @@ Note:
 
 Note:
 
-* Intended for Commercial Use + Attestations + OSS Steward = Possible funding source
-
 
 [comment]: # (|||)
 
-### Useful Manufacturer Attributes
+### Manufacturer Attributes
 
 <div style="font-size: x-large;">
 
@@ -762,7 +853,7 @@ Note:
 
 [comment]: # (|||)
 
-### ~Useful~ (?) Property Attributes
+### Special Attributes for Integrators in Germany
 
 <div style="font-size: x-large;">
 
@@ -779,7 +870,7 @@ Note:
 
 [comment]: # (|||)
 
-### Integrators in the Indian Financial Sector
+### Special Attributes for Integrators in the Indian Financial Sector
 
 <div style="font-size: x-large;">
 
@@ -798,7 +889,7 @@ Note:
 
 [comment]: # (|||)
 
-### Optional Useful Attributes
+### (Optional Attributes)
 
 <div style="font-size: x-large;">
 
@@ -813,7 +904,99 @@ Note:
 Note:
 
 
-[comment]: # (|||)
+[comment]: # (!!! data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+## Dear Regulators
+
+<div style="font-size: xx-large;">
+
+
+</div>
+
+
+Note:
+
+* Not just BSI or the Securities and Exchange Board of India
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+## Dear Regulators
+
+<br>
+
+### Welcome to the Open Source Communities!
+
+* We're many
+* We're _everywhere_
+* We support _everyone_
+* We don't _work for free_
+* We _volunteer_
+
+
+note:
+
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+## Dear Regulators
+
+### Your contributions _are welcome_
+
+* But not all of them
+   * — Only the useful ones!
+
+* Do like NIST and CISA 
+   * — Only require the minimum!
+
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+## Dear Regulators
+
+### Your contributions _are welcome_
+
+* But not all of them
+   * — Only the useful ones!
+
+* Do like NIST and CISA 
+   * — Only require the minimum!
+
+<br>
+<br>
+
+### Well volunteered!
+
+
+[comment]: # (!!! data-auto-animate)
+
+## Questions & Comments
+
+
+[comment]: # (!!!)
 
 ## References
 
@@ -838,44 +1021,6 @@ Note:
 
 
 
-[comment]: # (||| data-auto-animate)
-
-<div style="float: left; scale: 100%">
-
-![Supply chain](media/metadata-sources.png)
-
-</div>
-
-
-## Ecosystem Headaches
-
-* Lots new metadata
-* Inconsistencies in Terms
-* Arguably useless requirements
-* Increased complexity
-* ⚠️  Missing: More attributes needed to achieve security goals?
-
-
-Note:
-
-
-[comment]: # (||| data-auto-animate)
-
-<div style="float: left; scale: 100%">
-
-![Supply chain](media/metadata-sources.png)
-
-</div>
-
-## Well volunteered!
-
-
-
-[comment]: # (!!!)
-
-## Questions & Comments
-
-
 [comment]: # (!!!)
 
 # Thanks!
@@ -885,3 +1030,4 @@ Salve J. Nilsen
 🐘 Mastodon — @sjn\@chaos.social
 
 🦆🦆
+

@@ -5,17 +5,17 @@
 
 [comment]: # (THEME = solarized)
 
-[comment]: # (minScale: 0.2)
-[comment]: # (maxScale: 4.0)
+[comment]: # (minScale: 0.4)
+[comment]: # (maxScale: 2.0)
 [comment]: # (controls: true)
-[comment]: # (width: "960")
-[comment]: # (height: "700")
+[comment]: # (width: "1440")
+[comment]: # (height: "810")
 [comment]: # (help: true)
 [comment]: # (progress: true)
 [comment]: # (controlsBackArrows: "true")
 
 
-## Where in the OSS Supply Chain do SBOM attributes come from?
+## Where in the OSS Supply Chain<br> do SBOM attributes come from?
 
 FOSDEM 2025
 
@@ -28,16 +28,77 @@ Salve J. Nilsen
 Note:
 
 
-[comment]: # (!!!)
+[comment]: # (||| data-auto-animate)
 
-## 
+## Where in the OSS Supply Chain<br> does SBOM <span style="color:darkred">_metadata_</span> come from?
+
+FOSDEM 2025
+
+Salve J. Nilsen
+
+🐘 Mastodon — @sjn\@chaos.social
 
 
 
 Note:
 
 
-[comment]: # (!!!)
+[comment]: # (!!! data-auto-animate)
+
+## Why even ask this question?
+
+"Where does the metadata come from?"
+
+
+Note:
+
+[comment]: # (||| data-auto-animate)
+
+
+[Annex II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[Article 13(18)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.018 'Manufacturers shall ensure product s are accompanied by documentation listed in Annex II, and available for at least 10 years'
+[Article 64(4)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#064.004 'Supplying incorrect, incomplete or misleading information may be fined up to 5M EUR or 1% of global turnover'
+
+## Why even ask this question?
+
+"Where does the metadata come from?"
+
+<div style="font-size: xxx-large;">
+
+> Supplying incorrect, incomplete or misleading information may be fined up to 5M EUR or 1% of global turnover
+
+</div>
+<div style="font-size: xx-large;">
+
+> — Cyber Resilience Act, [Article 64(4)],<br> e.g. w.r.t. metadata described in [Annex II],<br> as required in [Article 13(18)]
+
+</div>
+
+
+[comment]: # (||| data-auto-animate)
+
+
+[Annex II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[Article 13(18)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.018 'Manufacturers shall ensure product s are accompanied by documentation listed in Annex II, and available for at least 10 years'
+[Article 64(4)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#064.004 'Supplying incorrect, incomplete or misleading information may be fined up to 5M EUR or 1% of global turnover'
+
+## Why even ask this question?
+
+"Where does the metadata come from?"
+
+<div style="font-size: xxx-large;">
+
+> Supplying <span style="color:darkred">**incorrect**</span>, <span style="color:darkred">**incomplete**</span> or <span style="color:darkred">**misleading**</span> information may be fined up to 5M EUR or 1% of global turnover
+
+</div>
+<div style="font-size: xx-large;">
+
+> — Cyber Resilience Act, [Article 64(4)],<br> w.r.t. metadata described in [Annex II],<br> as required in [Article 13(18)]
+
+</div>
+
+
+[comment]: # (||| data-auto-animate)
 
 ## (I am not a lawyer)
 
@@ -67,91 +128,517 @@ Note:
 
 [comment]: # (!!! data-auto-animate)
 
-## These findings are _preliminary_
+## ⚠️  DRAFT ⚠️
 
+This is a __work in progress__
+
+[comment]: # (||| data-auto-animate)
+
+## ⚠️  DRAFT ⚠️
+
+This is a __work in progress__
+
+Contributions appreciated!
+
+[comment]: # (!!! data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+## Supply-chain Metadata
+
+### «Ecosystem perspective»
+
+* Actions
+* Actors
+* Attributes
+* Metadata
+
+
+[comment]: # (||| data-auto-animate)
+
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+## Supply-chain Metadata
+
+### «Ecosystem perspective»
+
+* Actions
+* Actors
+* Attributes
+* Metadata
+* … More?
+
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Actions
+
+* 🟥&nbsp;Create
+* 🟨&nbsp;Contribute
+* 🟩&nbsp;Distribute
+* 🟦&nbsp;Verify
+* 🟪&nbsp;Censor
 
 
 [comment]: # (|||)
 
-## 
+<div style="float: left; scale: 100%">
 
-Note:
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Actors
+
+<div style="font-size: xx-large;">
+
+* 🟦 Analyst
+* 🟨🟦 Assembler
+* 🟦 Auditor
+* 🟦 Authenticator
+* 🟥 Author
+* 🟨🟦 Builder
+* 🟨 Contributor
+* 🟨 Curator
+* 🟨 Custodian
+* 🟨🟩 Deployer
+* 🟩 Depositary
+* 🟦 Distributor
+* 🟦 End-user
+
+
+* 🟦 Importer
+* 🟥🟨🟦 Integrator
+* 🟥🟨 Maintainer
+* 🟥 Manufacturer
+* 🟦 Distributor
+* 🟦 Importer
+* 🟥🟨🟩🟦 OSS Steward
+* 🟥 Owner
+* 🟨🟦 Packager
+* 🟨 Patcher
+* 🟩 Publisher
+* 🟩🟪 Censor
+* …
+
+</div>
+
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Actors
+
+<div style="font-size: xx-large;">
+
+* 🟥 Author
+* 🟥🟨 Maintainer
+* 🟨 Custodian
+* 🟨 Contributor
+* 🟨🟦 Builder
+* 🟨 Curator
+* 🟥🟨🟦 OSS Steward
+* 🟨 Patcher
+* 🟨🟦 Packager
+* 🟨🟦 Assembler
+* 🟥🟨🟦 Integrator
+* 🟨🟩 Deployer
+* 🟩🟪 Censor
+
+</div>
+
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Actors
+
+<div style="font-size: xx-large;">
+
+* 🟥 Author
+* 🟥🟨 Maintainer
+* 🟨 Custodian
+* 🟨 Contributor
+* 🟨🟦 Builder
+* 🟨 Curator
+* 🟥🟨🟦 OSS Steward
+* 🟨 Patcher
+* 🟨🟦 Packager
+* 🟨🟦 Assembler
+* 🟥🟨🟦 Integrator
+* 🟨🟩 Deployer
+* 🟩🟪 Censor
+
+</div>
+
+### Ecosystem People
+
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Attributes
+
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Attributes
+
+### SBOM Metadata
+
+<div style="font-size: xx-large;">
+
+* **SBOM Author**
+* **SBOM Creation Time-stamp**
+* **SBOM Format**
+* **SBOM Generation Tool**
+* **SBOM Location**
+* **SBOM Primary Component**
+* **SBOM Release**
+* **SBOM Serial Number**
+* **SBOM Type**
+
+</div>
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Attributes
+
+### NTIA Minimum Elements
+
+<div style="font-size: xx-large;">
+
+* **Dependencies**
+* **Primary Component Name**
+* SBOM Author
+* SBOM Creation Time-stamp
+* SBOM Format
+* SBOM Generation Tool
+* SBOM Location
+* SBOM Primary Component
+* SBOM Release
+* SBOM Serial Number
+* SBOM Type
+* **Supplier Name**
+* **Unique Product Identifier**
+
+</div>
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Attributes
+
+### CISA Framing
+
+<div style="font-size: x-large;">
+
+* **Copyright Notice**
+* **Cryptographic Hash**
+* Dependencies
+* **Dependency Relationships**
+* **License(s)**
+* Primary Component Name
+* **SBOM Author**
+* **SBOM Creation Time-stamp**
+* SBOM Format
+* SBOM Generation Tool
+* SBOM Location
+* SBOM Primary Component
+* SBOM Release
+* SBOM Serial Number
+* **SBOM Type**
+* Supplier Name
+* Unique Product Identifier
+* **Version**
 
 
 
-[comment]: # (|||)
+[comment]: # (||| data-auto-animate)
 
-##
+<div style="float: left; scale: 100%">
 
-<div style="font-size: large;">
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Attributes
+
+### EU CRA
+
+<div style="font-size: x-large;">
+
+* **CE Authorised Representative**
+* **CE Conformity Assessment Body**
+* **CE Declaration of Conformity**
+* **CE Support End Date**
+* **CE Technical Documentation**
+* Copyright Notice
+* Cryptographic Hash
+* Dependencies
+* Dependency Relationships
+* **Intended for Commercial Use**
+* License(s)
+* **Open Source Software Steward**
+* Primary Component Name
+* **Purpose, Intended Use**
+
+
+* SBOM Author
+* SBOM Creation Time-stamp
+* SBOM Format
+* SBOM Generation Tool
+* SBOM Location
+* SBOM Primary Component
+* SBOM Release
+* SBOM Serial Number
+* SBOM Type
+* **Security Attestation**
+* **Security contact**
+* Supplier Name
+* Unique Product Identifier
+* Version
 
 
 </div>
 
-Note:
 
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Attributes
+
+### BSI TR-03183
+
+<div style="font-size: x-large;">
+
+
+* **Archive Property**
+* CE Authorised Representative
+* CE Conformity Assessment Body
+* CE Declaration of Conformity
+* CE Support End Date
+* CE Technical Documentation
+* Copyright Notice
+* Cryptographic Hash
+* Dependencies
+* Dependency Relationships
+* **Executable Property**
+* Intended for Commercial Use
+* License(s)
+* Open Source Software Steward
+* Primary Component Name
+* Purpose, Intended Use
+
+
+* SBOM Author
+* SBOM Creation Time-stamp
+* SBOM Format
+* SBOM Generation Tool
+* SBOM Location
+* SBOM Primary Component
+* SBOM Release
+* SBOM Serial Number
+* SBOM Type
+* Security Attestation
+* Security contact
+* **Structured Property**
+* Supplier Name
+* Unique Product Identifier
+* Version
+
+</div>
+
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## Metadata Attributes
+
+### CSCRF
+
+<div style="font-size: x-large;">
+
+* **Access control**
+* Archive Property
+* CE Authorised Representative
+* CE Conformity Assessment Body
+* CE Declaration of Conformity
+* CE Support End Date
+* CE Technical Documentation
+* Copyright Notice
+* Cryptographic Hash
+* **Dependencies (Known unknowns)**
+* Dependencies
+* Dependency Relationships
+* **Encryption used**
+* Executable Property
+* **Frequency of updates**
+* Intended for Commercial Use
+* License(s)
+* **Methods for accommodating errors**
+
+
+* Open Source Software Steward
+* Primary Component Name
+* Purpose, Intended Use
+* SBOM Author
+* SBOM Creation Time-stamp
+* SBOM Format
+* SBOM Generation Tool
+* SBOM Location
+* SBOM Primary Component
+* SBOM Release
+* SBOM Serial Number
+* SBOM Type
+* Security Attestation
+* Security contact
+* Structured Property
+* Supplier Name
+* Unique Product Identifier
+* Version
+
+</div>
+
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+
+## (Ecosystem response)
+
+
+<div style="font-size: xx-large;">
+
+* Ecosystems **are Open Source**
+   * Tooling
+   * Services
+   * Specs
+
+* Ecosystem constraints
+   * Volunteer work
+   * Break nothing
+   * Preserve compatibility
+   * No-fuzz upgrades
+   * Information & teaching
+
+* **Contribution = life-blood**
+
+</div>
+
+### _Well volunteered!_
+
+[comment]: # (||| data-auto-animate)
+
+<div style="float: left; scale: 100%">
+
+![Supply chain](media/metadata-sources.png)
+
+</div>
+
+## (Ecosystem response)
+
+### _Well volunteered!_
+
+* Who is going to volunteer?
+
+* What should they volunteer?
 
 
 [comment]: # (!!! data-auto-animate)
 
-## What Metadata is being asked for?
-
-
-[comment]: # (||| data-auto-animate)
-
-## Metadata "today"
-
-* OSS components and ecosystems are _universal_
-* Requirements are coming from "everywhere"
-  * "Minimum Elements" or "Baseline Attributes"
-  * "Minimum" – "Recommended" – "Aspirational"
-
-<div style="font-size: large;">
-
-> * (NTIA-SBOM) [NTIA Minimum Elements for a Software Bill of Materials (SBOM)](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9), Published 2021-07-12
-> * (CISA-2024-10) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf), Third edition, Section 2 and Appendix B; Published 2024-10-15
-
-</div>
-
-
-Note:
-
-* It's necessary to look at metadata requirements in general
-    * Not just from the CRA (Europe's)
-* "Required" attributes come in different forms
-    * Keep in mind what the _purpose_ of the metadata is – not just it's "requiredness"
-
-
-[comment]: # (||| data-auto-animate)
-
-## Metadata Headaches
-
-* No common glossary of terms
-    * Needed – a _Metadata Rosetta Stone_
-* Not following existing "Best Practices"
-
-> ~~As **much optional** as _possible_;<br> As **little required** as _necessary_.~~
-
-Note:
-
-* The current landscape is still a mess
-    * Which means that well-considered constructive implementations can become a good example for others to consider
-
-
-[comment]: # (|||)
-
-### Component attributes
+### Useful Component Attributes
 
 <div style="font-size: x-large;">
 
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+[NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
+[CISA-2023-4]:https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom 'CISA Types of Software Bill of Materials (SBOM)'
+[CISA-2024-10]:https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf 'CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)'
+[CRA-II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[CRA-AV]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V 'EU Declaration of Conformity'
 [CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
+
 
 | Attribute name                      | Required | References                                            |
 | :---------------------------------- | :------: | ----------------------------------------------------: |
-| Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183             |
-| **Version**  👈                     | Yes      | CISA-2024-10, CRA-AV, TR-03183                        |
-| Purpose, Intended Use               | Yes      | CRA-AII(4)                                            |
-| **Supplier** Name  👈               | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
+| Primary Component Name              | Yes      | [NTIA-SBOM], [CISA-2024-10], [CRA-AV], [TR-03183]     |
+| Version                             | Yes      | CISA-2024-10, CRA-AV, TR-03183                        |
+| Purpose, Intended Use               | Yes      | [CRA-AII]\(4)                                         |
+| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
 | Security contact                    | Yes      | CRA-AII(2)                                            |
 | Copyright Notice                    | Yes      | CISA-2024-10                                          |
 | License(s)                          | Yes      | CISA-2024-10, TR-03183, [CSCRF]                       |
@@ -160,133 +647,68 @@ Note:
 
 Note:
 
-* Version:
-    * Semantic Versions ("SemVer"), Calendar Versions ("CalVer")
-    * On CPAN: Decimal Versions ("DeciVer").
-* Reality: Arbitrary Versions formats has to be supported
-
 
 [comment]: # (|||)
 
-### Dependency Attributes
-
-<div style="font-size: x-large;">
-
-[CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
-
-| Attribute name                      | Required | References                                             |
-| :---------------------------------- | :------: | -----------------------------------------------------: |
-| **Unique Product ID** 👈            | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10            |
-| Cryptographic Hash                  | Yes      | CISA-2024-10, TR-03183, [CSCRF]                        |
-| Primary Component Filename          | Yes      | TR-03183                                               |
-| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183, [CSCRF] |
-| **Relationships**  👈               | Yes      | CISA-2024-10                                           |
-
-</div>
-
-
-Note:
-
-* Unique ID: CPE (Common Platform Enumeration), Package URL, SWID, UUIDs, SWHID (Software Heritage ID), OmniBOR
-    * Intrinsic vs. Extrinsic
-    * Global uniqueness required
-    * This is a mess, and very hard to solve. Best option for OSS today: Package URLs
-* Relationships: If a dependency is static, remote, provided, or dynamic
-    * "Primary", "Included in", "Heritage or Pedigree"
-    * Relationship completeness
-
-
-[comment]: # (|||)
-
-### The SBOM Document Itself
-
-<div style="font-size: x-large;">
-
-| Attribute name                      | Required | References                                 |
-| :---------------------------------- | :------: | -----------------------------------------: |
-| SBOM Author                         | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
-| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
-| SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |
-| SBOM Generation Tool                | No       |                                            |
-| **SBOM Location**       👈          | Yes      | CRA-AII(9), TR-03183                       |
-| SBOM Primary Component              | No       | CycloneDX 1.6, SPDX 3.0                    |
-| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |
-| SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    |
-| SBOM Type                           | No       | CISA-2023-4, CISA-2024-10                  |
-
-</div>
-
-
-Note:
-
-* Location: Where to get the most recent SBOM
-* Type: "When" in a Supply Chain an SBOM was created
-
-[comment]: # (|||)
-
-### Integrators in Germany
+### Useful Dependency Attributes
 
 <div style="font-size: x-large;">
 
 [TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
-
-| Attribute name                      | Required | References                                 |
-| :---------------------------------- | :------: | -----------------------------------------: |
-| Executable Property                 | Yes      | [TR-03183]                                 |
-| Archive Property                    | Yes      | TR-03183                                   |
-| Structured Property                 | Yes      | TR-03183                                   |
-
-</div>
-
-Note:
-
-
-[comment]: # (|||)
-
-### Integrators in the Indian Financial Sector
-
-<div style="font-size: x-large;">
-
+[NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
+[CISA-2023-4]:https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom 'CISA Types of Software Bill of Materials (SBOM)'
+[CISA-2024-10]:https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf 'CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)'
+[CRA-AII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[CRA-AV]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V 'EU Declaration of Conformity'
 [CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
 
-| Attribute name                      | Required | References                                 |
-| :---------------------------------- | :------: | -----------------------------------------: |
-| Dependencies (Known unknowns)       | Yes      | [CSCRF]                                    |
-| Encryption used                     | Yes      | CSCRF                                      |
-| Frequency of updates                | Yes      | CSCRF                                      |
-| Access control                      | Yes      | CSCRF                                      |
-| Methods for accommodating errors 👈 | Yes      | CSCRF                                      |
+| Attribute name                      | Required | References                                             |
+| :---------------------------------- | :------: | -----------------------------------------------------: |
+| Unique Product ID                   | Yes      | [CRA-AII]\(3), [CRA-AV], [NTIA-SBOM], [CISA-2024-10]   |
+| Cryptographic Hash                  | Yes      | CISA-2024-10, [TR-03183], [CSCRF]                      |
+| Primary Component Filename          | Yes      | TR-03183                                               |
+| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183, CSCRF   |
+| Relationships                       | Yes      | CISA-2024-10                                           |
 
 </div>
+
 
 Note:
 
 
 [comment]: # (|||)
 
-### Actually Useful Attributes
+### Useful SBOM Attributes
 
 <div style="font-size: x-large;">
 
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+[NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
+[CISA-2023-4]:https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom 'CISA Types of Software Bill of Materials (SBOM)'
+[CISA-2024-10]:https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf 'CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)'
+[Annex II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+
+
 | Attribute name                      | Required | References                                 |
 | :---------------------------------- | :------: | -----------------------------------------: |
-| Download location                   | No  👈   |                                            |
-| Code Commit Revision                | No  👈   |                                            |
-| Code Repository                     | No  👈   |                                            |
+| SBOM Author                         | Yes      | [NTIA-SBOM], [CISA-2024-10], [TR-03183]    |
+| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
+| SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |
+| SBOM Generation Tool                | No       |                                            |
+| SBOM Location                       | Yes      | [CRA-AII]\(9), TR-03183                    |
+| SBOM Primary Component              | No       | CycloneDX 1.6, SPDX 3.0                    |
+| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |
+| SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    |
+| SBOM Type                           | No       | [CISA-2023-4], CISA-2024-10                |
 
 </div>
 
+
 Note:
-
-* What else is needed to make it easier to manage vulnerabilities?
-    * A list of known vulnerabilities addressed
-    * Details on which function/method had a vulnerability fixed
-    * When & where the package was downloaded from
-
 
 [comment]: # (|||)
 
-### Open Source Stewards
+### Useful Open Source Steward Attributes
 
 <div style="font-size: x-large;">
 
@@ -299,7 +721,7 @@ Note:
 | :---------------------------------- | :------: | -----------------------------------------: |
 | Intended for Commercial Use         | No       | [CRA-Rec-15], [CRA-Rec-18]                 |
 | Open Source Software Steward        | No       | [CRA-Rec-19]                               |
-| **Security Attestation**  👈        | No       | [CRA-Rec-21]                               |
+| Security Attestation                | No       | [CRA-Rec-21]                               |
 
 </div>
 
@@ -310,7 +732,7 @@ Note:
 
 [comment]: # (|||)
 
-### Manufacturers
+### Useful Manufacturer Attributes
 
 <div style="font-size: x-large;">
 
@@ -337,6 +759,58 @@ Note:
   * Maintainer becomes a Manufacturer
   * Does the Manufacturer have a Authorised representative?
   * This needs also to be supported
+
+[comment]: # (|||)
+
+### ~Useful~ (?) Property Attributes
+
+<div style="font-size: x-large;">
+
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Executable Property                 | Yes      | [TR-03183]                                 |
+| Archive Property                    | Yes      | TR-03183                                   |
+| Structured Property                 | Yes      | TR-03183                                   |
+
+</div>
+
+
+[comment]: # (|||)
+
+### Integrators in the Indian Financial Sector
+
+<div style="font-size: x-large;">
+
+[CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Dependencies (Known unknowns)       | Yes      | [CSCRF]                                    |
+| Encryption used                     | Yes      | CSCRF                                      |
+| Frequency of updates                | Yes      | CSCRF                                      |
+| Access control                      | Yes      | CSCRF                                      |
+| Methods for accommodating errors    | Yes      | CSCRF                                      |
+
+</div>
+
+
+[comment]: # (|||)
+
+### Optional Useful Attributes
+
+<div style="font-size: x-large;">
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Download location                   | No       |                                            |
+| Code Commit Revision                | No       |                                            |
+| Code Repository                     | No       |                                            |
+
+</div>
+
+Note:
 
 
 [comment]: # (|||)
@@ -366,36 +840,35 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-## Metadata Headaches
+<div style="float: left; scale: 100%">
 
-Lots of "opinions" from legislators & gov't orgs
+![Supply chain](media/metadata-sources.png)
 
-* ⚠️  Inconsistencies in Terms
+</div>
+
+
+## Ecosystem Headaches
+
+* Lots new metadata
+* Inconsistencies in Terms
+* Arguably useless requirements
+* Increased complexity
 * ⚠️  Missing: More attributes needed to achieve security goals?
-* ⚠️  Too much: Unnecessary additions, leading to complexity
 
 
 Note:
 
-* This picture is likely to evolve in the coming years
-* Ecosystems would do well to prepare a smooth evolution
 
+[comment]: # (||| data-auto-animate)
 
-[comment]: # (|||)
+<div style="float: left; scale: 100%">
 
-## Conclusions?
+![Supply chain](media/metadata-sources.png)
 
-* It's a mess
-* It's up to volunteers to improve it
-* ~"If it ain't broke, don't fix it"~
-* Don't be a bystander
+</div>
 
+## Well volunteered!
 
-Note:
-
-* "Permissionless Innovation"
-* "Being a Good Open Source Citizen"
-* We already know that being a bystander doesn't work – better to step up instead!
 
 
 [comment]: # (!!!)

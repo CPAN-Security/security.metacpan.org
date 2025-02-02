@@ -300,7 +300,7 @@ Contributions appreciated!
 
 </div>
 
-**Ecosystem People**
+**These are the sources of the Required Metadata**
 
 
 [comment]: # (!!! data-auto-animate)
@@ -683,7 +683,7 @@ Who?
 
 * Ecosystem people
 * Standards people
-* Regulators
+* Regulators 🆕
 
 
 [comment]: # (||| data-auto-animate)
@@ -702,7 +702,7 @@ Who?
 
 * Ecosystem people
 * Standards people
-* Regulators
+* Regulators 🆕
 
 <br>
 <br>
@@ -711,6 +711,11 @@ Who?
 
 
 [comment]: # (!!! data-auto-animate)
+
+## A quick Attribute Poll
+
+
+[comment]: # (||| data-auto-animate)
 
 [TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
 ### Component Attributes

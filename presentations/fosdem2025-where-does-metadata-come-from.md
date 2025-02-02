@@ -196,7 +196,7 @@ Contributions appreciated!
 * 🟪&nbsp;Censor
 
 
-[comment]: # (|||)
+[comment]: # (!!! data-auto-animate)
 
 <div style="float: left; scale: 100%">
 

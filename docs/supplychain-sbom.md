@@ -127,36 +127,43 @@ To improve by ensuring that the metadata they need is available, updated and aut
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 Maintainer" as environment_maintainer
+    state "🟥🟨 Maintainer" as environment_maintainer
     state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem" as ecosystem_package
-    state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
-    state "🟥🟨🟦🟪 Manufacturer 🆕" as environment_manufacturer
-    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
+    state "🟨🟩 Package Ecosystem<br>🟩 Container Ecosystem" as ecosystem_package
+    %%state "🟨🟩 Package Ecosystem" as ecosystem_package
+    %%state "🟩 Container Ecosystem" as ecosystem_container
+    state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
+    state "🆕🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
+    state "🟦 Customer<br>🆕🟦 Market Authority<br>🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
 
-    [*]                      --> environment_maintainer
+    %%[*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
-    ecosystem_repo           --> environment_contributor
     ecosystem_lang           --> ecosystem_package
-    ecosystem_lang           --> environment_manufacturer
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
+    %%ecosystem_repo           --> ecosystem_container
     ecosystem_repo           --> environment_manufacturer
-    environment_maintainer   --> ecosystem_repo
-    environment_maintainer   --> ecosystem_lang
+    ecosystem_repo           --> environment_contributor
     environment_contributor  --> ecosystem_repo
-    ecosystem_package        --> ecosystem_package
+    environment_maintainer   --> ecosystem_lang
+    environment_maintainer   --> ecosystem_repo
+    %%ecosystem_package        --> ecosystem_container
+    %%ecosystem_lang           --> ecosystem_container
     ecosystem_lang           --> ecosystem_steward
-    ecosystem_package        --> ecosystem_steward
+    ecosystem_lang           --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
+    ecosystem_package        --> ecosystem_steward
+    %%ecosystem_container      --> ecosystem_steward
     environment_manufacturer --> authority_auditor
+    %%ecosystem_container      --> environment_manufacturer
     ecosystem_package        --> environment_manufacturer
     ecosystem_lang           --> ecosystem_lang
-    authority_auditor        --> [*]
+    ecosystem_package        --> ecosystem_package
+    %%authority_auditor        --> [*]
 
-    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0
 ```
 

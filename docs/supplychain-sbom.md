@@ -127,7 +127,7 @@ To improve by ensuring that the metadata they need is available, updated and aut
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨 OSS Project" as environment_opensource
+    state "🟥🟨🟦 OSS Project" as environment_opensource
     state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang

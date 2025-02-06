@@ -365,7 +365,7 @@ Accepting donations without the intention of making a profit should not be consi
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨 OSS Project" as environment_opensource
+    state "🟥🟨🟦 OSS Project" as environment_opensource
     state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang

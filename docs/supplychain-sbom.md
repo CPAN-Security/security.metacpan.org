@@ -56,7 +56,7 @@ This document offers **an overview of [Open Source Software](glossary.md#open-so
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 Maintainer" as environment_maintainer
+    state "🟥🟨🟦 OSS Project" as environment_opensource
     state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
@@ -64,12 +64,12 @@ stateDiagram-v2
     state "🟥🟨 Integrator" as environment_integrator
     state "🟦 Production" as environment_prod
 
-    [*]                      --> environment_maintainer
-    ecosystem_repo           --> environment_maintainer
+    [*]                      --> environment_opensource
+    ecosystem_repo           --> environment_opensource
     ecosystem_repo           --> environment_contributor
     ecosystem_repo           --> ecosystem_lang
-    environment_maintainer   --> ecosystem_repo
-    environment_maintainer   --> ecosystem_lang
+    environment_opensource   --> ecosystem_repo
+    environment_opensource   --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
@@ -127,9 +127,9 @@ To improve by ensuring that the metadata they need is available, updated and aut
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨 Maintainer" as environment_maintainer
+    state "🟥🟨 OSS Project" as environment_opensource
     state "🟨 Contributor" as environment_contributor
-    state "🟩 Collab Ecosystem" as ecosystem_repo
+    state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
     state "🟨🟩 Package Ecosystem<br>🟩 Container Ecosystem" as ecosystem_package
     %%state "🟨🟩 Package Ecosystem" as ecosystem_package
@@ -138,8 +138,8 @@ stateDiagram-v2
     state "🆕🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
     state "🟦 Customer<br>🆕🟦 Market Authority<br>🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
 
-    %%[*]                      --> environment_maintainer
-    ecosystem_repo           --> environment_maintainer
+    [*]                      --> environment_opensource
+    ecosystem_repo           --> environment_opensource
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
@@ -147,8 +147,8 @@ stateDiagram-v2
     ecosystem_repo           --> environment_manufacturer
     ecosystem_repo           --> environment_contributor
     environment_contributor  --> ecosystem_repo
-    environment_maintainer   --> ecosystem_lang
-    environment_maintainer   --> ecosystem_repo
+    environment_opensource   --> ecosystem_lang
+    environment_opensource   --> ecosystem_repo
     %%ecosystem_package        --> ecosystem_container
     %%ecosystem_lang           --> ecosystem_container
     ecosystem_lang           --> ecosystem_steward

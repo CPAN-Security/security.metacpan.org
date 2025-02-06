@@ -136,9 +136,9 @@ stateDiagram-v2
     %%state "🟩 Container Ecosystem" as ecosystem_container
     state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
     state "🆕🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
-    state "🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
+    state "🟦 Customer<br>🆕🟦 Market Authority<br>🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
 
-    [*]                      --> environment_maintainer
+    %%[*]                      --> environment_maintainer
     ecosystem_repo           --> environment_maintainer
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
@@ -146,7 +146,7 @@ stateDiagram-v2
     %%ecosystem_repo           --> ecosystem_container
     ecosystem_repo           --> environment_manufacturer
     ecosystem_repo           --> environment_contributor
-    environment_contributor  --> ecosystem_repo           
+    environment_contributor  --> ecosystem_repo
     environment_maintainer   --> ecosystem_lang
     environment_maintainer   --> ecosystem_repo
     %%ecosystem_package        --> ecosystem_container
@@ -159,18 +159,9 @@ stateDiagram-v2
     environment_manufacturer --> authority_auditor
     %%ecosystem_container      --> environment_manufacturer
     ecosystem_package        --> environment_manufacturer
-    %%ecosystem_lang           --> ecosystem_lang
-    %%ecosystem_package        --> ecosystem_package
+    ecosystem_lang           --> ecosystem_lang
+    ecosystem_package        --> ecosystem_package
     authority_auditor        --> [*]
-
-    %%note left of environment_maintainer
-    %%  **SBOM Author…**
-    %%  🟥&nbsp;Creates
-    %%  🟨&nbsp;Contributes
-    %%  🟩&nbsp;Distributes
-    %%  🟦&nbsp;Verifies
-    %%  🟪&nbsp;Censors
-    %%end note
 
     %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0
@@ -1388,63 +1379,6 @@ Several people have been involved in the development of this document
 | SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                                            |                                                                        |         |
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                                                            |                                                                         |         |
 | SBOM Type                           | No       | CISA-2023, CISA-2024-10                                                            |                                                                         |         |
-
-#### Graphical overview of SBOM Metadata Attributes
-
-```mermaid
-%%{init: { 'logLevel': 'debug', 'Renderer': 'elk' } }%%
-stateDiagram-v2
-    direction TB
-    
-
-    state "🟥🟨 Maintainer" as environment_maintainer
-    state "🟨 Contributor" as environment_contributor
-    state "🟩 Collab Ecosystem" as ecosystem_repo
-    state "🟨🟩 Language Ecosystem" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem<br>🟩 Container Ecosystem" as ecosystem_package
-    %%state "🟨🟩 Package Ecosystem" as ecosystem_package
-    %%state "🟩 Container Ecosystem" as ecosystem_container
-    state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
-    state "🆕🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
-    state "🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
-
-    [*]                      --> environment_maintainer
-    ecosystem_repo           --> environment_maintainer
-    ecosystem_lang           --> ecosystem_package
-    ecosystem_repo           --> ecosystem_package
-    ecosystem_repo           --> ecosystem_lang
-    %%ecosystem_repo           --> ecosystem_container
-    ecosystem_repo           --> environment_manufacturer
-    ecosystem_repo           --> environment_contributor
-    environment_contributor  --> ecosystem_repo           
-    environment_maintainer   --> ecosystem_lang
-    environment_maintainer   --> ecosystem_repo
-    %%ecosystem_package        --> ecosystem_container
-    %%ecosystem_lang           --> ecosystem_container
-    ecosystem_lang           --> ecosystem_steward
-    ecosystem_lang           --> environment_manufacturer
-    ecosystem_steward        --> environment_manufacturer
-    ecosystem_package        --> ecosystem_steward
-    %%ecosystem_container      --> ecosystem_steward
-    environment_manufacturer --> authority_auditor
-    %%ecosystem_container      --> environment_manufacturer
-    ecosystem_package        --> environment_manufacturer
-    %%ecosystem_lang           --> ecosystem_lang
-    %%ecosystem_package        --> ecosystem_package
-    authority_auditor        --> [*]
-
-    note left of environment_maintainer
-    **SBOM Author…**
-      🟥&nbsp;Creates
-      🟨&nbsp;Contributes
-      🟩&nbsp;Distributes
-      🟦&nbsp;Verifies
-      🟪&nbsp;Censors
-    end note
-
-    %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
-    %% Some rights reserved. Licensed CC-BY-SA-4.0
-```
 
 
 ### SBOM JSON Paths and data types

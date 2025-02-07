@@ -225,7 +225,7 @@ stateDiagram-v2
     %%state "🟥 Attestation Authority 🆕" as authority_attester
 
     %% Language Ecosystem
-    state "🟦 Authenticator" as language_authenticator
+    state "🟦 Doorkeeper" as language_authenticator
     state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Archive" as language_distributor
@@ -244,8 +244,8 @@ stateDiagram-v2
     class external_contributor updatesSBOM
 
     %% Package Ecosystem
-    state "🟦 Authenticator" as package_authenticator
-    state "🟨 Patcher (Developer)" as package_patcher
+    state "🟦 Gatekeeper" as package_authenticator
+    state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as package_packager
     %% FIXME: package_steward not useful/necessary?
     state "🟥🟦 Open Source Software Steward 🆕" as package_steward
@@ -621,7 +621,7 @@ Common responsibilities include ensuring availability, non-tampering and hosting
 * May function as a distribution point for releases of a Maintainer's project.
 
 * See also
-  * [Distributor](#distributor)
+   * [Distributor](glossary.md#distributor) in the Glossary
 
 
 #### Contributor
@@ -648,19 +648,28 @@ Typically, the Ecosystem has dedicated services and tooling for interacting with
 * May be Private
 
 
-#### Authenticator (Language ecosystem)
+#### Doorkeeper (Language ecosystem)
+
+> [!NOTE]
+> * FIXME: Bad term! Improvements appreciated.
+
+* See [Authenticator](#authenticator)
+
+
+#### Authenticator (Language ecosystem) {#authenticator}
 
 > [!CAUTION]
 > * FIXME – Not done
 > * FIXME – Find a better name
 
-Authenticators ensure that only authorized Maintainers are allowed to publish their components to a [Language](#language-ecosystem) or [Package Ecosystem](#package-ecosystem).
+Authenticators ensure that only authorized Maintainers are allowed to publish their components to a [Language Ecosystem](#language-ecosystem) or [Package Ecosystem](#package-ecosystem).
 Usually decides who gets access to which resources.
 
 * Examples
     * (CPAN) Upload to the PAUSE web interface at `https://pause.perl.org`
     * (Debian) Upload using the `dput` tool, or manually to `sftp://ftp.eu.upload.debian.org/pub/UPLOAD` for regular packages
         * For security updates, upload a patch to the stable-proposed-updates and an accompanying explanation to the `stable-release-managers` list
+
 
 #### Packager (Language ecosystem)
 
@@ -702,7 +711,15 @@ Package Ecosystems typically have their own tooling and services that are expect
 * May be Private
 
 
-#### Patcher
+#### Gatekeeper (Package ecosystem)
+
+> [!NOTE]
+> * FIXME: Bad term! Improvements appreciated.
+
+* See [Authenticator](#authenticator)
+
+
+#### Patcher (Package ecosystem) {#patcher}
 
 > [!CAUTION]
 > * FIXME – Not done
@@ -746,7 +763,7 @@ This role is necessary when...
     * In Debian, there is a concept of "Non-Maintainer Uploads", where contributors are allowed to do one-time uploads to fix bugs under certain conditions and following some guidelines. (Source: [Debian developers reference](https://www.debian.org/doc/manuals/developers-reference/pkgs.en.html#non-maintainer-uploads-nmus), [perl5-porters message on NMUs](https://www.nntp.perl.org/group/perl.perl5.porters/2024/08/msg268757.html))
 
 
-#### Builder
+#### Builder (Package ecosystem) {#builder}
 
 > [!IMPORTANT]
 > Builders should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
@@ -757,7 +774,7 @@ This role is necessary when...
     * [Deployer](#deployer)
 
 
-#### Packager
+#### Packager (Package ecosystem) {#packager}
 
 > [!NOTE]
 > * Packagers take upstream components from an upstream source and build and install them into a custom environment for producing system packages for their native packaging ecosystem (e.g. APT).
@@ -780,7 +797,7 @@ This role is necessary when...
 | 🟥  | Dependencies (Resolved)                   | Yes      | CRA-AII(5), NTIA-SBOM              |         |         |
 
 
-#### Assembler
+#### Assembler (Package ecosystem) {#assembler}
 
 > [!NOTE]
 > * FIXME – "Assembler" probably isn't the best name for the role that creates container images. If you have suggestions for a better single-word name for this role, that isn't ambiguous or obscure, then please reach out!
@@ -793,7 +810,8 @@ This role is necessary when...
 | :-: | :---------------------- | :------: | --------------------- | :------ | :------ |
 | 🟨  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM |         |         |
 
-#### Curator
+
+#### Curator (Package ecosystem) {#curator}
 
 > [!NOTE]
 > * Curators may decide both whether and where the output of a Packager is distributed.
@@ -805,7 +823,7 @@ This role is necessary when...
 
 * Operates within a [Package Ecosystem](#package-ecosystem) or a [Language Ecosystem](#language-ecosystem).
 * Selects or pins which components are suitable for use downstream of the package ecosystem.
-* Works mainly with the [Distributor](#distributor) role.
+* Works mainly with the [Distributor](glossary.md#distributor) role (as defined in the Glossary).
 * Concerns themselves with both the stability and predictability of components, and how this is prioritized against the need for features, bug fixes and security updates.
 
 | Ops | Attribute name                 | Required | Required by           | Comment | FIXME   |
@@ -824,7 +842,7 @@ Ensures the availability of packages or containers, that they are indexed correc
 
 * See also
    * [Provider](glossary.md#provider) in the Glossary
-   * [Distributor](#distributor)
+   * [Distributor](glossary.md#distributor) in the Glossary
    * [CISA SBOM Sharing Roles and Considerations](#references) (CISA-2024)
    * [CRA Article 20](#references) (CRA-Art-20)
 

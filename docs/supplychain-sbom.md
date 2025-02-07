@@ -652,6 +652,7 @@ Typically, the Ecosystem has dedicated services and tooling for interacting with
 
 > [!NOTE]
 > * FIXME: Bad term! Improvements appreciated.
+>     * Alternatives: Commissionaire, Ostiary
 
 * See [Authenticator](#authenticator)
 

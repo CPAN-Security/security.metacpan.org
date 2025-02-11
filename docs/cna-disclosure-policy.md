@@ -1,11 +1,16 @@
+---
+layout: post
+published: True
+toc: true
+title: "CPANSec CNA Disclosure Policy"
+date: 2025-01-05 18:15:00 +0000
+tags: authors guides cpan modules security cna
+author: Timothy Legge
+excerpt: "The CPANSec CNA Disclosure Policy discusses how you should interact with Perl, CPAN Modules and the CNA to report security vulnerabilities and the rules the CNA follows with respect to disclosing security vulnerabilities and settling disputes."
+---
 # Vulnerability Disclosure Policy
 
-## Document status: ⚠️  DRAFT
-
-What you see here is a **DRAFT** for the CNA Disclosure Policy.
-Until published by a founding member, all of the points and ideas below are *suggested*, and open to revision, deletion or amending.
-
-Discussion on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
+## Document status: Published
 
 ## Perl Security
 

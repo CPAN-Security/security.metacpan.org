@@ -146,11 +146,13 @@
 .footer-col-2 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
   width:         calc(20% - (#{$spacing-unit} / 2));
+  text-align: left;
 }
 
 .footer-col-3 {
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
   width:         calc(45% - (#{$spacing-unit} / 2));
+  text-align: right;
 }
 
 @include media-query($on-laptop) {

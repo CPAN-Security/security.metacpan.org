@@ -127,4 +127,10 @@ Edit this page: {{ site.github.repository_url }}
 
 ### Debug
 
-{{ site | debug }}
+<pre>
+    site: {{ site | jsonify | escape }}
+    page: {{ page | jsonify | escape }}
+    layout: {{ layout | jsonify | escape }}
+    content: {{ content | jsonify | escape }}
+    paginator: {{ paginator | jsonify | escape }}
+</pre>

@@ -103,5 +103,15 @@ A named footnote[^foo].
 This is an HTML
 example.
 
+----
+
 *[HTML]: Hyper Text Markup Language
 *[SBOM]: Software Bill of Materials – a common machine-readable set of standards for storing and communicating metadata
+
+----
+
+## Jekyll variables
+
+{% for repository in site.github.public_repositories %}
+* [{{ repository.name }}]({{ repository.html_url }})
+{% endfor %}

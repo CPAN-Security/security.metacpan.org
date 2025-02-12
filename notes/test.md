@@ -110,8 +110,21 @@ example.
 
 ----
 
-## Jekyll variables
+## Github variables
+
+Found on https://jekyll.github.io/github-metadata/site.github/
+
+### public_repositories
 
 {% for repository in site.github.public_repositories %}
 * [{{ repository.name }}]({{ repository.html_url }})
 {% endfor %}
+
+### Edit this
+
+Edit this page: {{ site.github.repository_url }}
+
+
+### Debug
+
+{{ site | debug }}

@@ -14,3 +14,8 @@
   - m.m. forefallende arbeide
 - hva er foretukket sum, rapportering, frekvens, osv.
 - 
+
+### NLNet Foundation & Apell.info
+
+- @markov - Ask if he can help with Steward funding
+    - Ronny Lam <ronny@nlnet.nl>

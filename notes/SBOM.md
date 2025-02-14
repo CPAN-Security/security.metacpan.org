@@ -194,3 +194,33 @@ SBOM standards convergence - NOW
 ## Technical topics
 
 - Addition: How to ensure FOSS project sustainability information becomes a requirement, and is communicated throughout the supply-chain
+
+
+## Introducing SBOMs into the supply chain
+
+- Wanted: standardized locations for SBOMs (local/user/system/service path, or a URL to a TEA service)
+- Regime: SBOM fragments composition. "Let the end user assemble everything from what they are provided"
+  - Our task: Help contributors provide their metadata
+    - Help Maintainers & Manufacturers
+    - Help Language ecosystems
+    - Help Package ecosystems
+    - Help Stewards
+- Needed: new "native" fields
+  - List of new fields that are *required* to be "inlined" into existing metadata regime
+  - A standard way to specify associated "Source SBOM" files that are included in a CPAN distro provided by the Maintainer (or upstream Manufacturer)
+    - Manufacturer fields (CRA)
+    - Maintainer fields (CRA)
+  - A standard way to specify associated "Ecosystem SBOM" files that are provided by the ecosystem
+    - SBOM download location
+    - Assigned Open Source Steward (CRA)
+    - Due Diligence Attestation (CRA)
+  - A standard way to
+- Needed: ways to "complete" the CPAN corner of the dependency graph
+  - Specify out-of-ecosystem dependencies
+  - Specify "vendored" dependencies
+  - Specify service dependencies
+  - Specify requirements to help downstream packagers map these onto their own ecosystem
+- Needed: ways to help verify is an installation is complete, not tampered with, and does not contain unexpected output
+  - Introduce hashes to package manifests & lockfiles
+- Needed: 
+  - 

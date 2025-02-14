@@ -4,6 +4,8 @@ title: Open Source project life-cycle states and indicators
 description: A proposed list of states and their indicators one can find an Open Source project in
 toc: true
 mermaid: true
+draft_branch: lifecycle
+draft: true
 ---
 
 ## Document status: ⚠️  DRAFT
@@ -208,7 +210,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 1. SECURITYONLY – The project receives security fixes only
     * (number of maintainers is 1 or higher)
     * (number of maintainers increase may be desired)
-1. SUPERSEEDED – This project is considered by the Maintainer have been replaced by another project
+1. SUPERSEEDED – This project is considered by the Maintainer to have been replaced by another project
     * (number of maintainers is 0 or higher)
     * (number of maintainers does not need to change)
 1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))

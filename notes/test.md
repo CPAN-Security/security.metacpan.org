@@ -122,13 +122,13 @@ Found on https://jekyll.github.io/github-metadata/site.github/
 
 ### Edit this
 
-Edit this page: {{ site.github.repository_url }}
+[Edit this page]({{ site.github.repository_url }}/{{ page.path }})
 
 
 ### Debug
 
 <pre>
-    site: {{ site | jsonify | escape }}
+    site: {{ site.google | jsonify | escape }}
     page: {{ page | jsonify | escape }}
     layout: {{ layout | jsonify | escape }}
     content: {{ content | jsonify | escape }}

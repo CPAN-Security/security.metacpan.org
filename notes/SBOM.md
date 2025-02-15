@@ -222,5 +222,8 @@ SBOM standards convergence - NOW
   - Specify requirements to help downstream packagers map these onto their own ecosystem
 - Needed: ways to help verify is an installation is complete, not tampered with, and does not contain unexpected output
   - Introduce hashes to package manifests & lockfiles
-- Needed: 
-  - 
+- Needed: SBOM recommendations/standardization
+  - Standardized location to help with project/user/system/service level discovery of SBOMs
+  - Guidelines on how to perform SBOM fragments composition
+
+

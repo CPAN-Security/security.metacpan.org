@@ -127,7 +127,7 @@ To improve by ensuring that the metadata they need is available, updated and aut
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 OSS Project" as environment_opensource
+    state "🟥🟨🟦 OSS Project Environment" as environment_opensource
     state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
@@ -236,8 +236,8 @@ stateDiagram-v2
     class language_curator updatesSBOM
     class language_distributor distributesSBOM
 
-    %% Collaboration Ecosystem
-    state "🟩 Depositary<br>🟩 Forge" as repository_distributor
+    %% Collaboration Forge (Ecosystem)
+    state "🟩 Depositary" as repository_distributor
     state "🟨 Contributor" as external_contributor
     %%
     class repository_distributor distributesSBOM
@@ -248,7 +248,7 @@ stateDiagram-v2
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as package_packager
     %% FIXME: package_steward not useful/necessary?
-    state "🟥🟦 Open Source Software Steward 🆕" as package_steward
+    state "🟥🟨🟦 Open Source Software Steward 🆕" as package_steward
     state "🟨 Curator" as package_curator
     state "🟩 Repository" as package_distributor
     %%
@@ -258,6 +258,9 @@ stateDiagram-v2
     class package_steward createsSBOM
     class package_curator updatesSBOM
     class package_distributor distributesSBOM
+
+    %% Steward Environment
+    state "🟥🟨🟦 Open Source Software Steward 🆕" as steward_attester
 
     %% Integrator Environment
     state "🟥 Manufacturer 🆕" as integrator_owner
@@ -354,6 +357,14 @@ stateDiagram-v2
 
     %%authority_attester --> language_steward
     %%authority_attester --> package_steward
+
+    
+    state "OSS Steward Environment 🆕" as environment_steward {
+      [*] --> steward_attester
+      steward_attester --> [*]
+    }
+    environment_steward --> environment_integrator
+    ecosystem_lang --> environment_steward
 
     %%
     state "Integrator Environment" as environment_integrator {
@@ -1360,12 +1371,12 @@ Several people have been involved in the development of this document
 | Attribute name                      | Required | Obligation References                                                              | Upstream Attribute Source                                               | Comment |
 | :---------------------------------- | :------: | ---------------------------------------------------------------------------------: | :---------------------------------------------------------------------- | :------ |
 | Primary Component Name              | Yes      | NTIA-SBOM, CISA-2024-10, CRA-AV, TR-03183, PCI-SSF, METI-2023                      | 🟥&nbsp;Author, 🟨&nbsp;Packager                                        |         |
-| Unique Product Identifier           | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10, METI-2023                             | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
+| **Unique Product Identifier**       | Yes      | CRA-AII(3), CRA-AV, NTIA-SBOM, CISA-2024-10, METI-2023                             | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
 | Version                             | Yes      | CISA-2024-10, CRA-AV, TR-03183, PCI-SSF                                            | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
 | Purpose, Intended Use               | Yes      | CRA-AII(4)                                                                         | 🟥&nbsp;Maintainer                                                      |         |
 | Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, CSCRF, TR-03183, PCI-SSF, METI-2024   | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Builder  |         |
-| Security contact                    | Yes      | CRA-AII(2)                                                                         | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Builder  |         |
-| Cryptographic Hash                  | Yes      | CISA-2024-10, CSCRF                                                                | 🟥&nbsp;Maintainer, 🟨&nbsp;Builder, 🟨&nbsp;Packager                   |         |
+| **Security contact**                | Yes      | CRA-AII(2)                                                                         | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Builder  |         |
+| **Cryptographic Hash**              | Yes      | CISA-2024-10, CSCRF                                                                | 🟥&nbsp;Maintainer, 🟨&nbsp;Host, 🟨&nbsp;Builder, 🟨&nbsp;Packager     |         |
 | Copyright Notice                    | Yes      | CISA-2024-10                                                                       | 🟥&nbsp;Author                                                          |         |
 | License(s)                          | Yes      | CISA-2024-10, CSCRF                                                                | 🟥&nbsp;Author                                                          |         |
 | Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, CSCRF, PCI-SSF, METI-2023                     | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
@@ -1379,11 +1390,11 @@ Several people have been involved in the development of this document
 | Archive Property                    | Yes      | TR-03183                                                                           | 🟥&nbsp;Manufacturer                                                    | 😑      |
 | Structured Property                 | Yes      | TR-03183                                                                           | 🟥&nbsp;Manufacturer                                                    | 😑      |
 | Download location                   | No       |                                                                                    | 🟥&nbsp;Maintainer, 🟨&nbsp;Curator                                     |         |
-| Code Commit Revision                | No       |                                                                                    | 🟥&nbsp;Maintainer                                                      |         |
+| **Code Commit Revision**            | No       |                                                                                    | 🟥&nbsp;Maintainer                                                      |         |
 | Code Repository                     | No       |                                                                                    | 🟥&nbsp;Maintainer                                                      |         |
-| Intended for Commercial Use         | No       | CRA-Rec-15, CRA-Rec-19                                                             | 🟥&nbsp;Author                                                          |         |
-| Open Source Software Steward        | No       | CRA-Rec-19                                                                         | 🟥&nbsp;Author                                                          |         |
-| Security Attestation                | No       | CRA-Rec-21                                                                         | 🟥&nbsp;Open Source Software Steward                                    |         |
+| **Intended for Commercial Use**     | No       | CRA-Rec-15, CRA-Rec-19                                                             | 🟥&nbsp;Author                                                          |         |
+| **Open Source Software Steward**    | No       | CRA-Rec-19                                                                         | 🟥&nbsp;Author                                                          |         |
+| **Security Attestation**            | No       | CRA-Rec-21                                                                         | 🟥&nbsp;Open Source Software Steward                                    |         |
 | CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV                                                              | 🟥&nbsp;Manufacturer                                                    |         |
 | CE Declaration of Conformity        | No       | CRA-AII(6), CRA-AV                                                                 | 🟥&nbsp;Manufacturer                                                    |         |
 | CE Support End Date                 | No       | CRA-AII(7)                                                                         | 🟥&nbsp;Manufacturer                                                    |         |
@@ -1393,9 +1404,9 @@ Several people have been involved in the development of this document
 | SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183, METI-2023                                       |                                                                         |         |
 | SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                                                            |                                                                         |         |
 | SBOM Generation Tool                | No       |                                                                                    |                                                                         |         |
-| SBOM Location                       | Yes      | CRA-AII(9), TR-03183                                                               |                                                                         |         |
-| SBOM Primary Component              | No       | CycloneDX 1.6, SPDX 3.0                                                            |                                                                         |         |
-| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                                            |                                                                        |         |
+| **SBOM Location**                   | Yes      | CRA-AII(9), TR-03183                                                               | 🟨&nbsp;Host                                                            |         |
+| SBOM Primary Component              | No       | CycloneDX 1.6, SPDX 3.0                                                            | 🟥&nbsp;Author, 🟨&nbsp;Packager                                        |         |
+| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                                            |                                                                         |         |
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                                                            |                                                                         |         |
 | SBOM Type                           | No       | CISA-2023, CISA-2024-10                                                            |                                                                         |         |
 

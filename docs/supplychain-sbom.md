@@ -56,7 +56,7 @@ This document offers **an overview of [Open Source Software](glossary.md#open-so
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 OSS Project" as environment_opensource
+    state "🟥🟨🟦 OSS Project" as environment_project
     state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
@@ -64,12 +64,12 @@ stateDiagram-v2
     state "🟥🟨 Integrator" as environment_integrator
     state "🟦 Production" as environment_prod
 
-    [*]                      --> environment_opensource
-    ecosystem_repo           --> environment_opensource
+    [*]                      --> environment_project
+    ecosystem_repo           --> environment_project
     ecosystem_repo           --> environment_contributor
     ecosystem_repo           --> ecosystem_lang
-    environment_opensource   --> ecosystem_repo
-    environment_opensource   --> ecosystem_lang
+    environment_project      --> ecosystem_repo
+    environment_project      --> ecosystem_lang
     environment_contributor  --> ecosystem_repo
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
@@ -127,7 +127,7 @@ To improve by ensuring that the metadata they need is available, updated and aut
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 OSS Project Environment" as environment_opensource
+    state "🟥🟨🟦 OSS Project Environment" as environment_project
     state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
@@ -136,10 +136,10 @@ stateDiagram-v2
     %%state "🟩 Container Ecosystem" as ecosystem_container
     state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
     state "🆕🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
-    state "🟦 Customer<br>🆕🟦 Market Authority<br>🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
+    state "🟦 Customer<br>🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor<br>🆕🟦 Market Authority" as authority_auditor
 
-    [*]                      --> environment_opensource
-    ecosystem_repo           --> environment_opensource
+    [*]                      --> environment_project
+    ecosystem_repo           --> environment_project
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
@@ -147,8 +147,8 @@ stateDiagram-v2
     ecosystem_repo           --> environment_manufacturer
     ecosystem_repo           --> environment_contributor
     environment_contributor  --> ecosystem_repo
-    environment_opensource   --> ecosystem_lang
-    environment_opensource   --> ecosystem_repo
+    environment_project   --> ecosystem_lang
+    environment_project   --> ecosystem_repo
     %%ecosystem_package        --> ecosystem_container
     %%ecosystem_lang           --> ecosystem_container
     ecosystem_lang           --> ecosystem_steward
@@ -214,63 +214,70 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %% Open Source Project Environment
-    state "🟥 Author<br>🟥 Owner" as opensource_author
-    state "🟨 Maintainer<br>🟨 Custodian" as opensource_maintainer
-    state "🟨🟦 Packager (Maintainer)" as language_packager
+    state "🟥 Author<br>🟥 Owner" as project_author
+    state "🟥🟨 Maintainer<br>🟨 Custodian" as project_maintainer
+    state "🟨🟦 Artificer<br>🟨🟦 Packager" as project_packager
     %%
-    class opensource_author createsSBOM
-    class opensource_maintainer createsSBOM
+    class project_author createsSBOM
+    class project_maintainer createsSBOM
+    class project_packager updatesSBOM
 
     %%
     %%state "🟥 Attestation Authority 🆕" as authority_attester
 
     %% Language Ecosystem
-    state "🟦 Doorkeeper" as language_authenticator
-    state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
+    state "🟦 Doorkeeper<br>🟦 Authenticator" as language_authenticator
+    %%state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
-    state "🟩 Archive" as language_distributor
+    state "🟩 Archivist<br>🟩 Distributor" as language_distributor
     %%
-    class language_authenticator updatesSBOM
+    class language_authenticator verifiesSBOM
     class language_packager assemblesSBOM
     class language_steward createsSBOM
     class language_curator updatesSBOM
     class language_distributor distributesSBOM
 
     %% Collaboration Forge (Ecosystem)
-    state "🟩 Depositary" as repository_distributor
+    state "🟩 Depositary<br>🟩 Distributor" as repository_distributor
     state "🟨 Contributor" as external_contributor
     %%
     class repository_distributor distributesSBOM
     class external_contributor updatesSBOM
 
     %% Package Ecosystem
-    state "🟦 Gatekeeper" as package_authenticator
+    state "🟦 Gatekeeper<br>🟦 Authenticator" as package_authenticator
     state "🟨 Patcher" as package_patcher
     state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as package_packager
     %% FIXME: package_steward not useful/necessary?
-    state "🟥🟨🟦 Open Source Software Steward 🆕" as package_steward
+    state "🟥🟨🟦 OSS Steward Attester 🆕" as package_steward
     state "🟨 Curator" as package_curator
-    state "🟩 Repository" as package_distributor
+    state "🟩 Repository<br>🟩 Distributor" as package_distributor
     %%
-    class package_authenticator updatesSBOM
+    class package_authenticator verifiesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
     class package_steward createsSBOM
     class package_curator updatesSBOM
     class package_distributor distributesSBOM
 
-    %% Steward Environment
-    state "🟥🟨🟦 Open Source Software Steward 🆕" as steward_attester
+    %% OSS Steward Environment
+    state "🟥🟨🟦 OSS Steward Attester 🆕" as steward_attester
+    state "🟩 Archivist<br>🟩 Distributor" as steward_distributor
+    %%
+    class steward_attester createsSBOM
+    class steward_distributor distributesSBOM
 
     %% Integrator Environment
     state "🟥 Manufacturer 🆕" as integrator_owner
-    state "🟥🟨🟦 Integrator (Developer)" as integrator_developer
+    state "🟦 Procurer" as integrator_procurer
+    state "🟥🟨🟦 Integrator" as integrator_developer
     state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as integrator_builder
-    state "🟩🟪 SBOM Censor" as integrator_censor
-    state "🟩 Publisher" as integrator_publisher
+    state "🟩🟪 Censor" as integrator_censor
+    state "🟩 Publisher<br>🟩 Distributor" as integrator_publisher
     state "🟦 Analyst<br>🟦 Auditor" as integrator_analyst
     %%
     class integrator_owner createsSBOM
+    class integrator_procurer verifiesSBOM
     class integrator_developer assemblesSBOM
     class integrator_censor updatesSBOM
     class integrator_publisher distributesSBOM
@@ -279,44 +286,43 @@ stateDiagram-v2
 
     %% Production Environment
     state "🟨 Deployer" as prod_deployer
-    state "End-user, Consumer" as external_consumer
+    state "🟦 End-user<br>Consumer" as external_consumer
     %%
     class prod_deployer assemblesSBOM
     class external_consumer ignoresSBOM
     %%class authority_attester createsSBOM
 
     %% Market Surveillance Environment
-    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
+    state "🟦 Auditor<br>🟦 Importer 🆕<br>🟦 Distributor 🆕<br>🟦 Market Authority 🆕" as authority_auditor
     %%
     class authority_auditor verifiesSBOM
 
     %%
-    state "OSS Project Environment" as environment_opensource {
-        [*] --> opensource_author
-        [*] --> opensource_maintainer
-        opensource_author  --> opensource_maintainer
-        opensource_maintainer --> language_packager
-        opensource_maintainer --> [*]
-        language_packager --> [*]
+    state "OSS Project Environment" as environment_project {
+        [*] --> project_author
+        [*] --> project_maintainer
+        project_author  --> project_maintainer
+        project_maintainer --> project_packager
+        project_maintainer --> [*]
+        project_packager --> [*]
     }
 
-    [*] --> environment_opensource
+    [*] --> environment_project
 
     %%
     state "Language Ecosystem" as ecosystem_lang {
         [*] --> language_authenticator
         language_authenticator --> language_distributor
-        language_authenticator --> language_steward
+        %%language_authenticator --> language_steward
         language_authenticator --> language_curator
         language_curator --> language_distributor
-        language_steward --> language_distributor
-        language_steward --> language_curator
+        %%language_steward --> language_distributor
+        %%language_steward --> language_curator
         language_distributor --> [*]
     }
 
-    ecosystem_lang         --> ecosystem_lang
-    %%language_packager    --> ecosystem_lang
-    environment_opensource --> ecosystem_lang
+    %%language_packager --> ecosystem_lang
+    environment_project --> ecosystem_lang
 
     %%
     state "Collaboration Ecosystem" as ecosystem_repo {
@@ -328,8 +334,9 @@ stateDiagram-v2
 
     %%ecosystem_repo    --> maintainer_author
     %%maintainer_author --> ecosystem_repo
-    environment_opensource --> ecosystem_repo
-    ecosystem_repo         --> environment_opensource
+    environment_project --> environment_steward
+    environment_project --> ecosystem_repo
+    ecosystem_repo      --> environment_project
 
     %%external_contributor   --> repository_distributor
 
@@ -348,34 +355,45 @@ stateDiagram-v2
         package_distributor   --> [*]
     }
 
+    ecosystem_package        --> environment_integrator
     ecosystem_package        --> ecosystem_package
+
     %%repository_distributor --> ecosystem_package
     %%language_distributor   --> ecosystem_package
-    ecosystem_lang           --> ecosystem_package
+    ecosystem_lang           --> ecosystem_lang
     ecosystem_lang           --> environment_integrator
+    ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
 
     %%authority_attester --> language_steward
     %%authority_attester --> package_steward
+    %%authority_attester --> environment_steward
 
     
     state "OSS Steward Environment 🆕" as environment_steward {
       [*] --> steward_attester
+      steward_attester --> steward_distributor
+      steward_distributor --> [*]
       steward_attester --> [*]
     }
+    ecosystem_lang      --> environment_steward
     environment_steward --> environment_integrator
-    ecosystem_lang --> environment_steward
+    environment_steward --> ecosystem_package
 
     %%
     state "Integrator Environment" as environment_integrator {
-        [*] --> integrator_developer
+        [*] --> integrator_procurer
         [*] --> integrator_owner
+        [*] --> integrator_developer
+        integrator_procurer  --> integrator_developer
+        integrator_procurer  --> integrator_owner
         integrator_owner     --> integrator_developer
-        integrator_builder   --> integrator_censor
         integrator_builder   --> integrator_publisher
+        integrator_builder   --> integrator_censor
         integrator_builder   --> integrator_analyst
-        integrator_developer --> integrator_builder
         integrator_analyst   --> integrator_developer
+        integrator_censor    --> integrator_publisher
+        integrator_developer --> integrator_builder
         integrator_analyst   --> [*]
         integrator_censor    --> [*]
         integrator_publisher --> [*]
@@ -384,7 +402,6 @@ stateDiagram-v2
     %%repository_distributor --> environment_integrator
     ecosystem_repo           --> environment_integrator
     %%language_distributor   --> environment_integrator
-    ecosystem_package        --> environment_integrator
 
     %%
     state "Production Environment" as environment_prod {
@@ -402,8 +419,8 @@ stateDiagram-v2
     %%integrator_builder   --> environment_prod
     %%integrator_developer --> environment_prod
     %%integrator_publisher --> environment_prod
-    environment_integrator   --> environment_prod
     environment_integrator   --> environment_surveillance
+    environment_integrator   --> environment_prod
     environment_integrator   --> external_consumer
     environment_integrator   --> [*]
     environment_surveillance --> [*]
@@ -461,7 +478,7 @@ These are common across all roles, and considered to be _baseline_ because they 
 ```mermaid
 stateDiagram-v2
     direction TB
-    accTitle: An Idealized Open Source Supply-chain Graph
+    accTitle: An Idealized Open Source Supply-chain Graph, OSS Project perspective
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %%
@@ -474,36 +491,41 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %% OSS Project Environment
-    state "🟥 Author<br>🟥 Owner" as opensource_author
-    state "🟥🟨 Maintainer<br>🟨 Custodian" as opensource_maintainer
-    state "🟨🟦 Packager (Maintainer)" as language_packager
+    state "🟥 Author<br>🟥 Owner" as project_author
+    state "🟥🟨 Maintainer<br>🟨 Custodian" as project_maintainer
+    state "🟨🟦 Artificer<br>🟨🟦 Packager" as language_packager
     %%
-    state "OSS Project Environment" as environment_opensource {
-        [*] --> opensource_author
-        [*] --> opensource_maintainer
-        opensource_author  --> opensource_maintainer
-        opensource_maintainer --> language_packager
-        opensource_author --> language_packager
-        opensource_maintainer --> [*]
+    state "OSS Project Environment" as environment_project {
+        [*] --> project_author
+        [*] --> project_maintainer
+        project_author  --> project_maintainer
+        project_maintainer --> language_packager
+        project_author --> language_packager
+        project_maintainer --> [*]
         language_packager --> [*]
-        opensource_author --> [*]
+        project_author --> [*]
     }
     %%
-    class opensource_author createsSBOM
-    class opensource_maintainer createsSBOM
+    class project_author createsSBOM
+    class project_maintainer createsSBOM
     class ecosystem_repo distributesSBOM
     class ecosystem_lang updatesSBOM
+    class environment_steward createsSBOM
 
-    [*] --> environment_opensource
+    [*] --> environment_project
 
     %% Language Ecosystem
-    state "Language Ecosystem" as ecosystem_lang
-    environment_opensource --> ecosystem_lang
+    state "🟦🟨🟩 Language Ecosystem" as ecosystem_lang
+    environment_project --> ecosystem_lang
 
     %% Collaboration Ecosystem
-    state "Collaboration Ecosystem" as ecosystem_repo
-    environment_opensource --> ecosystem_repo
-    ecosystem_repo         --> environment_opensource
+    state "🟨🟩 Collaboration Ecosystem" as ecosystem_repo
+    environment_project --> ecosystem_repo
+    environment_project --> environment_steward
+    ecosystem_repo      --> environment_project
+
+    %% OSS Steward Environment
+    state "🟥🟨🟦 OSS Steward Environment" as environment_steward
 
     %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0
@@ -681,12 +703,6 @@ Usually decides who gets access to which resources.
     * (CPAN) Upload to the PAUSE web interface at `https://pause.perl.org`
     * (Debian) Upload using the `dput` tool, or manually to `sftp://ftp.eu.upload.debian.org/pub/UPLOAD` for regular packages
         * For security updates, upload a patch to the stable-proposed-updates and an accompanying explanation to the `stable-release-managers` list
-
-
-#### Packager (Language ecosystem)
-
-> [!CAUTION]
-> * FIXME – Not done
 
 
 #### Open Source Software Steward
@@ -931,7 +947,7 @@ stateDiagram-v2
     class integrator_analyst verifiesSBOM
 
     %%
-    state "🟦 End-user, Consumer" as external_consumer
+    state "🟦 End-user<br>Consumer" as external_consumer
     class external_consumer ignoresSBOM
 
     %% Market Authorities
@@ -1376,7 +1392,7 @@ Several people have been involved in the development of this document
 | Purpose, Intended Use               | Yes      | CRA-AII(4)                                                                         | 🟥&nbsp;Maintainer                                                      |         |
 | Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, CSCRF, TR-03183, PCI-SSF, METI-2024   | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Builder  |         |
 | **Security contact**                | Yes      | CRA-AII(2)                                                                         | 🟥&nbsp;Author, 🟨&nbsp;Maintainer, 🟨&nbsp;Custodian, 🟨&nbsp;Builder  |         |
-| **Cryptographic Hash**              | Yes      | CISA-2024-10, CSCRF                                                                | 🟥&nbsp;Maintainer, 🟨&nbsp;Host, 🟨&nbsp;Builder, 🟨&nbsp;Packager     |         |
+| **Cryptographic Hash**              | Yes      | CISA-2024-10, CSCRF                                                                | 🟥&nbsp;Maintainer, 🟨&nbsp;Curator, 🟨&nbsp;Builder, 🟨&nbsp;Packager  |         |
 | Copyright Notice                    | Yes      | CISA-2024-10                                                                       | 🟥&nbsp;Author                                                          |         |
 | License(s)                          | Yes      | CISA-2024-10, CSCRF                                                                | 🟥&nbsp;Author                                                          |         |
 | Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, CSCRF, PCI-SSF, METI-2023                     | 🟥&nbsp;Maintainer, 🟨&nbsp;Packager                                    |         |
@@ -1404,7 +1420,7 @@ Several people have been involved in the development of this document
 | SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183, METI-2023                                       |                                                                         |         |
 | SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                                                            |                                                                         |         |
 | SBOM Generation Tool                | No       |                                                                                    |                                                                         |         |
-| **SBOM Location**                   | Yes      | CRA-AII(9), TR-03183                                                               | 🟨&nbsp;Host                                                            |         |
+| **SBOM Location**                   | Yes      | CRA-AII(9), TR-03183                                                               | 🟨&nbsp;Curator                                                         |         |
 | SBOM Primary Component              | No       | CycloneDX 1.6, SPDX 3.0                                                            | 🟥&nbsp;Author, 🟨&nbsp;Packager                                        |         |
 | SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                                                            |                                                                         |         |
 | SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                                                            |                                                                         |         |

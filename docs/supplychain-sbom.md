@@ -356,11 +356,11 @@ stateDiagram-v2
     }
 
     ecosystem_package        --> environment_integrator
-    ecosystem_package        --> ecosystem_package
+    %%ecosystem_package        --> ecosystem_package
 
     %%repository_distributor --> ecosystem_package
     %%language_distributor   --> ecosystem_package
-    ecosystem_lang           --> ecosystem_lang
+    %%ecosystem_lang           --> ecosystem_lang
     ecosystem_lang           --> environment_integrator
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package

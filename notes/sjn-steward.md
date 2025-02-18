@@ -1,21 +1,38 @@
 
 ## Funding
 
-- Funding av
-  - research av org struktur, basert på krav fra OSS communities, myndigheter og marked
-  - oppsett av org struktur, vedtekter, osv. (Community-
-  - outreach og infomasjons-arbeide
-  - utvikling av businessmodell for å gjøre org'et bæredyktig
-  - samling/rekruttering av kompetente ansatte
-  - prosjektledelse
-  - koordinering med EU-kommisjonen, ENISA o.a.
-  - Aktiv deltagelse i OSS Steward ekspertgrupper & fora (f.eks. DG CONNECT Ekspertgruppe?; ORC WG; LF sine prosjekter)
-  - Nettverksbygging mellom lignende Open Source økosystemer
-  - m.m. forefallende arbeide
-- hva er foretukket sum, rapportering, frekvens, osv.
+- Funding targets
+  - Org structure research, based requirements from OSS community, authorities and market needs.
+  - Setup of Org, bylaws and guiding documents, etc.
+  - Outreach and Information work
+  - Business model development with goal of making Org economically sustainable
+  - Gathering/recruitment of competent contributors
+  - Project management
+  - Coordination and interaction with EU commission, ENISA etc.
+  - Active participation i OSS Steward expert groups & fora (e.g. DG CONNECT expert group; ORC WG; LF workstreams)
+  - Networking across similar "CPAN-Shaped" Open Source ecosystems
+  - Budgeting & planning
+  - Other business and activities
+- Required and preferred sums, reporting, meeting frequency, etc.
 - 
 
 ### NLNet Foundation & Apell.info
 
 - @markov - Ask if he can help with Steward funding
     - Ronny Lam <ronny@nlnet.nl>
+
+
+## Activities
+
+- Provide (Article 25) Security attestations for
+  - Article 13(5) Due diligence performed
+  - …
+- Offer (Article 13(6)) contribution obligation fulfillment statements.
+
+## Documentation
+
+
+- Security Assessment Practices
+- Security Hygiene Recommendations
+- Pilot projects for applying recommendations
+- 

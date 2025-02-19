@@ -52,7 +52,7 @@ In general the CPAN Security Group does not fix the issue but may be able to fac
 
 ## Published advisories and mailing list
 Security advisories are published to multiple public locations.
-Advisories are sent via email to the [perl5-porters](https://lists.perl.org/list/perl5-porters.html), [cve-announce](https://lists.security.metacpan.org/cve-announce) and [oss-security](https://oss-security.openwall.org/wiki/mailing-lists/oss-security) mailing lists.
+Advisories are sent via email to the [cve-announce](https://lists.security.metacpan.org/cve-announce) mailing list.
 Subscribe to the mailing list if you'd like to be updated on newly published security advisories.
 The mailing list has a public archive including all historical advisories sent to the list.
 

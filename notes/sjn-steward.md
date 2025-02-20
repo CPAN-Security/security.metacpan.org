@@ -64,3 +64,9 @@ OSS Steward
 ## Questionnaire
 
 - 
+
+## Preparatory tasks
+
+- Needed: Policies around existing project lifecycle events
+  - See task lists in [SBOM.md](SBOM.md).
+

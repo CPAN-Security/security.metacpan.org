@@ -20,7 +20,7 @@ title: Minutes 2025-02-19
 
 ### Attendees, absents & regrets
 *   Attendees
-    * @sjn, @leont, @thibaultduponchelle, @stigtsp
+    * @sjn, @leont, @thibaultduponchelle, @stigtsp, @timlegge
 *   Regrets
     * @tux, @robrwo
 

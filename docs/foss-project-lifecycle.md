@@ -16,8 +16,17 @@ mermaid: true
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
-This document is background material and notes for the [CycloneDX OSS Sustainability WG](https://docs.google.com/document/d/1IZnHEwzz1N7LbChVkZTE_dfo3I2np8rULssq5I2wchM/edit).
+This document is background material and notes for the [CycloneDX OSS Sustainability WG](https://cyclonedx.org/participate/working-groups/) ([Working document](https://docs.google.com/document/d/1IZnHEwzz1N7LbChVkZTE_dfo3I2np8rULssq5I2wchM/edit)).
 In this project we try to help both OSS project's Maintainers communicate their needs and requirements, as well as help the share important information that may assist their user's _business continuity challenges_.
+
+## Three sustainability perspectives
+
+There are three main perspectives to take into account when considering the sustainability of any given project.
+
+* The Project needs and plans to resolve issues, as communicated by the Project Owner (including Author, Maintainer or Custodian)
+* The Project intentions regarding support offered, as communicated by the Project Owner
+* The Project's exposure to events outside their control, where assistance is needed, as communicated by the Project owner or an Ecosystem Host
+
 
 
 ## Project Need Indicators
@@ -54,7 +63,7 @@ States in **bold** exist on CPAN.
     * (number of maintainers does not need to change)
     * See [Enumeration of NEEDSUPPORT items](#enumeration-of-needsupport-items) for examples
 
-### Enumeration of NEEDSUPPORT items
+### Enumeration of Project Support Needs
 
 When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
 
@@ -191,6 +200,14 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 | SUPERSEEDED        | no        | YES       | YES       | NONE          | Maintainer   |
 | UNMAINTAINED       | no        | YES       | YES       | NONE          | Maintainer   |
 
+### Ecosystem Support Indicators
+
+| Offers             | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| CUSTODY            | YES       | no        | no        | SECURITY      | Ecosystem    |
+| DUAL               | no        | YES       | YES       | OK            | Ecosystem    |
+| **NOXFER**         | no        | YES       | no        | NONE          | Ecosystem    |
+
 
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
     * Response time expectations should be low
@@ -221,24 +238,20 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * (number of maintainers increase may be desired)
 
 
-## Project Ecosystem States
+## Project Emergency States
 
 States in **bold** exist on CPAN.
 
 | States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
 | :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
 | COMPROMISED  | no        | YES       | YES       | NONE          | Ecosystem    |
-| CUSTODY      | YES       | no        | no        | SECURITY      | Ecosystem    |
 | SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
 | DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
-| DUAL         | no        | YES       | YES       | OK            | Ecosystem    |
-| **NOXFER**   | no        | YES       | no        | NONE          | Ecosystem    |
 | UNREACHABLE  | no        | YES       | YES       | ERROR         | Ecosystem    |
 | UNRESPONSIVE | no        | YES       | YES       | NONE          | Ecosystem    |
 
 
-
-### Project State Indicators
+### Project Emergency Indicators
 
 1. COMPROMISED – This project has a prevailing and substantial security compromise
     * Project has removed from the index due to security issues that have prevailed for a substantial time.
@@ -277,10 +290,6 @@ States in **bold** exist on CPAN.
 ## Other project states, claims and metadata
 
 1. Intended for commercial use (EU CRA signal for OSS Stewards)
-
-
-### For consideration
-
 1. CE_DECLARATION – A URL, linking to declaration of conformance to the EU Cyber Resilience Act, as required in Annex II, point 6; and Chapter III, Article 28; and in Chapter II Article 13(20).
 1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (Annex II, point 8)
 1. CE_CONFORMITY_BODY – A URL pointing to the Conformity Assessment Body where this component has been registered (CRA Article 22(4) and Article 58(1))
@@ -290,7 +299,7 @@ States in **bold** exist on CPAN.
 
 ## License and use of this document
 
-* Version: 0.2.0
+* Version: 0.3.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

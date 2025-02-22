@@ -4,6 +4,8 @@ title: Open Source project life-cycle states and indicators
 description: A proposed list of states and their indicators one can find an Open Source project in
 toc: true
 mermaid: true
+draft_branch: lifecycle
+draft: true
 ---
 
 ## Document status: ⚠️  DRAFT
@@ -225,7 +227,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 1. SECURITYONLY – The project receives security fixes only
     * (number of maintainers is 1 or higher)
     * (number of maintainers increase may be desired)
-1. SUPERSEEDED – This project is considered by the Maintainer have been replaced by another project
+1. SUPERSEEDED – This project is considered by the Maintainer to have been replaced by another project
     * (number of maintainers is 0 or higher)
     * (number of maintainers does not need to change)
 1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))
@@ -278,7 +280,7 @@ States in **bold** exist on CPAN.
     * (number of maintainers is not relevant)
 1. UNREACHABLE – The project maintainers are not reachable
     * The project maintainer(s) has not been reachable through registered communication channels for a substantial time, due to reasons outside the control of the project.
-        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other *Forces Majeures* beyond the Maintainer's control.
+        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other _Forces Majeures_ beyond the Maintainer's control.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
     * (number of maintainers is not relevant)
 1. UNRESPONSIVE – Project Maintainers are reachable but actively not engaging
@@ -320,8 +322,8 @@ Several people have been involved in the development of this document
 * (CHAOSS-2020) CHAOSS [Types of Contributions](https://chaoss.community/?p=3432), First created 2020-02-20.
 * (arXiv:2408.06723v1) [Sustaining Maintenance Labor for Healthy Open Source Software Projects through Human Infrastructure: A Maintainer Perspective](https://arxiv.org/pdf/2408.06723), Published 2024-08-13.
 * (MSFTOSS-2024) [5 things we learned from sponsoring a sampling of our open source dependencies](https://opensource.microsoft.com/blog/2024/06/27/5-things-we-learned-from-sponsoring-a-sampling-of-our-open-source-dependencies/), Published 2024-06-27.
-* (NEILB-2016) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html), Published 2016-02-13.
+* (NEILB-2016) [It takes a community to raise a CPAN module](https://neilb.org/2016/02/13/it-takes-a-community.html), Published 2016-02-13.
 * (PAUSE-2017) [The PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) Version 2 (section 4.5), published 2017-10-27.
-* (UNMAINTED-2016) ![No Maintenance Intended](http://unmaintained.tech/badge.svg) [unmaintained.tech](http://unmaintained.tech/), Published 2016-01-13.
+* (UNMAINTED-2016) ![No Maintenance Intended](https://unmaintained.tech/badge.svg) [unmaintained.tech](https://unmaintained.tech/), Published 2016-01-13.
 * (CASUAL-2023) ![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg) [casuallymaintained.tech](https://casuallymaintained.tech/), Published 2023-09-25.
 * (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=5) Open Source Software Intended for Commercial Use, dated 2024-11-20

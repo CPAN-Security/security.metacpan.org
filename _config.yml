@@ -1,6 +1,6 @@
+---
 header_title: CPANSec
 author: CPAN Security Outreach & Information Project
-#email: cpan-security@perl.org
 description: >-
   CPAN Security Group (CPANSec) 🦆
 baseurl: ""
@@ -12,6 +12,15 @@ header_pages:
   - docs/report.md
   - docs/README.md
   - presentations/README.md
+
+repository: CPAN-Security/security.metacpan.org
+github_username: CPAN-Security
+## Friendica links not supported yet in minima template, so
+## we use a mastodon icon in the meanwhile
+friendica:
+  - { username: cpan_security, instance: perl.social }
+#mastodon:
+#  - { username: cpan_security, instance: perl.social }
 
 paginate: 4
 paginate_path: "/news/all/page:num"
@@ -32,9 +41,6 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-titles-from-headings
-
-social_links:
-  - { platform: github,     user_url: "https://github.com/CPAN-Security" }
 
 # Exclude from processing.
 # The following items will not be processed, by default.

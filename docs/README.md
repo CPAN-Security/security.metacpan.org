@@ -1,26 +1,40 @@
 ---
+toc: true
 layout: page
 title: Documents & Guides
-toc: false
 permalink: /docs/
 ---
 Documents relevant to the CPAN Security Group.
 
-## Instructions and rules
+## Instructions
 
-* [Incident Reporting](report.md) instructions
-* [Pre-release Disclosure Agreement](pre-release-disclosure.md)
-* [Charter](charter.md) ⚠️  DRAFT
-* Standards of Conduct (TBD)
+* [Report an Incident](report.md)
+* [CNA Disclosure Policy](cna-disclosure-policy.md)
 
 ## Guides
 
-* [CPAN Author's guide](cpan-author-guide.md) ⚠️  DRAFT
-* [Risk assessment guide](risk-assessment-guide.md) ⚠️  DRAFT
-* [Risk mitigation guide](risk-mitigation-guide.md) ⚠️  DRAFT
+* [CPAN Author's Secure Coding Guide](guides/cpan-author-guide.md) ⚠️  DRAFT
+* [CPAN Author's Guide to Random Data for Security](guides/random-data-for-security.md)
+* [CPAN Author's Security Policy guide](guides/security-policy-for-authors.md)
 
-## Background info
+See [guides/](guides/) for the full list of guides.
 
-* Tech & legislation [Reading list](readinglist.md) ⚠️  DRAFT
-* [Glossary](glossary.md) of terms ⚠️  DRAFT
+## Studies
+
+* [CPAN Dependency Confusion study](cpan-dependency-confusion.md)
 * [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
+
+## Consultations and hearings
+
+See the [consultations/](consultations/) folder for replies to public consultations and hearings where CPANSec has contributed.
+
+## Rules and bylaws
+
+* [Charter](charter.md) ⚠️  DRAFT
+* CPANSec member [Pre-release Disclosure Agreement](pre-release-disclosure.md)
+* Standards of Conduct (TBD)
+
+## Other background info
+
+* [Reading list](readinglist.md) for relevant tech & legislation ⚠️  DRAFT
+* [Glossary](glossary.md) of terms ⚠️  DRAFT

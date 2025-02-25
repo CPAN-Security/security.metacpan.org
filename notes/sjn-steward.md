@@ -45,7 +45,7 @@ OSS Steward
   - foster development of secure Products with Digital Elements
   - foster effective handling of vulnerabilities by the developers of that product
     - taking into account the specific nature of the open-source software steward
-    - and the legal and organisational arrangements to which it is subject
+    - and the legal and organisational arrangements to which it is subject
   - foster voluntary reporting of vulnerabilities (Article 15) by the product developers
   - help document, address and remediate vulnerabilities
   - help promote the sharing of information concerning discovered vulnerabilities within OSS community

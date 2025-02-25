@@ -226,4 +226,28 @@ SBOM standards convergence - NOW
   - Standardized location to help with project/user/system/service level discovery of SBOMs
   - Guidelines on how to perform SBOM fragments composition
 
-
+- Needed: Policies around existing project lifecycle events
+  - Terms and conditions for adoption (ADOPTME) or handoff (HANDOFF)
+  - Terms and conditions for forking
+  - Terms and conditions for transfer blocking (NOXFER)
+  - Terms and conditions for dual-life publishing (DUAL)
+  - Terms and conditions for other (new) lifecycle events (e.g. the ones listed in @sjn's [Open Source project life-cycle states and indicators](https://github.com/CPAN-Security/security.metacpan.org/blob/lifecycle/docs/foss-project-lifecycle.md) exploration:
+  - Project events and states made by an Ecosystem role
+    - UNREACHABLE
+    - UNRESPONSIVE
+    - DELISTED
+    - COMPROMISED
+    - CUSTODY
+    - SUSPENDED
+  - Project events and states made by a Project Maintainer role
+    - NEEDFUNDING
+    - NEEDSUPPORT
+  - Project support claims & indicators, made by either an Ecosystem or a Project Maintainer
+    - CASUAL maintenance & support offered
+    - MAINTAINED
+    - UNMAINTAINED
+    - SECURITY_ONLY maintenance & support offered
+    - DONE
+    - DEPRECATED
+    - SUPERSEEDED
+    - FOR_COMMERCIAL_USE

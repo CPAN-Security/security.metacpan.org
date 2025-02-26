@@ -21,7 +21,6 @@ If you care and would like to make a contribution, you can…
 * Join us in our [Matrix channel](https://matrix.to/#/#cpansec-discussion:matrix.org), #cpansec-discussion on matrix.org
 * Join us in our [IRC channel](ircs://ssl.irc.perl.org:7062/#cpan-security), #cpan-security on irc.perl.org
 * Send an e-mail to the CPAN Security Group &lt;cpan-security&#64;security.metacpan.org&gt; 📧
-* Subscribe to [@cpan_security@perl.social](https://perl.social/profile/cpan_security) on the Fediverse 🐘
 
 
 ## Resources

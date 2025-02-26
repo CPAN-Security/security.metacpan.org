@@ -23,9 +23,12 @@ If you care and would like to make a contribution, you can…
 
 ## Resources
 
-* [Documents](docs/) and other relevant resources
+
+* Security and incident policies
     * **How to [Report a Security Issue](docs/report.md)**
-    * [Pre-Release Disclosure Agreement](docs/pre-release-disclosure.md)
+    * The [CPANSec CNA Disclosure Policy](docs/cna-disclosure-policy.md)
+    * The CPANSec Contributor [Pre-Release Disclosure Agreement](docs/pre-release-disclosure.md)
+* [Documents](docs/) and other relevant resources
     * [Group charter](docs/charter.md) ⚠️  DRAFT
     * Standards and regulations [reading list](docs/readinglist.md) ⚠️  DRAFT
     * [Guides](docs/guides/)

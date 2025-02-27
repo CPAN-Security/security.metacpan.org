@@ -12,9 +12,9 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {%- endif -%}
-      {% if page.author and page.date -%}
+      {%- if page.author and page.date %}
         •
-      {%- endif %}
+      {% endif -%}
       {%- if page.author -%}
         <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>

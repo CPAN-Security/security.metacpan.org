@@ -21,15 +21,17 @@ If you care and would like to make a contribution, you can…
 * Join us in our [Matrix channel](https://matrix.to/#/#cpansec-discussion:matrix.org), #cpansec-discussion on matrix.org
 * Join us in our [IRC channel](ircs://ssl.irc.perl.org:7062/#cpan-security), #cpan-security on irc.perl.org
 * Send an e-mail to the CPAN Security Group &lt;cpan-security&#64;security.metacpan.org&gt; 📧
-* Subscribe to [@cpan_security@perl.social](https://perl.social/profile/cpan_security) on the Fediverse 🐘
+* Subscribe to [@cpansec@fosstodon.org](https://fosstodon.org/@cpansec) on the Fediverse 🐘
 
 
 ## Resources
 
-* [Documents](docs/) and other relevant resources
-    * **How to [Report a Security Issue](docs/report.md)**
-    * [Pre-Release Disclosure Agreement](docs/pre-release-disclosure.md)
-    * [Group charter](docs/charter.md) ⚠️  DRAFT
+* Security and incident policies
+    * **How to [Report a Security Issue](docs/report.html)**
+    * The [CPANSec CNA Disclosure Policy](docs/cna-disclosure-policy.html)
+    * The CPANSec Contributor [Pre-Release Disclosure Agreement](docs/pre-release-disclosure.html)
+* Important [Documents](docs/) and other relevant resources
+    * [Group charter](docs/charter.html) ⚠️  DRAFT
     * Standards and regulations [reading list](docs/readinglist.md) ⚠️  DRAFT
     * [Guides](docs/guides/)
     * [Consultations](docs/consultations/)

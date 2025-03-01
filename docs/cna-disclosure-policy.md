@@ -51,12 +51,10 @@ This address is a closed membership mailing list monitored by the CPAN Security 
 In general the CPAN Security Group does not fix the issue but may be able to facilitate getting the issue resolved.
 
 ## Published advisories and mailing list
-Security advisories are published to multiple public locations.
-Advisories are sent via email to the [cve-announce](https://lists.security.metacpan.org/cve-announce) mailing list.
+Security advisories are published to our [cve-announce](https://lists.security.metacpan.org/cve-announce) mailing list.
+
 Subscribe to the mailing list if you'd like to be updated on newly published security advisories.
 The mailing list has a public archive including all historical advisories sent to the list.
-
-There is also an advisory database published to GitHub FIXME using the Open Source Vulnerability (OSV) format which can be consumed using automated tooling.
 
 ## Vulnerability credit and bounties
 Please see the [Perl Security Policy](https://perldoc.perl.org/perlsecpolicy).

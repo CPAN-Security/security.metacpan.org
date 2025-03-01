@@ -1162,7 +1162,7 @@ https://security.metacpan.org/
 
 https://github.com/CPAN-Security/
 
-mailto:cpan-security@perl.org
+mailto:cpan-security@security.metacpan.org
 
 
 Note:

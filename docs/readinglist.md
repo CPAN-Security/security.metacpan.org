@@ -294,7 +294,7 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 * (PCI-SSC) [PCI-SSF v1.2.1](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), Published May 2023
 
 
-## Information Security
+## Information Security in general
 
 * ISO 27001
     * 6.1.3
@@ -307,6 +307,10 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 * CIS Controls V8
 * ISO 27036:2023 (3rd party risk)
 
+## Other notes
+
+* EU Acts to check
+    * NIS2, DORA, DORD, CER, LES, CSA, MSS
 
 ## License and use of this document {#license}
 

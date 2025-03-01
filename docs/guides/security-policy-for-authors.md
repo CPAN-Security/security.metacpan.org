@@ -5,16 +5,6 @@ description: A guide for including a Security Policy in a CPAN distribution is t
 toc: true
 ---
 
-## Document Status: ⚠️  DRAFT
-
-> [!CAUTION]
-> What you see here is a DRAFT of the Guidelines for Adding a Security Policy to Perl Distributions, by the CPAN Security Group (CPANSec).
-> As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
->
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/guides/docs/guides/security-policy-for-authors.md](https://github.com/CPAN-Security/security.metacpan.org/tree/guides/docs/guides/security-policy-for-authors.md)
-> - Discuss on IRC: [ircs://ssl.irc.perl.org:7063/#cpan-security](ircs://ssl.irc.perl.org:7063/#cpan-security)
-> - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
-
 ## Purpose
 
 The purpose of including a Security Policy in a CPAN distribution is to advise users how to report security issues, and how these issues will be handled.
@@ -53,15 +43,15 @@ for more information.
 
 The security policy should be a text document with minimal formatting
 that can be read without a specialised reader, with the name
-`SECURITY` or `SECURITY-POLICY` and a suffix to indicate the markup
-(`.md` for markdown, `.pod` for POD or optionally `.txt`).
+`SECURITY` and a suffix to indicate the markup (`.md` for markdown,
+`.pod` for POD or optionally `.txt`).
 
 More complex markup formats like HTML are not recommended.
 
 The all caps filename is intended to indicate that this is an
-important document on par with `README`, `LICENSE` and `INSTALL`.
-This will also differentiate the file from `security.txt` which has a
-specific machine-readable format and has a different function
+important document on par with `README`, `LICENSE`, `INSTALL` and
+`CONTRIBUTING`.  This will also differentiate the file from `security.txt`
+which has a specific machine-readable format and has a different function
 [\[4\]](#references-and-notes) (Securitytxt).
 
 The file should have the following sections.
@@ -75,13 +65,16 @@ The file should have the following sections.
 4. Installation and usage issues
 5. Workflow.
 
+Sections 2 (How to report a security vulnerability) and 3 (Which
+versions of the software are supported) are the most important, and
+must be present in a security policy.
 
 ### Abstract
 
 This is a short one or two sentences that explain what this document
 is, e.g.
 
-> This is the Security Policy for the Perl Foo-Bar distribution.
+> This is the Security Policy for the CPAN distribution `Foo-Bar`.
 
 If the project has a web site, with this security policy posted on the
 website, then you should refer to that URL, e.g.:
@@ -99,7 +92,7 @@ If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
 > This text is based on the CPAN Security Group's Guidelines for Adding
-> a Security Policy to Perl Distributions (version 0.1.9)
+> a Security Policy to Perl Distributions (version 1.1.0)
 > https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 #### Links from other module documentation
@@ -112,8 +105,8 @@ policy, for example (in POD):
 =head2 Reporting Security Vulnerabilities
 
 Security issues should not be reported on the bugtracker website.
-Please see F<SECURITY-POLICY.md> for instructions how to report
-security vulnerabilities.
+Please see F<SECURITY.md> for instructions how to report security
+vulnerabilities.
 ```
 
 
@@ -131,9 +124,6 @@ For example,
 
 > Security vulnerabilities can be reported by e-mail to the current
 > project maintainer(s) at <foobar@example.com>.
->
-> Please include as many details as possible, including code
-> samples or text cases, so that we can reproduce the issue.
 
 or [\[1\]](#references-and-notes) (Github-Sec-Advisory)
 
@@ -156,11 +146,18 @@ Please ensure that the security contact information is consistent with
 distribution metadata, e.g. in the `META.json` file
 [\[3\]](#references-and-notes) (CPAN-Meta-Spec).
 
-Add note about also copying CPANSec on the notification if help is
-required triaging the issue, or if the issue is being actively
-exploited.  CPANSec provides support to reporters and maintainers in
-assessing the appropriate response, and in case the maintainer(s) are
-unreachable.  For example
+Add a reminder to include details for verifying the bug:
+
+> Please include as many details as possible, including code samples
+> or test cases, so that we can reproduce the issue.  Check that your
+> report does not expose any sensitive data, such as passwords,
+> tokens, or personal information.
+
+We recommend that you add note about also copying CPANSec on the
+notification if help is required triaging the issue, or if the issue
+is being actively exploited.  CPANSec provides support to reporters
+and maintainers in assessing the appropriate response, and in case the
+maintainer(s) are unreachable.  For example
 
 > If you would like any help with triaging the issue, or if the issue
 > is being actively exploited, please copy the report to the CPAN
@@ -179,7 +176,7 @@ vulnerabilities in public, e.g.
 
 You can also link to the CPANSec page
 
-> For more information, see Report a Security Issue
+> For more information, see _Report a Security Issue_
 > https://security.metacpan.org/docs/report.html on the CPANSec
 > website.
 
@@ -205,7 +202,7 @@ maintainer cannot promise a response time.  An alternative might be
 > The maintainer(s) aim to acknowledge your security report as soon as
 > possible.  However, this project is maintained by a single person in
 > their spare time, and they cannot guarantee a rapid response.  If you
-> have not received a response from the them within a week, then
+> have not received a response from them within a week, then
 > please send a reminder to them and copy the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
 
@@ -225,7 +222,7 @@ other people.  For example,
 >
 > They may also forward this issue to CPANSec.
 
-### What Software this Policy Applies to
+### What Software This Policy Applies To
 
 This section discusses what software this applies to, and what are
 considered security issues in the software, and what are not
@@ -251,19 +248,35 @@ considered security issues.  For example,
 There should be a section or subsection that identifies which versions
 of the software will be supported for security fixes.  For example,
 
-> The maintainer(s) will only commit to releasing security fixes for
-> the latest version of Foo-Bar.
->
+> The maintainer(s) will release security fixes for the latest version
+> of Foo-Bar.
+
+or if there are multiple versions that will be supported, that should
+be noted. For example,
+
+> For security vulnerabilities, the maintainer(s) will release fixes
+> for the last two major versions of Foo-Bar.  As of this release,
+> that is `v1.4.x` and `v1.6.x`.
+
+(Note a disadvantage of mentioning specific versions in a security
+policy is that it will need to be updated with each release.)
+
+If the maintainers only support specific Perl versions, e.g. Perl
+versions released in the last ten years, then they might want that to
+be noted in the security policy. For example,
+
 > Note that the Foo-Bar project only supports major versions of Perl
 > released in the past ten (10) years, even though Foo-Bar will run on
-> older versions of Perl.  If a security fix requires us to increase
-> the minimum version of Perl that is supported, then we may do so.
+> older versions of Perl.  If a security fix requires the maintainers
+> to increase the minimum version of Perl that is supported, then they
+> may do so.
 
-or,
+Note that if a Perl version support policy is mentioned elsewhere in
+the module documentation, then the above statement may be considered
+unnecessary.
 
-> For security vulnerabilities, the maintainer(s) will only commit to
-> supporting the last two major versions of Foo-Bar.  As of this
-> release, that is v1.4.x and v1.6x.
+If the software uses or embeds external libraries, then the supported
+versions of those libraries should also be noted.
 
 ### Installation and usage issues
 
@@ -315,7 +328,7 @@ For example, see [\[2\]](#references-and-notes) (Perl-Sec-Policy).
 
 ### Single Maintainer
 
-An example `SECURITY-POLICY.md` for a CPAN distribution with a single
+An example `SECURITY.md` for a CPAN distribution with a single
 maintainer that should cover most cases.
 
 ```markdown
@@ -325,7 +338,7 @@ The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
-a Security Policy to Perl Distributions (version 0.1.9)
+a Security Policy to Perl Distributions (version 1.1.0)
 https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 # How to Report a Security Vulnerability
@@ -334,7 +347,9 @@ Security vulnerabilities can be reported by e-mail to the current
 project maintainers at <foobar@example.com>.
 
 Please include as many details as possible, including code samples
-or test cases, so that we can reproduce the issue.
+or test cases, so that we can reproduce the issue.  Check that your
+report does not expose any sensitive data, such as passwords,
+tokens, or personal information.
 
 If you would like any help with triaging the issue, or if the issue
 is being actively exploited, please copy the report to the CPAN
@@ -357,7 +372,7 @@ on the CPANSec website.
 The maintainer(s) aim to acknowledge your security report as soon as
 possible.  However, this project is maintained by a single person in
 their spare time, and they cannot guarantee a rapid response.  If you
-have not received a response from the them within a week, then
+have not received a response from them within a week, then
 please send a reminder to them and copy the report to CPANSec at
 <cpan-security@security.metacpan.org>.
 
@@ -372,7 +387,7 @@ modules or downstream software that uses this software.
 
 They may also forward this issue to CPANSec.
 
-# Which Software this Policy Applies to
+# Which Software This Policy Applies To
 
 Any security vulnerabilities in Foo-Bar are covered by this policy.
 
@@ -391,13 +406,14 @@ Foo-Bar distribution) are not covered by this policy.
 
 ## Supported Versions of Foo-Bar
 
-The maintainer(s) will only commit to releasing security fixes for
-the latest version of Foo-Bar.
+The maintainer(s) will release security fixes for the latest version
+of Foo-Bar.
 
 Note that the Foo-Bar project only supports major versions of Perl
 released in the past ten (10) years, even though Foo-Bar will run on
-older versions of Perl.  If a security fix requires us to increase
-the minimum version of Perl that is supported, then we may do so.
+older versions of Perl.  If a security fix requires the maintainers to
+increase the minimum version of Perl that is supported, then they may
+do so.
 
 # Installation and Usage Issues
 
@@ -425,7 +441,7 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 0.1.9
+* Version: 1.1.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 
@@ -442,3 +458,6 @@ Several people have been involved in the development of this document
 * Timothy Legge
 * Stig Palmquist
 * Salve J. Nilsen
+* brian d foy
+* Leon Timmermans
+* Graham Knop

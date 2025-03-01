@@ -102,3 +102,8 @@ if you are open for taking responsibility beyond your direct dependency requirem
     * Recitals (90), (91); (⚠️  unconfirmed)
 * For internal risk assessments
     * Recital (85); (⚠️  unconfirmed)
+
+
+# Reading list
+
+* [Interoperable EU Risk Management Framework](https://www.enisa.europa.eu/publications/interoperable-eu-risk-management-framework), (published 2022-12)

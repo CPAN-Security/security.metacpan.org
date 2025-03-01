@@ -4,6 +4,8 @@ title: Open Source project life-cycle states and indicators
 description: A proposed list of states and their indicators one can find an Open Source project in
 toc: true
 mermaid: true
+draft_branch: lifecycle
+draft: true
 ---
 
 ## Document status: ⚠️  DRAFT
@@ -24,13 +26,13 @@ In this project we try to help both OSS project's Maintainers communicate their 
 
 States in **bold** exist on CPAN.
 
-| Needs        | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| **NEEDHELP** | no        | YES       | YES       | YES                  | no                 | LOW           | Maintainer   |
-| **HANDOFF**  | no        | YES       | no        | YES                  | YES                | LOW           | Maintainer   |
-| **ADOPTME**  | YES       | no        | no        | YES                  | no                 | NONE          | Ecosystem    |
-| NEEDFUNDING  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
-| NEEDSUPPORT  | no        | YES       | YES       | no                   | no                 | LOW           | Maintainer   |
+| Needs        | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| **NEEDHELP** | no        | YES       | YES       | LOW           | Maintainer   |
+| **HANDOFF**  | no        | YES       | no        | LOW           | Maintainer   |
+| **ADOPTME**  | YES       | no        | no        | NONE          | Ecosystem    |
+| NEEDFUNDING  | no        | YES       | YES       | LOW           | Maintainer   |
+| NEEDSUPPORT  | no        | YES       | YES       | LOW           | Maintainer   |
 
 
 1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))
@@ -72,14 +74,14 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * CI/CD configuration
     * Feature implementation
     * Internationalization/I18N
-    * Test writing
+    * Security hardening
 1. **Community Building and Management**
     * Culture and conduct
     * Diversity, Equity, Inclusion
     * Forum management, moderation and support
     * Governance development
     * Recruitment and on-boarding
-1. Content Creation
+1. Informational Content Creation
     * Audio or Video Editing
     * Podcast Hosting or Participation
     * **Writing Articles** / Blogging
@@ -92,7 +94,8 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Animation / motion graphics
     * Photography / videography
     * Audio design
-1. **Documentation Authorship**
+    * Apparel design (t-shirts, swag)
+1. **Documentation Writing**
     * Automation and Completeness
     * Consistency, Voice and Tone
     * Indexing, Discoverability, Keyword Analysis and SEO
@@ -100,7 +103,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Technical writing
     * User or Stakeholder Relevance
 1. **Event Organizing**
-    * Conferences, Meetups, Hackathons or other gatherings for social knowledge-sharing
+    * Conferences, Meetups, Hackathons or other gatherings for knowledge-sharing
     * Online events, webinars or classes/training
     * Program committee work
     * Social and networking events
@@ -108,6 +111,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Fund-raising
     * Grant management
 1. **Legal Counsel**
+    * Licensing and other legal advice
     * License Conflict Resolution
     * License Enforcement
     * Trademark Defense
@@ -118,6 +122,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Governance
     * Outreach and Communication
     * Security
+    * Language, technology or platform
 1. Outreach
     * Content Strategy, Planning and Auditing
     * Industry/Stakeholder/OSPO Outreach and Assistance
@@ -128,15 +133,20 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * **Social Media Management** and presence
     * **Speaking at Events** and Conference Presentations
     * **Website Development**
-1. Packaging
+1. Packaging and containerization
     * Adaptation new packaging ecosystems
     * Container assembly
     * Package maintenance
     * Release management
     * Tooling development
-1. **Quality Assurance and Testing**
-    * Test data creation
+1. **Quality Assurance and Testing writing**
+    * Error and exception testing
     * Increase code coverage
+    * Performance testing
+    * Security testing
+    * Unit and integration testing
+    * Test data creation
+    * UI/UX Testing
 1. Software and systems design review
     * Review software architectural design patterns
     * Review virtualized infrastructure design patterns
@@ -146,9 +156,6 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Data Modeling
     * Dependency Review
     * Sustainability Review
-1. **Security-Related Activities**
-    * Hardening
-    * Writing automated security tests
 1. **Teaching and Tutorial Building**
     * Course/training material development
     * E-learning module development
@@ -164,19 +171,27 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Web / Mobile design
     * Email & newsletter design
     * Accessibility audit
+1. Mental health support
+    * Mental health first-aider
+1. Commercial services
+    * Indemnification
+    * Hosting
+    * Consulting
+    * Support
+
 
 ## Project Support Indicators
 
-| Offers       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| MAINTAINED   | no        | YES       | YES       | no                   | no                 | OK            | Maintainer   |
-| CASUAL       | no        | YES       | YES       | YES                  | no                 | LOW           | Maintainer   |
-| DONE         | no        | YES       | no        | no                   | no                 | LOW           | Maintainer   |
-| LEASTEFFORT  | no        | YES       | YES       | no                   | no                 | MINIMUM       | Maintainer   |
-| DEPRECATED   | no        | YES       | no        | no                   | no                 | SECURITY      | Maintainer   |
-| SECURITYONLY | no        | YES       | YES       | YES                  | no                 | SECURITY      | Maintainer   |
-| SUPERSEEDED  | no        | YES       | YES       | no                   | no                 | NONE          | Maintainer   |
-| UNMAINTAINED | no        | YES       | YES       | YES                  | no                 | NONE          | Maintainer   |
+| Offers             | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| MAINTAINED         | no        | YES       | YES       | OK            | Maintainer   |
+| FOR_COMMECRIAL_USE | no        | YES       | YES       | OK            | Maintainer   |
+| CASUAL             | no        | YES       | YES       | LOW           | Maintainer   |
+| DONE               | no        | YES       | no        | LOW           | Maintainer   |
+| DEPRECATED         | no        | YES       | no        | NONE          | Maintainer   |
+| SECURITYONLY       | no        | YES       | YES       | SECURITY      | Maintainer   |
+| SUPERSEEDED        | no        | YES       | YES       | NONE          | Maintainer   |
+| UNMAINTAINED       | no        | YES       | YES       | NONE          | Maintainer   |
 
 
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
@@ -195,11 +210,15 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 1. SECURITYONLY – The project receives security fixes only
     * (number of maintainers is 1 or higher)
     * (number of maintainers increase may be desired)
-1. SUPERSEEDED – This project is considered by the Maintainer have been replaced by another project
+1. SUPERSEEDED – This project is considered by the Maintainer to have been replaced by another project
     * (number of maintainers is 0 or higher)
     * (number of maintainers does not need to change)
 1. UNMAINTAINED – This project is not actively maintained (Ref: [UNMAINTED-2023](#references))
     * Response time expectations should be none
+    * (number of maintainers is 1 or higher)
+    * (number of maintainers increase may be desired)
+1. FOR_COMMERCIAL_USE – This project is _intended for commercial use_ in accordance with the EU Cyber Resilience Act, Recital 19 (Ref: [CRA-Rec-19](#references))
+    * Response time expectations should be high for commercial users
     * (number of maintainers is 1 or higher)
     * (number of maintainers increase may be desired)
 
@@ -208,15 +227,16 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 
 States in **bold** exist on CPAN.
 
-| States       | Maint = 0 | Maint = 1 | Maint > 1 | Maint needs increase | Maint is declining | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :------------------- | :----------------- | :-----------: | :----------- |
-| COMPROMISED  | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
-| CUSTODY      | YES       | no        | no        | YES                  | no                 | SECURITY      | Ecosystem    |
-| DELISTED     | YES       | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
-| DUAL         | no        | YES       | YES       | no                   | no                 | OK            | Ecosystem    |
-| **NOXFER**   | no        | YES       | no        | no                   | no                 | NONE          | Ecosystem    |
-| UNREACHABLE  | no        | YES       | YES       | no                   | no                 | ERROR         | Ecosystem    |
-| UNRESPONSIVE | no        | YES       | YES       | no                   | no                 | NONE          | Ecosystem    |
+| States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| COMPROMISED  | no        | YES       | YES       | NONE          | Ecosystem    |
+| CUSTODY      | YES       | no        | no        | SECURITY      | Ecosystem    |
+| SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DUAL         | no        | YES       | YES       | OK            | Ecosystem    |
+| **NOXFER**   | no        | YES       | no        | NONE          | Ecosystem    |
+| UNREACHABLE  | no        | YES       | YES       | ERROR         | Ecosystem    |
+| UNRESPONSIVE | no        | YES       | YES       | NONE          | Ecosystem    |
 
 
 
@@ -229,9 +249,14 @@ States in **bold** exist on CPAN.
 1. CUSTODY – This project is under custodianship
     * The project is deemed as important for the ecosystem, and needs a trusted maintainer
     * (number of maintainers is 0)
-1. DELISTED
-    * The project has been removed from the ecosystem index due to extraordinary circumstances
+1. SUSPENDED
+    * The project has been made inaccessible from the ecosystem index due to breaking of terms or code of conduct.
+        * e.g.: Publishing spam, malware, copyright infringement, illegal material or other inappropriate content.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+1. DELISTED
+    * The project has been removed from the ecosystem index due to extraordinary circumstances.
+        * e.g.: hacking, sabotage, denial of service, repeated suspensions or other types of attacks against the ecosystem infrastructure.
+    * The project is expected to NOT revert to its previous state.
 1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
     * This project is maintained by the language core team itself.
     * The project is both published as part of the core language, and through the language ecosystem.
@@ -262,6 +287,7 @@ States in **bold** exist on CPAN.
 1. CE_DOCUMENTATION – A URL linking to supporting information and instructions (Annex II, point 8)
 1. CE_CONFORMITY_BODY – A URL pointing to the Conformity Assessment Body where this component has been registered (CRA Article 22(4) and Article 58(1))
 1. CE_SUPPORT_END_DATE – The date for when the support for the component expires (Annex II, point 7)
+1. Add language that underlines the "non-transactional" relationships of Open Source
 
 
 ## License and use of this document
@@ -287,7 +313,8 @@ Several people have been involved in the development of this document
 * (CHAOSS-2020) CHAOSS [Types of Contributions](https://chaoss.community/?p=3432), First created 2020-02-20.
 * (arXiv:2408.06723v1) [Sustaining Maintenance Labor for Healthy Open Source Software Projects through Human Infrastructure: A Maintainer Perspective](https://arxiv.org/pdf/2408.06723), Published 2024-08-13.
 * (MSFTOSS-2024) [5 things we learned from sponsoring a sampling of our open source dependencies](https://opensource.microsoft.com/blog/2024/06/27/5-things-we-learned-from-sponsoring-a-sampling-of-our-open-source-dependencies/), Published 2024-06-27.
-* (NEILB-2016) [It takes a community to raise a CPAN module](http://neilb.org/2016/02/13/it-takes-a-community.html), Published 2016-02-13.
+* (NEILB-2016) [It takes a community to raise a CPAN module](https://neilb.org/2016/02/13/it-takes-a-community.html), Published 2016-02-13.
 * (PAUSE-2017) [The PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) Version 2 (section 4.5), published 2017-10-27.
-* (UNMAINTED-2016) ![No Maintenance Intended](http://unmaintained.tech/badge.svg) [unmaintained.tech](http://unmaintained.tech/), Published 2016-01-13.
+* (UNMAINTED-2016) ![No Maintenance Intended](https://unmaintained.tech/badge.svg) [unmaintained.tech](https://unmaintained.tech/), Published 2016-01-13.
 * (CASUAL-2023) ![Casual Maintenance Intended](https://casuallymaintained.tech/badge.svg) [casuallymaintained.tech](https://casuallymaintained.tech/), Published 2023-09-25.
+* (CRA-Rec-19) [Cyber Resilience Act, Recital 19](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847#page=5) Open Source Software Intended for Commercial Use, dated 2024-11-20

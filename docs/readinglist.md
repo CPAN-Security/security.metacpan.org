@@ -115,6 +115,7 @@ This is not a exhaustive list!
 
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) (EO 14028, 2021-05-12)
     * Section 4: Enhancing Software Supply Chain Security
+* (USA) [Initial Rescissions of Harmful Executive Orders and Actions](https://www.whitehouse.gov/presidential-actions/2025/01/initial-rescissions-of-harmful-executive-orders-and-actions/) — EO 14028 not revoked (2025-01-20)
 
 
 ### EU and EEA – NIS2 {#nis2}

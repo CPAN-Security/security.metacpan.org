@@ -16,17 +16,17 @@
 ## CE Mark
 
 * What does The CE mark _mean_ when it applies to software?
-    * "I, the author, am conforming to EU law, including the CRA" (Assumption: YES, 85%)
+    * "I, the Manufacturer, am claiming to conform to EU product laws, including the CRA" (Assumption: YES, 90%)
     * Which EU laws is one expected to conform to, when applying a CE mark?
-        * CRA (Assumption: YES, 99%)
-        * NIS2 (Assumption: YES, 60%)
-        * Fintech-specific laws (Assumption: YES, 60%)
+        * CRA (YES, 99%)
+        * NIS2 (NO, 99%)
+        * Fintech-specific laws (NO, 99%)
         * ...
 * What does the CE mark apply to?
-    * A specific product with digital components, that is put on the EU market (Assumption: YES, 99%)
-    * An Open Source software project that is a component for (Assumption: )
-    * A specific software release (Assumption: YES)
-    * A package or other artifact that is produced from a release (Assumption: YES)
+    * A specific product with digital components, that is put on the EU market (YES, 99%)
+    * An Open Source software project that is a component used by a product (Assumption: YES, 70%)
+    * A specific software release (Assumption: YES, 90%)
+    * A package or other artifact that is produced from a release (Assumption: YES, 90%)
         * If it is built during the packaging process
         * If it the packaging does _not_ include a build step
         * If the release is modified/patched before packaging

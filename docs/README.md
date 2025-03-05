@@ -8,8 +8,8 @@ Documents relevant to the CPAN Security Group.
 
 ## Instructions
 
-* [Incident Reporting](report.md) instructions
-* [Pre-release Disclosure Agreement](pre-release-disclosure.md)
+* [Report an Incident](report.md)
+* [CNA Disclosure Policy](cna-disclosure-policy.md)
 
 ## Guides
 
@@ -26,14 +26,15 @@ See [guides/](guides/) for the full list of guides.
 
 ## Consultations and hearings
 
-See the [consultations/](consultations/) folder for CPANSec's replies to public consultations and hearings.
+See the [consultations/](consultations/) folder for replies to public consultations and hearings where CPANSec has contributed.
 
 ## Rules and bylaws
 
 * [Charter](charter.md) ⚠️  DRAFT
+* CPANSec member [Pre-release Disclosure Agreement](pre-release-disclosure.md)
 * Standards of Conduct (TBD)
 
 ## Other background info
 
-* Tech & legislation [Reading list](readinglist.md) ⚠️  DRAFT
+* [Reading list](readinglist.md) for relevant tech & legislation ⚠️  DRAFT
 * [Glossary](glossary.md) of terms ⚠️  DRAFT

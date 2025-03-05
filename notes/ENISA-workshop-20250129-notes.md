@@ -1,5 +1,5 @@
 ---
-title: Workshop: Vulnerability handling in open source software ecoystems
+title: Workshop – Vulnerability handling in open source software ecoystems
 layout: page
 toc: true
 ---

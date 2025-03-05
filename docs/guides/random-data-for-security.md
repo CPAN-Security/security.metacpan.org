@@ -35,6 +35,10 @@ Modern operating systems provide access to random data:
 These sources are easy to access from Perl using several modules.  We are listing a few here that are lightweight,
 and which (generally) have good defaults.
 
+It's also preferable to use existing and up-to-date modules than to roll your own method for reading random
+data. The benefits of reducing non-core dependencies are outweighed by potential bugs introduced by duplicating code
+that needs to be maintained separately.
+
 ### Crypt::URandom
 
 The simplest to use, is [Crypt::URandom](https://metacpan.org/pod/Crypt::URandom).  It is a lightweight module that
@@ -47,6 +51,9 @@ To obtain 256-bits (32 bytes) of data:
     use Crypt::URandom qw( urandom );
 
     my $bytes = urandom(32);
+
+Since this is a wrapper around the operating system's random data source, there is no worry about child processes
+with the same parent returning the same data (i.e., it is "fork safe").
 
 It is important to note that there is a common misconception that `/dev/urandom` is insecure. This is untrue, as
 `/dev/random` and `/dev/urandom` use the same entropy pool and PRNG internally.  In newer Linux kernels, `/dev/random` no
@@ -137,6 +144,9 @@ We can also encode the string using [MIME::Base64](https://metacpan.org/pod/MIME
 There are times where you may want a more restricted alphabet, such as base-62. There are modules that let you generate
 random strings with custom alphabets or URL-safe encodings.
 
+Note that returning a message digest of random bytes adds no security.  Likewise, mixing random data with other
+information such as a timestamp or PID is unnecessary and does not improve the security.
+
 ### Crypt::URandom::Token
 
 [Crypt::URandom::Token](https://metacpan.org/pod/Crypt::URandom::Token) will generate strings for a specific alphabet
@@ -195,7 +205,7 @@ December 2024.
 
 ## License and use of this document
 
-* Version: 0.1.3
+* Version: 0.1.4
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

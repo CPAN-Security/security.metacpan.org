@@ -1,6 +1,6 @@
 ---
-layout: post
-published: True
+layout: page
+published: true
 toc: true
 title: "CPANSec CNA Disclosure Policy"
 date: 2025-01-05 18:15:00 +0000
@@ -8,8 +8,6 @@ tags: authors guides cpan modules security cna
 author: Timothy Legge
 excerpt: "The CPANSec CNA Disclosure Policy discusses how you should interact with Perl, CPAN Modules and the CNA to report security vulnerabilities and the rules the CNA follows with respect to disclosing security vulnerabilities and settling disputes."
 ---
-# Vulnerability Disclosure Policy
-
 ## Document status: Published
 
 ## Perl Security
@@ -53,11 +51,10 @@ This address is a closed membership mailing list monitored by the CPAN Security 
 In general the CPAN Security Group does not fix the issue but may be able to facilitate getting the issue resolved.
 
 ## Published advisories and mailing list
-Security advisories are published to multiple public locations. Advisories are sent via email to the [perl5-porters](https://lists.perl.org/list/perl5-porters.html), [cve-announce](https://lists.security.metacpan.org/cve-announce) and [oss-security](https://oss-security.openwall.org/wiki/mailing-lists/oss-security) mailing lists.
+Security advisories are published to our [cve-announce](https://lists.security.metacpan.org/cve-announce) mailing list.
+
 Subscribe to the mailing list if you'd like to be updated on newly published security advisories.
 The mailing list has a public archive including all historical advisories sent to the list.
-
-There is also an advisory database published to GitHub FIXME using the Open Source Vulnerability (OSV) format which can be consumed using automated tooling.
 
 ## Vulnerability credit and bounties
 Please see the [Perl Security Policy](https://perldoc.perl.org/perlsecpolicy).

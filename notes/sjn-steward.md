@@ -38,14 +38,14 @@ OSS Steward
 > — (Article 24)
 
 - Provide (Article 25) Security attestations for
-  - Article 13(5) Due diligence performed
+  - Article 13(5) Due diligence performed by Maintainers in cooperation with the Steward and the Manufacturers
   - …
 - Offer (Article 13(6)) contribution obligation fulfillment statements.
 - Put in place and document a cybersecurity policy (Article 15)
   - foster development of secure Products with Digital Elements
   - foster effective handling of vulnerabilities by the developers of that product
     - taking into account the specific nature of the open-source software steward
-    - and the legal and organisational arrangements to which it is subject
+    - and the legal and organisational arrangements to which it is subject
   - foster voluntary reporting of vulnerabilities (Article 15) by the product developers
   - help document, address and remediate vulnerabilities
   - help promote the sharing of information concerning discovered vulnerabilities within OSS community

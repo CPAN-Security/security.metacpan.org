@@ -230,6 +230,7 @@ stateDiagram-v2
     %%state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Archivist<br>🟩 Distributor" as language_distributor
+    %% "🟩 Reservoir"
     %%
     class language_authenticator verifiesSBOM
     class language_packager assemblesSBOM
@@ -1471,4 +1472,3 @@ Several people have been involved in the development of this document
 | Executable Property                 | Bool         |                                                                       |                         |          | TR-03183 |
 | Archive Property                    | Bool         |                                                                       |                         |          | TR-03183 |
 | Structured Property                 | Bool         |                                                                       |                         |          | TR-03183 |
-

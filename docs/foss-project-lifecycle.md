@@ -281,7 +281,7 @@ States in **bold** exist on CPAN.
 1. UNREACHABLE – The project maintainers are not reachable
     * The project maintainer(s) has not been reachable through registered communication channels for a substantial time, due to reasons outside the control of the project.
         * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other _Forces Majeures_ beyond the Maintainer's control.
-    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+    * The project is expected to revert to it's previous state after the offending issues have been resolved or mitigated.
     * (number of maintainers is not relevant)
 1. UNRESPONSIVE – Project Maintainers are reachable but actively not engaging
     * The project maintainers(s) have not been responsive to ecosystem concerns for a substantial time, due to non-technical reasons.

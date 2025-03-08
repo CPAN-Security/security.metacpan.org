@@ -115,6 +115,7 @@ mermaid: true
 [Annex I, Part I]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#d1e47-68-1 'Cybersecurity requirements relating to the properties of products with digital elements'
 [Annex I, Part II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#d1e143-68-1 'Vulnerability handling requirements'
 [Annex II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[Annex V]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V 'EU Declaration of Conformity'
 [Annex VII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_VII 'Content of the Technical Documentation'
 
 [Regulation (EU) 2019/881, Article (48)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R0881#art_48 'Request for a European cybersecurity certification scheme'
@@ -123,6 +124,11 @@ mermaid: true
 
 [CC-BY-SA-4.0]:https://creativecommons.org/licenses/by-sa/4.0/deed 'Creative Commons Attrubution Sharealike 4.0 License'
 
+[CISA-2023-4]:https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom 'CISA Types of Software Bill of Materials (SBOM)'
+[CISA-2024-10]:https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf 'CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)'
+[CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs)'
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+[NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
 
 ## About this document
 
@@ -359,35 +365,43 @@ Accepting donations without the intention of making a profit should not be consi
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 Maintainer" as environment_maintainer
+    state "🟥🟨🟦 OSS Project" as environment_opensource
     state "🟨 Contributor" as environment_contributor
     state "🟩 Collaboration Ecosystem" as ecosystem_repo
     state "🟨🟩 Language Ecosystem" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem" as ecosystem_package
-    state "🟥🟩🟦 Open Source Software Steward 🆕" as ecosystem_steward
-    state "🟥🟨🟦🟪 Manufacturer 🆕" as environment_manufacturer
-    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
+    state "🟨🟩 Package Ecosystem<br>🟩 Container Ecosystem" as ecosystem_package
+    %%state "🟨🟩 Package Ecosystem" as ecosystem_package
+    %%state "🟩 Container Ecosystem" as ecosystem_container
+    state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
+    state "🆕🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
+    state "🟦 Customer<br>🆕🟦 Market Authority<br>🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
 
-    [*]                      --> environment_maintainer
-    ecosystem_repo           --> environment_maintainer
-    ecosystem_repo           --> environment_contributor
+    [*]                      --> environment_opensource
+    ecosystem_repo           --> environment_opensource
     ecosystem_lang           --> ecosystem_package
     ecosystem_repo           --> ecosystem_package
     ecosystem_repo           --> ecosystem_lang
+    %%ecosystem_repo           --> ecosystem_container
     ecosystem_repo           --> environment_manufacturer
-    environment_maintainer   --> ecosystem_repo
-    environment_maintainer   --> ecosystem_lang
+    ecosystem_repo           --> environment_contributor
     environment_contributor  --> ecosystem_repo
-    ecosystem_package        --> ecosystem_package
+    environment_opensource   --> ecosystem_lang
+    environment_opensource   --> ecosystem_repo
+    %%ecosystem_package        --> ecosystem_container
+    %%ecosystem_lang           --> ecosystem_container
     ecosystem_lang           --> ecosystem_steward
-    ecosystem_package        --> ecosystem_steward
+    ecosystem_lang           --> environment_manufacturer
     ecosystem_steward        --> environment_manufacturer
+    ecosystem_package        --> ecosystem_steward
+    %%ecosystem_container      --> ecosystem_steward
     environment_manufacturer --> authority_auditor
+    %%ecosystem_container      --> environment_manufacturer
     ecosystem_package        --> environment_manufacturer
     ecosystem_lang           --> ecosystem_lang
+    ecosystem_package        --> ecosystem_package
     authority_auditor        --> [*]
 
-    %% Copyright © 2024 Salve J. Nilsen <sjn@oslo.pm>
+    %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0
 ```
 

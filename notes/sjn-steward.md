@@ -39,7 +39,6 @@ OSS Steward
 
 - Provide (Article 25) Security attestations for
   - Article 13(5) Due diligence performed by Maintainers in cooperation with the Steward and the Manufacturers
-  - 
   - …
 - Offer (Article 13(6)) contribution obligation fulfillment statements.
 - Put in place and document a cybersecurity policy (Article 15)

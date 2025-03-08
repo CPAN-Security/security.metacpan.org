@@ -23,6 +23,7 @@ toc: true
 * (CISA-2023-12) (NSA, ODNI, CISA) [Securing the Software Supply Chain: Recommended Practices for Managing OSS and SBOMs](https://media.defense.gov/2023/Dec/11/2003355557/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN%20RECOMMENDED%20PRACTICES%20FOR%20MANAGING%20OPEN%20SOURCE%20SOFTWARE%20AND%20SOFTWARE%20BILL%20OF%20MATERIALS.PDF) (December 2023)
 * (NTIA-2021) [Survey of Existing SBOM Formats and Standards](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) (2021)
 * (CISA-2023-4) [CISA Types of Software Bill of Materials (SBOM)](https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom), published 2023-04-21
+* (CISA-2025-1) [CISA SBOM Generation Reference Implementations](https://github.com/CISA-SBOM-Community/SBOM-Generation), unpublished/ongoing
 
 
 ### SBOM use cases
@@ -115,6 +116,7 @@ This is not a exhaustive list!
 
 * (USA) [Executive Order on Improving the Nation’s Cybersecurity](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) (EO 14028, 2021-05-12)
     * Section 4: Enhancing Software Supply Chain Security
+* (USA) [Initial Rescissions of Harmful Executive Orders and Actions](https://www.whitehouse.gov/presidential-actions/2025/01/initial-rescissions-of-harmful-executive-orders-and-actions/) — EO 14028 not revoked (2025-01-20)
 
 
 ### EU and EEA – NIS2 {#nis2}
@@ -185,10 +187,10 @@ This is not a exhaustive list!
     * **Article 3**, Definitions (pages 29-31)
     * Article 9(1)(b-c), Stakeholder consultation (page 34)
 * Chapter II — Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software
-    * **Article 13**, Obligations of Manufacturers (pages 35-38)
+    * **[Article 13](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_13.tit_1)**, Obligations of Manufacturers (pages 35-38)
         * Paragraph 2, "Manufacturers shall undertake a cybersecurity risk assessment"
         * **Paragraph 5**, "Manufacturers shall exercise due diligence when integrating components" (page 35)
-        * Paragraph 6, "[…] they shall share relevant code or documentation […]" (page 36)
+        * [Paragraph 6](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.006), "[…] they shall share the relevant code or documentation with the person […] maintaining the component" (page 36)
         * Paragraph 12, "[…] manufacturers shall draw up the EU declaration of conformity in accordance with Article 28 and affix the CE marking in accordance with Article 30." (page 36-37)
     * **Article 14**, Reporting obligations of manufacturers (pages 38-40)
         * Paragraph 1, "A manufacturer shall notify any actively exploited vulnerability contained in the product […] that it becomes aware of" (page 38)
@@ -224,10 +226,12 @@ This is not a exhaustive list!
     * **Article 58**, Formal non-compliance (page 62)
 * Chapter VII — Confidentiality and Penalties (pages 64-65)
     * Article 64 — Penalties (page 64-65)
+        * **Section 4**, Supplying incorrect, incomplete or misleading information may be fined up to 5M EUR or 1% of global turnover (page 65)
         * **Section 10(b)**, Rules on administrative fines shall not apply to Open Source Software Stewards (page 65)
 * Chapter VIII — Transitional and final provisions (pages 65-67)
     * Article 71 — Entry into force and application (pages 66-67)
         * Section 2, This Regulation shall apply from 11 December 2027. However, Article 14 shall apply from 11 September 2026 and Chapter IV (Articles 35 to 51) shall apply from 11 June 2026. (page 67)
+
 
 #### CRA Annexes
 
@@ -294,7 +298,7 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 * (PCI-SSC) [PCI-SSF v1.2.1](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), Published May 2023
 
 
-## Information Security
+## Information Security in general
 
 * ISO 27001
     * 6.1.3
@@ -307,6 +311,10 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 * CIS Controls V8
 * ISO 27036:2023 (3rd party risk)
 
+## Other notes
+
+* EU Acts to check
+    * NIS2, DORA, DORD, CER, LES, CSA, MSS
 
 ## License and use of this document {#license}
 

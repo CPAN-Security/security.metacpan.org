@@ -181,7 +181,6 @@ The _CPANSec_ forum itself is moderated and for invited volunteers. To join, ple
 ### Public contact points
 
 - Chat (IRC): [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
-- Fediverse: [@cpan_security@perl.social](https://perl.social/profile/cpan_security)
 - Email: &lt;cpan-security&#64;perl.org&gt;
 
 

@@ -2,6 +2,7 @@
 toc: true
 type: page
 title: Test page
+mastodon: { username: sjn, instance: chaos.social }
 ---
 
 * https://kramdown.gettalong.org/quickref.html
@@ -103,5 +104,34 @@ A named footnote[^foo].
 This is an HTML
 example.
 
+----
+
 *[HTML]: Hyper Text Markup Language
 *[SBOM]: Software Bill of Materials – a common machine-readable set of standards for storing and communicating metadata
+
+----
+
+## Github variables
+
+Found on https://jekyll.github.io/github-metadata/site.github/
+
+### public_repositories
+
+{% for repository in site.github.public_repositories %}
+* [{{ repository.name }}]({{ repository.html_url }})
+{% endfor %}
+
+### Edit this
+
+[Edit this page]({{ site.github.repository_url }}/{{ page.path }})
+
+
+### Debug
+
+<pre>
+    site: {{ site.google | jsonify | escape }}
+    page: {{ page | jsonify | escape }}
+    layout: {{ layout | jsonify | escape }}
+    content: {{ content | jsonify | escape }}
+    paginator: {{ paginator | jsonify | escape }}
+</pre>

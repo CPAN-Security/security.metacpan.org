@@ -2,6 +2,7 @@
 toc: true
 type: page
 title: Test page
+mastodon: { username: sjn, instance: chaos.social }
 ---
 
 * https://kramdown.gettalong.org/quickref.html

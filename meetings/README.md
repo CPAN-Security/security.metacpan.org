@@ -2,13 +2,13 @@
 layout: page
 permalink: /meetings/
 toc: false
-next_meeting_time: February 19th, 2025 17:00 UTC
+next_meeting_time: March 12th, 2025 17:00 UTC
 title: CPANSec meeting details & minutes
 ---
 
 ## When is the next CPAN Security Group meeting?
 
-* **Time**: on {{ page.next_meeting_time | date_to_string: "ordinal", "US" }}, at {{ page.next_meeting_time | date: "%H:%M %Z" }}. ([Other timezones](https://www.timeanddate.com/worldclock/meetingdetails.html?{{ page.next_meeting_time | date: "year=%Y&month=%m&day=%d&hour=%H&min=%M&sec=0" }}&p1=256&p2=250&p3=233&p4=1129&p5=187); [iCal download](https://www.timeanddate.com/scripts/ics.php?type=meet&p1=256&p2=250&p3=233&p4=1129&p5=187&{{ page.next_meeting_time | date: "year=%Y&month=%m&day=%d&hour=%H&min=%M&sec=0" }}))
+* **Time**: on {{ page.next_meeting_time | date_to_string: "ordinal", "US" }}, at {{ page.next_meeting_time | date: "%H:%M %Z" }}. ([Other timezones](https://www.timeanddate.com/worldclock/meetingdetails.html?{{ page.next_meeting_time | date: "year=%Y&month=%m&day=%d&hour=%H&min=%M&sec=0" }}&p1=256&p2=250&p3=233&p4=1129&p5=187); Time & Date [iCal download](https://www.timeanddate.com/scripts/ics.php?type=meet&p1=256&p2=250&p3=233&p4=1129&p5=187&{{ page.next_meeting_time | date: "year=%Y&month=%m&day=%d&hour=%H&min=%M&sec=0" }}); [Google Calendar](https://calendar.google.com/calendar/u/0/embed?src=691584e3db7d0a877b43482fc996eaae9984cf8ba0b769d5d00d042a32f9c66e@group.calendar.google.com) w/iCal)
 * **Duration**: 1 hour (timeboxed)
     * We may start early for introductions, socializing and fixing A/V issues; and can stay longer for Q&A.
     * Please add any agenda items you wish to speak on at least a few hours in advance.
@@ -25,6 +25,7 @@ title: CPANSec meeting details & minutes
 * [2025-01-22](cpansec-minutes-2025-01-22.md)
 * [2025-02-05](cpansec-minutes-2025-02-05.md)
 * [2025-02-19](cpansec-minutes-2025-02-19.md)
+* [2024-03-12](cpansec-minutes-2025-03-12.md)
 
 ### 2024
 * [2024-01-06](cpansec-minutes-2024-01-06.md)

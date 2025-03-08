@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Roles and metadata in open source supply-chains
+mastodon: { username: sjn, instance: chaos.social }
 description: An overview of roles in a supply-chain and the metadata they care about, in light of upcoming regulatory changed introduced by the EU Cyber Resilience Act
 toc: true
 mermaid: true

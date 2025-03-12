@@ -201,6 +201,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 | SECURITYONLY       | no        | YES       | YES       | SECURITY      | Maintainer   |
 | SUPERSEEDED        | no        | YES       | YES       | NONE          | Maintainer   |
 | UNMAINTAINED       | no        | YES       | YES       | NONE          | Maintainer   |
+| ARCHIVED           | YES       | no        | no        | NONE          | Maintainer   |
 
 ### Ecosystem Support Indicators
 

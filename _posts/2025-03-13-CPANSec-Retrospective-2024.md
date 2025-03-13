@@ -130,6 +130,9 @@ This was done on a local instance that was a good opportunity to work on automat
 ## Other
 CPANSec also opened discussion (with a proposed change) to [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200)
 
+Through the year, CPANSec discussed the topic of module signatures. Reviewing the limitations "by design" of the current options and thinking about a correct way to implement that feature.
+Similarly, discussions about CPAN installer enhancements ("Do not install module version with a CVE", "Patch module on the fly at install". etc...) were discussed, but still early stage.
+
 Very end of 2024, CPANSec folks reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
 
 ## Conclusion

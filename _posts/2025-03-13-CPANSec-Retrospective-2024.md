@@ -7,19 +7,19 @@ author: Thibault Duponchelle
 excerpt: Here is the CPANSec 2024 Retrospective
 ---
 
-That was a big year for CPANSec. 
+That was a big year for CPANSec.
 
 If it gets a bit under the radar to you, please find some of the achievements listed in this retrospective!
 
 ## Common Vulnerabilities and Exposures (CVEs)
-This year was the year where CPANSec installed a new mindset for Perl 
+This year was the year where CPANSec installed a new mindset for Perl
 and their relationship towards Common Vulnerabilities and Exposures (CVEs).
 
-Until then, very few CVEs were emitted for Perl modules and tooling. 
+Until then, very few CVEs were emitted for Perl modules and tooling.
 And people and authors were a bit reluctant to deal with that process.
 
-CVE are not a sign of bad quality or maintenance of a code, 
-but a professionnal way of tagging and tracking a vulnerability, 
+CVE are not a sign of bad quality or maintenance of a code,
+but a professional way of tagging and tracking a vulnerability,
 also proving the importance of the concerned code.
 
 ### Vulnerable Spreadsheet Parsing modules
@@ -42,8 +42,8 @@ Similarly, a CVE was emitted for the [POSIX::2008](https://metacpan.org/dist/POS
 
 ## Improving CVE tooling
 Along with CVEs, tooling to monitor, fetch or test for them is very useful.
-They can be installed in workflows or tooling as a gate keeper 
-for companies to do not ship vulnerable piece of code. 
+They can be installed in workflows or tooling as a gate keeper
+for companies to do not ship vulnerable piece of code.
 
 CPANSec produced and improved a few tools to fetch or test for CVEs:
 - [CPANSEC::Admin::Command::CVEScan](https://metacpan.org/pod/CPANSEC::Admin::Command::CVEScan)
@@ -55,35 +55,35 @@ Note: Not all CVE tooling are managed by CPANSec, I'm thinking in particular [CP
 But CPANSec follow closely and contribute to them when possible.
 
 ## CPANSec as a CVE Numbering Authority (CNA)
-In 2023 and 2024, CPANSec helped with or contributed CVEs for Perl, 
-but assignation remained under control of another CVE Numbering Authority (CNA).
+In 2023 and 2024, CPANSec helped with or contributed to CVEs for CPAN,
+while assigning CVEs remained under control of another CVE Numbering Authority (CNA).
 
-CPANSec worked through the year to get more empowerment and ability to assign CVEs.
-After all, who knows better than CPANSec the impact of CVEs on Perl modules :)
+CPANSec members [TIMLEGGE](https://metacpan.org/author/TIMLEGGE) and [STIGTSP](https://metacpan.org/author/STIGTSP) worked throughout the year to give the group the ability to assign CVEs.
+After all, who knows better than CPANSec the impact of CVEs on Perl modules? :)
 
-And finally, by end of 2024, CPANSec has laid the groundwork to become a CNA.
+By end of the year, the groundwork to become a CNA was completed.
 
 This designation was officially granted in February 2025: [CPANSec is now a CVE Numbering Authority (CNA)!](https://security.metacpan.org/2025/02/25/cpansec-is-cna-for-perl-and-cpan.html)
 
 The news of CPANSec becoming CVE Numbering Authority (CNA) was saluted by big names like Greg Kroah-Hartman (GNU/Linux) and Daniel Stenberg (curl).
 
 ## Introduced a SECURITY Policy
-In parallel, CPANSec pushed for authors to publish a Security Policy. 
+In parallel, CPANSec collectively pushed for authors to publish a Security Policy.
 
-Doing so is part of Open Source good practices and security becoming more and more critical.
+Doing so is considered Open Source Good Practice, especially as security is becoming more and more critical.
 
-This effort resulted in creating a [template](https://security.metacpan.org/docs/guides/security-policy-for-authors.html#examples), providing [guidelines](https://security.metacpan.org/docs/guides/security-policy-for-authors.html) and, last but not least, communicating about the initiative (various channels).
+This effort resulted in creating a [template](https://security.metacpan.org/docs/guides/security-policy-for-authors.html#examples), providing [guidelines](https://security.metacpan.org/docs/guides/security-policy-for-authors.html) and, last but not least, communicating about the initiative in various channels.
 
 ## Study on Random Number generation for Security
 Generating random numbers can help in a wide variety of tasks.
 All of them don't have the same level of criticality.
-And in particular, random generated data used in a security context requires extra care.
+In particular, random generated data used in a security context requires extra care.
 
-CPANSec studied and reviewed for you the CPAN modules for this usage in a document [Random Data For Security Use](https://security.metacpan.org/docs/guides/random-data-for-security.html).
+CPANSec contributor [RRWO](https://metacpan.org/author/RRWO) studied and reviewed CPAN modules for this use, and shared this in [Random Data For Security Use](https://security.metacpan.org/docs/guides/random-data-for-security.html).
 
 ## Working on "TLS in core"
-A vanilla install of Perl (distribution) does not provide HTTPs capabilities, and this is annoying.
-That's an important (and difficult) topic that is addressed, across core developpers and CPANSec.
+A vanilla install of Perl (distribution) does not provide HTTPS capabilities, and this is annoying.
+That's an important (and difficult) topic that is addressed, across core developers and CPANSec.
 
 Things started to go into motion in 2024 to make it happen.
 
@@ -92,7 +92,7 @@ Things started to go into motion in 2024 to make it happen.
 The creation of the new module [Crypt::Bear](https://metacpan.org/dist/Crypt-Bear) to wrap the TLS library BearSSL.
 
 ## SBOM
-CPANSec attended a billion of meetings, cross connected with several other organization working on the topic. 
+CPANSec attended a billion of meetings, cross connected with several other organization working on the topic.
 
 One of the outcome of this huge effort is available as a document [Roles and metadata in open source supply-chains](https://security.metacpan.org/docs/supplychain-sbom.html) but it goes well beyond that.
 
@@ -111,12 +111,12 @@ CPANSec adopted security related modules:
 - [Crypt::Primes](https://metacpan.org/dist/Crypt-Primes)
 - [Crypt::Random](https://metacpan.org/dist/Crypt-Random)
 - [Module::Signature](https://metacpan.org/dist/Module-Signature)
-  
-Adopting modules is not always the only option and CPANSec also reviewed modules for unsecure algorithms
+
+Adopting modules is not always the only option and CPANSec also reviewed modules for insecure algorithms
 in order to make recommendations or push some modules to deprecation.
 
 ## Reviewing CPAN for supply chain attacks
-Through the year, CPANSec tried to come with analysis of the CPAN ecosystem 
+Through the year, CPANSec tried to come with analysis of the CPAN ecosystem
 to know exactly how much vulnerable it would be to some common supply chain attacks:
 
 - [Study CPAN Dependency Confusion](https://security.metacpan.org/docs/cpan-dependency-confusion.html)
@@ -135,12 +135,12 @@ Similarly, discussions about CPAN installer enhancements ("Do not install module
 
 Very end of 2024, CPANSec folks reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
 
-## Conclusion
-This was a big year, the group really took shape and get full speed with outstanding results.
+## Final words
+This was a big year, the group really took shape and get full speed with progress in many places.
 
-The CPANSec group has met regularly ([18 meetings!](https://security.metacpan.org/meetings/)), had fun and got outstanding results.
-This is the year where CPANSec has positioned as a recognized servant organization for securing the Perl ecosystem. 
+The CPANSec group met regularly ([18 meetings!](https://security.metacpan.org/meetings/)), had fun and got outstanding results.
+This is the year where CPANSec has positioned as a recognized servant organization for securing the Perl ecosystem.
 
 With such a lot of visible and impacting results, the year 2024 confirmed the reason of living of the group well beyond expectations.
 
-It was also a very rewarding year for all people involved! And now looking forward for a similarly successful 2025 year :)
+It was also a very rewarding year for all people involved! Looking forward to a similarly successful 2025 :)

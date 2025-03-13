@@ -19,11 +19,11 @@ Until then, very few CVEs were emitted for Perl modules and tooling.
 And people and authors were a bit reluctant to deal with that process.
 
 CVE are not a sign of bad quality or maintenance of a code, 
-but a professionnal way of tagging and tacking a vulnerability, 
+but a professionnal way of tagging and tracking a vulnerability, 
 also proving the importance of the concerned code.
 
 ### Vulnerable Spreadsheet Parsing modules
-Start of the year was marked by vulnerabilities reported for [Spreadsheet::ParseExcel](https://metacpan.org/pod/Spreadsheet::ParseExcel)
+Start of the year was marked by vulnerabilities reported for [Spreadsheet::ParseExcel](https://metacpan.org/pod/Spreadsheet::ParseExcel).
 
 - [CVE-2023-7101: Spreadsheet::ParseExcel arbitrary code execution vulnerability](https://security.metacpan.org/2024/02/10/vulnerable-spreadsheet-parsing-modules.html#cve-2023-7101-spreadsheetparseexcel-arbitrary-code-execution-vulnerability)
 - [CVE-2024-22368: Spreadsheet::ParseXLSX denial of service vulnerability](https://security.metacpan.org/2024/02/10/vulnerable-spreadsheet-parsing-modules.html#cve-2024-22368-spreadsheetparsexlsx-denial-of-service-vulnerability)

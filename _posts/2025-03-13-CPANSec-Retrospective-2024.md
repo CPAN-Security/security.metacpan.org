@@ -81,7 +81,6 @@ And in particular, random generated data used in a security context requires ext
 
 CPANSec studied and reviewed for you the CPAN modules for this usage in a document [Random Data For Security Use](https://security.metacpan.org/docs/guides/random-data-for-security.html).
 
-
 ## Working on "TLS in core"
 A vanilla install of Perl (distribution) does not provide HTTPs capabilities, and this is annoying.
 That's an important (and difficult) topic that is addressed, across core developpers and CPANSec.
@@ -112,6 +111,9 @@ CPANSec adopted security related modules:
 - [Crypt::Primes](https://metacpan.org/dist/Crypt-Primes)
 - [Crypt::Random](https://metacpan.org/dist/Crypt-Random)
 - [Module::Signature](https://metacpan.org/dist/Module-Signature)
+  
+Adopting modules is not always the only option and CPANSec also reviewed modules for unsecure algorithms
+in order to make recommendations or push some modules to deprecation.
 
 ## Reviewing CPAN for supply chain attacks
 Through the year, CPANSec tried to come with analysis of the CPAN ecosystem 

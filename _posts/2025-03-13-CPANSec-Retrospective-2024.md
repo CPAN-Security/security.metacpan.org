@@ -133,12 +133,9 @@ Very end of 2024, CPANSec folks reviewed the state of the art vulnerability of P
 ## Conclusion
 This was a big year, the group really took shape and get full speed with outstanding results.
 
-The CPANSec group has met regularly (18 meetings!), had fun and got outstanding results.
-
+The CPANSec group has met regularly ([18 meetings!](https://security.metacpan.org/meetings/)), had fun and got outstanding results.
 This is the year where CPANSec has positioned as a recognized servant organization for securing the Perl ecosystem. 
 
 With such a lot of visible and impacting results, the year 2024 confirmed the reason of living of the group well beyond expectations.
 
 It was also a very rewarding year for all people involved! And now looking forward for a similarly successful 2025 year :)
-
-

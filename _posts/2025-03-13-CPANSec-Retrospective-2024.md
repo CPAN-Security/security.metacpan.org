@@ -51,7 +51,7 @@ CPANSec produced and improved a few tools to fetch or test for CVEs:
 - [Net::CVE](https://metacpan.org/pod/Net::CVE) from [HMBRAND](https://metacpan.org/author/HMBRAND)
 - [Test::CVE](https://metacpan.org/pod/Test::CVE) from [HMBRAND](https://metacpan.org/author/HMBRAND)
 
-Note: Not all CVE tooling are managed by CPANSec, I'm thinking in particular [CPAN::Audit](https://metacpan.org/pod/CPAN::Audit) and its sidecar [CPAN::Audit::DB](https://metacpan.org/pod/CPAN::Audit::DB) (both from [BRIANDFOY](https://metacpan.org/author/BRIANDFOY)) or [NIST::NVD](https://metacpan.org/pod/NIST::NVD) (from [CJCOLLIER](https://metacpan.org/author/CJCOLLIER)).
+Note: Not all CVE tooling are managed by CPANSec, I'm thinking in particular [CPAN::Audit](https://metacpan.org/pod/CPAN::Audit) and its sidecar [CPAN::Audit::DB](https://metacpan.org/pod/CPAN::Audit::DB) (both under responsibility of [BRIANDFOY](https://metacpan.org/author/BRIANDFOY)) or [NIST::NVD](https://metacpan.org/pod/NIST::NVD) (from [CJCOLLIER](https://metacpan.org/author/CJCOLLIER)).
 But we follow closely and contribute to them when possible.
 
 ## CPANSec as a CVE Numbering Authority (CNA)

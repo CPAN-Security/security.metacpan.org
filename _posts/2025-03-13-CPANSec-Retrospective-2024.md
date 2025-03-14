@@ -15,8 +15,8 @@ If it gets a bit under the radar to you, please find some of the achievements li
 2024 was the year where, with the contribution of CPANSec, Perl communities evolved in their mindset
 and their attitudes towards Common Vulnerabilities and Exposures (CVEs).
 
-Until then, very few CVEs were emitted for Perl modules and tooling
-an people and authors were a bit reluctant to deal with those CVEs.
+Until then, our experience is that very few CVEs were emitted for Perl modules and tooling.  
+Beyond that, people and authors were a bit reluctant to deal with those CVEs.
 
 CVE are not a sign of bad quality or maintenance of a code,
 but a professional way of tagging and tracking a vulnerability,

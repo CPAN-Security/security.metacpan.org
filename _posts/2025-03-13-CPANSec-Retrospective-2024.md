@@ -96,7 +96,7 @@ Things started to go into motion in 2024 to make it happen.
 
 An outstanding contribution is the creation of the new module [Crypt::Bear](https://metacpan.org/dist/Crypt-Bear) by [LEONT](https://metacpan.org/author/LEONT) to wrap the TLS library BearSSL.
 
-## SBOM
+## Software Bill Of Materials (SBOM)
 CPANSec attended many meetings in other security-related communities, and cross-connected with several other organization working on the topic.
 
 One of the outcomes of this effort is available as in the document [Roles and metadata in open source supply-chains](https://security.metacpan.org/docs/supplychain-sbom.html), but it goes well beyond that.

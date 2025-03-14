@@ -130,6 +130,11 @@ This was done on a local instance made possible thanks to the hard work of autom
 
 Outside of pentesting, these deliveries are useful for plenty of tests (on indexing, on PAUSE functionning itself) or as a local development environment of PAUSE.
 
+## Outreach
+If CPANSpec is taking care of security aspects of CPAN and Perl, it's also promoting Perl in general, actively recruiting and preaching for open source.
+
+This is in this scope that the group had a presence in ssveral events. From [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) to [London Perl and Raku Workshop 2024](https://act.yapc.eu/lpw2024/), but also [FOSDEM 2024](https://archive.fosdem.org/2024/) and the [OpenSSF summit](https://events.linuxfoundation.org/open-source-summit-europe/).
+
 ## Other
 CPANSec also initiated a discussion (with a proposed change) to enable [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200).
 
@@ -147,3 +152,9 @@ This is the year when CPANSec got traction as a recognized supporting organizati
 With so many visible and impacting outcomes, 2024 confirmed well beyond expectations that CPANSec has a _raison d'être_.
 
 It was also a very rewarding year for all people involved! Looking forward to a similarly successful 2025 :)
+
+## Who we are?
+Who was exactly the "CPANSec group" in 2024? 
+
+In last name alphabetical order:
+Olaf Alders, José Joaquín Atria, H.Merijn Brand, Thibault Duponchelle, Alexander Hartmaier, Alexander Karelas, Peter Krawczyk, Timothy Legge, Tina Müller, Ingy döt Net, Salve J. Nilsen, Breno G. de Oliveira, Stig Palmquist, Nicolas Rochelemagne, Robert Rothenberg, Giuseppe Di Terlizzi, Leon Timmermans

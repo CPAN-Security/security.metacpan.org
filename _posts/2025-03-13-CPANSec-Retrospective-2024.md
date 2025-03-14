@@ -129,7 +129,8 @@ More attacks vectors were also looked at, like "starjacking" or the topic of "st
 CPANSec volunteers [CONTRA](https://metacpan.org/author/CONTRA) and [STIGTSP](https://metacpan.org/author/STIGTSP) reviewed and tested PAUSE with various attempts to break it with nasty modules, steal namespaces or execute remote code.
 
 This was done on a local instance made possible by the hard work of automation of [RJBS](https://metacpan.org/author/RJBS), [RSPIER](https://metacpan.org/author/RSPIER) and [WOLFSAGE](https://metacpan.org/author/WOLFSAGE) at [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) (table "PAUSE"), later improved by CPANSec volunteer [STIGTSP](https://metacpan.org/author/STIGTSP) then tweaked (fast indexing, minor fixes) and containerized by [CONTRA](https://metacpan.org/author/CONTRA). 
-Outside of pentesting, the deliveries are useful for plenty of tests (on indexing, on PAUSE functionning itself) or as a local development environment of PAUSE.
+
+Outside of pentesting, these deliveries are useful for plenty of tests (on indexing, on PAUSE functionning itself) or as a local development environment of PAUSE.
 
 ## Other
 CPANSec volunteer [STIGP](https://metacpan.org/author/STIGTSP) also opened discussion (with a proposed change) to [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200).

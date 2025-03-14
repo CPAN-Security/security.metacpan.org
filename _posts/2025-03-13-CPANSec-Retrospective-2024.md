@@ -55,8 +55,8 @@ Note: Not all CVE tooling are managed by CPANSec, I'm thinking in particular [CP
 But CPANSec follows closely and contributes to them when possible.
 
 ## CPANSec as a CVE Numbering Authority (CNA)
-In 2023 and 2024, CPANSec helped with or contributed to CVEs for CPAN,
-while assigning CVEs remained under control of another CVE Numbering Authority (CNA).
+In 2023 and 2024, if CPANSec helped with or contributed to CVEs for CPAN,
+the _assignment_ of CVEs remained under control of another CVE Numbering Authority (CNA).
 
 CPANSec members worked throughout the year to give the group the ability to assign CVEs.
 After all, who knows better than CPANSec the impact of CVEs on Perl modules? :)

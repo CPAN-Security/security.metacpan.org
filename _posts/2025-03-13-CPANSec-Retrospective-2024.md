@@ -33,7 +33,7 @@ The start of the year was marked by vulnerabilities reported for [Spreadsheet::P
 CPANSec continued with CPAN installer [cpanminus](https://github.com/miyagawa/cpanminus) (a major installer of the Perl ecosystem)
 - [CVE-2024-45321: App::cpanminus through 1.7047 downloads code using insecure HTTP](https://security.metacpan.org/2024/08/26/cpanminus-downloads-code-using-insecure-http.html#cve-2024-45321)
 
-This latest is a bit related to a fix from a CPANSec member earlier in 2023 to the CPAN installer [cpan]() (part of Perl core distribution)
+This latest is a bit related to a fix from a CPANSec member earlier in 2023 to the CPAN installer [cpan](https://metacpan.org/dist/CPAN/view/scripts/cpan) (part of Perl core distribution)
 - [CVE-2023-31484: CPAN.pm before 2.35 does not verify TLS certificates when downloading distributions over HTTPS](https://nvd.nist.gov/vuln/detail/CVE-2023-31484)
 
 ### Other

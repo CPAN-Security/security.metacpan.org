@@ -77,7 +77,7 @@ Doing so is considered Open Source Good Practice, especially as security is beco
 
 This effort resulted in creating a [template](https://security.metacpan.org/docs/guides/security-policy-for-authors.html#examples), providing [guidelines](https://security.metacpan.org/docs/guides/security-policy-for-authors.html) and, last but not least, communicating about the initiative in various channels.
 
-In order to help authors integrating a Security Policy, new tools [Software::Security::Policy](https://metacpan.org/pod/Software::Security::Policy) and [Dist::Zilla::Plugin::SecurityPolicy](https://metacpan.org/pod/Dist::Zilla::Plugin::SecurityPolicy).
+In order to help authors integrating a Security Policy, new tools [Software::Security::Policy](https://metacpan.org/pod/Software::Security::Policy) and [Dist::Zilla::Plugin::SecurityPolicy](https://metacpan.org/pod/Dist::Zilla::Plugin::SecurityPolicy) were created and published.
 
 ## Study on Random Number generation for Security
 Generating random numbers can help in a wide variety of tasks.

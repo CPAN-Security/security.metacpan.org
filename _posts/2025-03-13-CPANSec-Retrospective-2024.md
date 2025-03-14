@@ -23,14 +23,14 @@ but a professional way of tagging and tracking a vulnerability,
 also signifying the importance of the concerned code.
 
 ### Vulnerable Spreadsheet Parsing modules
-The start of the year was marked by vulnerabilities reported for [Spreadsheet::ParseExcel](https://metacpan.org/pod/Spreadsheet::ParseExcel).
+The start of the year was marked by vulnerabilities reported for [Spreadsheet::ParseExcel](https://metacpan.org/pod/Spreadsheet::ParseExcel)
 
 - [CVE-2023-7101: Spreadsheet::ParseExcel arbitrary code execution vulnerability](https://security.metacpan.org/2024/02/10/vulnerable-spreadsheet-parsing-modules.html#cve-2023-7101-spreadsheetparseexcel-arbitrary-code-execution-vulnerability)
 - [CVE-2024-22368: Spreadsheet::ParseXLSX denial of service vulnerability](https://security.metacpan.org/2024/02/10/vulnerable-spreadsheet-parsing-modules.html#cve-2024-22368-spreadsheetparsexlsx-denial-of-service-vulnerability)
 - [CVE-2024-23525: Spreadsheet::ParseXLSX XML external entity attack vulnerability](https://security.metacpan.org/2024/02/10/vulnerable-spreadsheet-parsing-modules.html#cve-2024-23525-spreadsheetparsexlsx-xml-external-entity-attack-vulnerability)
 
 ### Insecure modes of CPAN installers
-CPANSec continued with CPAN installer [cpanminus]() (a major installer of the Perl ecosystem)
+CPANSec continued with CPAN installer [cpanminus](https://github.com/miyagawa/cpanminus) (a major installer of the Perl ecosystem)
 - [CVE-2024-45321: App::cpanminus through 1.7047 downloads code using insecure HTTP](https://security.metacpan.org/2024/08/26/cpanminus-downloads-code-using-insecure-http.html#cve-2024-45321)
 
 This latest is a bit related to a fix from a CPANSec member earlier in 2023 to the CPAN installer [cpan]() (part of Perl core distribution)

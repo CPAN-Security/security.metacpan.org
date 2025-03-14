@@ -15,7 +15,7 @@ If it gets a bit under the radar to you, please find some of the achievements li
 2024 was the year where, with the contribution of CPANSec, Perl communities evolved in their mindset
 and their attitudes towards Common Vulnerabilities and Exposures (CVEs).
 
-Until then, our experience is that very few CVEs were emitted for Perl modules and tooling.  
+Until then, our experience is that very few CVEs were published for Perl modules and tooling.  
 Beyond that, people and authors were a bit reluctant to deal with those CVEs.
 
 CVE are not a sign of bad quality or maintenance of a code,
@@ -109,11 +109,9 @@ CPANSec volunteers adopted security related modules:
 - [Crypt::OpenPGP](https://metacpan.org/dist/Crypt-OpenPGP) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::OpenSSL::AES](https://metacpan.org/dist/Crypt-OpenSSL-AES) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::OpenSSL::Blowfish](https://metacpan.org/dist/Crypt-OpenSSL-Blowfish) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Crypt::OpenSSL::ConfiguredAPI](https://metacpan.org/dist/Crypt-OpenSSL-ConfiguredAPI) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::OpenSSL::PKCS10](https://metacpan.org/dist/Crypt-OpenSSL-PKCS10) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::OpenSSL::SignCSR](https://metacpan.org/dist/Crypt-OpenSSL-SignCSR) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::OpenSSL::Verify](https://metacpan.org/dist/Crypt-OpenSSL-Verify) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Crypt::OpenSSL::VerifyX509](https://metacpan.org/dist/Crypt-OpenSSL-VerifyX509) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::Primes](https://metacpan.org/dist/Crypt-Primes) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::Random](https://metacpan.org/dist/Crypt-Random) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Module::Signature](https://metacpan.org/dist/Module-Signature) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
@@ -129,9 +127,10 @@ to know exactly how much vulnerable it would be to some common supply chain atta
 - [Study CPAN StarJacking](https://security.metacpan.org/docs/cpan-starjacking.html)
 
 ## Pentesting PAUSE
-CPANSec reviewed and tested PAUSE with various attempts to break it with nasty modules, steal namespaces or execute remote code.
+CPANSec volunteers [CONTRA](https://metacpan.org/author/CONTRA) and [STIGTSP](https://metacpan.org/author/STIGTSP) reviewed and tested PAUSE with various attempts to break it with nasty modules, steal namespaces or execute remote code.
 
-This was done on a local instance that was a good opportunity to work on automating more the reproducibility and ease of setup.
+This was done on a local instance made possible by the hard work of automation of [RJBS](https://metacpan.org/author/RJBS), [RSPIER](https://metacpan.org/author/RSPIER) and [WOLFSAGE](https://metacpan.org/author/WOLFSAGE) at [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) (table "PAUSE"), later improved by CPANSec volunteer [STIGTSP](https://metacpan.org/author/STIGTSP) then tweaked (fast indexing, minor fixes) and containerized by [CONTRA](https://metacpan.org/author/CONTRA). 
+Outside of pentesting, the deliveries are useful for plenty of tests (on indexing, on PAUSE functionning itself) or as a local development environment of PAUSE.
 
 ## Other
 CPANSec also opened discussion (with a proposed change) to [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200)

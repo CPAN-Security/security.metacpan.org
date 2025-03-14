@@ -67,7 +67,7 @@ This designation was officially granted in February 2025: [CPANSec is now a CVE 
 
 The news of CPANSec becoming CVE Numbering Authority (CNA) was [saluted](https://social.kernel.org/notice/ArVdrlmn4RNfxhSJhQ) by community luminaries like Greg Kroah-Hartman (Linux kernel) and Daniel Stenberg (cURL).
 
-This was made possible thanks in particular to the hard work of [STIGP](https://metacpan.org/author/STIGTSP) and [TIMLEGGE](https://metacpan.org/author/TIMLEGGE).
+The CNA administrators are Timothy Legge, Stig Palmquist and Breno G. de Oliveira.
 
 ## Introduced a SECURITY Policy
 In parallel, CPANSec collectively pushed for authors to publish a Security Policy.

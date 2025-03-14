@@ -71,7 +71,7 @@ title: CPANSec bi-weekly minutes
 #### CycloneDX 1.7 Sustainability fields
 - @sjn - starting soon on the final stretch - project- & ecosystem-supplied status fields.
   - [x] @sjn - Support indicator discussion ongoing with the Common Lifecycle Enumeration folks
-  - [ ] @sjn - Discussion about how to communicate Ecosystem or other Force Majeures events
+  - [ ] @sjn - Discussion about how to communicate Ecosystem or other _Force Majeure_ events
 
 
 ### [Compliance, Guidance & Privacy](https://github.com/orgs/CPAN-Security/projects/9/views/2)
@@ -80,7 +80,7 @@ title: CPANSec bi-weekly minutes
 - [ ] @stigtsp - Minimal (TLDR) version of policy wanted
 - [ ] @tux - Team document template wanted; Help needed
    - [ ] @timlegge has started on something; happy to discuss with @tux; PR in the works
-- [ ] @sjn - Alternative documents needed for non-Europeans (reuested by jnap)
+- [ ] @sjn - Alternative documents needed for non-Europeans (requested by jnap)
    - @sjn can help with a CRA perspective
 
 
@@ -123,8 +123,6 @@ title: CPANSec bi-weekly minutes
     - [ ] @garu (? - please contact @sjn)
     - [ ] Others? (contact @sjn!)
 - [ ] @sjn - Explore options with Ovid's company
-- [ ] @sjn - @book needs help writing a funding request ASAP for PTS. @sjn tries to help?
-   - Help here: 
 
 #### Eclipse ORC WG
 - [ ] @sjn - Lots of progress on the [FAQ](https://github.com/orcwg/cra-hub/blob/main/faq.md) and [Inventory](https://github.com/orcwg/cra-hub/blob/main/inventory.md) docs, with lots of issues created.
@@ -138,13 +136,13 @@ title: CPANSec bi-weekly minutes
 
 #### CRA Standardization on Vulnerability handling
 - @sjn - The EU Commission has tasked CEN/CENELEC & ETSI with standardization around 41 different activities related to the Cyber Resilience Act. One of these is related to _Vulnerability handling_
-    - I think we'd do well to try to contribute to especially this process, to ensure that the coming standards and guidelines for handling vulnerabilities are well-alligned with our (Open Source Ecosystems) particular needs.
-    - [x] Volunteers needed! @sjn has too much to do, and this is imporant and may shape our workload for many years, depending on what we do (or don't do).
+    - I think we'd do well to try to contribute to especially this process, to ensure that the coming standards and guidelines for handling vulnerabilities are well-aligned with our (Open Source Ecosystems) particular needs.
+    - [x] Volunteers needed! @sjn has too much to do, and this is important and may shape our workload for many years, depending on what we do (or don't do).
        - @stigtsp can join for a meeting, and take it from there
     - [ ] @all - Watch the [CEN/CENELEC introduction webinar on this matter](https://www.youtube.com/watch?v=KVr9zSZ0nUU) (Duration: 1h 20min; [Slides etc.](https://www.cencenelec.eu/news-and-events/events/2025/2025-03-10_webinar_cyber-resilience-act/))
 
 #### PTS Funding
-- @sjn - BooK has asked for help raiding funds.
+- @sjn - BooK has asked for help raising funds.
    - [x] @sjn - Pad for ongoing work: https://cryptpad.fr/pad/#/3/pad/edit/a8adbd63e478caf94037ffcd162c9612/
    - [ ] Volunteers needed
 
@@ -188,8 +186,8 @@ title: CPANSec bi-weekly minutes
     - @sjn participates
 - [ ] (Germany) [PTS 2025](https://perltoolchainsummit.org/pts2025/) - Thursday 2025-05-01 … Sunday 2025-05-04 in Leipzig, Germany
     - @tux, @stigtsp, @leont, @garu ?, @sjn,  @thibaultduponcelle, @timlegge are going
-- [ ] (Germany) [GPW 2025](https://act.yapc.eu/gpw2025/) - Monday 2025-05-12 … Wednesday 2025-05-14 in Munich, Germany. ([CfP is open](https://act.yapc.eu/gpw2025/cfp.html))
-    - @sjn is going
+- [ ] (Germany) [German Perl Workshop 2025](https://act.yapc.eu/gpw2025/) - Monday 2025-05-12 … Wednesday 2025-05-14 in Munich, Germany. ([CfP is open](https://act.yapc.eu/gpw2025/cfp.html))
+    - @sjn is going, submitted a talk
 - [ ] (Norway) [Internet Governance Forum 2025](https://www.intgovforum.org/) - Monday 2025-06-23 … Saturday 2025-06-28 in Lillestrøm, Norway; ([Call for Sessions](https://www.intgovforum.org/en/content/igf-2025-call-for-session-proposals))
     - @sjn may be going (TBD)
 - [ ] (USA) [TPRC 2025](https://www.perl.com/article/get-ready-for-the-2025-perl-and-raku-conference/) - Friday 2025-06-27 … Sunday 2025-06-29 in Greenville, SC, USA ([CfP is open](https://www.papercall.io/tprcgsp2025); Deadline: 2025-03-15)
@@ -206,8 +204,8 @@ title: CPANSec bi-weekly minutes
 - @sjn - investigates alternatives
    - [x] @sjn - Cryptpad investigated, and not usable for calendar stuff. [New calendar URL set up directly in google calendar](https://calendar.google.com/calendar/u/0/embed?src=691584e3db7d0a877b43482fc996eaae9984cf8ba0b769d5d00d042a32f9c66e@group.calendar.google.com) by @sjn, and added to the meetings page.
    - [x] @sjn - New Mastodon account created on https://fosstodon.org/@cpansec - please subscribe!
-- [x] @sjn - Create a list of common/shared CPANSec resources & contact points/people to a private repo on GH.
-   - @sjn - Done; Please check it out (look for it on gh), and help keep it correct and up-to-date!
+- [x] @sjn - Create a list of common/shared CPANSec resources & contact points/people to a private repo on Github.
+   - @sjn - Done; Please check it out (look for it on Github), and help keep it correct and up-to-date!
 
 
 ## Next meeting date, time and location

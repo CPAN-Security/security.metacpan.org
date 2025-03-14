@@ -147,7 +147,25 @@ At the very end of 2024, CPANSec reviewed the state of the art vulnerability of 
 Who was exactly the "CPANSec group" in 2024? 
 
 In last name alphabetical order:
-Olaf Alders, José Joaquín Atria, H.Merijn Brand, Thibault Duponchelle, Alexander Hartmaier, Alexander Karelas, Peter Krawczyk, Timothy Legge, Tina Müller, Ingy döt Net, Salve J. Nilsen, Breno G. de Oliveira, Stig Palmquist, Nicolas Rochelemagne, Robert Rothenberg, Giuseppe Di Terlizzi, Leon Timmermans
+```
+Olaf Alders
+José Joaquín Atria
+H.Merijn Brand
+Thibault Duponchelle
+Alexander Hartmaier
+Alexander Karelas
+Peter Krawczyk
+Timothy Legge
+Tina Müller
+Ingy döt Net
+Salve J. Nilsen
+Breno G. de Oliveira
+Stig Palmquist
+Nicolas Rochelemagne
+Robert Rothenberg
+Giuseppe Di Terlizzi
+Leon Timmermans
+```
 
 ## Final words
 This was a big year; The group really took shape and get full speed with progress in many places.

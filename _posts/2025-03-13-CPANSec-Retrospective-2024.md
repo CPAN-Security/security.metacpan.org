@@ -18,7 +18,7 @@ and their attitudes towards Common Vulnerabilities and Exposures (CVEs).
 Until then, our experience is that very few CVEs were published for Perl modules and tooling.  
 Beyond that, people and authors were a bit reluctant to deal with those CVEs.
 
-CVE are not a sign of bad quality or maintenance of a code,
+CVEs are not a sign of bad quality or maintenance of a code,
 but a professional way of tagging and tracking a vulnerability,
 also signifying the importance of the concerned code.
 

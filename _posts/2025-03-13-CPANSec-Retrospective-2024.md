@@ -23,8 +23,7 @@ but a professional way of tagging and tracking a vulnerability,
 also indicating the importance of the concerned code.
 
 ### Vulnerable Spreadsheet Parsing modules
-The start of the year was marked by vulnerabilities reported for [Spreadsheet::ParseExcel](https://metacpan.org/pod/Spreadsheet::ParseExcel)
-
+The start of the year was marked by vulnerabilities reported for [Spreadsheet::ParseExcel](https://metacpan.org/pod/Spreadsheet::ParseExcel):
 - [CVE-2023-7101: Spreadsheet::ParseExcel arbitrary code execution vulnerability](https://security.metacpan.org/2024/02/10/vulnerable-spreadsheet-parsing-modules.html#cve-2023-7101-spreadsheetparseexcel-arbitrary-code-execution-vulnerability)
 - [CVE-2024-22368: Spreadsheet::ParseXLSX denial of service vulnerability](https://security.metacpan.org/2024/02/10/vulnerable-spreadsheet-parsing-modules.html#cve-2024-22368-spreadsheetparsexlsx-denial-of-service-vulnerability)
 - [CVE-2024-23525: Spreadsheet::ParseXLSX XML external entity attack vulnerability](https://security.metacpan.org/2024/02/10/vulnerable-spreadsheet-parsing-modules.html#cve-2024-23525-spreadsheetparsexlsx-xml-external-entity-attack-vulnerability)

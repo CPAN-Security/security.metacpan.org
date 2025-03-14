@@ -113,6 +113,7 @@ CPANSec volunteers adopted security related modules:
 - [Crypt::Primes](https://metacpan.org/dist/Crypt-Primes) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::Random](https://metacpan.org/dist/Crypt-Random) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Module::Signature](https://metacpan.org/dist/Module-Signature) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Net::OAuth](https://metacpan.org/pod/Net::OAuth) adopted by [RRWO](https://metacpan.org/author/RRWO)
 
 Adopting modules is not always the only option and CPANSec also reviewed modules for insecure algorithms
 in order to make recommendations or push some modules to deprecation.

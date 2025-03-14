@@ -66,7 +66,7 @@ By end of the year, the groundwork to become a CNA was completed.
 
 This designation was officially granted in February 2025: [CPANSec is now a CVE Numbering Authority (CNA)!](https://security.metacpan.org/2025/02/25/cpansec-is-cna-for-perl-and-cpan.html)
 
-The news of CPANSec becoming CVE Numbering Authority (CNA) was [saluted](https://social.kernel.org/notice/ArVdrlmn4RNfxhSJhQ) by community luminaries like **Greg Kroah-Hartman** (Linux kernel) and **Daniel Stenberg** (cURL).
+The news of CPANSec becoming CVE Numbering Authority (CNA) was [saluted](https://social.kernel.org/notice/ArVdrlmn4RNfxhSJhQ) by community luminaries like Greg Kroah-Hartman (Linux kernel) and Daniel Stenberg (cURL).
 
 This was made possible thanks in particular to the hard work of [STIGP](https://metacpan.org/author/STIGTSP) and [TIMLEGGE](https://metacpan.org/author/TIMLEGGE).
 

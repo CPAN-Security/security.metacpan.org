@@ -91,7 +91,7 @@ That's an important (and difficult) topic that is addressed, across core develop
 
 Things started to go into motion in 2024 to make it happen.
 
-[Discussions](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269050.html), with the Perl Steering Council or core contributor. A [plan](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269202.html) was built, with some preliminary work happening.
+[Discussions](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269050.html), with the Perl Steering Council and core contributors. A [plan](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269202.html) was built, with some preliminary work happening.
 
 An outstanding contribution is the creation of the new module [Crypt::Bear](https://metacpan.org/dist/Crypt-Bear) by [LEONT](https://metacpan.org/author/LEONT) to wrap the TLS library BearSSL.
 

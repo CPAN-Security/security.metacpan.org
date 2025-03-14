@@ -97,9 +97,9 @@ Things started to go into motion in 2024 to make it happen.
 An outstanding contribution is the creation of the new module [Crypt::Bear](https://metacpan.org/dist/Crypt-Bear) by [LEONT](https://metacpan.org/author/LEONT) to wrap the TLS library BearSSL.
 
 ## SBOM
-CPANSec attended a billion of meetings, cross connected with several other organization working on the topic.
+CPANSec attended many meetings in other security-related communities, and cross-connected with several other organization working on the topic.
 
-One of the outcome of this huge effort is available as a document [Roles and metadata in open source supply-chains](https://security.metacpan.org/docs/supplychain-sbom.html) but it goes well beyond that.
+One of the outcomes of this effort is available as in the document [Roles and metadata in open source supply-chains](https://security.metacpan.org/docs/supplychain-sbom.html), but it goes well beyond that.
 
 ## Adopting security related modules
 CPANSec volunteers adopted security related modules:
@@ -114,16 +114,14 @@ CPANSec volunteers adopted security related modules:
 - [Module::Signature](https://metacpan.org/dist/Module-Signature)
 - [Net::OAuth](https://metacpan.org/pod/Net::OAuth)
 
-Adopting modules is not always the only option and CPANSec also reviewed modules for insecure algorithms
-in order to make recommendations or push some modules to deprecation.
+Adopting modules is not always the only option, and CPANSec also reviewed modules for insecure algorithms in order to offer recommendations or propose deprecation.
 
 ## Reviewing CPAN for supply chain attacks
-Through the year, CPANSec tried to come with analysis of the CPAN ecosystem
-to know exactly how much vulnerable it would be to some common supply chain attacks:
+Through the year, CPANSec volunteers preformed an analysis of the CPAN ecosystem to know exactly how much vulnerable it would be to some common supply chain attacks:
 
 - [Study CPAN Dependency Confusion](https://security.metacpan.org/docs/cpan-dependency-confusion.html)
 
-More attacks vectors were also looked at, like "starjacking" or the topic of "stealing namespaces". 
+More attacks vectors were also looked at, including _starjacking_ and the topic of _stealing namespaces_.
 
 ## Pentesting PAUSE
 CPANSec volunteers reviewed and tested PAUSE with various attempts to break it with nasty modules, steal namespaces or execute remote code.
@@ -133,19 +131,19 @@ This was done on a local instance made possible thanks to the hard work of autom
 Outside of pentesting, these deliveries are useful for plenty of tests (on indexing, on PAUSE functionning itself) or as a local development environment of PAUSE.
 
 ## Other
-CPANSec volunteer also opened discussion (with a proposed change) to [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200).
+CPANSec also initiated a discussion (with a proposed change) to enable [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200).
 
-Through the year, CPANSec discussed the topic of module signatures. Reviewing the limitations "by design" of the current options and thinking about a correct way to implement that feature.
-Similarly, discussions about CPAN installer enhancements ("Do not install module version with a CVE", "Patch module on the fly at install". etc...) were discussed, but still early stage.
+CPANSec had a recurring discussion on the topic of module signatures. Reviewing the limitations "by design" of the current options, and thinking about a correct way to implement that feature.
+Similarly, discussions about CPAN installer enhancements ("Do not install module version with a CVE", "Patch module on the fly at install". etc...) were had, but only at an early stage.
 
-Very end of 2024, CPANSec reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
+At the very end of 2024, CPANSec reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
 
 ## Final words
-This was a big year, the group really took shape and get full speed with progress in many places.
+This was a big year; The group really took shape and get full speed with progress in many places.
 
-The CPANSec group met regularly ([18 meetings!](https://security.metacpan.org/meetings/)), had fun and got outstanding results.
-This is the year where CPANSec has positioned as a recognized servant organization for securing the Perl ecosystem.
+The group met regularly ([18 meetings!](https://security.metacpan.org/meetings/)), had fun and got outstanding results.
+This is the year when CPANSec got traction as a recognized supporting organization for securing the Perl/CPAN ecosystem.
 
-With such a lot of visible and impacting results, the year 2024 confirmed the reason of living of the group well beyond expectations.
+With so many visible and impacting outcomes, 2024 confirmed well beyond expectations that CPANSec has a _raison d'être_.
 
 It was also a very rewarding year for all people involved! Looking forward to a similarly successful 2025 :)

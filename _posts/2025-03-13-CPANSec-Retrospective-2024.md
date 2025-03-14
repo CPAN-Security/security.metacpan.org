@@ -20,7 +20,7 @@ Beyond that, people and authors were a bit reluctant to deal with those CVEs.
 
 CVEs are not a sign of bad quality or maintenance of a code,
 but a professional way of tagging and tracking a vulnerability,
-also signifying the importance of the concerned code.
+also indicating the importance of the concerned code.
 
 ### Vulnerable Spreadsheet Parsing modules
 The start of the year was marked by vulnerabilities reported for [Spreadsheet::ParseExcel](https://metacpan.org/pod/Spreadsheet::ParseExcel)

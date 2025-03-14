@@ -46,13 +46,13 @@ They can be installed in workflows or tooling as a gate keeper
 for companies to do not ship vulnerable piece of code.
 
 CPANSec produced and improved a few tools to fetch or test for CVEs:
-- [CPANSEC::Admin::Command::CVEScan](https://metacpan.org/pod/CPANSEC::Admin::Command::CVEScan)
-- [Net::NVD](https://metacpan.org/pod/Net::NVD)
-- [Net::CVE](https://metacpan.org/pod/Net::CVE)
-- [Test::CVE](https://metacpan.org/pod/Test::CVE)
+- [CPANSEC::Admin::Command::CVEScan](https://metacpan.org/pod/CPANSEC::Admin::Command::CVEScan) from [GARU](https://metacpan.org/author/GARU)
+- [Net::NVD](https://metacpan.org/pod/Net::NVD) from [GARU](https://metacpan.org/author/GARU)
+- [Net::CVE](https://metacpan.org/pod/Net::CVE) from [HMBRAND](https://metacpan.org/author/HMBRAND)
+- [Test::CVE](https://metacpan.org/pod/Test::CVE) from [HMBRAND](https://metacpan.org/author/HMBRAND)
 
-Note: Not all CVE tooling are managed by CPANSec, I'm thinking in particular [CPAN::Audit](https://metacpan.org/pod/CPAN::Audit) and its sidecar [CPAN::Audit::DB](https://metacpan.org/pod/CPAN::Audit::DB) or [NIST::NVD](https://metacpan.org/pod/NIST::NVD).
-But CPANSec follow closely and contribute to them when possible.
+Note: Not all CVE tooling are managed by CPANSec, I'm thinking in particular [CPAN::Audit](https://metacpan.org/pod/CPAN::Audit) and its sidecar [CPAN::Audit::DB](https://metacpan.org/pod/CPAN::Audit::DB) (both from [BRIANDFOY](https://metacpan.org/author/BRIANDFOY)) or [NIST::NVD](https://metacpan.org/pod/NIST::NVD) (from [CJCOLLIER](https://metacpan.org/author/CJCOLLIER)).
+But we follow closely and contribute to them when possible.
 
 ## CPANSec as a CVE Numbering Authority (CNA)
 In 2023 and 2024, CPANSec helped with or contributed to CVEs for CPAN,
@@ -65,7 +65,7 @@ By end of the year, the groundwork to become a CNA was completed.
 
 This designation was officially granted in February 2025: [CPANSec is now a CVE Numbering Authority (CNA)!](https://security.metacpan.org/2025/02/25/cpansec-is-cna-for-perl-and-cpan.html)
 
-The news of CPANSec becoming CVE Numbering Authority (CNA) was saluted by big names like Greg Kroah-Hartman (GNU/Linux) and Daniel Stenberg (curl).
+The news of CPANSec becoming CVE Numbering Authority (CNA) was saluted by community luminaries like Greg Kroah-Hartman (Linux kernel) and Daniel Stenberg (cURL) ([source](https://social.kernel.org/notice/ArVdrlmn4RNfxhSJhQ)).
 
 ## Introduced a SECURITY Policy
 In parallel, CPANSec collectively pushed for authors to publish a Security Policy.
@@ -73,6 +73,8 @@ In parallel, CPANSec collectively pushed for authors to publish a Security Polic
 Doing so is considered Open Source Good Practice, especially as security is becoming more and more critical.
 
 This effort resulted in creating a [template](https://security.metacpan.org/docs/guides/security-policy-for-authors.html#examples), providing [guidelines](https://security.metacpan.org/docs/guides/security-policy-for-authors.html) and, last but not least, communicating about the initiative in various channels.
+
+
 
 ## Study on Random Number generation for Security
 Generating random numbers can help in a wide variety of tasks.

@@ -67,7 +67,7 @@ This designation was officially granted in February 2025: [CPANSec is now a CVE 
 
 The news of CPANSec becoming CVE Numbering Authority (CNA) was saluted by community luminaries like Greg Kroah-Hartman (Linux kernel) and Daniel Stenberg (cURL) ([source](https://social.kernel.org/notice/ArVdrlmn4RNfxhSJhQ)).
 
-This was made possible thanks in particular to [STIGP](https://metacpan.org/author/STIGTSP) and [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+This was made possible thanks in particular to the hard work of [STIGP](https://metacpan.org/author/STIGTSP) and [TIMLEGGE](https://metacpan.org/author/TIMLEGGE).
 
 ## Introduced a SECURITY Policy
 In parallel, CPANSec collectively pushed for authors to publish a Security Policy.
@@ -121,8 +121,9 @@ in order to make recommendations or push some modules to deprecation.
 Through the year, CPANSec tried to come with analysis of the CPAN ecosystem
 to know exactly how much vulnerable it would be to some common supply chain attacks:
 
-- [Study CPAN Dependency Confusion](https://security.metacpan.org/docs/cpan-dependency-confusion.html)
-- [Study CPAN StarJacking](https://security.metacpan.org/docs/cpan-starjacking.html)
+- [Study CPAN Dependency Confusion](https://security.metacpan.org/docs/cpan-dependency-confusion.html) from [CONTRA](https://metacpan.org/author/CONTRA)
+
+More attacks vectors were also looked at, like "starjacking" or the topic of "stealing namespaces". 
 
 ## Pentesting PAUSE
 CPANSec volunteers [CONTRA](https://metacpan.org/author/CONTRA) and [STIGTSP](https://metacpan.org/author/STIGTSP) reviewed and tested PAUSE with various attempts to break it with nasty modules, steal namespaces or execute remote code.
@@ -131,12 +132,12 @@ This was done on a local instance made possible by the hard work of automation o
 Outside of pentesting, the deliveries are useful for plenty of tests (on indexing, on PAUSE functionning itself) or as a local development environment of PAUSE.
 
 ## Other
-CPANSec also opened discussion (with a proposed change) to [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200)
+CPANSec volunteer [STIGP](https://metacpan.org/author/STIGTSP) also opened discussion (with a proposed change) to [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200).
 
 Through the year, CPANSec discussed the topic of module signatures. Reviewing the limitations "by design" of the current options and thinking about a correct way to implement that feature.
 Similarly, discussions about CPAN installer enhancements ("Do not install module version with a CVE", "Patch module on the fly at install". etc...) were discussed, but still early stage.
 
-Very end of 2024, CPANSec folks reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
+Very end of 2024, [TIMLEGGE](https://metacpan.org/author/TIMLEGGE), [LEONT](https://metacpan.org/author/LEONT) and [CONTRA](https://metacpan.org/author/CONTRA) reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
 
 ## Final words
 This was a big year, the group really took shape and get full speed with progress in many places.

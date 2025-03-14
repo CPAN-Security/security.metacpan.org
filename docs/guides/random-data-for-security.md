@@ -42,7 +42,7 @@ that needs to be maintained separately.
 
 ### Crypt::URandom
 
-The simplest to use, is [Crypt::URandom](https://metacpan.org/pod/Crypt::URandom).  It is a lightweight module that
+One of the simplest to use is [Crypt::URandom](https://metacpan.org/pod/Crypt::URandom). It
 reads from a random data source on a variety of systems, using the `/dev/urandom` device or equivalents on other
 operating systems, including Windows.  Newer versions will also use the `getrandom` or `getentropy` calls on systems
 that support those calls.

@@ -67,6 +67,8 @@ This designation was officially granted in February 2025: [CPANSec is now a CVE 
 
 The news of CPANSec becoming CVE Numbering Authority (CNA) was saluted by community luminaries like Greg Kroah-Hartman (Linux kernel) and Daniel Stenberg (cURL) ([source](https://social.kernel.org/notice/ArVdrlmn4RNfxhSJhQ)).
 
+This was made possible thanks in particular to [STIGP](https://metacpan.org/author/STIGTSP) and [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+
 ## Introduced a SECURITY Policy
 In parallel, CPANSec collectively pushed for authors to publish a Security Policy.
 
@@ -74,7 +76,7 @@ Doing so is considered Open Source Good Practice, especially as security is beco
 
 This effort resulted in creating a [template](https://security.metacpan.org/docs/guides/security-policy-for-authors.html#examples), providing [guidelines](https://security.metacpan.org/docs/guides/security-policy-for-authors.html) and, last but not least, communicating about the initiative in various channels.
 
-
+We owe this successful initiative in particular to [RRWO](https://metacpan.org/author/RRWO).
 
 ## Study on Random Number generation for Security
 Generating random numbers can help in a wide variety of tasks.
@@ -87,32 +89,34 @@ CPANSec contributor [RRWO](https://metacpan.org/author/RRWO) studied and reviewe
 A vanilla install of Perl (distribution) does not provide HTTPS capabilities, and this is annoying.
 That's an important (and difficult) topic that is addressed, across core developers and CPANSec.
 
-Things started to go into motion in 2024 to make it happen.
+Things started to go into motion in 2024 to make it happen. In particular thanks to [LEONT](https://metacpan.org/author/LEONT).
 
 [Discussions](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269050.html), with the Perl Steering Council or core contributor. A [plan](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269202.html) was built, with some preliminary work happening.
 
-The creation of the new module [Crypt::Bear](https://metacpan.org/dist/Crypt-Bear) to wrap the TLS library BearSSL.
+[LEONT](https://metacpan.org/author/LEONT) created the new module [Crypt::Bear](https://metacpan.org/dist/Crypt-Bear) to wrap the TLS library BearSSL.
 
 ## SBOM
 CPANSec attended a billion of meetings, cross connected with several other organization working on the topic.
 
 One of the outcome of this huge effort is available as a document [Roles and metadata in open source supply-chains](https://security.metacpan.org/docs/supplychain-sbom.html) but it goes well beyond that.
 
+[SJN](https://metacpan.org/author/SJN) is leading this topic.
+
 ## Adopting security related modules
-CPANSec adopted security related modules:
-- [Crypt::DSA](https://metacpan.org/dist/Crypt-DSA)
-- [Crypt::DES_EDE3](https://metacpan.org/dist/Crypt-DES_EDE3)
-- [Crypt::OpenPGP](https://metacpan.org/dist/Crypt-OpenPGP)
-- [Crypt::OpenSSL::AES](https://metacpan.org/dist/Crypt-OpenSSL-AES)
-- [Crypt::OpenSSL::Blowfish](https://metacpan.org/dist/Crypt-OpenSSL-Blowfish)
-- [Crypt::OpenSSL::ConfiguredAPI](https://metacpan.org/dist/Crypt-OpenSSL-ConfiguredAPI)
-- [Crypt::OpenSSL::PKCS10](https://metacpan.org/dist/Crypt-OpenSSL-PKCS10)
-- [Crypt::OpenSSL::SignCSR](https://metacpan.org/dist/Crypt-OpenSSL-SignCSR)
-- [Crypt::OpenSSL::Verify](https://metacpan.org/dist/Crypt-OpenSSL-Verify)
-- [Crypt::OpenSSL::VerifyX509](https://metacpan.org/dist/Crypt-OpenSSL-VerifyX509)
-- [Crypt::Primes](https://metacpan.org/dist/Crypt-Primes)
-- [Crypt::Random](https://metacpan.org/dist/Crypt-Random)
-- [Module::Signature](https://metacpan.org/dist/Module-Signature)
+CPANSec volunteers adopted security related modules:
+- [Crypt::DSA](https://metacpan.org/dist/Crypt-DSA) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::DES_EDE3](https://metacpan.org/dist/Crypt-DES_EDE3) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::OpenPGP](https://metacpan.org/dist/Crypt-OpenPGP) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::OpenSSL::AES](https://metacpan.org/dist/Crypt-OpenSSL-AES) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::OpenSSL::Blowfish](https://metacpan.org/dist/Crypt-OpenSSL-Blowfish) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::OpenSSL::ConfiguredAPI](https://metacpan.org/dist/Crypt-OpenSSL-ConfiguredAPI) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::OpenSSL::PKCS10](https://metacpan.org/dist/Crypt-OpenSSL-PKCS10) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::OpenSSL::SignCSR](https://metacpan.org/dist/Crypt-OpenSSL-SignCSR) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::OpenSSL::Verify](https://metacpan.org/dist/Crypt-OpenSSL-Verify) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::OpenSSL::VerifyX509](https://metacpan.org/dist/Crypt-OpenSSL-VerifyX509) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::Primes](https://metacpan.org/dist/Crypt-Primes) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Crypt::Random](https://metacpan.org/dist/Crypt-Random) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
+- [Module::Signature](https://metacpan.org/dist/Module-Signature) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 
 Adopting modules is not always the only option and CPANSec also reviewed modules for insecure algorithms
 in order to make recommendations or push some modules to deprecation.

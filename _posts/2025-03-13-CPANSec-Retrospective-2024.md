@@ -143,7 +143,7 @@ Similarly, discussions about CPAN installer enhancements ("Do not install module
 At the very end of 2024, CPANSec reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
 
 ## Who we are?
-Who was exactly the "CPANSec group" in 2024? 
+I attributed many of previous achievements to "CPANSec", but who was part the "CPANSec group" in 2024? 
 
 In last name alphabetical order:
 ```

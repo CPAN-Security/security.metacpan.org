@@ -110,7 +110,6 @@ CPANSec volunteers adopted security related modules:
 - [Crypt::OpenSSL::AES](https://metacpan.org/dist/Crypt-OpenSSL-AES) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::OpenSSL::Blowfish](https://metacpan.org/dist/Crypt-OpenSSL-Blowfish) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::OpenSSL::PKCS10](https://metacpan.org/dist/Crypt-OpenSSL-PKCS10) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Crypt::OpenSSL::Verify](https://metacpan.org/dist/Crypt-OpenSSL-Verify) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::Primes](https://metacpan.org/dist/Crypt-Primes) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Crypt::Random](https://metacpan.org/dist/Crypt-Random) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
 - [Module::Signature](https://metacpan.org/dist/Module-Signature) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)

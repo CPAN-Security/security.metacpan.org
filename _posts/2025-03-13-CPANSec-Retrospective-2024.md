@@ -46,19 +46,20 @@ They can be installed in workflows or tooling as a gate keeper
 for companies to do not ship vulnerable piece of code.
 
 CPANSec produced and improved a few tools to fetch or test for CVEs:
-- [CPANSEC::Admin::Command::CVEScan](https://metacpan.org/pod/CPANSEC::Admin::Command::CVEScan) from [GARU](https://metacpan.org/author/GARU)
-- [Net::NVD](https://metacpan.org/pod/Net::NVD) from [GARU](https://metacpan.org/author/GARU)
-- [Net::CVE](https://metacpan.org/pod/Net::CVE) from [HMBRAND](https://metacpan.org/author/HMBRAND)
-- [Test::CVE](https://metacpan.org/pod/Test::CVE) from [HMBRAND](https://metacpan.org/author/HMBRAND)
+- [CPANSEC::Admin::Command::CVEScan](https://metacpan.org/pod/CPANSEC::Admin::Command::CVEScan)
+- [Net::NVD](https://metacpan.org/pod/Net::NVD)
+- [Net::CVE](https://metacpan.org/pod/Net::CVE)
+- [Test::CVE](https://metacpan.org/pod/Test::CVE)
 
-Note: Not all CVE tooling are managed by CPANSec, I'm thinking in particular [CPAN::Audit](https://metacpan.org/pod/CPAN::Audit) and its sidecar [CPAN::Audit::DB](https://metacpan.org/pod/CPAN::Audit::DB) (both under responsibility of [BRIANDFOY](https://metacpan.org/author/BRIANDFOY)) or [NIST::NVD](https://metacpan.org/pod/NIST::NVD) (from [CJCOLLIER](https://metacpan.org/author/CJCOLLIER)).
-But we follow closely and contribute to them when possible.
+Note: Not all CVE tooling are managed by CPANSec, I'm thinking in particular [CPAN::Audit](https://metacpan.org/pod/CPAN::Audit) and its sidecar [CPAN::Audit::DB](https://metacpan.org/pod/CPAN::Audit::DB) or [NIST::NVD](https://metacpan.org/pod/NIST::NVD).
+
+But CPANSec follows closely and contributes to them when possible.
 
 ## CPANSec as a CVE Numbering Authority (CNA)
 In 2023 and 2024, CPANSec helped with or contributed to CVEs for CPAN,
 while assigning CVEs remained under control of another CVE Numbering Authority (CNA).
 
-CPANSec members [TIMLEGGE](https://metacpan.org/author/TIMLEGGE) and [STIGTSP](https://metacpan.org/author/STIGTSP) worked throughout the year to give the group the ability to assign CVEs.
+CPANSec members worked throughout the year to give the group the ability to assign CVEs.
 After all, who knows better than CPANSec the impact of CVEs on Perl modules? :)
 
 By end of the year, the groundwork to become a CNA was completed.
@@ -76,46 +77,42 @@ Doing so is considered Open Source Good Practice, especially as security is beco
 
 This effort resulted in creating a [template](https://security.metacpan.org/docs/guides/security-policy-for-authors.html#examples), providing [guidelines](https://security.metacpan.org/docs/guides/security-policy-for-authors.html) and, last but not least, communicating about the initiative in various channels.
 
-In order to help authors integrating a Security Policy, new tools [Software::Security::Policy](https://metacpan.org/pod/Software::Security::Policy) (by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)) and [Dist::Zilla::Plugin::SecurityPolicy](https://metacpan.org/pod/Dist::Zilla::Plugin::SecurityPolicy) (by [LEONT](https://metacpan.org/author/LEONT)).
-
-We owe this successful initiative in particular to [RRWO](https://metacpan.org/author/RRWO).
+In order to help authors integrating a Security Policy, new tools [Software::Security::Policy](https://metacpan.org/pod/Software::Security::Policy) and [Dist::Zilla::Plugin::SecurityPolicy](https://metacpan.org/pod/Dist::Zilla::Plugin::SecurityPolicy).
 
 ## Study on Random Number generation for Security
 Generating random numbers can help in a wide variety of tasks.
 All of them don't have the same level of criticality.
 In particular, random generated data used in a security context requires extra care.
 
-CPANSec contributor [RRWO](https://metacpan.org/author/RRWO) studied and reviewed CPAN modules for this use, and shared this in [Random Data For Security Use](https://security.metacpan.org/docs/guides/random-data-for-security.html).
+CPANSec studied and reviewed CPAN modules for this use, and shared this in [Random Data For Security Use](https://security.metacpan.org/docs/guides/random-data-for-security.html).
 
 ## Working on "TLS in core"
 A vanilla install of Perl (distribution) does not provide HTTPS capabilities, and this is annoying.
 That's an important (and difficult) topic that is addressed, across core developers and CPANSec.
 
-Things started to go into motion in 2024 to make it happen. In particular thanks to [LEONT](https://metacpan.org/author/LEONT).
+Things started to go into motion in 2024 to make it happen.
 
 [Discussions](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269050.html), with the Perl Steering Council or core contributor. A [plan](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269202.html) was built, with some preliminary work happening.
 
-[LEONT](https://metacpan.org/author/LEONT) created the new module [Crypt::Bear](https://metacpan.org/dist/Crypt-Bear) to wrap the TLS library BearSSL.
+An outstanding contribution is the creation of the new module [Crypt::Bear](https://metacpan.org/dist/Crypt-Bear) by [LEONT](https://metacpan.org/author/LEONT) to wrap the TLS library BearSSL.
 
 ## SBOM
 CPANSec attended a billion of meetings, cross connected with several other organization working on the topic.
 
 One of the outcome of this huge effort is available as a document [Roles and metadata in open source supply-chains](https://security.metacpan.org/docs/supplychain-sbom.html) but it goes well beyond that.
 
-[SJN](https://metacpan.org/author/SJN) is leading this topic.
-
 ## Adopting security related modules
 CPANSec volunteers adopted security related modules:
-- [Crypt::DSA](https://metacpan.org/dist/Crypt-DSA) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Crypt::DES_EDE3](https://metacpan.org/dist/Crypt-DES_EDE3) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Crypt::OpenPGP](https://metacpan.org/dist/Crypt-OpenPGP) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Crypt::OpenSSL::AES](https://metacpan.org/dist/Crypt-OpenSSL-AES) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Crypt::OpenSSL::Blowfish](https://metacpan.org/dist/Crypt-OpenSSL-Blowfish) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Crypt::OpenSSL::PKCS10](https://metacpan.org/dist/Crypt-OpenSSL-PKCS10) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Crypt::Primes](https://metacpan.org/dist/Crypt-Primes) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Crypt::Random](https://metacpan.org/dist/Crypt-Random) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Module::Signature](https://metacpan.org/dist/Module-Signature) adopted by [TIMLEGGE](https://metacpan.org/author/TIMLEGGE)
-- [Net::OAuth](https://metacpan.org/pod/Net::OAuth) adopted by [RRWO](https://metacpan.org/author/RRWO)
+- [Crypt::DSA](https://metacpan.org/dist/Crypt-DSA)
+- [Crypt::DES_EDE3](https://metacpan.org/dist/Crypt-DES_EDE3)
+- [Crypt::OpenPGP](https://metacpan.org/dist/Crypt-OpenPGP)
+- [Crypt::OpenSSL::AES](https://metacpan.org/dist/Crypt-OpenSSL-AES)
+- [Crypt::OpenSSL::Blowfish](https://metacpan.org/dist/Crypt-OpenSSL-Blowfish)
+- [Crypt::OpenSSL::PKCS10](https://metacpan.org/dist/Crypt-OpenSSL-PKCS10)
+- [Crypt::Primes](https://metacpan.org/dist/Crypt-Primes)
+- [Crypt::Random](https://metacpan.org/dist/Crypt-Random)
+- [Module::Signature](https://metacpan.org/dist/Module-Signature)
+- [Net::OAuth](https://metacpan.org/pod/Net::OAuth)
 
 Adopting modules is not always the only option and CPANSec also reviewed modules for insecure algorithms
 in order to make recommendations or push some modules to deprecation.
@@ -124,24 +121,24 @@ in order to make recommendations or push some modules to deprecation.
 Through the year, CPANSec tried to come with analysis of the CPAN ecosystem
 to know exactly how much vulnerable it would be to some common supply chain attacks:
 
-- [Study CPAN Dependency Confusion](https://security.metacpan.org/docs/cpan-dependency-confusion.html) from [CONTRA](https://metacpan.org/author/CONTRA)
+- [Study CPAN Dependency Confusion](https://security.metacpan.org/docs/cpan-dependency-confusion.html)
 
 More attacks vectors were also looked at, like "starjacking" or the topic of "stealing namespaces". 
 
 ## Pentesting PAUSE
-CPANSec volunteers [CONTRA](https://metacpan.org/author/CONTRA) and [STIGTSP](https://metacpan.org/author/STIGTSP) reviewed and tested PAUSE with various attempts to break it with nasty modules, steal namespaces or execute remote code.
+CPANSec volunteers reviewed and tested PAUSE with various attempts to break it with nasty modules, steal namespaces or execute remote code.
 
-This was done on a local instance made possible by the hard work of automation of [RJBS](https://metacpan.org/author/RJBS), [RSPIER](https://metacpan.org/author/RSPIER) and [WOLFSAGE](https://metacpan.org/author/WOLFSAGE) at [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) (table "PAUSE"), later improved by CPANSec volunteer [STIGTSP](https://metacpan.org/author/STIGTSP) then tweaked (fast indexing, minor fixes) and containerized by [CONTRA](https://metacpan.org/author/CONTRA). 
+This was done on a local instance made possible thanks to the hard work of automation from "Table PAUSE" at [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) that was later improved, tweaked (fast indexing, minor fixes...) and containerized by CPANSec. 
 
 Outside of pentesting, these deliveries are useful for plenty of tests (on indexing, on PAUSE functionning itself) or as a local development environment of PAUSE.
 
 ## Other
-CPANSec volunteer [STIGP](https://metacpan.org/author/STIGTSP) also opened discussion (with a proposed change) to [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200).
+CPANSec volunteer also opened discussion (with a proposed change) to [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200).
 
 Through the year, CPANSec discussed the topic of module signatures. Reviewing the limitations "by design" of the current options and thinking about a correct way to implement that feature.
 Similarly, discussions about CPAN installer enhancements ("Do not install module version with a CVE", "Patch module on the fly at install". etc...) were discussed, but still early stage.
 
-Very end of 2024, [TIMLEGGE](https://metacpan.org/author/TIMLEGGE), [LEONT](https://metacpan.org/author/LEONT) and [CONTRA](https://metacpan.org/author/CONTRA) reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
+Very end of 2024, CPANSec reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
 
 ## Final words
 This was a big year, the group really took shape and get full speed with progress in many places.

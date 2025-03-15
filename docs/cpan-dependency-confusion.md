@@ -1,5 +1,11 @@
-# CPAN dependency confusion
-## Rationale 
+---
+layout: page
+title: CPAN dependency confusion
+description: A study about dependency confusion on CPAN
+author: Thibault Duponchelle
+toc: true
+---
+## Rationale
 Take advantage of an incorrectly configured setup that resolves a public module (published on CPAN) in place of the expected private/local version due to one of the following reasons:
 - Local module is not installed at the time of running the CPAN client
 - Public CPAN version is preferred to local
@@ -20,7 +26,7 @@ See [About the various PANs](https://www.olafalders.com/2019/02/19/about-the-var
 
 An attacker can "claim" a public namespace, install a high version (to take precedence in the index over a smaller local version number) and wait for vulnerable setups to install (and execute) their newly uploaded module.
 
-Not all uploads end into claiming a namespace or a new version of a module (both can be referred as "indexing"). Permissions on name (FIRSTCOME, COMAINT...) and status of release (development version) impacts the visibility of releases. Index and visual appearance in [MetaCPAN](https://metacpan.org/) would make it clear, highlight dev or "unauthorized" releases and finally, not installable. 
+Not all uploads end into claiming a namespace or a new version of a module (both can be referred as "indexing"). Permissions on name (FIRSTCOME, COMAINT...) and status of release (development version) impacts the visibility of releases. Index and visual appearance in [MetaCPAN](https://metacpan.org/) would make it clear, highlight dev or "unauthorized" releases and finally, not installable.
 
 See [PAUSE operating model](https://pause.perl.org/pause/query?ACTION=pause_operating_model) for details.
 
@@ -30,7 +36,7 @@ The notions of "mirror" and "indexer":
 - "mirror" - where module tarballs are stored
 - "indexer" - translate module to path and version
 
-These notions are not always well differenciated and their meaning heavily depends on the CPAN client. For instance, from a pool (urllist), `CPAN.pm` will use only one mirror for both indexing and downloading modules. On the other hand, `cpanm` will use MetaDB as the index in priority and the mirrors to download, and these notions are well decoupled. 
+These notions are not always well differentiated and their meaning heavily depends on the CPAN client. For instance, from a pool (urllist), `CPAN.pm` will use only one mirror for both indexing and downloading modules. On the other hand, `cpanm` will use MetaDB as the index in priority and the mirrors to download, and these notions are well decoupled.
 
 Not all indexers are equals: 02packages only contains the latest version of each module, making it [difficult to specify more complex constraints](https://github.com/miyagawa/Carmel/issues/55) (pinned or ranges).
 
@@ -64,7 +70,7 @@ But `cpanm --skip-satisfied Requirement` will not update `Requirement`:
 1. Requirement@0.01
 2. cpanm --skip-satisfied Requirement
 3. Requirement@0.01
- 
+
 ## Simulations
 ### Setup
 For these tests, I'm recreating a setup with a mix of private and public modules.
@@ -77,7 +83,7 @@ requires 'Public', '0';
 requires 'PrivateAndPublicGreaterLocal', '0';
 ```
 
-It simulates a complex setup where the installer has to install some modules, sometimes local requirements and sometimes remote ones. 
+It simulates a complex setup where the installer has to install some modules, sometimes local requirements and sometimes remote ones.
 
 Specifying the requirements in Makefile.PL, Build.PL or META.json/META.yml achieves the same and was used in some cases (e.g. CPAN/CPANPLUS)
 
@@ -97,7 +103,7 @@ PrivateAndPublicGreaterLocal@0.01
 
 `Private` is only present on DarkPAN, `Public` is only present on CPAN.
 
-`PrivateAndPublicGreaterCPAN` and `PrivateAndPublicGreaterLocal` are requirements that can be "confused" (if install ends up with `PrivateAndPublicGreaterCPAN@0.04` and/or `PrivateAndPublicGreaterLocal@0.02`) 
+`PrivateAndPublicGreaterCPAN` and `PrivateAndPublicGreaterLocal` are requirements that can be "confused" (if install ends up with `PrivateAndPublicGreaterCPAN@0.04` and/or `PrivateAndPublicGreaterLocal@0.02`)
 
 GrayPAN/DarkPAN was simulated with the following tools:
 - [pinto](https://metacpan.org/dist/Pinto) either targetted via HTTP `http://0.0.0.0:8000/` or `file:///data/darkpan` for `cpanm`, `cpm`, `carton`, `carmel` and `cpan`
@@ -155,7 +161,7 @@ requires 'PublicAndPrivateGreaterCPAN', '0',
 - `unset PERL_CPANM_OPT cpanm --mirror-only --mirror darkpan --mirror cpan` - beware order of mirrors
 - `unset PERL_CPANM_OPT cpanm --mirror-index file:///data/02packages --mirror darkpan --mirror cpan` - beware order of mirrors
 - `unset PERL_CPANM_OPT cpanm --cascade-search --mirror-index file:///data/02packages --mirror darkpan --mirror cpan` - beware order of mirrors
-- `cpm --no-default-resolvers --resolver darkpan --resolver cpan` 
+- `cpm --no-default-resolvers --resolver darkpan --resolver cpan`
 - carton/cpanfile `mirror =>` AND `dist =>` - pinned version and storage
 - carton/cpanfile `url =>` - pinned url
 - CPAN urllist (but with `pushy_https` disabled) - use index of first mirror, fallback for download
@@ -184,11 +190,11 @@ Not affected, not doing fallback on the public CPAN.
 ## Mitigations
 Beyond technical CPAN client/options recommendations exposed earlier, sharing some more "shift left" guards and explicit security advice.
 
-### PAUSE operational model 
-The way CPAN and PAUSE work, and the very "social" nature of this ecosystem makes it very difficult to attack CPAN via dependency confusions. 
+### PAUSE operational model
+The way CPAN and PAUSE work, and the very "social" nature of this ecosystem makes it very difficult to attack CPAN via dependency confusions.
 
 1. New authors don't immediately get an account but are approved by an admin. With a priori approval like this, automatic creation of fake accounts is less likely.
-2. New uploads do not follow a priori control but are publicly reviewed. Malware code can be spotted and claiming namespaces with bad intention would likely be reported rapidly. 
+2. New uploads do not follow a priori control but are publicly reviewed. Malware code can be spotted and claiming namespaces with bad intention would likely be reported rapidly.
 
 In this context, it seems difficult for an attacker/malware module to go unnoticed and exploit dependency confusion.
 
@@ -204,13 +210,13 @@ Both previous solutions are sub-optimal
 #### Scoping like NPM
 Remediation for NPM ecosystem mentions [scoping](https://docs.npmjs.com/threats-and-mitigations#by-typosquatting--dependency-confusion) (naming packages like `@my-company/my-module`).
 A scope guarantees [protection of all names under it](https://docs.npmjs.com/package-scope-access-level-and-visibility) but also [can be tied to a registry](https://docs.npmjs.com/cli/v7/using-npm/scope#associating-a-scope-with-a-registry).
- 
-The CPAN operating model works differently and has no such scopes. Technically, being the first person to publish a module offers FIRSTCOME permissions on the module name. Though it does not recusively protect all names under it, it effectively protects the fully qualified name forever. 
+
+The CPAN operating model works differently and has no such scopes. Technically, being the first person to publish a module offers FIRSTCOME permissions on the module name. Though it does not recursively protect all names under it, it effectively protects the fully qualified name forever.
 
 Doing this ("placeholding") for private modules is an option, but it would be very unwise and very egoist to do that, effectively polluting the CPAN namespace for personal needs.
-Beyond these considerations, you need only publish once (a very small version that never will interfer with your local versioning) to claim the namespace. Remember, it's not a scope. Claiming `Module` does not protect `Module::Foo` nor `Module::Bar`.
+Beyond these considerations, you need only publish once (a very small version that never will interfere with your local versioning) to claim the namespace. Remember, it's not a scope. Claiming `Module` does not protect `Module::Foo` nor `Module::Bar`.
 
-The module [install](https://metacpan.org/pod/install) somewhat fills this use case, like gem [bundle](https://rubygems.org/gems/bundle) in rubygems.
+The module [install](https://metacpan.org/pod/install) somewhat fills this use case, like gem [bundle](https://rubygems.org/gems/bundle) in RubyGems.
 
 #### Reserved namespaces
 Use reserved namespaces that can't resolve to public things:
@@ -219,14 +225,14 @@ Use reserved namespaces that can't resolve to public things:
 
 From [PAUSE Naming Modules - Local::](https://pause.perl.org/pause/query?ACTION=pause_namingmodules#Local) and [The Perl Module Library (perlmodlib)](https://perldoc.perl.org/perlmodlib#Guidelines-for-Module-Creation)
 
-## Resources 
+## Resources
 - [Hacking with gems](https://www.youtube.com/watch?v=zEBReauO-vg) (2013)
 - [Dependency Confusion](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610) (2021)
 - [Distribution Confusion in PyPi](https://stiankri.substack.com/p/distribution-confusion-in-pypi) (2023)
 - [PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model)
 - [cpanm](https://metacpan.org/pod/App::cpanminus)
 - [cpm](https://metacpan.org/pod/App::cpm)
-- [CPANPLUS](https://metacpan.org/dist/CPANPLUS) 
+- [CPANPLUS](https://metacpan.org/dist/CPANPLUS)
 - [CPAN](https://metacpan.org/pod/CPAN)
 - [Carton](https://metacpan.org/dist/Carton)
 - [Carmel](https://metacpan.org/dist/Carmel)

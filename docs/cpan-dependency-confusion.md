@@ -3,7 +3,7 @@ layout: page
 title: CPAN dependency confusion
 description: A study about dependency confusion on CPAN
 author: Thibault Duponchelle
-toc: true
+toc: false
 ---
 ## Rationale
 Take advantage of an incorrectly configured setup that resolves a public module (published on CPAN) in place of the expected private/local version due to one of the following reasons:

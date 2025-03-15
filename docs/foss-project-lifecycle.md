@@ -192,7 +192,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 | Offers             | Maint < 1 | Maint = 1 | Maint > 1 | Response time | Claim source | On CPAN |
 | :----------------- | :-------: | :-------: | :-------: | :-----------: | :----------- | :-----: |
 | MAINTAINED         | no        | YES       | maybe     | OK            | Maintainer   | ❌      |
-| FOR_COMMECRIAL_USE | no        | YES       | YES       | OK            | Maintainer   | ❌      |
+| FOR_COMMERCIAL_USE | no        | YES       | YES       | OK            | Maintainer   | ❌      |
 | CASUAL             | no        | YES       | maybe     | LOW           | Maintainer   | ❌      |
 | DONE               | no        | YES       | no        | LOW           | Maintainer   | ❌      |
 | DEPRECATED         | no        | YES       | no        | NONE          | Maintainer   | ❌      |

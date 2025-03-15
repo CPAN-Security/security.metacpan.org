@@ -33,15 +33,13 @@ There are three main perspectives to take into account when considering the sust
 
 ## Project Need Indicators
 
-States in **bold** exist on CPAN.
-
-| Needs        | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
-| **NEEDHELP** | no        | YES       | YES       | LOW           | Maintainer   |
-| **HANDOFF**  | no        | YES       | no        | LOW           | Maintainer   |
-| **ADOPTME**  | YES       | no        | no        | NONE          | Ecosystem    |
-| NEEDFUNDING  | no        | YES       | YES       | LOW           | Maintainer   |
-| NEEDSUPPORT  | no        | YES       | YES       | LOW           | Maintainer   |
+| Needs        | Maint < 1 | Maint = 1 | Maint > 1 | Response time | Claim source | On CPAN |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- | :-----: |
+| NEEDHELP     | no        | YES       | YES       | LOW           | Maintainer   | ✔️       |
+| HANDOFF      | no        | YES       | no        | LOW           | Maintainer   | ✔️       |
+| ADOPTME      | YES       | no        | no        | NONE          | Ecosystem    | ✔️       |
+| NEEDFUNDING  | no        | YES       | YES       | LOW           | Maintainer   | ❌      |
+| NEEDSUPPORT  | no        | YES       | YES       | LOW           | Maintainer   | ❌      |
 
 
 1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))
@@ -50,7 +48,7 @@ States in **bold** exist on CPAN.
 1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer (Ref: [PAUSE-2017](#references))
     * (number of maintainers is 1)
     * (number of maintainers is about to reduce to 0)
-1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption (Ref: [PAUSE-2017](#references))
+1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive or deceased, and therefore the project is made available for adoption (Ref: [PAUSE-2017](#references))
     * The project needs a new maintainer
     * (number of maintainers is 0)
     * (number of maintainers is too low)
@@ -191,25 +189,25 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 
 ## Project Support Indicators
 
-| Offers             | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
-| :----------------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
-| MAINTAINED         | no        | YES       | YES       | OK            | Maintainer   |
-| FOR_COMMECRIAL_USE | no        | YES       | YES       | OK            | Maintainer   |
-| CASUAL             | no        | YES       | YES       | LOW           | Maintainer   |
-| DONE               | no        | YES       | no        | LOW           | Maintainer   |
-| DEPRECATED         | no        | YES       | no        | NONE          | Maintainer   |
-| SECURITYONLY       | no        | YES       | YES       | SECURITY      | Maintainer   |
-| SUPERSEEDED        | no        | YES       | YES       | NONE          | Maintainer   |
-| UNMAINTAINED       | no        | YES       | YES       | NONE          | Maintainer   |
-| ARCHIVED           | YES       | no        | no        | NONE          | Maintainer   |
+| Offers             | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source | On CPAN |
+| :----------------- | :-------: | :-------: | :-------: | :-----------: | :----------- | :-----: |
+| MAINTAINED         | no        | YES       | YES       | OK            | Maintainer   | ❌      |
+| FOR_COMMECRIAL_USE | no        | YES       | YES       | OK            | Maintainer   | ❌      |
+| CASUAL             | no        | YES       | YES       | LOW           | Maintainer   | ❌      |
+| DONE               | no        | YES       | no        | LOW           | Maintainer   | ❌      |
+| DEPRECATED         | no        | YES       | no        | NONE          | Maintainer   | ❌      |
+| SECURITYONLY       | no        | YES       | YES       | SECURITY      | Maintainer   | ❌      |
+| SUPERSEEDED        | no        | YES       | YES       | NONE          | Maintainer   | ❌      |
+| UNMAINTAINED       | no        | YES       | YES       | NONE          | Maintainer   | ❌      |
+| ARCHIVED           | YES       | no        | no        | NONE          | Maintainer   | ❌      |
 
 ### Ecosystem Support Indicators
 
-| Offers             | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
-| :----------------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
-| CUSTODY            | YES       | no        | no        | SECURITY      | Ecosystem    |
-| DUAL               | no        | YES       | YES       | OK            | Ecosystem    |
-| **NOXFER**         | no        | YES       | no        | NONE          | Ecosystem    |
+| Offers             | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source | On CPAN |
+| :----------------- | :-------: | :-------: | :-------: | :-----------: | :----------- | :-----: |
+| CUSTODY            | YES       | no        | no        | SECURITY      | Ecosystem    | ❌      |
+| DUAL               | no        | YES       | YES       | OK            | Ecosystem    | ❌      |
+| NOXFER             | no        | YES       | no        | NONE          | Ecosystem    | ✔️       |
 
 
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
@@ -245,13 +243,13 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 
 States in **bold** exist on CPAN.
 
-| States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
-| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
-| COMPROMISED  | no        | YES       | YES       | NONE          | Ecosystem    |
-| SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
-| DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
-| UNREACHABLE  | no        | YES       | YES       | ERROR         | Ecosystem    |
-| UNRESPONSIVE | no        | YES       | YES       | NONE          | Ecosystem    |
+| States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source | On CPAN |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- | :-----: |
+| COMPROMISED  | no        | YES       | YES       | NONE          | Ecosystem    | ❌      |
+| SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    | ❌      |
+| DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    | ❌      |
+| UNREACHABLE  | no        | YES       | YES       | ERROR         | Ecosystem    | ❌      |
+| UNRESPONSIVE | no        | YES       | YES       | NONE          | Ecosystem    | ❌      |
 
 
 ### Project Emergency Indicators

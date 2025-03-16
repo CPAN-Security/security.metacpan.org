@@ -56,10 +56,10 @@ But CPANSec follows closely and contributes to them when possible.
 
 ## CPANSec as a CVE Numbering Authority (CNA)
 In 2023 and 2024, if CPANSec helped with or contributed to CVEs for CPAN,
-the _assignment_ of CVEs remained under control of another CVE Numbering Authority (CNA).
+the _assignment_ of CVEs remained under control of another CNA, MITRE.
 
 CPANSec members worked throughout the year to give the group the ability to assign CVEs.
-After all, who knows better than CPANSec the impact of CVEs on Perl modules? :)
+After all, who knows better than CPANSec the impact of CVEs on Perl modules? (If you know someone, send them our way! :)
 
 By end of the year, the groundwork to become a CNA was completed.
 
@@ -69,12 +69,12 @@ The news of CPANSec becoming CVE Numbering Authority (CNA) was [saluted](https:/
 
 The CNA administrators are Timothy Legge, Stig Palmquist and Breno G. de Oliveira.
 
-## Introduced a SECURITY Policy
+## Introduced a SECURITY Policy template
 In parallel, CPANSec collectively pushed for authors to publish a Security Policy.
 
 Doing so is considered Open Source Good Practice, especially as security is becoming more and more critical.
 
-This effort resulted in creating a [template](https://security.metacpan.org/docs/guides/security-policy-for-authors.html#examples), providing [guidelines](https://security.metacpan.org/docs/guides/security-policy-for-authors.html) and, last but not least, communicating about the initiative in various channels.
+This effort resulted in creating a [template](https://security.metacpan.org/docs/guides/security-policy-for-authors.html#examples), providing [guidelines](https://security.metacpan.org/docs/guides/security-policy-for-authors.html) and, last but not least, communicating this initiative in various channels.
 
 In order to help authors integrating a Security Policy, new tools [Software::Security::Policy](https://metacpan.org/pod/Software::Security::Policy) and [Dist::Zilla::Plugin::SecurityPolicy](https://metacpan.org/pod/Dist::Zilla::Plugin::SecurityPolicy) were created and published.
 
@@ -91,14 +91,14 @@ That's an important (and difficult) topic that is addressed, across core develop
 
 Things started to go into motion in 2024 to make it happen.
 
-[Discussions](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269050.html), with the Perl Steering Council and core contributors. A [plan](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269202.html) was built, with some preliminary work happening.
+[Discussions](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269050.html), with the Perl Steering Council and core contributors. A [plan](https://www.nntp.perl.org/group/perl.perl5.porters/2024/11/msg269202.html) was created, with some preliminary work happening.
 
-An outstanding contribution is the creation of the new module [Crypt::Bear](https://metacpan.org/dist/Crypt-Bear) by [LEONT](https://metacpan.org/author/LEONT) to wrap the TLS library BearSSL.
+One notable contribution is the creation of the new module [Crypt::Bear](https://metacpan.org/dist/Crypt-Bear) by [LEONT](https://metacpan.org/author/LEONT) to wrap the TLS library BearSSL.
 
 ## Software Bill Of Materials (SBOM)
 CPANSec attended many meetings in other security-related communities, and cross-connected with several other organization working on the topic.
 
-One of the outcomes of this effort is available as in the document [Roles and metadata in open source supply-chains](https://security.metacpan.org/docs/supplychain-sbom.html), but it goes well beyond that.
+One of the outcomes of this effort is available as in the form of an ongoing study on [Roles and metadata in open source supply-chains](https://security.metacpan.org/docs/supplychain-sbom.html), but it goes well beyond that.
 
 ## Adopting security related modules
 CPANSec volunteers adopted security related modules:
@@ -130,7 +130,7 @@ This was done on a local instance made possible thanks to the hard work of autom
 Outside of pentesting, these deliveries are useful for plenty of tests (on indexing, on PAUSE functionning itself) or as a local development environment of PAUSE.
 
 ## Outreach
-If CPANSpec is taking care of security aspects of CPAN and Perl, it's also promoting Perl in general, actively recruiting and preaching for open source.
+If CPANSpec is taking care of security aspects of CPAN and Perl, it's also promoting Perl in general, actively recruiting for open source security.
 
 This is in this scope that the group had a presence in ssveral events. From [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) to [London Perl and Raku Workshop 2024](https://act.yapc.eu/lpw2024/), but also [FOSDEM 2024](https://archive.fosdem.org/2024/) and the [OpenSSF summit](https://events.linuxfoundation.org/open-source-summit-europe/).
 

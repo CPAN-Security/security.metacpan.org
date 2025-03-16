@@ -156,7 +156,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * UI/UX Testing
 1. Software and systems design review
     * Review software architectural design patterns
-    * Review virtualized infrastructure design patterns
+    * Review virtualised infrastructure design patterns
     * Cryptography review
     * Threat modeling (privacy, safety, security)
     * API Modeling

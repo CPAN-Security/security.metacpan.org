@@ -131,7 +131,7 @@ Outside of pentesting, these deliveries are useful for plenty of tests (on index
 ## Outreach
 If CPANSpec is taking care of security aspects of CPAN and Perl, it's also promoting Perl in general, actively recruiting for open source security.
 
-This is in this scope that the group had a presence in ssveral events. From [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) to [London Perl and Raku Workshop 2024](https://act.yapc.eu/lpw2024/), but also [FOSDEM 2024](https://archive.fosdem.org/2024/) and the [OpenSSF summit](https://events.linuxfoundation.org/open-source-summit-europe/).
+This is in this scope that the group had a presence in several events. From [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) to [London Perl and Raku Workshop 2024](https://act.yapc.eu/lpw2024/), but also [FOSDEM 2024](https://archive.fosdem.org/2024/) and the [OpenSSF summit](https://events.linuxfoundation.org/open-source-summit-europe/).
 
 ## Other
 CPANSec also initiated a discussion (with a proposed change) to enable [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200).

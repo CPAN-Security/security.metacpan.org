@@ -232,7 +232,7 @@ Indeed for the following reasons:
 1. Removing all releases of a namespace does not release permissions
 2. Giving up ownership (release "FIRSTCOME permissions") does not release a name to the public
 
-The second point deserves some more details. Giving up FIRSTCOME is never resulting in releasing the namespace but instead transferring ownership to a special use ADOPTME (no login) while co-maintainers permissions are left untouched. Getting FIRSTCOME permissions from ADOPTME requires an approval from PAUSE Admins. It is while CPAN ecosystem is not vulnerable to "namespace vacuum" or "dangling namespace".
+The second point deserves some more details. Giving up FIRSTCOME is never resulting in releasing the namespace but instead transferring ownership to a special use ADOPTME (no login) while co-maintainers permissions are left untouched. Getting FIRSTCOME permissions from ADOPTME requires an approval from PAUSE Admins. It is why CPAN ecosystem is not vulnerable to "namespace vacuum" or "dangling namespace".
 
 ## Resources
 - [Hacking with gems](https://www.youtube.com/watch?v=zEBReauO-vg) (2013)

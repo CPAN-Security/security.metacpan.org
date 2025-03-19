@@ -228,9 +228,9 @@ From [PAUSE Naming Modules - Local::](https://pause.perl.org/pause/query?ACTION=
 #### Namespace vacuum
 The CPAN ecosystem is not vulnerable to "Namespace vacuum" as described in [this article](https://cybersecuritynews.com/popular-python-library-vulnerability/) (python/PyPI).
 
-Indeed for the following reasons: 
+The reasons for this are: 
 1. Removing all releases of a namespace does not release permissions
-2. Giving up ownership (release "FIRSTCOME permissions") does not release a name to the public
+2. Giving up "FIRSTCOME permissions" (ownership) does not make available again the name to the public.
 
 The second point deserves some more details. Giving up FIRSTCOME is never resulting in releasing the namespace but instead transferring ownership to a special use ADOPTME (no login) while co-maintainers permissions are left untouched. Getting FIRSTCOME permissions from ADOPTME requires an approval from PAUSE Admins. It is why CPAN ecosystem is not vulnerable to "namespace vacuum" or "dangling namespace".
 

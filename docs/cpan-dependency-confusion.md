@@ -225,10 +225,19 @@ Use reserved namespaces that can't resolve to public things:
 
 From [PAUSE Naming Modules - Local::](https://pause.perl.org/pause/query?ACTION=pause_namingmodules#Local) and [The Perl Module Library (perlmodlib)](https://perldoc.perl.org/perlmodlib#Guidelines-for-Module-Creation)
 
+#### Namespace vacuum
+The CPAN ecosystem is not vulnerable to "Namespace vacuum" as described in [this article](https://cybersecuritynews.com/popular-python-library-vulnerability/) (python/PyPI).
+
+The reasons for this are: 
+1. Removing all releases of a namespace does not release permissions
+2. Giving up "FIRSTCOME permissions" (ownership) does not make available again the name to the public.
+
+The second point deserves some more details. Giving up FIRSTCOME is never resulting in releasing the namespace but instead transferring ownership to a special use ADOPTME (no login) while co-maintainers permissions are left untouched. Getting FIRSTCOME permissions from ADOPTME requires an approval from PAUSE Admins. It is why CPAN ecosystem is not vulnerable to "namespace vacuum" or "dangling namespace".
+
 ## Resources
 - [Hacking with gems](https://www.youtube.com/watch?v=zEBReauO-vg) (2013)
 - [Dependency Confusion](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610) (2021)
-- [Distribution Confusion in PyPi](https://stiankri.substack.com/p/distribution-confusion-in-pypi) (2023)
+- [Distribution Confusion in PyPI](https://stiankri.substack.com/p/distribution-confusion-in-pypi) (2023)
 - [PAUSE Operating Model](https://pause.perl.org/pause/query?ACTION=pause_operating_model)
 - [cpanm](https://metacpan.org/pod/App::cpanminus)
 - [cpm](https://metacpan.org/pod/App::cpm)
@@ -253,4 +262,5 @@ From [PAUSE Naming Modules - Local::](https://pause.perl.org/pause/query?ACTION=
 - [Signature Verification Vulnerabilities in CPAN.pm, cpanminus and CPAN::Checksums](https://blog.hackeriet.no/cpan-signature-verification-vulnerabilities/)
 - [Article about minicpan](http://www.stonehenge.com/merlyn/LinuxMag/col42.html)
 - [BackPAN - A Complete History Of CPAN](http://backpan.cpantesters.org/)
+- [PyPI - Namespace Vacuum](https://cybersecuritynews.com/popular-python-library-vulnerability/)
 

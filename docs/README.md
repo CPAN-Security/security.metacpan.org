@@ -22,6 +22,7 @@ See [guides/](guides/) for the full list of guides.
 ## Studies
 
 * [CPAN Dependency Confusion study](cpan-dependency-confusion.md)
+* [CPAN StarJacking (study)](cpan-starjacking.md)
 * [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
 
 ## Consultations and hearings
@@ -38,3 +39,4 @@ See the [consultations/](consultations/) folder for replies to public consultati
 
 * [Reading list](readinglist.md) for relevant tech & legislation ⚠️  DRAFT
 * [Glossary](glossary.md) of terms ⚠️  DRAFT
+

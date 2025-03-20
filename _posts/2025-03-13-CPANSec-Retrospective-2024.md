@@ -9,11 +9,10 @@ excerpt: Here is the CPANSec 2024 Retrospective
 
 That was a big year for CPANSec.
 
-If it gets a bit under the radar to you, please find some of the achievements listed in this retrospective!
+In case some of the activities this year flew under your radar, please find some of the achievements listed in this retrospective!
 
 ## Common Vulnerabilities and Exposures (CVEs)
-2024 was the year where, with the contribution of CPANSec, Perl communities evolved in their mindset
-and their attitudes towards Common Vulnerabilities and Exposures (CVEs).
+In 2024, CPANSec worked to illustrate the importance of the Common Vulnerabilities and Exposures (CVE) process.
 
 Until then, our experience is that very few CVEs were published for Perl modules and tooling.  
 Beyond that, people and authors were a bit reluctant to deal with those CVEs.
@@ -42,7 +41,7 @@ Similarly, a CVE was emitted for the [POSIX::2008](https://metacpan.org/dist/POS
 ## Improving CVE tooling
 Along with CVEs, tooling to monitor, fetch or test for them is very useful.
 They can be installed in workflows or tooling as a gate keeper
-for companies to do not ship vulnerable piece of code.
+so that companies do not ship vulnerable pieces of code.
 
 CPANSec produced and improved a few tools to fetch or test for CVEs:
 - [CPANSEC::Admin::Command::CVEScan](https://metacpan.org/pod/CPANSEC::Admin::Command::CVEScan)
@@ -132,7 +131,7 @@ Outside of pentesting, these deliveries are useful for plenty of tests (on index
 ## Outreach
 If CPANSpec is taking care of security aspects of CPAN and Perl, it's also promoting Perl in general, actively recruiting for open source security.
 
-This is in this scope that the group had a presence in ssveral events. From [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) to [London Perl and Raku Workshop 2024](https://act.yapc.eu/lpw2024/), but also [FOSDEM 2024](https://archive.fosdem.org/2024/) and the [OpenSSF summit](https://events.linuxfoundation.org/open-source-summit-europe/).
+This is in this scope that the group had a presence in several events. From [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) to [London Perl and Raku Workshop 2024](https://act.yapc.eu/lpw2024/), but also [FOSDEM 2024](https://archive.fosdem.org/2024/) and the [OpenSSF summit](https://events.linuxfoundation.org/open-source-summit-europe/).
 
 ## Other
 CPANSec also initiated a discussion (with a proposed change) to enable [Secure by default sessions in Mojolicious](https://github.com/mojolicious/mojo/pull/2200).

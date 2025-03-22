@@ -89,6 +89,12 @@ See also the [Regulations, directives and laws](#regulations--directives-and-law
 * (arXiv:2408.06723v1) [Sustaining Maintenance Labor for Healthy Open Source Software Projects through Human Infrastructure: A Maintainer Perspective](https://arxiv.org/pdf/2408.06723), Published 2024-08-13.
 * (MSFTOSS-2024) [5 things we learned from sponsoring a sampling of our open source dependencies](https://opensource.microsoft.com/blog/2024/06/27/5-things-we-learned-from-sponsoring-a-sampling-of-our-open-source-dependencies/), Published 2024-06-27.
 
+### Useful projects
+
+* CycloneDX 1.7 [OSS Sustainability WG](https://cyclonedx.org/participate/working-groups/)
+    * (CDX-2024) [OSS Sustainabillity Use Cases and Requirements](https://docs.google.com/document/d/1IZnHEwzz1N7LbChVkZTE_dfo3I2np8rULssq5I2wchM/edit?tab=t.0#heading=h.9w8846thd33t)
+    * (CPANSec-202f
+
 
 ## Provenance & Supply Chain Security {#provenance}
 

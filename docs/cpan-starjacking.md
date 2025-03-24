@@ -7,9 +7,11 @@ author: Thibault Duponchelle
 ## Rationale
 StarJacking[^1] is an undertaking to make people prefer a module because of manipulated popularity.
 
-[^1]: See the article [StarJacking – Making Your New Open Source Package Popular in a Snap](https://checkmarx.com/blog/starjacking-making-your-new-open-source-package-popular-in-a-snap/) by _Tzachi Zornstein_ for a good introduction.
+[^1]: For a great introduction, see the article [StarJacking – Making Your New Open Source Package Popular in a Snap](https://checkmarx.com/blog/starjacking-making-your-new-open-source-package-popular-in-a-snap/) by _Tzachi Zornstein_, published on _Checkmarx_ on 2022-04-19.
 
-While a known topic, checking CPAN for "StarJacking" was mainly the result of the attention drawn to it thanks to experiments from Eugene Rojavski ([EUGENER](https://metacpan.org/author/EUGENER))
+While a known topic, checking CPAN for "StarJacking" was mainly the result of the attention drawn to it thanks to experiments[^2] by Eugene Rojavski ([EUGENER](https://metacpan.org/author/EUGENER)).
+
+[^2]: This work was published in the article [Falling Stars](https://checkmarx.com/blog/falling-stars/) by _Eugene Rojavski_, published on _Checkmarx_ on 2024-11-18.
 
 ## How to choose what CPAN module to depend on?
 CPAN has such a huge collection of modules available it's sometimes difficult to make a decision about the best one to use.
@@ -125,7 +127,6 @@ Manipulating popularity via other CPAN in-house indicators is possible but not e
 The very social nature of CPAN (manual acceptance of new users, code reviews of new modules) makes it difficult overall to exploit.
 
 ### Further reading
-- [StarJacking](https://checkmarx.com/blog/falling-stars/)
 - [PyPI security](https://www.youtube.com/watch?v=ZvNuHKDyQXc)
 - [PyPI details verification](https://docs.pypi.org/project_metadata/#verified-details)
 - [PyPI trusted publishing](https://docs.pypi.org/trusted-publishers/)

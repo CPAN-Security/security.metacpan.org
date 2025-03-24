@@ -11,7 +11,7 @@ While a known topic, checking CPAN for "StarJacking" was mainly the result of th
 ## How to choose what CPAN module to depend on?
 CPAN has such a huge collection of modules available it's sometimes difficult to make a decision about the best one to use.
 
-Some lists are available like [Task::Kensho](https://metacpan.org/pod/Task::Kensho), [Awesome Perl](https://github.com/hachiojipm/awesome-perl) or [Awesome Perl](https://github.com/uhub/awesome-perl) (again) but they definitely don't cover all needs.
+There are curated lists of recommendations available, like the [Task::Kensho](https://metacpan.org/pod/Task::Kensho) project, @hachiojipm's [Awesome Perl](https://github.com/hachiojipm/awesome-perl) list, and @uhub's [Awesome Perl](https://github.com/uhub/awesome-perl) (again). While these lists are quite useful for assisting in the selection and procurement process, they cannot cover all needs.
 
 Module namespaces may also help, for instance the `Mojo::*` module namespace should, by convention, mainly using contain `Mojo` inner circle modules.
 Similarly, `*::Tiny` modules should, by convention, be smaller alternative to other modules of the same purpose.

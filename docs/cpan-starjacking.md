@@ -3,15 +3,10 @@ title: CPAN StarJacking
 toc: true
 author: Thibault Duponchelle
 ---
-# CPAN StarJacking
 ## Rationale
 StarJacking[^1] is an undertaking to make people prefer a module because of manipulated popularity.
 
-[^1]: For a great introduction, see the article [StarJacking – Making Your New Open Source Package Popular in a Snap](https://checkmarx.com/blog/starjacking-making-your-new-open-source-package-popular-in-a-snap/) by _Tzachi Zornstein_, published on _Checkmarx_ on 2022-04-19.
-
 While a known topic, checking CPAN for "StarJacking" was mainly the result of the attention drawn to it thanks to experiments[^2] by Eugene Rojavski ([EUGENER](https://metacpan.org/author/EUGENER)).
-
-[^2]: This work was published in the article [Falling Stars](https://checkmarx.com/blog/falling-stars/) by _Eugene Rojavski_, published on _Checkmarx_ on 2024-11-18.
 
 ## How to choose what CPAN module to depend on?
 CPAN has such a huge collection of modules available it's sometimes difficult to make a decision about the best one to use.
@@ -80,22 +75,22 @@ CPAN metadata is effectively unverified.
 
 PyPI now implements a mechanism for verifying metadata with [Project Metadata Verifications](https://docs.pypi.org/project_metadata/#verified-details):
 
-![PyPI verified](../media/starjacking/pypi-verified.png)
+> ![PyPI verified](../media/starjacking/pypi-verified.png)
 
 Or it can warn you about metadata information being "unverified":
 
-![PyPI unverified](../media/starjacking/pypi-unverified.png)
+> ![PyPI unverified](../media/starjacking/pypi-unverified.png)
 
 Back to MetaCPAN, the outcome is that GitHub/Gitlab/...  numbers are almost invisible in MetaCPAN.
 For instance, for a module with more than 200 stars in GitHub:
 
-![GitHub numbers in MetaCPAN](../media/starjacking/metacpan-side.png)
+> ![GitHub numbers in MetaCPAN](../media/starjacking/metacpan-side.png)
 
 Only issues are visible, but how can issues help in StarJacking?
 
 Still, we can get more details on metadata by hovering over **Repository**:
 
-![GitHub Metadata in CPAN](../media/starjacking/github.png)
+> ![GitHub Metadata in CPAN](../media/starjacking/github.png)
 
 As a conclusion, CPAN is not impacted even though CPAN modules can provide inaccurate or incorrect metadata.
 
@@ -113,7 +108,7 @@ And creations of authors requires a [request](https://pause.perl.org/pause/query
 ## RiverJacking ![River](../media/starjacking/river.png)
 The river score appears next to the module name in several places:
 
-![River score](../media/starjacking/riverscore.png)
+> ![River score](../media/starjacking/riverscore.png)
 
 The river score audience is mostly the maintainers.
 
@@ -127,8 +122,16 @@ Manipulating popularity via other CPAN in-house indicators is possible but not e
 The very social nature of CPAN (manual acceptance of new users, code reviews of new modules) makes it difficult overall to exploit.
 
 ### Further reading
-- [PyPI security](https://www.youtube.com/watch?v=ZvNuHKDyQXc)
+- MITRE's classification: [CAPEC-693: StarJacking](https://capec.mitre.org/data/definitions/693.html)
+- [PyPI security](https://www.youtube.com/watch?v=ZvNuHKDyQXc) (video)
 - [PyPI details verification](https://docs.pypi.org/project_metadata/#verified-details)
 - [PyPI trusted publishing](https://docs.pypi.org/trusted-publishers/)
 
 -----
+
+*[VCS]: Version Control System
+*[CPAN]: Comprehensive Perl Archive Network
+*[PyPI]: Python Package Index
+
+[^1]: For a great introduction, see the article [StarJacking – Making Your New Open Source Package Popular in a Snap](https://checkmarx.com/blog/starjacking-making-your-new-open-source-package-popular-in-a-snap/) by _Tzachi Zornstein_, published on _Checkmarx_ on 2022-04-19.
+[^2]: This work was published in the article [Falling Stars](https://checkmarx.com/blog/falling-stars/) by _Eugene Rojavski_, published on _Checkmarx_ on 2024-11-18.

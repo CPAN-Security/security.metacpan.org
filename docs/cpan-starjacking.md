@@ -1,6 +1,13 @@
+---
+title: CPAN StarJacking
+toc: true
+author: Thibault Duponchelle
+---
 # CPAN StarJacking
 ## Rationale
-StarJacking is an undertaking to make people prefer a module because of manipulated popularity. See [StarJacking](https://checkmarx.com/blog/starjacking-making-your-new-open-source-package-popular-in-a-snap/)
+StarJacking[^1] is an undertaking to make people prefer a module because of manipulated popularity.
+
+[^1]: See the article [StarJacking – Making Your New Open Source Package Popular in a Snap](https://checkmarx.com/blog/starjacking-making-your-new-open-source-package-popular-in-a-snap/) by _Tzachi Zornstein_ for a good introduction.
 
 While a known topic, checking CPAN for "StarJacking" was mainly the result of the attention drawn to it thanks to experiments from Eugene Rojavski ([EUGENER](https://metacpan.org/author/EUGENER))
 
@@ -9,28 +16,31 @@ CPAN has such a huge collection of modules available it's sometimes difficult to
 
 Some lists are available like [Task::Kensho](https://metacpan.org/pod/Task::Kensho), [Awesome Perl](https://github.com/hachiojipm/awesome-perl) or [Awesome Perl](https://github.com/uhub/awesome-perl) (again) but they definitely don't cover all needs.
 
-Naming of modules can also help, for instance `Mojo::*` modules should be, by convention, mainly using other `Mojo` inner circle modules as dependencies. `*::Tiny` are generally smaller alternative to other modules of the same purpose, etc...
+Module namespaces may also help, for instance the `Mojo::*` module namespace should, by convention, mainly using contain `Mojo` inner circle modules.
+Similarly, `*::Tiny` modules should, by convention, be smaller alternative to other modules of the same purpose.
 
-Most of the time and when possible, users will choose modules and authors that have an established "reputation". This reputation gives them authority on a topic, and the trust of users in term of security.
+Most of the time and when possible, users will choose modules and authors that have an established "reputation".
+This reputation gives them authority on a topic, and the trust of users in term of security.
 
-On top of that, some indicators of quality (build reports and known problems) and activity (maintainance) can be taken into account.
+On top of that, some indicators of quality (build reports, known issues) and activity (maintenance) may be taken into account.
 
-## Popularity indicators with CPAN
+### Popularity indicators
 Beyond reputation (module and/or author), MetaCPAN provides some popularity indicators for CPAN modules:
-- ++
-![plusplus](../media/starjacking/plusplus.png)
 
-- [river](https://neilb.org/2015/04/20/river-of-cpan.html) position
-![river](../media/starjacking/river.png)
+| Indicator  | Example                                        | Notes |
+| ---------- | +--------------------------------------------+ | +---- |
+| ++         | ![plusplus](../media/starjacking/plusplus.png) |       |
+| River      | ![River](../media/starjacking/river.png)       | [River of CPAN](https://neilb.org/2015/04/20/river-of-cpan.html) position |
 
-## Quality indicators in CPAN
+### Quality indicators
 Some other indicators can help in the choice but give more informations about *quality*:
-- Issues
-![Issues](../media/starjacking/issues.png)
-- CPANTesters
-![CPAN Testers](../media/starjacking/testers.png)
-- Bus factor
-![Bus factor](../media/starjacking/bus.png)
+
+| Indicator   | Example                                           | Notes |
+| ----------- | +-----------------------------------------------+ | ----- |
+| Issues      | ![Issues](../media/starjacking/issues.png)        |       |
+| CPANTesters | ![CPAN Testers](../media/starjacking/testers.png) |       |
+| Bus factor  | ![Bus factor](../media/starjacking/bus.png)       |       |
+
 
 ## StarJacking ![Stars](../media/starjacking/stars.png)
 StarJacking refers to the trust that VCS stars provide to a module.
@@ -64,7 +74,7 @@ META_MERGE   => {
 
 Read [CPAN add link to version control system](https://perlmaven.com/how-to-add-link-to-version-control-system-of-a-cpan-distributions) for more about how to set the metadata.
 
-CPAN metadats are effectively unverified.
+CPAN metadata is effectively unverified.
 
 PyPI now implements a mechanism for verifying metadata with [Project Metadata Verifications](https://docs.pypi.org/project_metadata/#verified-details):
 
@@ -74,13 +84,14 @@ Or it can warn you about metadata information being "unverified":
 
 ![PyPI unverified](../media/starjacking/pypi-unverified.png)
 
-Back to MetaCPAN, the outcome is that GitHub/Gitlab/... numbers are almost invisible in MetaCPAN. For instance, for a module with more than 200 stars in GitHub:
+Back to MetaCPAN, the outcome is that GitHub/Gitlab/...  numbers are almost invisible in MetaCPAN.
+For instance, for a module with more than 200 stars in GitHub:
 
 ![GitHub numbers in MetaCPAN](../media/starjacking/metacpan-side.png)
 
 Only issues are visible, but how can issues help in StarJacking?
 
-Still, we can get more details on metadata by hovering **Repository**:
+Still, we can get more details on metadata by hovering over **Repository**:
 
 ![GitHub Metadata in CPAN](../media/starjacking/github.png)
 
@@ -93,7 +104,7 @@ MetaCPAN package popularity uses an independant indicator, the "++" (PlusPlus).
 
 ++ are sent by other CPAN authors.
 
-Manipulation of a PlusPlus score is possible but not cheap: it require creation of several spammy authors.
+Manipulation of a PlusPlus score is possible but not cheap: it requires creation of several spammy authors.
 
 And creations of authors requires a [request](https://pause.perl.org/pause/query?ACTION=request_id) and [manual acceptance](https://www.nntp.perl.org/group/perl.modules/2024/11/msg105533.html) by CPAN admins.
 
@@ -107,14 +118,16 @@ The river score audience is mostly the maintainers.
 The calculation is made externally to PAUSE and MetaCPAN.
 
 ## Conclusion
-CPAN is not vulnerable to StarJacking, because VCS stars are not helping the popularity of a module in MetaCPAN.
+CPAN is highly unlikely to be vulnerable to StarJacking because VCS stars are not a factor in how the popularity of a module is determined on MetaCPAN.
 
 Manipulating popularity via other CPAN in-house indicators is possible but not easy to implement.
 
 The very social nature of CPAN (manual acceptance of new users, code reviews of new modules) makes it difficult overall to exploit.
 
-## Resources
+### Further reading
 - [StarJacking](https://checkmarx.com/blog/falling-stars/)
 - [PyPI security](https://www.youtube.com/watch?v=ZvNuHKDyQXc)
 - [PyPI details verification](https://docs.pypi.org/project_metadata/#verified-details)
 - [PyPI trusted publishing](https://docs.pypi.org/trusted-publishers/)
+
+-----

@@ -101,7 +101,7 @@ MetaCPAN package popularity uses an independant indicator, the "++" (PlusPlus).
 
 ++ are sent by other CPAN authors.
 
-Manipulation of a PlusPlus score is possible but not cheap: it requires creation of several spammy authors.
+Manipulation of a PlusPlus score is arguably possible but not straightforward, as it requires the registration of several new accounts, which is a human-reviewed process.
 
 And creations of authors requires a [request](https://pause.perl.org/pause/query?ACTION=request_id) and [manual acceptance](https://www.nntp.perl.org/group/perl.modules/2024/11/msg105533.html) by CPAN admins.
 

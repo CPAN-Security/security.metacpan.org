@@ -151,7 +151,7 @@ title: Minutes 2025-01-08
 *   (none)
 
 ### Next meeting date, time and location
-*   Next meeting is Friday 2025-01-22 (22 Jan 2025) @ 16:00UTC in #cpansec-discussion on Matrix (17:00 Europe/Amsterdam)
+*   Next meeting is Wednesday 2025-01-22 (22 Jan 2025) @ 16:00UTC in #cpansec-discussion on Matrix (17:00 Europe/Amsterdam)
 
 ## 17:27 UTC – Meeting end
 

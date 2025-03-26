@@ -162,7 +162,7 @@ Please take this into account when commenting this document.
 >     * If a dependency is unmet (not made available, deployed, installed), then it is called a _Requirement_.
 >     * A dependency can come in many forms,
 >         * Static, Dynamic, Resource or Service
->         * Included (Embedded), Direct or Transitive
+>         * Included (Embedded, Bundled), Direct or Transitive
 >         * Assumed (Phantom) or Unused (Zombie)
 >         * In-ecosystem or Out-of-ecosystem
 >         * Optional, Virtual or Resolved
@@ -203,7 +203,7 @@ Please take this into account when commenting this document.
 >
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
-#### Dependency (Contained; Embedded, Included, Pre-resolved) ✍️ {#dependency-contained}
+#### Dependency (Contained; Embedded, Included, Pre-resolved, Vendored) ✍️ {#dependency-contained}
 
 > 1. (CPANSec-2024) A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package.
 >
@@ -350,32 +350,34 @@ Please take this into account when commenting this document.
 > * See
 >     * [Requirement](#requirement)
 
-### Distributor ✍️ {#distributor}
+### Provider ✍️ {#provider}
 
-> [!NOTE]
-> * FIXME: Expand on this topic
+Providers take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements.
+(e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
 
-> 1. (CPANSec-2024) The Role that is tasked with ensuring a component artifact is available for download by anyone downstream.
+> 1. (CPANSec-2024) The Role that is tasked with ensuring a component artifact is available for download by anyone downstream
+>     * This term is in place of the term [Distributor](#distributor) when referring to Open Source Ecosystem component suppliers.
+>     * This is to disambiguate from the term [Distributor](#distributor) in the context of the EU Cyber Resilience Act.
+>     * If SBOM metadata is expected to accompany the packages or containers in question, the Provider makes sure this happens.
 >
+> * See also:
+>     * [Provider](supplychain-sbom.md#provider) in the Supply Chain
+>     * [Distributor](supplychain-sbom.md#distributor) in the Supply Chain
+
 > (Ref: [CPANSec-2024](#references-and-terms), [Distributor](#distributor))
 
-#### Distributor (CRA) ⚠️  {#distributor-cra}
+#### Distributor (CRA) ⚠️  {#distributor}
 
 > [!WARNING]
 > 1. (CPANSec-2024) The Cyber Resilience Act defines a distributor as someone who **does not** [Substantially Modify](#substantial-modification) a package/component.
->     * (CRA-2024-03 Article 21, 22) This means if an [Importer](#importer) or [Distributor](#distributor) applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [manufacturer](#manufacturer), including any consequences this may entail.
+>     * (CRA-2024-03 Article 21, 22) This means if an [Importer](#importer) or Distributor applies a patch with [Substantial Modifications](#substantial-modification), they are to be treated as a [Manufacturer](#manufacturer), including any consequences this may entail.
 >     * (CPANSec-2024) To disambiguate, we recommend Open Source Supply-chain Roles like this to be referred to as [Provider](#provider)
-
-> [!NOTE]
-> * FIXME: Expand on this topic
-> * FIXME: Confirm with legal counsel after final version of CRA is adopted.
-
 > 1. (CRA-2024-03) A natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product with digital elements available on the Union market without affecting its properties.
 > 1. (EUBG-2022-3) The distributor is a natural or a legal person in the supply chain, other than the manufacturer or the importer, who makes a product available on the market.
 >     *  Distributors are subject to specific obligations and have a key role to play in the context of market surveillance.
 >
 > * See also:
->     * [Distributor](#distributor)
+>     * [Provider](#provider)
 >
 > (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-3](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
@@ -883,8 +885,9 @@ Please take this into account when commenting this document.
 > 1. (CDXAG-2024) The name of an entity that creates, defines, and identifies components.
 >
 > * See also
->     * [Manufacturer](#manufacturer)
 >     * [Author](#author)
+>     * [Maintainer](#maintainer)
+>     * [Manufacturer](#manufacturer)
 >
 > (Ref: [NTIA-2021](#references-and-terms), CDXAG-2024)
 
@@ -923,7 +926,7 @@ This glossary is partly based on terms from the following sources.
 - (SCVS-2020) OWASP [Software Component Verification Standard 1.0 Glossary](https://scvs.owasp.org/scvs/appendix-a-glossary/) Appendix A ([CC-BY-SA-4.0](https://github.com/OWASP/Software-Component-Verification-Standard/blob/master/LICENSE.txt))
 - (SLSA-2023) OpenSSF [Supply-chain Levels for Software Artifacts 1.0 Terminology](https://slsa.dev/spec/v1.0/terminology)
 - (CRA-2024-03) EU [Cyber Resilience Act, Annex II, Chapter I, Article 3 (Definitions)](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130_EN.pdf#page=136), pages 136-146, published 2024-03-12.
-- (CPAN-2015) [CPAN Glossary](http://neilb.org/2015/09/05/cpan-glossary.html) by Neil Bowers, published 2015-09-05.
+- (CPAN-2015) [CPAN Glossary](https://neilb.org/2015/09/05/cpan-glossary.html) by Neil Bowers, published 2015-09-05.
 - (SBOMit-2023) [SBOM on in-toto Terminology](https://github.com/SBOMit/specification/blob/main/specification.md#15-terminology), Specification introduction section 1.5, published July 2023.
 - (NTIA-2021) [NTIA The Minimum Elements for an SBOM, Glossary](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=25), pages 25-27, published 2021-07-12.
 - (CISA-2024-3) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.

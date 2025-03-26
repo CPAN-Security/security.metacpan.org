@@ -1,5 +1,6 @@
 ---
 layout: page
+author: Robert Rothenberg
 title: Guidelines for Adding a Security Policy to Perl Distributions
 description: A guide for including a Security Policy in a CPAN distribution is to advise users how to report security issues, and how these issues will be handled.
 toc: true

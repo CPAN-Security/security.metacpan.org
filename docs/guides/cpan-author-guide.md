@@ -119,7 +119,7 @@ To help in this shift, CPANSec has put together several [guides](./) intended to
 > TODO
 
 
-### Use strong password encryption
+### Use secure authentication
 
 > [!NOTE]
 > TODO

@@ -13,7 +13,7 @@ description: A guide for CPAN distribution authors to writing secure code
 > What you see here is a DRAFT of the `CPAN Author's Guide to Secure Software Development` by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/guides/docs/guides/cpan-author-guide.md](https://github.com/CPAN-Security/security.metacpan.org/blob/guides/docs/guides/cpan-author-guide.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/guides/cpan-author-guide.md](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/guides/cpan-author-guide.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 

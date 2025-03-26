@@ -1,10 +1,10 @@
 ---
 layout: page
+toc: true
 author: Salve J. Nilsen
 mastodon: { username: sjn, instance: chaos.social }
 title: CPANSec's Guide to Secure Software Development
 description: A guide for CPAN distribution authors to writing secure code
-toc: true
 ---
 
 ## Document status: ⚠️  DRAFT
@@ -20,7 +20,7 @@ toc: true
 
 ## The need for Secure Software Development on CPAN
 
-As of December 2024, we have new guidelines and legislation introduced in the EU ([NIS2](/docs/readinglist.md#) and the [Cyber Resilience Act](/docs/readinglist.md#)), with US equivalents ([EO 14028](/docs/readinglist.md#)), introducing new requirements regarding software security.
+As of December 2024, we have new guidelines and legislation introduced in the EU ([NIS2](../readinglist.md#nis2) and the [Cyber Resilience Act](../readinglist.md#cra)), with US equivalents ([EO 14028](../readinglist.md#eo14028)), introducing new requirements regarding software security.
 These requirements are directed at many businesses and institutions to raise the baseline level of security in the software they produce and in sectors they operate.
 A substantial part of these depend on software published on CPAN.
 This means there is now a greater need for CPAN distributions to take their security posture into account.
@@ -40,24 +40,30 @@ To help in this shift, CPANSec has put together several [guides](./) intended to
 
 ### Keep your security metadata up-to-date
 
-1. Read the [CPAN::META::Spec](https://metacpan.org/pod/CPAN::Meta::Spec) and make sure all relevant fields are correct and up-to-date
-1. Ensure also that your list of requirements (dependencies) is complete, up-to-date, correct and takes into account any security issues
-    * This also means unused (zombie) requirements are removed
-    * This includes embedded/included and transitive dependencies
-    * This also means reducing assumed (phantom) dependencies to none, by making them explicit
+1. Read the [CPAN::META::Spec](https://metacpan.org/pod/CPAN::Meta::Spec), and
+    - [ ] make sure all relevant fields are correct and up-to-date
+1. Ensure also that your list of requirements (dependencies) is
+    - [ ] complete, up-to-date, and correct
+        - This also means unused (zombie) requirements are removed
+        - This includes security issues in embedded/included and transitive dependencies
+        - This also means reducing assumed (phantom) dependencies to none, by making them explicit
+        - …
+    - [ ] take into account any security issues
+        - …
 
 
 ### Share your security metadata
 
-1. Add a [security.txt](https://securitytxt.org/) file to your project website
-1. Add a [distribution security policy](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/guides/security-policy-for-authors.md) to your distribution
-   1. Add the same to your project repository ([Github instructions](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository))
+1. Communicate your policies and details around security issues
+   - [ ] Add a [security.txt](https://securitytxt.org/) file to your project website
+   - [ ] Add a [distribution security policy](security-policy-for-authors.md) to your distribution
+   - [ ] Add the same to your project repository ([Github instructions](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository))
 
 
 ### Add security tests to your code
 
 1. Learn how to use [perltaint](https://perldoc.perl.org/perlsec#Laundering-and-Detecting-Tainted-Data) to detect and defang input from untrusted sources
-1. Add [tests for taintedness](https://metacpan.org/pod/Test::Taint) to your codebase, to verify that your code actually handles untrusted input as expected
+   - [ ] Add [tests for taintedness](https://metacpan.org/pod/Test::Taint) to your codebase, to verify that your code actually handles untrusted input as expected
 1. Check out CPANSec's [guide to vulnerability testing](vulnerability-testing.md)
 
 
@@ -66,36 +72,39 @@ To help in this shift, CPANSec has put together several [guides](./) intended to
 
 ### Practice symbol import discipline
 
-1. Use [App::perlimports](https://www.olafalders.com/2024/04/15/getting-started-with-perlimports/) to get a better idea of what symbols you are using
+- [ ] Use [App::perlimports](https://www.olafalders.com/2024/04/15/getting-started-with-perlimports/) to get a better idea o what symbols you are using
 
 
 ### Reduce the amount transitive dependencies
 
 1. The more modules you depend on, the larger the attack surface you may have to defend
-    * If necessary, help your upstream maintainers to trim down their dependency graph
+    - [ ] If necessary, help your upstream maintainers to trim down their dependency graph
 
 
 ### Ensure your project is sustainable
 
 1. Have at least one other trusted co-maintainer
-    * You can add a co-maintainer in PAUSE
+    - [ ] Add a co-maintainer in PAUSE
 1. Have a succession plan
-    * Describe who among your co-maintainers will take over your project if you become permanently unavailable
-1. Communicate these clearly through common channels
-    * Keep an up-to-date list of co-maintainers and contributors in your repository, e.g. in an 'Acknowledgements' or 'Contributors' section in the documentation
-    * Add a `CONTRIBUTING.md` file, to make it easier for both new and old contributors to help
+    - [ ] Describe who among your co-maintainers will take over your project if you become permanently unavailable
+1. Communicate who are your contributors, co-maintainers and successors clearly through common channels
+    - [ ] Keep an up-to-date list of co-maintainers and contributors in your repository, e.g. in an 'Acknowledgements' or 'Contributors' section in the documentation
+    - [ ] Add a `CONTRIBUTING.md` file, to make it easier for both new and old contributors to help
 
 
 ### Select an appropriate Open Source license
 
-1. Pick an OSI-approved Open Source license, and add it both to your project repo and other metadata
+1. Ensure you license is commonly used
+    - [ ] Pick an OSI-approved Open Source license, and
+    - [ ] add it both to your project repository and other metadata
 
 
 ## Improving your code
 
 ### Use a secure Random Number Generator
 
-1. Read the [CPAN Author’s Guide to Random Data for Security](random-data-for-security.md)
+1. Read the [CPAN Author’s Guide to Random Data for Security](random-data-for-security.md), and
+    - [ ] Check and fix your code for any of the bad practices mentioned there
 
 
 ### Use safe cryptographic algorithms

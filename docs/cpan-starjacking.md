@@ -107,6 +107,8 @@ Manipulation of a PlusPlus score is arguably possible but not straightforward, a
 And creations of authors requires a [request](https://pause.perl.org/pause/query?ACTION=request_id) and [manual acceptance](https://www.nntp.perl.org/group/perl.modules/2024/11/msg105533.html) by CPAN admins.
 
 ## RiverJacking ![River](../media/starjacking/river.png)
+See the [river of CPAN](https://neilb.org/2015/04/20/river-of-cpan.html) for explanation about the "river" concept.
+
 The river score appears next to the module name in several places:
 
 > ![River score](../media/starjacking/riverscore.png)

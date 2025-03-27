@@ -70,7 +70,7 @@ META_MERGE   => {
 },
 ```
 
-Read [CPAN add link to version control system](https://perlmaven.com/how-to-add-link-to-version-control-system-of-a-cpan-distributions) for more about how to set the metadata.
+Read [CPAN add link to version control system](https://metacpan.org/pod/CPAN::Meta::Spec#resources) for more about how to set the metadata.
 
 CPAN metadata is effectively unverified.
 

@@ -16,8 +16,9 @@ There are curated lists of recommendations available, like the [Task::Kensho](ht
 Module namespaces may also help, for instance the `Mojo::*` module namespace should, by convention, mainly using contain `Mojo` inner circle modules.
 Similarly, `*::Tiny` modules should, by convention, be smaller alternative to other modules of the same purpose.
 
-Most of the time and when possible, users will choose modules and authors that have an established "reputation".
-This reputation gives them authority on a topic, and the trust of users in term of security.
+Author recognition also plays an important role in the user's perception of trust and credibility 
+due to several human biases such as the [Halo Effect](https://en.wikipedia.org/wiki/Halo_effect) and general familiarity favoritism: 
+if you know or trust a module from a certain author, other modules published by that same person are more likely to be considered.
 
 On top of that, some indicators of quality (build reports, known issues) and activity (maintenance) may be taken into account.
 

@@ -13,7 +13,7 @@ Documents relevant to the CPAN Security Group.
 
 ## Guides
 
-* [CPAN Author's Secure Software Development Guide](guides/cpan-secure-development-guide.md) ⚠️  DRAFT
+* [CPAN Author's Guide to Secure Software Development](guides/cpan-secure-development-guide.md) ⚠️  DRAFT
 * [CPAN Author's Guide to Random Data for Security](guides/random-data-for-security.md)
 * [CPAN Author's Security Policy guide](guides/security-policy-for-authors.md)
 

@@ -4,6 +4,8 @@ toc: true
 author: Salve J. Nilsen
 mastodon: { username: sjn, instance: chaos.social }
 title: CPAN Author's Guide to Secure Software Development
+redirect_from:
+    - /docs/guides/cpan-author-guide
 description: A guide for CPAN distribution authors to writing secure code, by the CPAN Security Group
 ---
 

@@ -3,8 +3,8 @@ layout: page
 toc: true
 author: Salve J. Nilsen
 mastodon: { username: sjn, instance: chaos.social }
-title: CPANSec's Guide to Secure Software Development
-description: A guide for CPAN distribution authors to writing secure code
+title: CPAN Author's Guide to Secure Software Development
+description: A guide for CPAN distribution authors to writing secure code, by the CPAN Security Group
 ---
 
 ## Document status: ⚠️  DRAFT

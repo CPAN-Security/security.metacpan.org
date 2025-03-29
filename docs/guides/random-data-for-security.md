@@ -33,12 +33,20 @@ Modern operating systems provide access to random data:
 - Newer Linux and BSD variants have the [getrandom(2)](http://man.he.net/man2/getrandom) system call.
 - Windows provides a `CryptGenRandom` function in the API.
 
-These sources are easy to access from Perl using several modules.  We are listing a few here that are lightweight,
-and which (generally) have good defaults.
+These sources are easy to access from Perl using several modules, which we discuss below.
 
-It's also preferable to use existing and up-to-date modules than to roll your own method for reading random
-data. The benefits of reducing non-core dependencies are outweighed by potential bugs introduced by duplicating code
-that needs to be maintained separately.
+## Recommended Perl Modules
+
+It's better to use existing and up-to-date modules than to roll your own method for reading or generating random data.
+The benefits of reducing non-core dependencies are outweighed by potential bugs introduced by duplicating code that needs to be maintained separately.
+
+We are listing a few here that are portable, lightweight and which have good defaults.
+They also use the standard source of random data from the operating system, rather than allowing or even requiring the developer to choose a source.
+
+It is important to note that there is a common misconception that `/dev/urandom` is insecure. This is untrue, as
+`/dev/random` and `/dev/urandom` use the same entropy pool and PRNG internally.  In newer Linux kernels, `/dev/random` no
+longer blocks and is an alias for `/dev/urandom`.
+See [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/) for an in-depth discussion of this.
 
 ### Crypt::URandom
 
@@ -56,10 +64,6 @@ To obtain 256-bits (32 bytes) of data:
 Since this is a wrapper around the operating system's random data source, there is no worry about child processes
 with the same parent returning the same data (i.e., it is "fork safe").
 
-It is important to note that there is a common misconception that `/dev/urandom` is insecure. This is untrue, as
-`/dev/random` and `/dev/urandom` use the same entropy pool and PRNG internally.  In newer Linux kernels, `/dev/random` no
-longer blocks and is an alias for `/dev/urandom`.
-See [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/) for an in-depth discussion of this.
 
 ### Sys::GetRandom
 

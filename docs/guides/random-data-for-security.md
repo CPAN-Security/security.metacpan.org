@@ -64,6 +64,22 @@ To obtain 256-bits (32 bytes) of data:
 Since this is a wrapper around the operating system's random data source, there is no worry about child processes
 with the same parent returning the same data (i.e., it is "fork safe").
 
+### Crypt::SysRandom
+
+[Crypt::SysRandom](https://metacpan.org/pod/Crypt::SysRandom) is a pure-perl module for reading from `/dev/urandom` or
+the [Win32::API](https://metacpan.org/pod/Win32::API) random function call.
+
+To obtain 256-bits (32 bytes) of data:
+
+    use Crypt::SysRandom qw( random_bytes );
+
+    my $bytes = random_bytes(32);
+
+Likewise, since this is also a wrapper around the operating system's random data source, there is no worry about child
+processes with the same parent returning the same data (i.e., it is "fork safe").
+
+If [Crypt::SysRandom::XS](https://metacpan.org/pod/Crypt::SysRandom::XS) is installed, it will use that to retrieve
+random bytes from system calls.  Note there may be issues when requesting more than 256 bytes on some systems when using the XS module.
 
 ### Sys::GetRandom
 

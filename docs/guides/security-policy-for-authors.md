@@ -328,6 +328,22 @@ to that document.
 
 For example, see [\[2\]](#references-and-notes) (Perl-Sec-Policy).
 
+## Security Policies for Software that you Embed
+
+If you embed copies of other software, then you should not remove or modify any security policies that are included with that software.
+
+However, you should add a separate security policy document with a suffix to refer to your security policy.
+For example, if you are embedding the "baz" library in the "Foo-Bar" project, you could add in the library's source directory in the distribution a file named `SECURITY-Foo-Bar.md` with the content:
+
+> This is the Security Policy for the baz library that is embedded in the Perl Foo-Bar distribution.
+>
+> There may be modifications to this library specific to Foo-Bar.
+>
+> Please report any security vulnerabilities associated with this library to the maintainers of Foo-Bar as outlined in the `SECURITY.md` file in the root directory of this source tree.
+> Any vulnerabilities that are found to be part of or relevant to the baz library will be forwarded to the maintainers of the baz library.
+>
+> The original security policy for the baz library can be found in this directory as `SECURITY.md`.
+
 ## Examples
 
 These examples below are in the [public domain](https://creativecommons.org/public-domain/cc0/).

@@ -448,7 +448,7 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 1.1.0
+* Version: 1.2.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

@@ -10,7 +10,7 @@ toc: true
 
 The purpose of including a Security Policy in a CPAN distribution is to advise users how to report security issues, and how these issues will be handled.
 
-Note that while this guide has an open source license, the actual security policies written based on this guide, including any recommended wording or example policies below, are in the public domain.
+Note that while this guide has an open source license, the actual security policies written based on this guide, including any recommended wording or example policies below, are in the [public domain](https://creativecommons.org/public-domain/cc0/).
 (This includes any policies based on prior versions of this guide.)
 You do not need to mention or link to any license in your security policy, and your security policy should be considered a part of your software and covered by that software's license.
 
@@ -330,7 +330,7 @@ For example, see [\[2\]](#references-and-notes) (Perl-Sec-Policy).
 
 ## Examples
 
-These examples below are in the public domain.
+These examples below are in the [public domain](https://creativecommons.org/public-domain/cc0/).
 Any security policy that uses these examples as templates should be considered a part of the software that it applies to, and covered by that software's license.
 
 ### Single Maintainer

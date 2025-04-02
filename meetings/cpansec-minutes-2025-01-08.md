@@ -93,7 +93,7 @@ title: Minutes 2025-01-08
   - [Issue raised in MetaCPAN](https://github.com/metacpan/metacpan-web/issues/3246) to highlight the document like it does README, LICENSE etc
   - Most important: we are getting feedback
 - @tux - Software::Security::Policy::Individual - do we need ::Team (or other name)?
-  - team policies to be documented: active teams, active groups, active Github projects with more maintainers but no single person to address for vulnerabilities (hidden Github security issues)
+  - team policies to be documented: active teams, active groups, active GitHub projects with more maintainers but no single person to address for vulnerabilities (hidden GitHub security issues)
   - discussed also different ideas about how templates will evolve.
 
 ### CPAN Meta Spec, Requirements and PURLs
@@ -107,7 +107,7 @@ title: Minutes 2025-01-08
 - @sjn - finishing work on NIS2 consultation tonight; Deadline Jan 9th
 
 ### Eclipse ORC WG
-- @sjn - moved org to Github, set up a Slack server for comms.
+- @sjn - moved org to GitHub, set up a Slack server for comms.
 
 ### CycloneDX 1.7 Sustainability fields
 - @sjn - moving forward with the Project needs enumeration; Latest addition: mental health first aider.

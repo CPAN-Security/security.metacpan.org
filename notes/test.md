@@ -111,7 +111,7 @@ example.
 
 ----
 
-## Github variables
+## GitHub variables
 
 Found on https://jekyll.github.io/github-metadata/site.github/
 

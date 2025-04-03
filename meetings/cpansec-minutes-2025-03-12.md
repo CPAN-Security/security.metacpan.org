@@ -204,8 +204,8 @@ title: CPANSec bi-weekly minutes
 - @sjn - investigates alternatives
    - [x] @sjn - Cryptpad investigated, and not usable for calendar stuff. [New calendar URL set up directly in google calendar](https://calendar.google.com/calendar/u/0/embed?src=691584e3db7d0a877b43482fc996eaae9984cf8ba0b769d5d00d042a32f9c66e@group.calendar.google.com) by @sjn, and added to the meetings page.
    - [x] @sjn - New Mastodon account created on https://fosstodon.org/@cpansec - please subscribe!
-- [x] @sjn - Create a list of common/shared CPANSec resources & contact points/people to a private repo on GitHub.
-   - @sjn - Done; Please check it out (look for it on GitHub), and help keep it correct and up-to-date!
+- [x] @sjn - Create a list of common/shared CPANSec resources & contact points/people to a private repo on Github.
+   - @sjn - Done; Please check it out (look for it on Github), and help keep it correct and up-to-date!
 
 
 ## Next meeting date, time and location

@@ -94,7 +94,6 @@ title: CPANSec bi-weekly minutes
 
 #### StarJacking Study
 - [ ] @thibaultduponchelle - CPAN StarJacking study
-   - [x] @garu @thibaultduponchelle - Checked riverjacking algo with Neil for faking high river score with one single author
    - [ ] Ready. Merge?
 
 

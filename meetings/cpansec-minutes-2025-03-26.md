@@ -141,7 +141,7 @@ title: CPANSec bi-weekly minutes
     - I think we'd do well to try to contribute to especially this process, to ensure that the coming standards and guidelines for handling vulnerabilities are well-alligned with our (Open Source Ecosystems) particular needs.
     - [x] Volunteers needed! @sjn has too much to do, and this is imporant and may shape our workload for many years, depending on what we do (or don't do).
        - @stigtsp can join for a meeting, and take it from there
-    - [ ] @all - Watch the [CEN/CENELEC introduction webinar on this matter](https://www.youtube.com/watch?v=KVr9zSZ0nUU) (Duration: 1h 20min; [Slides etc.](https://www.cencenelec.eu/news-and-events/events/2025/2025-03-10_webinar_cyber-resilience-act/))
+    - [x] @all - Watch the [CEN/CENELEC introduction webinar on this matter](https://www.youtube.com/watch?v=KVr9zSZ0nUU) (Duration: 1h 20min; [Slides etc.](https://www.cencenelec.eu/news-and-events/events/2025/2025-03-10_webinar_cyber-resilience-act/))
 
 #### PTS Funding
 - @sjn - BooK has asked for help raiding funds.

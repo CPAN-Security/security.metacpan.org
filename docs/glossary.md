@@ -568,11 +568,24 @@ Providers take packages or containers that Patchers and Packagers produce, and e
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
-### Product with digital elements (CRA)
+
+### Product
+
+> 1. (CPANSec-2024) A release of a project codebase that has been made ready for easy deployment and use, and that is made available, marketed or sold with a recognizable name or trademark.
+
+
+### Product with digital elements (CRA) {#pde}
 
 > 1. (CRA-2024-03) A software or hardware product and its [Remote Data Processing](#remote-data-processing) solutions, including software or hardware components being placed on the market separately.
 >
 > (Ref: [CRA-2024-03](#references-and-terms))
+
+
+### Project
+
+> 1. (CPANSec-2024) the social and technical structure around a codebase which works on and decides how it is developed over time. a project has a name, a maintainer and a repository for collaboration, and may have one or more co-maintainers (possibly constituting a "core" of the project) that help take care of the codebase.
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
 
 
 ### Provenance ✍️ {#provenance}
@@ -584,11 +597,24 @@ Providers take packages or containers that Patchers and Packagers produce, and e
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
 
+### Release
+
+> 1. (CPANSec-2024) A named and versioned snapshot of the codebase, that is announced as suitable for general use (e.g. "is stable"), and possibly published through a public repository, a language or package ecosystem or, some other way.
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
+
+
 ### Remote Data Processing (CRA)
 
 > 1. (CRA-2024-03) Data processing at a distance the software for which is designed and developed by the manufacturer, or under the responsibility of the manufacturer, and the absence of which would prevent the product with digital elements from performing one of its functions.
 >
 > (Ref: [CRA-2024-03](#references-and-terms))
+
+### Repository
+
+> 1. (CPANSec-2024) The tooling, storage, services and regime used for collaborating on improving a codebase over time, either locally or remotely across a network.
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
 
 
 ### Second-party component ✍️ {#second-party-component}

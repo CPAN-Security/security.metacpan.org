@@ -41,12 +41,6 @@ It's better to use existing and up-to-date modules than to roll your own method 
 The benefits of reducing non-core dependencies are outweighed by potential bugs introduced by duplicating code that needs to be maintained separately.
 
 We are listing a few here that are portable, lightweight and which have good defaults.
-They also use the standard source of random data from the operating system, rather than allowing or even requiring the developer to choose a source.
-
-It is important to note that there is a common misconception that `/dev/urandom` is insecure. This is untrue, as
-`/dev/random` and `/dev/urandom` use the same entropy pool and PRNG internally.  In newer Linux kernels, `/dev/random` no
-longer blocks and is an alias for `/dev/urandom`.
-See [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/) for an in-depth discussion of this.
 
 ### Crypt::URandom
 
@@ -96,6 +90,35 @@ There is also a pure-Perl version [Sys::GetRandom::PP](https://metacpan.org/pod/
 
 Note there are some caveats when using `getrandom` to retrieve more than 256 bytes at a time, as the amount of
 data returned may be less due to interrupts.
+
+### Other modules
+
+There are several older modules on CPAN that have been intentionally
+omitted from this document:
+
+* They require users to select a source of randomness.
+
+  Many consumers of these modules do not select the source, and in some
+  cases these modules have had insecure defaults.
+
+  For most cases there is no reason to choose a source when there is a
+  standard source of random data provided by modern operating systems.
+
+* They add an unnecessary layer of complexity by wrappers around
+  different sources.
+
+  Some will use a PRNG seeded by random data, which provides no
+  improvement over `/dev/urandom`. These implementations have had less
+  reviewers than the operating systems, and may be less secure.
+
+* They incorrectly label `/dev/urandom` as weaker than `/dev/random`.
+
+  It is important to note that there is a common misconception, as
+  both devices use the same entropy pool and PRNG internally.  In
+  newer Linux kernels, `/dev/random` no longer blocks and is an alias
+  for `/dev/urandom`.  See
+  [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/)
+  for an in-depth discussion of this.
 
 ## Using Cryptographic Strength PRNGs
 

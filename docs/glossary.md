@@ -180,7 +180,8 @@ Please take this into account when commenting this document.
 > 1. (CPANSec-2024) A [software](#software) program, library, plugin, service, resource or component that is required for another software program or component to function as expected.
 >
 > * See also
->     * For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive).
+>     * [Dependency (Transitive)](#dependency-transitive)
+>     * [Dependency (Indirect)](#dependency-indirect)
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
@@ -191,6 +192,11 @@ Please take this into account when commenting this document.
 
 > * See also
 >     * [Dependency (Static)](#dependency-static)
+
+#### Dependency (Indirect) {#dependency-indirect}
+
+> 1. (CPANSec-2024) A dependency that is used during the author, build, test or deployment stages of a program, but is is not needed any more during runtime.
+>     * Examples: Compilers, test harnesses, build tooling, editors, software packaging tooling, software repositories and publishing platforms.
 
 #### Dependency (Transitive) ✍️ {#dependency-transitive}
 

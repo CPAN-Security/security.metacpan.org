@@ -33,16 +33,18 @@ Modern operating systems provide access to random data:
 - Newer Linux and BSD variants have the [getrandom(2)](http://man.he.net/man2/getrandom) system call.
 - Windows provides a `CryptGenRandom` function in the API.
 
-These sources are easy to access from Perl using several modules.  We are listing a few here that are lightweight,
-and which (generally) have good defaults.
+These sources are easy to access from Perl using several modules, which we discuss below.
 
-It's also preferable to use existing and up-to-date modules than to roll your own method for reading random
-data. The benefits of reducing non-core dependencies are outweighed by potential bugs introduced by duplicating code
-that needs to be maintained separately.
+## Recommended Perl Modules
+
+It's better to use existing and up-to-date modules than to roll your own method for reading or generating random data.
+The benefits of reducing non-core dependencies are outweighed by potential bugs introduced by duplicating code that needs to be maintained separately.
+
+We are listing a few here that are portable, lightweight and which have good defaults.
 
 ### Crypt::URandom
 
-The simplest to use, is [Crypt::URandom](https://metacpan.org/pod/Crypt::URandom).  It is a lightweight module that
+One of the simplest to use is [Crypt::URandom](https://metacpan.org/pod/Crypt::URandom). It
 reads from a random data source on a variety of systems, using the `/dev/urandom` device or equivalents on other
 operating systems, including Windows.  Newer versions will also use the `getrandom` or `getentropy` calls on systems
 that support those calls.
@@ -56,10 +58,22 @@ To obtain 256-bits (32 bytes) of data:
 Since this is a wrapper around the operating system's random data source, there is no worry about child processes
 with the same parent returning the same data (i.e., it is "fork safe").
 
-It is important to note that there is a common misconception that `/dev/urandom` is insecure. This is untrue, as
-`/dev/random` and `/dev/urandom` use the same entropy pool and PRNG internally.  In newer Linux kernels, `/dev/random` no
-longer blocks and is an alias for `/dev/urandom`.
-See [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/) for an in-depth discussion of this.
+### Crypt::SysRandom
+
+[Crypt::SysRandom](https://metacpan.org/pod/Crypt::SysRandom) is a pure-perl module for reading from `/dev/urandom` or
+the [Win32::API](https://metacpan.org/pod/Win32::API) random function call.
+
+To obtain 256-bits (32 bytes) of data:
+
+    use Crypt::SysRandom qw( random_bytes );
+
+    my $bytes = random_bytes(32);
+
+Likewise, since this is also a wrapper around the operating system's random data source, there is no worry about child
+processes with the same parent returning the same data (i.e., it is "fork safe").
+
+If [Crypt::SysRandom::XS](https://metacpan.org/pod/Crypt::SysRandom::XS) is installed, it will use that to retrieve
+random bytes from system calls.  Note there may be issues when requesting more than 256 bytes on some systems when using the XS module.
 
 ### Sys::GetRandom
 
@@ -76,6 +90,35 @@ There is also a pure-Perl version [Sys::GetRandom::PP](https://metacpan.org/pod/
 
 Note there are some caveats when using `getrandom` to retrieve more than 256 bytes at a time, as the amount of
 data returned may be less due to interrupts.
+
+### Other modules
+
+There are several older modules on CPAN that have been intentionally
+omitted from this document:
+
+* They require users to select a source of randomness.
+
+  Many consumers of these modules do not select the source, and in some
+  cases these modules have had insecure defaults.
+
+  For most cases there is no reason to choose a source when there is a
+  standard source of random data provided by modern operating systems.
+
+* They add an unnecessary layer of complexity by wrappers around
+  different sources.
+
+  Some will use a PRNG seeded by random data, which provides no
+  improvement over `/dev/urandom`. These implementations have had less
+  reviewers than the operating systems, and may be less secure.
+
+* They incorrectly label `/dev/urandom` as weaker than `/dev/random`.
+
+  It is important to note that there is a common misconception, as
+  both devices use the same entropy pool and PRNG internally.  In
+  newer Linux kernels, `/dev/random` no longer blocks and is an alias
+  for `/dev/urandom`.  See
+  [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/)
+  for an in-depth discussion of this.
 
 ## Using Cryptographic Strength PRNGs
 
@@ -206,7 +249,7 @@ December 2024.
 
 ## License and use of this document
 
-* Version: 0.1.4
+* Version: 0.2.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

@@ -157,6 +157,7 @@ title: CPANSec bi-weekly minutes
 - [ ] @leont - share ongoings & blockers
    - [ ] @sjn - should we take this item out of the agenda?
    - Lets leave till after PTS
+- [ ] @stigtsp and others add Todo tasks to the project board, so we don't forget what "Secure by Default" entails
 
 #### Ongoing vulnerabilities
 - [x] @timlegge - Crypt::Bcrypt issues around password length

@@ -117,7 +117,7 @@ title: CPANSec bi-weekly minutes
         - Present purpose and regulatory requirements
         - Discuss and decide on community aligned principles to be enshrined in the Charter
         - Who are the founding stakeholder groups?
-    - [ ] @tux  - DBI on how to use tooling to improve security there
+    - [ ] @tux - DBI on how to use tooling to improve security there
 
 #### New Guide needed: PackageURL
 - [ ] @sjn - We need a comprehensive PackageURL guide that answers/covers all relevant use cases
@@ -128,7 +128,7 @@ title: CPANSec bi-weekly minutes
     - Perl project found on CPAN uses a CPAN module found on CPAN
     - Perl project not found on CPAN uses a CPAN module not found on CPAN, but a DarkPAN
     - etc.
-    - No progress
+- @sjn - No progress
 
 #### StarJacking Study
 - [x] @thibaultduponchelle - CPAN StarJacking study
@@ -195,7 +195,7 @@ title: CPANSec bi-weekly minutes
    - Possible candidates:
      - [ ] @atoomic
      - [x] @thibaultduponchelle volunteers!
-   - @thibaultduponchelle - Initiated some preliminary discussions around CPAN Patch tooling.
+- @thibaultduponchelle - Initiated some preliminary discussions around CPAN Patch tooling.
 
 ### [Authentication & Trusted Publishing](https://github.com/orgs/CPAN-Security/projects/3/views/2)
 - [ ] (Volunteers/tuits/funding needed - this topic is available for adoption!)

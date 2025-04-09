@@ -88,13 +88,13 @@ title: CPANSec bi-weekly minutes
 - [x] @robrwo issue with the license of the resulting security policies
    - should we change from CC0 to BSD0?
       - Some discussion of licensing - @rrwo will change to BSD0
-- [ ] @robrwo mini-project to encourage the popular modules to add a security policy
+- @robrwo mini-project to encourage the popular modules to add a security policy
    - See https://metacpan.org/favorite/leaderboard for a list
-   - Sounds like a good idea
+   - @timlegge - Sounds like a good idea
    - security.md, sbom and valid cpanfile, cpansa and busfactor, cpan.org email
    - cpants has experimental support
    - look into "update your cpan module" month (ref @tux's checklist)
-      - contact manwar 
+   - [ ] @robrwo - contacts manwar to see if he'd like to help with outreach
 
 ### [Security Information & Outreach](https://github.com/orgs/CPAN-Security/projects/12/views/3)
 
@@ -102,8 +102,8 @@ title: CPANSec bi-weekly minutes
 - N/A
 
 #### Perl Toolchain Summit 2025
-- [ ] @sjn - Create document on what CPANSec-relevant issues need to be decided on/discussed at PTS
-    - Everyone, please add tasks!
+- @sjn - Create document on what CPANSec-relevant issues need to be decided on/discussed at PTS
+    - Everyone, please add tasks to the PTS wiki!
     - [ ] @stigtsp - Better tooling for CNA CVE
     - [ ] @stigtsp and tim - Intro to CNA CVE (onboarding?)
     - [ ] @stigtsp - Show CVEs on MetaCPAN
@@ -155,8 +155,8 @@ title: CPANSec bi-weekly minutes
 
 #### TLS/HTTPS/CSPRNG/DSA in core
 - [ ] @leont - share ongoings & blockers
-   - [ ] @sjn - should we take this item out of the agenda?
-   - Lets leave till after PTS
+   - [x] @sjn - should we take this item out of the agenda?
+      - Lets leave till after PTS
 - [ ] @stigtsp and others add Todo tasks to the project board, so we don't forget what "Secure by Default" entails
 
 #### Ongoing vulnerabilities
@@ -187,7 +187,7 @@ title: CPANSec bi-weekly minutes
 
 #### CPAN Steward org
 - @sjn - Discussions on TPRF slack #cpansec-steward; Mostly @sjn making noise;
-    - Contributors who care about governance needed; Please reach out to @sjn
+    - [ ] Contributors who care about governance needed; Please reach out to @sjn
 
 
 ### [Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11/views/2)
@@ -195,7 +195,7 @@ title: CPANSec bi-weekly minutes
    - Possible candidates:
      - [ ] @atoomic
      - [x] @thibaultduponchelle volunteers!
-   - @tib offline update: I initiated some preliminary discussions around CPAN Patch tooling.
+   - @thibaultduponchelle - Initiated some preliminary discussions around CPAN Patch tooling.
 
 ### [Authentication & Trusted Publishing](https://github.com/orgs/CPAN-Security/projects/3/views/2)
 - [ ] (Volunteers/tuits/funding needed - this topic is available for adoption!)
@@ -205,7 +205,7 @@ title: CPANSec bi-weekly minutes
 
 ### [Transparency Logs & Trusted Distribution](https://github.com/orgs/CPAN-Security/projects/2/views/2)
 - [ ] (Volunteers/tuits/funding needed - this topic is available for adoption!)
-
+- [x] We decided to close this project; Will reopen if someone volunteers
 
 ## Any Other Business
 - [x] @stigtsp - domain name; we're using metacpan.org branding, but also own the cpansec.org domain. What to do with this? @stigtsp reports

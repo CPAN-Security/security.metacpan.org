@@ -28,7 +28,7 @@ title: CPANSec bi-weekly minutes
 -   Attendees
     - @robrwo, @timlegge, @Tux, @stigtsp. @sjn
 -   Regrets
-    - @thibaultdupenchelle
+    - @thibaultduponchelle
 
 ### Approve previous meeting minutes
 -   Previous meeting minutes was approved by @thibaultduponchelle and merged by @sjn

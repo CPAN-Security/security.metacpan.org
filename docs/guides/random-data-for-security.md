@@ -73,7 +73,7 @@ Likewise, since this is also a wrapper around the operating system's random data
 processes with the same parent returning the same data (i.e., it is "fork safe").
 
 If [Crypt::SysRandom::XS](https://metacpan.org/pod/Crypt::SysRandom::XS) is installed, it will use that to retrieve
-random bytes from system calls.  Note there may be issues when requesting more than 256 bytes on some systems when using the XS module.
+random bytes from system calls.
 
 ### Sys::GetRandom
 
@@ -249,7 +249,7 @@ December 2024.
 
 ## License and use of this document
 
-* Version: 0.2.0
+* Version: 0.2.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 
@@ -262,6 +262,7 @@ Several people have been involved in the development of this document
 * Robert Rothenberg (main author)
 * Alexander Hartmaier
 * H. Merijn Brand
+* Leon Timmermans
 * Salve J. Nilsen
 * Stig Palmquist
 * Thibault Duponchelle

@@ -262,6 +262,7 @@ Several people have been involved in the development of this document
 * Robert Rothenberg (main author)
 * Alexander Hartmaier
 * H. Merijn Brand
+* Leon Timmermans
 * Salve J. Nilsen
 * Stig Palmquist
 * Thibault Duponchelle

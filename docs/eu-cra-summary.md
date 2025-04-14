@@ -65,6 +65,7 @@ mermaid: true
 [Article 13(18)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.018 'Manufacturers shall ensure products are accompanied by documentation listed in Annex II, and available for at least 10 years'
 [Article 13(19)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.019 'Manufacturers shall shall clearly mark the end date of the support period'
 [Article 13(20)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.020 'Manufacturers shall provide a copy of or the exact internet addrees to the EU declaration of conformity'
+[Article 13(21)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.021 'Manufacturers shall ensure if their product is not conforming, to immediately take corrective measures to bring that product into conformity, or withdraw or recall the product'
 [Article 14]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_14 'Reporting obligations of manufacturers'
 [Article 14(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.001 'A manufacturer shall notify any actively exploited vulnerability contained in the product that it becomes aware of'
 [Article 14(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.002 'A manufacturer shall notify within 24 hours, 72 hours and 14 days'
@@ -191,6 +192,13 @@ Manufacturers are to draw up the EU declaration of conformity in accordance with
 
 Manufacturers must provide a Software Bill of Materials (SBOM) upon request by authorities, as laid out in [Recital (77)]
 * …but no need for making these public.
+
+From the placing on the market […] manufacturers who know or have reason to believe that the product […] or the processes put in place […]
+* are not in conformity with the […] requirements set out in [Annex I]
+* shall immediately take the corrective measures necessary to
+  * bring that product […] or […] processes into conformity,
+  * or to withdraw or recall the product, as appropriate. ([Article 13(21)])
+
 
 #### Authorised representatives of Manufacturers  ⚠️  FIXME: Not done
 

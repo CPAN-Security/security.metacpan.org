@@ -219,6 +219,12 @@ Please take this into account when commenting this document.
 > * See
 >     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded)
 
+#### Dependency (Injected)
+
+> 1. (CPANSec-2024) A Dependency that is provided through other means than regular dependency resolution.
+>     * e.g. A shared object library that is loaded using `LD_PRELOAD`.
+>     * e.g. A CPAN module that is unexpectedly loaded from the current working directory in the cases when module search path `@INC` contains `.`.
+
 #### Dependency (Phantom; Assumed, Implied, Unstated) ✍️ {#dependency-phantom}
 
 > [!NOTE]

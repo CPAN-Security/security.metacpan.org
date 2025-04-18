@@ -85,6 +85,10 @@ is, e.g.
 
 > This is the Security Policy for the CPAN distribution `Foo-Bar`.
 
+Some authors prefer to put a one-sentence instruction on how to report a security issue in the abstract, for example:
+
+> Report security issues via email to <foobar@example.com>.
+
 If the project has a web site, with this security policy posted on the
 website, then you should refer to that URL, e.g.:
 
@@ -361,6 +365,8 @@ maintainer that should cover most cases.
 
 ```markdown
 This is the Security Policy for the Perl Foo-Bar distribution.
+
+Report security issues via email to <foobar@example.com>.
 
 The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).

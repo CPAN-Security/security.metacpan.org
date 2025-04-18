@@ -47,6 +47,15 @@ assisting in resolving security issues found on CPAN.  This includes:
 See the [CPANSec Charter](https://security.metacpan.org/docs/charter.html)
 for more information.
 
+## Before you add a security policy
+
+Your project needs a *single point of contact* for reporting security issues privately.
+
+If the project has a single maintainer, then an email address is good enough.
+
+For projects with multiple maintainers, one option is an email alias that forwards to the maintainers who handle security issues.
+
+Some software repositories like GitHub [\[1\]](#references-and-notes) (Github-Sec-Advisory) or GitLab support reporting security advisories confidentially.
 
 ## The format of the security policy
 
@@ -156,8 +165,7 @@ or for GitLab
 > reporting the issue, please check the tickbox on the form labelled
 > "This issue is confidential and should only be visible to team members".
 
-We recommend that there be a *single point of contact*.
-This can be an email alias or restricted mailing list that forwards to multiple maintainers.
+There should be a *single point of contact*.
 Do not provide a list of multiple email addresses or web pages and ask that users contact some or all of these addresses.
 
 Please ensure that the security contact information is consistent with

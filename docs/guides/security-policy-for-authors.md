@@ -247,15 +247,24 @@ considered security issues in the software, and what are not
 considered security issues.  For example,
 
 > Any security vulnerabilities in Foo-Bar are covered by this policy.
->
+
+If your software includes embedded libraries, then these should be mentioned:
+
+> Security vulnerabilities in the versions of the baz library that are
+> included with Foo-Bar are also covered by this policy.
+
+You may want to define what you consider a security vulnerability:
+
 > Security vulnerabilities are considered anything that allows users
 > to execute unauthorised code, access unauthorised resources, or to
 > have an adverse impact on accessibility or performance of a system.
->
-> Security vulnerabilities in upstream software (embedded libraries,
-> prerequisite modules or system libraries, or in Perl), are not
-> covered by this policy unless they affect Foo-Bar, or Foo-Bar can
-> be used to exploit vulnerabilities in them.
+
+You may also want to cover how other oftware packages are affected:
+
+> Security vulnerabilities in upstream software (prerequisite modules
+> or system libraries, or in Perl), are not covered by this policy
+> unless they affect Foo-Bar, or Foo-Bar can be used to exploit
+> vulnerabilities in them.
 >
 > Security vulnerabilities in downstream software (any software that
 > uses Foo-Bar, or plugins to it that are not included with the
@@ -430,14 +439,17 @@ They may also forward this issue to CPANSec.
 
 Any security vulnerabilities in Foo-Bar are covered by this policy.
 
+Security vulnerabilities in versions of any libraries that are
+included in Foo-Bar are also covered by this policy.
+
 Security vulnerabilities are considered anything that allows users
 to execute unauthorised code, access unauthorised resources, or to
 have an adverse impact on accessibility or performance of a system.
 
-Security vulnerabilities in upstream software (embedded libraries,
-prerequisite modules or system libraries, or in Perl), are not
-covered by this policy unless they affect Foo-Bar, or Foo-Bar can
-be used to exploit vulnerabilities in them.
+Security vulnerabilities in upstream software (prerequisite modules
+or system libraries, or in Perl), are not covered by this policy
+unless they affect Foo-Bar, or Foo-Bar can be used to exploit
+vulnerabilities in them.
 
 Security vulnerabilities in downstream software (any software that
 uses Foo-Bar, or plugins to it that are not included with the

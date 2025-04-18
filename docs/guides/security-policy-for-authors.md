@@ -190,7 +190,7 @@ vulnerabilities in public, e.g.
 > Please do not disclose the security vulnerability in public forums
 > until past any proposed date for public disclosure, or it has been
 > made public by the maintainers or CPANSec.  That includes patches or
-> pull requests.
+> pull requests or mitigration advice.
 
 You can also link to the CPANSec page
 
@@ -400,7 +400,7 @@ GitHub issues for reporting security vulnerabilities.
 Please do not disclose the security vulnerability in public forums
 until past any proposed date for public disclosure, or it has been
 made public by the maintainers or CPANSec.  That includes patches or
-pull requests.
+pull requests or mitigation advice.
 
 For more information, see
 [Report a Security Issue](https://security.metacpan.org/docs/report.html)

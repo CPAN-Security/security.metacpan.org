@@ -16,10 +16,15 @@ You do not need to mention or link to any license in your security policy, and y
 
 ### Why should authors add a security policy?
 
-A security policy tells users how to report security issues to the
-project maintainer(s), how the maintainer(s) will respond, and what
-software will be supported by them.
+You should add a security policy to tell users that you (the developers and maintainers of your software) care about the integrity of their data and systems.
 
+A security policy tells users how to report security issues to the project maintainer(s), how the maintainer(s) will respond, and what software will be supported by them.
+
+A security policy might also be a requirement by some institutions or governments.
+Even if you are not subject to regulations of a government that requires security policies, potential users of your software are.
+Adding a security policy will make it easier for them to follow regulations.
+
+Adding a security policy will not add any legal obligations or guarantees beyond your software's license.
 
 ### Why should authors work with CPANSec?
 

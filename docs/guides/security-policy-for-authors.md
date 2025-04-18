@@ -156,9 +156,9 @@ or for GitLab
 > reporting the issue, please check the tickbox on the form labelled
 > "This issue is confidential and should only be visible to team members".
 
-We recommend that there be a *single point of contact*.  Do not
-provide a list of multiple email addresses or web pages and ask that
-users contact some or all of these addresses.
+We recommend that there be a *single point of contact*.
+This can be an email alias or restricted mailing list that forwards to multiple maintainers.
+Do not provide a list of multiple email addresses or web pages and ask that users contact some or all of these addresses.
 
 Please ensure that the security contact information is consistent with
 distribution metadata, e.g. in the `META.json` file

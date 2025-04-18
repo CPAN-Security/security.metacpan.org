@@ -89,6 +89,11 @@ Some authors prefer to put a one-sentence instruction on how to report a securit
 
 > Report security issues via email to <foobar@example.com>.
 
+or alternatively,
+
+> Security vulnerabilities can be reported via the project GitHub repository
+> [Security Advisories](https://example.github.com/foobar/security/advisories).
+
 If the project has a web site, with this security policy posted on the
 website, then you should refer to that URL, e.g.:
 
@@ -140,16 +145,16 @@ For example,
 
 or [\[1\]](#references-and-notes) (Github-Sec-Advisory)
 
-> Security vulnerabilities can be reported via our GitHub repository
-> at https://example.github.com/foobar.  On the "Advisories" page you
-> can click on the "Report a vulnerability" button.
+> Security vulnerabilities can be reported via the project GitHub repository
+> [Security Advisories](https://example.github.com/foobar/security/advisories).
+> On the "Advisories" page you can click on the "Report a vulnerability" button.
 
-or
+or for GitLab
 
-> Security vulnerabilities can be reported via our GitLab repository a
-> https://gitlab.com/foobarkeepers/foobar/issues.  When reporting the
-> issue, please check the tickbox on the form labelled "This issue is
-> confidential and should only be visible to team members".
+> Security vulnerabilities can be reported via our GitLab repository
+> [issues](https://gitlab.com/foobarkeepers/foobar/issues).  When
+> reporting the issue, please check the tickbox on the form labelled
+> "This issue is confidential and should only be visible to team members".
 
 We recommend that there be a *single point of contact*.  Do not
 provide a list of multiple email addresses or web pages and ask that

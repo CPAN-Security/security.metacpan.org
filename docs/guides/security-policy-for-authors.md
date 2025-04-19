@@ -267,7 +267,7 @@ You may want to define what you consider a security vulnerability:
 > to execute unauthorised code, access unauthorised resources, or to
 > have an adverse impact on accessibility or performance of a system.
 
-You may also want to cover how other oftware packages are affected:
+You may also want to cover how other software packages are affected:
 
 > Security vulnerabilities in upstream software (prerequisite modules
 > or system libraries, or in Perl), are not covered by this policy

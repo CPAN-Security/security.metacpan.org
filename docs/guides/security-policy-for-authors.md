@@ -160,7 +160,7 @@ or [\[1\]](#references-and-notes) (Github-Sec-Advisory)
 
 or for GitLab
 
-> Security vulnerabilities can be reported via our GitLab repository
+> Security vulnerabilities can be reported via the project GitLab repository
 > [issues](https://gitlab.com/foobarkeepers/foobar/issues).  When
 > reporting the issue, please check the tickbox on the form labelled
 > "This issue is confidential and should only be visible to team members".

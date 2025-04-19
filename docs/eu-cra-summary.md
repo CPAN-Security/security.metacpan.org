@@ -132,6 +132,7 @@ mermaid: true
 [TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
 [NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
 
+
 ## About this document
 
 This text attempts to summarize the most important parts of the CRA, for Open Source ecosystems.
@@ -148,7 +149,7 @@ Fostering the development of secure products
 
 ### Manufacturers
 
-Manufacturers are obliged to _exercise due diligence when integrating components from third parties_, as laid out in [Article 13(5)]
+Manufacturers are obliged to _exercise due diligence when integrating components from third parties_, as laid out in [Article 13(5)] and [Recital (34)]
 
 * …after the Manufacturer conducts a risk assessment, as laid out in [Article 13(2)]
 * …in accordance with essential requirements laid out in [Annex I, Part I]
@@ -183,7 +184,6 @@ Manufacturers shall, upon identifying a vulnerability in a component, including 
 * …and address and remediate the vulnerability in accordance with the vulnerability handling requirements set out in [Annex I, part II].
 * …and where manufacturers have developed a […] modification to address the vulnerability in that component,
   * they shall share the relevant code or documentation with the person […] maintaining the component, […].
-
 
 Manufacturers are to draw up the EU declaration of conformity in accordance with [Article 28] and affix the CE marking in accordance with [Article 30] as laid out in [Article 13(12)]
 
@@ -258,7 +258,6 @@ Additionally,
 
 * The mere circumstances under which the product with digital elements has been developed, or how the development has been financed, should therefore not be taken into account when determining the commercial or non-commercial nature of that activity. ([Recital (18)])
 * […] the development of […] free and open-source software by *not-for-profit organisations* should not be considered to be a commercial activity provided that the organisation is set up in such a way that ensures that all earnings after costs are used to achieve not-for-profit objectives. ([Recital (18)])
-
 
 
 #### TODO: Open Source Steward

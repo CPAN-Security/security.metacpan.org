@@ -94,7 +94,7 @@ title: CPANSec bi-weekly minutes
    - security.md, sbom and valid cpanfile, cpansa and busfactor, cpan.org email
    - cpants has experimental support
    - look into "update your cpan module" month (ref @tux's checklist)
-   - [ ] @robrwo - contacts manwar to see if he'd like to help with outreach
+   - [ ] @robrwo - will contact manwar to see if he'd like to help with outreach
 
 ### [Security Information & Outreach](https://github.com/orgs/CPAN-Security/projects/12/views/3)
 

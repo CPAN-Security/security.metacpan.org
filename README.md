@@ -36,3 +36,11 @@ If you care and would like to make a contribution, you can…
 * [Projects](https://github.com/orgs/CPAN-Security/projects) overview on GitHub
 * [Meetings](meetings/) information and minutes
 * [Presentations](presentations/) about us and our work
+
+
+*[CPAN]: Comprehensive Perl Archive Network – An Open Source package ecosystem for publishing library components (modules) for the Perl programming language. It's the oldest Open Source supply chain, in continuous operation since 1995!
+*[PAUSE]: Perl AUthor's Upload SErver – The publishing back-end for Perl package authors who wish to publish on CPAN.
+*[IRC]: Internet Relay Chat – One of the earliest distributed chat systems. Still in active use in many Open Source communities, including the ones related to CPAN and Perl!
+*[CNA]: CVE Numbering Authority – An organization authorized to reserve and assign CVE numbers to vulnerabilities found within the organization's scope.
+*[CVE]: Common Vulnerabilities and Exposures – The main record of publicly disclosed cybersecurity vulnerabilities. This catalog is managed by the MITRE corporation for the benefit of the global cybersecurity community, and with help from many CNA organizations.
+*[CPANSec]: The CPAN Security Group – A group of security-conscious volunteers, working on improving the Perl and CPAN ecosystems security posture.

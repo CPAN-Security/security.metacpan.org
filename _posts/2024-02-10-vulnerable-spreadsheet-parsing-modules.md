@@ -62,7 +62,7 @@ On November 17th, Đình Hải Lê attempted to contact the last maintainer to r
 
 Unfortunately neither contact attempt succeeded.
 
-On March 15th, the Initial PoC was published on Github by Đình Hải Lê.
+On March 15th, the Initial PoC was published on GitHub by Đình Hải Lê.
 
 On June 20th, Đình Hải Lê submitted both bugs to huntr.com.
 huntr.com supports an open source vulnerability disclosure program, where any member of the public can report vulnerabilities found in repositories on GitHub.com.

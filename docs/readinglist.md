@@ -2,6 +2,7 @@
 layout: page
 title: Reading list
 description: Reading list for CPANSec contributors
+author: Salve J. Nilsen
 toc: true
 ---
 

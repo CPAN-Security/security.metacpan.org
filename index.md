@@ -45,3 +45,5 @@ If you care and would like to make a contribution, you can…
 *[CNA]: CVE Numbering Authority – An organization authorized to reserve and assign CVE numbers to vulnerabilities found within the organization's scope.
 *[CVE]: Common Vulnerabilities and Exposures – The main record of publicly disclosed cybersecurity vulnerabilities. This catalog is managed by the MITRE corporation for the benefit of the global cybersecurity community, and with help from many CNA organizations.
 *[CPANSec]: The CPAN Security Group – A group of security-conscious volunteers, working on improving the Perl and CPAN ecosystems security posture.
+*[RSS]: RDF Site Summary – A simple syndication standard for allowing users to subscribe to website updates.
+*[Fediverse]: The Federated Universe – A collection of independently run social networking services that can communicate with each other for sharing status updates, multimedia files and other data.

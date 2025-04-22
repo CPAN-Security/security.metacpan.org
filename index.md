@@ -10,6 +10,8 @@ This is a community effort for supporting and responding to security incidents o
 This group also cares about security-related topics around CPAN distributions, the CPAN/PAUSE infrastructure, and about tooling and the ecosystem in general.
 Over time, we aim to improve supply chain security, make CPAN a more secure and trustworthy publishing platform, and more.
 
+CPANSec is the [CVE Numbering Authority](/2025/02/25/cpansec-is-cna-for-perl-and-cpan.html) (CNA) for CPAN and Perl.
+
 
 ## Learn more & Contribute
 

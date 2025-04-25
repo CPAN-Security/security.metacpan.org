@@ -5,8 +5,6 @@ meeting_time: 2025-04-23 16:00 UTC
 title: CPANSec bi-weekly minutes
 ---
 
-[TOC]
-
 ## Agenda & Meeting Details 2025-04-23
 - 2025-04-23 16:00 UTC on #cpansec-discussion on Matrix
 

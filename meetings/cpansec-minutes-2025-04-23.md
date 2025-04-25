@@ -30,7 +30,7 @@ title: CPANSec bi-weekly minutes
     - @timlegge, @robrwo
 
 ### Approve previous meeting minutes
--   Previous meeting minutes was approved by @thibaultduponchelle and merged by @sjn
+-   Previous meeting minutes PR was approved by @thibaultduponchelle, @timlegge and @robrwo, and merged by @sjn
 
 ## Agenda
 

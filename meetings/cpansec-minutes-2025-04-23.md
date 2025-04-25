@@ -8,7 +8,6 @@ title: CPANSec bi-weekly minutes
 ## Agenda & Meeting Details 2025-04-23
 - 2025-04-23 16:00 UTC on #cpansec-discussion on Matrix
 
-
 ## 15:43 UTC - Pre-meeting socializing
 -   Socializing & getting up to speed before the meeting starts properly
 -   Discuss organizing projects, swimlanes and issues (...)
@@ -49,7 +48,6 @@ title: CPANSec bi-weekly minutes
    - CVE updates feed: Can hook right into the CVE.org database maybe
 - [ ] @stigtsp - good idea!
 
-
 ### [Metadata & Software Bills of Materials](https://github.com/orgs/CPAN-Security/projects/1/views/2)
 
 #### CPAN::Meta::Spec, Requirements and PURLs
@@ -85,7 +83,6 @@ title: CPANSec bi-weekly minutes
 - [x] @robrwo updated guidelines
    - license for template/excerpts to 0BSD
 
-
 ### [Security Information & Outreach](https://github.com/orgs/CPAN-Security/projects/12/views/3)
 - [ ] @robrwo suggesting a regular blog series
   - blog posts smaller scope than monolithic documents/guides
@@ -93,7 +90,6 @@ title: CPANSec bi-weekly minutes
   - regular posts can get more attention
 - @thibaultduponchelle - let's make it easier to post
 - [ ] @sjn - let's add a new channel for smaller/faster blog posts that have lower PR quality requirements
-
 
 #### Recruitment
 - @thibaultduponchelle - inviting @jjatria to join
@@ -136,7 +132,6 @@ title: CPANSec bi-weekly minutes
     - etc.
 - @sjn - No progress
 
-
 ### [CNA & Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10/views/2)
 
 #### CNA Organization
@@ -150,7 +145,6 @@ title: CPANSec bi-weekly minutes
 - @stigtsp - guided CVE writeup-sessions at PTS and at regular times otherwise
     - [ ] @stigtsp and @timlegge prepare a dummy scenario
 
-
 ### [Secure by Default](https://github.com/orgs/CPAN-Security/projects/15/views/2)
 
 #### TLS/HTTPS/CSPRNG/DSA in core
@@ -158,7 +152,6 @@ title: CPANSec bi-weekly minutes
     - @leont - Lets leave till after PTS
 
 #### Ongoing vulnerabilities
-
 
 ### [Organization, Governance & Funding](https://github.com/orgs/CPAN-Security/projects/7/views/2)
 
@@ -182,14 +175,6 @@ title: CPANSec bi-weekly minutes
 - @sjn - Discussions on TPRF slack #cpansec-steward; Mostly @sjn making noise;
     - Contributors who care about governance needed; Please reach out to @sjn
 
-
-### [Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11/views/2)
-- [x] (Volunteers/tuits/funding needed - this topic is available for adoption!)
-   - Possible candidates:
-     - [ ] @atoomic
-     - [x] @thibaultduponchelle volunteers!
-- @thibaultduponchelle - Initiated some preliminary discussions around CPAN Patch tooling.
-
 ### [Authentication & Trusted Publishing](https://github.com/orgs/CPAN-Security/projects/3/views/2)
 - [ ] (Volunteers/tuits/funding needed - this topic is available for adoption!)
 
@@ -199,7 +184,6 @@ title: CPANSec bi-weekly minutes
 
 ### [Transparency Logs & Trusted Distribution](https://github.com/orgs/CPAN-Security/projects/2/views/2)
 - [ ] (Volunteers/tuits/funding needed - this topic is available for adoption!)
-
 
 ## Any Other Business
 - [ ] @stigtsp - Can someone look at the cpansa-feed, it's broken for a while now :-(
@@ -221,12 +205,9 @@ title: CPANSec bi-weekly minutes
 - [ ] (Belgium) OpenSSF EU Policy Summit - 2025-10-30, in Ghent, Belgium;
 - [ ] (World) [CPAN 30 year anniversary](https://github.com/neilb/history-of-cpan/blob/master/history.md#the-cpan-years) - Sunday 2025-10-26
 
-
 ## Next meeting date, time and location
 - Next meeting is Wednesday 2025-05-07 @ 16:00UTC in #cpansec-discussion on Matrix (18:00 Europe/Amsterdam)
 
-
 ## 17:19 UTC - Meeting end
-
 
 ## 17:19 UTC - End

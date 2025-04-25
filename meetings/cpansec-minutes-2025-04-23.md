@@ -9,13 +9,13 @@ title: CPANSec bi-weekly minutes
 - 2025-04-23 16:00 UTC on #cpansec-discussion on Matrix
 
 
-## 15:30 UTC - Pre-meeting socializing
+## 15:43 UTC - Pre-meeting socializing
 -   Socializing & getting up to speed before the meeting starts properly
 -   Discuss organizing projects, swimlanes and issues (...)
 -   Check and resolve technical (A/V) issues before the meeting starts
 -   Come as you are!
 
-## 16:00 UTC - Meeting start
+## 16:08 UTC - Meeting start
 
 ## Welcome
 -   Meeting chair: @thibaultduponchelle
@@ -41,14 +41,13 @@ title: CPANSec bi-weekly minutes
 #### XML::LibXML
 - [ ] @tux XML::LibXML touches CVE issues in Alien
 
-
 ### Operating changes
-- @sjn - Add RSS feeds to the matrix channel? Suggestions for channel admins:
+- @sjn - Proposal: Add RSS feeds to the matrix channel? Suggestions for channel admins:
    - Mastodon feed: https://fosstodon.org/@cpansec.rss
    - News feed: https://security.metacpan.org/feed.xml
    - CVE announcements feed: @stigtsp - can be done as part of an automated CVE announcement process
    - CVE updates feed: Can hook right into the CVE.org database maybe
-- @stigtsp - good idea!
+- [ ] @stigtsp - good idea!
 
 
 ### [Metadata & Software Bills of Materials](https://github.com/orgs/CPAN-Security/projects/1/views/2)
@@ -92,6 +91,7 @@ title: CPANSec bi-weekly minutes
   - blog posts smaller scope than monolithic documents/guides
   - different authors and topics including current news items
   - regular posts can get more attention
+- @thibaultduponchelle - let's make it easier to post
 - [ ] @sjn - let's add a new channel for smaller/faster blog posts that have lower PR quality requirements
 
 
@@ -100,7 +100,7 @@ title: CPANSec bi-weekly minutes
 
 #### Perl Toolchain Summit 2025
 - @sjn - Create document on what CPANSec-relevant issues need to be decided on/discussed at PTS
-    - Everyone, please add tasks to the PTS wiki!
+    - @sjn - Everyone, please add tasks to the [PTS wiki Projects page](https://perltoolchainsummit.org/pts2025/wiki?node=Projects)!
     - [ ] @stigtsp and @tux - Better tooling for CNA CVE
     - [ ] @stigtsp and @timlegge - Intro to CNA CVE (onboarding?)
     - [ ] @stigtsp - Show CVEs on MetaCPAN
@@ -116,16 +116,17 @@ title: CPANSec bi-weekly minutes
     - [ ] @sjn - Open discussion: CPANSec as an OSS Steward
         - Present purpose and regulatory requirements
         - Discuss and decide on community aligned principles to be enshrined in the Charter
-        - Who are the founding stakeholder groups?
+        - Who are possible founding stakeholder groups?
     - [ ] @tux - DBI on how to use tooling to improve security there
     - [ ] @tux - discuss errors from gcc-14 (-Wno-error=...) and gcc15 (C23)
-    - [ ] @thibaultduponchelle and @tux - Test::Smoke, deprecating Perl::IO
-    - [ ] @thibaultduponchelle Patching during smoke, Review the PAUSE operating model, CPAN Patch tooling; Maybe some pentesting?
+    - [ ] @thibaultduponchelle and @tux - Test::Smoke - Deprecate PerlIO/Stdio dual testing; Add patching facilities during smoke
+    - [ ] @thibaultduponchelle PAUSE - Review the operating model
+    - [ ] @thibaultduponchelle CPANSec - Maybe some CPAN installer patch tooling discussion and implementation (limit to the POC); Maybe some PAUSE pentesting?
     - [ ] @sjn and @tux - create an SBOM from Perl's Configure
-    - [ ] @sjn whatever else people needs him for. :-)
+    - [ ] @sjn whatever else people needs him for. :-)
 
 #### New Guide needed: PackageURL
-- @sjn - We need a comprehensive PackageURL guide that answers/covers all relevant use cases
+- [ ] @sjn - We need a comprehensive PackageURL guide that answers/covers all relevant use cases
     - Non-perl project uses perl executable provided by packaging system // plenv // build-perl // ActiveState // etc.
     - Non-perl project uses a tool provided on CPAN
     - Non-perl project uses a vendored/included tool written in Perl
@@ -133,7 +134,7 @@ title: CPANSec bi-weekly minutes
     - Perl project found on CPAN uses a CPAN module found on CPAN
     - Perl project not found on CPAN uses a CPAN module not found on CPAN, but a DarkPAN
     - etc.
-- [ ] @sjn - No progress
+- @sjn - No progress
 
 
 ### [CNA & Vulnerability Index](https://github.com/orgs/CPAN-Security/projects/10/views/2)
@@ -225,7 +226,7 @@ title: CPANSec bi-weekly minutes
 - Next meeting is Wednesday 2025-05-07 @ 16:00UTC in #cpansec-discussion on Matrix (18:00 Europe/Amsterdam)
 
 
-## 17:00 UTC - Meeting end
+## 17:19 UTC - Meeting end
 
 
-## 17:00 UTC - End
+## 17:19 UTC - End

@@ -169,11 +169,14 @@ title: CPANSec bi-weekly minutes
 - [ ] @sjn - New project overview in the works: https://cryptpad.fr/sheet/#/2/sheet/edit/vazHpOmoK6bM-qKo7WRpzq6U/
 
 #### Eclipse ORC WG
-- @sjn - Misc. ongong activities
+- @sjn - Misc. ongoing activities
 
 #### CPAN Steward org
 - @sjn - Discussions on TPRF slack #cpansec-steward; Mostly @sjn making noise;
     - Contributors who care about governance needed; Please reach out to @sjn
+
+### [Security Patch Tooling](https://github.com/orgs/CPAN-Security/projects/11/views/2)
+- not discussed
 
 ### [Authentication & Trusted Publishing](https://github.com/orgs/CPAN-Security/projects/3/views/2)
 - [ ] (Volunteers/tuits/funding needed - this topic is available for adoption!)

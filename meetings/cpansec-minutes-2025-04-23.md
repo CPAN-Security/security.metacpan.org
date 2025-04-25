@@ -120,8 +120,8 @@ title: CPANSec bi-weekly minutes
     - [ ] @tux - DBI on how to use tooling to improve security there
     - [ ] @tux - discuss errors from gcc-14 (-Wno-error=...) and gcc15 (C23)
     - [ ] @thibaultduponchelle and @tux - Test::Smoke - Deprecate PerlIO/Stdio dual testing; Add patching facilities during smoke
-    - [ ] @thibaultduponchelle PAUSE - Review the operating model
-    - [ ] @thibaultduponchelle CPANSec - Maybe some CPAN installer patch tooling discussion and implementation (limit to the POC); Maybe some PAUSE pentesting?
+    - [ ] @thibaultduponchelle - PAUSE - Review the operating model
+    - [ ] @thibaultduponchelle - CPANSec - Maybe some CPAN installer patch tooling discussion and implementation (but limit to a POC); Maybe some PAUSE pentesting?
     - [ ] @sjn and @tux - create an SBOM from Perl's Configure
     - [ ] @sjn whatever else people needs him for. :-)
 

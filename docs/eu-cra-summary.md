@@ -227,16 +227,27 @@ Open Source Software Stewards are…
 
 * […] legal persons who *provide support on a sustained basis* ([Article 3] (14)) for the development […] of products which are intended for commercial activities, and who *play a main role in ensuring the viability of those products* […] ([Recital (19)])
   * […] should be subject to a light-touch and tailor-made regulatory regime.
-  * [and…] only cover […] free and open-source software that are ultimately intended for commercial activities.
+  * [and…] only cover […] free and open-source software that are *ultimately intended for commercial activities*.
 
-Open Source Stewards are obliged to…
+Open Source Stewards are obliged to… (as laid out in [Article 24])
 
-* …facilitate the Manufacturer's _due diligence_ obligation set out in [Article 13(5)]
-* …provide a cybersecurity policy for voluntary reporting of vulnerabilities, as laid out in [Article 15]
-* …cooperate with market surveillance authorities and provide documentation. ⚠️  FIXME: (Dis)confirm this.
-* …report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16], in the way described in [Article 14].
+* …put in place in a verifiable manner a cybersecurity policy to foster… ([Article 24(1)])
+  * …the development of a secure product
+  * …an effective handling of vulnerabilities by the developers of that product
+  * …voluntary reporting of vulnerabilities, as laid out in [Article 15]
+    * …taking into account the specific nature of the open-source software steward
+      * …and the legal and organisational arrangements to which it is subject
+* …cooperate with market surveillance authorities, at their request, with a view to
+  * …mitigating the cybersecurity risks posed by a product […] qualifying as free and open-source software ([Article 24(2)])
+  * …provide documentation referred to in [Article 24(1)] (in a language that is easily understood) to that authority, upon reasoned request)
+* …report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16], in the way described in [Article 14(3)]), to the extent they are involved in the development of the product
 
-FOSS Software may get a voluntary security attestation, as described in [Article 25] ⚠️  FIXME: (Dis)confirm this.
+
+* …facilitate the Manufacturer's _due diligence_ obligation set out in [Article 13(5)] ⚠️  FIXME: (Dis)confirm this.
+
+
+
+FOSS Software may get a voluntary security attestation, as described in [Article 25]
 
 * …using an EU Attestation program as laid out in [Recital (21)]
   * …by requesting a certification from ENISA, as laid out in [Regulation (EU) 2019/881, Article 48](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881#page=8)

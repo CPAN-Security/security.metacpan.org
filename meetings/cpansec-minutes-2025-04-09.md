@@ -94,7 +94,7 @@ title: CPANSec bi-weekly minutes
    - security.md, sbom and valid cpanfile, cpansa and busfactor, cpan.org email
    - cpants has experimental support
    - look into "update your cpan module" month (ref @tux's checklist)
-   - [ ] @robrwo - will contact manwar to see if he'd like to help with outreach
+   - [ ] @robrwo - will contacts manwar to see if he'd like to help with outreach
 
 ### [Security Information & Outreach](https://github.com/orgs/CPAN-Security/projects/12/views/3)
 
@@ -148,7 +148,7 @@ title: CPANSec bi-weekly minutes
 - @robrwo - CNA/CPANSec workflow description needed from CVE reservation to disclosure
   - [ ] (Volunteer needed) - Write a guide/workflow doc, including details on how embargos work
 - @stigtsp - guided CVE writeup-sessions at PTS and at regular times otherwise
-  - [ ] @stigtsp and @timlegge prepare a dummy scenario
+  - [ ] @stigtsp and @timlegge prepare a dummy scenario
 
 
 ### [Secure by Default](https://github.com/orgs/CPAN-Security/projects/15/views/2)
@@ -178,7 +178,7 @@ title: CPANSec bi-weekly minutes
 - [ ] @sjn - Talk with prospective companies to look for opportunities
 - [ ] @sjn - Organize fundraiser's coordinator meeting w/Olaf & Stuart (delayed)
 - [ ] @sjn - Investigate pre-project funding chances with NUUG foundation
-- [ ] @sjn - New project overview in the works: https://cryptpad.fr/sheet/#/2/sheet/edit/vazHpOmoK6bM-qKo7WRpzq6U/
+- [ ] @sjn - New [project overview](https://security.metacpan.org/meetings/cpansec-minutes-2025-04-09.html) funding spreadsheet in the works
 
 #### Eclipse ORC WG
 - @sjn - Misc. ongong activities

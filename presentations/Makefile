@@ -1,4 +1,4 @@
-all: tprc2023-cpan-sec-lightning-talk/index.html perlkohacon-cpan-sec-lightning-talk/index.html pts2023-nis2-cra-intro/index.html perlkohacon-cpan-sbom-talk/index.html fosdem2024-cpan-sec-talk/index.html fosdem2024-sbom-in-open-source-ecosystems-talk/index.html pts2024-cra-update/index.html lpw2024-metadata-cpan-foss-cra/index.html nuug2024-metadata-foss-cra/index.html fosdem2025-where-do-sbom-attributes-come-from/index.html
+all: tprc2023-cpan-sec-lightning-talk/index.html perlkohacon-cpan-sec-lightning-talk/index.html pts2023-nis2-cra-intro/index.html perlkohacon-cpan-sbom-talk/index.html fosdem2024-cpan-sec-talk/index.html fosdem2024-sbom-in-open-source-ecosystems-talk/index.html pts2024-cra-update/index.html lpw2024-metadata-cpan-foss-cra/index.html nuug2024-metadata-foss-cra/index.html fosdem2025-where-do-sbom-attributes-come-from/index.html pts2025-steward-intro/index.html
 
 
 tprc2023-cpan-sec-lightning-talk/index.html: tprc2023-cpan-sec-lightning-talk.md
@@ -31,4 +31,6 @@ nuug2024-metadata-foss-cra/index.html: nuug2024-metadata-foss-cra.md
 fosdem2025-where-do-sbom-attributes-come-from/index.html: fosdem2025-where-do-sbom-attributes-come-from.md
 	mdslides fosdem2025-where-do-sbom-attributes-come-from.md --include ../media
 
+pts2025-steward-intro/index.html: pts2025-steward-intro.md
+	mdslides pts2025-steward-intro.md --include ../media
 

@@ -7,9 +7,9 @@ are now promoted to errors, causing building C and XS files to fail with no
 changes to the code at all.
 
 Some of these warnings might indeed indicate serious problems that might
-eventually cause vulnerabilities and some can be safely ignored, but most
-end-users installing from CPAN will not be able to tell without tedious
-analysis of the code at hand.
+eventually cause vulnerabilities while some can be safely ignored.
+However most end-users, installing from CPAN, will not be able to tell
+without tedious analysis of the code at hand.
 
 ## Issues
 
@@ -19,7 +19,7 @@ GNU gcc warning that now promote to errors in any mode higher than C90:
 
 ### -Wimplicit-function-declaration
 
-Functions can no longer be called without be declaring first.  Fixing this may
+Functions can no longer be called without be declared first.  Fixing this may
 need additional prototypes in package header files, or inclusion of additional
 header files (both package-specific and system headers).
 
@@ -53,7 +53,7 @@ SFINAE contexts. (C++ only)
 
 ### -Wreturn-mismatch
 
-Warn about return statements without an expressions in functions which do not
+Warn about return statements without an expression in functions which do not
 return `void`.  Also warn about a `return` statement with an expression in a
 function whose return type is `void`, unless the expression type is also `void`.
 
@@ -80,8 +80,8 @@ time. Fixing the problems one by one and - of course - report them back to
 the author(s) of the module is the prefered route. A Pull Request could be
 the crown on this work.
 
-It however requires time and effort and likely a lot of extra resources that
-are required for tracking down the correct solution or fix.
+It does however require time and effort and likely a lot of extra resources
+that are required for tracking down the correct solution or fix.
 
 ### Demote errors to warnings
 

@@ -39,25 +39,31 @@ Please take this into account when commenting this document.
 
 > [!NOTE]
 > Component and Artifact seem to have overlapping definitions.
-> We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec)
+> We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec-2024)
 
 > 1. (SLSA-2023) An immutable blob of data; primarily refers to [software](#software), but SLSA can be used for any artifact.
 >     * E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
 >
-> See also: [Component](#component).
+> * See also:
+>     * [Component](#component)
 >
 > (Ref: [SLSA-2023](#references-and-terms), CPANSec-2024)
 
 
-### Author
+### Author (SBOM Role)
 
 > 1. (NTIA-2021) An entity that creates an SBOM.
 >     * [author](#author) and [supplier](#supplier) will often be different. In the case of SBOMs, the author creates the SBOM. The supplier is the provider of the software included in the SBOM.
+>
+> * See also:
+>     * [Author](supplychain-sbom#author) in the Supply-chain SBOM Roles document.
+
+
+### Author (Project Role)
+
 > 1. (CPANSec-2024) A developer that publishes something as Open Source software.
 >
-> See also: [Author](supplychain-sbom#author) in the Supply-chain SBOM Roles document.
->
-> (Ref: [NTIA-2021](#references-and-terms), CPANSec-2024)
+> (Ref: [CPANSec-2024](#references-and-terms))
 
 
 ### Attestation
@@ -356,9 +362,9 @@ Please take this into account when commenting this document.
 > * See
 >     * [Requirement](#requirement)
 
-### Provider ✍️ {#provider}
+### Provider (Ecosystem Role) ✍️ {#provider}
 
-Providers take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements.
+Package _Providers_ are responsible for making packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users, possibly in accordance with a Curator's requirements.
 (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
 
 > 1. (CPANSec-2024) The Role that is tasked with ensuring a component artifact is available for download by anyone downstream
@@ -537,7 +543,6 @@ Providers take packages or containers that Patchers and Packagers produce, and e
 >     * According to Union harmonisation legislation, each individual product can only be placed once on the Union market.
 >     * Products made available on the market must comply with the applicable Union harmonisation legislation at the moment of placing on the market.
 >
->
 > (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-2](#references-and-terms))
 
 
@@ -574,10 +579,16 @@ Providers take packages or containers that Patchers and Packagers produce, and e
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
-
 ### Product
 
 > 1. (CPANSec-2024) A release of a project codebase that has been made ready for easy deployment and use, and that is made available, marketed or sold with a recognizable name or trademark.
+>     * Please note that a _Product_ is distinct from a _Project_, in that a Product's technology, creation, maintenance, sustainability or governance is not central factors during procurement.
+>     * If a Product's technology, creation, maintenance, sustainability or governance is in-scope during procurement, then one should instead consider the underlying [Project](#project) for these selection criteria.
+>
+> * See also:
+>     * [Project](#project)
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
 
 
 ### Product with digital elements (CRA) {#pde}
@@ -589,7 +600,17 @@ Providers take packages or containers that Patchers and Packagers produce, and e
 
 ### Project
 
-> 1. (CPANSec-2024) the social and technical structure around a codebase which works on and decides how it is developed over time. a project has a name, a maintainer and a repository for collaboration, and may have one or more co-maintainers (possibly constituting a "core" of the project) that help take care of the codebase.
+> 1. (CPANSec-2024) the social and technical structure around a codebase which works on and decides how it is developed over time. a project has a name, a maintainer and a repository for collaboration, and may have one or more co-maintainers (possibly constituting a "core" of the Project) that help take care of the codebase.
+>     * Other important features include the Project's license, governance structures, culture and community.
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
+
+### Project Roles
+
+#### Project Lead ⚠️  {#project-lead}
+
+> 1. A person who is in charge of a project.
+> 1. (CPANSec-2024) Discouraged, due to lack of precision and confusion with common usage i commercial settings.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 

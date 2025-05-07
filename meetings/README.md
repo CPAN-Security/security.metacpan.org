@@ -2,7 +2,7 @@
 layout: page
 permalink: /meetings/
 toc: true
-next_meeting_time: April 23rd, 2025 16:00 UTC
+next_meeting_time: May 7th, 2025 16:00 UTC
 title: CPANSec meeting details & minutes
 ---
 
@@ -33,6 +33,7 @@ Meeting minutes [currently under review](https://github.com/CPAN-Security/securi
 * [2024-03-26](cpansec-minutes-2025-03-26.md)
 * [2024-04-09](cpansec-minutes-2025-04-09.md)
 * [2024-04-23](cpansec-minutes-2025-04-23.md)
+* [2024-05-07](cpansec-minutes-2025-05-07.md)
 
 
 ### 2024

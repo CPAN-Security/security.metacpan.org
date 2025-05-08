@@ -19,7 +19,7 @@ GNU gcc warning that now promote to errors in any mode higher than C90:
 
 ### -Wimplicit-function-declaration
 
-Functions can no longer be called without be declared first.  Fixing this may
+Functions can no longer be called without being declared first. Fixing this may
 need additional prototypes in package header files, or inclusion of additional
 header files (both package-specific and system headers).
 

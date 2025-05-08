@@ -4,6 +4,7 @@ published: True
 toc: true
 title: "CPAN Author's Guide to Random Data for Security"
 date: 2025-01-03 15:30:00 +0000
+category: news
 tags: authors guides cpan modules security random randomness urandom cryptography
 author: Robert Rothenberg
 excerpt: "Any secret token that allows someone to access a resource or perform an action should be generated with a secure random number generator..."

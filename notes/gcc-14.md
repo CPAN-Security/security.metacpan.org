@@ -1,4 +1,4 @@
-# CPAN problem caused by changes in GNU gcc defaults
+# CPAN problems caused by changes in GNU gcc defaults
 
 ## Problem description
 

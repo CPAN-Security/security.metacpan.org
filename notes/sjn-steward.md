@@ -54,6 +54,21 @@ OSS Steward
 - Report on vulnerabilities & severe incidents to the extent they’re involved in the development of PDEs,
   - to designated CSIRTs/ENISA/users (Article 14(1), Article 14(3), Article 14(8))
 
+### Other activities
+
+- Notarizing BOMs
+- Automating BOM sharing, payment, access to attestations, etc.
+- Possible tasks
+  - Confirm quality of metadata, packaging, contact points, distribution
+  - Steward as co-maintainer?
+- Stewards offering a freelance job marketplace
+
+### Arguments
+
+- Maintainance is not free
+- Due diligence requires attention from code owners
+  - more attention for "full autopsies" than for "cursory sanity checks"
+
 ## Documentation
 
 - Security Assessment Practices

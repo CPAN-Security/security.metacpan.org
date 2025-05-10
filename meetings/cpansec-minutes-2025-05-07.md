@@ -72,11 +72,12 @@ title: CPANSec bi-weekly minutes
 - [ ] @tux - Team document template wanted; Help needed
    - [ ] @timlegge has started on something; happy to discuss with @tux; PR in the works
    - @robrwo - not so much a different kind of doc as possible different way to report vuln
-- [ ] @sjn - Alternative documents needed for non-Europeans (requested by jnap)
+- [x] @sjn - Alternative documents needed for non-Europeans (requested by jnap)
    - @sjn - can help with a CRA perspective
    - @sjn - ORC WG FAQ may help
    - @robrwo - this may be misunderstanding of the purpose of the document
    - @robrwo - the doc is best practice not specific to countries etc.
+   - @sjn - skipping this; Writing something that applies to all instead.
 - [ ] @robrwo mini-project to encourage the popular modules to add a security policy
    - See https://metacpan.org/favorite/leaderboard for a list
    - Sounds like a good idea

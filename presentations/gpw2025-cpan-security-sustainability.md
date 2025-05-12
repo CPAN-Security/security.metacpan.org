@@ -666,25 +666,25 @@ Note:
 
 * Open Source is not a "group"
 * Open Source is a Universal Phenomenon
-* Open Source is **Cooperatively building our digital infrastructure**
-
+* Open Source is the act of…
+  * **Cooperatively building our digital infrastructure**
 
 [comment]: # (||| data-auto-animate)
 
-## How will this affect ~Open Source~ **all of us**?
+## How will this affect ~Open Source~ all of us?
 
 [comment]: # (|||)
 
-## For discussion
+## How will this affect all of us?
 
-* We're in a mess
+* The CRA offers many challenges for a messy world
 * It's up to volunteers and users (us!) to improve it
 * ~"If it ain't broke, don't fix it"~
-* Don't be a bystander – join – cooperate
+* Don't be a bystander – volunteer – cooperate
 
 [comment]: # (|||)
 
-## Join…
+## Volunteer!
 
 * [CPAN Security Group](https://security.metacpan.org/)
 * [Open Regulatory Compliance WG](https://orcwg.org/)

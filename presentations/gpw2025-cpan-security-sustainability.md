@@ -201,10 +201,10 @@ Notes:
 ## Manufacturer
 
 * A natural or legal person who…
-    * …**develops or manufactures** products with digital elements, or
-    * …**has** products **designed, developed or manufactured**, and
-    * …**markets them under its name** or trademark,
-    * …whether for payment, monetisation or free of charge
+  * …**develops or manufactures** products with digital elements, or
+  * …**has** products **designed, developed or manufactured**, and
+  * …**markets them under its name** or trademark,
+  * …whether for payment, monetisation or free of charge
 
 <div style="font-size: large;">
 
@@ -259,8 +259,8 @@ Note:
 * Default: Self-assessment
 * Open Source: Self-assessment
 * Important:
-   * Follow harmonized standards -> Presumption of conformance
-   * 3rd-party assessment
+  * Follow harmonized standards -> Presumption of conformance
+  * 3rd-party assessment
 * Critical: EU certification
 
 <div style="font-size: large">
@@ -445,10 +445,120 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-## Open Source Software Steward
+## Open Source Software Steward 🆕
 
 
+[comment]: # (||| data-auto-animate)
 
+## OSS Stewards
+
+* EU Commission has been creative
+* **A new organization**, with several roles to play
+* Perl, CPAN, Raku communities affected
+
+[comment]: # (||| data-auto-animate)
+
+[Recital (19)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_19 'Open Source Software Stewards, light-touch regulatory regime, and CE mark implications'
+[Article 3]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_3 'Definitions'
+
+## OSS Stewards are…
+
+* legal persons who *provide support on a sustained basis* for OSS products, and
+  * …play a main role in **ensuring the viability** of those products
+  * …only cover OSS software that are
+    * …ultimately **intended for commercial activities**
+
+<div style="font-size: large;">
+
+> * [Article 3] (14) – Definition
+> * [Recital (19)] – Play a main role; …intended for commercial…
+
+</div>
+
+[comment]: # (||| data-auto-animate)
+
+[Recital (19)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_19 'Open Source Software Stewards, light-touch regulatory regime, and CE mark implications'
+
+## OSS Stewards are…
+
+* Sustained support includes (but not limited to)…
+  * hosting development collaboration platforms
+  * hosting of source code
+  * governing or managing of open source software products
+  * steering of the development of such products
+
+<div style="font-size: large;">
+
+> * [Recital (19)] – Sustained support
+
+</div>
+
+[comment]: # (||| data-auto-animate)
+
+[Article 24]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24 'Obligations of open-source software stewards'
+[Article 13(5)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.005 'Manufacturers shall exercise due diligence when integrating components, including FOSS'
+[Article 15]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_15 'Voluntary reporting'
+[Article 14(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.001 'A manufacturer shall notify any actively exploited vulnerability contained in the product that it becomes aware of'
+[Article 14(3)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.003 'A manufacturer shall notify any severe incident having an impact on the security of the product that it becomes aware of'
+[Article 14(8)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#014.008 'After becoming aware of an incident or vulnerability, the manufacturer shall inform the impacted users of the product, and about risk mitigation and any corrective measures that users can deploy'
+[Article 24]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24 'Obligations of open-source software stewards'
+[Article 24]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24 'Obligations of open-source software stewards'
+[Article 24(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#024.002 'Open-source software stewards'
+
+
+## OSS Stewards *are obliged to*…
+
+* …facilitate Manufacturer's _due diligence_ obligations
+* …provide a cybersecurity policy & documentation
+* …cooperate with market surveillance authorities
+* …notify designated CSIRT on…
+  * actively exploited vulnerabilities
+  * severe incidents
+* …notify users on…
+  * incidents and exploited vulnerabilities
+
+
+<div style="font-size: large;">
+
+> * [Article 24] – OSS Steward obligations
+> * [Article 13(5)] – Due diligence obligations
+> * [Article 15] – Security policy
+> * [Article 24(2)] – Market surveillance authorities
+> * [Article 14(1)] – Notify on exploited vulnerabilities
+> * [Article 14(3)] – Notify market authorities on any severe incidents
+> * [Article 14(8)] – Notify users on actively exploited vulnerabilities
+
+</div>
+
+Notes:
+
+* …cybersecurity policy for **voluntary reporting of vulnerabilities**
+* …notify designated CSIRT **to the extent the Steward is involved**
+
+
+[comment]: # (||| data-auto-animate)
+
+[Article 25]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25 'Security attestation of free and open-source software shall cooperate with the market surveillance authorities'
+[Recital (21)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_21 'Voluntary security attestation programs for Open Source projects'
+
+## OSS Stewards attest…
+
+OSS Software may get a voluntary security attestation…
+
+* …using an EU Attestation program
+* …in such a way that this can be initiated or financed by not only
+  * FOSS projects, but also by others, including
+  * manufacturers,
+  * users, or
+  * public administrations.
+
+
+<div style="font-size: large;">
+
+> * [Article 25] – Security attestation of free and open-source software
+> * [Recital (21)] – EU Attestation program
+
+</div>
 
 
 [comment]: # (!!!)
@@ -535,52 +645,49 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-Note:
+## How will this affect Open Source?
 
-* "Optional" isn't really an option any more
-    * Some fields are actually _required_
-
-
-[comment]: # (||| data-auto-animate)
-
+* Open Source is not a "group" or a "community"
 
 Note:
 
 
 [comment]: # (||| data-auto-animate)
 
+## How will this affect Open Source?
 
-[comment]: # (|||)
-
-
-
-[comment]: # (|||)
-
+* Open Source is not a "group"
+* Open Source is a Universal Phenomenon
 
 
 [comment]: # (||| data-auto-animate)
 
+## How will this affect Open Source?
+
+* Open Source is not a "group"
+* Open Source is a Universal Phenomenon
+* Open Source is **Cooperatively building our digital infrastructure**
+
+
+[comment]: # (||| data-auto-animate)
+
+## How will this affect ~Open Source~ **all of us**?
 
 [comment]: # (|||)
 
 ## For discussion
 
-* It's a mess
-* It's up to volunteers to improve it
+* We're in a mess
+* It's up to volunteers and users (us!) to improve it
 * ~"If it ain't broke, don't fix it"~
-* Don't be a bystander
+* Don't be a bystander – join – cooperate
 
+[comment]: # (|||)
 
-Note:
+## Join…
 
-* "Permissionless Innovation"
-* "Being a Good Open Source Citizen"
-* We already know that being a bystander doesn't work – better to step up instead!
-
-
-[comment]: # (!!!)
-
-## Questions & Comments
+* [CPAN Security Group](https://security.metacpan.org/)
+* [Open Regulatory Compliance WG](https://orcwg.org/)
 
 
 [comment]: # (!!!)
@@ -591,4 +698,17 @@ Salve J. Nilsen
 
 🐘 Mastodon — @sjn\@chaos.social
 
-🦆🦆
+🦆🦆🦆
+
+
+[comment]: # (!!!)
+
+## Questions & Comments
+
+Note:
+
+* "Permissionless Innovation"
+* "Being a Good Open Source Citizen"
+* We already know that being a bystander doesn't work – better to step up instead!
+
+

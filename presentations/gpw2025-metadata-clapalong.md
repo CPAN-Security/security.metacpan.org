@@ -15,7 +15,7 @@
 [comment]: # (controlsBackArrows: "true")
 
 
-## CRA Metadata Clapalong
+## CRA Metadata Clapalong 👏
 
 German Perl Workshop 2025
 
@@ -30,20 +30,23 @@ Note:
 
 [comment]: # (!!! data-auto-animate)
 
-## CRA Metadata Clapalong 👏
+# CRA Metadata Clapalong 👏
+
+## (Calibrate)
 
 
 [comment]: # (||| data-auto-animate)
 
-## CRA Metadata Clapalong 👏
+# CRA Metadata Clapalong 👏
 
-* How Useful?
+## How Useful?
+
 
 [comment]: # (||| data-auto-animate)
 
 [TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
 
-### Component Attributes
+## Component Attributes
 
 <div style="font-size: x-large;">
 
@@ -74,7 +77,7 @@ Note:
 
 [comment]: # (|||)
 
-### Dependency Attributes
+## Dependency Attributes
 
 <div style="font-size: x-large;">
 
@@ -102,7 +105,7 @@ Note:
 
 [comment]: # (|||)
 
-### SBOM Meta-Attributes
+## SBOM Meta-Attributes
 
 <div style="font-size: x-large;">
 
@@ -132,7 +135,7 @@ Note:
 
 [comment]: # (|||)
 
-### Open Source Steward Attributes
+## Open Source Steward Attributes
 
 <div style="font-size: x-large;">
 
@@ -154,7 +157,7 @@ Note:
 
 [comment]: # (|||)
 
-### Manufacturer Attributes
+## Manufacturer Attributes
 
 <div style="font-size: x-large;">
 
@@ -184,7 +187,7 @@ Note:
 
 [comment]: # (|||)
 
-### Special Attributes for Integrators in Germany
+## Special Attributes for Integrators in Germany
 
 * Bundesamt für Sicherheit in der Informationstechnik
 
@@ -206,7 +209,7 @@ Notes:
 
 [comment]: # (|||)
 
-### Special Attributes for Integrators in the Indian Financial Sector
+## Special Attributes for Integrators in the Indian Financial Sector
 
 * Securities and Exchange Board of India
 
@@ -229,7 +232,7 @@ Notes:
 
 [comment]: # (|||)
 
-### (Optional Attributes)
+## (Optional Attributes)
 
 <div style="font-size: x-large;">
 
@@ -246,17 +249,18 @@ Note:
 
 [comment]: # (!!! data-auto-animate)
 
-## CRA Metadata Clapalong 👏
+# CRA Metadata Clapalong 👏
 
-* Metadata Quality is Fun!
+## Metadata Quality is "Fun"!
 
 [comment]: # (||| data-auto-animate)
 
-## CRA Metadata Clapalong 👏
+# CRA Metadata Clapalong 👏
 
-* Metadata Quality is Fun!
-* "Custom" metadata?
-  * Try [CycloneDX properties](https://github.com/CycloneDX/cyclonedx-property-taxonomy?tab=readme-ov-file)
+## "Custom" metadata?
+
+[CycloneDX properties](https://github.com/CycloneDX/cyclonedx-property-taxonomy?tab=readme-ov-file)
+
 
 
 [comment]: # (!!! data-auto-animate)

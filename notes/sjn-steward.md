@@ -79,6 +79,12 @@ OSS Steward
 - Security Hygiene Recommendations
 - Pilot projects for applying recommendations
 
+## Bylaws/charter
+
+Base: [§ 10.Vedtekter for samvirkeforetak, Samvirkelova](https://lovdata.no/lov/2007-06-29-81/§10)
+- Handle change of organization form
+- Handle gender composition of board
+
 
 ## Fist meeting
 - Stakeholder involvement
@@ -95,15 +101,17 @@ OSS Steward
     - Oslo Perl Mongers (sjn)
     - German Perl Mongers (corion)
     - Vienna Perl Mongers (domm)
+    - London Perl Mongers (XXX)
   - PAUSE
   - PTS (French Perl Mongers)
 - Organization charter and bylaws
   - Bylaw working group
-    - NUUG Foundation (advisory, XXX)
+    - NUUG Foundation (?, XXX) # Ask sjn about this
     - Gnutiken (Jeremiah Foster)
     - TPRF (Ruth Holloway)
     - French Perl Mongers (Laurent Boivin)
     - CPANSec (Salve J. Nilsen)
+    - Mark Overmeer
 - Organization funding & Business model development
   - Funding working group
     - NUUG Foundation

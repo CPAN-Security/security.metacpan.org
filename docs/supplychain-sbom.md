@@ -578,6 +578,12 @@ A leading developer of an Open Source component project, though not necessarily 
 * The Maintainer _can_ be a group of people (having co-maintainers), though a single point of responsibility is common.
 * If a Maintainer has upstream (reverse) dependencies, the Maintainer is also considered to be an [Developer](#developer) (as seen from the upstream Maintainer's perspective).
 * Other common names for this role include Author, Developer, [Owner](#owner).
+* Maintainers may be
+  * Independent (Author or Maintainer is [Owner](#owner))
+  * Managed by a public sector [Owner](#owner)
+  * Managed by a commercial sector [Owner](#owner)
+  * Managed by an academic sector [Owner](#owner)
+  * Managed by an ideal/non-profit/NGO sector [Owner](#owner)
 
 | Ops | Attribute name                     | Required | Required by                                 | Comment | FIXME   |
 | :-: | :--------------------------------- | :------: | ------------------------------------------- | :------ | :------ |
@@ -1299,6 +1305,14 @@ The Supplier is a term used throughout the Supply-chain, but most often represen
 The legal owner of the component or project.
 
 * May be a business or other entity, distinct from the component [Author](#author).
+* An Owner may be
+  * Independent ([Author](#author) or [Maintainer](#maintainer) is Owner)
+  * Public sector entity (e.g. a city administration)
+  * Commercial sector entity (e.g. a shareholder-owned business)
+  * Academic sector (e.g. a university)
+  * Ideal/non-profit/NGO sector
+* Project needs, risks, predictability, sustainability and strategy may depend greatly on the Owner entity
+
 
 * See also
   * [Author](#author)

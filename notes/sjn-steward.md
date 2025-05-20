@@ -62,19 +62,22 @@ OSS Steward
   - Confirm quality of metadata, packaging, contact points, distribution
   - Steward as co-maintainer?
 - Stewards offering a freelance job marketplace
+- Exposing the availability of transitive attestations, given the presence of one component
 
 ### Arguments
 
-- Maintainance is not free
+- Maintenance is not free
 - Due diligence requires attention from code owners
   - more attention for "full autopsies" than for "cursory sanity checks"
+- Countering notification fatigue among manufacturers with massive dependency graphs
+- Facilitate the application of [Kerckhoffs’ principle](https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) (everything about a system should be public knowledge, except the keys) in the implementation and securing of business-critical digital infrastructure.
+
 
 ## Documentation
 
 - Security Assessment Practices
 - Security Hygiene Recommendations
 - Pilot projects for applying recommendations
-- 
 
 ## Questionnaire
 

@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>CRA Metadata Clapalong 👏</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/zenburn.min.css" id="highlight-theme"></head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section data-markdown  data-auto-animate><textarea data-template>
+[comment]: # (Compile this presentation with the command below)
+[comment]: # (mdslides pts2024-sbom-intro.md --include ../media)
+[comment]: # (...or by running the Makefile with "make")
+[comment]: # (mdslides can be installed from https://github.com/dadoomer/markdown-slides/)
+
+
+
+
+## CRA Metadata Clapalong 👏
+
+German Perl Workshop 2025
+
+Salve J. Nilsen
+
+🐘 Mastodon — @sjn\@chaos.social
+
+
+
+Note:
+
+
+</textarea></section>
+<section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+# CRA Metadata Clapalong 👏
+
+## (Calibrate)
+
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+# CRA Metadata Clapalong 👏
+
+## How Useful?
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+
+## Component Attributes
+
+<div style="font-size: x-large;">
+
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+[NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
+[CISA-2023-4]:https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom 'CISA Types of Software Bill of Materials (SBOM)'
+[CISA-2024-10]:https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf 'CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)'
+[CRA-II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[CRA-AV]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V 'EU Declaration of Conformity'
+[CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
+
+
+| Attribute name                      | Required | References                                            |
+| :---------------------------------- | :------: | ----------------------------------------------------: |
+| Primary Component Name              | Yes      | [NTIA-SBOM], [CISA-2024-10], [CRA-AV], [TR-03183]     |
+| Version                             | Yes      | CISA-2024-10, CRA-AV, TR-03183                        |
+| Purpose, Intended Use               | Yes      | [CRA-AII]\(4)                                         |
+| Supplier Name                       | Yes      | CRA-AII(1), CRA-AV, NTIA-SBOM, CISA-2024-10, TR-03183 |
+| Security contact                    | Yes      | CRA-AII(2)                                            |
+| Copyright Notice                    | Yes      | CISA-2024-10                                          |
+| License(s)                          | Yes      | CISA-2024-10, TR-03183, [CSCRF]                       |
+
+
+</div>
+
+Note:
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Dependency Attributes
+
+<div style="font-size: x-large;">
+
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resiliencee Requirements for Manufacturers and Products, Part 2'
+[NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
+[CISA-2023-4]:https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom 'CISA Types of Software Bill of Materials (SBOM)'
+[CISA-2024-10]:https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf 'CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)'
+[CRA-AII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[CRA-AV]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V 'EU Declaration of Conformity'
+[CSCRF]:https://www.sebi.gov.in/legal/cireculars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
+
+| Attribute name                      | Required | References                                             |
+| :---------------------------------- | :------: | -----------------------------------------------------: |
+| Unique Product ID                   | Yes      | [CRA-AII]\(3), [CRA-AV], [NTIA-SBOM], [CISA-2024-10]   |
+| Cryptographic Hash                  | Yes      | CISA-2024-10, [TR-03183], [CSCRF]                      |
+| Primary Component Filename          | Yes      | TR-03183                                               |
+| Dependencies                        | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183, CSCRF   |
+| Dependency Relationships            | Yes      | CISA-2024-10                                           |
+
+</div>
+
+
+Note:
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## SBOM Meta-Attributes
+
+<div style="font-size: x-large;">
+
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+[NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
+[CISA-2023-4]:https://www.cisa.gov/resources-tools/resources/types-software-bill-materials-sbom 'CISA Types of Software Bill of Materials (SBOM)'
+[CISA-2024-10]:https://www.cisa.gov/sites/default/files/2024-10/SBOM%20Framing%20Software%20Component%20Transparency%202024.pdf 'CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)'
+[CRA-AII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| SBOM Author                         | Yes      | [NTIA-SBOM], [CISA-2024-10], [TR-03183]    |
+| SBOM Creation Time-stamp            | Yes      | NTIA-SBOM, CISA-2024-10, TR-03183          |
+| SBOM Format                         | Yes      | CycloneDX 1.6, SPDX 2.3                    |
+| SBOM Generation Tool                | No       |                                            |
+| SBOM Location                       | Yes      | [CRA-AII]\(9), TR-03183                    |
+| SBOM Primary Component              | No       | CycloneDX 1.6, SPDX 3.0                    |
+| SBOM Release                        | Yes      | CycloneDX 1.6, SPDX 2.3                    |
+| SBOM Serial Number                  | Yes      | CycloneDX 1.6  SPDX 2.3                    |
+| SBOM Type                           | No       | [CISA-2023-4], CISA-2024-10                |
+
+</div>
+
+
+Note:
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Open Source Steward Attributes
+
+<div style="font-size: x-large;">
+
+[CRA-Rec-15]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_15 'CRA applies to economic operators that have an intention to monetise a product'
+[CRA-Rec-18]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_18 'Open Source Software Contributors'
+[CRA-Rec-19]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_19 'Open Source Software Stewards, light-touch regulatory regime, and CE mark implications'
+[CRA-Rec-21]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_21 'Voluntary security attestation programs for Open Source projects'
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Intended for Commercial Use         | No       | [CRA-Rec-15], [CRA-Rec-18]                 |
+| Open Source Software Steward        | No       | [CRA-Rec-19]                               |
+| Security Attestation                | No       | [CRA-Rec-21]                               |
+
+</div>
+
+Note:
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Manufacturer Attributes
+
+<div style="font-size: x-large;">
+
+[CRA-Art-18]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_18 'Authorised representatives'
+[CRA-Art-47]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_47 'Operational obligations of notified bodies'
+[CRA-AII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[CRA-AV]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V 'EU Declaration of Conformity'
+
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| CE Conformity Assessment Body       | No       | [CRA-Art-47]\(1), [CRA-AV]                 |
+| CE Declaration of Conformity        | No       | [CRA-AII]\(6), CRA-AV                      |
+| CE Support End Date                 | No       | CRA-AII(7)                                 |
+| CE Technical Documentation          | No       | CRA-AII(8)                                 |
+| CE Authorized Representative        | No       | [CRA-Art-18]                               |
+
+</div>
+
+
+Note:
+
+* What's needed for components that are monetized?
+  * Maintainer becomes a Manufacturer
+  * Does the Manufacturer have a Authorised representative?
+  * This needs also to be supported
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Special Attributes for Integrators in Germany
+
+* Bundesamt für Sicherheit in der Informationstechnik
+
+<div style="font-size: x-large;">
+
+[TR-03183]:https://bsi.bund.de/dok/TR-03183 'TR-03183 Cyber Resilience Requirements for Manufacturers and Products, Part 2'
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Executable Property                 | Yes      | [TR-03183]                                 |
+| Archive Property                    | Yes      | TR-03183                                   |
+| Structured Property                 | Yes      | TR-03183                                   |
+
+</div>
+
+
+Notes:
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## Special Attributes for Integrators in the Indian Financial Sector
+
+* Securities and Exchange Board of India
+
+<div style="font-size: x-large;">
+
+[CSCRF]:https://www.sebi.gov.in/legal/circulars/aug-2024/cybersecurity-and-cyber-resilience-framework-cscrf-for-sebi-regulated-entities-res-_85964.html 'Cybersecurity and Cyber Resilience Framework (CSCRF) for SEBI Regulated Entities (REs), (GV.SC.S5, page 89), Securities and Exchange Board of India'
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Dependencies (Known unknowns)       | Yes      | [CSCRF]                                    |
+| Encryption used                     | Yes      | CSCRF                                      |
+| Frequency of updates                | Yes      | CSCRF                                      |
+| Access control                      | Yes      | CSCRF                                      |
+| Methods for accommodating errors    | Yes      | CSCRF                                      |
+
+</div>
+
+Notes:
+
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+## (Optional Attributes)
+
+<div style="font-size: x-large;">
+
+| Attribute name                      | Required | References                                 |
+| :---------------------------------- | :------: | -----------------------------------------: |
+| Download location                   | No       |                                            |
+| Code Commit Revision                | No       |                                            |
+| Code Repository                     | No       |                                            |
+
+</div>
+
+Note:
+
+
+</textarea></section>
+</section>
+<section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+# CRA Metadata Clapalong 👏
+
+## Metadata Quality is "Fun"!
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+# CRA Metadata Clapalong 👏
+
+## "Custom" metadata?
+
+[CycloneDX properties](https://github.com/CycloneDX/cyclonedx-property-taxonomy?tab=readme-ov-file)
+
+
+
+</textarea></section>
+</section>
+<section data-markdown ><textarea data-template>
+
+# Thanks!
+
+Salve J. Nilsen
+
+🐘 Mastodon — @sjn\@chaos.social
+
+🦆🦆🦆
+
+</textarea></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+Reveal.initialize({
+controls : false,
+markdown : {smartypants: true},
+minScale : 0.4,
+maxScale : 2.0,
+controls : true,
+width : "1440",
+height : "810",
+help : true,
+progress : true,
+controlsBackArrows : "true",
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>

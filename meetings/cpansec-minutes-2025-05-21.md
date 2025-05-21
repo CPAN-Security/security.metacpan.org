@@ -28,7 +28,7 @@ title: CPANSec bi-weekly minutes
 
 ### Attendees, absents & regrets
 -   Attendees
-    - @sjn, @toddr, @robrwo, @stigtsp, @haraldjorg, @tux
+    - @sjn, @toddr, @robrwo, @stigtsp, @haraldjoerg, @tux
 -   Partly attending
     - @leont, @thibaultduponchelle
 -   Regrets 
@@ -128,7 +128,7 @@ for a list
 
 #### Recruitment
 - [ ] @thibaultduponchelle - inviting @jjatria to join
-- [x] @sjn - @haraldjorg invited, and he showed up. Welcome! :-)
+- [x] @sjn - @haraldjoerg invited, and he showed up. Welcome! :-)
 
 #### New Guide needed: PackageURL
 - [ ] @sjn - We need a comprehensive PackageURL guide that answers/covers all relevant use cases

@@ -60,6 +60,9 @@ title: CPANSec bi-weekly minutes
 
 #### CVE details for Debian
 - [x] @stigtsp - Mojolicious CVE correction
+    - @stigtsp - Debian was interested in getting vetted patches that we have been publishing, presumably for backporting to older packages
+        - This may be interesting to combine with @thibaultduponchelle 's patch work, and maybe the CVEs in general.
+    - @Tux - maybe we should have an official patch repo on GitHub?
 - [x] @rrwo - posted summary of rand-related issues
 - [ ] @timlegge - waiting on CVEs/disclosure for 2? other issues from that batch- 
 
@@ -93,7 +96,7 @@ title: CPANSec bi-weekly minutes
 
 #### Common Lifecycle Enumeration project
 - [ ] @sjn - Can we provide a list of lifecycle events that we have encountered?
-  - e.g. last project maintainer dies; a project decides to shut down, but disallows adoption (e.g. DBIC); a project reboots with new contributors (e.g. CPAN Testers); a project is put up for adoption; project is adopted, and gets a new maintainer; a project is forked and published under a new name; a project is made "Dual life"; a project is removed from "Dual life" status; A project gets is initial publication; a project is "unpublished"; a project releases it's first stable (production-ready) release; Project moved from single maintainer to group, or vice versa; Repository move; etc.
+  - e.g. last project maintainer dies; a project decides to shut down, but disallows adoption (e.g. DBIC); a project reboots with new contributors (e.g. CPAN Testers); a project is put up for adoption; project is adopted, and gets a new maintainer; a project is forked and published under a new name; a project is made "Dual life"; a project is removed from "Dual life" status; A project gets is initial publication; a project is deleted from ecosystem; a project releases it's first stable (production-ready) release; Project moved from single maintainer to group, or vice versa; Repository move; etc.
   - [ ] @sjn - organize brain-storming session. who should join?
 
 
@@ -253,7 +256,7 @@ for a list
 
 
 ## Next meeting date, time and location
-- Next meeting is Wednesday 2025-06-05 @ 16:00UTC in #cpansec-discussion on Matrix (18:00 Europe/Amsterdam)
+- Next meeting is Wednesday 2025-06-04 @ 16:00UTC in #cpansec-discussion on Matrix (18:00 Europe/Amsterdam)
 
 
 ## 17:04 UTC - Meeting end

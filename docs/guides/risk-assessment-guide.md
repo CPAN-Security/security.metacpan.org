@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: CPAN Risk Assessment Guide
 toc: true
 ---

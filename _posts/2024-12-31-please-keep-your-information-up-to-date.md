@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 published: True
 toc: true
 title: "Please keep your information up-to-date"

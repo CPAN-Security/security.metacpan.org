@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "CPANSec retrospective 2024"
 date:   2025-03-13 00:23:17 +0200
 category: blog

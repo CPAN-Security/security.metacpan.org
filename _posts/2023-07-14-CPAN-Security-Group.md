@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Introducing the CPAN Security Group"
 date:   2023-07-14 00:23:17 +0200
 category: news

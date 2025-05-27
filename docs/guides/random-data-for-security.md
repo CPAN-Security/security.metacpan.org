@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 author: Robert Rothenberg
 title: CPAN Author's Guide to Random Data for Security
 description: A guide to use of random data for security

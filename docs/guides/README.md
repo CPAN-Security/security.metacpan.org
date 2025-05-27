@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Guides for CPAN Authors and Users
 toc: false
 permalink: /docs/guides/

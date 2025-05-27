@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 published: True
 toc: true
 title: "Add a security policy to your distributions"

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 toc: false
 title: "CPANSec is CNA for Perl and the CPAN ecosystem"
 date: 2025-02-25 22:00:00 +0100

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 published: true
 toc: true
 title: "CPANSec CNA Disclosure Policy"

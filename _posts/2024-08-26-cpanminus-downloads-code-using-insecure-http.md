@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 published: True
 toc: true
 title: "App::cpanminus through 1.7047 downloads code using insecure HTTP"

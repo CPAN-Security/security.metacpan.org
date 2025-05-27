@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 published: True
 toc: true
 title: "CPAN Author's Guide to Random Data for Security"

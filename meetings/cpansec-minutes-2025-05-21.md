@@ -5,8 +5,6 @@ meeting_time: 2025-05-21 16:00 UTC
 title: CPANSec bi-weekly minutes
 ---
 
-[TOC]
-
 ## Agenda & Meeting Details 2025-05-21
 - 2025-05-21 16:00 UTC on #cpansec-discussion on Matrix
 
@@ -95,9 +93,9 @@ title: CPANSec bi-weekly minutes
   - @sjn - interesting discussions around exploring relationships between this spec and LF's security-insights.yml spec
 
 #### Common Lifecycle Enumeration project
-- [ ] @sjn - Can we provide a list of lifecycle events that we have encountered?
+- [x] @sjn - Can we provide a list of lifecycle events that we have encountered?
   - e.g. last project maintainer dies; a project decides to shut down, but disallows adoption (e.g. DBIC); a project reboots with new contributors (e.g. CPAN Testers); a project is put up for adoption; project is adopted, and gets a new maintainer; a project is forked and published under a new name; a project is made "Dual life"; a project is removed from "Dual life" status; A project gets is initial publication; a project is deleted from ecosystem; a project releases it's first stable (production-ready) release; Project moved from single maintainer to group, or vice versa; Repository move; etc.
-  - [ ] @sjn - organize brain-storming session. who should join?
+  - [ ] @sjn - organize brain-storming session. who would like to join?
 
 
 ### [Compliance, Guidance & Standards](https://github.com/orgs/CPAN-Security/projects/9/views/2)

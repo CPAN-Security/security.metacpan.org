@@ -179,6 +179,12 @@ Add a reminder to include details for verifying the bug:
 > report does not expose any sensitive data, such as passwords,
 > tokens, or personal information.
 
+It is worth reminding users that they may be credited publicly:
+
+> Project maintainers will normally credit the reporter when a
+> vulnerability is disclosed or fixed.  If you do not want to be
+> credited publicly, please indicate that in your report.
+
 We recommend that you add note about also copying CPANSec on the
 notification if help is required triaging the issue, or if the issue
 is being actively exploited.  CPANSec provides support to reporters
@@ -406,6 +412,10 @@ Please include as many details as possible, including code samples
 or test cases, so that we can reproduce the issue.  Check that your
 report does not expose any sensitive data, such as passwords,
 tokens, or personal information.
+
+Project maintainers will normally credit the reporter when a
+vulnerability is disclosed or fixed.  If you do not want to be
+credited publicly, please indicate that in your report.
 
 If you would like any help with triaging the issue, or if the issue
 is being actively exploited, please copy the report to the CPAN

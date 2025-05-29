@@ -114,7 +114,7 @@ for a list
    - look into "update your cpan module" month (ref @tux's checklist)
      - @robrwo interpreted this as a "security checklist" which is a bit too broad in scope, and overlaps with secure coding guidelines.
      - @robrwo was thinking of a trimmed down metadata/config/documentation security checklist
-   - [x] @robrwo contacts manwar to see if he'd like to help with outreach
+   - [x] @robrwo was to contact manwar to see if he'd like to help with outreach
      - …then decided a "blog" was a better idea for outreach, which we could then contact manwar
      - Abandoned
      

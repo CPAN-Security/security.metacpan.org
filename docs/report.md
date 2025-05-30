@@ -57,6 +57,7 @@ Please ensure any sensitive data such as passwords, authentication tokens, or pe
 
 Also consider proposing a date for public disclosure, this is usually 30 days or longer.
 
+If you do not want to be publicly credited as the reporter of the vulnerability, then you should indicate that in your report.
 
 ### Step 2: Contact the Maintainer
 

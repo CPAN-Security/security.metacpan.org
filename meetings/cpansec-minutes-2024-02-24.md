@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 toc: true
 meeting_time: February 24th, 2024 15:00 UTC
 title: Minutes 2024-02-24

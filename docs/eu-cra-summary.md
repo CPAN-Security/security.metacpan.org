@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: An EU Cyber Resilience Act Summary
 description: A short overview of the parts of the CRA that affect different entities in Open Source supply-chains
 author: Salve J. Nilsen

@@ -1,5 +1,5 @@
 ﻿---
-layout: page
+layout: single
 title: Charter
 description: CPAN Security Group Charter
 toc: true

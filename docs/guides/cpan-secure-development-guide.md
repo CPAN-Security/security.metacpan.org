@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 toc: true
 author: Salve J. Nilsen
 mastodon: { username: sjn, instance: chaos.social }

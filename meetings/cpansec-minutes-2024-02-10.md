@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 ---
 
 # Minutes 2024-02-10

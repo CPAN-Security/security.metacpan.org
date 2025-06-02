@@ -500,6 +500,15 @@ newer versions as recommended.
 Please see the software documentation for further information.
 ```
 
+## Software to Generate Security Policies
+
+Rather than copying and modifying the text from this guide, you can modules from CPAN to generate a policy file.
+The following CPAN modules may be useful:
+
+[Software::Security::Policy](https://metacpan.org/pod/Software::Security::Policy) is a framework for generating a SECURITY.md files.
+
+[Dist::Zilla::Plugin::SecurityPolicy](https://metacpan.org/pod/Dist::Zilla::Plugin::SecurityPolicy) is a Dist::Zilla plugin for adding a security policy to a distribution.
+
 ## References and Notes
 
 1. (Github-Sec-Advisory) [Configuring private vulnerability reporting for a repository](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository)

@@ -502,7 +502,7 @@ Please see the software documentation for further information.
 
 ## Software to Generate Security Policies
 
-Rather than copying and modifying the text from this guide, you can modules from CPAN to generate a policy file.
+Rather than copying and modifying the text from this guide, you can use existing software to generate a policy file.
 The following CPAN modules may be useful:
 
 [Software::Security::Policy](https://metacpan.org/pod/Software::Security::Policy) is a framework for generating a SECURITY.md files.

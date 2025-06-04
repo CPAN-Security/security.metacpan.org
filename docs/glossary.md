@@ -620,7 +620,7 @@ Package _Providers_ are responsible for making packages or containers that Patch
 
 > 1. (CPANSec-2024) the social and technical organization around a codebase which works on and decides how it is developed over time.
 >     * A project has a name, a maintainer and a repository for collaboration, and may have one or more co-maintainers (possibly constituting a "core" of the Project) that help take care of the codebase.
->     * Other important features include the Project's license, governance structures, culture and community.
+>     * Other important features include the Project's license, governance structures, language, ecosystem, community and culture.
 >     * If the Project's license is recognized by the Open Source Initiative as an Open Source license, then the project is an Open Source Project.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))

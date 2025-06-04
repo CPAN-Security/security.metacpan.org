@@ -38,7 +38,7 @@ OSS Steward
 > — (Article 24)
 
 - Provide (Article 25) Security attestations for
-  - Article 13(5) Due diligence performed
+  - Article 13(5) Due diligence performed by Maintainers in cooperation with the Steward and the Manufacturers
   - …
 - Offer (Article 13(6)) contribution obligation fulfillment statements.
 - Put in place and document a cybersecurity policy (Article 15)
@@ -54,12 +54,30 @@ OSS Steward
 - Report on vulnerabilities & severe incidents to the extent they’re involved in the development of PDEs,
   - to designated CSIRTs/ENISA/users (Article 14(1), Article 14(3), Article 14(8))
 
+### Other activities
+
+- Notarizing BOMs
+- Automating BOM sharing, payment, access to attestations, etc.
+- Possible tasks
+  - Confirm quality of metadata, packaging, contact points, distribution
+  - Steward as co-maintainer?
+- Stewards offering a freelance job marketplace
+- Exposing the availability of transitive attestations, given the presence of one component
+
+### Arguments
+
+- Maintenance is not free
+- Due diligence requires attention from code owners
+  - more attention for "full autopsies" than for "cursory sanity checks"
+- Countering notification fatigue among manufacturers with massive dependency graphs
+- Facilitate the application of [Kerckhoffs’ principle](https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) (everything about a system should be public knowledge, except the keys) in the implementation and securing of business-critical digital infrastructure.
+
+
 ## Documentation
 
 - Security Assessment Practices
 - Security Hygiene Recommendations
 - Pilot projects for applying recommendations
-- 
 
 ## Questionnaire
 

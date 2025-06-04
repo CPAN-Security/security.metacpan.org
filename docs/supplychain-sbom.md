@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Roles and metadata in open source supply-chains
+mastodon: { username: sjn, instance: chaos.social }
 description: An overview of roles in a supply-chain and the metadata they care about, in light of upcoming regulatory changed introduced by the EU Cyber Resilience Act
 toc: true
+author: Salve J. Nilsen
 mermaid: true
 ---
 
@@ -230,6 +232,7 @@ stateDiagram-v2
     %%state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Archivist<br>🟩 Distributor" as language_distributor
+    %% "🟩 Reservoir"
     %%
     class language_authenticator verifiesSBOM
     class language_packager assemblesSBOM
@@ -1429,43 +1432,45 @@ Several people have been involved in the development of this document
 
 ### SBOM JSON Paths and data types
 
-| Attribute name                      | Data type    | CycloneDX 1.6 (ECMA-424)                                              | SPDX 2.3                | SPDX 3.0 | Comment |
-| :---------------------------------- | :----------: | :-------------------------------------------------------------------- | :---------------------- | -------- | :------ |
+| Attribute name                      | Data type    | CycloneDX 1.6 (ECMA-424)                                              | SPDX 2.3                | SPDX 3.0 | Comment  |
+| :---------------------------------- | :----------: | :-------------------------------------------------------------------- | :---------------------- | -------- | :------- |
 | Primary Component Name              | Text         | bom.components[].name                                                 | packages[].name         | Software.Package.name | |
-| Security contact (Integrator)       | URL          | bom.components[].externalReferences[].security-contact                |                         |          |         |
-| Security contact (Manufacturer)     | URL          | bom.metadata[manufacturer].contact.email, bom.externalReferences[].security-contact |           |          |         |
-| Security contact (Maintainer)       | URL          | bom.metadata[supplier].contact.email, bom.externalReferences[].security-contact |               |          |         |
+| Security contact (Integrator)       | URL          | bom.components[].externalReferences[].security-contact                |                         |          |          |
+| Security contact (Manufacturer)     | URL          | bom.metadata[manufacturer].contact.email, bom.externalReferences[].security-contact |           |          |          |
+| Security contact (Maintainer)       | URL          | bom.metadata[supplier].contact.email, bom.externalReferences[].security-contact |               |          |          |
 | Supplier Name (Author)              | Text, URL    | bom.metadata[supplier], bom.components[].authors[]                    | creationInfo.creators[] | Software.Package.suppliedBy | |
 | Supplier Name (Manufacturer)        | Text, URL    | bom.metadata[manufacturer], bom.components[].manufacturer             | creationInfo.creators[], packages[].originator, packages[].supplier | Software.Package.suppliedBy | |
 | Unique Product Identifier           | PURL         | bom.components[].purl | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | |
 | Version                             | Text         | bom.components[].version                                              | packages[].versionInfo  | Software.Package.packageVersion | |
 | Version (Redistributed)             | Text         | bom.metadata.version                                                  | packages[].versionInfo  | Software.Package.packageVersion | FIXME – confirm |
-| Code Commit Revision                | SHA1         |                                                                       |                         |          |         |
-| Code Repository                     | URL          | bom.metadata.component.externalReferences[].vcs | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator | |
+| Code Commit Revision                | SHA1         |                                                                       |                         |          |          |
+| Code Repository                     | URL          | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator | |
 | Dependencies                        | List         | bom.components[], bom.dependencies[]                                  | relationships[].[spdxElementId,relatedSpdxElement] | |
 | Download location                   | URL          |                                                                       |                         |          | URL/pURL of where the component artifact was downloaded from |
 | Cryptographic Hash                  | SHA256       | components[].hashes[]                                                 |                         | Software.Package.verifiedUsing | |
 | License(s)                          | SPDX License | bom.metadata.licenses[], bom.components[].licenses[], components[].licenses[].acknowledgement[declared], components[].licenses[].acknowledgement[concluded], components[].licenses[].licensing (proprietary) | packages[].licenseConcluded, packages[].licenseDeclared | Core.Relationship hasConcludedLicense hasDeclaredLicense | |
 | Copyright Holder                    | Text         | bom.components[].copyright, bom.components[].evidence.copyright       |                         | Software.SoftwareArtifact.copyrightText | |
-| Purpose, Intended Use               | Text         | bom.components[].description                                          | packages[].comment      |          |         |
-| Open Source Software Steward        | URL          |                                                                       |                         |          |         |
-| Security Attestation                | URL          |                                                                       |                         |          |         |
-| Intended for Commercial Use         | Boolean      |                                                                       |                         |          |         |
-| SBOM Author                         | Text         | bom.metadata.authors                                                  | creationInfo.creators[] |          |         |
-| SBOM Creation Time-stamp            | DateTime     | bom.metadata.timestamp                                                | creationInfo.created    |          |         |
-| SBOM Format                         | Enum         | bom.properties.bomFormat                                              | SPDXVersion             |          |         |
-| SBOM Generation Tool                | List         | bom.metadata.tools[]                                                  | creationInfo.creators[] |          |         |
-| SBOM Location                       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |                         |          |         |
+| Purpose, Intended Use               | Text         | bom.components[].description                                          | packages[].comment      |          |          |
+| Open Source Software Steward        | URL          |                                                                       |                         |          |          |
+| Security Attestation                | URL          |                                                                       |                         |          |          |
+| Intended for Commercial Use         | Boolean      |                                                                       |                         |          |          |
+| SBOM Author                         | Text         | bom.metadata.authors                                                  | creationInfo.creators[] |          |          |
+| SBOM Creation Time-stamp            | DateTime     | bom.metadata.timestamp                                                | creationInfo.created    |          |          |
+| SBOM Format                         | Enum         | bom.properties.bomFormat                                              | SPDXVersion             |          |          |
+| SBOM Generation Tool                | List         | bom.metadata.tools[]                                                  | creationInfo.creators[] |          |          |
+| SBOM Location                       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |                         |          |          |
 | SBOM Primary Component              | Text         | bom.metadata.component                                                |                         | Software.Sbom.rootElement | |
-| SBOM Release                        | Int          | bom.properties.specVersion                                            | SPDXVersion             |          |         |
-| SBOM Serial Number                  | UUID         | bom.metadata.serialNumber                                             | SPDXID                  |          |         |
-| SBOM Type (Maintainer)              | Text         | bom.metadata.lifecycles[pre-build]                                    |                         |          | Produces a CISA 'Source' Type SBOM; FIXME – confirm   |
-| SBOM Type (Builder)                 | Text         | bom.metadata.lifecycles[build]                                        |                         |          | Produces a CISA 'Build' Type SBOM; FIXME – confirm    |
-| SBOM Type (Packager)                | Text         | bom.metadata.lifecycles[post-build]                                   |                         |          | Produces a CISA 'Deployed' Type SBOM; FIXME – confirm |
-| SBOM Type (Deployer)                | Text         | bom.metadata.lifecycles[operations]                                   |                         |          | Produces a CISA 'Runtime' Type SBOM; FIXME – confirm  |
-| CE Conformity Assessment Body       | URL          | bom.externalReferences[?(@.conformity-body)]                          |                         |          |         |
-| CE Declaration of Conformity        | URL          | bom.externalReferences[?(@.conformity-declaration)]                   |                         |          |         |
-| CE Support End Date                 | DateTime     | bom.externalReferences[?(@.support-horizon)]                          |                         |          |         |
-| CE Technical Documentation          | URL          | bom.externalReferences[?(@.documentation)]                            |                         |          |         |
-| CE Authorised Representative        | URL          |                                                                       |                         |          |         |
-
+| SBOM Release                        | Int          | bom.properties.specVersion                                            | SPDXVersion             |          |          |
+| SBOM Serial Number                  | UUID         | bom.metadata.serialNumber                                             | SPDXID                  |          |          |
+| SBOM Type (Maintainer)              | Text         | bom.metadata.lifecycles[pre-build]                                    |                         |          |  Produces a CISA 'Source' Type SBOM; FIXME – confirm   |
+| SBOM Type (Builder)                 | Text         | bom.metadata.lifecycles[build]                                        |                         |          |  Produces a CISA 'Build' Type SBOM; FIXME – confirm    |
+| SBOM Type (Packager)                | Text         | bom.metadata.lifecycles[post-build]                                   |                         |          |  Produces a CISA 'Deployed' Type SBOM; FIXME – confirm |
+| SBOM Type (Deployer)                | Text         | bom.metadata.lifecycles[operations]                                   |                         |          |  Produces a CISA 'Runtime' Type SBOM; FIXME – confirm  |
+| CE Conformity Assessment Body       | URL          | bom.externalReferences[?(@.conformity-body)]                          |                         |          |          |
+| CE Declaration of Conformity        | URL          | bom.externalReferences[?(@.conformity-declaration)]                   |                         |          |          |
+| CE Support End Date                 | DateTime     | bom.externalReferences[?(@.support-horizon)]                          |                         |          |          |
+| CE Technical Documentation          | URL          | bom.externalReferences[?(@.documentation)]                            |                         |          |          |
+| CE Authorised Representative        | URL          |                                                                       |                         |          |          |
+| Executable Property                 | Bool         |                                                                       |                         |          | TR-03183 |
+| Archive Property                    | Bool         |                                                                       |                         |          | TR-03183 |
+| Structured Property                 | Bool         |                                                                       |                         |          | TR-03183 |

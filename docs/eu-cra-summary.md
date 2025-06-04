@@ -2,6 +2,7 @@
 layout: page
 title: An EU Cyber Resilience Act Summary
 description: A short overview of the parts of the CRA that affect different entities in Open Source supply-chains
+author: Salve J. Nilsen
 toc: true
 mermaid: true
 ---
@@ -41,6 +42,7 @@ mermaid: true
 [Recital (62)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_62 'Support period'
 [Recital (63)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_63 'Point of contact'
 [Recital (64)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_64 'Secure by default'
+[Recital (65)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_65 'Notify of severe incidents or actively exploited vulnerabilities'
 [Recital (77)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_77 'Manufacturers should facilitate vulnerability analysis by drawing up an SBOM, though they are not obliged to make it public'
 [Recital (117)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_117 '[…] establish voluntary security attestation programmes for assessing the conformity of products with digital elements qualifying as free and open-source software […]'
 
@@ -51,13 +53,20 @@ mermaid: true
 [Chapter II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#cpt_II 'Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software'
 [Article 1]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_1 'Subject Matter'
 [Article 2]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_2 'Scope'
+[Article 3]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_3 'Definitions'
+[Article 7]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_7 'Important products'
+[Article 8]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_8 'Critical products'
 [Article 9]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_9 'Obligations of Manufacturers'
 [Article 9(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_9.tit_1 'Stakeholder consultation'
 
+[Chapter II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#cpt_II 'Obligations of Economic Operators and Provisions in relation to Free and Open-Source Software'
 [Article 13]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_13 'Obligations of Manufacturers'
+[Article 13(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.001 'Manufacturers shall ensure products are developed in accordance with essential cybersecurity requirements'
 [Article 13(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.002 'Manufacturers shall undertake a cybersecurity risk assessment'
 [Article 13(5)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.005 'Manufacturers shall exercise due diligence when integrating components, including FOSS'
 [Article 13(6)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.006 'Manufacturers shall share relevant code or documentation with the supplier or maintainer of the component'
+[Article 13(8)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.008 'Manufacturers shall ensure vulnerabilities are handled for 5 years'
+[Article 13(9)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.009 'Manufacturers shall make security updates available for 10 years or longer'
 [Article 13(12)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.012 'Manufacturers shall before placing a product on the market, draw up technical documentation'
 [Article 13(14)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.014 'Manufacturers shall ensure that procedures are in place for products to remain in conformity with this Regulation'
 [Article 13(15)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.015 'Manufacturers shall ensure that their products is identifiable'
@@ -83,11 +92,15 @@ mermaid: true
 [Article 23]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_23 'Identification of economic operators'
 [Article 23(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#023.002 'Be able to present supplier information for 10 years'
 [Article 24]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24 'Obligations of open-source software stewards'
-[Article 25]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25 'Security attestation of free and open-source software'
+[Article 24(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#024.002 'Open-source software stewards'
+[Article 25]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25 'Security attestation of free and open-source software shall cooperate with the market surveillance authorities'
 [Article 26]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_26 'Guidance'
 
 [Chapter III]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#cpt_III 'Conformity of the product with digital elements'
+[Article 27]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_27 'Presumption of conformity'
 [Article 28]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_28 'EU declaration of conformity'
+[Article 28(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#028.001 'Manufacturer states that cybersecurity requirements in [Annex I] has been demonstrated'
+[Article 28(4)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#028.004 'Manufacturer assumes responsibility for compliance'
 [Article 30]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_30 'Rules and conditions for affixing the CE marking'
 [Article 30(3)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#030.003 'The CE marking shall be affixed before the product with digital elements is placed on the market'
 [Article 32]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_32 'Conformity assessment procedures'
@@ -117,6 +130,8 @@ mermaid: true
 [Annex I, Part I]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#d1e47-68-1 'Cybersecurity requirements relating to the properties of products with digital elements'
 [Annex I, Part II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#d1e143-68-1 'Vulnerability handling requirements'
 [Annex II]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II 'Information and Instructions to the User'
+[Annex III]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_III 'Important products'
+[Annex IV]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_IV 'Critical products'
 [Annex V]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V 'EU Declaration of Conformity'
 [Annex VII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_VII 'Content of the Technical Documentation'
 
@@ -144,6 +159,25 @@ For license information and acknowledgements, see the [end of this document](#li
 Foster the development of secure products, by laying down requirements for the design, development and production of products with digital elements, and vulnerability handling processes, and the market surveillance to enforce these. ([Article 1])
 
 
+#### Who does the CRA apply to? ([Recital (15)])
+
+This Regulation applies to [economic operators](glossary.md#economic-operator) only in relation to products with digital elements [made available on the market](glossary.md#making-available-on-the-market) hence supplied for distribution or use on the Union market _in the course of a commercial activity_.
+
+Supply _in the course of a commercial activity_ might be characterised […]
+
+* by charging a price for a product with digital elements […]
+* by charging a price for technical support services
+  * where this does not serve only the recuperation of actual costs,
+* by an intention to monetise,
+  * for instance by providing a software platform through which the manufacturer monetises other services,
+* by requiring as a condition for use the processing of personal data
+  * for reasons other than exclusively for improving the security, compatibility or interoperability of the software, or
+* by accepting donations
+  * exceeding the costs associated with the design, development and provision of a product with digital elements.
+
+Accepting donations without the intention of making a profit should not be considered to be a commercial activity
+
+
 ### Manufacturers
 
 Manufacturers are obliged to _exercise due diligence when integrating components from third parties_, as laid out in [Article 13(5)]
@@ -156,18 +190,22 @@ Manufacturers are obliged to _exercise due diligence when integrating components
   * …made in such a way that security updates may be automatically applied within an appropriate time frame
   * …and more.
 
-Manufacturers must report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform, as laid out in [Article 16]
+#### Manufacturers *must report on*…
 
+* […] actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform, as laid out in [Article 16]
 * …in the way described in [Article 14(2)]
   * …submit an early warning if actively exploited vulnerabilities within 24 hours of discovery
   * …submit all relevant details about the nature of the exploit, without delay and within 72 hours
   * …submit a final report including available mitigations, within 14 days.
 
-Manufacturers are required to **report discovered vulnerabilities in components to their maintainers**,
-and **share modifications developed to address the vulnerability with their maintainers**,
-as laid out in [Article 13(6)]:
+#### Manufacturers *are required to*… 
 
-Manufacturers shall, upon identifying a vulnerability in a component, including in an open source-component, […]
+* report discovered vulnerabilities in components to their maintainers, and
+  * share modifications developed to address the vulnerability with their maintainers, as laid out in [Article 13(6)]:
+
+#### Manufacturers shall, *upon identifying a vulnerability in a component*…
+
+[…] including in an open source-component, […]
 
 * …in accordance with instructions laid out in [Annex I, part II]
   * …identify and document the vulnerability, including by drawing up an SBOM covering at minimum the top-level dependencies involved
@@ -191,6 +229,7 @@ Manufacturers are to draw up the EU declaration of conformity in accordance with
 Manufacturers must provide a Software Bill of Materials (SBOM) upon request by authorities, as laid out in [Recital (77)]
 * …but no need for making these public.
 
+
 #### Authorised representatives of Manufacturers  ⚠️  FIXME: Not done
 
 > [!NOTE] See [Article 13], [Article 14], [Article 15], [Article 16], and [Article 17] for context.
@@ -207,7 +246,13 @@ Obligations for Authorised representatives of Manufacturers are laid out in [Art
 
 ### Importers
 
-Importers shall place on the market only products with digital elements that comply with the essential requirements set out in [Annex I, Part I] and where the processes put in place by the manufacturer comply with the essential requirements set out in [Annex I, Part II] – as laid out in [Article 19(1)]
+#### Importers *shall only place on the market only products*…
+
+…as laid out in [Article 19(1)]…
+
+* …place on the market only products […] that
+  * …comply with the essential requirements set out in [Annex I, Part I] and
+     * …where the processes put in place by the manufacturer comply with the essential requirements set out in [Annex I, Part II]
 
 
 ### Distributors ⚠️  FIXME: Not done
@@ -220,53 +265,14 @@ Before making a product with digital elements available on the market, distribut
 * (b) the manufacturer and the importer have complied with the obligations set out in [Article 13(15)], [Article 16], [Article 18], [Article 19] and [Article 20] and have provided all necessary documents to the distributor.
 
 
-### Open Source Stewards ⚠️  FIXME: Not done
+### Open Source Software projects
 
-Open Source Software Stewards are…
-
-* […] legal persons who *provide support on a sustained basis* ([Article 3] (14)) for the development […] of products which are intended for commercial activities, and who *play a main role in ensuring the viability of those products* […] ([Recital (19)])
-  * […] should be subject to a light-touch and tailor-made regulatory regime.
-  * [and…] only cover […] free and open-source software that are ultimately intended for commercial activities.
-
-Open Source Stewards are obliged to…
-
-* …facilitate the Manufacturer's _due diligence_ obligation set out in [Article 13(5)]
-* …provide a cybersecurity policy for voluntary reporting of vulnerabilities, as laid out in [Article 15]
-* …cooperate with market surveillance authorities and provide documentation. ⚠️  FIXME: (Dis)confirm this.
-* …report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16], in the way described in [Article 14].
-
-FOSS Software may get a voluntary security attestation, as described in [Article 25] ⚠️  FIXME: (Dis)confirm this.
-
-* …using an EU Attestation program as laid out in [Recital (21)]
-  * …by requesting a certification from ENISA, as laid out in [Regulation (EU) 2019/881, Article 48](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881#page=8)
-  * …in such a way that this security attestation can be initiated or financed by not only FOSS projects, but also by others, including manufacturers, users, or public administrations.
-  * …so this Attestation becomes a "proof of due diligence exercised"? ⚠️  FIXME: (Dis)confirm this.
-* …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties.
-
-Furthermore, the OSS Software Stewards are only subject to a "light-touch" and "tailor-made" regulatory regime, ans are not to be considered as Manufacturers.
-
-Additionally,
-
-* The mere circumstances under which the product with digital elements has been developed, or how the development has been financed, should therefore not be taken into account when determining the commercial or non-commercial nature of that activity. ([Recital (18)])
-* […] the development of […] free and open-source software by *not-for-profit organisations* should not be considered to be a commercial activity provided that the organisation is set up in such a way that ensures that all earnings after costs are used to achieve not-for-profit objectives. ([Recital (18)])
-
-
-
-#### TODO: Open Source Steward
-
-* Article 24 Obligations
-
-* **Article 52**, Market surveillance and control of products (pages 253-259)
-  * **Section 3**, Market surveillance authorities […] shall also be responsible for carrying out market surveillance activities in relation to the obligations for open-source software stewards […].
-  * Section 11, Market surveillance authorities shall inform consumers of where to submit complaints that could indicate non-compliance with this Regulation […] and […] facilitate reporting of vulnerabilities, incidents and cyber threats […].
-
-* Article 26 Guidance
-
-
-
-
-> [!CAUTION]
-> * (CPANSec, 2024-09-11) The details and implementations around this concept has not been made available yet.
+* The mere circumstances under which the product […] has been developed, ([Recital (18)])
+  * or how the development has been financed,
+  * should […] not be taken into account when determining the commercial or non-commercial nature of that activity.
+* […] the development of […] free and open-source software by *not-for-profit organisations* should ([Recital (18)])
+  * not be considered to be a commercial activity
+    * provided that the organisation is set up in such a way that ensures that all earnings after costs are used to achieve not-for-profit objectives.
 
 
 ### Maintainers
@@ -276,26 +282,9 @@ Additionally,
 
 
 
-#### Who does the CRA apply to? ([Recital (15)])
+#### Open Source software *intended for use in the course of a commercial activity* *is*…
 
-This Regulation applies to [economic operators](glossary.md#economic-operator) only in relation to products with digital [elements made available on the market](glossary.md#making-available-on-the-market) hence supplied for distribution or use on the Union market _in the course of a commercial activity_.
-
-Supply _in the course of a commercial activity_ might be characterised […]
-
-* by charging a price for a product with digital elements […]
-* by charging a price for technical support services
-  * where this does not serve only the recuperation of actual costs,
-* by an intention to monetise,
-  * for instance by providing a software platform through which the manufacturer monetises other services,
-* by requiring as a condition for use the processing of personal data
-  * for reasons other than exclusively for improving the security, compatibility or interoperability of the software, or
-* by accepting donations
-  * exceeding the costs associated with the design, development and provision of a product with digital elements.
-
-Accepting donations without the intention of making a profit should not be considered to be a commercial activity
-
-
-#### On Open Source software _intended for use in the course of a commercial activity_ ([Recital (18)])
+([Recital (18)])
 
 * Free and open-source software is understood as software the source code of which is openly shared
   * and the licensing of which provides for all rights to make it
@@ -350,6 +339,81 @@ Accepting donations without the intention of making a profit should not be consi
       * qualifying as free and open-source software
       * that are not under their responsibility.
 
+
+### Open Source Stewards
+
+#### OSS Stewards *are*…
+
+* […] legal persons who *provide support on a sustained basis* for the development […] of products , and ([Article 3] (14))
+  * who play a main role in **ensuring the viability** of those products […] ([Recital (19)])
+  * [and…] only cover […] free and open-source software that are ultimately **intended for commercial activities**.
+
+* The provision of **sustained support to the development of a product** […] **includes but is not limited to** the… ([Recital (19)])
+  * hosting and managing of software development collaboration platforms,
+  * hosting of source code or software,
+  * governing or managing of products […] qualifying as free and open-source software, […or]
+  * steering of the development of such products
+
+* […] only subject to a "light-touch" and "tailor-made" regulatory regime, and ([Recital (19)])
+  * are not to be permitted to affix the CE marking on products 
+
+
+#### OSS Stewards *should*…
+
+* […] subject to a light-touch and tailor-made regulatory regime ([Recital (19)])
+  * […taking] account of their specific nature and compatibility with the type of obligations imposed
+* […] only cover products […] qualifying as free and open-source software that are ultimately intended for commercial activities, such as
+  * for integration into
+    * commercial services, or
+    * monetised products
+* […] including cases where manufacturers that integrate a component into their own products […] either
+  * contribute to the development of that component in a regular manner, or
+  * provide regular financial assistance to ensure the continuity of a software product
+
+
+#### OSS Stewards *include*…
+
+* foundations […] ([Recital (19)])
+* entities that develop and publish free and open-source software in a business context,
+  * including not-for-profit entities.
+
+
+#### OSS Stewards *are obliged to*…
+
+(…as laid out in [Article 24])
+
+* …facilitate the Manufacturer's _due diligence_ obligation set out in [Article 13(5)]
+* …provide a cybersecurity policy for voluntary reporting of vulnerabilities, as laid out in [Article 15]
+* …cooperate with market surveillance authorities and provide documentation. ([Article 24(2)])
+* [Article 14(1)]
+* …report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16], in the way described in [Article 14(1)], [Article 14(3)], and [Article 14(8)]).
+
+
+#### OSS Stewards *attest*…
+
+FOSS Software may get a voluntary security attestation, as described in [Article 25]
+
+* …using an EU Attestation program as laid out in [Recital (21)]
+  * …by requesting a certification from ENISA, as laid out in [Regulation (EU) 2019/881, Article 48](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881#page=8)
+  * …in such a way that this security attestation can be initiated or financed by not only FOSS projects, but also by others, including manufacturers, users, or public administrations.
+  * …so this Attestation becomes a "proof of due diligence exercised"? ⚠️  FIXME: (Dis)confirm this.
+* …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties.
+
+
+#### OSS Stewards *should expect that Market surveillance authorities*
+
+* […] be responsible for carrying out market surveillance activities in relation to the obligations for open-source software stewards […]. [Article 52(3)]
+* […] inform consumers of where to submit complaints that could indicate non-compliance with this Regulation […] and […] facilitate reporting of vulnerabilities, incidents and cyber threats […]. ([Article 52(11)])
+
+
+#### OSS Stewards *should expect that the EU commission*
+
+The Commission shall publish Guidance that shall address (…as laid out in [Article 26(2)])
+
+* […] (a) the scope of this Regulation, with a particular focus on
+  * remote data processing solutions and
+  * free and open-source software
+* […] (d) the concept of substantial modification
 
 #### Open questions
 

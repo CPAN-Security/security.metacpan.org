@@ -32,6 +32,9 @@ and in the same directory run the script
 This is the same [bug](https://rt.cpan.org/Ticket/Display.html?id=64504) in [File::Find::Rule](https://metacpan.org/dist/File-Find-Rule) that became [CVE-2011-10007](https://lists.security.metacpan.org/cve-announce/msg/30183067/).
 (If you haven't already upgraded File::Find::Rule to version 0.35 or later, please do so. That module as more than 1,700 direct or indirect dependents.)
 
+The [SEI CERT Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard?src=sidebar)
+recommends [against using the two-argument form of open()](https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=88890543).
+
 The fix is simply to use a 3-argument form, where the second argument is the mode and the third is the filename:
 
     open my $fh, '<', $file;

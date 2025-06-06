@@ -10,7 +10,7 @@ excerpt: "The 2-argument open function is insecure"
 ---
 
 The 2-argument [open](https://metacpan.org/pod/perlfunc#open) function is insecure, because the filename can include the mode.
-If it is not properly validated, then files can be modified, truncated or a pipe to run an external command:
+If it is not properly validated, then files can be modified, truncated or in the case of a pipe character, run an external command.
 
     $file = "| echo Aha";
     open my $fh, $file;

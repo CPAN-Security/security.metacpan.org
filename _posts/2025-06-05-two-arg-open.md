@@ -36,5 +36,7 @@ The fix is simply to use a 3-argument form, where the second argument is the mod
 
     open my $fh, '<', $file;
 
+The 3-argument open has been supported since Perl v5.6.0, so there is no worry about supporting older versions of Perl.
+
 You can identify this issue in your code using the [Perl::Critic](https://metacpan.org/dist/Perl-Critic) [ProhibitTwoArgOpen](https://metacpan.org/pod/Perl::Critic::Policy::InputOutput::ProhibitTwoArgOpen) policy.
 There is a similar policy in [Perl::Lint](https://metacpan.org/dist/Perl-Lint).

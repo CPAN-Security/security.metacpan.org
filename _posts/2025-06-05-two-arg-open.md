@@ -3,7 +3,7 @@ layout: post
 published: true
 toc: true
 title: "Are you still using the 2-argument open?"
-date: 2025-01-05 17:15:00 +0000
+date: 2025-06-05 12:00:00 +0100
 tags: authors guides cpan modules security
 author: Robert Rothenberg
 excerpt: "The 2-argument open function is insecure"

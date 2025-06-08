@@ -8,7 +8,7 @@
    preserveAspectRatio="xMinYMin"
    version="1.1"
    id="svg13"
-   sodipodi:docname="cpansec-floater-dark.svg"
+   sodipodi:docname="cpansec-floater-light.svg"
    inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
    inkscape:export-filename="../6a7b1f3/cpansec-floater-dark.png"
    inkscape:export-xdpi="76.800003"
@@ -28,14 +28,14 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#d1d1d1"
-     showguides="false"
+     showguides="true"
      inkscape:zoom="0.70710678"
-     inkscape:cx="244.65895"
-     inkscape:cy="1.4142136"
+     inkscape:cx="289.20667"
+     inkscape:cy="-91.923881"
      inkscape:window-width="1107"
      inkscape:window-height="1220"
-     inkscape:window-x="1299"
-     inkscape:window-y="113"
+     inkscape:window-x="924"
+     inkscape:window-y="183"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg13"
      showgrid="false"
@@ -71,7 +71,7 @@
        inkscape:locked="false" />
   </sodipodi:namedview>
   <rect
-     style="opacity:0.977462;fill:#222222;fill-opacity:1;stroke-width:1.73821;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.73821, 5.21463;paint-order:markers stroke fill"
+     style="opacity:0.977462;fill:#ffffff;fill-opacity:1;stroke-width:1.73821;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.73821, 5.21463;paint-order:markers stroke fill"
      id="rect10"
      width="500.00629"
      height="500.00629"
@@ -180,27 +180,4 @@
          d="m 196.43262,42.70446 a 7.9566722,7.9566722 0 0 1 -7.95667,7.956672 7.9566722,7.9566722 0 0 1 -7.95667,-7.956672 7.9566722,7.9566722 0 0 1 7.95667,-7.956672 7.9566722,7.9566722 0 0 1 7.95667,7.956672 z" />
     </g>
   </g>
-  <circle
-     style="fill:none;fill-opacity:1;stroke:none;stroke-width:1.00001;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-     id="path1"
-     cx="250.00314"
-     cy="250.00314"
-     r="249.75339" />
-  <path
-     sodipodi:type="star"
-     style="fill:none;stroke-width:1.00001"
-     id="path3"
-     inkscape:flatsided="false"
-     sodipodi:sides="5"
-     sodipodi:cx="189.00238"
-     sodipodi:cy="-314.00395"
-     sodipodi:r1="218.91141"
-     sodipodi:r2="109.45571"
-     sodipodi:arg1="0.72398681"
-     sodipodi:arg2="1.3523053"
-     inkscape:rounded="0"
-     inkscape:randomized="0"
-     d="m 353.00444,-169.00211 -140.27679,-38.14835 -110.95077,93.92978 -7.06668,-145.19965 -123.618206,-76.49455 135.909346,-51.58997 34.55052,-141.20602 91.06327,113.3153 144.9716,-10.77557 -79.62915,121.62267 z"
-     inkscape:transform-center-x="14.663018"
-     inkscape:transform-center-y="-6.4618378" />
 </svg>

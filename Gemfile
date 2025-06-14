@@ -17,6 +17,7 @@ gem "webrick"
 group :jekyll_plugins do
   gem "jekyll-mermaid", ">= 1"
   gem "jekyll-include-cache"
+  gem "jekyll-gfm-admonitions"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

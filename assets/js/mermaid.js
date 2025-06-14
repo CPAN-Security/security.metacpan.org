@@ -1,4 +1,3 @@
-<script>
 var config = {
     startOnLoad:true,
     theme: 'forest',
@@ -9,4 +8,3 @@ var config = {
 };
 mermaid.initialize(config);
 window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-</script>

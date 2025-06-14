@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 published: true
 toc: true
 title: "Are you still using the 2-argument open?"

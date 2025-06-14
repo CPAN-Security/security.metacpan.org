@@ -119,7 +119,7 @@ If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
 > This text is based on the CPAN Security Group's Guidelines for Adding
-> a Security Policy to Perl Distributions (version 1.3.0)
+> a Security Policy to Perl Distributions (version 1.4.0)
 > https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 #### Links from other module documentation
@@ -178,6 +178,12 @@ Add a reminder to include details for verifying the bug:
 > or test cases, so that we can reproduce the issue.  Check that your
 > report does not expose any sensitive data, such as passwords,
 > tokens, or personal information.
+
+It is worth reminding users that they may be credited publicly:
+
+> Project maintainers will normally credit the reporter when a
+> vulnerability is disclosed or fixed.  If you do not want to be
+> credited publicly, please indicate that in your report.
 
 We recommend that you add note about also copying CPANSec on the
 notification if help is required triaging the issue, or if the issue
@@ -394,7 +400,7 @@ The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
-a Security Policy to Perl Distributions (version 1.3.0)
+a Security Policy to Perl Distributions (version 1.4.0)
 https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 # How to Report a Security Vulnerability
@@ -406,6 +412,10 @@ Please include as many details as possible, including code samples
 or test cases, so that we can reproduce the issue.  Check that your
 report does not expose any sensitive data, such as passwords,
 tokens, or personal information.
+
+Project maintainers will normally credit the reporter when a
+vulnerability is disclosed or fixed.  If you do not want to be
+credited publicly, please indicate that in your report.
 
 If you would like any help with triaging the issue, or if the issue
 is being actively exploited, please copy the report to the CPAN
@@ -490,6 +500,15 @@ newer versions as recommended.
 Please see the software documentation for further information.
 ```
 
+## Software to Generate Security Policies
+
+Rather than copying and modifying the text from this guide, you can use existing software to generate a policy file.
+The following CPAN modules may be useful:
+
+[Software::Security::Policy](https://metacpan.org/pod/Software::Security::Policy) is a framework for generating a SECURITY.md files.
+
+[Dist::Zilla::Plugin::SecurityPolicy](https://metacpan.org/pod/Dist::Zilla::Plugin::SecurityPolicy) is a Dist::Zilla plugin for adding a security policy to a distribution.
+
 ## References and Notes
 
 1. (Github-Sec-Advisory) [Configuring private vulnerability reporting for a repository](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository)
@@ -500,7 +519,7 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 1.3.0
+* Version: 1.4.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

@@ -2,7 +2,7 @@
 layout: single
 published: True
 toc: true
-title: "App::cpanminus through 1.7047 downloads code using insecure HTTP"
+title: "App::cpanminus downloads code using insecure HTTP"
 date: 2024-08-26 00:00:00 +0000
 category: news
 tags: cve
@@ -99,3 +99,4 @@ instead.
 - 2024-08-27: Add reference to CVE-2024-45321, add excerpt, fix typos, add note about CPAN.pm version.
 - 2024-08-27: Minor rewording for the `--from` cpanm option explanation.
 - 2024-10-02: Add note about LWP::UserAgent and `--no-lwp` workaround
+- 2025-06-12: Remove "through 1.7047" from title, since 1.7048 was released without a fix

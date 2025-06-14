@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 toc: true
 meeting_time: 2025-01-08 16:00 UTC
 title: Minutes 2025-01-08

@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: single
 published: True
 toc: true
 title: "App::cpanminus downloads code using insecure HTTP"
 date: 2024-08-26 00:00:00 +0000
+category: news
 tags: cve
 author: Stig Palmquist
 excerpt: "CVE-2024-45321: In its default configuration cpanminus uses insecure HTTP to download and install code from CPAN. This results in a CWE-494 weakness, enabling code execution for network attackers."

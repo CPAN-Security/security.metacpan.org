@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 permalink: /meetings/
 toc: true
 next_meeting_time: June 4th 2025 16:00 UTC

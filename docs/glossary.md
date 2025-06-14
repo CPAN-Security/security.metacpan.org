@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Glossary of Terms
 description: List of terms used throughout CPANSec projects
 draft: true

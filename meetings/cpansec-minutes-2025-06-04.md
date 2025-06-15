@@ -177,7 +177,8 @@ title: CPANSec bi-weekly minutes
 - @stigtsp - guided CVE writeup-sessions at PTS and at regular times otherwise
     - [ ] @stigtsp and @timlegge prepare a dummy scenario
 - @stigtsp - Tried to reach out to ENISA (EUVD) now a couple of times to discuss contingency/options, but no answer yet.
-  - @sjn has a meeting coming up and will ask
+  - [x] @sjn had a meeting coming up and will ask
+    - Comms folk are super busy, please give them more time; It's also ok to send a reminder.
 - @stigtsp - @garu has emailed a list of old perl CVEs to RH for reassignment to our CNA, pending
   - mitre declined
 - @stigtsp - Can someone look at the cpansa-feed, it's broken for a while now :-(

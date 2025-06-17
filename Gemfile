@@ -9,12 +9,15 @@ source "https://rubygems.org"
 # to anything you like.
 #
 # Github-pages dependencies: https://pages.github.com/versions/
-gem "minima", "~> 2.5"
+#gem "minima", "~> 2.5"
+gem "minimal-mistakes-jekyll", "~> 4.27.1"
 gem "github-pages", "~> 228", group: :jekyll_plugins
 gem "webrick"
 
 group :jekyll_plugins do
   gem "jekyll-mermaid", ">= 1"
+  gem "jekyll-include-cache"
+  gem "jekyll-gfm-admonitions"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

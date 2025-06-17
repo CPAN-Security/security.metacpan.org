@@ -6,3 +6,5 @@ vendor
 *~
 .*.swp
 .bundle/
+bundle/
+*.minima

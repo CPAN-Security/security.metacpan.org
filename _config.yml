@@ -1,11 +1,4 @@
 ---
-header_title: CPANSec
-author: CPAN Security Outreach & Information Project
-description: >-
-  CPAN Security Group (CPANSec) 🦆
-baseurl: ""
-url: "https://security.metacpan.org"
-domain: security.metacpan.org
 show_excerpts: true
 
 header_pages:
@@ -13,8 +6,6 @@ header_pages:
   - docs/README.md
   - presentations/README.md
 
-repository: CPAN-Security/security.metacpan.org
-github_username: CPAN-Security
 ## Friendica links not supported yet in minima template, so
 ## we use a mastodon icon in the meanwhile
 #friendica: { username: cpan_security, instance: perl.social }
@@ -24,12 +15,35 @@ paginate: 4
 paginate_path: "/news/all/page:num"
 
 # Build settings
-theme: minima
+#remote_theme: "mmistakes/minimal-mistakes@4.27.1"
+theme: "minimal-mistakes-jekyll"
 
-minima:
-  skin: classic
 #  date_format: "%Y-%m-%d %H:%M"
 
+# Minimal mistakes Site Settings
+minimal_mistakes_skin: "contrast"
+
+locale: "en-US"
+#name: ""
+masthead_title: " "
+title_separator: " — "
+subtitle: "" # site tagline that appears below site title in masthead
+#name: "CPAN Security Outreach & Information Project"
+title: >-
+  CPAN Security Group (CPANSec) 🦆🦆
+author: "CPAN Security Outreach & Information Project"
+baseurl: ""
+url: "https://security.metacpan.org"
+domain: security.metacpan.org
+repository: CPAN-Security/security.metacpan.org
+github_username: CPAN-Security
+teaser: "" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo: "/media/cpansec-logo-light.png" # path of image to display in the masthead
+breadcrumbs: true # true, false (default)
+words_per_minute: 200
+enable_copy_code_button: true # true, false (default)
+copyright: "" # "copyright" name, defaults to site.title
+copyright_url: "" # "copyright" URL, defaults to site.url
 
 plugins:
   - jekyll-seo-tag
@@ -39,6 +53,8 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-titles-from-headings
+  - jekyll-include-cache
+  - jekyll-gfm-admonitions
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -48,14 +64,21 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .bundle
+  - bundle
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .minima/
+  - assets.minima/
+  - "**/*.ts" # Exclude source code files!
+  - "*.ts" # Also those in the root directory!
+  - "*.json" # Don't forget about assets!

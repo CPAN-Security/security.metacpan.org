@@ -1,5 +1,4 @@
 ---
-header_title: CPANSec
 show_excerpts: true
 
 header_pages:
@@ -16,25 +15,23 @@ paginate: 4
 paginate_path: "/news/all/page:num"
 
 # Build settings
-#theme: minima
 #remote_theme: "mmistakes/minimal-mistakes@4.27.1"
 theme: "minimal-mistakes-jekyll"
 
-#minima:
-#  skin: classic
 #  date_format: "%Y-%m-%d %H:%M"
 
 # Minimal mistakes Site Settings
 minimal_mistakes_skin: "contrast"
 
 locale: "en-US"
-title: "CPAN Security Group"
-title_separator: "–"
-subtitle: "CPANSec" # site tagline that appears below site title in masthead
-name: "CPAN Security Outreach & Information Project"
-description: >-
+#name: ""
+masthead_title: " "
+title_separator: " — "
+subtitle: "" # site tagline that appears below site title in masthead
+#name: "CPAN Security Outreach & Information Project"
+title: >-
   CPAN Security Group (CPANSec) 🦆🦆
-author: CPAN Security Outreach & Information Project
+author: "CPAN Security Outreach & Information Project"
 baseurl: ""
 url: "https://security.metacpan.org"
 domain: security.metacpan.org
@@ -42,7 +39,6 @@ repository: CPAN-Security/security.metacpan.org
 github_username: CPAN-Security
 teaser: "" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: "/media/cpansec-logo-light.png" # path of image to display in the masthead
-masthead_title: " " # overrides the website title, use " " for no title
 breadcrumbs: true # true, false (default)
 words_per_minute: 200
 enable_copy_code_button: true # true, false (default)
@@ -86,4 +82,3 @@ exclude:
   - "**/*.ts" # Exclude source code files!
   - "*.ts" # Also those in the root directory!
   - "*.json" # Don't forget about assets!
-  - "*.yml"

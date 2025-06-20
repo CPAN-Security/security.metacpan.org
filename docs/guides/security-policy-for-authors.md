@@ -244,6 +244,8 @@ maintainer cannot promise a response time.  An alternative might be
 > please send a reminder to them and copy the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
 
+You may want to change the wording "volunteer in their spare time" above to something else where appropriate.
+
 Also add a note about the initial response:
 
 > Note that the initial response to your report will be an

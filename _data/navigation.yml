@@ -1,0 +1,12 @@
+# main links
+main:
+  - title: "Report Security Issue"
+    url: /docs/report.html
+  - title: "Documents & Guides"
+    url: /docs/
+  - title: "Presentations"
+    url: /presentations/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/

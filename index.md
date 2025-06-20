@@ -1,7 +1,7 @@
 ---
 title: CPAN Security Group
 layout: home
-toc: false
+toc: true
 list_title: CPANSec News
 ---
 Welcome to the [CPAN Security Group](https://security.metacpan.org/).

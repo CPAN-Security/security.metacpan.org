@@ -72,6 +72,9 @@ important document on par with `README`, `LICENSE`, `INSTALL` and
 which has a specific machine-readable format and has a different function
 [\[4\]](#references-and-notes) (Securitytxt).
 
+The policy should be in the root directory of your distribution and in the root directory of the software repository.
+(Note that GitHub has a feature for writing security policies that stores them in `.github/SECURITY.md`. This is not helpful for non-GitHub users and the file should be moved to the repository root.)
+
 The file should have the following sections.
 
 1. Abstract

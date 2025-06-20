@@ -525,7 +525,7 @@ The following CPAN modules may be useful:
 
 You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.
 
-The actual security policies written based on this guide, including any recommended wording or example policies, are in the [public domain](https://creativecommons.org/public-domain/cc0/).
+The actual security policies written based on this guide, including any recommended wording or example policies, are in the public domain as per the [Zero-Clause BSD License](https://opensource.org/license/0bsd).
 (This includes any policies based on prior versions of this guide.)
 
 ### Acknowledgements

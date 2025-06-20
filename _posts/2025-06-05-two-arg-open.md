@@ -1,7 +1,7 @@
 ---
 layout: single
 published: true
-toc: true
+toc: false
 title: "Are you still using the 2-argument open?"
 date: 2025-06-06 16:00:00 +0100
 tags: authors guides cpan modules security

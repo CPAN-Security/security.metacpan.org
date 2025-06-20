@@ -59,7 +59,7 @@ title: CPANSec bi-weekly minutes
 
 #### CPAN::Meta::Spec, Requirements and PURLs
 - @sjn and @leont discussed at PTS, decided to
-  - [ ] @sjn - put together a detailed proposal
+  - [ ] @sjn - put together a detailed proposal
 
 #### CycloneDX 1.7 Sustainability fields
 - @sjn - Ongoing: project- & ecosystem-supplied status fields.
@@ -90,13 +90,12 @@ title: CPANSec bi-weekly minutes
 
 
 ### [Security Information & Outreach](https://github.com/orgs/CPAN-Security/projects/12/views/3)
-- [ ] @robrwo suggesting a regular blog series
+- [ ] @robrwo suggesting a regular blog series
   - blog posts smaller scope than monolithic documents/guides
   - different authors and topics including current news items
   - regular posts can get more attention
 - @thibaultduponchelle - let's make it easier to post, 
 - [ ] @sjn - let's add a new channel for smaller/faster blog posts "Blog posts" that have lower PR quality requirements
-
 
 #### Recruitment
 - @thibaultduponchelle - inviting @jjatria to join

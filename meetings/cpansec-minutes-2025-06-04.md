@@ -45,7 +45,7 @@ title: CPANSec bi-weekly minutes
 
 #### CPAN Modules with vulnerable vendored (bundled/embedded) dependencies
 - @stigtsp - We're following the CVE program rules when assigning CVEs
-  - [ ] @robrwo - and @briandfoy investigating modules in CPAN::Audit for vulnerabilities
+  - [ ] @robrwo - and @briandfoy investigating modules in CPAN::Audit for vulnerabilities
   - [ ] @robrwo - Ongoing work
   - @stigtsp - interesting to see that downstream reacts quickly
 - @robrwo started documenting embedded dependencies for cpan-security-advisory repo
@@ -103,7 +103,7 @@ title: CPANSec bi-weekly minutes
 
 #### CPAN::Meta::Spec, Requirements and PURLs
 - @sjn and @leont discussed at PTS, decided to
-  - [ ] @sjn - put together a detailed proposal
+  - [ ] @sjn - put together a detailed proposal
   - no update
 #### CycloneDX 1.7 Sustainability fields
 - @sjn - Ongoing: project- & ecosystem-supplied status fields.
@@ -130,7 +130,7 @@ title: CPANSec bi-weekly minutes
 
 
 ### [Security Information & Outreach](https://github.com/orgs/CPAN-Security/projects/12/views/3)
-- [ ] @robrwo suggesting a regular blog series
+- [ ] @robrwo suggesting a regular blog series
   - blog posts smaller scope than monolithic documents/guides
   - different authors and topics including current news items
   - regular posts can get more attention
@@ -177,8 +177,8 @@ title: CPANSec bi-weekly minutes
 - @stigtsp - guided CVE writeup-sessions at PTS and at regular times otherwise
     - [ ] @stigtsp and @timlegge prepare a dummy scenario
 - @stigtsp - Tried to reach out to ENISA (EUVD) now a couple of times to discuss contingency/options, but no answer yet.
-  - [x] @sjn had a meeting coming up and will ask
-    - Comms folk are super busy, please give them more time; It's also ok to send a reminder.
+    - [x] @sjn had a meeting coming up and will ask
+       - Comms folk are super busy, please give them more time; It's also ok to send a reminder.
 - @stigtsp - @garu has emailed a list of old perl CVEs to RH for reassignment to our CNA, pending
   - mitre declined
 - @stigtsp - Can someone look at the cpansa-feed, it's broken for a while now :-(

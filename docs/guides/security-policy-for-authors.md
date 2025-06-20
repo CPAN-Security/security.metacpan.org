@@ -209,6 +209,9 @@ vulnerabilities in public, e.g.
 > made public by the maintainers or CPANSec.  That includes patches or
 > pull requests or mitigration advice.
 
+Note that any policy for public disclosure are up to the maintainers of the project.
+However, embargoes should not be unreasonably long, and disclosure should take into account how it will affect downstream users.
+
 You can also link to the CPANSec page
 
 > For more information, see _Report a Security Issue_

@@ -5,15 +5,13 @@ meeting_time: 2025-06-18 16:00 UTC
 title: CPANSec bi-weekly minutes
 ---
 
-[TOC]
-
 ## Agenda & Meeting Details 2025-06-18
 - 2025-06-18 16:00 UTC on #cpansec-discussion on Matrix
 
 
 ## 15:40 UTC - Pre-meeting socializing
 -   Socializing & getting up to speed before the meeting starts properly
--   Discuss organizing projects, swimlanes and issues (...)
+-   Discuss organizing projects, swim-lanes and issues (...)
 -   Check and resolve technical (A/V) issues before the meeting starts
 -   Come as you are!
 
@@ -28,7 +26,7 @@ title: CPANSec bi-weekly minutes
 
 ### Attendees, absents & regrets
 -   Attendees
-    - @sjn, @robrwo, stigtsp, @haraldjoerg
+    - @sjn, @robrwo, @stigtsp, @haraldjoerg
 -   Partly attending
     - …
 -   Regrets 
@@ -50,7 +48,7 @@ title: CPANSec bi-weekly minutes
 - [ ] @robrwo started documenting embedded dependencies for cpan-security-advisory repo
   - Brian's cpan-audit - some incomplete info - filling in the blanks and logging issues as found
     - @stigtsp - can we simplify somehow the info to help downstream users of our data?
-    - @robrwo - let's start with keeping track of modules who have embedded/phantom deps
+    - @robrwo - let's start with keeping track of modules who have embedded/phantom dependencies
     - @sjn - this can be solved by embedding an SBOM, let's discuss
   - libtomcrypt - and others seem to use commit id which makes it more work to track
   - [ ] @robrwo started adding issues to CNA
@@ -58,7 +56,7 @@ title: CPANSec bi-weekly minutes
   - [ ] @robrwo: Brian is unhappy that CNA assigns separate CVE for embedded vulns, but that is standard policy. 
     - Unsure if this will cause a conflict with data where dists have multiple CVEs for same issue. 
     - CPAN::Audit::DB is now flagging embedded issues that authors might not be aware of too.
-  - @stigsp referred @robrwo (via Matrix) to look at https://salsa.debian.org/security-tracker-team/security-tracker/-/blob/master/data/embedded-code-copies    
+  - @stigtsp referred @robrwo (via Matrix) to look at https://salsa.debian.org/security-tracker-team/security-tracker/-/blob/master/data/embedded-code-copies    
 
 #### CPAN Modules review
 - [ ] @stigtsp - Encrypted module on CPAN - the author removed the encryption in the new version
@@ -112,7 +110,7 @@ title: CPANSec bi-weekly minutes
    - no update
 - [ ] @tux - Team document template wanted; Help needed
    - [ ] @timlegge has started on something; happy to discuss with @tux; PR in the works
-   - @robrwo - not so much a different kind of doc as possible different way to report vuln
+   - @robrwo - not so much a different kind of doc as possible different way to report vulnerabilities
   - no update
 - [ ] @robrwo mini-project to encourage the popular modules to add a security policy for a list
    - Sounds like a good idea
@@ -165,8 +163,8 @@ title: CPANSec bi-weekly minutes
 - @stigtsp - We need more help from others in the triage group:
     - [ ] Contact @timlegge, @stigtsp - Integrating CVE process more with triage
 - [ ] @robrwo - CNA/CPANSec workflow description needed from CVE reservation to disclosure
-    - [ ] (Volunteer needed) - Write a guide/workflow doc, including details on how embargos work
-    - @sjn - could this be turned into a tabletop excercise?
+    - [ ] (Volunteer needed) - Write a guide/workflow doc, including details on how embargoes work
+    - @sjn - could this be turned into a tabletop exercise?
 - [ ] @stigtsp - guided CVE writeup-sessions at PTS and at regular times otherwise
     - @stigtsp and @timlegge prepare a dummy scenario
 - [x] @garu has emailed a list of old perl CVEs to RH for reassigment to our CNA, pending
@@ -223,8 +221,8 @@ title: CPANSec bi-weekly minutes
   - Red Hat - ?
   - etc.
 - @sjn - do we need to think about a policy on how to interact with downstream manufacturers and stewards?
-  - e.g. require downstream entities to appoint a community liason that we can interact with
-- has notes on the requirments from a comercial point of view - but focus on getting government support
+  - e.g. require downstream entities to appoint a community liaison that we can interact with
+- has notes on the requirements from a commercial point of view - but focus on getting government support
 
 
 ### [Authentication & Trusted Publishing](https://github.com/orgs/CPAN-Security/projects/3/views/2)

@@ -69,9 +69,8 @@ title: CPANSec bi-weekly minutes
   - @tux - Do we have any written down procedures/guidelines for this?
   - @robrwo - No guidelines exist
 - @stigtsp - We're following the CVE program rules when assigning CVEs
-- [ ] @robrwo - and @briandfoy investigating modules in CPAN::Audit for vulnerabilities
+- [ ] robrwo - and @briandfoy investigating modules in CPAN::Audit for vulnerabilities
   - @robrwo - help needed!
-
 
 ### Operating changes
 - @sjn - Proposal: Add RSS feeds to the matrix channel? Suggestions for channel admins:
@@ -86,7 +85,7 @@ title: CPANSec bi-weekly minutes
 
 #### CPAN::Meta::Spec, Requirements and PURLs
 - @sjn and @leont discussed at PTS, decided to
-  - [ ] @sjn - put together a detailed proposal
+  - [ ] @sjn - put together a detailed proposal
 
 #### CycloneDX 1.7 Sustainability fields
 - @sjn - Ongoing: project- & ecosystem-supplied status fields.
@@ -120,7 +119,7 @@ for a list
      
 
 ### [Security Information & Outreach](https://github.com/orgs/CPAN-Security/projects/12/views/3)
-- [ ] @robrwo suggesting a regular blog series
+- [ ] @robrwo suggesting a regular blog series
   - blog posts smaller scope than monolithic documents/guides
   - different authors and topics including current news items
   - regular posts can get more attention

@@ -235,7 +235,7 @@ It is reasonable that small projects with a single part time
 maintainer cannot promise a response time.  An alternative might be
 
 > The maintainer(s) aim to acknowledge your security report as soon as
-> possible.  However, this project is maintained by a single person in
+> possible.  However, this project is maintained by a single volunteer in
 > their spare time, and they cannot guarantee a rapid response.  If you
 > have not received a response from them within a week, then
 > please send a reminder to them and copy the report to CPANSec at
@@ -439,7 +439,7 @@ on the CPANSec website.
 ## Response to Reports
 
 The maintainer(s) aim to acknowledge your security report as soon as
-possible.  However, this project is maintained by a single person in
+possible.  However, this project is maintained by a single volunteer in
 their spare time, and they cannot guarantee a rapid response.  If you
 have not received a response from them within a week, then
 please send a reminder to them and copy the report to CPANSec at

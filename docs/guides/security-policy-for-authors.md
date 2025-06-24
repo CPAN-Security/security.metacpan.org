@@ -56,6 +56,7 @@ If the project has a single maintainer, then an email address is good enough.
 For projects with multiple maintainers, one option is an email alias that forwards to the maintainers who handle security issues.
 
 Some software repositories like GitHub [\[1\]](#references-and-notes) (Github-Sec-Advisory) or GitLab support reporting security advisories confidentially.
+You may still want to specify an alternative email address for users without access to GitHub or GitLab.
 
 ## The format of the security policy
 
@@ -105,6 +106,8 @@ or alternatively,
 
 > Security vulnerabilities can be reported via the project GitHub repository
 > [Security Advisories](https://example.github.com/foobar/security/advisories).
+> (If you do not have access to GitHub, then you can report issues via email
+> to <foobar@example.com>.)
 
 If the project has a web site, with this security policy posted on the
 website, then you should refer to that URL, e.g.:
@@ -150,6 +153,8 @@ or [\[1\]](#references-and-notes) (Github-Sec-Advisory)
 > Security vulnerabilities can be reported via the project GitHub repository
 > [Security Advisories](https://example.github.com/foobar/security/advisories).
 > On the "Advisories" page you can click on the "Report a vulnerability" button.
+> (If you do not have access to GitHub, then you can report issues via email
+> to <foobar@example.com>.)
 
 or for GitLab
 

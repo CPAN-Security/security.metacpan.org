@@ -72,6 +72,9 @@ important document on par with `README`, `LICENSE`, `INSTALL` and
 which has a specific machine-readable format and has a different function
 [\[4\]](#references-and-notes) (Securitytxt).
 
+The policy should be in the root directory of your distribution and in the root directory of the software repository.
+(Note that GitHub has a feature for writing security policies that stores them in `.github/SECURITY.md`. This is not helpful for non-GitHub users and the file should be moved to the repository root.)
+
 The file should have the following sections.
 
 1. Abstract
@@ -119,7 +122,7 @@ If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
 > This text is based on the CPAN Security Group's Guidelines for Adding
-> a Security Policy to Perl Distributions (version 1.4.0)
+> a Security Policy to Perl Distributions (version 1.4.1)
 > https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 #### Links from other module documentation
@@ -206,6 +209,9 @@ vulnerabilities in public, e.g.
 > made public by the maintainers or CPANSec.  That includes patches or
 > pull requests or mitigration advice.
 
+Note that any policy for public disclosure are up to the maintainers of the project.
+However, embargoes should not be unreasonably long, and disclosure should take into account how it will affect downstream users.
+
 You can also link to the CPANSec page
 
 > For more information, see _Report a Security Issue_
@@ -232,11 +238,13 @@ It is reasonable that small projects with a single part time
 maintainer cannot promise a response time.  An alternative might be
 
 > The maintainer(s) aim to acknowledge your security report as soon as
-> possible.  However, this project is maintained by a single person in
+> possible.  However, this project is maintained by a single volunteer in
 > their spare time, and they cannot guarantee a rapid response.  If you
 > have not received a response from them within a week, then
 > please send a reminder to them and copy the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
+
+You may want to change the wording "volunteer in their spare time" above to something else where appropriate.
 
 Also add a note about the initial response:
 
@@ -400,7 +408,7 @@ The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
-a Security Policy to Perl Distributions (version 1.4.0)
+a Security Policy to Perl Distributions (version 1.4.1)
 https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 # How to Report a Security Vulnerability
@@ -436,7 +444,7 @@ on the CPANSec website.
 ## Response to Reports
 
 The maintainer(s) aim to acknowledge your security report as soon as
-possible.  However, this project is maintained by a single person in
+possible.  However, this project is maintained by a single volunteer in
 their spare time, and they cannot guarantee a rapid response.  If you
 have not received a response from them within a week, then
 please send a reminder to them and copy the report to CPANSec at
@@ -519,13 +527,13 @@ The following CPAN modules may be useful:
 
 ## License and use of this document
 
-* Version: 1.4.0
+* Version: 1.4.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.
 
-The actual security policies written based on this guide, including any recommended wording or example policies, are in the [public domain](https://creativecommons.org/public-domain/cc0/).
+The actual security policies written based on this guide, including any recommended wording or example policies, are in the public domain as per the [Zero-Clause BSD License](https://opensource.org/license/0bsd).
 (This includes any policies based on prior versions of this guide.)
 
 ### Acknowledgements

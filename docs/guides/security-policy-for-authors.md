@@ -469,7 +469,7 @@ included in Foo-Bar are also covered by this policy.
 
 Security vulnerabilities are considered anything that allows users
 to execute unauthorised code, access unauthorised resources, or to
-have an adverse impact on accessibility or performance of a system.
+have an adverse impact on accessibility, integrity or performance of a system.
 
 Security vulnerabilities in upstream software (prerequisite modules
 or system libraries, or in Perl), are not covered by this policy

@@ -135,6 +135,11 @@ special handling of security issues).
 It is important to refer to the current project maintainers, and not
 the package authors, who for older packages may be different.
 
+There should be a *single point of contact*.
+Do not provide a list of multiple email addresses or web pages and ask that users contact some or all of these addresses.
+
+Please ensure that the security contact information is consistent with distribution metadata, e.g. in the `META.json` file [\[3\]](#references-and-notes) (CPAN-Meta-Spec).
+
 For example,
 
 > Security vulnerabilities can be reported by e-mail to the current
@@ -152,13 +157,6 @@ or for GitLab
 > [issues](https://gitlab.com/foobarkeepers/foobar/issues).  When
 > reporting the issue, please check the tickbox on the form labelled
 > "This issue is confidential and should only be visible to team members".
-
-There should be a *single point of contact*.
-Do not provide a list of multiple email addresses or web pages and ask that users contact some or all of these addresses.
-
-Please ensure that the security contact information is consistent with
-distribution metadata, e.g. in the `META.json` file
-[\[3\]](#references-and-notes) (CPAN-Meta-Spec).
 
 Add a reminder to include details for verifying the bug:
 

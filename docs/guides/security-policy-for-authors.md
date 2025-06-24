@@ -125,21 +125,6 @@ you should mention that, along with the version:
 > a Security Policy to Perl Distributions (version 1.4.2)
 > https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
-#### Links from other module documentation
-
-If the module documentation or `README` has a section on reporting
-bugs, then wording should be added that refers users to the security
-policy, for example (in POD):
-
-```pod
-=head2 Reporting Security Vulnerabilities
-
-Security issues should not be reported on the bugtracker website.
-Please see F<SECURITY.md> for instructions how to report security
-vulnerabilities.
-```
-
-
 ### How to report a security vulnerability
 
 At the bare minimum, your security policy should provide a current
@@ -388,6 +373,22 @@ For example, if you are embedding the "baz" library in the "Foo-Bar" project, yo
 > Any vulnerabilities that are found to be part of or relevant to the baz library will be forwarded to the maintainers of the baz library.
 >
 > The original security policy for the baz library can be found in this directory as `SECURITY.md`.
+
+## Links from other module documentation
+
+If the module documentation or `README` has a section on reporting
+bugs, then wording should be added that refers users to the security
+policy, for example (in POD):
+
+```pod
+=head2 Reporting Security Vulnerabilities
+
+Security issues should not be reported on the bugtracker website.
+Please see F<SECURITY.md> for instructions how to report security
+vulnerabilities.
+```
+
+You may also want to refer to the security policy from any `CONTRIBUTING` or `HACKING` documentation.
 
 ## Examples
 

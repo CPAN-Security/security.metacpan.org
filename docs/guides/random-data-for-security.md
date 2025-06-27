@@ -245,9 +245,10 @@ December 2024.
 
 [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/), March 2014.
 
+[Predict Random Numbers](https://www.perlmonks.org/?node_id=151595), Perl Monks, March 2002.
+
 [RFC 4086](https://www.rfc-editor.org/info/rfc4086), June 2005.
 
-[Predict Random Numbers](https://www.perlmonks.org/?node_id=151595), Perl Monks, March 2002.
 
 ## License and use of this document
 

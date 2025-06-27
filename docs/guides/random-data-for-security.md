@@ -16,8 +16,10 @@ random number generator.  That includes:
 - password generation
 - password salts and peppers
 - authentication tokens
-- session tokens
+- session ids
 - nonces
+- captcha strings
+- multifactor authentication codes
 
 The built-in [rand](https://perldoc.perl.org/functions/rand) function is not fit for security purposes: it is seeded
 by only 32-bits (4 bytes), and the [output can be predicted easily](https://www.perlmonks.org/?node_id=151595).

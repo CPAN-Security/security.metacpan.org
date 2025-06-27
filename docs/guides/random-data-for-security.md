@@ -234,6 +234,24 @@ floating point numbers.  For example,
 
 will return a string of mixed-case letters and digits, such as "y1FpfRQszS72GH4h4zTXov".
 
+### UUID::URandom
+
+UUIDs should not be used for security tokens, including session ids.
+[RFC 9562 Security Considerations](https://www.rfc-editor.org/rfc/rfc9562.html#name-security-considerations) says:
+
+> Implementations SHOULD NOT assume that UUIDs are hard to guess. For example, they MUST NOT be used as security capabilities (identifiers whose mere possession grants access). Discovery of predictability in a random number source will result in a vulnerability.
+
+The UUID Version 4 is the only type that contains random bits, besides the specific fields required by the UUID format.
+However, unless you need the data to be a valid UUID, then you should probably be returning a string of hex digits using `unpack` or one of the other modules described above to return random tokens.
+
+[UUID::URandom](https://metacpan.org/pod/UUID::URandom) is a wrapper around Crypt::Random to generate UUIDs:
+
+    use UUID::URandom qw( create_uuid_string );
+
+    my $id = create_uuid_string();
+
+This module also has a function `create_uuid_hex` that returns the UUID as a hexidecimal string.
+
 ## References
 
 [Far From Random: Three Mistakes From Dart/Flutter's Weak PRNG](https://www.zellic.io/blog/proton-dart-flutter-csprng-prng/),
@@ -249,6 +267,7 @@ December 2024.
 
 [RFC 4086](https://www.rfc-editor.org/info/rfc4086), June 2005.
 
+[RFC 9562](https://www.rfc-editor.org/rfc/rfc9562.html), May 2024.
 
 ## License and use of this document
 

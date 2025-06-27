@@ -161,7 +161,7 @@ One caveat of this module is that it needs to be manually seeded by 256 long int
 
     my $rng = Math::Random::ISAAC->new( unpack( "N*", urandom(1024) ) ); # 8192 bits
 
-## Generating Tokens and Passwords
+## Generating IDs, Tokens and Passwords
 
 When generating raw random data for encryption keys or initialisation vectors, a common need is to generate a
 printable string, for example as

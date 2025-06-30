@@ -21,6 +21,8 @@ random number generator.  That includes:
 - captcha strings
 - multifactor authentication codes
 
+For any implementation of a protocol that specifies a random value, it is safer to use a secure random number generator, even when the protocol does not explicitly call for that.
+
 The built-in [rand](https://perldoc.perl.org/functions/rand) function is not fit for security purposes: it is seeded
 by only 32-bits (4 bytes), and the [output can be predicted easily](https://www.perlmonks.org/?node_id=151595).
 

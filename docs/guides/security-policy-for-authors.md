@@ -283,7 +283,8 @@ You may want to define what you consider a security vulnerability:
 
 > Security vulnerabilities are considered anything that allows users
 > to execute unauthorised code, access unauthorised resources, or to
-> have an adverse impact on accessibility or performance of a system.
+> have an adverse impact on accessibility, integrity or performance of
+> a system.
 
 You may also want to cover how other software packages are affected:
 

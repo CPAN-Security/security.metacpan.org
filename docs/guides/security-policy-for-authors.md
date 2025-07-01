@@ -30,13 +30,17 @@ Adding a security policy will not add any legal obligations or guarantees beyond
 
 These are the people who use your software directly.
 
-These are the people who use software that contains your software.
+These are the people who use software that uses your software.
 
-These are the people who develop software that contains your software.
+These are the people who develop software that uses your software.
 
-These are the people who install your software.
+These are the people who build, test and install your software.
 
 These are the people who distribute your software.
+
+These are people who package your software for use in their distribution ecosystem.
+
+These are people who contribute to your software.
 
 ### Why should authors work with CPANSec?
 

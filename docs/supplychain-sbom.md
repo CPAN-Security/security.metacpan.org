@@ -171,9 +171,9 @@ stateDiagram-v2
     ecosystem_container      --> environment_integrator
     environment_integrator   --> authority_auditor
     environment_integrator   --> environment_market
-    environment_market   --> environment_customer
+    environment_market       --> environment_customer
     environment_integrator   --> environment_customer
-    authority_customer       --> [*]
+    environment_customer     --> [*]
 
     %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0
@@ -410,7 +410,7 @@ stateDiagram-v2
     %%authority_attester --> package_steward
     %%authority_attester --> environment_steward
 
-    state "OSS Steward Environment 🆕" as environment_steward {
+    state "🆕 OSS Steward Environment" as environment_steward {
       [*] --> steward_attester
       steward_attester    --> [*]
     }
@@ -450,7 +450,7 @@ stateDiagram-v2
     }
 
     %%
-    state "Market Surveillance" as environment_surveillance {
+    state "🆕 Market Surveillance" as environment_surveillance {
         [*]               --> authority_auditor
         authority_auditor --> [*]
     }

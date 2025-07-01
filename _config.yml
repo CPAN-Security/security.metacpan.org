@@ -89,6 +89,9 @@ defaults:
       toc: true
       toc_sticky: true
 
+after_footer_scripts:
+  - "/assets/js/mermaid.js"
+
 plugins:
   - jekyll-seo-tag
   - jekyll-feed

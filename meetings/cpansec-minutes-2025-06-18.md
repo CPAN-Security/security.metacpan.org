@@ -30,7 +30,7 @@ title: CPANSec bi-weekly minutes
 -   Partly attending
     - …
 -   Regrets 
-    - @thibaultduponchelle, @leont
+    - @thibaultduponchelle, @leont, @tux
 
 
 ### Approve previous meeting minutes
@@ -48,7 +48,7 @@ title: CPANSec bi-weekly minutes
 - [ ] @robrwo started documenting embedded dependencies for cpan-security-advisory repo
   - Brian's cpan-audit - some incomplete info - filling in the blanks and logging issues as found
     - @stigtsp - can we simplify somehow the info to help downstream users of our data?
-    - @robrwo - let's start with keeping track of modules who have embedded/phantom dependencies
+    - @robrwo - let's start with keeping track of modules that have embedded/phantom dependencies
     - @sjn - this can be solved by embedding an SBOM, let's discuss
   - libtomcrypt - and others seem to use commit id which makes it more work to track
   - [ ] @robrwo started adding issues to CNA
@@ -63,7 +63,7 @@ title: CPANSec bi-weekly minutes
   - CPANSec recommends an update to the PAUSE rules to prohibit: 1. encrypted modules, 2. malware, 3. undocumented "phone home" etc.
   - [ ] @robrwo puts together a proposal for PAUSE rules - review other ecosystems
     - https://github.com/andk/pause/issues/569
-    - little progress
+    - only one response
 
 
 ### Operating changes
@@ -94,6 +94,7 @@ title: CPANSec bi-weekly minutes
 #### CPAN::Meta::Spec, Requirements and PURLs
 - @sjn and @leont discussed at PTS, decided to
   - [ ] @sjn - put together a detailed proposal
+  - @sjn asked for volunteers to work with so as to help move this along
   - no update
 
 #### CycloneDX 1.7 Sustainability fields
@@ -186,7 +187,8 @@ title: CPANSec bi-weekly minutes
    - [ ] @leont - a minimal XS wrapper around libopenssl
    - @toddr - should we explore simpler options, like wrapping libcurl? or even calling `/usr/bin/curl`
       - @toddr - some license issues to be aware of (which is another argument to "Just use curl(1)")
- - no update since PTS
+ - Still no update since PTS
+ - We'll consider moving this item to a ticket the next time we discuss it.
 
 ### [Organization, Governance & Funding](https://github.com/orgs/CPAN-Security/projects/7/views/2)
 

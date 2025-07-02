@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Pre-Release Disclosure
 toc: true
 ---

@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: single
 published: True
 toc: true
 title: "Add a security policy to your distributions"
 date: 2025-01-05 17:15:00 +0000
+category: blog
 tags: authors guides cpan modules security
 author: Robert Rothenberg
 excerpt: "Adding a SECURITY or SECURITY.md file to your Perl distributions will let people know how to contact the maintainers if they find a security issue with your software..."

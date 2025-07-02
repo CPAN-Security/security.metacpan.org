@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Open Source project life-cycle states and indicators
 description: A proposed list of states and their indicators one can find an Open Source project in
 toc: true

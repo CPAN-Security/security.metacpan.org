@@ -1,0 +1,16 @@
+<!-- start custom head snippets -->
+
+  {%- if page.mermaid -%}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+  {%- endif -%}
+  {%- assign masto = post.mastodon | default: page.mastodon | default: site.mastodon } -%}
+  {%- if masto.username and masto.instance -%}
+    <meta name="fediverse:creator" content="@{{ masto.username }}@{{ masto.instance }}">
+  {%- endif -%}
+  {%- if page.draft -%}
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  {%- endif -%}
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->

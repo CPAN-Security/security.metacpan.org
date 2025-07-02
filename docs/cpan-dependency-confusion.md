@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: CPAN dependency confusion
 description: A study about dependency confusion on CPAN
 author: Thibault Duponchelle

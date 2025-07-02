@@ -1,8 +1,10 @@
 ---
-layout: post
+layout: single
 title:  "CPANSec retrospective 2024"
 date:   2025-03-13 00:23:17 +0200
-categories: cpansec update
+category: blog
+toc: true
+tags: cpansec update history
 author: Thibault Duponchelle
 excerpt: Here is the CPANSec 2024 Retrospective
 ---

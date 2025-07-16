@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 toc: false
 title: Public consultations
 permalink: /docs/consultations/

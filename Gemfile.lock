@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (8.0.1)
+    activesupport (8.0.2)
       base64
       benchmark (>= 0.3)
       bigdecimal
@@ -26,11 +26,13 @@ GEM
     colorator (1.1.0)
     commonmarker (0.23.11)
     concurrent-ruby (1.3.5)
-    connection_pool (2.5.0)
-    dnsruby (1.72.3)
+    connection_pool (2.5.3)
+    cssminify (1.0.2)
+    dnsruby (1.72.4)
       base64 (~> 0.2.0)
+      logger (~> 1.6.5)
       simpleidn (~> 0.2.1)
-    drb (2.2.1)
+    drb (2.2.3)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -38,13 +40,13 @@ GEM
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     execjs (2.10.0)
-    faraday (2.12.2)
+    faraday (2.13.1)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
     faraday-net_http (3.4.0)
       net-http (>= 0.5.0)
-    ffi (1.17.1-x86_64-linux-gnu)
+    ffi (1.17.2-x86_64-linux-gnu)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
     github-pages (228)
@@ -133,6 +135,10 @@ GEM
       jekyll (~> 3.0)
     jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
+    jekyll-gfm-admonitions (1.2.0)
+      cssminify (~> 1.0)
+      jekyll (>= 3.0, < 5.0)
+      octicons (~> 19.8)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
     jekyll-github-metadata (2.13.0)
@@ -213,7 +219,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    json (2.10.1)
+    json (2.12.2)
     kramdown (2.3.2)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -222,17 +228,25 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    logger (1.6.5)
+    logger (1.6.6)
     mercenary (0.3.6)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
-    minitest (5.25.4)
+    minimal-mistakes-jekyll (4.27.1)
+      jekyll (>= 3.7, < 5.0)
+      jekyll-feed (~> 0.1)
+      jekyll-gist (~> 1.5)
+      jekyll-include-cache (~> 0.1)
+      jekyll-paginate (~> 1.1)
+      jekyll-sitemap (~> 1.3)
+    minitest (5.25.5)
     net-http (0.6.0)
       uri
-    nokogiri (1.18.2-x86_64-linux-gnu)
+    nokogiri (1.18.8-x86_64-linux-gnu)
       racc (~> 1.4)
+    octicons (19.15.2)
     octokit (4.25.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
@@ -243,7 +257,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rexml (3.4.0)
+    rexml (3.4.1)
     rouge (3.26.0)
     rubyzip (2.4.1)
     safe_yaml (1.0.5)
@@ -264,7 +278,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (1.8.0)
-    uri (1.0.2)
+    uri (1.0.3)
     webrick (1.9.1)
 
 PLATFORMS
@@ -273,8 +287,10 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 228)
   http_parser.rb (~> 0.6.0)
+  jekyll-gfm-admonitions
+  jekyll-include-cache
   jekyll-mermaid (>= 1)
-  minima (~> 2.5)
+  minimal-mistakes-jekyll (~> 4.27.1)
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1.1)

@@ -171,9 +171,9 @@ stateDiagram-v2
     ecosystem_container      --> environment_integrator
     environment_integrator   --> authority_auditor
     environment_integrator   --> environment_market
-    environment_market   --> environment_customer
+    environment_market       --> environment_customer
     environment_integrator   --> environment_customer
-    authority_customer       --> [*]
+    environment_customer     --> [*]
 
     %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0
@@ -260,7 +260,7 @@ stateDiagram-v2
     %% Package Ecosystem
     state "🟦 Authenticator" as package_authenticator
     state "🟨🟦 Patcher" as package_patcher
-    state "🟥🟨🟦 Builder<br>🟥🟨🟦 Packager<br>🟨🟦 Assembler" as package_packager
+    state "🟥🟨🟦 Builder<br>🟥🟨🟦 Packager" as package_packager
     %% FIXME: package_steward not useful/necessary?
     state "🆕🟨🟦 Attester" as package_steward
     state "🟨 Curator" as package_curator
@@ -410,7 +410,7 @@ stateDiagram-v2
     %%authority_attester --> package_steward
     %%authority_attester --> environment_steward
 
-    state "OSS Steward Environment 🆕" as environment_steward {
+    state "🆕 OSS Steward Environment" as environment_steward {
       [*] --> steward_attester
       steward_attester    --> [*]
     }
@@ -450,7 +450,7 @@ stateDiagram-v2
     }
 
     %%
-    state "Market Surveillance" as environment_surveillance {
+    state "🆕 Market Surveillance" as environment_surveillance {
         [*]               --> authority_auditor
         authority_auditor --> [*]
     }
@@ -630,7 +630,7 @@ A leading developer of an Open Source component project, though not necessarily 
 | 🟥  | Unique Product Identifier          | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV               |         |         |
 | 🟥  | Purpose, Intended Use              | Yes      | CRA-AII(4)                                  |         |         |
 | 🟥  | Code Repository                    | No       |                                             |         | Consider recommendation |
-| 🟥  | Project Sustainability             | No       |                                             | CycloneDX 1.7 proposed | |
+| 🟥  | Contribution Instructions          | No       |                                             | CycloneDX 1.7 proposed | |
 | 🟥  | Code Commit Revision               | No       |                                             |         | Consider recommendation |
 | 🟥  | Intended for Commercial Use        | No       | CRA-Rec-15, CRA-Rec-19                      |         |         |
 | 🟥  | Open Source Software Steward       | No       | CRA-Rec-19                                  |         |         |
@@ -664,7 +664,7 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 | 🟨  | Dependencies (Included)        | Yes      | CRA-AII(5), NTIA-SBOM                      |         |         |
 | 🟨  | Unique Product Identifier      | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |         |
 | 🟨  | Supplier Name (Custodian)      | Yes      | CRA-AII(1), NTIA-SBOM, TR-03183, CRA-AV    |         |         |
-| 🟨  | Project Sustainability         | No       |                                            | CycloneDX 1.7 proposed | |
+| 🟨  | Contribution Instructions      | No       |                                            | CycloneDX 1.7 proposed | |
 
 
 #### Packager (Maintainer)
@@ -812,9 +812,9 @@ This role is necessary when...
 | 🟦  | License(s)                                | Yes      |                         |         |         |
 | 🟦  | Dependencies (Upstream)                   | Yes      | CRA-AII(5), NTIA-SBOM   |         | Confirm if necessary |
 | 🟨  | Dependencies (Included)                   | Yes      | CRA-AII(5), NTIA-SBOM   |         | Confirm if necessary |
-| 🟨  | Version (Redistributed)                   | Yes      | NTIA-SBOM, TR-03183     |         |         |
-| 🟨  | Unique Product Identifier (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if attribute is replaced or added |
-| 🟨  | Project Sustainability                    | No       |                         | CycloneDX 1.7 proposed | |
+| 🟨  | Version (Patched)                         | Yes      | NTIA-SBOM, TR-03183     |         |         |
+| 🟨  | Unique Product Identifier (Patched)       | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if attribute is replaced or added |
+| 🟨  | Contribution Instructions                 | No       |                         | CycloneDX 1.7 proposed | |
 
 * Examples
     * In Debian, there is a concept of "Non-Maintainer Uploads", where contributors are allowed to do one-time uploads to fix bugs under certain conditions and following some guidelines. (Source: [Debian developers reference](https://www.debian.org/doc/manuals/developers-reference/pkgs.en.html#non-maintainer-uploads-nmus), [perl5-porters message on NMUs](https://www.nntp.perl.org/group/perl.perl5.porters/2024/08/msg268757.html))
@@ -823,7 +823,11 @@ This role is necessary when...
 #### Builder (Package ecosystem) {#builder}
 
 > [!IMPORTANT]
-> Builders should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
+> Builders should add build environment metadata (including resolved build dependencies) in an accompanying SBOM file.
+
+| Ops | Attribute name                            | Required | Required by                        | Comment | FIXME   |
+| :-: | :---------------------------------------- | :------: | ---------------------------------- | :------ | :------ |
+| 🟥  | Cryptographic Hash                        | Yes      | CISA-2024-10, TR-03183             |         |         |
 
 * See also
     * [Packager](#packager)
@@ -905,9 +909,10 @@ Ensures the availability of packages or containers, that they are indexed correc
 * Operates within a [Package Ecosystem](#package-ecosystem), creating containers.
 * Builds, installs package dependencies and creates container images from a base images.
 
-| Ops | Attribute name          | Required | Required by           | Comment | FIXME   |
-| :-: | :---------------------- | :------: | --------------------- | :------ | :------ |
-| 🟨  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM |         |         |
+| Ops | Attribute name          | Required | Required by            | Comment | FIXME   |
+| :-: | :---------------------- | :------: | ---------------------- | :------ | :------ |
+| 🟨  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM  |         |         |
+| 🟥  | Cryptographic Hash      | Yes      | CISA-2024-10, TR-03183 |         |         |
 
 
 ----------------------------------------------------------------------
@@ -1058,25 +1063,25 @@ A business or institution that is responsible for developing and building the ap
   * [Maintainer](#maintainer)
   * [Developer](#developer)
 
-| Ops | Attribute name                    | Required | Required by                                     | Comment | FIXME   |
-| :-: | :-------------------------------- | :------: | ----------------------------------------------- | :------ | :------ |
-| 🟦  | Project Sustainability (Upstream) | No       |                                                 | CycloneDX 1.7 proposed | |
-| 🟦  | License(s)                        | Yes      |                                                 |         |         |
-| 🟥  | Primary Component Name            | Yes      | NTIA-SBOM, TR-03183, CRA-AV                     |         |         |
-| 🟥  | Version                           | Yes      | NTIA-SBOM, TR-03183                             |         |         |
-| 🟥  | Dependencies                      | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183   |         |         |
-| 🟥  | Dependency Relationships          | Yes      | CISA-2024-10                                    |         |         |
-| 🟥  | Security contact                  | Yes      | CRA-AII(2)                                      |         | Confirm attribute variations |
-| 🟥  | Unique Product ID                 | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV                   |         |         |
-| 🟥  | Purpose, Intended Use             | Yes      | CRA-AII(4)                                      |         |         |
-| 🟥  | Code Repository                   | Yes      |                                                 |         |         |
-| 🟥  | Project Sustainability            | No       |                                                 | CycloneDX 1.7 proposed | |
-| 🟥  | Code Commit Revision              | No       |                                                 |         | Consider recommendation |
-| 🟥  | Cryptographic Hash                | Yes      | CISA-2024-10, TR-03183                          |         |         |
-| 🟥  | Primary Component Filename        | Yes      | TR-03183                                        |         |         |
-| 🟥  | License (Primary)                 | Yes      | CISA-2024-10                                    |         |         |
-| 🟨  | Supplier Name (Integrator)        | Yes      | CRA-AII(1), NTIA-SBOM, TR-03183, CRA-AV         |         |         |
-| 🟨  | License(s) (Included, Dependency) | Yes      | CISA-2024-10                                    |         |         |
+| Ops | Attribute name                       | Required | Required by                                   | Comment | FIXME   |
+| :-: | :----------------------------------- | :------: | --------------------------------------------- | :------ | :------ |
+| 🟦  | Contribution Instructions (Upstream) | No       |                                               | CycloneDX 1.7 proposed | |
+| 🟦  | License(s)                           | Yes      |                                               |         |         |
+| 🟥  | Primary Component Name               | Yes      | NTIA-SBOM, TR-03183, CRA-AV                   |         |         |
+| 🟥  | Version                              | Yes      | NTIA-SBOM, TR-03183                           |         |         |
+| 🟥  | Dependencies                         | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183 |         |         |
+| 🟥  | Dependency Relationships             | Yes      | CISA-2024-10                                  |         |         |
+| 🟥  | Security contact                     | Yes      | CRA-AII(2)                                    |         | Confirm attribute variations |
+| 🟥  | Unique Product ID                    | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV                 |         |         |
+| 🟥  | Purpose, Intended Use                | Yes      | CRA-AII(4)                                    |         |         |
+| 🟥  | Code Repository                      | Yes      |                                               |         |         |
+| 🟥  | Contribution Instructions            | No       |                                               | CycloneDX 1.7 proposed | |
+| 🟥  | Code Commit Revision                 | No       |                                               |         | Consider recommendation |
+| 🟥  | Cryptographic Hash                   | Yes      | CISA-2024-10, TR-03183                        |         |         |
+| 🟥  | Primary Component Filename           | Yes      | TR-03183                                      |         |         |
+| 🟥  | License (Primary)                    | Yes      | CISA-2024-10                                  |         |         |
+| 🟨  | Supplier Name (Integrator)           | Yes      | CRA-AII(1), NTIA-SBOM, TR-03183, CRA-AV       |         |         |
+| 🟨  | License(s) (Included, Dependency)    | Yes      | CISA-2024-10                                  |         |         |
 
 
 #### Developer
@@ -1115,7 +1120,7 @@ A business or institution that is responsible for developing and building the ap
 | 🟦  | Security contact           | Yes      | CRA-AII(2)            |         |         |
 | 🟦  | Unique Product ID          | Yes      | CRA-AII(3), NTIA-SBOM |         |         |
 | 🟦  | Security Attestation       | Yes      | CRA-Rec-21            |         |         |
-| 🟦  | Project Sustainability     | No       |                       | CycloneDX 1.7 proposed | |
+| 🟦  | Contribution Instructions  | No       |                       | CycloneDX 1.7 proposed | |
 
 
 ----------------------------------------------------------------------
@@ -1172,7 +1177,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 | 🟦  | CE Technical Documentation          | No       | CRA-AII(8)            |         |         |
 | 🟦  | CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV |         |         |
 | 🟦  | Download location                   | Yes      |                       |         |         |
-| 🟦  | Project Sustainability              | No       |                       | CycloneDX 1.7 proposed | |
+| 🟦  | Contribution Instructions           | No       |                       | CycloneDX 1.7 proposed | |
 
 
 #### Distributor

@@ -58,11 +58,11 @@ This document offers **an overview of [Open Source Software](glossary.md#open-so
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 OSS Project" as environment_project
+    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment&nbsp;🔃" as environment_project
     state "🟨 Contributor" as environment_contributor
     state "🟩&nbsp;Collaboration&nbsp;Ecosystem" as ecosystem_forge
-    state "🟨🟩 Language Ecosystem" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem" as ecosystem_package
+    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem&nbsp;🔃" as ecosystem_lang
+    state "🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem&nbsp;🔃" as ecosystem_package
     state "🟩 Container Ecosystem" as ecosystem_container
     state "🟥🟨 Integrator" as environment_integrator
     state "🟦 Production" as environment_prod
@@ -76,10 +76,10 @@ stateDiagram-v2
     environment_contributor  --> ecosystem_forge
     ecosystem_lang           --> ecosystem_package
     ecosystem_forge          --> ecosystem_package
-    ecosystem_package        --> ecosystem_package
-    ecosystem_lang           --> ecosystem_lang
+    %%ecosystem_package        --> ecosystem_package
+    %%ecosystem_lang           --> ecosystem_lang
     ecosystem_package        --> ecosystem_container
-    ecosystem_container      --> ecosystem_container
+    %%ecosystem_container      --> ecosystem_container
     ecosystem_forge          --> environment_integrator
     ecosystem_lang           --> environment_integrator
     ecosystem_lang           --> ecosystem_container
@@ -134,14 +134,14 @@ To improve by ensuring that the metadata they need is available, updated and aut
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 OSS Project Environment" as environment_project
+    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment&nbsp;🔃" as environment_project
     state "🟨 Contributor" as environment_contributor
-    state "🟩 Collaboration Ecosystem" as ecosystem_forge
-    state "🟨🟩 Language Ecosystem" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem" as ecosystem_package
-    state "🟩 Container Ecosystem" as ecosystem_container
+    state "🟩&nbsp;Collaboration&nbsp;Ecosystem" as ecosystem_forge
+    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem&nbsp;🔃" as ecosystem_lang
+    state "🟥&zwj;🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem&nbsp;🔃" as ecosystem_package
+    state "🟨&zwj;🟩&nbsp;Container&nbsp;Ecosystem&nbsp;🔃" as ecosystem_container
     state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
-    state "🟥🟨🟦🟪 Integrator<br>🆕&zwj;🟥&zwj;🟨&zwj;🟦&zwj;🟪&nbsp;Manufacturer" as environment_integrator
+    state "🟨🟦 Integrator<br>🆕&zwj;🟥&zwj;🟨&zwj;🟦&zwj;🟪&nbsp;Manufacturer" as environment_integrator
     state "🆕🟦 Auditor<br>🆕🟦 Market Authority" as authority_auditor
     state "🆕🟦 Importer<br>🆕🟦 Distributor" as environment_market
     state "🟦 Customer" as environment_customer
@@ -155,7 +155,6 @@ stateDiagram-v2
     environment_contributor  --> ecosystem_forge
     ecosystem_lang           --> ecosystem_package
     ecosystem_forge          --> ecosystem_package
-    ecosystem_lang           --> ecosystem_lang
     ecosystem_package        --> ecosystem_container
     ecosystem_forge          --> environment_integrator
     ecosystem_lang           --> environment_integrator
@@ -164,10 +163,8 @@ stateDiagram-v2
     ecosystem_package        --> environment_integrator
     ecosystem_package        --> ecosystem_steward
     ecosystem_lang           --> ecosystem_steward
-    ecosystem_package        --> ecosystem_package
     ecosystem_container      --> ecosystem_steward
     ecosystem_steward        --> environment_integrator
-    ecosystem_container      --> ecosystem_container
     ecosystem_container      --> environment_integrator
     environment_integrator   --> authority_auditor
     environment_integrator   --> environment_market
@@ -323,7 +320,7 @@ stateDiagram-v2
     class authority_auditor verifiesSBOM
 
     %%
-    state "OSS Project Environment" as environment_project {
+    state "OSS Project Environment 🔃" as environment_project {
         [*] --> project_author
         [*] --> project_maintainer
         project_author     --> project_maintainer
@@ -335,7 +332,7 @@ stateDiagram-v2
     [*] --> environment_project
 
     %%
-    state "Language Ecosystem" as ecosystem_lang {
+    state "Language Ecosystem 🔃" as ecosystem_lang {
         [*]                    --> language_authenticator
         language_authenticator --> language_distributor
         %%language_authenticator --> language_steward
@@ -366,7 +363,7 @@ stateDiagram-v2
     %%external_contributor   --> repository_distributor
 
     %%
-    state "Package Ecosystem (Repository)" as ecosystem_package {
+    state "Package Ecosystem (Repository) 🔃" as ecosystem_package {
         [*] --> package_authenticator
         package_authenticator --> package_patcher
         package_authenticator --> package_packager
@@ -381,7 +378,7 @@ stateDiagram-v2
     }
 
     %%
-    state "Container Ecosystem (Registry)" as ecosystem_container {
+    state "Container Ecosystem (Registry) 🔃" as ecosystem_container {
         [*] --> container_authenticator
         container_authenticator --> container_packager
         container_packager      --> container_curator

@@ -8,7 +8,7 @@
    preserveAspectRatio="xMinYMin"
    version="1.1"
    id="svg13"
-   sodipodi:docname="cpansec-floater-light.svg"
+   sodipodi:docname="cpansec-floater-dark-circle.svg"
    inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
    inkscape:export-filename="../6a7b1f3/cpansec-floater-dark.png"
    inkscape:export-xdpi="76.800003"
@@ -29,13 +29,13 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#d1d1d1"
      showguides="true"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="289.20667"
-     inkscape:cy="-91.923881"
-     inkscape:window-width="1107"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="277.53941"
+     inkscape:cy="273.65032"
+     inkscape:window-width="2405"
      inkscape:window-height="1220"
-     inkscape:window-x="924"
-     inkscape:window-y="183"
+     inkscape:window-x="66"
+     inkscape:window-y="169"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg13"
      showgrid="false"
@@ -69,16 +69,41 @@
        orientation="0,-1"
        id="guide5"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="573.47081,251.10158"
+       orientation="0,-1"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="248.90472,537.48343"
+       orientation="1,0"
+       id="guide7"
+       inkscape:locked="false" />
   </sodipodi:namedview>
-  <rect
-     style="opacity:0.977462;fill:#ffffff;fill-opacity:1;stroke-width:1.73821;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.73821, 5.21463;paint-order:markers stroke fill"
-     id="rect10"
-     width="500.00629"
-     height="500.00629"
-     x="2.7755576e-17"
-     y="-5.5511151e-17"
-     rx="0"
-     ry="0" />
+  <path
+     sodipodi:type="star"
+     style="fill:#ffb1b1;fill-opacity:1;stroke-width:1.00001"
+     id="path2"
+     inkscape:flatsided="true"
+     sodipodi:sides="3"
+     sodipodi:cx="446.00562"
+     sodipodi:cy="-204.00256"
+     sodipodi:r1="172.07259"
+     sodipodi:r2="86.703171"
+     sodipodi:arg1="0.52359092"
+     sodipodi:arg2="1.5707884"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="m 595.02552,-117.96744 -298.03846,0.002 149.0172,-258.11005 z"
+     inkscape:transform-center-x="0.22958354"
+     inkscape:transform-center-y="-57.643404"
+     transform="matrix(1.3342618,0,0,1.3342618,-345.08601,523.23509)" />
+  <circle
+     style="fill:#222222;fill-opacity:1;stroke-width:0.79659"
+     id="path1"
+     cx="250.00314"
+     cy="250.00314"
+     r="250.00314" />
   <symbol
      id="logo"
      viewBox="0 0 1368 248"
@@ -149,7 +174,7 @@
   </symbol>
   <g
      id="g20"
-     transform="matrix(6.2443072,0,0,6.2443072,-673.2039,-12.101393)"
+     transform="matrix(6.2443072,0,0,6.2443072,-673.61813,-4.8084074)"
      style="fill:#da2037;fill-opacity:1">
     <g
        id="g19"

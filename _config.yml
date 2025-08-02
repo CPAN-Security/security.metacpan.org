@@ -45,7 +45,7 @@ copyright_url: "" # "copyright" URL, defaults to site.url
 
 author:
   name: "CPAN Security Group"
-  avatar: "/media/cpansec-floater-light.png"
+  avatar: "/media/cpansec-floater-light-circle.png"
   bio: "Improving the security posture of Perl and CPAN"
   links:
     - label: "Website"
@@ -58,6 +58,11 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/CPAN-Security"
 
+footer:
+  links:
+    - label: "Mastodon"
+      icon: "fas fa-fw fa-rss-square"
+      url: "https://fosstodon.org/@cpansec.rss"
 
 # Front matter defaults
 defaults:

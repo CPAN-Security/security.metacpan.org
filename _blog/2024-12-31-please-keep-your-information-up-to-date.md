@@ -1,11 +1,12 @@
 ---
 layout: single
-published: True
+published: true
+toc: false
 title: "Please keep your information up-to-date"
 date: 2024-12-31 11:00:00 +0000
 category: blog
 tags: authors contact cpan maintenance modules security
-author: Robert Rothenberg
+author: robrwo
 excerpt: "Some end of year reminders for CPAN Authors: Do all of your modules have up-to-date contact information?"
 ---
 

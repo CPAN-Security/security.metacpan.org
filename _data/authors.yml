@@ -1,0 +1,26 @@
+robrwo:
+  name: Robert Rohtenberg
+  bio: Security professional based in Scotland and England
+  github: robrwo
+  mastodon: { username: "rrwo", instance: "infosec.exchange" }
+  avatar: "/media/authors/robrwo.png"
+
+sjn:
+  name: Salve J. Nilsen
+  bio: Software developer based in Norway
+  github: sjn
+  mastodon: { username: "sjn", instance: "chaos.social" }
+
+thibaultduponchelle:
+  name: Thibault Duponchelle
+  github: thibaultduponchelle
+  avatar: "/media/authors/thibaultduponchelle.jpeg"
+
+stigtsp:
+  name: Stig Palmquist
+
+timlegge:
+  name: Timothy Legge
+
+garu:
+  name: Breno G. de Oliveira

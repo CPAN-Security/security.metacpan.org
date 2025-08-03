@@ -2,14 +2,14 @@
 layout: single
 title:  "CPANSec retrospective 2024"
 date:   2025-03-13 00:23:17 +0200
-category: blog
+collection: blog
 toc: true
 tags: cpansec update history
-author: Thibault Duponchelle
+author: thibaultduponchelle
 excerpt: Here is the CPANSec 2024 Retrospective
 ---
 
-That was a big year for CPANSec.
+## A big year for CPANSec
 
 In case some of the activities this year flew under your radar, please find some of the achievements listed in this retrospective!
 
@@ -143,7 +143,7 @@ Similarly, discussions about CPAN installer enhancements ("Do not install module
 
 At the very end of 2024, CPANSec reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
 
-## Who we are?
+### Who are we?
 I attributed many of previous achievements to "CPANSec", but who was part of the "CPANSec group" in 2024? 
 
 In last name alphabetical order:
@@ -167,7 +167,7 @@ Giuseppe Di Terlizzi
 Leon Timmermans
 ```
 
-## Final words
+### Final words
 This was a big year; The group really took shape and get full speed with progress in many places.
 
 The group met regularly ([18 meetings!](https://security.metacpan.org/meetings/)), had fun and got outstanding results.

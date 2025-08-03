@@ -2,9 +2,10 @@
 layout: single
 title:  "Introducing the CPAN Security Group"
 date:   2023-07-14 00:23:17 +0200
-category: news
+collection: news
+toc: false
 tags: cpansec update
-author: Salve J. Nilsen
+author: sjn
 excerpt: There's a new group in the Perl + CPAN communities!
 ---
 

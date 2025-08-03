@@ -18,6 +18,16 @@
   }
 }
 
+.archive__more {
+  position: relative;
+  float: left;
+
+  a {
+    position: relative;
+    z-index: 10;
+  }
+}
+
 .archive__item {
   position: relative;
 
@@ -32,6 +42,7 @@
 }
 
 .archive__subtitle {
+  clear: both;
   margin: 1.414em 0 0.5em;
   padding-bottom: 0.5em;
   font-size: $type-size-5;

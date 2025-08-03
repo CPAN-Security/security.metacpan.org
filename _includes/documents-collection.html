@@ -1,0 +1,18 @@
+{% assign entries_limit = include.entries_limit %}
+{% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
+
+{% if include.sort_by %}
+  {% assign entries = entries | sort: include.sort_by %}
+{% endif %}
+
+{% if include.sort_order == 'reverse' %}
+  {% assign entries = entries | reverse %}
+{% endif %}
+
+{%- for post in entries limit:entries_limit -%}
+  {% include archive-single.html type=include.type %}
+{%- endfor -%}
+
+{%- if entries.size > entries_limit %}
+<a class="archive__more" href="{{ site.collections[include.collection].canonical }}">More…</a>
+{% endif %}

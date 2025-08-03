@@ -1,14 +1,16 @@
 ---
 layout: single
-published: True
+published: true
 toc: true
 title: Vulnerable Spreadsheet Parsing modules
-date:   2024-02-10 18:23:17 +0100
-category: news
+date: 2024-02-10 18:23:17 +0100
+collection: news
 tags: cve timeline report
-author: Timothy Legge
+author: timlegge
 excerpt: Between Dec 2023 and Jan 2024, vulnerabilities in Spreadsheet::ParseExcel and Spreadsheet::ParseXLSX were reported to the CPAN Security Group (CPANSec). This document describes the timeline and analysis of events.
 ---
+
+## Overview
 
 Between Dec 2023 and Jan 2024, vulnerabilities in Spreadsheet::ParseExcel and Spreadsheet::ParseXLSX were reported to the CPAN Security Group (CPANSec).
 This document describes the timeline and analysis of events.
@@ -138,7 +140,7 @@ Daum released version 0.28 on January 2nd, 2024 to resolve the issue.
 The XML external entity (XXE) injection vulnerability in Spreadsheet::ParseXLSX (CVE-2024-23525) was patched by Michael Daum and version 0.30 was released on January 17th, 2024 to resolve the issue and a final version 0.31 to reference the CVE number on January 18th, 2024.
 
 
-## Appendix A
+## Further information
 
 ### CPAN
 

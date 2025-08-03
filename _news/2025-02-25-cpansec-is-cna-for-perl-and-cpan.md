@@ -3,9 +3,13 @@ layout: single
 toc: false
 title: "CPANSec is CNA for Perl and the CPAN ecosystem"
 date: 2025-02-25 22:00:00 +0100
-category: news
+collection: news
 tags: cpan perl cve cna
-author:  Stig Palmquist, Timothy Legge and Breno G. de Oliveira
+authors:
+  - stigtsp
+  - timlegge
+  - garu
+author_profile: true
 ---
 
 The CPAN Security Group was [authorized by the CVE Program](https://www.cve.org/Media/News/item/news/2025/02/25/CPAN-Security-Group-Added-as-CNA) as a CVE Numbering Authority (CNA) on Feb 25, 2025. A CNA assigns and manages CVE identifiers for projects in their scope.

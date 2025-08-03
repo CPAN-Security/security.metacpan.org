@@ -1,12 +1,12 @@
 ---
 layout: single
-published: True
-toc: true
+published: true
+toc: false
 title: "CPAN Author's Guide to Random Data for Security"
 date: 2025-01-03 15:30:00 +0000
-category: news
+collection: blog
 tags: authors guides cpan modules security random randomness urandom cryptography
-author: Robert Rothenberg
+author: robrwo
 excerpt: "Any secret token that allows someone to access a resource or perform an action should be generated with a secure random number generator..."
 ---
 
@@ -18,4 +18,4 @@ There are many modules on CPAN with random number generators. Which ones should 
 
 We have added a
 [CPAN Author’s Guide to Random Data for Security](https://security.metacpan.org/docs/guides/random-data-for-security.html).
-This recommends a few modules that are generaly portable, easy to use and have good defaults.
+This recommends a few modules that are generally portable, easy to use and have good defaults.

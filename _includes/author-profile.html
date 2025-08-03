@@ -4,7 +4,7 @@
   {% assign authors = page.authors %}
 {%- endif %}
 
-{%- if page.author %}
+{%- if page.author or authors.size > 0 %}
 <h3>Author{% if authors.size > 1 %}s{% endif %}</h3>
 <hr>
 {% endif -%}
@@ -253,6 +253,7 @@
   </div>
 
   {%- if authors.size > 1 -%}
+  <hr>
   {%- for co_author in authors offset:1 -%}
   {% assign author = site.data.authors[co_author] | default: co_author %}
   <div class="author__content">

@@ -16,7 +16,7 @@ In case some of the activities this year flew under your radar, please find some
 ## Common Vulnerabilities and Exposures (CVEs)
 In 2024, CPANSec worked to illustrate the importance of the Common Vulnerabilities and Exposures (CVE) process.
 
-Until then, our experience is that very few CVEs were published for Perl modules and tooling.  
+Until then, our experience is that very few CVEs were published for Perl modules and tooling.
 Beyond that, people and authors were a bit reluctant to deal with those CVEs.
 
 CVEs are not a sign of bad quality or maintenance of a code,
@@ -126,7 +126,7 @@ More attacks vectors were also looked at, including _starjacking_ and the topic 
 ## Pentesting PAUSE
 CPANSec volunteers reviewed and tested PAUSE with various attempts to break it with nasty modules, steal namespaces or execute remote code.
 
-This was done on a local instance made possible thanks to the hard work of automation from "Table PAUSE" at [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) that was later improved, tweaked (fast indexing, minor fixes...) and containerized by CPANSec. 
+This was done on a local instance made possible thanks to the hard work of automation from "Table PAUSE" at [Perl Toolchain Summit 2024](https://perltoolchainsummit.org/pts2024/) that was later improved, tweaked (fast indexing, minor fixes...) and containerized by CPANSec.
 
 Outside of pentesting, these deliveries are useful for plenty of tests (on indexing, on PAUSE functionning itself) or as a local development environment of PAUSE.
 
@@ -144,7 +144,7 @@ Similarly, discussions about CPAN installer enhancements ("Do not install module
 At the very end of 2024, CPANSec reviewed the state of the art vulnerability of Perl bcrypt related modules ([Crypt::bcrypt](https://metacpan.org/dist/Crypt-Bcrypt), [Digest::Bcrypt](https://metacpan.org/pod/Digest::Bcrypt)) on misuse following the [Okta reported incident](https://medium.com/@rajat29gupta/bcrypt-and-the-okta-incident-what-developers-need-to-know-9d13a446738a).
 
 ### Who are we?
-I attributed many of previous achievements to "CPANSec", but who was part of the "CPANSec group" in 2024? 
+I attributed many of previous achievements to "CPANSec", but who was part of the "CPANSec group" in 2024?
 
 In last name alphabetical order:
 ```

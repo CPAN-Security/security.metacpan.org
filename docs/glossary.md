@@ -2,6 +2,7 @@
 layout: single
 title: Glossary of Terms
 description: List of terms used throughout CPANSec projects
+author: sjn
 draft: true
 draft_text: What you see here is a DRAFT of the Glossary used by the CPAN Security Group (CPANSec).
 contribution_url: https://github.com/CPAN-Security/security.metacpan.org/blob/main/docs/glossary.md

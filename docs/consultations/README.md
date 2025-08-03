@@ -8,7 +8,7 @@ This folder contains replies to public consultations and hearings that CPANSec h
 
 ## NIS 2
 
-Feedback on [ENISA implementing guidance for NIS 2 security measures](https://www.enisa.europa.eu/publications/implementation-guidance-on-nis-2-security-measures)
+Feedback for the [ENISA implementing guidance for NIS 2 security measures](https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance) (Published 2025-06-26).
 
 * [Chapter 5 (Supply-chain security)](Feedback-on-implementing-guidance-for-NIS-2-security-measures-chapter-5.pdf)
     * in cooperation with OpenSSF, FSFE, NLnet Labs and GitHub

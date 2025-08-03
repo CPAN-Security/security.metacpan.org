@@ -10,6 +10,7 @@ sjn:
   bio: Software developer based in Norway
   github: sjn
   mastodon: { username: "sjn", instance: "chaos.social" }
+  avatar: "/media/authors/sjn.png"
 
 thibaultduponchelle:
   name: Thibault Duponchelle

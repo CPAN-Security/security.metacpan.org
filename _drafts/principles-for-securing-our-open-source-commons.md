@@ -1,12 +1,12 @@
 ---
-layout: post
-published: True
+layout: single
+published: false
 toc: true
 title: "5 Principles for securing our open source commons"
-date: 2025-05-10 17:15:00 +0000
-category: blog
+date: 2025-08-10 17:15:00 +0000
+collection: blog
 tags: authors guides cpan modules security "open source" cra steward "cyber resilience act" principles
-author: Salve J. Nilsen
+author: sjn
 excerpt: "5 principles to keep in mind when securing your open source software infrastructure. Don't forget these!"
 ---
 
@@ -30,5 +30,3 @@ Look for ways to strengthen not only the large and successful parts of your infr
 5. **Open Source was never free** – The cost of creating and maintaining your infrastructure was never free.
 The cost was always _externalized_, meaning that you benefited from other people's investments.
 While assuming this will always be the case is reckless, there's no need to despair – the infrastructure is still maintained collaboratively. Your experiences and resources are still welcome, and is likely to offer cheaper and less risky solutions than what you gain from exchanging or rewriting your foundation and stack.
-
-6. 

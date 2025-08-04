@@ -1,5 +1,6 @@
 {% assign entries_limit = include.entries_limit %}
-{% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
+{% assign collection = include.collection | default: "news" %}
+{% assign entries = include.entries | default: site[collection] | where_exp: "post", "post.hidden != true" %}
 
 {% if include.sort_by %}
   {% assign entries = entries | sort: include.sort_by %}
@@ -14,5 +15,5 @@
 {%- endfor -%}
 
 {%- if entries.size > entries_limit %}
-<a class="archive__more" href="{{ site.collections[include.collection].canonical }}">More…</a>
+<a class="archive__more" href="{{ site.collections[collection].canonical | default: collection }}">More…</a>
 {% endif %}

@@ -32,5 +32,8 @@
     </div>
 
     {% include scripts.html %}
+    {%- if page.mermaid -%}
+      {% include mermaid.html %}
+    {%- endif -%}
   </body>
 </html>

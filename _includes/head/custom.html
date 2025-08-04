@@ -10,6 +10,8 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   {%- endif -%}
 
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
 <link rel="icon" type="image/png" href="/media/favicon/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/media/favicon/favicon.svg" />
 <link rel="shortcut icon" href="/media/favicon/favicon.ico" />
@@ -17,6 +19,11 @@
 <meta name="apple-mobile-web-app-title" content="CPANSec" />
 <link rel="manifest" href="/media/favicon/site.webmanifest" />
 
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
+{% if page.mermaid %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.3/mermaid.min.js"></script>
+<!-- script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.3/dist/mermaid.esm.min.mjs"></script -->
+<!-- script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.9.0/mermaid.min.js"></script -->
+<!-- script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.esm.min.mjs"></script -->
+{% endif %}
 
 <!-- end custom head snippets -->

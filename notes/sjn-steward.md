@@ -88,3 +88,16 @@ OSS Steward
 - Needed: Policies around existing project lifecycle events
   - See task lists in [SBOM.md](SBOM.md).
 
+# Organization
+
+- Corporation with a social purpose ("Akjseselskap med sosialt formål")
+
+
+## TODO
+
+- Skatte-etaten kontaktskjema
+  - "hjelpe oppstart"
+  - rettsavd.: konsekvenser av cyber resilience act
+- Search: "Starte samvirkeforetak, vedtekter"
+- brreg "sektorkode"
+- samvirke i utgangspunkt inkomp. med non-profit (!)

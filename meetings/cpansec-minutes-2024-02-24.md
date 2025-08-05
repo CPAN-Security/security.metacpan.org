@@ -42,7 +42,7 @@ This meeting happens regularly, typically every other Saturday at 15:00 UTC.
     - Soon we can use it to specify depends and requirements (including outside cpan).
     - pkgurl is necessary for SBOMs to refer to depends in a standard way.
     - Question from @ingy regarding SBOM and alien - @sjn yes you can specify external dependencies - including github releases but not general things like DNS service
-    - @tux discussed reporting on generated SBOM - people need to see example outputs for understanding how to get there – @sjn docs are WIP
+    - @tux discussed reporting on generated SBOM - people need to see example outputs for understanding how to get there – @sjn docs are WIP
 2. [CPAN Privacy and Compliance](https://github.com/orgs/CPAN-Security/projects/9)
 3. [CPAN Provenance & Supply Chain Security](https://github.com/orgs/CPAN-Security/projects/3)
 4. [CPAN Security Outreach & Information](https://github.com/orgs/CPAN-Security/projects/12)

@@ -468,6 +468,12 @@ Package _Providers_ are responsible for making packages or containers that Patch
 ### Life-cycle Phase
 
 > 1. (NTIA-2021) The stage in the software life-cycle where an SBOM is generated (e.g. from source, at the time of build or packaging, or from a built executable).
+> 1. (CycloneDX-2024) Lifecycles communicate the stage(s) in which data in the BOM was captured.
+>     * Different types of data may be available at various phases of a lifecycle, such as the Software Development Lifecycle (SDLC), IT Asset Management (ITAM), and Software Asset Management (SAM).
+>     * Thus, a BOM may include data specific to or only obtainable in a given lifecycle.
+> 1. (CPANSec-2025) The stage in a software life, from conception as an idea to deprecation and decommissioning.
+>     * Many different software "stages" or "phases" can be found throughout it's life, so calling something a "Life-cycle Phase" isn't always easily distinguishable.
+>     * Application life-cycle phases, Publishing life-cycle phases, Packaging life-cycle phases, SBOM life-cycle phases, etc.
 >
 > (Ref: [NTIA-2021](#references-and-terms))
 >
@@ -1042,6 +1048,7 @@ This glossary is partly based on terms from the following sources.
 - (EUBG-2022-3) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04)#d1e3120-1-1) Chapter 3.1, published 2022-06-29.
 - (EUBG-2022-4) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04)#d1e4315-1-1) Chapter 4.3, published 2022-06-29.
 - (NIXOS-2024) [Nix concepts](https://zero-to-nix.com/concepts), as of 2024-08-15
+- (CycloneDX-2024) [CycloneDX 1.6 Specification (JSON)[https://cyclonedx.org/docs/1.6/json/#metadata_lifecycles_items_oneOf_i0_phase], published 2024-04-09
 
 ## About this document
 

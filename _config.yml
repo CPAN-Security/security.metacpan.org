@@ -134,8 +134,7 @@ defaults:
       toc: true
       toc_sticky: true
 
-after_footer_scripts:
-#  - "/assets/js/mermaid.js"
+#after_footer_scripts:
 
 #markdown: GFM
 plugins:

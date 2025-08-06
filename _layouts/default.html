@@ -8,7 +8,7 @@
     {% include head.html %}
     {% include head/custom.html %}
     {%- if page.mermaid -%}
-      {% include mermaid.html %}
+      {% include mermaid-head.html %}
     {%- endif -%}
   </head>
 
@@ -35,5 +35,8 @@
     </div>
 
     {% include scripts.html %}
+    {%- if page.mermaid -%}
+    {% include mermaid-foot.html %}
+    {%- endif -%}
   </body>
 </html>

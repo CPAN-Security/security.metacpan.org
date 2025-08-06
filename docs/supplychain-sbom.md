@@ -1,17 +1,18 @@
 ---
 layout: single
-title: Roles and metadata in open source supply-chains
+title: Roles and metadata in Open Source supply-chains
 mastodon: { username: sjn, instance: chaos.social }
 description: An overview of roles in a supply-chain and the metadata they care about, in light of upcoming regulatory changed introduced by the EU Cyber Resilience Act
 toc: true
-author: Salve J. Nilsen
+author: sjn
+draft: true
 mermaid: true
 ---
 
 ## Document status: ⚠️  DRAFT {#document-status}
 
 > [!CAUTION]
-> What you see here is a DRAFT of the Supply-chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
+> What you see here is a DRAFT of the supply-chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/supplychain-sbom.md](https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/supplychain-sbom.md)
@@ -30,7 +31,7 @@ mermaid: true
 
 ## About this document (TL;DR) {#about}
 
-This document offers **an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains**.
+This document offers **an overview of [Open Source Software](glossary.md#open-source-software) supply-chains**.
 
 * Taking into account the following perspectives:
     1. Environments and Ecosystems,
@@ -38,21 +39,33 @@ This document offers **an overview of [Open Source Software](glossary.md#open-so
     1. Metadata, and
     1. Industry [Terms and Concepts](glossary.md)
 * …Enumerating and describing the Metadata Attributes these Roles typically care about.
-* …Noting the ways each Role may Operate on any given Metadata Attribute,
+* …Noting the ways each Role may operate on any given Metadata Attribute,
     * 🟥 Create (authoritative),
     * 🟨 Assemble or Update (contributing),
     * 🟩 Distribute,
     * 🟦 Verify, or
     * 🟪 Censor
+* …Acknowledging that some ecosystems and environments may have interesting features
+    * 🔃 Is upstream or downstream of own ecosystem type
+    * 🆕 Is a new participant in OSS supply chains
 * …Showing any relevant regulation or other requirements that impose expectations of the presence of specific Metadata Attributes.
-* …So that people having a Role within the Supply-chain can:
-    1. Draw an overarching map of what other Roles may Operate within their Supply-chain
+* …So that people having a Role within the supply-chain can:
+    1. Draw an overarching map of what other Roles may operate within their supply-chain
     1. Form a idea of what purpose each Role may have, and find out where they fit
     1. Get an idea where an Attribute is likely to come from, and which Roles care about these
-    1. Become aware of both upstream and downstream Communities, Ecosystems and Environments are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
+    1. Become aware of both upstream and downstream Communities, Ecosystems and Environments are involved in their supply-chain, in order to interact with them in effective and sustainable ways
     1. Use this information to both live up to their new Regulatory Obligations and to help improve their Security Posture in general
 
-### A Typical Open Source Supply-chain (Simplified)
+### A Typical Open Source supply-chain (Simplified)
+
+> [!NOTE]
+>
+> The graphs in this document do *not* include _Content Delivery Networks_, _Model Ecosystems_ or _Plugin Ecosystems_.
+> If you know of other parts of an Open Source supply-chain that involves the managing of metadata somehow, then please [reach out](#document-status)!
+> We'd love to add them – or at least to be aware of them.
+
+This is a simplified "TL;DR" overview of a typical Open Source supply chain.
+
 
 ```mermaid
 stateDiagram-v2
@@ -93,9 +106,9 @@ stateDiagram-v2
 ```
 
 
-## This document is **visionary** and a **proposal**
+### Intention
 
-Some aspects of this document – specifically those related to the role of Open Source Stewards and the role of OSS Attestations – are presented as **suggestions, proposals or visions of a possible future**.
+This document is intended for presenting an opinionated overview that includes aspects that are **visionary** and **proposed** – especially topics related to the role of Open Source Stewards and the role of OSS Attestations.
 
 
 ### Motivation
@@ -104,8 +117,8 @@ Originally, this document stems from the main author's frustration with the lack
 
 Furthermore, this document is also an attempt to explore and map out the consequences that the EU Cyber Resilience Act (CRA) is likely have for Open Source Ecosystems.
 The CRA is the first regulation that has language that explicitly affects Open Source ecosystems.
-This law introduces a new entity – the Open Source Software Steward – with obligations to them (and other Roles) to improve the state of Cybersecurity throughout Open Source Supply-chains.
-This shown us that there's a need to map out what Open Source Supply-chains actually look like, and spell out what Roles can be found throughout it, and more.
+This law introduces a new entity – the Open Source Software Steward – with obligations to them (and other Roles) to improve the state of Cybersecurity throughout Open Source supply-chains.
+This shown us that there's a need to map out what Open Source supply-chains actually look like, and spell out what Roles can be found throughout it, and more.
 This document therefore also represents the author's exploration of this topic, and could be considered as "public notes" on the matter.
 Still, the author hopes this document also can be useful for others than himself and the CPAN Security Group.
 
@@ -116,19 +129,16 @@ For license information and acknowledgements, see the [end of this document](#li
 
 ## Supply-chain Ecosystems, Environments & Roles and Attributes
 
-> [!NOTE]
-> FIXME: Show how metadata may be communicated along these open source supply-chains.
-
-In this section, we map out the different parts of typical Open Source Supply-chains – the Environments and Ecosystems we use, the Roles that are operating within these, what Metadata Attributes they care about, and which Operations they are expected to execute when caring.
+In this section, we map out the different parts of typical Open Source supply-chains – the Environments and Ecosystems we use, the Roles that are operating within these, what Metadata Attributes they care about, and which Operations they are expected to execute when caring.
 Additionally, you should get some indications of what regulations, standards or other requirements that call for the presence of a given Attribute.
 And all this, with the goal of allowing downstream users to both live up to their regulatory obligations and to improve their security posture in general.
 To improve by ensuring that the metadata they need is available, updated and authoritative, and can be helpful in both mitigating vulnerabilities and interacting with the maintainers of any Open Source projects that may be involved.
 
 
-### A Post-CRA Open Source Supply-chain (Simplified)
+### A Post-CRA Open Source supply-chain (Simplified)
 
-> [!NOTE]
-> This diagram is equivalent to the simplified one above, but showing the new Roles implied and introduced by the EU Cyber Resilience Act (CRA).
+This diagram is equivalent to the simplified one above, but showing the new Roles implied and introduced by the EU Cyber Resilience Act (CRA).
+
 
 ```mermaid
 stateDiagram-v2
@@ -140,10 +150,10 @@ stateDiagram-v2
     state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem&nbsp;🔃" as ecosystem_lang
     state "🟥&zwj;🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem&nbsp;🔃" as ecosystem_package
     state "🟨&zwj;🟩&nbsp;Container&nbsp;Ecosystem&nbsp;🔃" as ecosystem_container
-    state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
-    state "🟨🟦 Integrator<br>🆕&zwj;🟥&zwj;🟨&zwj;🟦&zwj;🟪&nbsp;Manufacturer" as environment_integrator
-    state "🆕🟦 Auditor<br>🆕🟦 Market Authority" as authority_auditor
-    state "🆕🟦 Importer<br>🆕🟦 Distributor" as environment_market
+    state "🟥🟩🟦 OSS Steward 🆕🔃" as ecosystem_steward
+    state "🟨🟦 Integrator<br>🟥&zwj;🟨&zwj;🟦&zwj;🟪&nbsp;Manufacturer&nbsp;🆕" as environment_integrator
+    state "🟦 Auditor<br>🟦 Market Authority 🆕" as authority_auditor
+    state "🟦 Importer 🆕<br>🟦 Distributor 🆕" as environment_market
     state "🟦 Customer" as environment_customer
 
     [*]                      --> environment_project
@@ -178,10 +188,10 @@ stateDiagram-v2
 
 ### Legend of Metadata Operations
 
-In the graphs presented above and below, we color-code the different _metadata operations_ in order to quickly show what activities a Supply-chain Role may be involved in.
+In the graphs presented above and below, we color-code the different _metadata operations_ in order to quickly show what activities a supply-chain Role may be involved in.
 
 We're also assuming that Metadata is stored in SBOMs, but this need not be the case.
-To distinguish between Metadata roles and Supply-chain roles, we have decided to refer to the former as "SBOM Roles".
+To distinguish between Metadata roles and supply-chain roles, we have decided to refer to the former as "SBOM Roles".
 This convention is also commonly used (or implied) in the referenced material.
 This may change in later revisions of this document.
 
@@ -200,17 +210,15 @@ And finally, we acknowledge that some situations may call for an SBOM Censor, wh
 * 🟪 SBOM Censor – **Censors**, redacts, deletes, anonymizes or filters Metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
 
 
-## Open Source Supply-chain
+## Graph: Open Source supply-chain {#open-source-supply-chain}
 
-> [!NOTE]
-> The graphs in this document do *not* include _Content Delivery Networks_, _Model Ecosystems_ or _Plugin Ecosystems_.
-> If you know of other parts of an Open Source Supply-chain that involves the managing of metadata somehow, then please [reach out](#document-status--)!
-> We'd love to add them – or at least to be aware of them.
+This is an attempt at a somewhat complete overview of the different Ecosystems, Roles and flow of metadata one can expect to see in an Open Source supply-chain.
+
 
 ```mermaid
 stateDiagram-v2
     direction TB
-    accTitle: An Idealized Open Source Supply-chain Graph
+    accTitle: An Idealized Open Source supply-chain Graph
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %% Role activities
@@ -235,13 +243,13 @@ stateDiagram-v2
     %%state "🟥 Attestation Authority 🆕" as authority_attester
 
     %% Language Ecosystem
-    state "🟦 Authenticator" as language_authenticator
+    state "🟦 Ingester" as language_ingester
     %%state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
     state "🟩 Distributor" as language_distributor
     %% "🟩 Reservoir"
     %%
-    class language_authenticator verifiesSBOM
+    class language_ingester verifiesSBOM
     class language_packager assemblesSBOM
     class language_steward createsSBOM
     class language_curator updatesSBOM
@@ -255,15 +263,15 @@ stateDiagram-v2
     class external_contributor updatesSBOM
 
     %% Package Ecosystem
-    state "🟦 Authenticator" as package_authenticator
+    state "🟦 Ingester" as package_ingester
     state "🟨🟦 Patcher" as package_patcher
     state "🟥🟨🟦 Builder<br>🟥🟨🟦 Packager" as package_packager
     %% FIXME: package_steward not useful/necessary?
-    state "🆕🟨🟦 Attester" as package_steward
+    state "🟨🟦 Attester 🆕" as package_steward
     state "🟨 Curator" as package_curator
     state "🟩 Distributor (Repository)" as package_distributor
     %%
-    class package_authenticator verifiesSBOM
+    class package_ingester verifiesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
     class package_steward createsSBOM
@@ -271,25 +279,25 @@ stateDiagram-v2
     class package_distributor distributesSBOM
 
     %% Container Ecosystem
-    state "🟦 Authenticator" as container_authenticator
+    state "🟦 Ingester" as container_ingester
     state "🟨🟦 Assembler" as container_packager
-    state "🆕🟨🟦 Attester" as container_steward
+    state "🟨🟦 Attester 🆕" as container_steward
     state "🟨 Curator" as container_curator
     state "🟩 Registry<br>🟩 Distributor" as container_distributor
     %%
-    class container_authenticator verifiesSBOM
+    class container_ingester verifiesSBOM
     class container_packager assemblesSBOM
     class container_steward createsSBOM
     class container_curator updatesSBOM
     class container_distributor distributesSBOM
 
     %% OSS Steward Environment
-    state "🆕🟥🟨🟦 Attester" as steward_attester
+    state "🟥🟨🟦 Attester 🆕" as steward_attester
     %%
     class steward_attester createsSBOM
 
     %% Integrator Environment
-    state "🟥 Owner<br>🆕🟥 Manufacturer" as integrator_owner
+    state "🟥 Owner<br>🟥 Manufacturer 🆕" as integrator_owner
     state "🟦 Procurer" as integrator_procurer
     state "🟥🟨🟦 Integrator" as integrator_developer
     state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as integrator_builder
@@ -308,14 +316,14 @@ stateDiagram-v2
     %% Production Environment
     state "🟨 Deployer" as prod_deployer
     state "🟦 End-user<br>Consumer" as external_consumer
-    state "🆕🟦 Importer<br>🆕🟦 Distributor" as prod_distributor
+    state "🟦 Importer 🆕<br>🟦 Distributor 🆕" as prod_distributor
     %%
     class prod_deployer assemblesSBOM
     class external_consumer ignoresSBOM
     %%class authority_attester createsSBOM
 
     %% Market Surveillance Environment
-    state "🟦 Auditor<br>🆕🟦 Market Authority" as authority_auditor
+    state "🟦 Auditor<br>🟦 Market Authority 🆕" as authority_auditor
     %%
     class authority_auditor verifiesSBOM
 
@@ -333,13 +341,13 @@ stateDiagram-v2
 
     %%
     state "Language Ecosystem 🔃" as ecosystem_lang {
-        [*]                    --> language_authenticator
-        language_authenticator --> language_distributor
-        %%language_authenticator --> language_steward
-        language_authenticator --> language_curator
+        [*]                    --> language_ingester
+        language_ingester      --> language_distributor
+        %%language_ingester      --> language_steward
+        language_ingester      --> language_curator
         language_curator       --> language_distributor
-        %%language_steward --> language_distributor
-        %%language_steward --> language_curator
+        %%language_steward       --> language_distributor
+        %%language_steward       --> language_curator
         language_distributor   --> [*]
     }
 
@@ -354,8 +362,8 @@ stateDiagram-v2
         repository_distributor --> [*]
     }
 
-    %%ecosystem_forge    --> maintainer_author
-    %%maintainer_author --> ecosystem_forge
+    %%ecosystem_forge     --> maintainer_author
+    %%maintainer_author   --> ecosystem_forge
     environment_project --> environment_steward
     environment_project --> ecosystem_forge
     ecosystem_forge     --> environment_project
@@ -364,9 +372,9 @@ stateDiagram-v2
 
     %%
     state "Package Ecosystem (Repository) 🔃" as ecosystem_package {
-        [*] --> package_authenticator
-        package_authenticator --> package_patcher
-        package_authenticator --> package_packager
+        [*] --> package_ingester
+        package_ingester      --> package_patcher
+        package_ingester      --> package_packager
         package_patcher       --> package_packager
         package_packager      --> package_curator
         package_steward       --> package_curator
@@ -379,8 +387,8 @@ stateDiagram-v2
 
     %%
     state "Container Ecosystem (Registry) 🔃" as ecosystem_container {
-        [*] --> container_authenticator
-        container_authenticator --> container_packager
+        [*] --> container_ingester
+        container_ingester      --> container_packager
         container_packager      --> container_curator
         container_steward       --> container_curator
         container_packager      --> container_distributor
@@ -396,8 +404,8 @@ stateDiagram-v2
     ecosystem_package        --> environment_integrator
     %%ecosystem_package        --> ecosystem_package
 
-    %%repository_distributor --> ecosystem_package
-    %%language_distributor   --> ecosystem_package
+    %%repository_distributor   --> ecosystem_package
+    %%language_distributor     --> ecosystem_package
     %%ecosystem_lang           --> ecosystem_lang
     ecosystem_lang           --> environment_integrator
     ecosystem_lang           --> ecosystem_package
@@ -407,7 +415,7 @@ stateDiagram-v2
     %%authority_attester --> package_steward
     %%authority_attester --> environment_steward
 
-    state "🆕 OSS Steward Environment" as environment_steward {
+    state "OSS Steward Environment 🆕🔃" as environment_steward {
       [*] --> steward_attester
       steward_attester    --> [*]
     }
@@ -434,9 +442,9 @@ stateDiagram-v2
         integrator_publisher --> [*]
     }
 
-    %%repository_distributor --> environment_integrator
+    %%repository_distributor   --> environment_integrator
     ecosystem_forge          --> environment_integrator
-    %%language_distributor   --> environment_integrator
+    %%language_distributor     --> environment_integrator
 
     %%
     state "Production Environment" as environment_prod {
@@ -447,15 +455,15 @@ stateDiagram-v2
     }
 
     %%
-    state "🆕 Market Surveillance" as environment_surveillance {
+    state "Market Surveillance 🆕" as environment_surveillance {
         [*]               --> authority_auditor
         authority_auditor --> [*]
     }
 
     environment_prod         --> environment_surveillance
-    %%integrator_builder   --> environment_prod
-    %%integrator_developer --> environment_prod
-    %%integrator_publisher --> environment_prod
+    %%integrator_builder       --> environment_prod
+    %%integrator_developer     --> environment_prod
+    %%integrator_publisher     --> environment_prod
     environment_integrator   --> environment_surveillance
     environment_integrator   --> environment_prod
     environment_integrator   --> external_consumer
@@ -473,9 +481,9 @@ stateDiagram-v2
 
 ## Supply-chain Ecosystems, their Roles and Metadata
 
-Which environments and Ecosystems are found throughout a Supply-chain? Here's an overview.
+Which environments and Ecosystems are found throughout a supply-chain? Here's an overview.
 
-Throughout Open Source Supply-chains, we find different Roles that care about certain metadata, or are in possession of some authoritative information, or needs to verify these.
+Throughout Open Source supply-chains, we find different Roles that care about certain metadata, or are in possession of some authoritative information, or needs to verify these.
 Here, you'll get an overview of the most important ones, which attributes they care about and how they care, and some information about why they do so (e.g. due to legal requirements).
 
 * Ops: The type of operation that someone with a given Role is most likely to do on a given metadata attribute.
@@ -515,7 +523,7 @@ These are common across all roles, and considered to be _baseline_ because they 
 ```mermaid
 stateDiagram-v2
     direction TB
-    accTitle: An Idealized Open Source Supply-chain Graph, OSS Project perspective
+    accTitle: An Idealized Open Source supply-chain Graph, OSS Project perspective
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %%
@@ -724,13 +732,13 @@ Typically, the Ecosystem has dedicated services and tooling for interacting with
 * May be Private
 
 
-#### Authenticator (Language, Package, Container ecosystem) {#authenticator}
+#### Ingester (Language, Package, Container ecosystem) {#ingester}
 
 > [!CAUTION]
 > * FIXME – Not done
 > * FIXME – Find a better name
 
-Authenticators ensure that only authorized Maintainers are allowed to publish their components to a [Language Ecosystem](#language-ecosystem), [Package Ecosystem](#package-ecosystem) or [Container ecosystem](#container-ecosystem).
+Ingesters ensure that only authorized Maintainers are allowed to publish their components to a [Language Ecosystem](#language-ecosystem), [Package Ecosystem](#package-ecosystem) or [Container ecosystem](#container-ecosystem).
 Usually decides who gets access to which resources.
 
 * Examples
@@ -919,7 +927,7 @@ Ensures the availability of packages or containers, that they are indexed correc
 ```mermaid
 stateDiagram-v2
     direction TB
-    accTitle: An Idealized Open Source Supply-chain Graph
+    accTitle: An Idealized Open Source supply-chain Graph
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %% Role activities
@@ -932,7 +940,7 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %%
-    state "🆕🟥🟨🟦 OSS Steward" as language_steward
+    state "🟥🟨🟦 OSS Steward 🆕" as language_steward
     %%
     class language_steward createsSBOM
 
@@ -987,7 +995,7 @@ stateDiagram-v2
     class external_consumer ignoresSBOM
 
     %% Market Authorities
-    state "🆕🟦 Market Authority<br>🆕🟦 Importer<br>🆕🟦 Distributor" as authority_auditor
+    state "🟦 Market Authority 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
     %%
     class authority_attester createsSBOM
     class authority_auditor verifiesSBOM
@@ -1197,7 +1205,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 #### Importer
 
 > [!CAUTION]
-> * Not directly part of an Open Source Supply-chain, but can be found downstream of Manufacturers that use these.
+> * Not directly part of an Open Source supply-chain, but can be found downstream of Manufacturers that use these.
 > * FIXME – Not done
 
 * A role specific for the EU Cyber Resilience Act.
@@ -1270,7 +1278,7 @@ The environment and systems where a product or service is executed by a customer
 
 #### Supplier
 
-The Supplier is a term used throughout the Supply-chain, but most often represents a Role within a [Maintainer](#maintainer-environment) or an [Integrator](#integrator-environment) Environment.
+The Supplier is a term used throughout the supply-chain, but most often represents a Role within a [Maintainer](#maintainer-environment) or an [Integrator](#integrator-environment) Environment.
 
 * This term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
 * (CPANSec) This term is confusing, as it doesn't distinguish between the different types of "Suppliers" that may be involved in the creation of a product.
@@ -1407,7 +1415,7 @@ The legal owner of the component or project.
 
 ## License and use of this document
 
-* Version: 0.8.3
+* Version: 0.8.7
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

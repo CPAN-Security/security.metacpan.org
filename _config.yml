@@ -42,6 +42,8 @@ words_per_minute: 200
 enable_copy_code_button: true # true, false (default)
 copyright: "" # "copyright" name, defaults to site.title
 copyright_url: "" # "copyright" URL, defaults to site.url
+atom_feed:
+  hide: true
 
 collections:
   news:
@@ -57,12 +59,21 @@ collections:
     permalink: /:year/:month/:day/:title:output_ext
     canonical: /blog/
 
+feed:
+  collections:
+    news:
+      path: "/news.xml"
+    blog:
+      path: "/blog.xml"
+
 author:
   name: "CPAN Security Group"
   avatar: "/media/cpansec-floater-light-circle.png"
-  bio: "Improving the security posture of Perl and CPAN"
+  bio: >-
+    Volunteering to better the security posture for Perl and CPAN.
+    Subscribe, join or contribute!
   links:
-    - label: "Website"
+    - label: "Main website"
       icon: "fas fa-fw fa-link"
       url: "https://security.metacpan.org"
     - label: "Mastodon"
@@ -71,12 +82,21 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/CPAN-Security"
+#    - label: "Matrix"
+#      icon: "fab fa-fw fa-matrix-org"
+#      url: "https://matrix.to/#/#cpansec-discussion:matrix.org"
 
 footer:
   links:
     - label: "Mastodon"
       icon: "fas fa-fw fa-rss-square"
       url: "https://fosstodon.org/@cpansec.rss"
+    - label: "Blog"
+      icon: "fas fa-fw fa-rss-square"
+      url: "/blog.xml"
+    - label: "News"
+      icon: "fas fa-fw fa-rss-square"
+      url: "/news.xml"
 
 # Front matter defaults
 defaults:

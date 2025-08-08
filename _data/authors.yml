@@ -27,7 +27,12 @@ garu:
   name: Breno G. de Oliveira
 
 tux:
-  name: H. Merijn "Tux" Brand
+  name: H. Merijn Brand ("Tux")
+  bio: Data analyst and software developer based in the Netherlands
+  github: Tux
+  avatar: "/media/authors/tux.png"
+  mastodon: { username: "Tux", instance: "mastodon.social" }
+  bluesky: { username: "CPANSec", instance: "bsky.social" }
 
 abraxxa:
   name: Alexander Hartmaier

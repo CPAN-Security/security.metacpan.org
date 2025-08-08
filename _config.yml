@@ -71,7 +71,7 @@ author:
   name: "CPAN Security Group"
   avatar: "/media/cpansec-floater-light-circle.png"
   bio: >-
-    Forum for coordinating and help resolving security issues on CPAN.
+    A forum for coordinating and help resolving security issues on CPAN.
     CVE Numbering Authority (CNA) for Perl and CPAN.
     Subscribe, contribute or join!
   links:
@@ -97,7 +97,7 @@ footer:
       icon: "fas fa-fw fa-rss-square"
       url: "https://fosstodon.org/@cpansec.rss"
     - label: "Bluesky"
-      icon: "fab fa-fw fa-rss-square"
+      icon: "fas fa-fw fa-rss-square"
       url: "https://bsky.app/profile/did:plc:y44ur552urxfhxq2adhcsapd/rss"
     - label: "Blog"
       icon: "fas fa-fw fa-rss-square"

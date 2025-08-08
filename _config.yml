@@ -73,15 +73,15 @@ author:
     Volunteering to better the security posture for Perl and CPAN.
     Subscribe, join or contribute!
   links:
-    - label: "Main website"
-      icon: "fas fa-fw fa-link"
-      url: "https://security.metacpan.org"
     - label: "Mastodon"
       icon: "fab fa-fw fa-mastodon"
       url: "https://fosstodon.org/@cpansec"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/CPAN-Security"
+    - label: "CPANSec Feeds"
+      icon: "fas fa-fw fa-link"
+      url: "https://security.metacpan.org#footer"
 #    - label: "Matrix"
 #      icon: "fab fa-fw fa-matrix-org"
 #      url: "https://matrix.to/#/#cpansec-discussion:matrix.org"

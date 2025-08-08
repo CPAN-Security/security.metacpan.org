@@ -42,6 +42,7 @@ words_per_minute: 200
 enable_copy_code_button: true # true, false (default)
 copyright: "" # "copyright" name, defaults to site.title
 copyright_url: "" # "copyright" URL, defaults to site.url
+related_posts: false
 atom_feed:
   hide: true
 

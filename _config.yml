@@ -86,7 +86,7 @@ author:
       url: "https://github.com/CPAN-Security"
     - label: "CPANSec Feeds"
       icon: "fas fa-fw fa-link"
-      url: "https://security.metacpan.org#footer"
+      url: "#footer"
 #    - label: "Matrix"
 #      icon: "fab fa-fw fa-matrix-org"
 #      url: "https://matrix.to/#/#cpansec-discussion:matrix.org"

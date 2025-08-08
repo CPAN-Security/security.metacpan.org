@@ -1,9 +1,10 @@
 robrwo:
-  name: Robert Rohtenberg
-  bio: Security professional based in Scotland and England
+  name: Robert Rothenberg
+  bio: Writing software with Perl and developing websites since the mid-1990s, currently based in England
   github: robrwo
   mastodon: { username: "rrwo", instance: "infosec.exchange" }
   avatar: "/media/authors/robrwo.png"
+  cpan: rrwo
 
 sjn:
   name: Salve J. Nilsen

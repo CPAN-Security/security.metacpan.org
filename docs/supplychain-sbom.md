@@ -587,7 +587,7 @@ This environment represents one or more developers that publish an Open Source c
 
 
 
-#### Author
+#### Author (Project Role) {#author}
 
 The initial creator and main developer of an Open Source project or a product.
 
@@ -606,12 +606,13 @@ The initial creator and main developer of an Open Source project or a product.
 | 🟥  | License(s) (Primary)            | Yes      | CISA-2024-10                        |         |         |
 
 * See also
+  * [Author](glossary#author) in the Glossary
   * [Manufacturer](#manufacturer)
 
 
-#### Maintainer
+#### Maintainer (Project Role) {#maintainer}
 
-A leading developer of an Open Source component project, though not necessarily the original [Author](#author).
+A leading developer of an Open Source [Project](glossary#project), though not necessarily the original [Author](#author).
 
 * Operates within an [OSS Project Environment](#oss-project-environment).
 * Is often the initial and/or main creator ([Author](#author)) of the component in question.
@@ -675,6 +676,7 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 #### Packager (Maintainer)
 
 Prepares a Language ecosystem package for upload.
+Can sometimes be called a "Release manager".
 
 * See also
   * [Packager](#packager)

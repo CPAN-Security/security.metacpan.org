@@ -19,8 +19,19 @@ toc: true
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
+### This document is **opinionated**
 
-### This document is **visionary** and a **proposal**
+This glossary is not an authoritative source of terms, but rather intended as a guide for reducing ambiguity and confusion in a technical field where many institutions are making up their own definitions as they go.
+
+Please take this into account when commenting this document.
+
+#### **Descriptive** and **prescriptive**
+
+While some aspects of this document are descriptive – meaning it refers to other definitions and terms – we don't shy away from recommending or discouraging some of them.
+
+Please take this into account when commenting this document.
+
+#### **Visionary** and a **proposal**
 
 Some aspects of this document – including those related to the role of Open Source Stewards, the Cyber Resilience Act and CE Marking – are presented as **suggestions, proposals or visions of a possible future**.
 
@@ -40,25 +51,31 @@ Please take this into account when commenting this document.
 
 > [!NOTE]
 > Component and Artifact seem to have overlapping definitions.
-> We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec)
+> We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec-2024)
 
 > 1. (SLSA-2023) An immutable blob of data; primarily refers to [software](#software), but SLSA can be used for any artifact.
 >     * E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
 >
-> See also: [Component](#component).
+> * See also:
+>     * [Component](#component)
 >
 > (Ref: [SLSA-2023](#references-and-terms), CPANSec-2024)
 
 
-### Author
+### Author (SBOM Role)
 
 > 1. (NTIA-2021) An entity that creates an SBOM.
 >     * [author](#author) and [supplier](#supplier) will often be different. In the case of SBOMs, the author creates the SBOM. The supplier is the provider of the software included in the SBOM.
+>
+> * See also:
+>     * [Author](supplychain-sbom#author) in the Supply-chain SBOM Roles document.
+
+
+### Author (Project Role)
+
 > 1. (CPANSec-2024) A developer that publishes something as Open Source software.
 >
-> See also: [Author](supplychain-sbom#author) in the Supply-chain SBOM Roles document.
->
-> (Ref: [NTIA-2021](#references-and-terms), CPANSec-2024)
+> (Ref: [CPANSec-2024](#references-and-terms))
 
 
 ### Attestation
@@ -157,16 +174,17 @@ Please take this into account when commenting this document.
 >     * The SLSA-2023 definition below is preferred, though it doesn't sufficiently distinguish between stated, included and assumed dependencies.
 >     * Please consider using the CPANSec-2024 definition
 
-> 1. (CPANSec-2024) A dependency is a _resolved_ Requirement.
->     * This means the component that is depended upon (required) has been made available for use by the depending software so it may function as expected.
+> 1. (CPANSec-2024) A dependency is a software component that is required for another software to work as expected.
+>     * This means the component which is depended upon (required) has been made available for use by the depending software so it may function as expected, without modification.
 >     * Dependencies exist _after_ they have been made available to the depending software.
->     * If a dependency is unmet (not made available, deployed, installed), then it is called a _Requirement_.
+>     * If a dependency is unmet (meaning – not made available, deployed, or installed), then it is called a _Requirement_.
 >     * A dependency can come in many forms,
->         * Static, Dynamic, Resource or Service
->         * Included (Embedded, Bundled), Direct or Transitive
->         * Assumed (Phantom) or Unused (Zombie)
->         * In-ecosystem or Out-of-ecosystem
->         * Optional, Virtual or Resolved
+>         * Static, Dynamic
+>         * Component, Resource or Service
+>         * Vendored-in (Bundled, Embedded, Included)
+>         * Direct or Transitive
+>         * Optional, Virtual, Assumed (Phantom) or Unused (Zombie)
+>         * In-ecosystem (Native) or Out-of-ecosystem (Non-native)
 >         * Unresolved, or Resolved during Development, Configuration, Build, Test, Deploy or at Runtime
 > 1. (SLSA-2023) An [Artifact](#artifact) that is an input to a build process but that is not a source.
 >     * In the SLSA model, it is always a package.
@@ -175,17 +193,18 @@ Please take this into account when commenting this document.
 >
 > (Ref: [SLSA-2023](#references-and-terms), [NTIA-2021](#references-and-terms), [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Direct) ✍️ {#dependency-direct}
+#### Dependency, Direct ✍️ {#dependency-direct}
 
 > 1. (SCVS-2020, CDXAG-2024) A software component that is referenced by a program itself.
 > 1. (CPANSec-2024) A [software](#software) program, library, plugin, service, resource or component that is required for another software program or component to function as expected.
 >
 > * See also
->     * For indirect dependencies, see [Dependency (Transitive)](#dependency-transitive).
+>     * [Dependency (Transitive)](#dependency-transitive)
+>     * [Dependency (Indirect)](#dependency-indirect)
 >
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
-#### Dependency (Dynamic)
+#### Dependency, Dynamic
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -193,7 +212,12 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Static)](#dependency-static)
 
-#### Dependency (Transitive) ✍️ {#dependency-transitive}
+#### Dependency, Indirect {#dependency-indirect}
+
+> 1. (CPANSec-2024) A dependency that is used during the author, build, test or deployment stages of a program, but is is not needed any more during runtime.
+>     * Examples: Compilers, test harnesses, build tooling, editors, software packaging tooling, software repositories and publishing platforms.
+
+#### Dependency, Transitive ✍️ {#dependency-transitive}
 
 > 1. (SCVS-2020) A software component that is indirectly used by a program by means of being a dependency of a dependency.
 > 1. (NTIA-2021) Characterizing the relationship that if an upstream component X is included in software Y and component Z is included in component X then component Z is included in software Y.
@@ -204,21 +228,21 @@ Please take this into account when commenting this document.
 >
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
-#### Dependency (Contained; Embedded, Included, Pre-resolved, Vendored) ✍️ {#dependency-contained}
+#### Dependency, Vendored-in (Bundled, Contained, Embedded, Included, Pre-resolved) ✍️ {#dependency-vendored}
 
 > 1. (CPANSec-2024) A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-##### Dependency (Pinned at Source) ✍️ {#dependency-pinned}
+#### Dependency, Pinned at Source ✍️
 
 > * See
->     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded)
+>     * [Dependency, Vendored-in)](#dependency-vendored)
 
-##### Dependency (Resolved at Source) ✍️
+#### Dependency, Resolved at Source ✍️
 
 > * See
->     * [Dependency (Embedded, Included, Pre-resolved)](#dependency-embedded)
+>     * [Dependency, Vendored-in](#dependency-vendored)
 
 #### Dependency (Injected)
 
@@ -226,25 +250,28 @@ Please take this into account when commenting this document.
 >     * e.g. A shared object library that is loaded using `LD_PRELOAD`.
 >     * e.g. A CPAN module that is unexpectedly loaded from the current working directory in the cases when module search path `@INC` contains `.`.
 
-#### Dependency (Phantom; Assumed, Implied, Unstated) ✍️ {#dependency-phantom}
+#### Dependency, Phantom (Assumed, Implied, Unknown, Unstated) ✍️ {#dependency-phantom}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-> 1. (CPANSec-2024) A dependency that is used but _unstated_.
->     * An implied dependency is a component that is required to perform an action or functionality, but has not been explicitly stated as required.
->     * An implied dependency should be considered as a bug in the component, and corrected as soon as possible.
->     * If a dependency has to be implied due to lacking capabilities in the tooling used to create the package.
->          * This should be considered as a bug in the tooling.
+> 1. (CPANSec-2024) A dependency that is used but not explicitly stated as required in the component or package metadata.
+>     * A phantom dependency is a component that is required to perform an action or functionality, but has not been explicitly stated as required.
+>     * An phantom dependency should be considered as a bug in the component metadata, and corrected as soon as possible.
+>     * If a dependency has to be assumed or implied due to lacking capabilities in the tooling used to create the component or package, this should be considered as a bug in the tooling.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-##### Dependency (Detected during Analysis) ✍️
+#### Dependency, Detected during Analysis ✍️
 
+> 1. (CPANSec-2024) A previously unknown dependency that was discovered during software dependency analysis.
+>
 > * See
->     * [Dependency (Assumed, Implied, Phantom, Unstated)](#dependency-assumed-implied-phantom-unstated-%EF%B8%8F)
+>     * [Dependency Phantom (Assumed, Implied, Unknown, Unstated)](#dependency-phantom)
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Optional)
+#### Dependency, Optional
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -252,37 +279,37 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Static)](#dependency-static)
 
-#### Dependency (Unresolved, Required) {#dependency-unresolved}
+#### Dependency, Unresolved (Required) {#dependency-unresolved}
 
 > * See
 >     * [Requirement](#requirement)
 
-#### Dependency (Resolved during Configuration) ✍️ {#dependency-configuration-time}
+#### Dependency, Resolved during Configuration ✍️ {#dependency-configuration-time}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved during Build) ✍️ {#dependency-build-time}
+#### Dependency, Resolved during Build ✍️ {#dependency-build-time}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-##### Dependency (Pinned during Build) ✍️ {#dependency-build-pinned)
+#### Dependency, Pinned during Build ✍️ {#dependency-build-pinned)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved during Deploy) ✍️ {#dependency-deploy-time}
+#### Dependency, Resolved during Deploy ✍️ {#dependency-deploy-time}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (Resolved at Runtime) ✍️ {#dependency-runtime}
+#### Dependency, Resolved at Runtime ✍️ {#dependency-runtime}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency (In-ecosystem) ✍️ {#dependency-in-ecosystem}
+#### Dependency, In-ecosystem (Native) ✍️ {#dependency-in-ecosystem}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -290,7 +317,7 @@ Please take this into account when commenting this document.
 > * See
 >     * [Dependency (Out-of-ecosystem)](#dependency-out-of-ecosystem)
 
-#### Dependency (Out-of-ecosystem) ✍️ {#dependency-out-of-ecosystem}
+#### Dependency, Out-of-ecosystem (Non-native) ✍️ {#dependency-out-of-ecosystem}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -298,7 +325,7 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (In-ecosystem)](#dependency-in-ecosystem)
 
-#### Dependency (Service) ✍️ {#dependency-service}
+#### Dependency, Service ✍️ {#dependency-service}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -308,7 +335,7 @@ Please take this into account when commenting this document.
 >
 > (Ref: [CPANSec-2024](#references-and-terms), [PCISSF-2023](#references-and-terms))
 
-#### Dependency (Static)
+#### Dependency, Static
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -316,7 +343,7 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Dynamic)](#dependency-dynamic)
 
-##### Dependency (Dynamic)
+#### Dependency, Dynamic
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -324,7 +351,7 @@ Please take this into account when commenting this document.
 > * See also
 >     * [Dependency (Static)](#dependency-static)
 
-#### Dependency (Virtual)
+#### Dependency, Virtual
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -334,7 +361,7 @@ Please take this into account when commenting this document.
 >
 > (Ref: [CPANSec-2024](#references-and-terms))
 
-#### Dependency (Zombie; Unused) {#dependency-zombie}
+#### Dependency, Zombie (Unused) {#dependency-zombie}
 
 > 1. (CPANSec-2024) A dependency that has been resolved and installed, but is not in use anywhere (any more).
 >     * May be a build artifact left over after earlier stages in the build process (e.g. development, configure, or testing)
@@ -350,6 +377,9 @@ Please take this into account when commenting this document.
 >     * An unresolved dependency has always a version constraint associated with it (implied or explicitly), to be used during dependency resolution.
 >     * Also referred to as a "prereq", "dependency".
 >
+> * See Also
+>     * [Dependency](#dependency)
+>
 > (Ref: [CPANSec-2024](#references-and-terms))
 
 ### Pre-Requirement
@@ -357,9 +387,9 @@ Please take this into account when commenting this document.
 > * See
 >     * [Requirement](#requirement)
 
-### Provider ✍️ {#provider}
+### Provider (Ecosystem Role) ✍️ {#provider}
 
-Providers take packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users according to the Curator's requirements.
+Package _Providers_ are responsible for making packages or containers that Patchers and Packagers produce, and ensure these are made available in a reliable way for downstream users, possibly in accordance with a Curator's requirements.
 (e.g. by setting up and managing a Debian APT repository, or a CPAN mirror, or a Docker container registry, or similar).
 
 > 1. (CPANSec-2024) The Role that is tasked with ensuring a component artifact is available for download by anyone downstream
@@ -396,14 +426,14 @@ Providers take packages or containers that Patchers and Packagers produce, and e
 > (Ref: [NTIA-2021](#references-and-terms))
 
 
-### Economic operator
+### Economic operator (CRA)
 
-> 1. (CRA-2024-03) The [Manufacturer](#manufacturer), the authorised representative, the [Importer](#importer), the [Distributor](#distributor), or other natural or legal person who is subject to obligations in relation to the manufacture of products with digital elements or to the making available of products on the market in accordance with [the Cyber Resilience Act];
+> 1. (CRA-2024-03) The [Manufacturer](#manufacturer), the authorised representative, the [Importer](#importer), the [Distributor](#distributor), or other natural or legal person who is subject to obligations in relation to the manufacture of products with digital elements or to the making available of products on the market in accordance with [the Cyber Resilience Act].
 >
 > (Ref: [CRA-2024-03](#references-and-terms))
 
 
-### Electronic information system
+### Electronic information system (CRA)
 
 > 1. (CRA-2024-03) A system, including electrical or electronic equipment, capable of processing, storing or transmitting digital data.
 >
@@ -484,7 +514,7 @@ Providers take packages or containers that Patchers and Packagers produce, and e
 > (Ref: [NTIA-2021](#references-and-terms))
 
 
-### Open source software steward ⚠️  {#oss-steward}
+### Open source software steward (CRA) ⚠️  {#oss-steward}
 
 > [!NOTE]
 > * FIXME: Expand on this topic
@@ -538,7 +568,6 @@ Providers take packages or containers that Patchers and Packagers produce, and e
 >     * According to Union harmonisation legislation, each individual product can only be placed once on the Union market.
 >     * Products made available on the market must comply with the applicable Union harmonisation legislation at the moment of placing on the market.
 >
->
 > (Ref: [CRA-2024-03](#references-and-terms), [EUBG-2022-2](#references-and-terms))
 
 
@@ -575,11 +604,73 @@ Providers take packages or containers that Patchers and Packagers produce, and e
 > (Ref: [SCVS-2020](#references-and-terms), CDXAG-2024, CPANSec-2024)
 
 
-### Product with digital elements (CRA)
+### Product
+
+> 1. (CPANSec-2024) A release of a project codebase that has been made ready for easy deployment and use, and that is made available, marketed or sold with a recognizable name or trademark.
+>     * Please note that a _Product_ is distinct from a _Project_, in that a Product's technology, creation, maintenance, sustainability or governance is not central factors during procurement.
+>     * If a Product's technology, creation, maintenance, sustainability or governance is in-scope during procurement, then one should instead consider the underlying [Project](#project) for these selection criteria.
+>
+> * See also:
+>     * [Project](#project)
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
+
+
+### Product with digital elements (CRA) {#pde}
 
 > 1. (CRA-2024-03) A software or hardware product and its [Remote Data Processing](#remote-data-processing) solutions, including software or hardware components being placed on the market separately.
 >
 > (Ref: [CRA-2024-03](#references-and-terms))
+
+
+### Project
+
+> 1. (CPANSec-2024) the social and technical organization around a codebase which works on and decides how it is developed over time.
+>     * A project has a name, a maintainer and a repository for collaboration, and may have one or more co-maintainers (possibly constituting a "core" of the Project) that help take care of the codebase.
+>     * Other important features include the Project's license, governance structures, language, ecosystem, community and culture.
+>     * If the Project's license is recognized by the Open Source Initiative as an Open Source license, then the project is an Open Source Project.
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
+
+
+### Project Roles
+
+These are roles that may be found in Open Source projects.
+
+#### Project Lead (Project Role) ⚠️  {#project-lead}
+
+> 1. A person who is in charge of a project.
+> 1. (CPANSec-2024) Discouraged, due to lack of precision and confusion with common usage i commercial settings.
+>    * Instead, use terms like [Author](#author), [Maintainer](#maintainer) or [Owner](#owner).
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
+
+#### Release Manager (Project Role)
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+#### Contributor (Project Role) {#packager}
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+#### Packager (Project Role) {#packager}
+
+> [!NOTE]
+> * FIXME: Expand on this topic
+
+#### Custodian (Project Role) ✍️ {#custodian}
+
+> 1. (CPANSec-2024) A role that operates as a temporary replacement of a [Maintainer](#maintainer), or [Owner](#owner), or works on their behalf in the case they are not available, or the project does not have any.
+>     * Operates on behalf of a [Maintainer](#maintainer) in a [Language Ecosystem](#language-ecosystem) or [Package Ecosystem](#package-ecosystem).
+>     * A type of low-effort [Maintainer](#maintainer) with reduced responsibilities, working as a stand-in of the actual Maintainer.
+>     * Cares about the continued security posture of the project.
+>     * Concerned mostly with updating dependencies or applying security fixes.
+> * May step in on behalf of the Maintainer on behalf of the [Language Ecosystem](#language-ecosystem) or [Package Ecosystem](#package-ecosystem) where the component is published.
+> * May step in on behalf of the Maintainer if they are unavailable or unresponsive.
+> * May have repository commit privileges for the [Maintainer](#maintainer)'s project.
+> * May publish updates on behalf of the [Maintainer](#maintainer).
 
 
 ### Provenance ✍️ {#provenance}
@@ -591,11 +682,24 @@ Providers take packages or containers that Patchers and Packagers produce, and e
 > (Ref: [SCVS-2020](#references-and-terms), NTIA-2021, CPANSec-2024)
 
 
+### Release
+
+> 1. (CPANSec-2024) A named and versioned snapshot of the codebase, that is announced as suitable for general use (e.g. "is stable"), and possibly published through a public repository, a language or package ecosystem or, some other way.
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
+
+
 ### Remote Data Processing (CRA)
 
 > 1. (CRA-2024-03) Data processing at a distance the software for which is designed and developed by the manufacturer, or under the responsibility of the manufacturer, and the absence of which would prevent the product with digital elements from performing one of its functions.
 >
 > (Ref: [CRA-2024-03](#references-and-terms))
+
+### Repository
+
+> 1. (CPANSec-2024) The tooling, storage, services and regime used for collaborating on improving a codebase over time, either locally or remotely across a network.
+>
+> (Ref: [CPANSec-2024](#references-and-terms))
 
 
 ### Second-party component ✍️ {#second-party-component}

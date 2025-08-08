@@ -74,9 +74,12 @@ author:
     Volunteering to better the security posture for Perl and CPAN.
     Subscribe, join or contribute!
   links:
-    - label: "Mastodon"
+    - label: "@cpansec@fosstodon.org"
       icon: "fab fa-fw fa-mastodon"
       url: "https://fosstodon.org/@cpansec"
+    - label: "@cpansec.bsky.social"
+      icon: "fab fa-fw fa-bluesky"
+      url: "https://bsky.app/profile/cpansec.bsky.social"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/CPAN-Security"
@@ -92,6 +95,9 @@ footer:
     - label: "Mastodon"
       icon: "fas fa-fw fa-rss-square"
       url: "https://fosstodon.org/@cpansec.rss"
+    - label: "Bluesky"
+      icon: "fab fa-fw fa-rss-square"
+      url: "https://bsky.app/profile/did:plc:y44ur552urxfhxq2adhcsapd/rss"
     - label: "Blog"
       icon: "fas fa-fw fa-rss-square"
       url: "/blog.xml"

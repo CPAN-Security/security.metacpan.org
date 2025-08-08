@@ -72,7 +72,7 @@ author:
   avatar: "/media/cpansec-floater-light-circle.png"
   bio: >-
     Forum for coordinating and help resolving security issues on CPAN.
-    CVE Numbering Authority of Perl and CPAN.
+    CVE Numbering Authority (CNA) for Perl and CPAN.
     Subscribe, contribute or join!
   links:
     - label: "@cpansec@fosstodon.org"

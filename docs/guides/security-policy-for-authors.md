@@ -18,7 +18,7 @@ You do not need to mention or link to any license in your security policy, and y
 
 You should add a security policy to tell downstream users that you (the developers and maintainers of your software) care about the integrity of their data and systems.
 
-A security policy tells users how to report security issues to the project maintainer(s), how the maintainer(s) will respond, and what software will be supported by them.
+A security policy tells users how to report security issues to the project maintainer(s), how the maintainer(s) will respond to security issues, and what software will be supported by them.
 
 A security policy might also be a requirement by some institutions or governments.
 Even if you are not subject to regulations of a government that requires security policies, potential users of your software are.

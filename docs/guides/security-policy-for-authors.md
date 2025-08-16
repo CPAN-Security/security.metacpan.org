@@ -44,8 +44,8 @@ These are people who contribute to your software.
 
 ### Why should authors work with CPANSec?
 
-The CPAN Security Group (CPANSec) a forum for coordinating and
-assisting in resolving security issues found on CPAN.  This includes:
+The CPAN Security Group (CPANSec) is a forum for coordinating and assisting in resolving security issues found on CPAN.
+This includes:
 
 - Assisting authors and third-party developers in dealing with
   vulnerabilities and general security advisories related to

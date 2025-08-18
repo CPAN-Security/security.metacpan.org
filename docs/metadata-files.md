@@ -34,7 +34,8 @@ An overview of support options that the project chooses to _provide_.
 
 ### CODE_OF_CONDUCT.{md,txt,pod}
 
-* [Perl standards of conduct](https://perldoc.perl.org/perlpolicy#STANDARDS-OF-CONDUCT)
+* [Perl's Standards of Conduct](https://perldoc.perl.org/perlpolicy#STANDARDS-OF-CONDUCT)
+* [Perl's Social Contract about Artistic Control](https://perldoc.perl.org/perlpolicy#A-Social-Contract-about-Artistic-Control)
 * https://www.contributor-covenant.org/
 
 

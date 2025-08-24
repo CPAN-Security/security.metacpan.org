@@ -1,13 +1,14 @@
 cpansec:
-  name: "CPAN Security Group"
+  name: "CPANSec Contributors"
   avatar: "/media/cpansec-floater-light-circle.png"
 bio: >-
-  This article is a collective work by multiple CPANSec contributors.
-
+  This article is a collective effort by multiple CPANSec contributors.
 
 robrwo:
   name: Robert Rothenberg
-  bio: Writing software with Perl and developing websites since the mid-1990s, currently based in England
+  bio: >-
+    Writing software with Perl and developing websites since the mid-1990s.
+    Currently based in England.
   github: robrwo
   mastodon: { username: "rrwo", instance: "infosec.exchange" }
   avatar: "/media/authors/robrwo.png"
@@ -15,7 +16,9 @@ robrwo:
 
 sjn:
   name: Salve J. Nilsen
-  bio: Software developer based in Norway
+  bio: >-
+    Policy, metadata and OSS sustainability guy in CPANSec.
+    Based in Oslo, Norway.
   github: sjn
   mastodon: { username: "sjn", instance: "chaos.social" }
   avatar: "/media/authors/sjn.png"

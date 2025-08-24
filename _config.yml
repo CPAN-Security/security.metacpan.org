@@ -188,7 +188,6 @@ plugins:
 #
 exclude:
   - .bundle
-  - bundle
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
@@ -196,6 +195,7 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - bundle/
+  - vendor/
   - cache/
   - gems/
   - ruby/

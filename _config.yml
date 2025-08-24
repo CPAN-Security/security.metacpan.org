@@ -67,6 +67,7 @@ feed:
     blog:
       path: "/blog.xml"
 
+# Default site author. Add other authors to _data/authors.yml
 author:
   name: "CPAN Security Group"
   avatar: "/media/cpansec-floater-light-circle.png"

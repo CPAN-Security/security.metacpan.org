@@ -1,3 +1,10 @@
+cpansec:
+  name: "CPAN Security Group"
+  avatar: "/media/cpansec-floater-light-circle.png"
+bio: >-
+  This article is a collective work by multiple CPANSec contributors.
+
+
 robrwo:
   name: Robert Rothenberg
   bio: Writing software with Perl and developing websites since the mid-1990s, currently based in England

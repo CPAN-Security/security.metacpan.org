@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: single
 title: An EU Cyber Resilience Act Summary
 description: A short overview of the parts of the CRA that affect different entities in Open Source supply-chains
-author: Salve J. Nilsen
+author: sjn
 toc: true
 mermaid: true
 ---
@@ -265,14 +265,64 @@ Before making a product with digital elements available on the market, distribut
 * (b) the manufacturer and the importer have complied with the obligations set out in [Article 13(15)], [Article 16], [Article 18], [Article 19] and [Article 20] and have provided all necessary documents to the distributor.
 
 
-### Open Source Software projects
+### Open Source Stewards ⚠️  FIXME: Not done
 
-* The mere circumstances under which the product […] has been developed, ([Recital (18)])
-  * or how the development has been financed,
-  * should […] not be taken into account when determining the commercial or non-commercial nature of that activity.
-* […] the development of […] free and open-source software by *not-for-profit organisations* should ([Recital (18)])
-  * not be considered to be a commercial activity
-    * provided that the organisation is set up in such a way that ensures that all earnings after costs are used to achieve not-for-profit objectives.
+Open Source Software Stewards are…
+
+* […] legal persons who *provide support on a sustained basis* ([Article 3] (14)) for the development […] of products which are intended for commercial activities, and who *play a main role in ensuring the viability of those products* […] ([Recital (19)])
+  * […] should be subject to a light-touch and tailor-made regulatory regime.
+  * [and…] only cover […] free and open-source software that are *ultimately intended for commercial activities*.
+
+Open Source Stewards are obliged to… (as laid out in [Article 24])
+
+* …put in place in a verifiable manner a cybersecurity policy to foster… ([Article 24(1)])
+  * …the development of a secure product
+  * …an effective handling of vulnerabilities by the developers of that product
+  * …voluntary reporting of vulnerabilities, as laid out in [Article 15]
+    * …taking into account the specific nature of the open-source software steward
+      * …and the legal and organisational arrangements to which it is subject
+* …cooperate with market surveillance authorities, at their request, with a view to
+  * …mitigating the cybersecurity risks posed by a product […] qualifying as free and open-source software ([Article 24(2)])
+  * …provide documentation referred to in [Article 24(1)] (in a language that is easily understood) to that authority, upon reasoned request)
+* …report on actively exploited vulnerabilities and severe incidents via an ENISA-run single reporting platform (as laid out in [Article 16], in the way described in [Article 14(3)]), to the extent they are involved in the development of the product
+
+
+* …facilitate the Manufacturer's _due diligence_ obligation set out in [Article 13(5)] ⚠️  FIXME: (Dis)confirm this.
+
+
+
+FOSS Software may get a voluntary security attestation, as described in [Article 25]
+
+* …using an EU Attestation program as laid out in [Recital (21)]
+  * …by requesting a certification from ENISA, as laid out in [Regulation (EU) 2019/881, Article 48](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R0881#page=8)
+  * …in such a way that this security attestation can be initiated or financed by not only FOSS projects, but also by others, including manufacturers, users, or public administrations.
+  * …so this Attestation becomes a "proof of due diligence exercised"? ⚠️  FIXME: (Dis)confirm this.
+* …to facilitate Manufacturers' obligations to exercise due diligence when integrating components from third parties.
+
+Furthermore, the OSS Software Stewards are only subject to a "light-touch" and "tailor-made" regulatory regime, ans are not to be considered as Manufacturers.
+
+Additionally,
+
+* The mere circumstances under which the product with digital elements has been developed, or how the development has been financed, should therefore not be taken into account when determining the commercial or non-commercial nature of that activity. ([Recital (18)])
+* […] the development of […] free and open-source software by *not-for-profit organisations* should not be considered to be a commercial activity provided that the organisation is set up in such a way that ensures that all earnings after costs are used to achieve not-for-profit objectives. ([Recital (18)])
+
+
+
+#### TODO: Open Source Steward
+
+* Article 24 Obligations
+
+* **Article 52**, Market surveillance and control of products (pages 253-259)
+  * **Section 3**, Market surveillance authorities […] shall also be responsible for carrying out market surveillance activities in relation to the obligations for open-source software stewards […].
+  * Section 11, Market surveillance authorities shall inform consumers of where to submit complaints that could indicate non-compliance with this Regulation […] and […] facilitate reporting of vulnerabilities, incidents and cyber threats […].
+
+* Article 26 Guidance
+
+
+
+
+> [!CAUTION]
+> * (CPANSec, 2024-09-11) The details and implementations around this concept has not been made available yet.
 
 
 ### Maintainers

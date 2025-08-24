@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: single
 title: Presentations
+toc: false
 permalink: /presentations/
 ---
 

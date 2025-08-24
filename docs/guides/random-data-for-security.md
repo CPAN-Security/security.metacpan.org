@@ -1,12 +1,12 @@
 ---
-layout: page
-author: Robert Rothenberg
+layout: single
+author: robrwo
 title: CPAN Author's Guide to Random Data for Security
 description: A guide to use of random data for security
 toc: true
 ---
 
-# CPAN Author's Guide to Random Data for Security
+## Random in general
 
 Any secret token that allows someone to access a resource or perform an action should be generated with a secure
 random number generator.  That includes:

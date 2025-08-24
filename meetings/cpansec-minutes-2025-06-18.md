@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 toc: true
 meeting_time: 2025-06-18 16:00 UTC
 title: CPANSec bi-weekly minutes

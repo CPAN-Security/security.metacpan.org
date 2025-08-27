@@ -42,7 +42,7 @@ Please take this into account when commenting this document.
 
 > [!NOTE]
 > * ⚠️  — The definition has problems or errors or may be confusing, and therefore requires correction or additional explanation.
-> * ✍️  — Changes have been made to the original definition, mostly for clarity or consistency.
+> * ✍️  — Editorial updates have been made to the definition, mostly for clarity or consistency.
 
 
 ## Glossary
@@ -50,8 +50,8 @@ Please take this into account when commenting this document.
 ### Artifact ✍️ {#artifact}
 
 > [!NOTE]
-> Component and Artifact seem to have overlapping definitions.
-> We recommend using the term Artifact specifically when referring to files (as defined), and Component in other situations. (CPANSec-2024)
+> * Component and Artifact seem to some times have overlapping meaning.
+> * Recommended: Use the term [Artifact](#artifact) specifically when referring to files, and [Component](#component) in other situations. (CPANSec-2024)
 
 1. ([SLSA-2023]) An immutable blob of data; primarily refers to [software](#software), but SLSA can be used for any artifact.
     * E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
@@ -69,6 +69,8 @@ Please take this into account when commenting this document.
 
 * See also:
     * [Author](supplychain-sbom#author) in the Supply-chain SBOM Roles document.
+
+(Ref: [NTIA-2021])
 
 
 ### Author (Project Role)
@@ -131,7 +133,7 @@ See also: [Artifact](#artifact).
 
 #### Component, second-party ✍️ {#second-party}
 
-1. (CPANSec-2024) Any software component created through the interaction with a second party, including open source, "source available", and proprietary software where the source is made available for either inspection, use, modification, building or sharing.
+1. (CPANSec-2024) Any software component created and maintained through the interaction with a second party, including open source, "source available", and proprietary software where the source is made available for either inspection, use, modification, building or sharing.
     * Open Source software components that an application has as dependencies should be considered as "second-party" components or dependencies, since the application owner has an ongoing relationship with the FOSS component project, by the fact that the owner has accepted the open source project's license.
 
 (Ref: [CPANSec-2024])
@@ -199,8 +201,8 @@ See also: [Artifact](#artifact).
 1. (CPANSec-2024) A [software](#software) program, library, plugin, service, resource or component that is required for another software program or component to function as expected.
 
 * See also
-    * [Dependency (Transitive)](#dependency-transitive)
-    * [Dependency (Indirect)](#dependency-indirect)
+    * [Dependency, Transitive](#dependency-transitive)
+    * [Dependency, Indirect](#dependency-indirect)
 
 (Ref: [SCVS-2020], [CDXAG-2024], [CPANSec-2024])
 
@@ -210,7 +212,7 @@ See also: [Artifact](#artifact).
 > * FIXME: Expand on this topic
 
 * See also
-    * [Dependency (Static)](#dependency-static)
+    * [Dependency, Static](#dependency-static)
 
 #### Dependency, Indirect {#dependency-indirect}
 
@@ -224,13 +226,13 @@ See also: [Artifact](#artifact).
 1. (CPANSec-2024) Dependencies of transitive dependencies are also transitive dependencies (it's dependencies all the way down!).
 
 * See also
-   * [Dependency (Direct)](#dependency-direct).
+   * [Dependency, Direct](#dependency-direct).
 
 (Ref: [SCVS-2020], [NTIA-2021], [CPANSec-2024])
 
 #### Dependency, Vendored-in (Bundled, Contained, Embedded, Included, Pre-resolved) ✍️ {#dependency-vendored}
 
-1. (CPANSec-2024) A dependency that is supplied as part of a software package, and therefore already resolved by the Author of the package.
+1. (CPANSec-2024) A dependency that is supplied as part of another software package, and therefore already resolved by the publisher of the package.
 
 (Ref: [CPANSec-2024])
 
@@ -1062,7 +1064,7 @@ This glossary is partly based on terms from the following sources.
 
 ## About this document
 
-* Version: 0.7.1
+* Version: 0.7.2
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

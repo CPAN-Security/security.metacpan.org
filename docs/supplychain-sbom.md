@@ -233,11 +233,11 @@ stateDiagram-v2
     %% Open Source Project Environment
     state "🟥 Owner<br>🟥 Author" as project_author
     state "🟥🟨 Maintainer<br>🟨 Custodian" as project_maintainer
-    state "🟨🟦 Packager (Artificer)" as project_packager
+    state "🟨🟦 Publisher (Project)" as project_publisher
     %%
     class project_author createsSBOM
     class project_maintainer createsSBOM
-    class project_packager updatesSBOM
+    class project_publisher updatesSBOM
 
     %%
     %%state "🟥 Attestation Authority 🆕" as authority_attester
@@ -332,9 +332,9 @@ stateDiagram-v2
         [*] --> project_author
         [*] --> project_maintainer
         project_author     --> project_maintainer
-        project_maintainer --> project_packager
+        project_maintainer --> project_publisher
         project_maintainer --> [*]
-        project_packager   --> [*]
+        project_publisher  --> [*]
     }
 
     [*] --> environment_project
@@ -538,16 +538,16 @@ stateDiagram-v2
     %% OSS Project Environment
     state "🟥 Owner<br>🟥 Author" as project_author
     state "🟥🟨 Maintainer<br>🟨 Custodian" as project_maintainer
-    state "🟨🟦 Packager (Artificer)" as language_packager
+    state "🟨🟦 Publisher" as language_publisher
     %%
     state "OSS Project Environment" as environment_project {
         [*]                --> project_author
         [*]                --> project_maintainer
         project_author     --> project_maintainer
-        project_maintainer --> language_packager
-        project_author     --> language_packager
+        project_maintainer --> language_publisher
+        project_author     --> language_publisher
         project_maintainer --> [*]
-        language_packager  --> [*]
+        language_publisher --> [*]
         project_author     --> [*]
     }
     %%

@@ -1,6 +1,7 @@
 ---
 toc: true
-layout: page
+layout: single
+read_time: false
 title: Documents & Guides
 permalink: /docs/
 ---

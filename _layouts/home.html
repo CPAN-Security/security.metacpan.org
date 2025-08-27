@@ -1,34 +1,30 @@
 ---
-layout: default
+layout: archive
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{{ content }}
 
-  {{ content }}
+{% assign news_entries_layout = page.news_entries_layout | default: 'grid' %}
+{% assign blog_entries_layout = page.blog_entries_layout | default: 'list' %}
+{% assign news_limit = page.news_limit | default: 4 %}
+{% assign blog_limit = page.blog_limit | default: 4 %}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading" id="news">{{ page.list_title | default: "News" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          <blockquote>{{ post.excerpt }}</blockquote>
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_news | default: "News" }}</h3>
 
+<div class="entries-{{ news_entries_layout }}">
+  {% include documents-collection.html entries=posts collection="news" type=page.news_entries_layout sort_order=page.news_sort_order sort_by=page.news_sort_by entries_limit=news_limit %}
 </div>
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_blogs | default: "Blog posts" }}</h3>
+
+<div class="entries-{{ blog_entries_layout }}">
+  {% include documents-collection.html entries=posts collection="blog" type=page.blog_entries_layout sort_order=page.blog_sort_order sort_by=page.blog_sort_by entries_limit=blog_limit %}
+</div>
+
+{% include paginator.html %}

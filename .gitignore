@@ -7,3 +7,5 @@ vendor
 .*.swp
 .bundle/
 bundle/
+*.minima
+Gemfile.lock

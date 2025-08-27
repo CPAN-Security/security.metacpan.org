@@ -1,8 +1,16 @@
 ---
 title: CPAN Security Group
 layout: home
-toc: false
-list_title: CPANSec News
+news_sort_by: date
+news_sort_order: reverse
+news_entries_layout: grid
+news_limit: 4
+blog_sort_by: date
+blog_sort_order: reverse
+blog_entries_layout: list
+blog_limit: 4
+classes: wide
+toc: true
 ---
 Welcome to the [CPAN Security Group](https://security.metacpan.org/).
 This is a community effort for supporting and responding to security incidents on CPAN – the Comprehensive Perl Archive Network.

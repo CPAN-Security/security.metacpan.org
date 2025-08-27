@@ -1,8 +1,7 @@
 ---
 layout: single
 toc: true
-author: Salve J. Nilsen
-mastodon: { username: sjn, instance: chaos.social }
+author: sjn
 title: CPAN Author's Guide to Secure Software Development
 redirect_from:
     - /docs/guides/cpan-author-guide

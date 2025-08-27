@@ -28,4 +28,8 @@ gem install jekyll bundler
 bundler install
 ```
 
+## Testing the website
 
+```
+bundler exec jekyll serve
+```

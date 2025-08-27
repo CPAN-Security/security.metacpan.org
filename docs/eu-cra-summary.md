@@ -2,7 +2,7 @@
 layout: single
 title: An EU Cyber Resilience Act Summary
 description: A short overview of the parts of the CRA that affect different entities in Open Source supply-chains
-author: Salve J. Nilsen
+author: sjn
 toc: true
 mermaid: true
 ---
@@ -265,7 +265,7 @@ Before making a product with digital elements available on the market, distribut
 * (b) the manufacturer and the importer have complied with the obligations set out in [Article 13(15)], [Article 16], [Article 18], [Article 19] and [Article 20] and have provided all necessary documents to the distributor.
 
 
-### Open Source Software projects
+### Open Source Stewards ⚠️  FIXME: Not done
 
 Open Source Software Stewards are…
 

@@ -28,10 +28,8 @@ locale: "en-US"
 masthead_title: " "
 title_separator: " — "
 subtitle: "" # site tagline that appears below site title in masthead
-#name: "CPAN Security Outreach & Information Project"
 title: >-
   CPAN Security Group (CPANSec) 🦆🦆
-author: "CPAN Security Outreach & Information Project"
 baseurl: ""
 url: "https://security.metacpan.org"
 domain: security.metacpan.org
@@ -39,12 +37,135 @@ repository: CPAN-Security/security.metacpan.org
 github_username: CPAN-Security
 teaser: "" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: "/media/cpansec-logo-light.png" # path of image to display in the masthead
-breadcrumbs: true # true, false (default)
+breadcrumbs: false # true, false (default)
 words_per_minute: 200
 enable_copy_code_button: true # true, false (default)
 copyright: "" # "copyright" name, defaults to site.title
 copyright_url: "" # "copyright" URL, defaults to site.url
+related_posts: false
+atom_feed:
+  hide: true
 
+collections:
+  news:
+    output: true
+    reverse: true
+    sort_by: date
+    permalink: /:year/:month/:day/:title:output_ext
+    canonical: /news/
+  blog:
+    output: true
+    reverse: false
+    sort_by: date
+    permalink: /:year/:month/:day/:title:output_ext
+    canonical: /blog/
+
+feed:
+  collections:
+    news:
+      path: "/news.xml"
+    blog:
+      path: "/blog.xml"
+
+# Default site author. Add other authors to _data/authors.yml
+author:
+  name: "CPAN Security Group"
+  avatar: "/media/cpansec-floater-light-circle.png"
+  bio: >-
+    A forum for coordinating and help resolving security issues on CPAN.
+    CVE Numbering Authority (CNA) for Perl and CPAN.
+    Subscribe, contribute or join!
+  links:
+    - label: "@cpansec@fosstodon.org"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://fosstodon.org/@cpansec"
+    - label: "@cpansec.bsky.social"
+      icon: "fab fa-fw fa-bluesky"
+      url: "https://bsky.app/profile/cpansec.bsky.social"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/CPAN-Security"
+    - label: "CPANSec Feeds"
+      icon: "fas fa-fw fa-link"
+      url: "#footer"
+#    - label: "Matrix"
+#      icon: "fab fa-fw fa-matrix-org"
+#      url: "https://matrix.to/#/#cpansec-discussion:matrix.org"
+
+footer:
+  links:
+    - label: "Mastodon"
+      icon: "fas fa-fw fa-rss-square"
+      url: "https://fosstodon.org/@cpansec.rss"
+    - label: "Bluesky"
+      icon: "fas fa-fw fa-rss-square"
+      url: "https://bsky.app/profile/did:plc:y44ur552urxfhxq2adhcsapd/rss"
+    - label: "Blog"
+      icon: "fas fa-fw fa-rss-square"
+      url: "/blog.xml"
+    - label: "News"
+      icon: "fas fa-fw fa-rss-square"
+      url: "/news.xml"
+
+# Front matter defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: false
+      related: false
+      show_date: true
+      toc: false
+      toc_sticky: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: false
+      related: false
+      show_date: true
+      toc: true
+      toc_sticky: true
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: false
+      related: false
+      show_date: true
+      toc: true
+      toc_sticky: true
+  - scope:
+      path: ""
+      type: blog
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: false
+      related: true
+      show_date: true
+      toc: true
+      toc_sticky: true
+
+#after_footer_scripts:
+
+#markdown: GFM
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
@@ -55,6 +176,7 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-include-cache
   - jekyll-gfm-admonitions
+#  - jekyll-optional-front-matter
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -66,19 +188,21 @@ plugins:
 #
 exclude:
   - .bundle
-  - bundle
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
   - Gemfile
   - Gemfile.lock
   - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - bundle/
+  - vendor/
+  - cache/
+  - gems/
+  - ruby/
   - .minima/
   - assets.minima/
+  - .git/
+  - notes/
   - "**/*.ts" # Exclude source code files!
   - "*.ts" # Also those in the root directory!
   - "*.json" # Don't forget about assets!

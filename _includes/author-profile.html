@@ -1,5 +1,13 @@
 {% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign author = site.data.authors[author] | default: author %}
+{% if page.authors.size > 1 -%}
+  {% assign authors = page.authors %}
+{%- endif %}
+
+{%- if page.author or authors.size > 0 %}
+<h3>Author{% if authors.size > 1 %}s{% endif %}</h3>
+<hr>
+{% endif -%}
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
@@ -12,9 +20,9 @@
   {% endif %}
 
   <div class="author__content">
-    <h3 class="author__name p-name" itemprop="name">
+    <h5 class="author__name p-name" itemprop="name">
       <a class="u-url" rel="me" href="{{ author.home | default: '/' | absolute_url }}" itemprop="url">{{ author.name }}</a>
-    </h3>
+    </h5>
     {% if author.bio %}
       <div class="author__bio p-note" itemprop="description">
         {{ author.bio | markdownify }}
@@ -243,4 +251,22 @@
       {% include author-profile-custom-links.html %}
     </ul>
   </div>
+
+  {%- if authors.size > 1 -%}
+  <hr>
+  {%- for co_author in authors offset:1 -%}
+  {% assign author = site.data.authors[co_author] | default: co_author %}
+  <div class="author__content">
+    <h5 class="author__name p-name" itemprop="name">
+      <a class="u-url" href="{{ author.home | default: '/' | absolute_url }}" itemprop="url">{{ author.name }}</a>
+    </h5>
+    {% if author.bio %}
+      <div class="author__bio p-note" itemprop="description">
+        {{ author.bio | markdownify }}
+      </div>
+    {% endif %}
+  </div>
+  {%- endfor -%}
+  {%- endif -%}
+
 </div>

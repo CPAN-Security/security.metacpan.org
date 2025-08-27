@@ -5,7 +5,7 @@ toc: true
 title: "CPANSec CNA Disclosure Policy"
 date: 2025-01-05 18:15:00 +0000
 tags: authors guides cpan modules security cna
-author: Timothy Legge
+author: timlegge
 excerpt: "The CPANSec CNA Disclosure Policy discusses how you should interact with Perl, CPAN Modules and the CNA to report security vulnerabilities and the rules the CNA follows with respect to disclosing security vulnerabilities and settling disputes."
 ---
 ## Document status: Published

@@ -1,7 +1,7 @@
 ---
 title: CPAN StarJacking
 toc: true
-author: Thibault Duponchelle
+author: thibaultduponchelle
 ---
 ## Rationale
 StarJacking[^1] is an undertaking to make people prefer a module because of manipulated popularity.

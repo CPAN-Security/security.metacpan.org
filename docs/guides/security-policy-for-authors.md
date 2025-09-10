@@ -92,6 +92,10 @@ which has a specific machine-readable format and has a different function
 The policy should be in the root directory of your distribution and in the root directory of the software repository.
 (Note that GitHub has a feature for writing security policies that stores them in `.github/SECURITY.md`. This is not helpful for non-GitHub users and the file should be moved to the repository root.)
 
+This policy is not intended to be machine readable.
+However, it should be understandable for an international audience.
+Dates and timestamps should be in the [HTTP Date/Time Format](https://httpwg.org/specs/rfc9110.html#http.date).
+
 The file should have the following sections.
 
 1. Abstract
@@ -124,6 +128,11 @@ or alternatively,
 > [Security Advisories](https://example.github.com/foobar/security/advisories).
 > (If you do not have access to GitHub, then you can report issues via email
 > to <foobar@example.com>.)
+
+A date or timestamp of the security policy (ideally the same as the distribution release) is useful to advise users that the information may be outdated, and where to check for a more recent version of the distribution:
+
+> This policy was updated on Fri 22 Aug 2025 09:32:47 BST.
+> If this policy is more than two years old, then you should check for a more recent version of [Foo-Bar on CPAN](https://metacpan.org/dist/Foo-Bar).
 
 If the project has a web site, with this security policy posted on the
 website, then you should refer to that URL, e.g.:
@@ -424,6 +433,10 @@ maintainer that should cover most cases.
 This is the Security Policy for the Perl Foo-Bar distribution.
 
 Report security issues via email to <foobar@example.com>.
+
+This policy was updated on Fri 22 Aug 2025 09:32:47 BST.  If this
+policy is more than two years old, then you should check for a more
+recent version of [Foo-Bar on CPAN](https://metacpan.org/dist/Foo-Bar).
 
 The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).

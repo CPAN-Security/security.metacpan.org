@@ -163,6 +163,17 @@ One caveat of this module is that it needs to be manually seeded by 256 long int
 
     my $rng = Math::Random::ISAAC->new( unpack( "N*", urandom(1024) ) ); # 8192 bits
 
+### Crypt::OpenSSL::Random
+
+[Crypt::OpenSSL::Random](https://metacpan.org/pod/Crypt::OpenSSL::Random) will return bytes from OpenSSL or LibreSSL libraries' pseudo-random number generators.
+
+    use Crypt::OpenSSL::Random qw( random_bytes );
+
+    my $bytes = random_bytes(32)
+      or die "not enough randomness";
+
+Note that this module requires the OpenSSL or LibreSSL libraries to be installed.
+
 ## Generating IDs, Tokens and Passwords
 
 When generating raw random data for encryption keys or initialisation vectors, a common need is to generate a

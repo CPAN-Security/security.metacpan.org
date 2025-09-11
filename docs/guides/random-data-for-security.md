@@ -172,7 +172,9 @@ One caveat of this module is that it needs to be manually seeded by 256 long int
     my $bytes = random_bytes(32)
       or die "not enough randomness";
 
-Note that this module requires the OpenSSL or LibreSSL libraries to be installed.
+This module requires the OpenSSL or LibreSSL libraries to be installed, which may make it non-portable.
+
+Note that on systems without `/dev/random` device, the random seed may need to be initialised.
 
 ## Generating IDs, Tokens and Passwords
 

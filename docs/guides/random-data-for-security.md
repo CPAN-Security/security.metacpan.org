@@ -69,7 +69,7 @@ the [Win32::API](https://metacpan.org/pod/Win32::API) random function call.
 
 To obtain 256-bits (32 bytes) of data:
 
-    use Crypt::SysRandom qw( random_bytes );
+    use Crypt::SysRandom 0.006 qw( random_bytes );
 
     my $bytes = random_bytes(32);
 

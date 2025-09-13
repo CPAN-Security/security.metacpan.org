@@ -69,7 +69,7 @@ the [Win32::API](https://metacpan.org/pod/Win32::API) random function call.
 
 To obtain 256-bits (32 bytes) of data:
 
-    use Crypt::SysRandom qw( random_bytes );
+    use Crypt::SysRandom 0.006 qw( random_bytes );
 
     my $bytes = random_bytes(32);
 
@@ -162,6 +162,20 @@ One caveat of this module is that it needs to be manually seeded by 256 long int
     use Math::Random::ISAAC;
 
     my $rng = Math::Random::ISAAC->new( unpack( "N*", urandom(1024) ) ); # 8192 bits
+
+### Crypt::OpenSSL::Random
+
+[Crypt::OpenSSL::Random](https://metacpan.org/pod/Crypt::OpenSSL::Random) will return bytes from OpenSSL or LibreSSL libraries' pseudo-random number generators.
+
+    use Crypt::OpenSSL::Random qw( random_bytes );
+
+    my $bytes = random_bytes(32)
+      or die "not enough randomness";
+
+This module requires the OpenSSL or LibreSSL libraries to be installed, which may make it non-portable.
+
+Note that on systems without `/dev/random` device, the random seed may need to be initialised.
+(There is a `random_status` function that indicates whether there is sufficient seeding.)
 
 ## Generating IDs, Tokens and Passwords
 
@@ -273,7 +287,7 @@ December 2024.
 
 ## License and use of this document
 
-* Version: 0.3.0
+* Version: 0.3.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

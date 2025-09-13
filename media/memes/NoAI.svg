@@ -30,15 +30,16 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:clip-to-page="false"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="35.001786"
-     inkscape:cy="52.679455"
-     inkscape:window-width="1953"
-     inkscape:window-height="1166"
+     inkscape:zoom="7.7799755"
+     inkscape:cx="54.113281"
+     inkscape:cy="42.609389"
+     inkscape:window-width="1860"
+     inkscape:window-height="1048"
      inkscape:window-x="346"
      inkscape:window-y="125"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
   <defs
      id="defs1">
     <color-profile
@@ -58,18 +59,19 @@
        r="11.218688" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.2932px;line-height:1.25;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.46321"
-       x="12.625902"
-       y="18.637896"
-       id="text2"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.1254px;line-height:1.25;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.4855"
+       x="12.299036"
+       y="18.445719"
+       id="text2"
+       transform="scale(0.98986831,1.0102354)"><tspan
          sodipodi:role="line"
          id="tspan2"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.2932px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.46321"
-         x="12.625903"
-         y="18.637896">AI</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.1254px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Bold';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.4855"
+         x="12.299036"
+         y="18.445719">AI</tspan></text>
     <path
        id="path1"
-       style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#e40000;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+       style="baseline-shift:baseline;display:inline;overflow:visible;opacity:1;vector-effect:none;fill:#b81b0e;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;fill-opacity:1"
        d="M 12.500012 0 C 5.6112594 0 1.2533184e-15 5.6112598 0 12.500012 C 0 19.388764 5.6112594 25.000024 12.500012 25.000024 C 19.388765 25.000024 25.000024 19.388764 25.000024 12.500012 C 25.000024 5.6112598 19.388765 1.2533184e-15 12.500012 0 z M 12.500012 2.5001058 C 14.816633 2.5001058 16.944829 3.2811335 18.637105 4.5950684 L 4.5950684 18.637105 C 3.2811334 16.944829 2.5001058 14.816633 2.5001058 12.500012 C 2.5001058 6.9623872 6.9623866 2.5001058 12.500012 2.5001058 z M 20.404956 6.3629191 C 21.718891 8.0551958 22.499919 10.183392 22.499919 12.500012 C 22.499919 18.037637 18.037638 22.499919 12.500012 22.499919 C 10.183392 22.499919 8.0551957 21.718891 6.3629191 20.404956 L 20.404956 6.3629191 z " />
   </g>
   <metadata

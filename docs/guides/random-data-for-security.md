@@ -175,6 +175,7 @@ One caveat of this module is that it needs to be manually seeded by 256 long int
 This module requires the OpenSSL or LibreSSL libraries to be installed, which may make it non-portable.
 
 Note that on systems without `/dev/random` device, the random seed may need to be initialised.
+(There is a `random_status` function that indicates whether there is sufficient seeding.)
 
 ## Generating IDs, Tokens and Passwords
 

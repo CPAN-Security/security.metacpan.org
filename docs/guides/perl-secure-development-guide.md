@@ -2,29 +2,33 @@
 layout: single
 toc: true
 author: sjn
-title: CPAN Author's Guide to Secure Software Development
+title: Perl Developer's Guide to Secure Software Development
 redirect_from:
     - /docs/guides/cpan-author-guide
-description: A guide for CPAN distribution authors to writing secure code, by the CPAN Security Group
+    - /docs/guides/cpan-author-guide.md
+    - /docs/guides/cpan-author-guide.html
+    - /docs/guides/cpan-secure-development-guide
+    - /docs/guides/cpan-secure-development-guide.md
+    - /docs/guides/cpan-secure-development-guide.html
+description: A guide for Perl Developers to writing secure code, by the CPAN Security Group
 ---
 
 ## Document status: ⚠️  DRAFT
 
 > [!CAUTION]
-> What you see here is a DRAFT of the `CPAN Author's Guide to Secure Software Development` by the CPAN Security Group (CPANSec).
+> What you see here is a DRAFT of the `Perl Developer's Guide to Secure Software Development` by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are open to revision, deletion or amending – by you!
 >
-> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/guides/cpan-author-guide.md](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/guides/cpan-author-guide.md)
+> - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/guides/perl-secure-development-guide.md](https://github.com/CPAN-Security/security.metacpan.org/blob/cpan-author-guide/docs/guides/perl-secure-development-guide.md)
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
+## The need for Secure Software Development in Perl, on or off CPAN
 
-## The need for Secure Software Development on CPAN
-
-As of December 2024, we have new guidelines and legislation introduced in the EU ([NIS2](../readinglist.md#nis2) and the [Cyber Resilience Act](../readinglist.md#cra)), with US equivalents ([EO 14028](../readinglist.md#eo14028)), introducing new requirements regarding software security.
-These requirements are directed at many businesses and institutions to raise the baseline level of security in the software they produce and in sectors they operate.
-A substantial part of these depend on software published on CPAN.
-This means there is now a greater need for CPAN distributions to take their security posture into account.
+As of December 2024, we have new guidelines and legislation introduced in the EU ([NIS2](../readinglist.md#nis2) and the [Cyber Resilience Act](../readinglist.md#cra)), with US equivalents ([EO 14028](../readinglist.md#eo14028)), introducing new requirements to software security.
+These requirements are directed at businesses and institutions both globally and throughout the European Economic Area (EEA) to raise the baseline level of security in the software that is in use in products and critical infrastructure in the EEA.
+A substantial part of these depend on software published on CPAN, either directly or indirectly.
+This means there is now a greater need for both Perl Developers and CPAN distribution Authors to actively consider and improve their security posture.
 
 To help in this shift, CPANSec has put together several [guides](./) intended to assist any developers publishing on CPAN to improve their distributions and code.
 
@@ -145,7 +149,7 @@ To help in this shift, CPANSec has put together several [guides](./) intended to
 
 ## License and use of this document
 
-* Version: 0.6.1
+* Version: 0.7.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

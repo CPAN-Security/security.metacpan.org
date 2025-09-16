@@ -11,7 +11,7 @@ robrwo:
     Currently based in England.
   github: robrwo
   mastodon: { username: "rrwo", instance: "infosec.exchange" }
-  avatar: "/media/authors/robrwo.png"
+  avatar: "/assets/images/authors/robrwo.png"
   cpan: rrwo
 
 sjn:
@@ -21,12 +21,12 @@ sjn:
     Based in Oslo, Norway.
   github: sjn
   mastodon: { username: "sjn", instance: "chaos.social" }
-  avatar: "/media/authors/sjn.png"
+  avatar: "/assets/images/authors/sjn.png"
 
 thibaultduponchelle:
   name: Thibault Duponchelle
   github: thibaultduponchelle
-  avatar: "/media/authors/thibaultduponchelle.jpeg"
+  avatar: "/assets/images/authors/thibaultduponchelle.jpeg"
 
 stigtsp:
   name: Stig Palmquist
@@ -41,7 +41,7 @@ tux:
   name: H. Merijn Brand ("Tux")
   bio: Data analyst and software developer based in the Netherlands
   github: Tux
-  avatar: "/media/authors/tux.png"
+  avatar: "/assets/images/authors/tux.png"
   mastodon: { username: "Tux", instance: "mastodon.social" }
 
 abraxxa:

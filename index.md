@@ -7,7 +7,7 @@ news_entries_layout: grid
 news_limit: 4
 blog_sort_by: date
 blog_sort_order: reverse
-blog_entries_layout: list
+blog_entries_layout: grid
 blog_limit: 4
 classes: wide
 toc: true

@@ -8,6 +8,11 @@ category: blog
 tags: authors contact cpan maintenance modules security
 author: robrwo
 excerpt: "Some end of year reminders for CPAN Authors: Do all of your modules have up-to-date contact information?"
+header:
+  overlay_image: /assets/images/header/SJN07458.JPG
+  teaser: assets/images/teaser/SJN07458.JPG
+  overlay_filter: 0.6
+  caption: "Photo credit: [@sjn](https://github.com/sjn)"
 ---
 
 Some end of year reminders for CPAN Authors:

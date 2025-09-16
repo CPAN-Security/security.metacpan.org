@@ -9,6 +9,11 @@ tags: authors guides cpan modules security
 author: robrwo
 author_profile: true
 excerpt: "The 2-argument open function is insecure"
+header:
+  overlay_image: /assets/images/header/SJN08080.JPG
+  teaser: assets/images/teaser/SJN08080.JPG
+  overlay_filter: 0.6
+  caption: "Photo credit: [@sjn](https://github.com/sjn)"
 ---
 
 The 2-argument [open](https://metacpan.org/pod/perlfunc#open) function is insecure, because the filename can include the mode.

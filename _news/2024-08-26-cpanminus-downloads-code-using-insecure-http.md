@@ -8,6 +8,11 @@ collection: news
 tags: cve
 author: stigtsp
 excerpt: "CVE-2024-45321: In its default configuration cpanminus uses insecure HTTP to download and install code from CPAN. This results in a CWE-494 weakness, enabling code execution for network attackers."
+header:
+  overlay_image: /assets/images/header/SJN07815.JPG
+  teaser: assets/images/teaser/SJN07815.JPG
+  overlay_filter: 0.6
+  caption: "Photo credit: [@sjn](https://github.com/sjn)"
 ---
 
 [App::cpanminus](https://metacpan.org/pod/App::cpanminus) (`cpanm`) is a popular

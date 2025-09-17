@@ -7,6 +7,11 @@ toc: false
 tags: cpansec update
 author: sjn
 excerpt: There's a new group in the Perl + CPAN communities!
+header:
+  overlay_image: /assets/images/header/SJN07813.JPG
+  teaser: assets/images/teaser/SJN07813.JPG
+  overlay_filter: 0.6
+  caption: "Photo credit: [@sjn](https://github.com/sjn)"
 ---
 
 ## Who cares about security on CPAN?

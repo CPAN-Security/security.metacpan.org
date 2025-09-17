@@ -10,6 +10,11 @@ authors:
   - timlegge
   - garu
 author_profile: true
+header:
+  overlay_image: /assets/images/header/SJN07458.JPG
+  teaser: assets/images/teaser/SJN07458.JPG
+  overlay_filter: 0.6
+  caption: "Photo credit: [@sjn](https://github.com/sjn)"
 ---
 
 The CPAN Security Group was [authorized by the CVE Program](https://www.cve.org/Media/News/item/news/2025/02/25/CPAN-Security-Group-Added-as-CNA) as a CVE Numbering Authority (CNA) on Feb 25, 2025. A CNA assigns and manages CVE identifiers for projects in their scope.

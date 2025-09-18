@@ -37,6 +37,7 @@ Meeting minutes [currently under review](https://github.com/CPAN-Security/securi
 * [2025-05-21](cpansec-minutes-2025-05-21.md)
 * [2025-06-04](cpansec-minutes-2025-06-04.md)
 * [2025-06-18](cpansec-minutes-2025-06-18.md)
+* [2025-09-17](cpansec-minutes-2025-09-17.md)
 
 ### 2024
 * [2024-01-06](cpansec-minutes-2024-01-06.md)
@@ -102,9 +103,8 @@ Meeting minutes [currently under review](https://github.com/CPAN-Security/securi
 
 ### When creating the Minutes
 - [x] When creating the minutes, utems with filled checkboxes remain as-is. Do NOT delete!
-    - [X] _This item is done, so record it in the minutes as-is_ 
+    - [X] _This item is done, so record it in the minutes as-is_
 
 ### When creating the Agenda
 - [x] When a NEW agenda is created from the previous meeting minutes, items with filled checkboxes are deleted: they aren't relevant any more!
     - [X] _~~This item is done, so we delete ut when preparing the next meeting agenda~~_
-

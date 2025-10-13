@@ -56,7 +56,7 @@ Please take this into account when commenting this document.
 1. ([SLSA-2023]) An immutable blob of data; primarily refers to [software](#software), but SLSA can be used for any artifact.
     * E.g. a file, a git commit, a directory of files (serialized in some way), a container image, a firmware image.
 
-* See also:
+* See also
     * [Component](#component)
 
 (Ref: [SLSA-2023], [CPANSec-2024])
@@ -67,7 +67,7 @@ Please take this into account when commenting this document.
 1. (NTIA-2021) An entity that creates an SBOM.
     * [author](#author) and [supplier](#supplier) will often be different. In the case of SBOMs, the author creates the SBOM. The supplier is the provider of the software included in the SBOM.
 
-* See also:
+* See also
     * [Author](supplychain-sbom#author) in the Supply-chain SBOM Roles document.
 
 (Ref: [NTIA-2021])
@@ -287,15 +287,18 @@ See also: [Artifact](#artifact).
 
 1. (CPANSec-2024) A previously unknown dependency that was discovered during software dependency analysis.
 
-* See
-    * [Dependency Phantom (Assumed, Implied, Unknown, Unstated)](#dependency-phantom)
+* See also
+    * [Dependency, Phantom (Assumed, Implied, Unknown, Unstated)](#dependency-phantom)
 
 (Ref: [CPANSec-2024])
 
-#### Dependency, Optional
+#### Dependency, Optional (Shim, Wrapper, Alternate, Multiplexing)
 
 > [!NOTE]
 > * FIXME: Expand on this topic
+
+1. (CPANSec-2024) A dependency that itself has multiple alternative dependencies, but which only requires one of them to be satisfied in order to work as expected.
+    * E.g., a module that offers a unified cryptography API, but which is supports any one of several library alternatives.
 
 * See also
     * [Dependency (Static)](#dependency-static)
@@ -343,6 +346,19 @@ See also: [Artifact](#artifact).
 > [!NOTE]
 > * FIXME: Expand on this topic
 
+* (CPANSec-2024) A dependency that cannot be resolved or supplied by the native ecosystem, and therefore requires…
+    * executables,
+    * libraries and their foreign function interfaces,
+    * frameworks, plugins,
+    * network or system services, or
+    * other resources, dependencies and tooling used during…
+        * development,
+        * configuration,
+        * build,
+        * test,
+        * packaging, or
+        * deployment
+
 * See also
     * [Dependency (In-ecosystem)](#dependency-in-ecosystem)
 
@@ -352,6 +368,7 @@ See also: [Artifact](#artifact).
 > * FIXME: Expand on this topic
 
 1. (CPANSec-2024) A network service dependency that are required for component to function as expected
+    * This may include remote processing services (e.g. via an HTTP API), services required for network availability or, services used for distributing security updates.
 1. (PCISSF-2023) Required by the PCI Software Security Framework version 1.2.1
 
 (Ref: [CPANSec-2024], [PCISSF-2023])
@@ -398,7 +415,7 @@ See also: [Artifact](#artifact).
     * An unresolved dependency has always a version constraint associated with it (implied or explicitly), to be used during dependency resolution.
     * Also referred to as a "prereq", "dependency".
 
-* See Also
+* See also
     * [Dependency](#dependency)
 
 (Ref: [CPANSec-2024])
@@ -419,7 +436,7 @@ See also: [Artifact](#artifact).
     * This is to disambiguate from the term [Distributor](#distributor) in the context of the EU Cyber Resilience Act.
     * If SBOM metadata is expected to accompany the packages or containers in question, the Provider makes sure this happens.
 
-* See also:
+* See also
     * [Provider](supplychain-sbom.md#provider) in the Supply Chain
     * [Distributor](supplychain-sbom.md#distributor) in the Supply Chain
 
@@ -437,7 +454,7 @@ See also: [Artifact](#artifact).
 1. (EUBG-2022-3) The distributor is a natural or a legal person in the supply chain, other than the manufacturer or the importer, who makes a product available on the market.
     *  Distributors are subject to specific obligations and have a key role to play in the context of market surveillance.
 
-* See also:
+* See also
     * [Provider](#provider)
 
 (Ref: [CRA-2024-03], [EUBG-2022-3], [CPANSec-2024])
@@ -605,7 +622,7 @@ See also: [Artifact](#artifact).
 
 1. (SCVS-2020, CDXAG-2024) The supplier and associated metadata from which a software component has been procured, transmitted, or received.
     * Package repositories, release distribution platforms, and version control history are examples of various points of origin.
-1. (CPANSec-2024) Discouraged term – Confusing definition, having common meaning with both [Source](#source), [Manufacturer](#manufacturer) and [Distributor](#distrubutor). 
+1. (CPANSec-2024) Discouraged term – Confusing definition, having common meaning with both [Source](#source), [Manufacturer](#manufacturer) and [Distributor](#distrubutor).
 
 (Ref: [SCVS-2020], [CDXAG-2024], [CPANSec-2024])
 
@@ -621,7 +638,6 @@ See also: [Artifact](#artifact).
     * Standards are in themselves of voluntary application.
     * Harmonised standards are European standards adopted on the basis of a request made by the Commission for the application of Union harmonisation legislation.
     * If references of harmonised standards have been published in the Official Journal of the European Union (OJEU), they provide a presumption of conformity with the essential or other legislative requirements they aim to cover.
-
 
 (Ref: [CRA-2024-03], [EUBG-2022-4])
 
@@ -640,7 +656,7 @@ See also: [Artifact](#artifact).
     * Please note that a _Product_ is distinct from a _Project_, in that a Product's technology, creation, maintenance, sustainability or governance is not central factors during procurement.
     * If a Product's technology, creation, maintenance, sustainability or governance is in-scope during procurement, then one should instead consider the underlying [Project](#project) for these selection criteria.
 
-* See also:
+* See also
     * [Project](#project)
 
 (Ref: [CPANSec-2024])

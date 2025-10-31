@@ -1,12 +1,12 @@
 ---
-layout: page
-author: Robert Rothenberg
+layout: single
+author: robrwo
 title: CPAN Author's Guide to Random Data for Security
 description: A guide to use of random data for security
 toc: true
 ---
 
-# CPAN Author's Guide to Random Data for Security
+## Random in general
 
 Any secret token that allows someone to access a resource or perform an action should be generated with a secure
 random number generator.  That includes:
@@ -16,8 +16,12 @@ random number generator.  That includes:
 - password generation
 - password salts and peppers
 - authentication tokens
-- session tokens
+- session ids
 - nonces
+- captcha strings
+- multifactor authentication codes
+
+For any implementation of a protocol that specifies a random value, it is safer to use a secure random number generator, even when the protocol does not explicitly call for that.
 
 The built-in [rand](https://perldoc.perl.org/functions/rand) function is not fit for security purposes: it is seeded
 by only 32-bits (4 bytes), and the [output can be predicted easily](https://www.perlmonks.org/?node_id=151595).
@@ -33,16 +37,18 @@ Modern operating systems provide access to random data:
 - Newer Linux and BSD variants have the [getrandom(2)](http://man.he.net/man2/getrandom) system call.
 - Windows provides a `CryptGenRandom` function in the API.
 
-These sources are easy to access from Perl using several modules.  We are listing a few here that are lightweight,
-and which (generally) have good defaults.
+These sources are easy to access from Perl using several modules, which we discuss below.
 
-It's also preferable to use existing and up-to-date modules than to roll your own method for reading random
-data. The benefits of reducing non-core dependencies are outweighed by potential bugs introduced by duplicating code
-that needs to be maintained separately.
+## Recommended Perl Modules
+
+It's better to use existing and up-to-date modules than to roll your own method for reading or generating random data.
+The benefits of reducing non-core dependencies are outweighed by potential bugs introduced by duplicating code that needs to be maintained separately.
+
+We are listing a few here that are portable, lightweight and which have good defaults.
 
 ### Crypt::URandom
 
-The simplest to use, is [Crypt::URandom](https://metacpan.org/pod/Crypt::URandom).  It is a lightweight module that
+One of the simplest to use is [Crypt::URandom](https://metacpan.org/pod/Crypt::URandom). It
 reads from a random data source on a variety of systems, using the `/dev/urandom` device or equivalents on other
 operating systems, including Windows.  Newer versions will also use the `getrandom` or `getentropy` calls on systems
 that support those calls.
@@ -56,10 +62,22 @@ To obtain 256-bits (32 bytes) of data:
 Since this is a wrapper around the operating system's random data source, there is no worry about child processes
 with the same parent returning the same data (i.e., it is "fork safe").
 
-It is important to note that there is a common misconception that `/dev/urandom` is insecure. This is untrue, as
-`/dev/random` and `/dev/urandom` use the same entropy pool and PRNG internally.  In newer Linux kernels, `/dev/random` no
-longer blocks and is an alias for `/dev/urandom`.
-See [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/) for an in-depth discussion of this.
+### Crypt::SysRandom
+
+[Crypt::SysRandom](https://metacpan.org/pod/Crypt::SysRandom) is a pure-perl module for reading from `/dev/urandom` or
+the [Win32::API](https://metacpan.org/pod/Win32::API) random function call.
+
+To obtain 256-bits (32 bytes) of data:
+
+    use Crypt::SysRandom 0.006 qw( random_bytes );
+
+    my $bytes = random_bytes(32);
+
+Likewise, since this is also a wrapper around the operating system's random data source, there is no worry about child
+processes with the same parent returning the same data (i.e., it is "fork safe").
+
+If [Crypt::SysRandom::XS](https://metacpan.org/pod/Crypt::SysRandom::XS) is installed, it will use that to retrieve
+random bytes from system calls.
 
 ### Sys::GetRandom
 
@@ -76,6 +94,35 @@ There is also a pure-Perl version [Sys::GetRandom::PP](https://metacpan.org/pod/
 
 Note there are some caveats when using `getrandom` to retrieve more than 256 bytes at a time, as the amount of
 data returned may be less due to interrupts.
+
+### Other modules
+
+There are several older modules on CPAN that have been intentionally
+omitted from this document:
+
+* They require users to select a source of randomness.
+
+  Many consumers of these modules do not select the source, and in some
+  cases these modules have had insecure defaults.
+
+  For most cases there is no reason to choose a source when there is a
+  standard source of random data provided by modern operating systems.
+
+* They add an unnecessary layer of complexity by wrappers around
+  different sources.
+
+  Some will use a PRNG seeded by random data, which provides no
+  improvement over `/dev/urandom`. These implementations have had less
+  reviewers than the operating systems, and may be less secure.
+
+* They incorrectly label `/dev/urandom` as weaker than `/dev/random`.
+
+  It is important to note that there is a common misconception, as
+  both devices use the same entropy pool and PRNG internally.  In
+  newer Linux kernels, `/dev/random` no longer blocks and is an alias
+  for `/dev/urandom`.  See
+  [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/)
+  for an in-depth discussion of this.
 
 ## Using Cryptographic Strength PRNGs
 
@@ -116,7 +163,21 @@ One caveat of this module is that it needs to be manually seeded by 256 long int
 
     my $rng = Math::Random::ISAAC->new( unpack( "N*", urandom(1024) ) ); # 8192 bits
 
-## Generating Tokens and Passwords
+### Crypt::OpenSSL::Random
+
+[Crypt::OpenSSL::Random](https://metacpan.org/pod/Crypt::OpenSSL::Random) will return bytes from OpenSSL or LibreSSL libraries' pseudo-random number generators.
+
+    use Crypt::OpenSSL::Random qw( random_bytes );
+
+    my $bytes = random_bytes(32)
+      or die "not enough randomness";
+
+This module requires the OpenSSL or LibreSSL libraries to be installed, which may make it non-portable.
+
+Note that on systems without `/dev/random` device, the random seed may need to be initialised.
+(There is a `random_status` function that indicates whether there is sufficient seeding.)
+
+## Generating IDs, Tokens and Passwords
 
 When generating raw random data for encryption keys or initialisation vectors, a common need is to generate a
 printable string, for example as
@@ -189,6 +250,24 @@ floating point numbers.  For example,
 
 will return a string of mixed-case letters and digits, such as "y1FpfRQszS72GH4h4zTXov".
 
+### UUID::URandom
+
+UUIDs should not be used for security tokens, including session ids.
+[RFC 9562 Security Considerations](https://www.rfc-editor.org/rfc/rfc9562.html#name-security-considerations) says:
+
+> Implementations SHOULD NOT assume that UUIDs are hard to guess. For example, they MUST NOT be used as security capabilities (identifiers whose mere possession grants access). Discovery of predictability in a random number source will result in a vulnerability.
+
+The UUID Version 4 is the only type that contains random bits, besides the specific fields required by the UUID format.
+However, unless you need the data to be a valid UUID, then you should probably be returning a string of hex digits using `unpack` or one of the other modules described above to return random tokens.
+
+[UUID::URandom](https://metacpan.org/pod/UUID::URandom) is a wrapper around Crypt::Random to generate UUIDs:
+
+    use UUID::URandom qw( create_uuid_string );
+
+    my $id = create_uuid_string();
+
+This module also has a function `create_uuid_hex` that returns the UUID as a hexidecimal string.
+
 ## References
 
 [Far From Random: Three Mistakes From Dart/Flutter's Weak PRNG](https://www.zellic.io/blog/proton-dart-flutter-csprng-prng/),
@@ -200,13 +279,15 @@ December 2024.
 
 [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/), March 2014.
 
+[Predict Random Numbers](https://www.perlmonks.org/?node_id=151595), Perl Monks, March 2002.
+
 [RFC 4086](https://www.rfc-editor.org/info/rfc4086), June 2005.
 
-[Predict Random Numbers](https://www.perlmonks.org/?node_id=151595), Perl Monks, March 2002.
+[RFC 9562](https://www.rfc-editor.org/rfc/rfc9562.html), May 2024.
 
 ## License and use of this document
 
-* Version: 0.1.4
+* Version: 0.3.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 
@@ -219,6 +300,7 @@ Several people have been involved in the development of this document
 * Robert Rothenberg (main author)
 * Alexander Hartmaier
 * H. Merijn Brand
+* Leon Timmermans
 * Salve J. Nilsen
 * Stig Palmquist
 * Thibault Duponchelle

@@ -1,6 +1,6 @@
 ---
 title: Workshop – Vulnerability handling in open source software ecoystems
-layout: page
+layout: single
 toc: true
 ---
 

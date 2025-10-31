@@ -54,12 +54,30 @@ OSS Steward
 - Report on vulnerabilities & severe incidents to the extent they’re involved in the development of PDEs,
   - to designated CSIRTs/ENISA/users (Article 14(1), Article 14(3), Article 14(8))
 
+### Other activities
+
+- Notarizing BOMs
+- Automating BOM sharing, payment, access to attestations, etc.
+- Possible tasks
+  - Confirm quality of metadata, packaging, contact points, distribution
+  - Steward as co-maintainer?
+- Stewards offering a freelance job marketplace
+- Exposing the availability of transitive attestations, given the presence of one component
+
+### Arguments
+
+- Maintenance is not free
+- Due diligence requires attention from code owners
+  - more attention for "full autopsies" than for "cursory sanity checks"
+- Countering notification fatigue among manufacturers with massive dependency graphs
+- Facilitate the application of [Kerckhoffs’ principle](https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) (everything about a system should be public knowledge, except the keys) in the implementation and securing of business-critical digital infrastructure.
+
+
 ## Documentation
 
 - Security Assessment Practices
 - Security Hygiene Recommendations
 - Pilot projects for applying recommendations
-- 
 
 ## Questionnaire
 
@@ -70,3 +88,16 @@ OSS Steward
 - Needed: Policies around existing project lifecycle events
   - See task lists in [SBOM.md](SBOM.md).
 
+# Organization
+
+- Corporation with a social purpose ("Akjseselskap med sosialt formål")
+
+
+## TODO
+
+- Skatte-etaten kontaktskjema
+  - "hjelpe oppstart"
+  - rettsavd.: konsekvenser av cyber resilience act
+- Search: "Starte samvirkeforetak, vedtekter"
+- brreg "sektorkode"
+- samvirke i utgangspunkt inkomp. med non-profit (!)

@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: single
 permalink: /meetings/
 toc: true
-next_meeting_time: March 26th, 2025 17:00 UTC
+next_meeting_time: August 20th 2025 15:00 UTC
 title: CPANSec meeting details & minutes
 ---
 
@@ -29,8 +29,14 @@ Meeting minutes [currently under review](https://github.com/CPAN-Security/securi
 * [2025-01-22](cpansec-minutes-2025-01-22.md)
 * [2025-02-05](cpansec-minutes-2025-02-05.md)
 * [2025-02-19](cpansec-minutes-2025-02-19.md)
-* [2024-03-12](cpansec-minutes-2025-03-12.md)
-* [2024-03-26](cpansec-minutes-2025-03-26.md)
+* [2025-03-12](cpansec-minutes-2025-03-12.md)
+* [2025-03-26](cpansec-minutes-2025-03-26.md)
+* [2025-04-09](cpansec-minutes-2025-04-09.md)
+* [2025-04-23](cpansec-minutes-2025-04-23.md)
+* [2025-05-07](cpansec-minutes-2025-05-07.md)
+* [2025-05-21](cpansec-minutes-2025-05-21.md)
+* [2025-06-04](cpansec-minutes-2025-06-04.md)
+* [2025-06-18](cpansec-minutes-2025-06-18.md)
 
 ### 2024
 * [2024-01-06](cpansec-minutes-2024-01-06.md)

@@ -1,6 +1,7 @@
 ---
 toc: true
-layout: page
+layout: single
+read_time: false
 title: Documents & Guides
 permalink: /docs/
 ---
@@ -13,7 +14,7 @@ Documents relevant to the CPAN Security Group.
 
 ## Guides
 
-* [CPAN Author's Secure Coding Guide](guides/cpan-author-guide.md) ⚠️  DRAFT
+* [CPAN Author's Guide to Secure Software Development](guides/cpan-secure-development-guide.md) ⚠️  DRAFT
 * [CPAN Author's Guide to Random Data for Security](guides/random-data-for-security.md)
 * [CPAN Author's Security Policy guide](guides/security-policy-for-authors.md)
 
@@ -21,7 +22,8 @@ See [guides/](guides/) for the full list of guides.
 
 ## Studies
 
-* [CPAN Dependency Confusion study](cpan-dependency-confusion.md)
+* [CPAN Dependency Confusion (study)](cpan-dependency-confusion.md)
+* [CPAN StarJacking (study)](cpan-starjacking.md)
 * [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
 
 ## Consultations and hearings

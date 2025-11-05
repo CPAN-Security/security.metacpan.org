@@ -53,9 +53,8 @@ While assuming this will always be the case is reckless, there's no need to desp
 Your experiences and resources are still welcome, and is likely to offer cheaper and less risky solutions than what you gain from switching to something else or rewriting your digital foundation.
 
 6. **Maintainers aren't motivated by pay** – Instead, they _enjoy_.
-They may be learning, helping, playing or just creating something they can be proud of.
+They may be learning, helping, playing or just creating something they can _be proud of_, or that they may _complete_.
 Whatever their intrinsic motivation is, they spend their one irreplaceable, non-refundable resource on it: Their time and attention.
 And when they meet others with the same or similar interests, they may find out they created fertile ground for forming friendships.
-If you bring a transactional (business) mindset into this, they will rightfully look at you as someone who says "If I give you $100, will you be my friend?"
-
+Bringing a transactional mindset into this, ought to rightfully be considered akin to someone saying "If I give you $100, will you be my friend?"
 

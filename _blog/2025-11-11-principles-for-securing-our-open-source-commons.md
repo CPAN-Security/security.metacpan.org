@@ -2,33 +2,35 @@
 layout: single
 published: false
 toc: true
-title: "8 Principles for securing our open source commons infrastructure"
+title: "10 Principles for securing our open source commons infrastructure"
 date: 2025-08-10 17:15:00 +0000
 collection: blog
 tags: authors guides cpan modules security "open source" cra steward "cyber resilience act" principles
 author: sjn
-excerpt: "8 Principles for interacting with the open source software projects – and people – you depend on"
+excerpt: "10 Principles for interacting with the open source software projects – and people – you depend on"
 ---
 
 # Open Source FIXME
 
-> [!TIP]
->
-> FIXME - Say something about the intended audience
+{: .align-right style="max-width: 50%; margin: 0 0 1em 2em !important;"}
+> [!NOTE]
+> #### Who is the intended audience?
+> * Market authorities, Compliance officers, Regulators.
+> * CEO, CTO, CIO, CISO, other management.
+> * OSPO Staff.
 
 With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in 2026, cybersecurity is required to become a primary aspect of product development.
 A major part of this activity will relate to mapping out product dependencies, and ensure that each and every one of these are taken care of appropriately.
 The vast majority of these dependencies are likely to be Open Source Software (OSS) components, and many of these are likely to get increased scrutiny from manufacturers in order to reduce security-related risks in their products.
 
+{: .align-right style="max-width: 50%; margin: 0 0 1em 2em !important;"}
+> [!TIP]
+> #### How do I know who I am relying on?
+> * Components have Projects, which have Maintainers, Contributors and Communities.
+> * These maintainers and their communities are who you rely on to find and fix bugs, vulnerabilities, and other issues.
+
 The implication is that there is a need for all affected businesses to come to terms with their role in the ecosystem, and what the rules of engagement are in the particular communities they depend on.
 Missteps may lead to alienating the maintainers they rely on - how can this be avoided?
-
-> [!NOTE]
-> **How do I know who I am relying on?**
-> 
-> Components have Projects, which have Maintainers and Communities.
->
-> FIXME - expand
 
 Let's first look at what problem needs to be solved, then describe the context it needs to be solved in, and finally look at a short check-list that can assist one towards good solutions.
 
@@ -97,17 +99,19 @@ If you bring a transactional mindset into this, they will rightfully look at you
 
 
 ### 9. **Your Open Source Supply Chains are part of your dependency graph**
+
+{: .align-right style="max-width: 50%; margin: 0 0 1em 2em !important;"}
+> [!TIP]
+> #### What is a dependency graph?
+> * A dependency is a software component that is required for another software component to function as expected.
+> * Example: A component for using a network protocol; A remote service the application uses; Data describing the sorting rules or timezones used.
+> * Dependencies may themselves have dependencies, and these again have their own dependencies, and so on.
+> When we follow these, we map out a _dependency graph_.
+
 …And these are already in silos, and therefore so is their security posture.
 The work necessary for addressing this also requires time and attention from their respective communities.
 This may require efforts toward the adoption of PackageURL and other SBOM-related standards, to enable you to create a complete cross-ecosystem map of your dependencies.
 And more importantly, the success and presence of this is a precursor for your own ability to become compliant.
-
-> [!NOTE]
-> **What is a dependency graph?**
->
-> Dependencies have dependencies
->
-> FIXME - expand
 
 ### 10. **The Cyber Resiliency Act is already putting a disproportionate burden on Open Source ecosystems and projects**
 …Since these often are supplying the terms for what solutions may be considered "easy to adopt" by users and manufacturers in order for them to become compliant.

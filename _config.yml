@@ -29,13 +29,14 @@ masthead_title: " "
 title_separator: " — "
 subtitle: "" # site tagline that appears below site title in masthead
 title: >-
-  CPAN Security Group (CPANSec) 🦆🦆
+  CPAN Security Group (CPANSec) 🦆
 baseurl: ""
 url: "https://security.metacpan.org"
+description: "CPAN Security Group"
 domain: security.metacpan.org
 repository: CPAN-Security/security.metacpan.org
 github_username: CPAN-Security
-teaser: "" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser: "/assets/images/teaser/DEFAULT.JPG" # path of fallback teaser image
 logo: "/media/cpansec-logo-light.png" # path of image to display in the masthead
 breadcrumbs: false # true, false (default)
 words_per_minute: 200
@@ -81,12 +82,13 @@ author:
       url: "https://fosstodon.org/@cpansec"
     - label: "@cpansec.bsky.social"
       icon: "fab fa-fw fa-bluesky"
+
       url: "https://bsky.app/profile/cpansec.bsky.social"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/CPAN-Security"
-    - label: "CPANSec Feeds"
-      icon: "fas fa-fw fa-link"
+    - label: "CPANSec RSS feeds"
+      icon: "fas fa-fw fa-rss-square"
       url: "#footer"
 #    - label: "Matrix"
 #      icon: "fab fa-fw fa-matrix-org"
@@ -147,8 +149,9 @@ defaults:
       share: false
       related: false
       show_date: true
-      toc: true
+      toc: false
       toc_sticky: true
+      overlay_filter: 0.6
   - scope:
       path: ""
       type: blog
@@ -162,6 +165,7 @@ defaults:
       show_date: true
       toc: true
       toc_sticky: true
+      overlay_filter: 0.6
 
 #after_footer_scripts:
 

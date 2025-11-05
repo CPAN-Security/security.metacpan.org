@@ -8,6 +8,11 @@ collection: blog
 tags: authors guides cpan modules security
 author: robrwo
 excerpt: "Adding a SECURITY or SECURITY.md file to your Perl distributions will let people know how to contact the maintainers if they find a security issue with your software..."
+header:
+  overlay_image: /assets/images/header/SJN07448.JPG
+  teaser: assets/images/teaser/SJN07448.JPG
+  overlay_filter: 0.6
+  caption: "Photo credit: [@sjn](https://github.com/sjn)"
 ---
 
 Adding a `SECURITY` or `SECURITY.md`  file to your Perl distributions will let people know:

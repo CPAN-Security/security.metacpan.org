@@ -8,6 +8,11 @@ collection: news
 tags: cve timeline report
 author: timlegge
 excerpt: Between Dec 2023 and Jan 2024, vulnerabilities in Spreadsheet::ParseExcel and Spreadsheet::ParseXLSX were reported to the CPAN Security Group (CPANSec). This document describes the timeline and analysis of events.
+header:
+  overlay_image: /assets/images/header/SJN07812.JPG
+  teaser: assets/images/teaser/SJN07812.JPG
+  overlay_filter: 0.6
+  caption: "Photo credit: [@sjn](https://github.com/sjn)"
 ---
 
 ## Overview

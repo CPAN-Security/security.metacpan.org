@@ -8,6 +8,11 @@ collection: blog
 tags: authors guides cpan modules security random randomness urandom cryptography
 author: robrwo
 excerpt: "Any secret token that allows someone to access a resource or perform an action should be generated with a secure random number generator..."
+header:
+  overlay_image: /assets/images/header/SJN07450.JPG
+  teaser: assets/images/teaser/SJN07450.JPG
+  overlay_filter: 0.6
+  caption: "Photo credit: [@sjn](https://github.com/sjn)"
 ---
 
 Any secret token that allows someone to access a resource or perform an action should be generated with a secure random

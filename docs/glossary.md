@@ -187,7 +187,7 @@ See also: [Artifact](#artifact).
         * Direct or Transitive
         * Optional, Virtual, Assumed (Phantom) or Unused (Zombie)
         * In-ecosystem (Native) or Out-of-ecosystem (Non-native)
-        * Unresolved, or Resolved during Development, Configuration, Build, Test, Deploy or at Runtime
+        * Unresolved, or Resolved during Development, Development, Integration, Configuration, Build, Test, Deploy or at Runtime
 1. (SLSA-2023) An [Artifact](#artifact) that is an input to a build process but that is not a source.
     * In the SLSA model, it is always a package.
     * E.g. an Alpine package ([package](#package)) distributed on Alpine Linux ([platform](#platform)).
@@ -206,6 +206,17 @@ See also: [Artifact](#artifact).
 
 (Ref: [SCVS-2020], [CDXAG-2024], [CPANSec-2024])
 
+#### Dependency, Development ✍️ {#dependency-development}
+
+> [!NOTE]
+> * FIXME: The name of this type of dependency isn't clear enough!
+
+1. (CPANSec-2024) A software or service dependency used by the component author during the development of the software.
+    * Examples: Editors, test suite data anonymisers, code generators, documentation template tools or generators, large language models
+
+* See also
+    * [Dependency, Integration](#dependency-integration)
+
 #### Dependency, Dynamic
 
 > [!NOTE]
@@ -218,6 +229,14 @@ See also: [Artifact](#artifact).
 
 1. (CPANSec-2024) A dependency that is used during the author, build, test or deployment stages of a program, but is is not needed any more during runtime.
     * Examples: Compilers, test harnesses, build tooling, editors, software packaging tooling, software repositories and publishing platforms.
+
+#### Dependency, Integration ✍️ {#dependency-integration}
+
+> [!NOTE]
+> * FIXME: The name of this type of dependency isn't clear enough!
+
+1. (CPANSec-2024) Software or service dependency used by the component author during any CI/CD pipeline actions, as part of the development of the software.
+    * Examples: vulnerability check actions on GitHub, commit messaging tools (like actions that report commits to an IRC channel)
 
 #### Dependency, Transitive ✍️ {#dependency-transitive}
 
@@ -296,7 +315,7 @@ See also: [Artifact](#artifact).
 > [!NOTE]
 > * FIXME: Expand on this topic
 
-#### Dependency, Pinned during Build ✍️ {#dependency-build-pinned)
+#### Dependency, Pinned during Build ✍️ {#dependency-build-pinned}
 
 > [!NOTE]
 > * FIXME: Expand on this topic

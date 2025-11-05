@@ -10,9 +10,11 @@ author: sjn
 excerpt: "8 Principles for interacting with the open source software projects – and people – you depend on"
 ---
 
-# Open Source
+# Open Source FIXME
 
-(Say something about the intended audience)
+> [!TIP]
+>
+> FIXME - Say something about the intended audience
 
 With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in 2026, cybersecurity is required to become a primary aspect of product development.
 A major part of this activity will relate to mapping out product dependencies, and ensure that each and every one of these are taken care of appropriately.
@@ -21,11 +23,12 @@ The vast majority of these dependencies are likely to be Open Source Software (O
 The implication is that there is a need for all affected businesses to come to terms with their role in the ecosystem, and what the rules of engagement are in the particular communities they depend on.
 Missteps may lead to alienating the maintainers they rely on - how can this be avoided?
 
-> ![Note]
+> [!NOTE]
 > **How do I know who I am relying on?**
-> FIXME
 > 
 > Components have Projects, which have Maintainers and Communities.
+>
+> FIXME - expand
 
 Let's first look at what problem needs to be solved, then describe the context it needs to be solved in, and finally look at a short check-list that can assist one towards good solutions.
 
@@ -99,11 +102,18 @@ The work necessary for addressing this also requires time and attention from the
 This may require efforts toward the adoption of PackageURL and other SBOM-related standards, to enable you to create a complete cross-ecosystem map of your dependencies.
 And more importantly, the success and presence of this is a precursor for your own ability to become compliant.
 
-> ![NOTE]
-> #### Dependencies have dependencies
-> FIXME
+> [!NOTE]
+> **What is a dependency graph?**
+>
+> Dependencies have dependencies
+>
+> FIXME - expand
 
 ### 10. **The Cyber Resiliency Act is already putting a disproportionate burden on Open Source ecosystems and projects**
 …Since these often are supplying the terms for what solutions may be considered "easy to adopt" by users and manufacturers in order for them to become compliant.
 This means there's a need for Open Source Software communities and ecosystems be "first and earliest in class", at the pain of manufacturers start balkanizing the security landscape by "inventing their own wheels", or buying into third-party "solutions" that exposes them to new forms of risk.
 Preventing this requires resources and attention that currently aren't available for the term-supplying OSS ecosystems and projects out there.
+
+*[SBOM]: Software Bill of Materials – a standard machine-readable file that describes what an application or a component is made of.
+*[CRA]: Cyber Resilience Act – a EU product law that, starting in 2027, requires CE-marked products with digital elements also have good cybersecurity.
+*[OSS]: Open Source Software – Software published shared a license that adheres to the Open Source Definition, as described on opensource.org/osd .

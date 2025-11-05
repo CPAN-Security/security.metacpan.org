@@ -1,6 +1,6 @@
 ---
 layout: single
-published: true
+published: false
 toc: true
 title: "10 Principles for securing our open source commons infrastructure"
 date: 2025-08-10 17:15:00 +0000
@@ -56,22 +56,26 @@ What these steps may be are outside of the scope of this article, but while the 
 ## 10 foundational facts about open source security and communities
 
 ### 1. Most of your digital infrastructure is in the commons
+
 The Open Source components, their communities, and the ecosystems your business uses as a digital bedrock, are produced in the open, almost exclusively with volunteer effort.
 If you rely on these in a substantial way, then you rely on _volunteers_.
 Let **this fact sink in** so you completely realize its implications.
 
 ### 2. There is no unified Open Source community
+
 While a few of these communities are well-known, and therefore somewhat safe to assume as well-organized and well-resourced, you'll find these on the left side of the power law graph.
 Expect that a substantial portion of your dependencies are found in the "long tail" part of this graph.
 Check your assumptions on how to interact with these, and take into account their needs and ways of working when you do interact.
 
 ### 3. Open Source was never free
+
 The cost of creating and maintaining your infrastructure was never free.
 The cost for you was always _externalized_, meaning that you benefited from other people's investments of time and attention.
 While assuming this will always be the case is reckless, there's no need to despair – the infrastructure is still maintained collaboratively.
 Your experiences and resources are still welcome, and is likely to offer cheaper and less risky solutions than anything you might gain from switching to an alternative or by rewriting your digital foundation.
 
 ### 4. Don't think only of your third party suppliers
+
 You have almost certainly no contracts with the Open Source communities you rely on, and means they are not your commercial suppliers.
 Instead, consider them as your "Open Source colleagues", "voluntary second-party suppliers", or "digital infrastructure partners" and treat them accordingly.
 Assume that you both have a genuine interest in the correctness, resiliency, reliability and usefulness of their code, and therefore that you have common goals and good reasons to collaborate.
@@ -87,6 +91,7 @@ Look for ways to strengthen the communities where their need is the greatest –
 If a component is valuable to you, then take care of it accordingly - even if it's Open Source.
 
 ### 6. Open Source Maintainers aren't motivated by pay
+
 Instead, they _enjoy_.
 They may be learning, helping, playing or just creating something they can _be proud of_, or that they may _complete_.
 Whatever their intrinsic motivation is, they spend their one irreplaceable, non-refundable resource on it: their time and attention.
@@ -103,19 +108,21 @@ If you bring a transactional mindset into this, they will rightfully look at you
 
 {: .align-right style="max-width: 50%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
-> #### What is a dependency graph?
+> **What is a dependency graph?**
 > * A dependency is a software component that is required for another software component to function as expected.
 > * Example: A component for using a network protocol; A remote service the application uses; Data describing the sorting rules or timezones used.
 > * Dependencies may themselves have dependencies, and these again have their own dependencies, and so on.
 > When we follow these, we map out a _dependency graph_.
 
-…And these are already in silos, and therefore so is their security posture.
-The work necessary for addressing this also requires time and attention from their respective communities.
-This may require efforts toward the adoption of PackageURL and other SBOM-related standards, to enable you to create a complete cross-ecosystem map of your dependencies.
-And more importantly, the success and presence of this is a precursor for your own ability to become compliant.
+These Supply Chains and ecosystems are themselves OSS projects, and due to historical reasons, _they are silos_.
+Therefore one can say the same of their security posture – they are inward-looking and in silos.
+The work necessary for improving this also requires time and attention from their respective communities.
+This may require efforts toward the adoption of technologies like PURL or other SBOM-related standards, to enable you to create a complete cross-ecosystem map of your dependencies.
+More importantly, the success, availability and prevalence of these standards are term-setting for your expenses to become compliant.
 
-### 10. The Cyber Resiliency Act is already putting a disproportionate burden on Open Source ecosystems and projects
-…Since these often are supplying the terms for what solutions may be considered "easy to adopt" by users and manufacturers in order for them to become compliant.
+### 10. New regulations are already putting a disproportionate burden on Open Source ecosystems and communities
+
+These communities are often central in setting the terms for what solutions may be considered "easy to adopt" by users, businesses and manufacturers in order for them to become compliant.
 This means there's a need for Open Source Software communities and ecosystems be "first and earliest in class", at the pain of manufacturers start balkanizing the security landscape by "inventing their own wheels", or buying into third-party "solutions" that exposes them to new forms of risk.
 Preventing this requires resources and attention that currently aren't available for the term-supplying OSS ecosystems and projects out there.
 
@@ -123,3 +130,4 @@ Preventing this requires resources and attention that currently aren't available
 *[CRA]: Cyber Resilience Act – a EU product law that, starting in 2027, requires CE-marked products with digital elements also have good cybersecurity.
 *[OSS]: Open Source Software – Software published shared a license that adheres to the Open Source Definition, as described on opensource.org/osd .
 *[OSPO]: Open Source Program Office – a business section with responsibility for coordinating efforts around license compliance, OSS developer relations and corporate guidelines for use of Open Source Software.
+*[PURL]: PackageURL – a standard for referring to software packages in a ecosystem-agnostic way.

@@ -122,3 +122,4 @@ Preventing this requires resources and attention that currently aren't available
 *[SBOM]: Software Bill of Materials – a standard machine-readable file that describes what an application or a component is made of.
 *[CRA]: Cyber Resilience Act – a EU product law that, starting in 2027, requires CE-marked products with digital elements also have good cybersecurity.
 *[OSS]: Open Source Software – Software published shared a license that adheres to the Open Source Definition, as described on opensource.org/osd .
+*[OSPO]: Open Source Program Office – a business section with responsibility for coordinating efforts around license compliance, OSS developer relations and corporate guidelines for use of Open Source Software.

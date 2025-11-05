@@ -72,4 +72,12 @@ Whatever their intrinsic motivation is, they spend their one irreplaceable, non-
 And when they encounter others with the same or similar interests, they may discover they made a fertile ground for friendships to form.
 If you bring a transactional mindset into this, they will rightfully look at you as someone who says "If I give you $100, will you be my friend?"
 
-7. ****
+7. **Your OSS Supply Chains are part of your dependency graph**, and are already in silos, and therefore so is their security posture.
+The work necessary for addressing this also requires time and attention from their respective communities.
+This may require efforts toward the adoption of PackageURL and other SBOM-related standards, to enable you to create a complete cross-ecosystem map of your dependencies.
+And more importantly, the success and presence of this is a precursor for your own ability to become compliant.
+
+8. **The CRA is already putting a disproportionate burden on OSS ecosystems and projects**, since these often are supplying the terms for what solutions may be considered "easy to adopt" by users and manufacturers in order for them to become compliant.
+This means there's a need for OSS communities and ecosystems be "first and earliest in class", at the pain of manufacturers start balkanizing the security landscape by "inventing their own wheels", or buying into third-party "solutions" that exposes them to new forms of risk.
+Preventing this requires resources and attention that currently aren't available for the term-supplying OSS ecosystems and projects out there.
+

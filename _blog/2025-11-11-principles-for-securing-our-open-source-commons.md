@@ -2,12 +2,12 @@
 layout: single
 published: false
 toc: true
-title: "10 Principles for securing our open source commons infrastructure"
+title: "11 Principles for securing our open source commons infrastructure"
 date: 2025-08-10 17:15:00 +0000
 collection: blog
 tags: authors guides cpan modules security "open source" cra steward "cyber resilience act" principles
 author: sjn
-excerpt: "10 Principles for interacting with the open source software projects – and people – you depend on"
+excerpt: "11 Principles for interacting with the open source software projects – and people – you depend on"
 ---
 
 ## Volunteer workers has become critical for managing business risk. Why?
@@ -27,25 +27,25 @@ The vast majority of these dependencies are likely to be Open Source Software (O
 > [!TIP]
 > **How do I know _Who_ I am relying on?**
 > * Components have Projects, which have Maintainers, Contributors and Communities.
-> * Communities include Contributors from Businesses like your own.
-> * These are who you rely on to find and fix bugs, vulnerabilities, and other issues.
+> * Communities may include Contributors from Businesses like your own.
+> * These are the people who your business rely on to find and fix bugs, vulnerabilities, and other issues.
 
 The implication is that there is a need for all affected businesses to come to terms with their role in the ecosystem, and what the rules of engagement are in the particular communities they depend on.
-Missteps may lead to alienating the maintainers they rely on - how can this be avoided?
+Missteps may lead to alienating the maintainers businesses rely on - how can this be avoided?
 
 Let's first look at what problem needs to be solved, then describe the context it needs to be solved in, and finally look at a short check-list that can assist one towards good solutions.
 
 
 ## Performing _Due Diligence_ while depending on volunteers
 
-When ensuring your technology bedrock is secure and well-maintained, we are expected to conduct ourselves with reasonable _Due Care_ and prepare for this with _Due Diligence_.
+FIXME: When ensuring your technology bedrock is secure and well-maintained, we are expected to conduct ourselves with reasonable _Due Care_ and prepare for this with _Due Diligence_.
 
 _Due Care_ is about _what actions a reasonable person is expected to do_ (e.g. in case of an emergency), and _Due Diligence_ is about _what preparations need to happen for this reasonable person to succeed_.
 When an integrator or manufacturer prepares to act with _Due Care_, they may do any number of the following actions:
 
 * Take a hard look at what open source communities they depend on, and keep track of this information in their SBOMs.
 * Perform a risk assessment of these, to determine which ones require attention first.
-* With the assessment in hand, have another reading of this article, and with it in mind take the next steps to address or mitigate the issues you have identified – this is your _Due Diligence_.
+* With the assessment in hand, have another reading of this article, and with that in mind take the next steps to address or mitigate the issues you have identified – this is your _Due Diligence_.
 
 What these steps may be are outside of the scope of this article, but while the details will depend heavily on the software and circumstances unique to you, it's reasonably safe to assume you may encounter some common tropes.
 
@@ -53,7 +53,7 @@ What these steps may be are outside of the scope of this article, but while the 
 * As long as you take into account the licenses, terms and ways of working for each component project, you very likely to find ways to lower any risks associated with using these components.
 
 
-## 10 foundational facts about open source security and communities
+## 11 foundational facts about open source security and communities
 
 ### 1. Most of your digital infrastructure is in the commons
 
@@ -80,15 +80,17 @@ You have almost certainly no contracts with the Open Source communities you rely
 Instead, consider them as your "Open Source colleagues", "voluntary second-party suppliers", or "digital infrastructure partners" and treat them accordingly.
 Assume that you both have a genuine interest in the correctness, resiliency, reliability and usefulness of their code, and therefore that you have common goals and good reasons to collaborate.
 If you decide to think of them as a "third party supplier" despite this fact, then please accept that they have no reason to treat you differently.
-Ask yourself – "Why should they care about you?" – You are not part of their community of "second parties", you are just an incidental "third party" user.
+Ask yourself – "Why should they care about you?" – You are not part of their community of "second parties", you are just an incidental "third party" user who does not contribute back.
 You are already getting their software for free, and they are already absorbing the cost of maintaining it, that you have already externalized.
 
 ### 5. Your own Open Source bedrock is stabilized and supported by _you_
+
 You may be relying on thousands, if not tens of thousands of components and their maintainers and communities; Interacting with all of them is daunting, if not impossible – therefore, prioritize (perform a risk assessment), and look for – and promote – predictability, reliability and responsiveness in the communities on the top of your list.
-This is to foster trust these communities, so they may continue providing a safe and secure foundation for your business.
+This is to foster trust in these communities, so they may continue providing a safe and secure foundation for your business.
 In the meantime, you retain the freedom to verify this, due to them publishing under the terms of an open source license.
 Look for ways to strengthen the communities where their need is the greatest – not only in the large and "important" parts of your infrastructure, but also the smaller ones who have communities that may be resource-starved or crumbling.
-If a component is valuable to you, then take care of it accordingly - even if it's Open Source.
+If a component is valuable to you, then you need to take care of it accordingly.
+Regardless of whether it is Open Source or not.
 
 ### 6. Open Source Maintainers aren't motivated by pay
 
@@ -125,6 +127,16 @@ More importantly, the success, availability and prevalence of these standards ar
 These communities are often central in setting the terms for what solutions may be considered "easy to adopt" by users, businesses and manufacturers in order for them to become compliant.
 This means there's a need for Open Source Software communities and ecosystems be "first and earliest in class", at the pain of manufacturers start balkanizing the security landscape by "inventing their own wheels", or buying into third-party "solutions" that exposes them to new forms of risk.
 Preventing this requires resources and attention that currently aren't available for the term-supplying OSS ecosystems and projects out there.
+
+### 11. Support isn't guaranteed, and neither is responsiveness
+
+
+
+## Summary
+
+
+
+
 
 *[SBOM]: Software Bill of Materials – a standard machine-readable file that describes what an application or a component is made of.
 *[CRA]: Cyber Resilience Act – a EU product law that, starting in 2027, requires CE-marked products with digital elements also have good cybersecurity.

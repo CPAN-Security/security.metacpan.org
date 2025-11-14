@@ -2,17 +2,17 @@
 layout: single
 published: false
 toc: true
-title: "11 Principles for securing our open source commons infrastructure"
-date: 2025-08-10 17:15:00 +0000
+title: "16 considerations for securing our open source commons infrastructure"
+date: 2025-11-15 17:15:00 +0000
 collection: blog
 tags: authors guides cpan modules security "open source" cra steward "cyber resilience act" principles
 author: sjn
-excerpt: "11 Principles for interacting with the open source software projects – and people – you depend on"
+excerpt: "16 considerations for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone else) depends on"
 ---
 
 ## Volunteer workers has become critical for managing business risk. Why?
 
-{: .align-right style="max-width: 50%; margin: 0 0 1em 2em !important;"}
+{: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!NOTE]
 > **Who is the intended audience?**
 > * Market authorities, Compliance officers, Regulators.
@@ -23,7 +23,7 @@ With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in 2
 A major part of this activity will relate to mapping out product dependencies, and ensure that each and every one of these are taken care of appropriately.
 The vast majority of these dependencies are likely to be Open Source Software (OSS) components, and many of these are likely to get increased scrutiny from manufacturers in order to reduce security-related risks in their products.
 
-{: .align-right style="max-width: 50%; margin: 0 0 1em 2em !important;"}
+{: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
 > **How do I know _Who_ I am relying on?**
 > * Components have Projects, which have Maintainers, Contributors and Communities.
@@ -53,7 +53,7 @@ What these steps may be are outside of the scope of this article, but while the 
 * As long as you take into account the licenses, terms and ways of working for each component project, you very likely to find ways to lower any risks associated with using these components.
 
 
-## 11 foundational facts about open source security and communities
+## 15 foundational facts about open source security and communities
 
 ### 1. Most of your digital infrastructure is in the commons
 
@@ -103,12 +103,16 @@ If you bring a transactional mindset into this, they will rightfully look at you
 ### 7. Open Source Maintainers also have to live
 
 
+
+
 ### 8. Some Open Source work is extremely boring
+
+
 
 
 ### 9. Your Open Source Supply Chains are part of your dependency graph
 
-{: .align-right style="max-width: 50%; margin: 0 0 1em 2em !important;"}
+{: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
 > **What is a dependency graph?**
 > * A dependency is a software component that is required for another software component to function as expected.
@@ -131,6 +135,22 @@ Preventing this requires resources and attention that currently aren't available
 ### 11. Support isn't guaranteed, and neither is responsiveness
 
 
+### 12. Open Source projects thrive on goodwill and contributions, not assessments and analysis
+
+
+### 13. Open Source ROI is too high, and everyone knows it
+
+
+### 14. Open Source ROSI is unknown, because nobody …
+
+
+### 15. Open Source Security doesn't improve in a vacuum
+
+
+### 16. Many maintainers don't like the thought of receiving money for something they _enjoy_
+
+
+
 
 ## Summary
 
@@ -143,3 +163,10 @@ Preventing this requires resources and attention that currently aren't available
 *[OSS]: Open Source Software – Software published shared a license that adheres to the Open Source Definition, as described on opensource.org/osd .
 *[OSPO]: Open Source Program Office – a business section with responsibility for coordinating efforts around license compliance, OSS developer relations and corporate guidelines for use of Open Source Software.
 *[PURL]: PackageURL – a standard for referring to software packages in a ecosystem-agnostic way.
+*[FOSS]: Free and Open Source Software – 
+*[ROI]: Return on Investment – 
+*[ROSI]: Return on Security Investment –
+*[CISO]: Chief Information Security Officer –
+*[CIO]: Chief Information Officer – 
+*[CTO]: Chief Technology Officer – 
+*[CEO]: Chief Executive Officer – 

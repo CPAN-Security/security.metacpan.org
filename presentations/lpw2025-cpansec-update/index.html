@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>An update on CPAN Sec</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/zenburn.min.css" id="highlight-theme"></head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section data-markdown  ><textarea data-template>
+[comment]: # (Compile this presentation with the command below)
+[comment]: # (mdslides lpw2025-cpansec-update.md --include ../media)
+[comment]: # (...or by running the Makefile with "make")
+[comment]: # (mdslides can be installed from https://github.com/dadoomer/markdown-slides/)
+
+
+
+# An update on CPAN Sec
+
+José Joaquín Atria
+
+@jjatria@mastodon.cloud
+
+Note:
+
+Hei! I'm <NAME> and I'm here to introduce the CPAN Security Working Group to you
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+## What?
+
+* Est. at **Perl Toolchain Summit** 2023 in Lyon 🇫🇷
+* We work on & care for **Security on CPAN**
+* We are [the CVE Numbering Authority for CPAN][cna]
+
+[cna]: https://security.metacpan.org/2025/02/25/cpansec-is-cna-for-perl-and-cpan.html
+
+Note:
+
+Established in April 2023 year at the Perl Toolchain Summit in Lyon, France
+
+</textarea></section>
+<section>
+<section data-markdown  ><textarea data-template>
+
+## In-Scope Security Topics
+
+Note:
+
+Here are some of the things we care about!
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Security Outreach & Information
+
+👉 Facilitating **responsible/coordinated disclosure** between authors, reporters and users.
+
+Note:
+
+Keep different information channels (websites, social media) up-to-date and relevant with info on incidents, best practices and other documentation.
+
+VINCE – Vulnerability Information and Coordination Environment
+
+Topics not under embargo are discussed on IRC
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Vulnerability Index
+
+👉 **Audit** and track vulnerabilities
+
+Note:
+
+Improve security awareness by standardizing and publishing CPAN package vulnerabilities in relevant indices (our own, or CVE, or other).
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Provenance & Supply Chain Security
+
+👉 Establish secure CPAN downloads
+
+* Secure-by-default CPAN clients
+* [The Update Framework][tuf] on CPAN
+
+[tuf]: https://theupdateframework.io/
+
+Note:
+
+* TLS support in all CPAN clients
+    * CPAN.pm, cpanm, etc.
+
+* Implement [The Update Framework][tuf] in CPAN
+    * Repository signatures ("is this from CPAN?")
+    * Author signatures ("is this from AUTHOR?")
+
+[tuf]: https://theupdateframework.io/
+
+We want to make TLS in cpan clients on by default, with cert verification on
+
+Looking at getting The Update Framework (pypi has some implementation of this) as a supported, this is in addition to TLS
+
+The TUF spec supports repo and author signing
+
+TUF mitigates attacks that the current PGP signed CHECKSUMS implementation is vulnerable to, like replay attacks and downgrade attacks,
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Metadata & Software Bills of Materials
+
+👉 **SBOM** creation and verification
+
+* For compliance with the [Cyber Resilience Act][cra]
+
+[cra]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402847
+
+Note:
+
+* CPAN PackageURL in spec 🚧
+* PackageURL-enabled CPAN tooling
+* SBOM-enabled CPAN tooling
+
+Support risk analysis and management by writing tooling for managing standard SBOM objects like OWASP CycloneDX or SPDX, and do this by using existing and new CPAN metadata.
+
+Improve interoperability with non-CPAN package indices
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Transparency Logs
+
+👉 Tooling for **third-party monitoring** of&nbsp;package&nbsp;changes
+
+Note:
+
+* Sigstore for CPAN
+
+Write tooling for monitoring package updates and integrity checking of metadata using tools like `sigstore` or `sigsum`, or take inspiration from `transparency.dev`.
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Security Patch Tooling
+
+👉 Apply high-priority security patches on CPAN
+
+Note:
+
+Enable high-priority updates of CPAN packages, by developing tooling for publishing and applying third-party security patches to CPAN distributions with non-responsive authors.
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Privacy and Compliance
+
+👉 Inform on relevant regulations and compliance
+
+* We maintain a growing [reading list]
+
+[reading list]: https://security.metacpan.org/docs/readinglist.html
+
+Note:
+
+Still lots to do!
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Software Composition Analysis
+
+👉 Promote and create tooling for detecting known vulnerabilities
+
+Note:
+
+* Analyze dependencies for known vulnerabilities
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Governance, Policy & Funding
+
+👉 Rules and funding channels for sustainable security work
+
+Note:
+
+* Pre-Release Disclosure Agreement
+* Charter 🚧
+* CPAN Supply chain overview 🚧
+
+* Establish constructive rules, playbooks, governance, policy, and funding channels for security work that is needed.
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### And more!
+
+👉The security landscape is evolving, so must CPAN!
+
+* Perl and CPAN is in use **everywhere**
+* New security demands from authorities
+
+Note:
+
+And more!
+
+Let's have an organization in place that can help improve our security landscape as we discover new vulnerabilities and issues!
+Sometimes, response time is of the essence, and that means someone has to be there to respond.
+
+Interoperability – Perl and CPAN is part of a larger Open Source landscape!
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Join us!
+
+Do you…
+
+* …work with & **care about security**?
+* …have **spare tuits**?
+* …have a **security commons** aware employer?
+* …enjoy getting your **ducks in a row**? 🦆🦆🦆🦆
+
+Note:
+
+* Do you have a **security background** or care about the Toolchain?
+* Do you have **time to volunteer**?
+* Is your employer willing to **dedicate a percentage of your time** to improve our security commons?
+
+We need volunteers!
+
+</textarea></section>
+</section>
+<section data-markdown  ><textarea data-template>
+
+### Find us!
+
+[ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
+
+https://security.metacpan.org/
+
+mailto:cpan-security@security.metacpan.org
+
+Note:
+
+We're on the web, IRC, mail and eventually on other places.
+
+</textarea></section>
+<section data-markdown ><textarea data-template>
+
+# Thanks!
+
+Come talk to me!
+
+(I've got stickers)
+
+🦆🦆🦆🦆🦆🦆
+
+Note:
+
+Thanks!
+</textarea></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+Reveal.initialize({
+controls : false,
+markdown : {smartypants: true},
+minScale : 0.2,
+maxScale : 4.0,
+controls : true,
+width : "960",
+height : "700",
+help : true,
+progress : true,
+controlsBackArrows : "true",
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>

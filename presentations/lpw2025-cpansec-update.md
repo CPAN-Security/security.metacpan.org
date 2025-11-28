@@ -14,7 +14,7 @@
 [comment]: # (progress: true)
 [comment]: # (controlsBackArrows: "true")
 
-# An update on CPAN Sec
+# An update on CPANSec
 
 José Joaquín Atria
 
@@ -30,7 +30,7 @@ Hei! I'm <NAME> and I'm here to introduce the CPAN Security Working Group to you
 
 * Est. at **Perl Toolchain Summit** 2023 in Lyon 🇫🇷
 * We work on & care for **Security on CPAN**
-* We are [the CVE Numbering Authority for CPAN][cna]
+* We are [the CVE Numbering Authority for Perl and CPAN][cna]
 
 [cna]: https://security.metacpan.org/2025/02/25/cpansec-is-cna-for-perl-and-cpan.html
 
@@ -187,7 +187,7 @@ Note:
 👉The security landscape is evolving, so must CPAN!
 
 * Perl and CPAN is in use **everywhere**
-* New security demands from authorities
+* New security demands from market authorities and others
 
 Note:
 
@@ -207,7 +207,7 @@ Do you…
 * …work with & **care about security**?
 * …have **spare tuits**?
 * …have a **security commons** aware employer?
-* …enjoy getting your **ducks in a row**? 🦆🦆🦆🦆
+* …enjoy getting your **ducks in a row**? 🦆🦆🦆
 
 Note:
 
@@ -221,15 +221,20 @@ We need volunteers!
 
 ### Find us!
 
+https://security.metacpan.org/
+
+[https://matrix.to/#/#cpansec-discussion:matrix.org](https://matrix.to/#/#cpansec-discussion:matrix.org)
+
+[https://fosstodon.org/@cpansec](https://fosstodon.org/@cpansec)
+
 [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 
-https://security.metacpan.org/
 
 mailto:cpan-security@security.metacpan.org
 
 Note:
 
-We're on the web, IRC, mail and eventually on other places.
+We're on the web, Matrix, Mastodon, IRC, mail and eventually on other places.
 
 [comment]: # (!!!)
 
@@ -239,7 +244,7 @@ Come talk to me!
 
 (I've got stickers)
 
-🦆🦆🦆🦆🦆🦆
+🦆🦆🦆🦆
 
 Note:
 

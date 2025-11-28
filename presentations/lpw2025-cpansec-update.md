@@ -32,6 +32,8 @@ Hei! I'm <NAME> and I'm here to introduce the CPAN Security Working Group to you
 * We work on & care for **Security on CPAN**
 * We are [the CVE Numbering Authority for Perl and CPAN][cna]
 
+We've published [46 CVEs](https://lists.security.metacpan.org/cve-announce/)
+
 [cna]: https://security.metacpan.org/2025/02/25/cpansec-is-cna-for-perl-and-cpan.html
 
 Note:

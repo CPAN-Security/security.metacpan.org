@@ -18,5 +18,5 @@ This directory contains presentations relevant to CPANSec given at conferences a
 * Norwegian Unix User Group member meeting 2024-11-12 in Oslo, Norway — [Open Source forsyningskjeder, metadata og kravene fra EUs Cyber Resilience Act](https://www.nuug.no/aktiviteter/20241112-Open-Source-forsyningskjeder-metadata-og-kravene-fra-EUs-Cyber-Resilience-Act/), ([Video](https://www.youtube.com/live/31dkI0P7dkk?si=bjk67TUtFBTniQLH&t=17) in Norwegian, [Slides](nuug2024-metadata-foss-cra/))
 * FOSDEM 2025 ([Software Bill of Materials devroom](https://fosdem.org/2025/schedule/track/sbom/)) — [Where in the OSS Supply Chain do SBOM attributes come from?](https://fosdem.org/2025/schedule/event/fosdem-2025-6483-where-in-the-oss-supply-chain-do-sbom-attributes-come-from-/) ([Slides](fosdem2025-where-do-sbom-attributes-come-from/), [Video](https://fosdem.org/2025/schedule/event/fosdem-2025-6483-where-in-the-oss-supply-chain-do-sbom-attributes-come-from-/))
 * German Perl Workshop 2025 — [CPAN Security and Sustainability in light of the EU Cyber Resilience Act](https://act.yapc.eu/gpw2025/talk/7956) ([Slides](gpw2025-cpan-security-sustainability/))
-* German Perl Workshop 2025 — Metadata Clapalong 👏 (Lightening talk, [Slides](gpw2025-metadata-clapalong/))
-* London Perl Workshop 2025 — CPANSec Update (Lightening talk, Slides, Video)
+* German Perl Workshop 2025 — Metadata Clapalong 👏 (Lightning talk, [Slides](gpw2025-metadata-clapalong/))
+* London Perl Workshop 2025 - An update on CPANSec (Lightning talk, [Slides](lpw2025-cpansec-update/))

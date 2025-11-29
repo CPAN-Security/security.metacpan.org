@@ -2,15 +2,15 @@
 layout: single
 published: false
 toc: true
-title: "16 considerations for securing our open source commons infrastructure"
+title: "17 reality checks for securing our open source commons infrastructure"
 date: 2025-11-15 17:15:00 +0000
 collection: blog
 tags: authors guides cpan modules security "open source" cra steward "cyber resilience act" principles
 author: sjn
-excerpt: "16 considerations for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone else) depends on"
+excerpt: " reality checks for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone else) depends on"
 ---
 
-## Volunteer workers has become critical for managing business risk. Why?
+## Unpaid volunteers has become critical for managing business risk. Why?
 
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!NOTE]
@@ -36,14 +36,15 @@ Missteps may lead to alienating the maintainers businesses rely on - how can thi
 Let's first look at what problem needs to be solved, then describe the context it needs to be solved in, and finally look at a short check-list that can assist one towards good solutions.
 
 
-## Performing _Due Diligence_ while depending on volunteers
+## Performing _due diligence_ work involving volunteers?
 
-FIXME: When ensuring your technology bedrock is secure and well-maintained, we are expected to conduct ourselves with reasonable _Due Care_ and prepare for this with _Due Diligence_.
+When and serious incident happens or a critical vulnerability is discovered, we are expected to conduct ourselves with reasonable _Due Care_ – and before the emergency develops, to have prepared for this with _Due Diligence_.
 
 _Due Care_ is about _what actions a reasonable person is expected to do_ (e.g. in case of an emergency), and _Due Diligence_ is about _what preparations need to happen for this reasonable person to succeed_.
 When an integrator or manufacturer prepares to act with _Due Care_, they may do any number of the following actions:
 
-* Take a hard look at what open source communities they depend on, and keep track of this information in their SBOMs.
+* Ensure the software under their own control lives up their expectations. If one doesn't have order in one's own house, one shouldn't assume 
+* Take a hard look at what open source communities you depend on, and keep track of this information in their SBOMs.
 * Perform a risk assessment of these, to determine which ones require attention first.
 * With the assessment in hand, have another reading of this article, and with that in mind take the next steps to address or mitigate the issues you have identified – this is your _Due Diligence_.
 
@@ -53,13 +54,13 @@ What these steps may be are outside of the scope of this article, but while the 
 * As long as you take into account the licenses, terms and ways of working for each component project, you very likely to find ways to lower any risks associated with using these components.
 
 
-## 15 foundational facts about open source security and communities
+## 17 reality checks about open source security and communities
 
-### 1. Most of your digital infrastructure is in the commons
+### 1. Most of everyone's digital infrastructure is in the commons
 
-The Open Source components, their communities, and the ecosystems your business uses as a digital bedrock, are produced in the open, almost exclusively with volunteer effort.
+The Open Source components, their communities, and the ecosystems your business uses as a digital bedrock, are produced in the open and almost exclusively with volunteer effort.
 If you rely on these in a substantial way, then you rely on _volunteers_.
-Let **this fact sink in** so you completely realize its implications.
+**Let this fact sink in** so you completely realize its implications.
 
 ### 2. There is no unified Open Source community
 
@@ -74,7 +75,7 @@ The cost for you was always _externalized_, meaning that you benefited from othe
 While assuming this will always be the case is reckless, there's no need to despair – the infrastructure is still maintained collaboratively.
 Your experiences and resources are still welcome, and is likely to offer cheaper and less risky solutions than anything you might gain from switching to an alternative or by rewriting your digital foundation.
 
-### 4. Don't think only of your third party suppliers
+### 4. Not all Open Source are your _third party_ suppliers
 
 You have almost certainly no contracts with the Open Source communities you rely on, and means they are not your commercial suppliers.
 Instead, consider them as your "Open Source colleagues", "voluntary second-party suppliers", or "digital infrastructure partners" and treat them accordingly.
@@ -150,6 +151,7 @@ Preventing this requires resources and attention that currently aren't available
 ### 16. Many maintainers don't like the thought of receiving money for something they _enjoy_
 
 
+### 17. The median Open Source project size is 1
 
 
 ## Summary

@@ -7,7 +7,7 @@ date: 2025-11-15 17:15:00 +0000
 collection: blog
 tags: authors guides cpan modules security "open source" cra steward "cyber resilience act" principles
 author: sjn
-excerpt: " reality checks for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone else) depends on"
+excerpt: "17 reality checks for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone else) depends on"
 ---
 
 ## Unpaid volunteers has become critical for managing business risk. Why?
@@ -19,18 +19,17 @@ excerpt: " reality checks for interacting with the open source software projects
 > * CEO, CTO, CIO, CISO, other management.
 > * OSPO Staff.
 
-With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in 2026, cybersecurity is required to become a primary aspect of product development.
-A major part of this activity will relate to mapping out product dependencies, and ensure that each and every one of these are taken care of appropriately.
-The vast majority of these dependencies are likely to be Open Source Software (OSS) components, and many of these are likely to get increased scrutiny from manufacturers in order to reduce security-related risks in their products.
+With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in 2026, cybersecurity is required to become a important aspect of developing products with digital elements.
+One of the first steps in preparing for the CRA, will relate to mapping out product dependencies, and ensure that each one of these are _taken care of appropriately_.
+The vast majority (70-90%, according to [Linux Foundation](https://www.linuxfoundation.org/blog/blog/a-summary-of-census-ii-open-source-software-application-libraries-the-world-depends-on)) of these dependencies are Open Source Software (OSS) components, and many of these are likely to get increased scrutiny from manufacturers in order to reduce security-related risks in their products.
 
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
 > **How do I know _Who_ I am relying on?**
-> * Components have Projects, which have Maintainers, Contributors and Communities.
-> * Communities may include Contributors from Businesses like your own.
-> * These are the people who your business rely on to find and fix bugs, vulnerabilities, and other issues.
+> * OSS Components have Projects, which have Maintainers, Contributors and Communities.
+> * Communities may consist of Contributors working for Businesses, unpaid Volunteers or others.
 
-The implication is that there is a need for all affected businesses to come to terms with their role in the ecosystem, and what the rules of engagement are in the particular communities they depend on.
+This means there is a need for all affected businesses to come to terms with their role in these OSS ecosystems, and what the rules of engagement are in the particular communities they depend on.
 Missteps may lead to alienating the maintainers businesses rely on - how can this be avoided?
 
 Let's first look at what problem needs to be solved, then describe the context it needs to be solved in, and finally look at a short check-list that can assist one towards good solutions.
@@ -41,31 +40,35 @@ Let's first look at what problem needs to be solved, then describe the context i
 When and serious incident happens or a critical vulnerability is discovered, we are expected to conduct ourselves with reasonable _Due Care_ – and before the emergency develops, to have prepared for this with _Due Diligence_.
 
 _Due Care_ is about _what actions a reasonable person is expected to do_ (e.g. in case of an emergency), and _Due Diligence_ is about _what preparations need to happen for this reasonable person to succeed_.
-When an integrator or manufacturer prepares to act with _Due Care_, they may do any number of the following actions:
+When an integrator or manufacturer prepares to act with _Due Care_, there are a number of steps to adopt:
 
-* Ensure the software under their own control lives up their expectations. If one doesn't have order in one's own house, one shouldn't assume 
-* Take a hard look at what open source communities you depend on, and keep track of this information in their SBOMs.
+* Ensure the software under their own control lives up their expectations.
+* Take a hard look at what open source communities they depend on, and keep track of this information in their SBOM documents.
 * Perform a risk assessment of these, to determine which ones require attention first.
-* With the assessment in hand, have another reading of this article, and with that in mind take the next steps to address or mitigate the issues you have identified – this is your _Due Diligence_.
+* With this assessment in hand, take steps to address or mitigate any issues you have identified – this is your _Due Diligence_.
 
-What these steps may be are outside of the scope of this article, but while the details will depend heavily on the software and circumstances unique to you, it's reasonably safe to assume you may encounter some common tropes.
+What these steps may be are outside of the scope of this article, but while the details will depend heavily on the software and circumstances unique to you, it's reasonably safe to assume you may encounter a few common scenarios.
 
-* These projects that are part of your infrastructure, are Open Source, meaning you have a real opportunity to contribute to improving it without having to bear the full cost of doing so.
-* As long as you take into account the licenses, terms and ways of working for each component project, you very likely to find ways to lower any risks associated with using these components.
+* The projects that are part of your infrastructure are Open Source, meaning you have a real influence in improving them without having to bear the full cost of doing so.
+* As long as you take into account licensing terms and ways of working for each component project, you very likely to find ways to lower any risks associated with using these components.
+* If all the "low-hanging fruits" have been addressed or mitigated (by yourself, or others), you may still find ways to improve the situation by reaching out and supporting relevant ecosystem support organizations.
+* And as a last resort, you have always the option to adopt, create a private or a public fork, or to migrate or re-implement.
+
+Whatever path you choose, these tips may help you along the way.
 
 
 ## 17 reality checks about open source security and communities
 
 ### 1. Most of everyone's digital infrastructure is in the commons
 
-The Open Source components, their communities, and the ecosystems your business uses as a digital bedrock, are produced in the open and almost exclusively with volunteer effort.
-If you rely on these in a substantial way, then you rely on _volunteers_.
-**Let this fact sink in** so you completely realize its implications.
+The Open Source components, their communities, and the ecosystems your business uses as a digital bedrock, are produced in the open – almost exclusively with volunteer effort.
+If you rely on these in any substantial way, then you rely on _volunteers_.
+Take a moment to **let this fact sink in** so you completely realize its implications.
 
 ### 2. There is no unified Open Source community
 
-While a few of these communities are well-known, and therefore somewhat safe to assume as well-organized and well-resourced, you'll find these on the left side of the power law graph.
-Expect that a substantial portion of your dependencies are found in the "long tail" part of this graph.
+While a few Open Source communities are well-known, and therefore somewhat safe to assume, well-organized and well-resourced, you're likely to find these on the left side of the power law graph.
+Expect a substantial portion of your dependencies are found in the "long tail" part of the power law graph.
 Check your assumptions on how to interact with these, and take into account their needs and ways of working when you do interact.
 
 ### 3. Open Source was never free

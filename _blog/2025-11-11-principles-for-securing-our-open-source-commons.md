@@ -1,6 +1,6 @@
 ---
 layout: single
-published: false
+published: true
 toc: true
 title: "17 reality checks for securing our open source commons infrastructure"
 date: 2025-11-15 17:15:00 +0000
@@ -37,24 +37,28 @@ Let's first look at what problem needs to be solved, then describe the context i
 
 ## Performing _due diligence_ work involving volunteers?
 
-When and serious incident happens or a critical vulnerability is discovered, we are expected to conduct ourselves with reasonable _Due Care_ – and before the emergency develops, to have prepared for this with _Due Diligence_.
+{: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
+> [!TIP]
+> **What is _Due Diligence_ and _Due Care_?**
+> _Due Care_ is about _the actions a reasonable and prudent person is expected to do_ during a security incident, and _Due Diligence_ is about _the preparations to make for this person to succeed_.
 
-_Due Care_ is about _what actions a reasonable person is expected to do_ (e.g. in case of an emergency), and _Due Diligence_ is about _what preparations need to happen for this reasonable person to succeed_.
-When an integrator or manufacturer prepares to act with _Due Care_, there are a number of steps to adopt:
+When and serious incident happens or a critical vulnerability is discovered, we are expected to conduct ourselves with _Due Care_ – and before the emergency develops, to have prepared for this with _Due Diligence_.
 
-* Ensure the software under their own control lives up their expectations.
+So when an integrator or manufacturer performs _Due Diligence_, there are a number of steps worth adopting when volunteers are involved:
+
+* Start with ensuring the software under their own control lives up their own expectations.
 * Take a hard look at what open source communities they depend on, and keep track of this information in their SBOM documents.
 * Perform a risk assessment of these, to determine which ones require attention first.
 * With this assessment in hand, take steps to address or mitigate any issues you have identified – this is your _Due Diligence_.
 
-What these steps may be are outside of the scope of this article, but while the details will depend heavily on the software and circumstances unique to you, it's reasonably safe to assume you may encounter a few common scenarios.
+What these steps entail in detail, is outside of the scope of this article. Though while the details are likely to depend on the software and circumstances unique to you, it's reasonably safe to assume you may encounter a few common scenarios:
 
-* The projects that are part of your infrastructure are Open Source, meaning you have a real influence in improving them without having to bear the full cost of doing so.
-* As long as you take into account licensing terms and ways of working for each component project, you very likely to find ways to lower any risks associated with using these components.
-* If all the "low-hanging fruits" have been addressed or mitigated (by yourself, or others), you may still find ways to improve the situation by reaching out and supporting relevant ecosystem support organizations.
+* A significant number of component in your digital infrastructure are Open Source projects. This means you may have a real influence in improving these, without having to bear the full cost of this responsibility.
+* As long as licensing terms and ways of working are taken into account for each component project, you very likely to find ways to lower any risks associated with using these components.
+* If all the "low-hanging fruits" have been addressed or mitigated (by yourself, or others), you may still find ways to improve the project's total security posture indirectly by reaching out and supporting relevant ecosystem support organizations.
 * And as a last resort, you have always the option to adopt, create a private or a public fork, or to migrate or re-implement.
 
-Whatever path you choose, these tips may help you along the way.
+Whatever path you choose, please note that there are no "gratis" options any more.
 
 
 ## 17 reality checks about open source security and communities
@@ -106,7 +110,9 @@ If you bring a transactional mindset into this, they will rightfully look at you
 
 ### 7. Open Source Maintainers also have to live
 
-
+After work, family, sleep and recreation, there may not be much time left to work on Open Source.
+This may be different if the Maintainer has set aside dedicated time, they work for an employer who is interested in the well-being of the project, or if the Maintainer uses the project itself as recreation or a safe-space.
+If the demands to their project becomes too great (e.g. due to popularity), any changes to their way of working needs to happen on their terms.
 
 
 ### 8. Some Open Source work is extremely boring
@@ -120,7 +126,7 @@ If you bring a transactional mindset into this, they will rightfully look at you
 > [!TIP]
 > **What is a dependency graph?**
 > * A dependency is a software component that is required for another software component to function as expected.
-> * Example: A component for using a network protocol; A remote service the application uses; Data describing the sorting rules or timezones used.
+> * Example: A component for using a network protocol; A remote service the application uses; Data describing the sorting rules or time-zones used.
 > * Dependencies may themselves have dependencies, and these again have their own dependencies, and so on.
 > When we follow these, we map out a _dependency graph_.
 

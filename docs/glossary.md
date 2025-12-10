@@ -106,9 +106,9 @@ Please take this into account when commenting this document.
 
 ### Chain of custody
 
-1. (SCVS-2020, [CDXAG-2024]) Auditable documentation of point of origin as well as the method of transfer from point of origin to point of destination and the identity of the transfer agent.
+1. (SCVS-2020, [CDXAG-2025]) Auditable documentation of point of origin as well as the method of transfer from point of origin to point of destination and the identity of the transfer agent.
 
-(Ref: [SCVS-2020], [CDXAG-2024])
+(Ref: [SCVS-2020], [CDXAG-2025])
 
 
 ### Component ✍️ {#component}
@@ -126,10 +126,10 @@ See also: [Artifact](#artifact).
 
 #### Component function
 
-1. (SCVS-2020, CDXAG-2024) The purpose for which a software component exists.
+1. (SCVS-2020, CDXAG-2025) The purpose for which a software component exists.
     * Examples of component functions include parsers, database persistence, and authentication providers.
 
-(Ref: [SCVS-2020], [CDXAG-2024])
+(Ref: [SCVS-2020], [CDXAG-2025])
 
 #### Component, second-party ✍️ {#second-party}
 
@@ -140,18 +140,20 @@ See also: [Artifact](#artifact).
 
 #### Component, third-party ✍️ {#third-party}
 
-1. (SCVS-2020, CDXAG-2024) Any software component not directly created including open source, "source available", and commercial or proprietary software.
+1. (SCVS-2020) Any software component not directly created including open source, "source available", and commercial or proprietary software.
 1. (CPANSec-2024) Any software component not directly created including "source available", commercial or proprietary software.
-    * See [Component, second-party](#second-party).
 
-(Ref: [SCVS-2020], [CDXAG-2024], [CPANSec-2024])
+* See also
+    * [Component, second-party](#second-party).
+
+(Ref: [SCVS-2020], [CPANSec-2024])
 
 #### Component type
 
-1. (SCVS-2020, CDXAG-2024) The general classification of a software components architecture.
+1. (SCVS-2020, CDXAG-2025) The general classification of a software components architecture.
     * Examples of component types include libraries, frameworks, applications, containers, and operating systems.
 
-(Ref: [SCVS-2020], [CDXAG-2024])
+(Ref: [SCVS-2020], [CDXAG-2025])
 
 
 ### Consumer
@@ -197,14 +199,14 @@ See also: [Artifact](#artifact).
 
 ### Dependency, Direct ✍️ {#dependency-direct}
 
-1. (SCVS-2020, CDXAG-2024) A software component that is referenced by a program itself.
+1. (SCVS-2020, CDXAG-2025) A software component that is referenced by a program itself.
 1. (CPANSec-2024) A [software](#software) program, library, plugin, service, resource or component that is required for another software program or component to function as expected.
 
 * See also
     * [Dependency, Transitive](#dependency-transitive)
     * [Dependency, Indirect](#dependency-indirect)
 
-(Ref: [SCVS-2020], [CDXAG-2024], [CPANSec-2024])
+(Ref: [SCVS-2020], [CDXAG-2025], [CPANSec-2024])
 
 #### Dependency, Development ✍️ {#dependency-development}
 
@@ -569,26 +571,26 @@ See also: [Artifact](#artifact).
 
 ### Package manager ✍️ {#package-manager}
 
-1. (SCVS-2020, CDXAG-2024) A distribution mechanism that makes software artifacts discoverable by requesters of a specific package ecosystem.
+1. (SCVS-2020, CDXAG-2025) A distribution mechanism that makes software artifacts discoverable by requesters.
 1. (CPANSec-2024) A distribution mechanism that makes software artifacts discoverable and installable by users of a specific package ecosystem.
 
-(Ref: [SCVS-2020], [CDXAG-2024], [CPANSec-2024])
+(Ref: [SCVS-2020], [CDXAG-2025], [CPANSec-2024])
 
 
 ### Package URL (PURL) {#purl}
 
-1. (SCVS-2020, CDXAG-2024) An ecosystem-agnostic specification which standardizes the syntax and location information of software components.
+1. (SCVS-2020, CDXAG-2025) An ecosystem-agnostic specification which standardizes the syntax and location information of software components.
    * (CPANSec-2024) The PURL spec can be found in [GitHub](https://github.com/package-url/purl-spec). As it is an open source project it is constantly evolving.
 
-(Ref: [SCVS-2020], [CDXAG-2024], [CPANSec-2024])
+(Ref: [SCVS-2020], [CDXAG-2025], [CPANSec-2024])
 
 
 ### Pedigree
 
-1. (SCVS-2020, CDXAG-2024) Data which describes the lineage and/or process for which software has been created or altered.
+1. (SCVS-2020, CDXAG-2025) Data which describes the lineage and/or process for which software has been created or altered.
 1. (NTIA-2021) Data on the origins of components that have come together to make a piece of software and the process under which they came together. This could include data beyond the minimum elements, such as compiler details and settings.
 
-(Ref: [SCVS-2020], [CDXAG-2024], [NTIA-2021])
+(Ref: [SCVS-2020], [CDXAG-2025], [NTIA-2021])
 
 
 ### Placing on the market (CRA)
@@ -603,11 +605,11 @@ See also: [Artifact](#artifact).
 
 ### Point of origin ⚠️  ✍️ {#point-of-origin}
 
-1. (SCVS-2020, CDXAG-2024) The supplier and associated metadata from which a software component has been procured, transmitted, or received.
+1. (SCVS-2020, CDXAG-2025) The supplier and associated metadata from which a software component has been procured, transmitted, or received.
     * Package repositories, release distribution platforms, and version control history are examples of various points of origin.
 1. (CPANSec-2024) Discouraged term – Confusing definition, having common meaning with both [Source](#source), [Manufacturer](#manufacturer) and [Distributor](#distrubutor). 
 
-(Ref: [SCVS-2020], [CDXAG-2024], [CPANSec-2024])
+(Ref: [SCVS-2020], [CDXAG-2025], [CPANSec-2024])
 
 
 ### Presumption of Conformity (CRA)
@@ -628,10 +630,10 @@ See also: [Artifact](#artifact).
 
 ### Procurement ✍️ {#procurement}
 
-1. (SCVS-2020, CDXAG-2024) The process of agreeing to terms and acquiring software or services for later use.
+1. (SCVS-2020, CDXAG-2025) The process of agreeing to terms and acquiring software or services for later use.
     * (CPANSec-2024) This includes agreeing to Open Source licenses.
 
-(Ref: [SCVS-2020], [CDXAG-2024], [CPANSec-2024])
+(Ref: [SCVS-2020], [CDXAG-2025], [CPANSec-2024])
 
 
 ### Product
@@ -705,11 +707,12 @@ These are roles that may be found in Open Source projects.
 
 ### Provenance ✍️ {#provenance}
 
-1. (SCVS-2020, CDXAG-2024) The [chain of custody](#chain-of-custody) and origin of a software component.
+1. (SCVS-2020, CDXAG-2025) The [chain of custody](#chain-of-custody) and origin of a software component.
     * Provenance incorporates the [point of origin](#point-of-origin) through distribution as well as derivatives in the case of software that has been modified.
 1. (NTIA-2021) Data about the chain of custody of the software and all of the constituent components, potentially including data about the authors and locations from where the components were obtained.
+1. (SLSA-2023) Attestation (metadata) describing how the outputs were produced, including identification of the platform and external parameters.
 
-(Ref: [SCVS-2020], [NTIA-2021], [CPANSec-2024])
+(Ref: [SCVS-2020], [CDXAG-2025], [NTIA-2021], [SLSA-2023])
 
 
 ### Release
@@ -741,12 +744,12 @@ These are roles that may be found in Open Source projects.
 ### SBOM (Software Bill of Materials) {#sbom}
 
 1. (CRA-2024-03) A formal record containing details and supply chain relationships of components included in the software elements of a product with digital elements.
-1. (SCVS-2020, CDXAG-2024) A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software.
+1. (SCVS-2020) A complete, formally structured, and machine-readable inventory of all software components and associated metadata, used by or delivered with a given piece of software.
 1. (NTIA-2021) A formal record containing the details and supply chain relationships of various components used in building software.
     * Software developers and vendors often create products by assembling existing open source and commercial software components.
     * The SBOM enumerates these components in a product.
 
-(Ref: [CRA-2024-03], [SCVS-2020], [CDXAG-2024], [NTIA-2021])
+(Ref: [CRA-2024-03], [SCVS-2020], [NTIA-2021])
 
 
 ### SBOM Attributes
@@ -1023,14 +1026,13 @@ These are roles that may be found in Open Source projects.
     * Ideally, all suppliers are also authors of SBOMs for the suppliers’ components.
     * Most suppliers are also consumers.
     * A supplier with no included upstream components is a root entity.
-1. (CDXAG-2024) The name of an entity that creates, defines, and identifies components.
 
 * See also
     * [Author](#author)
     * [Maintainer](#maintainer)
     * [Manufacturer](#manufacturer)
 
-(Ref: [NTIA-2021], [CDXAG-2024])
+(Ref: [NTIA-2021])
 
 
 ### SWID (Software Identification) {#software-identification-id}
@@ -1072,7 +1074,7 @@ This glossary is partly based on terms from the following sources.
 - (NTIA-2021) [NTIA The Minimum Elements for an SBOM, Glossary](https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=25), pages 25-27, published 2021-07-12.
 - (CISA-2024-3) [CISA SBOM Sharing Roles and Considerations](https://www.cisa.gov/resources-tools/resources/sbom-sharing-roles-and-considerations), Appendix, published 2024-03-28.
 - (PCISSF-2023) [PCI Software Security Framework](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), published May 2023.
-- (CDXAG-2024) [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf), Second edition, Appendix A, published April 2024.
+- (CDXAG-2025) [Authoritative Guide to SBOM](https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf), Third edition, Appendix A, published October 2025.
 - (CISA-2024-9) [CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM)](), Third edition, Sections 2.2.1.4, 2.2.2, and Appendix B, Published 2024-09-03
     - FIXME: Replace after publishing: [draft document](https://docs.google.com/document/d/1z8hKtPxs5OWaspst120NHN9XXgyULGl2aKdSebwIYPc/edit)
 - (EUBG-2022-2) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04)#d1e2047-1-1) Chapter 2.2, published 2022-06-29.
@@ -1083,7 +1085,7 @@ This glossary is partly based on terms from the following sources.
 
 ## About this document
 
-* Version: 0.7.2
+* Version: 0.7.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
@@ -1108,7 +1110,7 @@ Several people have been involved in the development of this document
 [NTIA-2021]:#references-and-terms "NTIA The Minimum Elements for an SBOM, Glossary, pages 25-27."
 [CISA-2024-3]:#references-and-terms "CISA SBOM Sharing Roles and Considerations, Appendix."
 [PCISSF-2023]:#references-and-terms "PCI Software Security Framework."
-[CDXAG-2024]:#references-and-terms "Authoritative Guide to SBOM, Second edition, Appendix A."
+[CDXAG-2025]:#references-and-terms "Authoritative Guide to SBOM, Third edition, Appendix A."
 [CISA-2024-9]:#references-and-terms "CISA Framing Software Component Transparency: Establishing a Common Software Bill of Materials (SBOM), Third edition, Sections 2.2.1.4, 2.2.2, and Appendix B"
 [EUBG-2022-2]:#references-and-terms "The ‘Blue Guide’ on the implementation of EU product rules Chapter 2.2."
 [EUBG-2022-3]:#references-and-terms "The ‘Blue Guide’ on the implementation of EU product rules Chapter 3.1."

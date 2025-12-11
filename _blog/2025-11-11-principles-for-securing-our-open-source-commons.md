@@ -169,15 +169,10 @@ Preventing this requires resources and attention that currently aren't available
 
 
 
-*[SBOM]: Software Bill of Materials – a standard machine-readable file that describes what an application or a component is made of.
+*[SBOM]: Software Bill of Materials – a standard machine-readable file that describes what an application or a component is made of, license terms and other metadata.
 *[CRA]: Cyber Resilience Act – a EU product law that, starting in 2027, requires CE-marked products with digital elements also have good cybersecurity.
-*[OSS]: Open Source Software – Software published shared a license that adheres to the Open Source Definition, as described on opensource.org/osd .
-*[OSPO]: Open Source Program Office – a business section with responsibility for coordinating efforts around license compliance, OSS developer relations and corporate guidelines for use of Open Source Software.
+*[OSS]: Open Source Software – Software published under the terms of a license that adheres to the Open Source Definition, as described on opensource.org/osd .
+*[OSPO]: Open Source Program Office – a business section with responsibility for coordinating efforts around license compliance, OSS developer relations and corporate guidelines for use of and contributing to Free and Open Source Software.
 *[PURL]: PackageURL – a standard for referring to software packages in a ecosystem-agnostic way.
-*[FOSS]: Free and Open Source Software – 
-*[ROI]: Return on Investment – 
+*[FOSS]: Free and Open Source Software – Software published under the terms of a license that adheres to the Free Software Definition, as described on gnu.org/philosophy/free-sw .
 *[ROSI]: Return on Security Investment –
-*[CISO]: Chief Information Security Officer –
-*[CIO]: Chief Information Officer – 
-*[CTO]: Chief Technology Officer – 
-*[CEO]: Chief Executive Officer – 

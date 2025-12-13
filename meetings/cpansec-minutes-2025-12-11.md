@@ -1,8 +1,13 @@
-# CPANSec bi-weekly meeting minutes 2025-12-11
+# CPANSec bi-weekly meeting 2025-12-11
+
+- 2025-12-11 @ 16:00 UTC.
+- Meeting intended on Element Call (native video chat in Element client), but due technical issues among some of the attendees, we moved to Google Meet.
+
+## Attending
 
 - @jjatria, @sjn, @stigtsp, @thibaultduponchelle, @timlegge, Michael
 
-## Attending
+## Minutes
 
 - [x] Introductions
   - Michael (north-of-nowhere, mjmc) introduced himself, and was welcomed!

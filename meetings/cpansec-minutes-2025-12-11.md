@@ -39,4 +39,4 @@
 
 ## Next meeting
 
-- [ ] @sjn - next meeting in 4 weeks exactly, January 8, 2026 @ 16:00 UTC
+- [ ] @sjn - next meeting in 4 weeks exactly, January 8, 2026 @ 16:00 UTC ([iCal](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Y2dncTltMG5ocWRqdWV0ZXY1YzlqNm1tZW5fMjAyNjAxMDhUMTYwMDAwWiA2OTE1ODRlM2RiN2QwYTg3N2I0MzQ4MmZjOTk2ZWFhZTk5ODRjZjhiYTBiNzY5ZDVkMDBkMDQyYTMyZjljNjZlQGc&tmsrc=691584e3db7d0a877b43482fc996eaae9984cf8ba0b769d5d00d042a32f9c66e%40group.calendar.google.com))

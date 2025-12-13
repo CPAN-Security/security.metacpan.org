@@ -37,6 +37,7 @@ Meeting minutes [currently under review](https://github.com/CPAN-Security/securi
 * [2025-05-21](cpansec-minutes-2025-05-21.md)
 * [2025-06-04](cpansec-minutes-2025-06-04.md)
 * [2025-06-18](cpansec-minutes-2025-06-18.md)
+* [2025-12-11](cpansec-minutes-2025-12-11.md)
 
 ### 2024
 * [2024-01-06](cpansec-minutes-2024-01-06.md)

@@ -7,7 +7,7 @@ news_entries_layout: grid
 news_limit: 4
 blog_sort_by: date
 blog_sort_order: reverse
-blog_entries_layout: list
+blog_entries_layout: grid
 blog_limit: 4
 classes: wide
 toc: true
@@ -32,6 +32,8 @@ If you care and would like to make a contribution, you can…
 * Join us in our [IRC channel](ircs://ssl.irc.perl.org:7062/#cpan-security), #cpan-security on irc.perl.org
 * Send an e-mail to the CPAN Security Group &lt;cpan-security&#64;security.metacpan.org&gt; 📧
 * Subscribe to [@cpansec@fosstodon.org](https://fosstodon.org/@cpansec) on the Fediverse 🐘
+* Subscribe to the [CPANSec mailing lists](https://lists.security.metacpan.org/)
+* Browse and read the [CPANSec CVE Announcements](https://lists.security.metacpan.org/cve-announce/) archive
 
 
 ## Resources

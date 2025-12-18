@@ -7,6 +7,11 @@ toc: true
 tags: cpansec update history
 author: thibaultduponchelle
 excerpt: Here is the CPANSec 2024 Retrospective
+header:
+  overlay_image: /assets/images/header/SJN07858.JPG
+  teaser: assets/images/teaser/SJN07858.JPG
+  overlay_filter: 0.5
+  caption: "Photo credit: [@sjn](https://github.com/sjn)"
 ---
 
 ## A big year for CPANSec

@@ -13,7 +13,7 @@ This website runs on GitHub Pages, and uses Ruby's _Jekyll_ gem for generating s
 ## Installing `ruby` and `gem`
 
 ```
-apt install ruby gem
+apt install ruby ruby-dev gem
 ```
 
 ## Installing Jekyll

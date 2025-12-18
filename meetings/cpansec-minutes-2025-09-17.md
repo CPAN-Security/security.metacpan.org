@@ -5,8 +5,6 @@ meeting_time: 2025-09-17 18:00 UTC
 title: CPANSec bi-weekly minutes
 ---
 
-[TOC]
-
 ## Agenda & Meeting Details 2025-09-17
 
 ## 17:30 UTC - Pre-meeting socializing

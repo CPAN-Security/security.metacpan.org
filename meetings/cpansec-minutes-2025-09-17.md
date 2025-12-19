@@ -1,4 +1,9 @@
-# CPANSec bi-weekly meeting 2025-09-17
+---
+layout: single
+toc: true
+meeting_time: 2025-09-17 18:00 UTC
+title: CPANSec bi-weekly minutes
+---
 
 ## 17:30 UTC - Pre-meeting socializing
 -   Socializing & getting up to speed before the meeting starts properly

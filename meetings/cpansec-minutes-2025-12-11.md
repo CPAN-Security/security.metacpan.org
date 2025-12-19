@@ -1,4 +1,11 @@
-# CPANSec bi-weekly meeting 2025-12-11
+---
+layout: single
+toc: true
+meeting_time: 2025-12-11 16:00 UTC
+title: CPANSec bi-weekly minutes
+---
+
+## Agenda
 
 - 2025-12-11 @ 16:00 UTC.
 - Meeting intended on Element Call (native video chat in Element client), but due technical issues among some of the attendees, we moved to Google Meet.

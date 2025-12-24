@@ -186,6 +186,7 @@ See also: [Artifact](#artifact).
         * Static, Dynamic
         * Component, Resource or Service
         * Vendored-in (Bundled, Embedded, Included)
+        * Peer or Plugin
         * Direct or Transitive
         * Optional, Virtual, Assumed (Phantom) or Unused (Zombie)
         * In-ecosystem (Native) or Out-of-ecosystem (Non-native)
@@ -216,6 +217,8 @@ See also: [Artifact](#artifact).
 1. (CPANSec-2024) A software or service dependency used by the component author during the development of the software.
     * Examples: Editors, test suite data anonymisers, code generators, documentation template tools or generators, large language models
 
+(Ref: [CPANSec-2024])
+
 * See also
     * [Dependency, Integration](#dependency-integration)
 
@@ -239,6 +242,13 @@ See also: [Artifact](#artifact).
 
 1. (CPANSec-2024) Software or service dependency used by the component author during any CI/CD pipeline actions, as part of the development of the software.
     * Examples: vulnerability check actions on GitHub, commit messaging tools (like actions that report commits to an IRC channel)
+
+#### Dependency, Peer (Plugin, Compatibility) ✍️ {#dependency-peer}
+
+1. (CPANSec-2025) A dependency where the depending component is a plugin requiring that a compatible plugin "host" component or API is available.
+    * Original concept described in (NODEJS-2013)
+
+(Ref: [CPANSec-2025], [NODEJS-2013])
 
 #### Dependency, Transitive ✍️ {#dependency-transitive}
 
@@ -1082,6 +1092,7 @@ This glossary is partly based on terms from the following sources.
 - (EUBG-2022-4) [The ‘Blue Guide’ on the implementation of EU product rules](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04)#d1e4315-1-1) Chapter 4.3, published 2022-06-29.
 - (NIXOS-2024) [Nix concepts](https://zero-to-nix.com/concepts), as of 2024-08-15
 - (CycloneDX-2024) [CycloneDX 1.6 Specification (JSON)[https://cyclonedx.org/docs/1.6/json/#metadata_lifecycles_items_oneOf_i0_phase], published 2024-04-09
+- (NODEJS-2013) [NodeJS Peer Dependencies](https://nodejs.org/en/blog/npm/peer-dependencies), published 2013-02-08
 
 ## About this document
 
@@ -1100,7 +1111,9 @@ Several people have been involved in the development of this document
 * Josh Bressers
 
 
-[CPANSec-2024]:#references-and-terms "Commentary and proposed improvements made by the author(s) of this document."
+[CPANSec-2024]:#references-and-terms "Definitions, commentary and proposed improvements made by the author(s) of this document in 2024."
+[CPANSec-2025]:#references-and-terms "Definitions, commentary and proposed improvements made by the author(s) of this document in 2025."
+[CPANSec-2026]:#references-and-terms "Definitions, commentary and proposed improvements made by the author(s) of this document in 2026."
 [CISA-2023]:#references-and-terms "CISA Types of Software Bill of Materials (SBOM)"
 [SCVS-2020]:#references-and-terms "OWASP Software Component Verification Standard 1.0 Glossary Appendix A."
 [SLSA-2023]:#references-and-terms "OpenSSF Supply-chain Levels for Software Artifacts 1.0 Terminology."
@@ -1116,3 +1129,4 @@ Several people have been involved in the development of this document
 [EUBG-2022-3]:#references-and-terms "The ‘Blue Guide’ on the implementation of EU product rules Chapter 3.1."
 [EUBG-2022-4]:#references-and-terms "The ‘Blue Guide’ on the implementation of EU product rules Chapter 4.3."
 [NIXOS-2024]:#references-and-terms "Nix concepts"
+[NODEJS-2013]:#references-and-terms "Peer Dependencies"

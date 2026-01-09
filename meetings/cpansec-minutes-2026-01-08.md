@@ -8,7 +8,6 @@ title: CPANSec bi-weekly minutes
 ## Agenda
 
 - 2026-01-08 @ 16:00 UTC.
-- Meeting intended on Element Call (native video chat in Element client), but due technical issues among some of the attendees, we moved to Google Meet.
 
 ## Attending
 

@@ -22,18 +22,20 @@ title: CPANSec bi-weekly minutes
   - FOSDEM extra day for OpenSSF, will attend if first choices are not available
 
 - @timlegge
-  - Attended OpenSSF vulnerability disclosure meeting + CNA business as usual
-  - Share details about pre-release disclosure information and signatories (private channel, private emails...)
+  - Attended OpenSSF vulnerability disclosure meeting
+  - CNA business as usual
+  - Shared details about pre-release disclosure information and signatories (private channel, private emails...)
   - 2025 retro ongoing
 
 - @thibaultduponchelle
+  - Released CPAN::Tarball::Patch (in: tarball -> out: tarball)
   - Reviewed more compression confusions technics with installers and PAUSE
   - Will maybe attend some OpenSSF meetings -> @sjn: "please announce yourself as CPANSec"
   - Demo new exploratory project related to CPAN Patch tooling: enthusiastic feedback! (but SBOM, but $VERSION...)
   
 - @jjatria
-  - Feedback from end of december meeting (@sjn, @thibaultduponchelle, @stigsp)
-  - 2 different *incompatible* use cases for Purl, need to remove AUTHOR
-  - Need to sync with giterlizzi
+  - Feedback from end of december meeting (@sjn, @thibaultduponchelle, @stigsp) related to Purl
+  - 2 different *incompatible* use cases for Purl, need to remove AUTHOR from spec
+  - Need to sync with @giterlizzi
   - Wants to participate to retro, waiting for @giterlizzi
   - Signed pre release disclosure information

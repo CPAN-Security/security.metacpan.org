@@ -117,7 +117,7 @@ If the demands to their project becomes too great (e.g. due to popularity), any 
 
 ### 8. Some Open Source work is extremely boring
 
-
+And boring work tends to get no volunteers. 
 
 
 ### 9. Your Open Source Supply Chains are part of your dependency graph
@@ -125,12 +125,13 @@ If the demands to their project becomes too great (e.g. due to popularity), any 
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
 > **What is a dependency graph?**
+
 > * A dependency is a software component that is required for another software component to function as expected.
 > * Example: A component for using a network protocol; A remote service the application uses; Data describing the sorting rules or time-zones used.
 > * Dependencies may themselves have dependencies, and these again have their own dependencies, and so on.
 > When we follow these, we map out a _dependency graph_.
 
-These Supply Chains and ecosystems are themselves OSS projects, and due to historical reasons, _they are silos_.
+_OSS Supply Chains and ecosystems are themselves OSS projects_, and due to historical reasons, _they are silos_.
 Therefore one can say the same of their security posture – they are inward-looking and in silos.
 The work necessary for improving this also requires time and attention from their respective communities.
 This may require efforts toward the adoption of technologies like PURL or other SBOM-related standards, to enable you to create a complete cross-ecosystem map of your dependencies.
@@ -143,6 +144,8 @@ This means there's a need for Open Source Software communities and ecosystems be
 Preventing this requires resources and attention that currently aren't available for the term-supplying OSS ecosystems and projects out there.
 
 ### 11. Support isn't guaranteed, and neither is responsiveness
+
+Open Source Maintainers 
 
 
 ### 12. Open Source projects thrive on goodwill and contributions, not assessments and analysis
@@ -166,7 +169,12 @@ Preventing this requires resources and attention that currently aren't available
 ## Summary
 
 
+### Acknowledgements
 
+Gratitude go out to the following contributors:
+
+- @lizmat
+- @leejo
 
 
 *[SBOM]: Software Bill of Materials – a standard machine-readable file that describes what an application or a component is made of, license terms and other metadata.

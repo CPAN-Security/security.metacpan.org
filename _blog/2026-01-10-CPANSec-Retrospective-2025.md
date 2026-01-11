@@ -5,8 +5,13 @@ toc: true
 title: "CPANSec: 2025 Year in Review"
 date: 2026-01-10 17:05:00 +0000
 category: blog
-tags: purl cna sbom year cpansec security
-author: timlegge
+tags: purl cna cve cra sbom year cpansec perl cpan security
+authors:
+  - timlegge
+  - thibaultduponchelle
+  - stigtsp
+  - sjn
+author_profile: true
 excerpt: "CPANSec year in review: Website updates, CVEs published, conference talks held, security modules written and guidelines published."
 ---
 

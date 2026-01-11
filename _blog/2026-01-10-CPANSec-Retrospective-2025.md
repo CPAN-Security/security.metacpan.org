@@ -7,7 +7,7 @@ date: 2026-01-10 17:05:00 +0000
 category: blog
 tags: purl cna sbom year cpansec security
 author: timlegge
-excerpt: "CPANSec year in review"
+excerpt: "CPANSec year in review: Website updates, CVEs published, conference talks held, security modules written and guidelines published."
 ---
 
 # CPANSec: 2025 Year in Review
@@ -17,12 +17,12 @@ Salve made substantial improvements to the site's layout, style, and content.
 The website now features a modern design, and numerous community members have contributed new content throughout the year.
 
 ## Outreach and Conferences
-We have stickers! Salve created an official CPANSec logo and has been distributing stickers at various conferences.
+We have stickers! Salve created stickers from the CPANSec logo Stig and he made, and has been distributing these at various conferences.
 Keep an eye out for them at future events!
+Salve has also been "secretly" proposing a mascot for CPANSec, and placed it all over the website and elsewhere. 🦆
 
-**Conference Presentations:**
+### Presentations delivered
 (Available at [security.metacpan.org/presentations/](https://security.metacpan.org/presentations/))
- 
 
 1. **FOSDEM 2025** (Software Bill of Materials devroom) (Salve J. Nilsen)
 1. **German Perl Workshop 2025** — CPAN Security and Sustainability in light of the EU Cyber Resilience Act (Salve J. Nilsen)
@@ -36,7 +36,7 @@ You can listen to [all episodes](https://underbar.cpan.io/) or jump straight to 
 
 ## New Security-Related Modules
 The community released several security-focused modules this year:
- 
+
 1. [Crypt::OpenSSL3](https://metacpan.org/pod/Crypt::OpenSSL3) by **LEONT**
 1. [Crypt::SysRandom](https://metacpan.org/pod/Crypt::SysRandom) by **LEONT**
 1. [Crypt::URandom::MonkeyPatch](https://metacpan.org/pod/Crypt::URandom::MonkeyPatch) by **RRWO**
@@ -85,7 +85,7 @@ Separately, [Gianni Ceccarelli](https://metacpan.org/author/DAKKAR) released [cp
 
 ## Supply Chain Security
 Thibault completed the [CPAN Starjacking study](https://security.metacpan.org/docs/cpan-starjacking.html) and conducted penetration testing on PAUSE (specifically targeting forms and payloads).
- 
+
 He also examined "decompression confusion" and malicious compression uploads, reviewing supply chain attack techniques that surfaced throughout 2025 in other ecosystems.
 Thibault, Stig, and Leon also developed two private hardening fixes for PAUSE.
 
@@ -95,7 +95,7 @@ The group collectively reviewed several suspicious uploads, including an encrypt
 
 GDT delivered a coherent stack of modules to support SBOM generation in the CycloneDX format:
 
-At the core is [SBOM::CycloneDX](https://metacpan.org/dist/SBOM-CycloneDX), a library that allows programmatic creation and manipulation of CycloneDX SBOM documents, intended to be reused by other tools and integrations.
+At the core is [SBOM::CycloneDX](https://metacpan.org/dist/SBOM-CycloneDX), a library that allows programmatic creation and manipulation of CycloneDX version 1.6 SBOM documents, intended to be reused by other tools and integrations.
 
 Building on top of that, [App::CPAN::SBOM](https://metacpan.org/dist/App-CPAN-SBOM) provides a command-line interface to generate an SBOM for a CPAN distribution, making SBOM generation immediately accessible to authors and maintainers.
 
@@ -128,7 +128,7 @@ References:
 - [URI::PackageURL](https://metacpan.org/dist/URI-PackageURL)
 - [CPAN type spec](https://github.com/package-url/purl-spec/blob/main/types-doc/cpan-definition.md)
 - [CPANSec pURL Maker](https://gist.github.com/jjatria/5d50d47c53fe77ab3c63dbc4c9de5641)
-- [CVE 5.2.0 added support for packageURL fields](https://github.com/CVEProject/cve-schema/releases/tag/v5.2.0) 
+- [CVE 5.2.0 added support for packageURL fields](https://github.com/CVEProject/cve-schema/releases/tag/v5.2.0)
 
 
 ## CRA
@@ -188,11 +188,23 @@ Rounding out the top five were **Buffer Overflows**, which included one Perl cor
 | **2** | CWE-190 | Integer Overflow or Wraparound |
 | **2** | CWE-1287 | Improper Validation of Input Type |
 
-> **Note:** 12 other CWE types were recorded with 1 instance each, including Command Injection (CWE-78), Race Conditions (CWE-689), and Timing Discrepancies (CWE-208).
+> [!NOTE]
+> 12 other CWE types were recorded with 1 instance each, including Command Injection (CWE-78), Race Conditions (CWE-689), and Timing Discrepancies (CWE-208).
 
 ### CVE Program Status
 Despite a "funding crisis" earlier this year that threatened the global CVE program, funding was restored and the program is stable.
 This event served as a wake-up call, and plans are underway internationally to ensure the long-term sustainability of the CVE ecosystem.
 
 ### OSS CNA Users Group
-Members of our team regularly attend the **OSS CNA Users Group** (organized by RedHat) to share insights with other open-source projects and align our processes with industry standards.
+Members of our team regularly attend the **OSS CNA Users Group** (organized by Red Hat) to share insights with other open-source projects and align our processes with industry standards.
+
+## Security and OSS Sustainability
+Salve has also spent a substantial time on developing a specification for communicating project needs.
+In 2025, this project was accepted to the [EMCA TC54](https://tc54.org/) standardization track, Techincal Committee 4 - [CONTRIBUTING.yaml](https://tc54.org/contributing-yaml/).
+Open Source project sustainability is also a security concern, and this work is taking steps to address some of the long-term communication concerns in this regard.
+Much of this specification has drawn experiences from long-term Open Source contributors, with experiences from a wide and varied selection of communities - including the ones around Perl and CPAN.
+
+## Join CPANSec!
+And finally, a reminder: CPAN Security Group is a volunteer effort!
+This group's success and capability to respond depends on volunteer efforts by Perl and CPAN experts with a passion for security and sustainability.
+If you are such a person, then [reach out to us](https://security.metacpan.org/#learn-more--contribute)!

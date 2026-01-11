@@ -1,7 +1,7 @@
 ---
 layout: single
 published: false
-toc: false
+toc: true
 title: "CPANSec: 2025 Year in Review"
 date: 2026-01-10 17:05:00 +0000
 category: blog
@@ -30,6 +30,7 @@ Salve has also been "secretly" proposing a mascot for CPANSec, and placed it all
 1. **German Perl Workshop 2025** — Metadata Clapalong 👏 (Salve J. Nilsen)
 1. **London Perl Workshop 2025** – An update on CPANSec (José Joaquín Atria)
 
+### Podcasts
 CPANSec also participated in the [Underbar podcast](https://underbar.cpan.io/) while in Leipzig for PTS 2025.
 You can listen to [all episodes](https://underbar.cpan.io/) or jump straight to [Episode 7 featuring CPANSec](https://underbar.cpan.io/episodes/7/).
 
@@ -131,13 +132,14 @@ References:
 - [CVE 5.2.0 added support for packageURL fields](https://github.com/CVEProject/cve-schema/releases/tag/v5.2.0)
 
 
-## CRA
+## The EU Cyber Resilience Act
 
-On the CRA side, Salve attended weekly meetings thoughout the year, contributing to both the [Open Regulatory Working Group's CRA FAQ](https://cra.orcwg.org/), and conversations around CRA's Voluntary Attestation regime.
+On the CRA side, Salve attended weekly meetings thoughout the year, contributing to both the [Open Regulatory Working Group's CRA FAQ](https://cra.orcwg.org/), and conversations around the CRA Voluntary Attestation regime.
 
-The site is shaping up to become a quite useful resource, and several people are dedicated to keep it up-to-date with the different authoritative sources on the CRA.
+The FAQ is shaping up to become a quite useful resource, and several people are dedicated to keep it up-to-date with the different authoritative sources on the CRA.
 
 This work helps ensure that the Perl ecosystem remains informed about emerging EU security regulations.
+Expect more on this in the coming year!
 
 ## Perl and CPAN CNA
 
@@ -200,9 +202,9 @@ Members of our team regularly attend the **OSS CNA Users Group** (organized by R
 
 ## Security and OSS Sustainability
 Salve has also spent a substantial time on developing a specification for communicating project needs.
-In 2025, this project was accepted to the [EMCA TC54](https://tc54.org/) standardization track, Techincal Committee 4 - [CONTRIBUTING.yaml](https://tc54.org/contributing-yaml/).
+In 2025, this project was accepted to the [EMCA Technical Committee 54](https://tc54.org/) Task Group 4 standardization track: [CONTRIBUTING.yaml](https://tc54.org/contributing-yaml/).
 Open Source project sustainability is also a security concern, and this work is taking steps to address some of the long-term communication concerns in this regard.
-Much of this specification has drawn experiences from long-term Open Source contributors, with experiences from a wide and varied selection of communities - including the ones around Perl and CPAN.
+This specification has drawn experiences from long-term Open Source contributors from a wide and varied selection of communities - including the ones around Perl and CPAN.
 
 ## Join CPANSec!
 And finally, a reminder: CPAN Security Group is a volunteer effort!

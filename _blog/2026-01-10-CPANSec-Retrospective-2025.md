@@ -11,6 +11,7 @@ authors:
   - thibaultduponchelle
   - stigtsp
   - sjn
+  - jjatria
 author_profile: true
 excerpt: "CPANSec year in review: Website updates, CVEs published, conference talks held, security modules written and guidelines published."
 ---
@@ -116,19 +117,15 @@ References:
 
 ## Package URL (PURL) Standardization
 
-Package URL (PURL) is a standard for uniquely identifying software packages independently of their ecosystem or distribution channel.
+Package URL (PURL) is a standard for identifying software packages independently of their ecosystem or distribution channel.
 It is designed to support identification of software packages across software supply chains and a wide range of use cases, including Software Bills of Materials, vulnerability databases, advisories and disclosures, exploitability reports, and dependency reporting.
 
 PURL is now a formal specification standardized as [ECMA-427](https://ecma-international.org/publications-and-standards/standards/ecma-427/), developed within the Technical Committee [TC54](https://tc54.org/purl/), and is increasingly adopted as a common reference across tools, SBOM formats, and software supply-chain security processes.
 
-For the Perl ecosystem, a dedicated PURL type for CPAN is defined to provide a standardized way to identify CPAN distributions.
-This PURL type specifies how a CPAN distribution is represented using the PURL syntax, defining the relevant components and their semantics in a way that is consistent with the CPAN and PAUSE model.
+Since they are intended to be used in a wide set of contexts, PURLs need to be versatile enough to cater for at least two different use cases: one in which we need a stable and unambiguous representation of a specific package (to be used in e.g. SBOMs), and one in which we need a broad representation for a wide range of releases or versions of an individual package (for use in e.g. CVEs or security advisories).
 
-The adoption of PURL for CPAN is relatively straightforward in the context of SBOMs, where the primary goal is to describe, in a precise and immutable way, the components that are effectively included in a software artifact.
-
-The situation is different when PURL is used in the context of CVEs: in the CPAN specification the *namespace* is mandatory and corresponds to the distribution AUTHOR, while vulnerabilities often span multiple versions and may persist across maintainer changes over time.
-
-This exposes a gap between the identification requirements of SBOMs and the correlation needs of vulnerability management (CVE).
+We have been working on a schema for PURLs that can be used as a standard way to refer to CPAN distributions in both of these cases.
+This includes the definition of the relevant components and their semantics, in a way that is consistent with the CPAN and PAUSE models.
 
 References:
 - [URI::PackageURL](https://metacpan.org/dist/URI-PackageURL)

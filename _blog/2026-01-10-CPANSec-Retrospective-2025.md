@@ -1,15 +1,19 @@
 ---
 layout: single
-published: false
+published: true
 toc: true
 title: "CPANSec: 2025 Year in Review"
 date: 2026-01-10 17:05:00 +0000
 category: blog
 tags: purl cna cve cra sbom year cpansec perl cpan security
 authors:
+  - cpansec
   - timlegge
   - thibaultduponchelle
   - stigtsp
+  - giterlizzi
+  - jjatria
+  - robrwo
   - sjn
   - jjatria
 author_profile: true
@@ -69,6 +73,8 @@ The community released several security-focused modules this year:
 ## Security Documentation
 
 We published and updated the [CPAN Author's Guide to Random Data for Security](https://security.metacpan.org/2025/01/03/randomness-guide.html).
+
+Inspired by [CVE-2011-10007](https://github.com/advisories/GHSA-cvg9-q978-4569), we published a blog post about the issueus with [2-argument open](https://security.metacpan.org/2025/06/06/two-arg-open.html).
 
 Additionally, the Perl core and FAQ (v5.42.0) were [updated](https://perldoc.perl.org/5.42.0/perldelta) to recommend modern modules for secure random data generation.
 
@@ -208,7 +214,35 @@ In 2025, this project was accepted to the [EMCA Technical Committee 54](https://
 Open Source project sustainability is also a security concern, and this work is taking steps to address some of the long-term communication concerns in this regard.
 This specification has drawn experiences from long-term Open Source contributors from a wide and varied selection of communities - including the ones around Perl and CPAN.
 
-## Join CPANSec!
+## Contributors
+
+Many have contributed, in both small and substantial ways. In last name alphabetical order, some of the most active are:
+
+```
+José Joaquín Atria
+H.Merijn Brand
+Thibault Duponchelle
+Alexander Hartmaier
+Timothy Legge
+Tina Müller
+Salve J. Nilsen
+Breno G. de Oliveira
+Stig Palmquist
+Nicolas Rochelemagne
+Robert Rothenberg
+Giuseppe Di Terlizzi
+Leon Timmermans
+```
+
+
+## Final words
+This has been an interesting and productive year. A few more contributors have stepped up and made a positive impact, and we have made a positive mark on the security posture of our ecosystem.
+
+While the group hasn't met as regularly as in 202, we have still managed to find time to do much!
+As for 2026, much is already happening in the background! Stay in touch if you are interested, and if you have some tuits to spare…
+
+
+### Join CPANSec!
 And finally, a reminder: CPAN Security Group is a volunteer effort!
 This group's success and capability to respond depends on volunteer efforts by Perl and CPAN experts with a passion for security and sustainability.
 If you are such a person, then [reach out to us](https://security.metacpan.org/#learn-more--contribute)!

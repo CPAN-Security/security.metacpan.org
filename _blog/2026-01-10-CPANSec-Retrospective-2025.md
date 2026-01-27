@@ -1,6 +1,6 @@
 ---
 layout: single
-published: true
+published: false
 toc: true
 title: "CPANSec: 2025 Year in Review"
 date: 2026-01-10 17:05:00 +0000

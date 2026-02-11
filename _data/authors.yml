@@ -1,0 +1,51 @@
+cpansec:
+  name: "CPANSec Contributors"
+  avatar: "/media/cpansec-floater-light-circle.png"
+bio: >-
+  This article is a collective effort by multiple CPANSec contributors.
+
+robrwo:
+  name: Robert Rothenberg
+  bio: >-
+    Writing software with Perl and developing websites since the mid-1990s.
+    Currently based in England.
+  github: robrwo
+  mastodon: { username: "rrwo", instance: "infosec.exchange" }
+  avatar: "/assets/images/authors/robrwo.png"
+  cpan: rrwo
+
+sjn:
+  name: Salve J. Nilsen
+  bio: >-
+    Policy, metadata and OSS sustainability guy in CPANSec.
+    Based in Oslo, Norway.
+  github: sjn
+  mastodon: { username: "sjn", instance: "chaos.social" }
+  avatar: "/assets/images/authors/sjn.png"
+
+thibaultduponchelle:
+  name: Thibault Duponchelle
+  github: thibaultduponchelle
+  avatar: "/assets/images/authors/thibaultduponchelle.jpeg"
+
+stigtsp:
+  name: Stig Palmquist
+
+timlegge:
+  name: Timothy Legge
+
+garu:
+  name: Breno G. de Oliveira
+
+tux:
+  name: H. Merijn Brand ("Tux")
+  bio: Data analyst and software developer based in the Netherlands
+  github: Tux
+  avatar: "/assets/images/authors/tux.png"
+  mastodon: { username: "Tux", instance: "mastodon.social" }
+
+abraxxa:
+  name: Alexander Hartmaier
+
+leont:
+  name: Leon Timmermans

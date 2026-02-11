@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: single
 permalink: /meetings/
 toc: true
-next_meeting_time: May 7th, 2025 16:00 UTC
+next_meeting_time: August 20th 2025 15:00 UTC
 title: CPANSec meeting details & minutes
 ---
 
@@ -24,17 +24,24 @@ title: CPANSec meeting details & minutes
 
 Meeting minutes [currently under review](https://github.com/CPAN-Security/security.metacpan.org/pulls?q=is%3Apr+is%3Aopen+label%3Aminutes) on Github (usually available some days after a meeting).
 
+### 2026
+* [2026-01-08](cpansec-minutes-2026-01-08.md)
+
 ### 2025
 * [2025-01-08](cpansec-minutes-2025-01-08.md)
 * [2025-01-22](cpansec-minutes-2025-01-22.md)
 * [2025-02-05](cpansec-minutes-2025-02-05.md)
 * [2025-02-19](cpansec-minutes-2025-02-19.md)
-* [2024-03-12](cpansec-minutes-2025-03-12.md)
-* [2024-03-26](cpansec-minutes-2025-03-26.md)
-* [2024-04-09](cpansec-minutes-2025-04-09.md)
-* [2024-04-23](cpansec-minutes-2025-04-23.md)
-* [2024-05-07](cpansec-minutes-2025-05-07.md)
-
+* [2025-03-12](cpansec-minutes-2025-03-12.md)
+* [2025-03-26](cpansec-minutes-2025-03-26.md)
+* [2025-04-09](cpansec-minutes-2025-04-09.md)
+* [2025-04-23](cpansec-minutes-2025-04-23.md)
+* [2025-05-07](cpansec-minutes-2025-05-07.md)
+* [2025-05-21](cpansec-minutes-2025-05-21.md)
+* [2025-06-04](cpansec-minutes-2025-06-04.md)
+* [2025-06-18](cpansec-minutes-2025-06-18.md)
+* [2025-09-17](cpansec-minutes-2025-09-17.md)
+* [2025-12-11](cpansec-minutes-2025-12-11.md)
 
 ### 2024
 * [2024-01-06](cpansec-minutes-2024-01-06.md)
@@ -46,7 +53,6 @@ Meeting minutes [currently under review](https://github.com/CPAN-Security/securi
 * [2024-04-10](cpansec-minutes-2024-04-10.md)
 * [2024-05-15](cpansec-minutes-2024-05-15.md)
 * [2024-06-05](cpansec-minutes-2024-06-05.md)
-
 * [2024-07-18](cpansec-minutes-2024-07-18.md)
 * [2024-08-01](cpansec-minutes-2024-08-01.md)
 * [2024-08-15](cpansec-minutes-2024-08-15.md)
@@ -100,9 +106,8 @@ Meeting minutes [currently under review](https://github.com/CPAN-Security/securi
 
 ### When creating the Minutes
 - [x] When creating the minutes, utems with filled checkboxes remain as-is. Do NOT delete!
-    - [X] _This item is done, so record it in the minutes as-is_ 
+    - [X] _This item is done, so record it in the minutes as-is_
 
 ### When creating the Agenda
 - [x] When a NEW agenda is created from the previous meeting minutes, items with filled checkboxes are deleted: they aren't relevant any more!
     - [X] _~~This item is done, so we delete ut when preparing the next meeting agenda~~_
-

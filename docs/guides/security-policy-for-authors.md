@@ -1,6 +1,6 @@
 ---
-layout: page
-author: Robert Rothenberg
+layout: single
+author: robrwo
 title: Guidelines for Adding a Security Policy to Perl Distributions
 description: A guide for including a Security Policy in a CPAN distribution is to advise users how to report security issues, and how these issues will be handled.
 toc: true
@@ -16,7 +16,7 @@ You do not need to mention or link to any license in your security policy, and y
 
 ### Why should authors add a security policy?
 
-You should add a security policy to tell users that you (the developers and maintainers of your software) care about the integrity of their data and systems.
+You should add a security policy to tell downstream users that you (the developers and maintainers of your software) care about the integrity of their data and systems.
 
 A security policy tells users how to report security issues to the project maintainer(s), how the maintainer(s) will respond, and what software will be supported by them.
 
@@ -25,6 +25,22 @@ Even if you are not subject to regulations of a government that requires securit
 Adding a security policy will make it easier for them to follow regulations.
 
 Adding a security policy will not add any legal obligations or guarantees beyond your software's license.
+
+#### Who are the "downstream users"?
+
+These are the people who use your software directly.
+
+These are the people who use software that uses your software.
+
+These are the people who develop software that uses your software.
+
+These are the people who build, test and install your software.
+
+These are the people who distribute your software.
+
+These are people who package your software for use in their distribution ecosystem.
+
+These are people who contribute to your software.
 
 ### Why should authors work with CPANSec?
 
@@ -56,6 +72,7 @@ If the project has a single maintainer, then an email address is good enough.
 For projects with multiple maintainers, one option is an email alias that forwards to the maintainers who handle security issues.
 
 Some software repositories like GitHub [\[1\]](#references-and-notes) (Github-Sec-Advisory) or GitLab support reporting security advisories confidentially.
+You may still want to specify an alternative email address for users without access to GitHub or GitLab.
 
 ## The format of the security policy
 
@@ -71,6 +88,9 @@ important document on par with `README`, `LICENSE`, `INSTALL` and
 `CONTRIBUTING`.  This will also differentiate the file from `security.txt`
 which has a specific machine-readable format and has a different function
 [\[4\]](#references-and-notes) (Securitytxt).
+
+The policy should be in the root directory of your distribution and in the root directory of the software repository.
+(Note that GitHub has a feature for writing security policies that stores them in `.github/SECURITY.md`. This is not helpful for non-GitHub users and the file should be moved to the repository root.)
 
 The file should have the following sections.
 
@@ -102,6 +122,8 @@ or alternatively,
 
 > Security vulnerabilities can be reported via the project GitHub repository
 > [Security Advisories](https://example.github.com/foobar/security/advisories).
+> (If you do not have access to GitHub, then you can report issues via email
+> to <foobar@example.com>.)
 
 If the project has a web site, with this security policy posted on the
 website, then you should refer to that URL, e.g.:
@@ -119,23 +141,8 @@ If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
 
 > This text is based on the CPAN Security Group's Guidelines for Adding
-> a Security Policy to Perl Distributions (version 1.3.0)
+> a Security Policy to Perl Distributions (version 1.4.2)
 > https://security.metacpan.org/docs/guides/security-policy-for-authors.html
-
-#### Links from other module documentation
-
-If the module documentation or `README` has a section on reporting
-bugs, then wording should be added that refers users to the security
-policy, for example (in POD):
-
-```pod
-=head2 Reporting Security Vulnerabilities
-
-Security issues should not be reported on the bugtracker website.
-Please see F<SECURITY.md> for instructions how to report security
-vulnerabilities.
-```
-
 
 ### How to report a security vulnerability
 
@@ -147,6 +154,11 @@ special handling of security issues).
 It is important to refer to the current project maintainers, and not
 the package authors, who for older packages may be different.
 
+There should be a *single point of contact*.
+Do not provide a list of multiple email addresses or web pages and ask that users contact some or all of these addresses.
+
+Please ensure that the security contact information is consistent with distribution metadata, e.g. in the `META.json` file [\[3\]](#references-and-notes) (CPAN-Meta-Spec).
+
 For example,
 
 > Security vulnerabilities can be reported by e-mail to the current
@@ -157,6 +169,8 @@ or [\[1\]](#references-and-notes) (Github-Sec-Advisory)
 > Security vulnerabilities can be reported via the project GitHub repository
 > [Security Advisories](https://example.github.com/foobar/security/advisories).
 > On the "Advisories" page you can click on the "Report a vulnerability" button.
+> (If you do not have access to GitHub, then you can report issues via email
+> to <foobar@example.com>.)
 
 or for GitLab
 
@@ -165,19 +179,18 @@ or for GitLab
 > reporting the issue, please check the tickbox on the form labelled
 > "This issue is confidential and should only be visible to team members".
 
-There should be a *single point of contact*.
-Do not provide a list of multiple email addresses or web pages and ask that users contact some or all of these addresses.
-
-Please ensure that the security contact information is consistent with
-distribution metadata, e.g. in the `META.json` file
-[\[3\]](#references-and-notes) (CPAN-Meta-Spec).
-
 Add a reminder to include details for verifying the bug:
 
 > Please include as many details as possible, including code samples
 > or test cases, so that we can reproduce the issue.  Check that your
 > report does not expose any sensitive data, such as passwords,
 > tokens, or personal information.
+
+It is worth reminding users that they may be credited publicly:
+
+> Project maintainers will normally credit the reporter when a
+> vulnerability is disclosed or fixed.  If you do not want to be
+> credited publicly, please indicate that in your report.
 
 We recommend that you add note about also copying CPANSec on the
 notification if help is required triaging the issue, or if the issue
@@ -199,6 +212,9 @@ vulnerabilities in public, e.g.
 > until past any proposed date for public disclosure, or it has been
 > made public by the maintainers or CPANSec.  That includes patches or
 > pull requests or mitigration advice.
+
+Note that any policy for public disclosure are up to the maintainers of the project.
+However, embargoes should not be unreasonably long, and disclosure should take into account how it will affect downstream users.
 
 You can also link to the CPANSec page
 
@@ -226,11 +242,13 @@ It is reasonable that small projects with a single part time
 maintainer cannot promise a response time.  An alternative might be
 
 > The maintainer(s) aim to acknowledge your security report as soon as
-> possible.  However, this project is maintained by a single person in
+> possible.  However, this project is maintained by a single volunteer in
 > their spare time, and they cannot guarantee a rapid response.  If you
 > have not received a response from them within a week, then
 > please send a reminder to them and copy the report to CPANSec at
 > <cpan-security@security.metacpan.org>.
+
+You may want to change the wording "volunteer in their spare time" above to something else where appropriate.
 
 Also add a note about the initial response:
 
@@ -265,7 +283,8 @@ You may want to define what you consider a security vulnerability:
 
 > Security vulnerabilities are considered anything that allows users
 > to execute unauthorised code, access unauthorised resources, or to
-> have an adverse impact on accessibility or performance of a system.
+> have an adverse impact on accessibility, integrity or performance of
+> a system.
 
 You may also want to cover how other software packages are affected:
 
@@ -375,6 +394,22 @@ For example, if you are embedding the "baz" library in the "Foo-Bar" project, yo
 >
 > The original security policy for the baz library can be found in this directory as `SECURITY.md`.
 
+## Links from other module documentation
+
+If the module documentation or `README` has a section on reporting
+bugs, then wording should be added that refers users to the security
+policy, for example (in POD):
+
+```pod
+=head2 Reporting Security Vulnerabilities
+
+Security issues should not be reported on the bugtracker website.
+Please see F<SECURITY.md> for instructions how to report security
+vulnerabilities.
+```
+
+You may also want to refer to the security policy from any `CONTRIBUTING` or `HACKING` documentation.
+
 ## Examples
 
 These examples below are in the public domain as per the [Zero-Clause BSD License](https://opensource.org/license/0bsd).
@@ -394,7 +429,7 @@ The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
-a Security Policy to Perl Distributions (version 1.3.0)
+a Security Policy to Perl Distributions (version 1.4.2)
 https://security.metacpan.org/docs/guides/security-policy-for-authors.html
 
 # How to Report a Security Vulnerability
@@ -406,6 +441,10 @@ Please include as many details as possible, including code samples
 or test cases, so that we can reproduce the issue.  Check that your
 report does not expose any sensitive data, such as passwords,
 tokens, or personal information.
+
+Project maintainers will normally credit the reporter when a
+vulnerability is disclosed or fixed.  If you do not want to be
+credited publicly, please indicate that in your report.
 
 If you would like any help with triaging the issue, or if the issue
 is being actively exploited, please copy the report to the CPAN
@@ -426,7 +465,7 @@ on the CPANSec website.
 ## Response to Reports
 
 The maintainer(s) aim to acknowledge your security report as soon as
-possible.  However, this project is maintained by a single person in
+possible.  However, this project is maintained by a single volunteer in
 their spare time, and they cannot guarantee a rapid response.  If you
 have not received a response from them within a week, then
 please send a reminder to them and copy the report to CPANSec at
@@ -452,7 +491,7 @@ included in Foo-Bar are also covered by this policy.
 
 Security vulnerabilities are considered anything that allows users
 to execute unauthorised code, access unauthorised resources, or to
-have an adverse impact on accessibility or performance of a system.
+have an adverse impact on accessibility, integrity or performance of a system.
 
 Security vulnerabilities in upstream software (prerequisite modules
 or system libraries, or in Perl), are not covered by this policy
@@ -490,6 +529,15 @@ newer versions as recommended.
 Please see the software documentation for further information.
 ```
 
+## Software to Generate Security Policies
+
+Rather than copying and modifying the text from this guide, you can use existing software to generate a policy file.
+The following CPAN modules may be useful:
+
+[Software::Security::Policy](https://metacpan.org/pod/Software::Security::Policy) is a framework for generating a SECURITY.md files.
+
+[Dist::Zilla::Plugin::SecurityPolicy](https://metacpan.org/pod/Dist::Zilla::Plugin::SecurityPolicy) is a Dist::Zilla plugin for adding a security policy to a distribution.
+
 ## References and Notes
 
 1. (Github-Sec-Advisory) [Configuring private vulnerability reporting for a repository](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository)
@@ -500,13 +548,13 @@ Please see the software documentation for further information.
 
 ## License and use of this document
 
-* Version: 1.3.0
+* Version: 1.4.2
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.
 
-The actual security policies written based on this guide, including any recommended wording or example policies, are in the [public domain](https://creativecommons.org/public-domain/cc0/).
+The actual security policies written based on this guide, including any recommended wording or example policies, are in the public domain as per the [Zero-Clause BSD License](https://opensource.org/license/0bsd).
 (This includes any policies based on prior versions of this guide.)
 
 ### Acknowledgements

@@ -1,8 +1,16 @@
 ---
 title: CPAN Security Group
 layout: home
-toc: false
-list_title: CPANSec News
+news_sort_by: date
+news_sort_order: reverse
+news_entries_layout: grid
+news_limit: 4
+blog_sort_by: date
+blog_sort_order: reverse
+blog_entries_layout: grid
+blog_limit: 4
+classes: wide
+toc: true
 ---
 Welcome to the [CPAN Security Group](https://security.metacpan.org/).
 This is a community effort for supporting and responding to security incidents on CPAN – the Comprehensive Perl Archive Network.
@@ -24,6 +32,8 @@ If you care and would like to make a contribution, you can…
 * Join us in our [IRC channel](ircs://ssl.irc.perl.org:7062/#cpan-security), #cpan-security on irc.perl.org
 * Send an e-mail to the CPAN Security Group &lt;cpan-security&#64;security.metacpan.org&gt; 📧
 * Subscribe to [@cpansec@fosstodon.org](https://fosstodon.org/@cpansec) on the Fediverse 🐘
+* Subscribe to the [CPANSec mailing lists](https://lists.security.metacpan.org/)
+* Browse and read the [CPANSec CVE Announcements](https://lists.security.metacpan.org/cve-announce/) archive
 
 
 ## Resources

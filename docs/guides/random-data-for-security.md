@@ -1,12 +1,12 @@
 ---
-layout: page
-author: Robert Rothenberg
+layout: single
+author: robrwo
 title: CPAN Author's Guide to Random Data for Security
 description: A guide to use of random data for security
 toc: true
 ---
 
-# CPAN Author's Guide to Random Data for Security
+## Random in general
 
 Any secret token that allows someone to access a resource or perform an action should be generated with a secure
 random number generator.  That includes:
@@ -16,8 +16,12 @@ random number generator.  That includes:
 - password generation
 - password salts and peppers
 - authentication tokens
-- session tokens
+- session ids
 - nonces
+- captcha strings
+- multifactor authentication codes
+
+For any implementation of a protocol that specifies a random value, it is safer to use a secure random number generator, even when the protocol does not explicitly call for that.
 
 The built-in [rand](https://perldoc.perl.org/functions/rand) function is not fit for security purposes: it is seeded
 by only 32-bits (4 bytes), and the [output can be predicted easily](https://www.perlmonks.org/?node_id=151595).
@@ -65,7 +69,7 @@ the [Win32::API](https://metacpan.org/pod/Win32::API) random function call.
 
 To obtain 256-bits (32 bytes) of data:
 
-    use Crypt::SysRandom qw( random_bytes );
+    use Crypt::SysRandom 0.006 qw( random_bytes );
 
     my $bytes = random_bytes(32);
 
@@ -159,7 +163,21 @@ One caveat of this module is that it needs to be manually seeded by 256 long int
 
     my $rng = Math::Random::ISAAC->new( unpack( "N*", urandom(1024) ) ); # 8192 bits
 
-## Generating Tokens and Passwords
+### Crypt::OpenSSL::Random
+
+[Crypt::OpenSSL::Random](https://metacpan.org/pod/Crypt::OpenSSL::Random) will return bytes from OpenSSL or LibreSSL libraries' pseudo-random number generators.
+
+    use Crypt::OpenSSL::Random qw( random_bytes );
+
+    my $bytes = random_bytes(32)
+      or die "not enough randomness";
+
+This module requires the OpenSSL or LibreSSL libraries to be installed, which may make it non-portable.
+
+Note that on systems without `/dev/random` device, the random seed may need to be initialised.
+(There is a `random_status` function that indicates whether there is sufficient seeding.)
+
+## Generating IDs, Tokens and Passwords
 
 When generating raw random data for encryption keys or initialisation vectors, a common need is to generate a
 printable string, for example as
@@ -232,6 +250,24 @@ floating point numbers.  For example,
 
 will return a string of mixed-case letters and digits, such as "y1FpfRQszS72GH4h4zTXov".
 
+### UUID::URandom
+
+UUIDs should not be used for security tokens, including session ids.
+[RFC 9562 Security Considerations](https://www.rfc-editor.org/rfc/rfc9562.html#name-security-considerations) says:
+
+> Implementations SHOULD NOT assume that UUIDs are hard to guess. For example, they MUST NOT be used as security capabilities (identifiers whose mere possession grants access). Discovery of predictability in a random number source will result in a vulnerability.
+
+The UUID Version 4 is the only type that contains random bits, besides the specific fields required by the UUID format.
+However, unless you need the data to be a valid UUID, then you should probably be returning a string of hex digits using `unpack` or one of the other modules described above to return random tokens.
+
+[UUID::URandom](https://metacpan.org/pod/UUID::URandom) is a wrapper around Crypt::Random to generate UUIDs:
+
+    use UUID::URandom qw( create_uuid_string );
+
+    my $id = create_uuid_string();
+
+This module also has a function `create_uuid_hex` that returns the UUID as a hexidecimal string.
+
 ## References
 
 [Far From Random: Three Mistakes From Dart/Flutter's Weak PRNG](https://www.zellic.io/blog/proton-dart-flutter-csprng-prng/),
@@ -243,13 +279,15 @@ December 2024.
 
 [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/), March 2014.
 
+[Predict Random Numbers](https://www.perlmonks.org/?node_id=151595), Perl Monks, March 2002.
+
 [RFC 4086](https://www.rfc-editor.org/info/rfc4086), June 2005.
 
-[Predict Random Numbers](https://www.perlmonks.org/?node_id=151595), Perl Monks, March 2002.
+[RFC 9562](https://www.rfc-editor.org/rfc/rfc9562.html), May 2024.
 
 ## License and use of this document
 
-* Version: 0.2.1
+* Version: 0.3.1
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
 

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 toc: true
 meeting_time: 2025-01-08 16:00 UTC
 title: Minutes 2025-01-08
@@ -29,7 +29,7 @@ title: Minutes 2025-01-08
     * …
 
 ### Approve previous meeting minutes
-*   Previous meeting minutes was approved by @timlegge and @robrwo, and merged by @sjn
+*   Previous meeting minutes was approved by @timlegge and @robrwo, and merged by @sjn
 
 
 ### Quick summary of current work (Grouped by project)

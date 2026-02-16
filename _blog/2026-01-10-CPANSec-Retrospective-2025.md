@@ -236,13 +236,13 @@ Leon Timmermans
 
 
 ## Final words
-This has been an interesting and productive year. A few more contributors have stepped up and made a positive impact, and we have made a positive mark on the security posture of our ecosystem.
+This has been an interesting and productive year. A few more contributors have stepped up and made a positive impact, and we have made a good mark on the security posture of our ecosystem.
 
-While the group hasn't met as regularly as in 202, we have still managed to find time to do much!
-As for 2026, much is already happening in the background! Stay in touch if you are interested, and if you have some tuits to spare…
+While the group hasn't met as regularly as in 2024, we have still managed to find time to do much!
+As for 2026, much is already happening in the background. Stay in touch if you are interested, and if you have some tuits to spare…
 
 
 ### Join CPANSec!
-And finally, a reminder: CPAN Security Group is a volunteer effort!
+And finally, a reminder: CPAN Security Group is a volunteer effort.
 This group's success and capability to respond depends on volunteer efforts by Perl and CPAN experts with a passion for security and sustainability.
-If you are such a person, then [reach out to us](https://security.metacpan.org/#learn-more--contribute)!
+If you are such a person, then [reach out to us](https://security.metacpan.org/#learn-more--contribute).

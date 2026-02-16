@@ -18,10 +18,8 @@ authors:
   - sjn
   - jjatria
 author_profile: true
-excerpt: "CPANSec year in review: Website updates, CVEs published, conference talks held, security modules written and guidelines published."
+excerpt: "CPANSec year 2025 in review: Website updates, CVEs published, conference talks held, security modules written and guidelines published."
 ---
-
-# CPANSec: 2025 Year in Review
 
 ## Website Updates
 Salve made substantial improvements to the site's layout, style, and content.

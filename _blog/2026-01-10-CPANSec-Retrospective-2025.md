@@ -3,7 +3,8 @@ layout: single
 published: true
 toc: true
 title: "CPANSec: 2025 Year in Review"
-date: 2026-02-16 11:05:00 +0000
+date: 2026-01-31 17:05:00 +0000
+last_modified_at: 2026-02-16 11:05:00 +0000
 category: blog
 tags: purl cna cve cra sbom year cpansec perl cpan security
 authors:

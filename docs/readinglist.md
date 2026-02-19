@@ -275,10 +275,17 @@ Annexes are technical materials presented separately from the main text, and hav
 
 (EU) [Digital Operational Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554&qid=1710317679922): Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations (DORA, 2022-12-14)
 
-
 * Article 16-23
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-cross-sectoral-financial-services-act-1)
+
+
+### EU and EEA – MSA {#msa}
+
+(EU) 2019/1020 on market surveillance and compliance of products
+
+* https://eur-lex.europa.eu/eli/reg/2019/1020/oj/eng
+
 
 
 ## Other informative articles and guides {#other}

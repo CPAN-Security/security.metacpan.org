@@ -3,7 +3,7 @@ layout: single
 published: true
 toc: true
 title: "17 reality checks for securing our open source commons infrastructure"
-date: 2025-11-15 17:15:00 +0000
+date: 2026-02-15 17:15:00 +0000
 collection: blog
 tags: authors guides cpan modules security "open source" cra steward "cyber resilience act" principles
 author: sjn
@@ -17,7 +17,7 @@ excerpt: "17 reality checks for interacting with the open source software projec
 > **Who is the intended audience?**
 > * Market authorities, Compliance officers, Regulators.
 > * CEO, CTO, CIO, CISO, other management.
-> * OSPO Staff.
+> * OSPO, Procurement, Legal staff.
 
 With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in 2026, cybersecurity is required to become a important aspect of developing products with digital elements.
 One of the first steps in preparing for the CRA, will relate to mapping out product dependencies, and ensure that each one of these are _taken care of appropriately_.
@@ -61,7 +61,7 @@ What these steps entail in detail, is outside of the scope of this article. Thou
 Whatever path you choose, please note that there are no "gratis" options any more.
 
 
-## 17 reality checks about open source security and communities
+## 17 reality checks about open source communities
 
 ### 1. Most of everyone's digital infrastructure is in the commons
 
@@ -145,7 +145,7 @@ Preventing this requires resources and attention that currently aren't available
 
 ### 11. Support isn't guaranteed, and neither is responsiveness
 
-Open Source Maintainers 
+Open Source Maintainers
 
 
 ### 12. Open Source projects thrive on goodwill and contributions, not assessments and analysis
@@ -154,16 +154,16 @@ Open Source Maintainers
 ### 13. Open Source ROI is too high, and everyone knows it
 
 
-### 14. Open Source ROSI is unknown, because nobody …
+### 14. Open Source Security doesn't improve in a vacuum
 
 
-### 15. Open Source Security doesn't improve in a vacuum
+### 15. Many maintainers don't like the thought of receiving money for something they _enjoy_
 
 
-### 16. Many maintainers don't like the thought of receiving money for something they _enjoy_
+### 16. The median Open Source project size is 1
 
 
-### 17. The median Open Source project size is 1
+### 17. –
 
 
 ## Summary
@@ -183,4 +183,3 @@ Gratitude go out to the following contributors:
 *[OSPO]: Open Source Program Office – a business section with responsibility for coordinating efforts around license compliance, OSS developer relations and corporate guidelines for use of and contributing to Free and Open Source Software.
 *[PURL]: PackageURL – a standard for referring to software packages in a ecosystem-agnostic way.
 *[FOSS]: Free and Open Source Software – Software published under the terms of a license that adheres to the Free Software Definition, as described on gnu.org/philosophy/free-sw .
-*[ROSI]: Return on Security Investment –

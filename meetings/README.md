@@ -25,6 +25,7 @@ title: CPANSec meeting details & minutes
 Meeting minutes [currently under review](https://github.com/CPAN-Security/security.metacpan.org/pulls?q=is%3Apr+is%3Aopen+label%3Aminutes) on Github (usually available some days after a meeting).
 
 ### 2026
+* [2026-02-10](cpansec-minutes-2026-02-19.md)
 * [2026-01-08](cpansec-minutes-2026-01-08.md)
 
 ### 2025

@@ -2,7 +2,7 @@
 layout: single
 permalink: /meetings/
 toc: true
-next_meeting_time: February 19th 2026 16:00 UTC
+next_meeting_time: March 5th 2026 16:00 UTC
 title: CPANSec meeting details & minutes
 ---
 

@@ -26,6 +26,7 @@ title: CPANSec bi-weekly minutes
   - @sjn @robrwo
     - questions about posting links to CVEs in Mastodon, BlueSky etc.
     - there is no RSS available for the CVE announcement list
+    - @sjn suggests a custom emitter that produces content suitable for manual cut&paste (max 280 chars) for now. API auto-posting can come later
 
   - @timlegge
     - a copy of published CVEs should be kept in a public git repo
@@ -61,19 +62,21 @@ title: CPANSec bi-weekly minutes
     - focusing on EU Cyber Resiliance Act (CRA) steward organisation
     - need to decide what the org looks like and set it up so it can be formally created
     - CPANSec would be a member, but separate from the stweard org
-    - hoping to get funding for a CPANSec room at PTS
+    - We have funding (via TPRF's budget) that we can choose to use to help fund a third room at PTS
     - we have to get the EU CRA to work for CPAN, we *have* to update the META spec to fully update the dependency graph.
+    - @sjn calls for volunteers! This is critically important.
 
 - @stigtsp
   - CPAN pURLs
     - spec does not support selector use case we need for CVEs (author/version constraints)
     - work in process
+    - @sjn calls for volunteers to finish the work ASAP.
 
 - @sjn
-  - TPRF Grant
+  - TPRF funding
   - @stiptsp
     - suggestion for sending message to the mailing list with a short budget
-    - beginning of a decision-making process
+    - Goal: put together a formal decision-making process for CPANSec
 
 - @robrwo
   - we need tools for accessing community documentation (license, security policy, etc)

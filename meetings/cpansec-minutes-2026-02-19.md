@@ -19,23 +19,23 @@ title: CPANSec bi-weekly minutes
 
 - @stigtsp
   - CVE workflow
-  - working on alternative workflow tools for CVE based on YAML
-  - easier to use than Vulnogram
-  - possible bulk updates
+    - Working on alternative workflow tools for CVE based on YAML that is easier to use than Vulnogram
+    - Allows possible bulk updates
 
   - @sjn @robrwo
-    - questions about posting links to CVEs in Mastodon, BlueSky etc.
-    - there is no RSS available for the CVE announcement list
+    - Questions about posting links to CVEs in Mastodon, BlueSky etc.
+    - There is no RSS available for the CVE announcement list
     - @sjn suggests a custom emitter that produces content suitable for manual cut&paste (max 280 chars) for now. API auto-posting can come later
 
   - @timlegge
-    - a copy of published CVEs should be kept in a public git repo
-    - this should be a file copy, not clone of CNA repo, with sanity checks to ensure CVEs public
-    - but MITRE has a public git repo
+    - Suggests that a copy of published CVEs should be kept in a public git repo
+    - This should be a file copy, not clone of CNA repo, with sanity checks to ensure CVEs public
+    - @robrwo notes that we host patches from CNA repo on CPANSec website, and could host CVEs there as well
+    - @stigtsp MITRE has a public git repo, so this may be unnecessary
 
   - @robrwo
-    - working on CVE Workflow documentation
-    - CVE "style guide" thaat could be incorporated into @stigtsp's cna tool
+    - Working on CVE Workflow documentation
+    - CVE "style guide" that could be incorporated into @stigtsp's cna tool
 
 - @timlegge
   - OpenSSF Vulnerability Disclosure WG
@@ -50,17 +50,17 @@ title: CPANSec bi-weekly minutes
   - Details omitted from agenda.
 
   - @sjn
-    - suggested improving vulnerability disclosure process with time, phases and well-publiched steps.
+    - Suggested improving vulnerability disclosure process with time, phases and well-publiched steps.
 
   - @robrwo
-    - experimental triage repo unused, should be deleted @stiptsp
-    - give triage list members access to the CNA repo, and use that for issue tracking
-    - create a kanban
+    - Experimental triage repo unused, should be deleted @stiptsp
+    - Give triage list members access to the CNA repo, and use that for issue tracking
+    - Create a kanban
 
 - @sjn
   - Perl Toolchain Summit (PTS)
-    - focusing on EU Cyber Resiliance Act (CRA) steward organisation
-    - need to decide what the org looks like and set it up so it can be formally created
+    - Focusing on EU Cyber Resiliance Act (CRA) steward organisation
+    - Need to decide what the org looks like and set it up so it can be formally created
     - CPANSec would be a member, but separate from the stweard org
     - We have funding (via TPRF's budget) that we can choose to use to help fund a third room at PTS
     - we have to get the EU CRA to work for CPAN, we *have* to update the META spec to fully update the dependency graph.
@@ -68,20 +68,20 @@ title: CPANSec bi-weekly minutes
 
 - @stigtsp
   - CPAN pURLs
-    - spec does not support selector use case we need for CVEs (author/version constraints)
-    - work in process
+    - Spec does not support selector use case we need for CVEs (author/version constraints)
+    - Work in process
     - @sjn calls for volunteers to finish the work ASAP.
 
 - @sjn
   - TPRF funding
   - @stiptsp
-    - suggestion for sending message to the mailing list with a short budget
+    - Suggestion for sending message to the mailing list with a short budget
     - Goal: put together a formal decision-making process for CPANSec
 
 - @robrwo
-  - we need tools for accessing community documentation (license, security policy, etc)
-  - meta spec/tools for downloading and showing these documents
-  - possible PTS project
+  - We need tools for accessing community documentation (license, security policy, etc)
+  - Meta spec/tools for downloading and showing these documents
+  - Possible PTS project
 
 - @stigstp
-  - demo of cna tool https://github.com/CPAN-Security/cna-tool
+  - Demo of `cna` tool https://github.com/CPAN-Security/cna-tool

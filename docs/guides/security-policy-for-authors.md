@@ -424,7 +424,32 @@ You may also want to refer to the security policy from any `CONTRIBUTING` or `HA
 These examples below are in the public domain as per the [Zero-Clause BSD License](https://opensource.org/license/0bsd).
 Any security policy that uses these examples as templates should be considered a part of the software that it applies to, and covered by that software's license.
 
-### Single Maintainer
+### A Minimal Security Policy for a Single Maintainer
+
+A minimal example `SECURITY.md` for a CPAN distribution with a single
+maintainer:
+
+```markdown
+This is the Security Policy for the Perl Foo-Bar distribution.
+
+Report security issues via email to <foobar@example.com>.
+
+The author will respond, and release fixes as soon as possible.
+However, this project is maintained by a single volunteer in their
+spare time, and they cannot guarantee a rapid response.
+
+If the issue is urgent, then you can also notify the CPAN Security
+Group (CPANSec) <cpan-security@security.metacpan.org>.  This important
+if a vulnerability is being actively exploited.
+
+Please do not report security problems on public forums or in
+repository issues.
+
+Only the latest release of Foo-Bar will be supported.
+```
+
+
+### A Longer Security Policy for a Single Maintainer
 
 An example `SECURITY.md` for a CPAN distribution with a single
 maintainer that should cover most cases.

@@ -18,11 +18,11 @@ You do not need to mention or link to any license in your security policy, and y
 
 You should add a security policy to tell downstream users that you (the developers and maintainers of your software) care about the integrity of their data and systems.
 
-A security policy tells users how to report security issues to the project maintainer(s), how the maintainer(s) will respond, and what software will be supported by them.
+A security policy tells users how to report security issues to the project maintainer(s), how the maintainer(s) will respond to security issues, and what software will be supported by them.
 
 A security policy might also be a requirement by some institutions or governments.
-Even if you are not subject to regulations of a government that requires security policies, potential users of your software are.
-Adding a security policy will make it easier for them to follow regulations.
+Even if you the author are not subject to regulations of a government or institution that requires security policies, potential users of your software may be.
+Adding a security policy will make it easier for them to follow regulations and use your software.
 
 Adding a security policy will not add any legal obligations or guarantees beyond your software's license.
 
@@ -44,8 +44,8 @@ These are people who contribute to your software.
 
 ### Why should authors work with CPANSec?
 
-The CPAN Security Group (CPANSec) a forum for coordinating and
-assisting in resolving security issues found on CPAN.  This includes:
+The CPAN Security Group (CPANSec) is a forum for coordinating and assisting in resolving security issues found on CPAN.
+This includes:
 
 - Assisting authors and third-party developers in dealing with
   vulnerabilities and general security advisories related to
@@ -92,6 +92,10 @@ which has a specific machine-readable format and has a different function
 The policy should be in the root directory of your distribution and in the root directory of the software repository.
 (Note that GitHub has a feature for writing security policies that stores them in `.github/SECURITY.md`. This is not helpful for non-GitHub users and the file should be moved to the repository root.)
 
+This policy is not intended to be machine readable.
+However, it should be understandable for an international audience.
+Dates and timestamps should be in the [HTTP Date/Time Format](https://httpwg.org/specs/rfc9110.html#http.date).
+
 The file should have the following sections.
 
 1. Abstract
@@ -124,6 +128,11 @@ or alternatively,
 > [Security Advisories](https://example.github.com/foobar/security/advisories).
 > (If you do not have access to GitHub, then you can report issues via email
 > to <foobar@example.com>.)
+
+A date or timestamp of the security policy (ideally the same as the distribution release) is useful to advise users that the information may be outdated, and where to check for a more recent version of the distribution:
+
+> This policy was updated on Fri 22 Aug 2025 09:32:47 BST.
+> If this policy is more than two years old, then you should check for a more recent version of [Foo-Bar on CPAN](https://metacpan.org/dist/Foo-Bar).
 
 If the project has a web site, with this security policy posted on the
 website, then you should refer to that URL, e.g.:
@@ -415,7 +424,32 @@ You may also want to refer to the security policy from any `CONTRIBUTING` or `HA
 These examples below are in the public domain as per the [Zero-Clause BSD License](https://opensource.org/license/0bsd).
 Any security policy that uses these examples as templates should be considered a part of the software that it applies to, and covered by that software's license.
 
-### Single Maintainer
+### A Minimal Security Policy for a Single Maintainer
+
+A minimal example `SECURITY.md` for a CPAN distribution with a single
+maintainer:
+
+```markdown
+This is the Security Policy for the Perl Foo-Bar distribution.
+
+Report security issues via email to <foobar@example.com>.
+
+The author will respond, and release fixes as soon as possible.
+However, this project is maintained by a single volunteer in their
+spare time, and they cannot guarantee a rapid response.
+
+If the issue is urgent, then you can also notify the CPAN Security
+Group (CPANSec) <cpan-security@security.metacpan.org>.  This important
+if a vulnerability is being actively exploited.
+
+Please do not report security problems on public forums or in
+repository issues.
+
+Only the latest release of Foo-Bar will be supported.
+```
+
+
+### A Longer Security Policy for a Single Maintainer
 
 An example `SECURITY.md` for a CPAN distribution with a single
 maintainer that should cover most cases.
@@ -424,6 +458,10 @@ maintainer that should cover most cases.
 This is the Security Policy for the Perl Foo-Bar distribution.
 
 Report security issues via email to <foobar@example.com>.
+
+This policy was updated on Fri 22 Aug 2025 09:32:47 BST.  If this
+policy is more than two years old, then you should check for a more
+recent version of [Foo-Bar on CPAN](https://metacpan.org/dist/Foo-Bar).
 
 The latest version of the Security Policy can be found in the
 [git repository for Foo-Bar](https://example.github.com/foobar).

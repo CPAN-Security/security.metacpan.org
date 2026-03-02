@@ -439,8 +439,8 @@ However, this project is maintained by a single volunteer in their
 spare time, and they cannot guarantee a rapid response.
 
 If the issue is urgent, then you can also notify the CPAN Security
-Group (CPANSec) <cpan-security@security.metacpan.org>.  This important
-if a vulnerability is being actively exploited.
+Group (CPANSec) <cpan-security@security.metacpan.org>.  This is
+important if a vulnerability is being actively exploited.
 
 Please do not report security problems on public forums or in
 repository issues.

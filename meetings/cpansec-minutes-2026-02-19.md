@@ -73,9 +73,9 @@ title: CPANSec bi-weekly minutes
     - @sjn calls for volunteers to finish the work ASAP.
 
 - @sjn
-  - TPRF funding
+  - TPRF has dedicated part of their budget to CPANSec
   - @stiptsp
-    - Suggestion for sending message to the mailing list with a short budget
+    - Suggestion for sending message to the cpansec discussion mailing list with a short budget
     - Goal: put together a formal decision-making process for CPANSec
 
 - @robrwo

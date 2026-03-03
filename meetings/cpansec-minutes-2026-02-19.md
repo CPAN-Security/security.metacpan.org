@@ -61,7 +61,7 @@ title: CPANSec bi-weekly minutes
   - Perl Toolchain Summit (PTS)
     - Focusing on EU Cyber Resiliance Act (CRA) steward organisation
     - Need to decide what the org looks like and set it up so it can be formally created
-    - CPANSec would be a member, but separate from the stweard org
+    - CPANSec would be a member, but separate from the steward org
     - We have funding (via TPRF's budget) that we can choose to use to help fund a third room at PTS
     - we have to get the EU CRA to work for CPAN, we *have* to update the META spec to fully update the dependency graph.
     - @sjn calls for volunteers! This is critically important.

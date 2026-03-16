@@ -1,4 +1,4 @@
-all: tprc2023-cpan-sec-lightning-talk/index.html perlkohacon-cpan-sec-lightning-talk/index.html pts2023-nis2-cra-intro/index.html perlkohacon-cpan-sbom-talk/index.html fosdem2024-cpan-sec-talk/index.html fosdem2024-sbom-in-open-source-ecosystems-talk/index.html pts2024-cra-update/index.html lpw2024-metadata-cpan-foss-cra/index.html nuug2024-metadata-foss-cra/index.html fosdem2025-where-do-sbom-attributes-come-from/index.html gpw2025-cpan-security-sustainability/index.html gpw2025-metadata-clapalong/index.html lpw2025-cpansec-update/index.html
+all: tprc2023-cpan-sec-lightning-talk/index.html perlkohacon-cpan-sec-lightning-talk/index.html pts2023-nis2-cra-intro/index.html perlkohacon-cpan-sbom-talk/index.html fosdem2024-cpan-sec-talk/index.html fosdem2024-sbom-in-open-source-ecosystems-talk/index.html pts2024-cra-update/index.html lpw2024-metadata-cpan-foss-cra/index.html nuug2024-metadata-foss-cra/index.html fosdem2025-where-do-sbom-attributes-come-from/index.html gpw2025-cpan-security-sustainability/index.html gpw2025-metadata-clapalong/index.html lpw2025-cpansec-update/index.html gpw2026-steward-proposal/index.html
 
 
 tprc2023-cpan-sec-lightning-talk/index.html: tprc2023-cpan-sec-lightning-talk.md
@@ -39,3 +39,7 @@ gpw2025-metadata-clapalong/index.html: gpw2025-metadata-clapalong.md
 
 lpw2025-cpansec-update/index.html: lpw2025-cpansec-update.md
 	mdslides lpw2025-cpansec-update.md --include ../media
+
+gpw2026-steward-proposal/index.html: gpw2026-steward-proposal.md 
+	mdslides gpw2026-steward-proposal.md --include ../media
+

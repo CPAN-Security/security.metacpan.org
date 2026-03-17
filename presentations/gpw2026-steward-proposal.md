@@ -322,8 +322,6 @@ A new organization, imagined by the EU Commission to facilitate this work
    - Cooperate with, and respond to requests from market authorities
    - Notify market authorities of severe incidents and vulnerabilities
 
-…and more!
-
 [comment]: # (||| data-auto-animate)
 
 ## A community-owned non-profit **Steward** cooperative<br>based in the EEA
@@ -336,6 +334,7 @@ A new organization, imagined by the EU Commission to facilitate this work
    - Notify market authorities of severe incidents and vulnerabilities
    - Be the single point of contact for EU member state market authorities, on behalf of member projects
 
+…and more!
 
 [comment]: # (||| data-auto-animate)
 

@@ -16,9 +16,9 @@
 
 # An update on CPANSec
 
-José Joaquín Atria
+Salve J. Nilsen
 
-@jjatria@mastodon.cloud
+@sjn@chaos.social
 
 Note:
 
@@ -236,7 +236,7 @@ mailto:cpan-security@security.metacpan.org
 
 Note:
 
-We're on the web, Matrix, Mastodon, IRC, mail and eventually on other places.
+We're on the web, Matrix, Mastodon, IRC, BlueSky, mail and eventually on other places.
 
 [comment]: # (!!!)
 
@@ -246,7 +246,7 @@ Come talk to me!
 
 (I've got stickers)
 
-🦆🦆🦆🦆
+🦆🦆
 
 Note:
 

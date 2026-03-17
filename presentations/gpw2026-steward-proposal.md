@@ -86,7 +86,7 @@ nts'
 [Article 22]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_22 'Other cases in which obligations of manufacturers apply'
 [Article 23]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_23 'Identification of economic operators'
 [Article 23(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#023.002 'Be able to present supplier information for 10 years'
-[Article 24]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24 'Obligations of open-source software stewards'
+[Article 24]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24 'Obligations of open-source software Stewards'
 [Article 25]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25 'Security attestation of free and open-source software'
 [Article 26]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_26 'Guidance'
 
@@ -102,7 +102,7 @@ nts'
 
 [Chapter V]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#cpt_V 'Market Surveillance and Enforcement'
 [Article 52]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_52 'Market surveillance and control of products'
-[Article 52(3)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#052.003 'Market surveillance authorities shall also be responsible for carrying out market surveillance activities in relation to the obligations for open-source software stewards.'
+[Article 52(3)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#052.003 'Market surveillance authorities shall also be responsible for carrying out market surveillance activities in relation to the obligations for open-source software Stewards.'
 [Article 52(11)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#052.011 'Market surveillance authorities shall inform consumers of where to submit complaints that could indicate non-compliance with this Regulation and facilitate reporting of vulnerabilities, incidents and cyber threats'
 [Article 54]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_54 'Procedure concerning products presenting a significant cybersecurity risk'
 [Article 54(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#054.001 '[If a market authority finds] sufficient reason to consider that a product, including its vulnerability handling, presents a significant cybersecurity risk, it shall carry out an evaluation of the product concerned in respect of its compliance with all the requirements laid down in this Regulation.'
@@ -144,7 +144,7 @@ Note:
 
 - I would like us to create a new organization
 - A community-owned non-profit cooperative based in the EEA,
-    1. whose purpose is to function as an open source steward for projects, infrastructure communities or other communities, that are published on CPAN or otherwise related to Perl or CPAN,
+    1. whose purpose is to function as an open source Steward for projects, infrastructure communities or other communities, that are published on CPAN or otherwise related to Perl or CPAN,
         - …in order to fulfill any relevant Steward obligations,
         - …including being the single point of contact for EU member state market authorities, on behalf of member projects,
         - …for any project willing to have a Steward, and that is used by a Manufacturer,
@@ -170,7 +170,7 @@ Note:
 
 [comment]: # (!!! data-auto-animate)
 
-## A community-owned non-profit **steward** cooperative<br>based in the EEA
+## A community-owned non-profit **Steward** cooperative<br>based in the EEA
 
 …for projects, infrastructure communities or other communities that are published on CPAN or otherwise related to Perl or CPAN
 
@@ -179,7 +179,7 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit **steward** cooperative<br>based in the EEA
+## A community-owned non-profit **Steward** cooperative<br>based in the EEA
 
 …for projects, infrastructure communities or other communities that are published on CPAN or otherwise related to Perl or CPAN
 
@@ -189,7 +189,7 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit **steward** cooperative<br>based in the EEA
+## A community-owned non-profit **Steward** cooperative<br>based in the EEA
 
 …for projects, infrastructure communities or other communities that are published on CPAN or otherwise related to Perl or CPAN
 
@@ -199,7 +199,7 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit **steward** cooperative<br>based in the EEA
+## A community-owned non-profit **Steward** cooperative<br>based in the EEA
 
 …for projects, infrastructure communities or other communities that are published on CPAN or otherwise related to Perl or CPAN
 
@@ -211,7 +211,7 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit **steward** cooperative<br>based in the EEA
+## A community-owned non-profit **Steward** cooperative<br>based in the EEA
 
 …for projects, infrastructure communities or other communities that are published on CPAN or otherwise related to Perl or CPAN
 
@@ -224,24 +224,23 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit **steward** cooperative<br>based in the EEA
+## A community-owned non-profit **Steward** cooperative<br>based in the EEA
 
 …for projects, infrastructure communities or other communities that are published on CPAN or otherwise related to Perl or CPAN
 
 …in order to fulfill any relevant Steward obligations,
 
-⚠️  **projects willing to have a Steward, AND in use by a Manufacturer**
-
+⚠️  **limited to projects willing to have a Steward, AND that are in use by a Manufacturer**
 
 [comment]: # (!!! data-auto-animate)
 
-## A community-owned non-profit steward **cooperative** <br> based in the EEA
+## A community-owned non-profit Steward **cooperative** <br> based in the EEA
 
 …allowing projects & communities become **members** of the cooperative,
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit steward **cooperative** <br> based in the EEA
+## A community-owned non-profit Steward **cooperative** <br> based in the EEA
 
 …allowing projects & communities become **members** of the cooperative,
 
@@ -250,7 +249,7 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit steward **cooperative**<br> based in the EEA
+## A community-owned non-profit Steward **cooperative**<br> based in the EEA
 
 …allowing projects & communities become **members** of the cooperative,
 
@@ -259,155 +258,140 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit steward **cooperative**<br> based in the EEA
+## A community-owned non-profit Steward **cooperative**<br> based in the EEA
 
 …allowing projects & communities become **members** of the cooperative,
 
 - …by voluntarily fulfilling the necessary membership criteria,
 - …where the criteria are the minimum necessary so their project may live up to the "light touch" regulatory requirements in the CRA
-    - Cybersecurity policy, correct metadata, contact information, etc.
+
+Cybersecurity policy, correct metadata, contact information, etc.
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit steward **cooperative**<br> based in the EEA
+## A community-owned non-profit Steward **cooperative**<br> based in the EEA
 
 …allowing projects & communities become **members** of the cooperative,
 
 - …by voluntarily fulfilling the necessary membership criteria,
 - …where the criteria are the minimum necessary so their project may live up to the "light touch" regulatory requirements in the CRA
-    - Cybersecurity policy, correct metadata, contact information, etc.
-    - sustainability information, funding requirements, etc.
+
+Cybersecurity policy, correct metadata, contact information, etc.
+
+sustainability information, funding requirements, etc.
 
 [comment]: # (||| data-auto-animate)
 
-## A **community-owned** non-profit steward **cooperative**<br> based in the EEA
+## A **community-owned** non-profit Steward cooperative<br> based in the EEA
 
 …allowing projects & communities become **members** of the cooperative,
 
-- …by voluntarily fulfilling the necessary membership criteria,
-- …where the criteria are the minimum necessary so their project may live up to the "light touch" regulatory requirements in the CRA
-- …and thereby become a **co-owner** of the Steward cooperative
+**and thereby become a *co-owner* of the Steward cooperative**
+
+[comment]: # (!!! data-auto-animate)
+
+## A Steward that supports us
+
+…For the Steward to become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
+
+
+[comment]: # (||| data-auto-animate)
+
+## A Steward that supports us
+
+…So the Steward may become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
+- …in security, sustainability or compliance related matters,
+
+
+[comment]: # (||| data-auto-animate)
+
+## A Steward that supports us
+
+…So the Steward may become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
+- …in security, sustainability or compliance related matters,
+- …including support through donations or member dividends,
+
+
+[comment]: # (||| data-auto-animate)
+
+## A Steward that supports us
+
+…So the Steward may become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
+- …in security, sustainability or compliance related matters,
+- …including support through donations or member dividends,
+- …while letting the Maintainers (members) retain full control of their project
 
 
 [comment]: # (!!! data-auto-animate)
 
-## A community-owned **non-profit** steward cooperative<br> based in the EEA
-
-Goal: Make the Steward become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
-
-
-[comment]: # (||| data-auto-animate)
-
-## A community-owned **non-profit** steward cooperative<br> based in the EEA
-
-Goal: Make the Steward become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
-- …in security or sustainability related matters,
-
-
-[comment]: # (||| data-auto-animate)
-
-## A community-owned **non-profit** steward cooperative<br> based in the EEA
-
-Goal: Make the Steward become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
-- …in security or sustainability related matters,
-    - …including support through donations or member dividends
-
-
-[comment]: # (||| data-auto-animate)
-
-## A community-owned **non-profit** steward cooperative<br> based in the EEA
-
-Make the Steward become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
-- …in security or sustainability related matters,
-    - …including support through donations or member dividends
-- …while letting the Maintainers (members) retain full control of their project,
-
-
-[comment]: # (!!! data-auto-animate)
-
-## A community-owned **non-profit** steward cooperative<br> based in the EEA
+## A Steward that supports these communities
 
 …By becoming a non-profit **business** to facilitate any necessary security-related documentation or work in the affected/member projects,
 
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned **non-profit** steward cooperative<br> based in the EEA
+## A Steward that supports these communities
 
 …By becoming a non-profit **business** to facilitate any necessary security-related documentation or work in the affected/member projects,
- - …required for Manufacturers, that use these projects in their products, to become and remain compliant with the CRA,
+
+- …required for Manufacturers, that use these projects in their products, to become and remain compliant with the CRA,
 
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned **non-profit** steward cooperative<br> based in the EEA
+## A Steward that supports these communities
 
 …By becoming a non-profit **business** to facilitate any necessary security-related documentation or work in the affected/member projects,
- - …required for Manufacturers, that use these projects in their products, to become and remain compliant with the CRA,
- - …informed by aggregated usage information supplied, either in confidence or through anonymization, by manufacturers,
+
+- …required for Manufacturers, that use these projects in their products, to become and remain compliant with the CRA,
+- …informed by aggregated usage information supplied, either in confidence or through anonymization, by Manufacturers,
 
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned **non-profit** steward cooperative<br> based in the EEA
+## A Steward that supports these communities
 
 …By becoming a non-profit **business** to facilitate any necessary security-related documentation or work in the affected/member projects,
- - …required for Manufacturers, that use these projects in their products, to become and remain compliant with the CRA,
- - …informed by aggregated usage information supplied, either in confidence or through anonymization, by manufacturers,
 
-
-[comment]: # (!!! data-auto-animate)
-
-## A community-owned **non-profit** steward cooperative<br> based in the EEA
+- …required for Manufacturers, that use these projects in their products, to become and remain compliant with the CRA,
+- …informed by aggregated usage information supplied, either in confidence or through anonymization, by Manufacturers,
 
 …enabling the issuing of **voluntary security attestations** by Maintainers and their Steward
-    - …suitable for communicating any time and release-scoped compliance- and sustainability-relevant claims about a component project to Manufacturers,
-    - …in a way that market authorities will accept to satisfy the Manufacturer's obligation to perform due diligence of said component,
 
-…taking into account the economical and cultural sustainability for these projects,
-    - …including the cultural and historical context and ways of working of these projects, services and communities,
-    - …in a way that ensures all revenues generated by the sale of these attestations, and other support coming from this venture are directed towards non-profit activities, where it is needed (and welcome) _in any member, affected or related communities_,
+[comment]: # (!!! data-auto-animate)
 
+## Issuing VSAs
 
-[comment]: # (||| data-auto-animate)
-
-
-- A community-owned non-profit cooperative based in the EEA,
-    1. whose purpose is to function as an open source steward for projects, infrastructure communities or other communities, that are published on CPAN or otherwise related to Perl or CPAN,
-        - …in order to fulfill any relevant Steward obligations,
-        - …including being the single point of contact for EU member state market authorities, on behalf of member projects,
-        - …for any project willing to have a Steward, and that is used by a Manufacturer,
-    1. …by allowing these projects to become members of the cooperative,
-        - …by voluntarily fulfilling the necessary membership criteria,
-        - …where the criteria are the minimum necessary so their project may live up to the "light touch" regulatory requirements proposed for the CRA and related guidance, or as updated by the commission or relevant authorities in the future,
-        - …and thereby both become a co-owner of the Steward cooperative, and influence how revenues from the cooperative are disbursed,
-    1. …in order to make the Steward become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
-        - …in security or sustainability related matters,
-            - …including through donations or member dividends to related parties,
-        - …while letting the Maintainers (members) retain full control of their project,
-    1. …in order to facilitate any necessary security-related documentation or work in the affected/member projects,
-        - …required for Manufacturers, that use the related projects in their products, to become and remain compliant with the CRA,
-		- …informed by aggregated usage information supplied, either in confidence or through anonymization, by manufacturers,
-    1. …enabling the issuing of voluntary security attestations by Maintainers and their Steward
-        - …suitable for communicating any time and release-scoped compliance- and sustainability-relevant claims about a component project to Manufacturers,
-        - …in a way that market authorities will accept to satisfy the Manufacturer's obligation to perform due diligence of said component,
-    1. …taking into account the economical and cultural sustainability for these projects,
-        - …including the cultural and historical context and ways of working of these projects, services and communities,
-    1. …in a way that ensures all revenues generated by the sale of said attestations, and other support coming from this venture are directed towards non-profit activities, where it is needed (and welcome) _in any member, affected or related communities_,
+Issuing of **voluntary security attestations** by Maintainers and their Steward
 
 
 [comment]: # (||| data-auto-animate)
 
+## Issuing VSAs
 
-| X          | Y        | Z                                                     |
-| :--------- | :------: | ----------------------------------------------------: |
-|            | Yes      |                                                       |
-|            | Yes      |                                                       |
-|            | Yes      |                                                       |
-|            | Yes      |                                                       |
-|            | Yes      |                                                       |
-|            | Yes      |                                                       |
-|            | Yes      |                                                       |
+Issuing of **voluntary security attestations** by Maintainers and their Steward
+- …suitable for communicating any time and release-scoped compliance and sustainability-relevant claims about a component project to Manufacturers,
+
+
+[comment]: # (||| data-auto-animate)
+
+## Issuing VSAs
+
+Issuing of **voluntary security attestations** by Maintainers and their Steward
+- …suitable for communicating any time and release-scoped compliance- and sustainability-relevant claims about a component project to Manufacturers,
+- …in a way that market authorities will accept to satisfy the Manufacturer's obligation to perform due diligence of said component,
+
+
+[comment]: # (!!! data-auto-animate)
+
+## The CPAN Ecosystem Steward
+
+…A custom-made Steward concept
+
+- …taking into account the economical and cultural sustainability for it's projects,
+ - …including the cultural and historical context and ways of working of these projects, services and communities,
+- …in a way that ensures all revenues generated by the sale of attestations, and other support coming from this venture are directed towards non-profit activities, where it is needed (and welcome) _in any member, affected or related communities_
 
 
 Note:

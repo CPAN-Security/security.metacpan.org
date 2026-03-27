@@ -19,4 +19,6 @@ This directory contains presentations relevant to CPANSec given at conferences a
 * FOSDEM 2025 ([Software Bill of Materials devroom](https://fosdem.org/2025/schedule/track/sbom/)) — [Where in the OSS Supply Chain do SBOM attributes come from?](https://fosdem.org/2025/schedule/event/fosdem-2025-6483-where-in-the-oss-supply-chain-do-sbom-attributes-come-from-/) ([Slides](fosdem2025-where-do-sbom-attributes-come-from/), [Video](https://fosdem.org/2025/schedule/event/fosdem-2025-6483-where-in-the-oss-supply-chain-do-sbom-attributes-come-from-/))
 * German Perl Workshop 2025 — [CPAN Security and Sustainability in light of the EU Cyber Resilience Act](https://act.yapc.eu/gpw2025/talk/7956) ([Slides](gpw2025-cpan-security-sustainability/))
 * German Perl Workshop 2025 — Metadata Clapalong 👏 (Lightning talk, [Slides](gpw2025-metadata-clapalong/))
-* London Perl Workshop 2025 - An update on CPANSec (Lightning talk, [Slides](lpw2025-cpansec-update/))
+* London Perl Workshop 2025 — An update on CPANSec (Lightning talk, [Slides](lpw2025-cpansec-update/))
+* German Perl Workshop 2026 — [What might a CPAN Steward organization look like?](https://act.yapc.eu/gpw2026/talk/8037) ([Slides](gpw2026-steward-proposal/), Video)
+* German Perl Workshop 2026 — An update on CPANSec (Lightning talk, ([Slides](gpw2026-cpansec-update/))

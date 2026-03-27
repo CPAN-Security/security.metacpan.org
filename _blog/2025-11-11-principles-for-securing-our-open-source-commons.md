@@ -146,13 +146,21 @@ Preventing this requires resources and attention that currently aren't available
 
 ### 11. Support isn't guaranteed, and neither is responsiveness
 
-Open Source Maintainers
+Open Source Maintainers most commonly share their projects for personal reasons, and not for commercial reasons.
+If commercial expectations are to be met, then the businesses requiring these need to ramp up their level of support of the projects themselves, or find other ways to get the required guarantees.
 
 
 ### 12. Open Source projects thrive on goodwill and contributions, not assessments and analysis
 
 
+
+
 ### 13. Open Source ROI is too high, and everyone knows it
+
+An article by Harvard Business Review published January 2024, revealed that the projects they analyzed had an estimated investment of 4 Billion USD, and that this lead to an estimated value of 8 Trillion USD.
+While this isn't the same as putting a dollar into a machine and getting 2000 dollars back, it *is* closer to getting an average of 99.95% rebate on the software one is using to create this value.
+While this "rebate" exists by design (and a consequence of the OSS license language), this has lead to public outcry regarding the risks coming from these projects not being supported in a sustainable manner.
+
 
 
 ### 14. Open Source Security doesn't improve in a vacuum

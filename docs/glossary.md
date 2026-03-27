@@ -198,7 +198,7 @@ See also: [Artifact](#artifact).
 
 (Ref: [SLSA-2023], [NTIA-2021], [CPANSec-2024])
 
-### Dependency, Direct ✍️ {#dependency-direct}
+#### Dependency, Direct ✍️ {#dependency-direct}
 
 1. (SCVS-2020, CDXAG-2025) A software component that is referenced by a program itself.
 1. (CPANSec-2024) A [software](#software) program, library, plugin, service, resource or component that is required for another software program or component to function as expected.
@@ -1112,7 +1112,7 @@ This glossary is partly based on terms from the following sources.
 
 ## About this document
 
-* Version: 0.7.1
+* Version: 0.7.2
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

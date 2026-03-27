@@ -60,9 +60,11 @@ OSS Steward
 - Automating BOM sharing, payment, access to attestations, etc.
 - Possible tasks
   - Confirm quality of metadata, packaging, contact points, distribution
-  - Steward as co-maintainer?
+  - Steward as co-maintainer? (not desired)
 - Stewards offering a freelance job marketplace
 - Exposing the availability of transitive attestations, given the presence of one component
+- Support related and relevant community projects and services
+- Support related and relevant upstream projects and services
 
 ### Arguments
 
@@ -78,6 +80,65 @@ OSS Steward
 - Security Assessment Practices
 - Security Hygiene Recommendations
 - Pilot projects for applying recommendations
+
+## Bylaws/charter
+
+Base: [§ 10.Vedtekter for samvirkeforetak, Samvirkelova](https://lovdata.no/lov/2007-06-29-81/§10)
+- Handle change of organization form
+- Handle gender composition of board
+
+
+## First meeting
+- Stakeholder involvement
+  - CPANSec
+- Founding stakeholders
+  - MetaCPAN (Olaf Alders)
+  - CPANTesters
+  - TPRF
+  - Perl Core, PSC
+  - Perl NOC (perl.org, cpan.org)
+  - Perl Mongers (pm.org; Jay Hannah)
+    - French Perl Mongers (BooK, Emmanuel Seyman)
+    - Swiss Perl Mongers (leejo)
+    - Oslo Perl Mongers (sjn)
+    - German Perl Mongers (corion)
+    - Vienna Perl Mongers (domm)
+    - Orlando Perl Mongers (perigrin)
+    - Toronto Perl Mongers (oalders)
+    - London Perl Mongers ()
+  - PAUSE
+  - PTS (French Perl Mongers)
+- Organization charter and bylaws
+  - Bylaw working group
+    - NUUG Foundation (?, XXX) # Ask sjn about this
+    - Gnutiken (Jeremiah Foster)
+    - TPRF (Ruth Holloway)
+    - French Perl Mongers (Laurent Boivin, Emmanuel Seyman)
+    - CPANSec (Salve J. Nilsen)
+    - Mark Overmeer
+- Organization funding & Business model development
+  - Funding working group
+    - NUUG Foundation
+    - TPRF
+    - CPANSec
+- 
+
+## Bylaws brainstorming
+- Non-voting membership requirements
+  - Provides a service to the Perl, CPAN or Raku communities
+  - Recognized and publicly provided service of a least 2 years
+  - Sponsorship from at least 1 existing member (non-voting or voting)
+  - One natural person that is a contact person
+- Voting membership requirements
+  - Same requirements as non-voting members, plus:
+  - Registered organization
+  - Asset control
+  - Non-profit
+  - Biannual general assembly
+  - Sustainable organization
+    - Democratic selection of representative
+    - Coup prevention measures
+    - 3 or more natural persons in the board
 
 ## Questionnaire
 

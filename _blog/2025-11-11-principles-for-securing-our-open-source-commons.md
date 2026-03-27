@@ -25,7 +25,7 @@ The vast majority (70-90%, according to [Linux Foundation](https://www.linuxfoun
 
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
-> **How do I know _Who_ I am relying on?**
+> **How do I know _who I am relying on_?**
 > * OSS Components have Projects, which have Maintainers, Contributors and Communities.
 > * Communities may consist of Contributors working for Businesses, unpaid Volunteers or others.
 
@@ -40,7 +40,8 @@ Let's first look at what problem needs to be solved, then describe the context i
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
 > **What is _Due Diligence_ and _Due Care_?**
-> _Due Care_ is about _the actions a reasonable and prudent person is expected to do_ during a security incident, and _Due Diligence_ is about _the preparations to make for this person to succeed_.
+> *Due Care* is about the *actions a reasonable and prudent person is expected to do* during an event.
+> *Due Diligence* is about the *preparations this reasonable and prudent person has to do in order to succeed* acting with Due Care.
 
 When and serious incident happens or a critical vulnerability is discovered, we are expected to conduct ourselves with _Due Care_ – and before the emergency develops, to have prepared for this with _Due Diligence_.
 

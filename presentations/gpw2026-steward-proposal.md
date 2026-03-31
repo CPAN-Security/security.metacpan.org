@@ -413,7 +413,7 @@ sustainability information, funding requirements, etc.
 
 ## A Steward that supports us
 
-…So the Steward may become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
+…For the Steward may become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
 - …in security, sustainability or compliance related matters,
 
 
@@ -421,7 +421,7 @@ sustainability information, funding requirements, etc.
 
 ## A Steward that supports us
 
-…So the Steward may become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
+…For the Steward may become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
 - …in security, sustainability or compliance related matters,
 - …including support through donations or member dividends,
 
@@ -430,7 +430,7 @@ sustainability information, funding requirements, etc.
 
 ## A Steward that supports us
 
-…So the Steward may become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
+…For the Steward may become capable of supporting the projects, services and communities in-stream or up-stream of, or related Perl and CPAN
 - …in security, sustainability or compliance related matters,
 - …including support through donations or member dividends,
 - …while letting the Maintainers (members) retain full control of their project
@@ -485,7 +485,7 @@ Issuing of **voluntary security attestations** by Maintainers and their Steward
 ## Issuing VSAs
 
 Issuing of **voluntary security attestations** by Maintainers and their Steward
-- …suitable for communicating any time and release-scoped compliance and sustainability-relevant claims about a component project to Manufacturers,
+- …suitable for communicating any time and release-scoped compliance- and sustainability-relevant claims about a component project to Manufacturers,
 
 
 [comment]: # (||| data-auto-animate)

@@ -129,22 +129,14 @@ or alternatively,
 > (If you do not have access to GitHub, then you can report issues via email
 > to <foobar@example.com>.)
 
+If the project has a web site, with this security policy posted on the
+website, then you should refer to that URL, or to the project repository:
+
 A date or timestamp of the security policy (ideally the same as the distribution release) is useful to advise users that the information may be outdated, and where to check for a more recent version of the distribution:
 
 > This policy was updated on Fri 22 Aug 2025 09:32:47 BST.
-> If this policy is more than two years old, then you should check for a more recent version of [Foo-Bar on CPAN](https://metacpan.org/dist/Foo-Bar).
-
-If the project has a web site, with this security policy posted on the
-website, then you should refer to that URL, e.g.:
-
-> The latest version of this Security Policy can be found on the
-> Foo-Bar website at https://foobar.example.com/security-policy
-
-If the project does not have a dedicated website, then a link to the
-project's software repository should be used, e.g.
-
-> The latest version of the Security Policy can be found in the git
-> repository for Foo-Bar in the main branch at https://example.github.com/foobar
+>
+> If this policy or the release is more than two years old, then you should check for a more recent version of [Foo-Bar on CPAN](https://metacpan.org/dist/Foo-Bar) or the main branch of the [Foo-Bar git repository](https://example.github.com/foobar).
 
 If your security policy is based on the advice of this document, then
 you should mention that, along with the version:
@@ -446,6 +438,13 @@ Please do not report security problems on public forums or in
 repository issues.
 
 Only the latest release of Foo-Bar will be supported.
+
+This policy was updated on Fri 22 Aug 2025 09:32:47 BST.
+
+If this policy or the release is more than two years old, then you
+should check for a more recent version of
+[Foo-Bar on CPAN](https://metacpan.org/dist/Foo-Bar) or the main branch of the
+[Foo-Bar git repository](https://example.github.com/foobar).
 ```
 
 
@@ -459,12 +458,12 @@ This is the Security Policy for the Perl Foo-Bar distribution.
 
 Report security issues via email to <foobar@example.com>.
 
-This policy was updated on Fri 22 Aug 2025 09:32:47 BST.  If this
-policy is more than two years old, then you should check for a more
-recent version of [Foo-Bar on CPAN](https://metacpan.org/dist/Foo-Bar).
+This policy was updated on Fri 22 Aug 2025 09:32:47 BST.
 
-The latest version of the Security Policy can be found in the
-[git repository for Foo-Bar](https://example.github.com/foobar).
+If this policy or the release is more than two years old, then you
+should check for a more recent version of
+[Foo-Bar on CPAN](https://metacpan.org/dist/Foo-Bar) or the main branch of the
+[Foo-Bar git repository](https://example.github.com/foobar).
 
 This text is based on the CPAN Security Group's Guidelines for Adding
 a Security Policy to Perl Distributions (version 1.5.0)

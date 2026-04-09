@@ -94,7 +94,8 @@ The policy should be in the root directory of your distribution and in the root 
 
 This policy is not intended to be machine readable.
 However, it should be understandable for an international audience.
-Dates and timestamps should be in the [HTTP Date/Time Format](https://httpwg.org/specs/rfc9110.html#http.date).
+Dates and timestamps should be in the [HTTP Date/Time Format](https://httpwg.org/specs/rfc9110.html#http.date)
+or [ISO 8601/RFC 3993](https://datatracker.ietf.org/doc/html/rfc3339) formats.
 
 The file should have the following sections.
 

@@ -22,7 +22,7 @@ A security policy tells users how to report security issues to the project maint
 
 A security policy might also be a requirement by some institutions or governments.
 Even if you the author are not subject to regulations of a government or institution that requires security policies, potential users of your software may be.
-Adding a security policy will make it easier for them to follow regulations and use your software.
+Adding a security policy will make it easier for them to follow regulations and use your software with the right expectations for how security events will be handled.
 
 Adding a security policy will not add any legal obligations or guarantees beyond your software's license.
 

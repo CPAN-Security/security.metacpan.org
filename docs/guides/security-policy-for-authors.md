@@ -542,14 +542,12 @@ Foo-Bar distribution) are not covered by this policy.
 
 ## Supported Versions of Foo-Bar
 
-The maintainer(s) will release security fixes for the latest version
-of Foo-Bar.
+Only the latest release of Foo-Bar will be supported for security fixes.
 
-Note that the Foo-Bar project only supports major versions of Perl
-released in the past ten (10) years, even though Foo-Bar will run on
-older versions of Perl.  If a security fix requires the maintainers to
-increase the minimum version of Perl that is supported, then they may
-do so.
+Only major versions of Perl released in the past ten (10) years will
+be supported, even when Foo-Bar will run on older versions of Perl.
+If a security fix requires the maintainer(s) to increase the minimum
+version of Perl that is supported, then they may do so.
 
 # Installation and Usage Issues
 

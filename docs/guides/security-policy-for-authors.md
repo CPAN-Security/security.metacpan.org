@@ -572,7 +572,10 @@ The following CPAN modules may be useful:
 
 [Software::Security::Policy](https://metacpan.org/pod/Software::Security::Policy) is a framework for generating a SECURITY.md files.
 
+[Software::Policies](https://metacpan.org/pod/Software::Policies) is a framework for generating various kinds of policy documents, including SECURITY.md.
+
 [Dist::Zilla::Plugin::SecurityPolicy](https://metacpan.org/pod/Dist::Zilla::Plugin::SecurityPolicy) is a Dist::Zilla plugin for adding a security policy to a distribution.
+
 
 ## References and Notes
 

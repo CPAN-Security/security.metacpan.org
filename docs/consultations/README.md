@@ -23,4 +23,4 @@ Feedback for the [Draft Commission guidance on the Cyber Resilience Act](https:/
 
 * [CPAN Security Group's comments](CPANSec-comments-to-Draft-Commission-guidance-on-the-Cyber-Resilience-Act.pdf)
     * With assistance from Laurent Hosen (OAK law firm)
-    * Submitted 2026-04-13
+    * Submitted with delay 2026-04-14

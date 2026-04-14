@@ -16,3 +16,11 @@ Feedback for the [ENISA implementing guidance for NIS 2 security measures](https
 * [Chapters 3 and 6 (Incident handling and Secure software development)](Feedback-on-implementing-guidance-for-NIS-2-security-measures-chapters-3-and-6.pdf)
     * in cooperation with Hackeriet and Gurusoft AS
     * Submitted 2025-01-09
+
+## CRA
+
+[Draft Commission guidance on the Cyber Resilience Act](https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16959-Draft-Commission-guidance-on-the-Cyber-Resilience-Act_en)
+
+* [CPAN Security Group's comments](CPANSec-comments-to-Draft-Commission-guidance-on-the-Cyber-Resilience-Act.pdf)
+    * With assistance from Laurent Hosen (OAK law firm)
+    * Submitted 2026-04-13

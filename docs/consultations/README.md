@@ -21,6 +21,6 @@ Feedback for the [ENISA implementing guidance for NIS 2 security measures](https
 
 Feedback for the [Draft Commission guidance on the Cyber Resilience Act](https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16959-Draft-Commission-guidance-on-the-Cyber-Resilience-Act_en) (Published 2026-03-03).
 
-* [CPAN Security Group's comments](CPANSec-comments-to-Draft-Commission-guidance-on-the-Cyber-Resilience-Act.pdf)
+* CPAN Security Group's comments ([PDF](CPANSec-comments-to-Draft-Commission-guidance-on-the-Cyber-Resilience-Act.pdf), [ODS](CPANSec-comments-to-Draft-Commission-guidance-on-the-Cyber-Resilience-Act.ods)).
     * With assistance from Laurent Hosen (OAK law firm)
     * Submitted with delay 2026-04-14

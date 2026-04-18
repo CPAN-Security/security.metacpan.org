@@ -235,21 +235,61 @@ States in **bold** exist on CPAN.
 | SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
 | DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
 | DUAL         | no        | YES       | YES       | OK            | Ecosystem    |
-| **NOXFER**   | no        | YES       | no        | NONE          | Ecosystem    |
+| NOXFER       | no        | YES       | no        | NONE          | Ecosystem    |
 | UNREACHABLE  | no        | YES       | YES       | ERROR         | Ecosystem    |
 | UNRESPONSIVE | no        | YES       | YES       | NONE          | Ecosystem    |
 
 
 
-### Project State Indicators
+### Project State Markers
 
-1. COMPROMISED – This project has a prevailing and substantial security compromise
+```mermaid
+stateDiagram-v2
+    direction LR
+    state "New"                      as new
+    state "Maintained (Active)"      as maintained
+    state "Unmaintained (Abandoned)" as unmaintained
+    state "Archived"                 as archived
+    state "Quarantined"              as quarantined
+    state "Dormant"                  as dormant
+    state "In custody"               as custody
+    %%state "Deprecated"               as deprecated
+    state "Superseded"               as superseded
+    state "Done"                     as done
+    state "Delisted"                 as delisted
+    state "Suspended"                as suspended
+
+    %% Initial state --> Target state : Transition event
+    %% Adjective --> Adjective : Verb
+
+    new          --> maintained   : Develop
+    maintained   --> new          : Fork
+    maintained   --> done         : Complete
+    maintained   --> quarantined  : Compromise
+    quarantined  --> maintained   : Remediate
+    archived     --> new          : Fork
+    archived     --> maintained   : Adopt
+    %%maintained   --> deprecated   : Deprecate
+    superseded   --> new          : Fork
+    maintained   --> superseded   : Replace
+    maintained   --> dormant      : Pause
+    maintained   --> archived     : Deprecate
+    unmaintained --> custody      : Take into custody
+    dormant      --> custody      : Take into custody
+    custody      --> maintained   : Adopt
+    dormant      --> new          : Fork
+    dormant      --> maintained   : Handoff
+    unmaintained --> new          : Fork
+    dormant      --> unmaintained : Abandon
+    unmaintained --> maintained   : Adopt
+
+```
+
+
+1. QUARANTINED – This project has a prevailing and substantial security compromise
     * Project has removed from the index due to security issues that have prevailed for a substantial time.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
     * (number of maintainers is not relevant)
-1. CUSTODY – This project is under custodianship
-    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
-    * (number of maintainers is 0)
 1. SUSPENDED
     * The project has been made inaccessible from the ecosystem index due to breaking of terms or code of conduct.
         * e.g.: Publishing spam, malware, copyright infringement, illegal material or other inappropriate content.
@@ -258,6 +298,19 @@ States in **bold** exist on CPAN.
     * The project has been removed from the ecosystem index due to extraordinary circumstances.
         * e.g.: hacking, sabotage, denial of service, repeated suspensions or other types of attacks against the ecosystem infrastructure.
     * The project is expected to NOT revert to its previous state.
+1. CUSTODY – This project is under custodianship
+    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
+    * (number of maintainers is 0)
+1. ABANDONED
+1. DONE
+1. ARCHIVED
+1. DORMANT
+1. NEW
+1. SUPERSEEDED
+1. MAINTAINED
+
+-----------------
+
 1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
     * This project is maintained by the language core team itself.
     * The project is both published as part of the core language, and through the language ecosystem.
@@ -293,7 +346,7 @@ States in **bold** exist on CPAN.
 
 ## License and use of this document
 
-* Version: 0.2.1
+* Version: 0.3.0
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 

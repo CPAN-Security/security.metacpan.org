@@ -305,6 +305,10 @@ The Payment Card Industry Software Security Framework v1.2.1, Control Objective 
 
 * (PCI-SSC) [PCI-SSF v1.2.1](https://docs-prv.pcisecuritystandards.org/Software%20Security/Standard/PCI-Secure-Software-Standard-v1_2_1.pdf), Published May 2023
 
+##  Vulnerability Exploitability eXchange (VEX)
+
+* [CISA Minimum Requirements](https://www.cisa.gov/sites/default/files/2023-04/minimum-requirements-for-vex-508c.pdf) 
+
 
 ## Information Security in general
 

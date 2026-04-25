@@ -56,6 +56,7 @@ The CPAN Security Group <[cpan-security@security.metacpan.org](cpan-security@sec
 * [rrwo](https://github.com/robrwo)
 * [jjatria](https://github.com/jjatria)
 * [thibaultduponchelle](https://github.com/thibaultduponchelle)
+* [haarg](https://github.com/haarg)
 
 ------------------
 

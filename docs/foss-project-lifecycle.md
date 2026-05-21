@@ -57,7 +57,13 @@ States in **bold** exist on CPAN.
     * (number of maintainers does not need to change)
     * See [Enumeration of NEEDSUPPORT items](#enumeration-of-needsupport-items) for examples
 
-### Enumeration of NEEDSUPPORT items
+### Enumeration of NEEDSUPPORT itemI guess this would also require some work on a taxonomy.
+Why is this topic important? How will this help people improve their open source project and / or community? Who will benefit from this guide?
+
+I hope this will help users and businesses get an idea of what options are available when selecting what projects to uses and for deciding on what to do with them, depending on the state the project is in.
+
+For example, if a project hasn't had any commits in a long time, a state diagram (possibly accompanied with claims about project state made in a CONTRIBUTING.yml file), the user can get a better idea on why the project has stalled and thereby have better information for deciding to use, contribute, adopt, fund, fork or look for alternatives to the project.
+How would you like to see this guide developed?s
 
 When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
 
@@ -221,7 +227,10 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 1. FOR_COMMERCIAL_USE – This project is _intended for commercial use_ in accordance with the EU Cyber Resilience Act, Recital 19 (Ref: [CRA-Rec-19](#references))
     * Response time expectations should be high for commercial users
     * (number of maintainers is 1 or higher)
-    * (number of maintainers increase may be desired)
+    * (number of maintainers increase may
+    * Media relations
+    * Developer relations
+    * **Public Relations - Interviews with be desired)
 
 
 ## Project Ecosystem States
@@ -241,6 +250,8 @@ States in **bold** exist on CPAN.
 
 
 
+### Release State Markers
+
 ### Project State Markers
 
 ```mermaid
@@ -248,41 +259,47 @@ stateDiagram-v2
     direction LR
     state "New"                      as new
     state "Maintained (Active)"      as maintained
+    state "Developing (Active)"      as developing
     state "Unmaintained (Abandoned)" as unmaintained
     state "Archived"                 as archived
     state "Quarantined"              as quarantined
     state "Dormant"                  as dormant
     state "In custody"               as custody
-    %%state "Deprecated"               as deprecated
+    state "Deprecated"               as deprecated
     state "Superseded"               as superseded
     state "Done"                     as done
-    state "Delisted"                 as delisted
+    state "Delisted (Deindexed)"     as delisted
     state "Suspended"                as suspended
 
     %% Initial state --> Target state : Transition event
     %% Adjective --> Adjective : Verb
 
-    new          --> maintained   : Develop
+    new          --> developing   : Develop
+    developing   --> maintained   : Stabilize
+    developing   --> new          : Fork
     maintained   --> new          : Fork
     maintained   --> done         : Complete
     maintained   --> quarantined  : Compromise
     quarantined  --> maintained   : Remediate
     archived     --> new          : Fork
     archived     --> maintained   : Adopt
-    %%maintained   --> deprecated   : Deprecate
+    maintained   --> deprecated   : Deprecate
     superseded   --> new          : Fork
+    superseded   --> maintained   : Recommend
     maintained   --> superseded   : Replace
     maintained   --> dormant      : Pause
     maintained   --> archived     : Deprecate
     unmaintained --> custody      : Take into custody
     dormant      --> custody      : Take into custody
+    maintained   --> delisted     : Delist
     custody      --> maintained   : Adopt
     dormant      --> new          : Fork
     dormant      --> maintained   : Handoff
     unmaintained --> new          : Fork
     dormant      --> unmaintained : Abandon
     unmaintained --> maintained   : Adopt
-
+    maintained   --> suspended    : Suspend
+    suspended    --> maintained   : Greenlight
 ```
 
 
@@ -291,13 +308,16 @@ stateDiagram-v2
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
     * (number of maintainers is not relevant)
 1. SUSPENDED
-    * The project has been made inaccessible from the ecosystem index due to breaking of terms or code of conduct.
-        * e.g.: Publishing spam, malware, copyright infringement, illegal material or other inappropriate content.
+    * The project has been made inaccessible from the ecosystem index due to breaking of ecosystem terms or code of conduct.
+        * e.g.: Publishing spam, copyright infringement, illegal material or other inappropriate content.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
 1. DELISTED
     * The project has been removed from the ecosystem index due to extraordinary circumstances.
-        * e.g.: hacking, sabotage, denial of service, repeated suspensions or other types of attacks against the ecosystem infrastructure.
+        * e.g.: hacking, sabotage, denial of service, repeated suspensions or other types of bad-faith actions or attacks against the ecosystem infrastructure.
     * The project is expected to NOT revert to its previous state.
+1. WIPED
+    * The release has been completely removed from the man ecosystem server and index, due to legal requests from a legitimate source.
+        * e.g. a court order or intellectual property owner.
 1. CUSTODY – This project is under custodianship
     * The project is deemed as important for the ecosystem, and needs a trusted maintainer
     * (number of maintainers is 0)

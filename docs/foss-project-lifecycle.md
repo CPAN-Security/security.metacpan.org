@@ -22,6 +22,15 @@ draft: true
 This document is background material and notes for the [CycloneDX OSS Sustainability WG](https://docs.google.com/document/d/1IZnHEwzz1N7LbChVkZTE_dfo3I2np8rULssq5I2wchM/edit).
 In this project we try to help both OSS project's Maintainers communicate their needs and requirements, as well as help the share important information that may assist their user's _business continuity challenges_.
 
+## Indicators
+
+* Project Support Needs
+    * The types of support and contributions this project **needs** from volunteers, users and stakeholders, in order to ensure continued success
+* Project Support Intentions
+    * The types of support the project maintainers, co-maintainers and community members intend to **provide** to their users
+* Project State
+    * The current state of the project, as stated by the project owner, maintainer or community
+
 
 ## Project Need Indicators
 
@@ -30,40 +39,32 @@ States in **bold** exist on CPAN.
 | Needs        | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
 | :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
 | **NEEDHELP** | no        | YES       | YES       | LOW           | Maintainer   |
-| **HANDOFF**  | no        | YES       | no        | LOW           | Maintainer   |
-| **ADOPTME**  | YES       | no        | no        | NONE          | Ecosystem    |
 | NEEDFUNDING  | no        | YES       | YES       | LOW           | Maintainer   |
 | NEEDSUPPORT  | no        | YES       | YES       | LOW           | Maintainer   |
 
-
 1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))
     * (number of maintainers is higher than 0)
-    * (number of maintainers is too low)
-1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer (Ref: [PAUSE-2017](#references))
-    * (number of maintainers is 1)
-    * (number of maintainers is about to reduce to 0)
-1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption (Ref: [PAUSE-2017](#references))
-    * The project needs a new maintainer
-    * (number of maintainers is 0)
     * (number of maintainers is too low)
 1. NEEDFUNDING – This project needs funding
     * Workload is unsustainable with only a volunteer-level commitment
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
 1. NEEDSUPPORT – This project needs non-funding support
-    * Project growth and sustainability is hindered by lack of non-code contributions
+    * Project growth and sustainability is hindered by lack of contributions
     * Examples: Branding development; Code security audit; Event organizing; Documentation writing;
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
     * See [Enumeration of NEEDSUPPORT items](#enumeration-of-needsupport-items) for examples
 
-### Enumeration of NEEDSUPPORT itemI guess this would also require some work on a taxonomy.
-Why is this topic important? How will this help people improve their open source project and / or community? Who will benefit from this guide?
+### Enumeration of NEEDSUPPORT items
 
-I hope this will help users and businesses get an idea of what options are available when selecting what projects to uses and for deciding on what to do with them, depending on the state the project is in.
-
-For example, if a project hasn't had any commits in a long time, a state diagram (possibly accompanied with claims about project state made in a CONTRIBUTING.yml file), the user can get a better idea on why the project has stalled and thereby have better information for deciding to use, contribute, adopt, fund, fork or look for alternatives to the project.
-How would you like to see this guide developed?s
+> [!NOTE]
+> Why is this topic important? How will this help people improve their open source project and / or community? Who will benefit from this guide?
+>
+> I hope this will help users and businesses get an idea of what options are available when selecting what projects to uses and for deciding on what to do with them, depending on the state the project is in.
+>
+> For example, if a project hasn't had any commits in a long time, a state diagram (possibly accompanied with claims about project state made in a CONTRIBUTING.yml file), the user can get a better idea on why the project has stalled and thereby have better information for deciding to use, contribute, adopt, fund, fork or look for alternatives to the project.
+> How would you like to see this guide developed?
 
 When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
 
@@ -186,11 +187,12 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Consulting
     * Support
 
-
-## Project Support Indicators
+## Project Support Intention Indicators
 
 | Offers             | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
 | :----------------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| **HANDOFF**        | no        | YES       | no        | LOW           | Maintainer   |
+| **ADOPTME**        | YES       | no        | no        | NONE          | Ecosystem    |
 | MAINTAINED         | no        | YES       | YES       | OK            | Maintainer   |
 | FOR_COMMECRIAL_USE | no        | YES       | YES       | OK            | Maintainer   |
 | CASUAL             | no        | YES       | YES       | LOW           | Maintainer   |
@@ -201,11 +203,19 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 | UNMAINTAINED       | no        | YES       | YES       | NONE          | Maintainer   |
 
 
+1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer (Ref: [PAUSE-2017](#references))
+    * (number of maintainers is 1)
+    * (number of maintainers is about to reduce to 0)
+1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption (Ref: [PAUSE-2017](#references))
+    * The project needs a new maintainer
+    * (number of maintainers is 0)
+    * (number of maintainers is too low)
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
     * Response time expectations should be low
     * (number of maintainers is 1 or higher)
     * (number of maintainers increase may be desired)
 1. DEPRECATED – The project maintainer recommends that this project is not to be used
+    * Is still available for backward compatibility and legacy reasons; Recommended to not be used in new projects.
     * (number of maintainers is 0)
     * (number of maintainers does not need to change)
 1. DONE – The project is considered "Done", and while it is maintained, no further development is needed or expected
@@ -244,13 +254,28 @@ States in **bold** exist on CPAN.
 | SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
 | DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
 | DUAL         | no        | YES       | YES       | OK            | Ecosystem    |
-| NOXFER       | no        | YES       | no        | NONE          | Ecosystem    |
+| **NOXFER**   | no        | YES       | no        | NONE          | Ecosystem    |
 | UNREACHABLE  | no        | YES       | YES       | ERROR         | Ecosystem    |
 | UNRESPONSIVE | no        | YES       | YES       | NONE          | Ecosystem    |
 
+1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
+    * This project is maintained by the language core team itself.
+    * The project is both published as part of the core language, and through the language ecosystem.
+    * Equivalent to the P5P special user on CPAN (Ref: [PAUSE-2017](#references))
+1. NOXFER – The project is prevented from being transferred to new maintainers (Ref: [PAUSE-2017](#references))
+    * The project maintainer has requested that this project is to be prevented from being adopted.
+    * The project may still be forked under a new name.
+    * (number of maintainers is not relevant)
+1. UNREACHABLE – The project maintainers are not reachable
+    * The project maintainer(s) has not been reachable through registered communication channels for a substantial time, due to reasons outside the control of the project.
+        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other _Forces Majeures_ beyond the Maintainer's control.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+    * (number of maintainers is not relevant)
+1. UNRESPONSIVE – Project Maintainers are reachable but actively not engaging
+    * The project maintainers(s) have not been responsive to ecosystem concerns for a substantial time, due to non-technical reasons.
+        * e.g.: Maintainer does not respond to ecosystem concerns for personal reasons.
+    * The project is expected to revert to its previous state after normal interaction resumes.
 
-
-### Release State Markers
 
 ### Project State Markers
 
@@ -261,7 +286,7 @@ stateDiagram-v2
     state "Maintained (Active)"      as maintained
     state "Developing (Active)"      as developing
     state "Unmaintained (Abandoned)" as unmaintained
-    state "Archived"                 as archived
+    state "Deleted (Archived)"       as archived
     state "Quarantined"              as quarantined
     state "Dormant"                  as dormant
     state "In custody"               as custody
@@ -270,6 +295,7 @@ stateDiagram-v2
     state "Done"                     as done
     state "Delisted (Deindexed)"     as delisted
     state "Suspended"                as suspended
+    state "Developing"        as dev
 
     %% Initial state --> Target state : Transition event
     %% Adjective --> Adjective : Verb
@@ -303,6 +329,14 @@ stateDiagram-v2
 ```
 
 
+| States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| COMPROMISED  | no        | YES       | YES       | NONE          | Ecosystem    |
+| CUSTODY      | YES       | no        | no        | SECURITY      | Ecosystem    |
+| SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
+
+
 1. QUARANTINED – This project has a prevailing and substantial security compromise
     * Project has removed from the index due to security issues that have prevailed for a substantial time.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
@@ -330,24 +364,6 @@ stateDiagram-v2
 1. MAINTAINED
 
 -----------------
-
-1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
-    * This project is maintained by the language core team itself.
-    * The project is both published as part of the core language, and through the language ecosystem.
-    * Equivalent to the P5P special user on CPAN (Ref: [PAUSE-2017](#references))
-1. NOXFER – The project is prevented from being transferred to new maintainers (Ref: [PAUSE-2017](#references))
-    * The project maintainer has requested that this project is to be prevented from being adopted.
-    * The project may still be forked under a new name.
-    * (number of maintainers is not relevant)
-1. UNREACHABLE – The project maintainers are not reachable
-    * The project maintainer(s) has not been reachable through registered communication channels for a substantial time, due to reasons outside the control of the project.
-        * e.g.: Expired domain, Email bounce, compromise/hijacked forums or channels, or other _Forces Majeures_ beyond the Maintainer's control.
-    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
-    * (number of maintainers is not relevant)
-1. UNRESPONSIVE – Project Maintainers are reachable but actively not engaging
-    * The project maintainers(s) have not been responsive to ecosystem concerns for a substantial time, due to non-technical reasons.
-        * e.g.: Maintainer does not respond to ecosystem concerns for personal reasons.
-    * The project is expected to revert to its previous state after normal interaction resumes.
 
 
 ## Other project states, claims and metadata
@@ -379,6 +395,7 @@ Several people have been involved in the development of this document
 
 * Salve J. Nilsen (main author)
 * Georg Link
+* The ECMA TC54 TG4 group
 
 
 ## References

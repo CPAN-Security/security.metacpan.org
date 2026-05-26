@@ -23,7 +23,7 @@ description: A guide for Perl Developers to writing secure code, by the CPAN Sec
 > - Discuss on IRC: [ircs://ssl.irc.perl.org:7062/#cpan-security](ircs://ssl.irc.perl.org:7062/#cpan-security)
 > - Discuss on Matrix: [https://matrix.to/#/#cpansec:matrix.org](https://matrix.to/#/#cpansec:matrix.org)
 
-## The need for Secure Software Development in Perl, on or off CPAN
+## The need for Secure Software Development in Perl and/or CPAN
 
 As of December 2024, we have new guidelines and legislation introduced in the EU ([NIS2](../readinglist.md#nis2) and the [Cyber Resilience Act](../readinglist.md#cra)), with US equivalents ([EO 14028](../readinglist.md#eo14028)), introducing new requirements to software security.
 These requirements are directed at businesses and institutions both globally and throughout the European Economic Area (EEA) to raise the baseline level of security in the software that is in use in products and critical infrastructure in the EEA.

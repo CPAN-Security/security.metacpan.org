@@ -27,13 +27,13 @@ CPANSec is a distinct group from TPRF.
 
 #### How is CPANSec related to P5P?
 
-The [Perl 5 Porters](https://lists.perl.org/list/perl5-porters.html) (P5P) is a mailing list of people in the Perl community who take an interest in mainting and growing the Perl language.
+The [Perl 5 Porters](https://lists.perl.org/list/perl5-porters.html) (P5P) is a mailing list of people in the Perl community who take an interest in maintaining and growing the Perl language.
 
 While some of the people who maintain the Perl language are members of CPANSec, they are two entirely different groups.
 
 #### CPANSec is a CNA. What is a CNA?
 
-A CNA is a CVE Numbering Authority that is authorised by the CVE Program to assign CVE IDs to security vulnerabilities and publish them within their areas.
+A CNA is a CVE Numbering Authority that is authorised by the CVE Program to assign CVE IDs to security vulnerabilities and publish them within their scope.
 
 A team of CPANSec members operates the [CNA for the CPAN and Perl ecosystems](https://security.metacpan.org/2025/02/25/cpansec-is-cna-for-perl-and-cpan).
 
@@ -44,7 +44,7 @@ The [CVE Program](https://www.cve.org/) is an international, community-driven ef
 A CVE (Common Vulnerability Enumeration) is an numeric identifier for publicly disclosed vulnerabilities.
 It allows different groups to use the same ID when discussing vulnerabilities.
 
-Publishing a CVE is aa way of alerting downstream users (distributors, system administrators, and software developers) that the software has a vulnerability. They can take steps to fix the issue (such as upgrading to a fixed version) or to mitigate the issue (such as changing the configuration or how the software is used to limit the effects vulnerability).
+Publishing a CVE is a way of alerting downstream users (distributors, system administrators, and software developers) that the software has a vulnerability. They can take steps to fix the issue (such as upgrading to a fixed version), to mitigate the issue (such as changing the configuration or how the software is used to limit the effects of the vulnerability), or in some cases migrate away from using that software.
 
 #### What is the April Task Force?
 
@@ -245,7 +245,7 @@ or malicious people to take advantage of unfixed vulnerabilities.
 If we've written to you, then please respond that you do not maintain the module and are unwilling to update it.
 
 Some members of CPANSec might volunteer to take on maintenance, just to release a fix.
-In some cases, they may also mark the module as "deprecated" if we believe the module is no longer suited for it's purpose, or there are better solutions.
+In some cases, they may also mark the module as "deprecated" if we believe the module is no longer suited for it's purpose, or if there are better solutions.
 
 #### But this module has been deleted from CPAN
 
@@ -261,7 +261,7 @@ Yes. Visit [CVE Announcement List](https://lists.security.metacpan.org/cve-annou
 
 We may use a variety of LLM models, fuzzers, and other security analysis tools, as well as unsophisticated tools such as grep and awk.
 
-#### Can I opt out having my modules analysed by the April Task Force?
+#### Can I opt out having my modules analysed by CPANSec or the April Task Force?
 
 No.
 
@@ -269,7 +269,7 @@ You have published your modules with the source code under the terms of an open 
 There are no open source licenses that restrict the analysis of software.
 
 We understand that authors have concerns about "AI" tools appropriating their work.
-There is a grey area between a system that can analyse code for bugs, and writing code to reproduct the bugs or recommending fixes (which is generative).
+There is a grey area between a system that can analyse code for bugs, and writing code to reproduce the bugs or recommending fixes (which is generative).
 
 The LLM tools are already available, and people will be using them to analyse open source code.
 There is nothing preventing someone from making their own mirror of CPAN and having their private LLM tools analyse that code.
@@ -284,4 +284,4 @@ No.
 See the above discussion.
 
 CPAN and MetaCPAN do block badly behaved robots (especially since metacpan.org itself is meant for people, not bots).
-But ultimately we (CPAN and mirrors) cannot control what some does with a module once they have downloaded it.
+But ultimately we (CPAN and mirrors) cannot control what someone does with a module once they have downloaded it.

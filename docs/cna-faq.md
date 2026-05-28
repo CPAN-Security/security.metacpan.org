@@ -238,7 +238,7 @@ If we are unable to contact any maintainers, then we may disclose the vulnerabil
 
 Note that the 14-day embargo has emerged from a consensus in the security community that issues discovered with LLMs are essentially public, since anyone using these tools can find them.
 The 14-day window is a compromise that allows maintainers (many of whom are volunteers working in their spare time) to fix issues without waiting too long for duplicate reports to be submitted,
-or malicious people to take advantage of unfixed vulnerabilities.
+or for malicious people to take advantage of unfixed vulnerabilities.
 
 #### I don't maintain this module anymore.
 

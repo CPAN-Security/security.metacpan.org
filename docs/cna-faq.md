@@ -86,19 +86,26 @@ We check to ensure that the issue is with the reported module, and not a depende
 
 We check to ensure that the reported issue is not a duplicate of an existing CVE.
 
-Otherwise, we will reserve a CVE. (We may assign it an earlier year if the issue has been reported publicly before.)
+Otherwise, we will reserve a CVE.
 
-We will contact the maintainers, if they have not already been contacted, to notify them of the report and CVE, as well as the planned disclosure date.
+In general, CVE numbers start with the current four digit year. We may assign a CVE for a prior year if the vulnerability was publically known in the past (e.g. if it was logged in a bug tracker).
 
-Eventually the report will be published, as an upload of metadata about the report to MITRE, and email announcements to our [CVE Announcement List](https://lists.security.metacpan.org/cve-announce/) and to other security lists, as well as to the maintainers.
+In some cases we will later discover that the issue was publicly known prior to the year in the CVE number. In that case the original CVE number is maintained. We do not assign a number for the previous year nor do we reject the assigned CVE and assign another.
+
+We will contact the maintainers, (and if we have up-top-date contact information), to notify them of the report and CVE, as well as the planned disclosure date.
+
+Eventually the report will be published, as an upload of metadata about the report to MITRE, and announcements will be sent to our [CVE Announcement List](https://lists.security.metacpan.org/cve-announce/) and to other security lists, as well as to the maintainers.
 
 See the [CNA Vulnerability to Fix and Disclosure Workflow](https://security.metacpan.org/docs/cve-workflow) for the process that we follow.
 
 #### Why does CPANSec issue CVEs for older vulnerabilities that have been fixed?
 
-Again, the purpose of a CVE is to alert users of an issue. Some users may not have upgraded their software to newer release that fixes an issue. By publishing the CVE, we are alerting downstream users that the software they are using may need to be upgraded, patched or adjusted.
+The purpose of a CVE is to alert users of an issue. Some users may not have upgraded their software to newer release that fixes an issue. By publishing the CVE, we are alerting downstream users that the software they are using may need to be upgraded, patched or adjusted.
 
 #### But P5P didn't agree that this was worth a CVE at the time...
+
+Some modules are considered "risky" and it is assumed that the user must use them in a restricted context and trust the data processed.
+There may still be security vulnerabilities despite that fact.
 
 CPANSec may have decided an older issue was still a vulnerability and should have a CVE.
 
@@ -109,6 +116,9 @@ If a distribution contains a copy of a third-party library with a known vulnerab
 #### Why does CPANSec issue multiple CVEs for the same module version?
 
 A module may have distinct vulnerabilities that need to be identified sepatately. Distinct vulnerabilities will have distinct effects and mitigations. And it is possible that the vulnerabilities are not all fixed in the same release.
+
+A user may determine that their use of the module does not exercise the code path that includes the vulnerable code.
+They can then make a risk based decision on when to upgrade.
 
 ### Validity and severity
 
@@ -122,16 +132,17 @@ We encourage module authors to push back on reports they do not agree with. We m
 
 But if CPANSec can verify that the software has a vulnerability, then a CVE will be issued.
 
+There is a [CVE Dispute Mechanism](https://security.metacpan.org/docs/cna-disclosure-policy.html#cve-dispute-mechanism).
+
 #### This issue has been known for years. Why is a CVE being issued now?
 
-There are many security issues that are "known" by people who have experience with a piece of software, but rarely written down and available to everyone.
-Or when they are written down in bug reports, they are often overlooked.
+There are many security issues that are "known" by people who have experience with a piece of software, but rarely documented and available to everyone, r when they are documented in bug reports, they are overlooked.
 
-Publishing a CVE alerts users about an issue they need to fix.
+Publishing a CVE alerts users about an issue they need to consider when evaluating risk.
 
 #### The CVE is for 2025, but this bug was first documented in 2014. Why won't you change it?
 
-The CVE number was reserved for the year that we believe the vulnerability was first reported. (This may be in a bug tracker or mailing list or block post.)
+The CVE number was reserved for the year that we believe the vulnerability was first reported. (This may be in a bug tracker or mailing list or blog post.)
 Once the number has been shared outside of the CNA (to the module authors, for example) or published, it cannot be changed.
 
 Sometimes as a result of publication, people contact the CNA to identify earlier reports. We will update the CVE record to reflect additional information.
@@ -144,9 +155,11 @@ Issuing CVEs shows that we care about security enough to evaluate projects for s
 
 Nothing is removed from CPAN unless it contains malware or violates copyright.
 
-Sometimes modules have open CVEs because the maintainers do not agree with the issue, or that issue is worth fixing, or because the software is abandoned.
+Sometimes modules have open CVEs because the maintainers do not agree with the issue, or that the issue is worth fixing, or because the software is abandoned.
 
 But having the module available means that someone else can take over maintenance or fork the module, or apply a patch to that version.
+
+MetaCPAN [displays security advisories](https://security.metacpan.org/2026/02/25/metacpan-displays-advisories) for modules with know vulnerabilities.
 
 #### A module has an unfixed CVE. Is it safe to use it?
 
@@ -155,7 +168,7 @@ That depends on the vulnerability.
 CVEs are often published with mitigation advice or patches that you can apply.
 
 If the vulnerability is for a feature that you are not using, then it may not be relevant.
-However, you need to guard your systems against feature creep where you eventually start using it.
+If you choose to not to upgrade because you are not using the vulnerable feature, take care to ensure that future versions of your software cannot use the vulnerable feature.
 
 ### Process & Community concerns
 
@@ -186,7 +199,7 @@ CPAN authors and maintainers are encouraged to.
 
 That's true. We're not telling you what to. We're telling you about vulnerabilities, and offering advice to fix them.
 
-You don't have to follow follow our advice or cooperate with us in any way.
+You don't have to follow our advice or cooperate with us in any way.
 
 But we will still publish CVEs by the advised date.
 
@@ -202,7 +215,7 @@ Software security is important because it protects people: in much of the world,
 
 We understand that much of the software on CPAN is written and maintained by volunteers in their spare time.
 We understand that a growing queue of bug reports for a side project can be overwhelming.
-And we understannd that people have other obligations, and more important things in their lives than maintaining software they wrote for fun 15 years ago.
+And we understand that people have other obligations, and more important things in their lives than maintaining software they wrote for fun 15 years ago.
 
 If you need assistance, please reach out to us.
 

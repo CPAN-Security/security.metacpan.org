@@ -21,6 +21,10 @@ Documents relevant to the CPAN Security Group.
 
 See [guides/](guides/) for the full list of guides.
 
+### Frequently Asked Questions
+
+* [CPANSec CNA and CVE Frequently Asked Questions (FAQ)](cna-faq.md)
+
 ## Studies
 
 * [CPAN Dependency Confusion (study)](cpan-dependency-confusion.md)

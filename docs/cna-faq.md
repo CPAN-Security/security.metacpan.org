@@ -23,7 +23,7 @@ CPANSec was founded at the Perl Toolchain Summit 2023 in Lyon.
 
 [The Perl and Raku Foundation](https://perlfoundation.org) (TPRF) is a community organisation that supports the Perl and Raku languages and community.
 
-CPANSec is a distinct and independent group from TPRF, though they do cooperate when the circumstances call for this.
+CPANSec is a distinct and independent group from TPRF, though they do cooperate when the circumstances call for it.
 
 #### How is CPANSec related to P5P?
 
@@ -53,7 +53,7 @@ They can take steps to fix the issue (such as upgrading to a fixed version), to 
 
 The April Task Force is a CPANSec project founded in April 2026 by members of CPANSec and the [Perl Toolchain Community](https://perltoolchainsummit.org/pts2026).
 
-The aim of the task force is to strengthen the Perl/CPAN CNA by developing and using specialised tools to identify security vulnerabilities in the Perl ecosystem.
+The aim of the task force is to strengthen the Perl/CPAN CNA function by developing and using specialised tools to identify security vulnerabilities in the Perl ecosystem.
 This includes LLM-based security analysis tools.
 When vulnerabilities are found, they are handed to the CPANSec CNA, who will contact authors and encourage them to fix vulnerabilities.
 
@@ -69,7 +69,7 @@ This task force is funded through a grant from Linux Foundation, via their [Alph
 
 Within the scope of the grant, the task force members work autonomously.
 
-The members prioritise modules that are popular (using various metrics) or widely used, including legacy modules that may still be in use, and upriver modules with many dependencies.
+Work on modules may be prioritised based on popularity (using various metrics), including legacy modules that may still be in wide use, and upriver modules with many dependencies.
 
 #### What is the criteria for assigning a CVE number?
 

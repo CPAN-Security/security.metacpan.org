@@ -16,18 +16,18 @@ author: robrwo
 
 #### What is the CPAN Security Group (CPANSec)?
 
-The CPAN Security Group (CPANSec) is a group of volunteers from the Perl community who work to support the security of the Perl ecosystem
-through education and outreach, security analysis of open source Perl distributions on CPAN, and support for fixing security vulnerabilities.
+The CPAN Security Group (CPANSec) is a group of volunteers from the Perl community who work to support the security of the Perl ecosystem through education and outreach, security analysis of open source Perl distributions on CPAN, and support for fixing security vulnerabilities.
+CPANSec was founded at the Perl Toolchain Summit 2023 in Lyon.
 
 #### How is CPANSec related to the Perl and Raku Foundation (TPRF)?
 
-The Perl and Raku Foundation](https://perlfoundation.org) is a community organisation that supports the Perl and Raku languages and community.
+[The Perl and Raku Foundation](https://perlfoundation.org) (TPRF) is a community organisation that supports the Perl and Raku languages and community.
 
-CPANSec is a distinct group from TPRF.
+CPANSec is a distinct and independent group from TPRF, though they do cooperate when the circumstances call for this.
 
 #### How is CPANSec related to P5P?
 
-The [Perl 5 Porters](https://lists.perl.org/list/perl5-porters.html) (P5P) is a mailing list of people in the Perl community who take an interest in maintaining and growing the Perl language.
+The [Perl 5 Porters](https://lists.perl.org/list/perl5-porters.html) (P5P) is a mailing list of people in the Perl community who take an interest in maintaining and growing the Perl language and interpreter.
 
 While some of the people who maintain the Perl language are members of CPANSec, they are two entirely different groups.
 
@@ -37,40 +37,43 @@ A CNA is a CVE Numbering Authority that is authorised by the CVE Program to assi
 
 A team of CPANSec members operates the [CNA for the CPAN and Perl ecosystems](https://security.metacpan.org/2025/02/25/cpansec-is-cna-for-perl-and-cpan).
 
-#### What is the CVE Program? What is a CVE?
+#### What is the CVE Program?
 
 The [CVE Program](https://www.cve.org/) is an international, community-driven effort to identify and catalog publicly disclosed vulnerabilities.
+
+#### What is a CVE?
 
 A CVE (Common Vulnerability Enumeration) is an numeric identifier for publicly disclosed vulnerabilities.
 It allows different groups to use the same ID when discussing vulnerabilities.
 
-Publishing a CVE is a way of alerting downstream users (distributors, system administrators, and software developers) that the software has a vulnerability. They can take steps to fix the issue (such as upgrading to a fixed version), to mitigate the issue (such as changing the configuration or how the software is used to limit the effects of the vulnerability), or in some cases migrate away from using that software.
+Publishing a CVE is a way of alerting downstream users (distributors, system administrators, and software developers) that the software has a vulnerability.
+They can take steps to fix the issue (such as upgrading to a fixed version), to mitigate the issue (such as changing the configuration or how the software is used to limit the effects of the vulnerability), or in extreme cases migrate away from using that software.
 
 #### What is the April Task Force?
 
 The April Task Force is a CPANSec project founded in April 2026 by members of CPANSec and the [Perl Toolchain Community](https://perltoolchainsummit.org/pts2026).
 
-The aim of the project is to develop and use specialialised tools to identify security vulnerabilities in the Perl ecosystem.
+The aim of the task force is to strengthen the Perl/CPAN CNA by developing and using specialised tools to identify security vulnerabilities in the Perl ecosystem.
 This includes LLM-based security analysis tools.
 When vulnerabilities are found, they are handed to the CPANSec CNA, who will contact authors and encourage them to fix vulnerabilities.
 
 #### How is the April Task Force related to the Perl and Raku Foundation?
 
-The Perl and Raku Foundation (TPRF) is the fiscal host of the project.
+The Perl and Raku Foundation (TPRF) is the fiscal host of the April Task Force.
 
 #### Who funds the April Task Force?
 
-This task force is funded through a grant from Linux Foundation, through the [Alpha-Omega project](https://alpha-omega.dev/)
+This task force is funded through a grant from Linux Foundation, via their [Alpha-Omega project](https://alpha-omega.dev/)
 
 #### Who decides what the task force works on?
 
-Within the scope of the grant, the task force members work autonomuously.
+Within the scope of the grant, the task force members work autonomously.
 
-We do prioritise modules that are popular (using various metrics) or widely used (including legacy modules that may still be in use), or upriver modules with many dependencies.
+The members prioritise modules that are popular (using various metrics) or widely used, including legacy modules that may still be in use, and upriver modules with many dependencies.
 
 #### What is the criteria for assigning a CVE number?
 
-If the members of CPANSec investigating a reported issue consider it to be a security vulnerability, then we assign a CVE number.
+If the members of CPANSec investigating a reported issue consider it to be a security vulnerability, then a CVE number will be assigned by the CNA.
 
 If the vendor (module maintainers) consider something to be a security vulnerability in their software, and request a CVE from CPANSec, then we will assign a CVE number.
 
@@ -80,19 +83,23 @@ Security vulnerabilities are considered anything that allows users to execute un
 
 #### How do you go from a vulnerability report to a CVE?
 
-We triage the report to verify that there is a vulnerability, in much the same way that one verifies bug reports (although taking precautions to protect systems from damage).
+CPANSec members triage the report to verify that there is a vulnerability, in much the same way that one verifies bug reports (although taking precautions to protect systems from damage).
 
-We check to ensure that the issue is with the reported module, and not a dependency. If the dependency is not Perl-related, then it is out of CPANSec's scope, although we may forward the report to the appropriate maintainer or CNA. (Note that in some cases, there may still be a CVE for code that has an insecure dependency.)
-
-We check to ensure that the reported issue is not a duplicate of an existing CVE.
+* We check to ensure that the issue is with the reported module, and not a dependency.
+* If the dependency is not Perl-related, then it is out of CPANSec's scope, although we may forward the report to the appropriate maintainer or CNA.
+* (Note that in some cases, there may still be a CVE issued for code that has an insecure dependency.)
+* We check to ensure that the reported issue is not a duplicate of an existing CVE.
 
 Otherwise, we will reserve a CVE.
 
-In general, CVE numbers start with the current four digit year. We may assign a CVE for a prior year if the vulnerability was publically known in the past (e.g. if it was logged in a bug tracker).
+In general, CVE numbers start with the current four digit year.
+We may assign a CVE for a prior year if the vulnerability was publicly known in the past (e.g. if it was logged in a bug tracker).
 
-In some cases we will later discover that the issue was publicly known prior to the year in the CVE number. In that case the original CVE number is maintained. We do not assign a number for the previous year nor do we reject the assigned CVE and assign another.
+In some cases we will later discover that the issue was publicly known prior to the year in the CVE number.
+In that case the original CVE number is maintained.
+We do not assign a number for the previous year nor do we reject the assigned CVE and assign another.
 
-We will contact the maintainers, (and if we have up-top-date contact information), to notify them of the report and CVE, as well as the planned disclosure date.
+We will contact the maintainers, (if we have up-top-date contact information) to notify them of the report and CVE, as well as the planned disclosure date.
 
 Eventually the report will be published, as an upload of metadata about the report to MITRE, and announcements will be sent to our [CVE Announcement List](https://lists.security.metacpan.org/cve-announce/) and to other security lists, as well as to the maintainers.
 
@@ -100,7 +107,9 @@ See the [CNA Vulnerability to Fix and Disclosure Workflow](https://security.meta
 
 #### Why does CPANSec issue CVEs for older vulnerabilities that have been fixed?
 
-The purpose of a CVE is to alert users of an issue. Some users may not have upgraded their software to newer release that fixes an issue. By publishing the CVE, we are alerting downstream users that the software they are using may need to be upgraded, patched or adjusted.
+The purpose of a CVE is to alert users of an issue.
+Some users may not have upgraded their software to newer release that fixes an issue.
+By publishing the CVE, we are alerting downstream users that the software they are using may need to be upgraded, patched or adjusted.
 
 #### But P5P didn't agree that this was worth a CVE at the time...
 
@@ -111,11 +120,12 @@ CPANSec may have decided an older issue was still a vulnerability and should hav
 
 #### Why does CPANSec issue CVEs for embedded vulnerabilities that don't affect the module?
 
-If a distribution contains a copy of a third-party library with a known vulnerability, then that needs to be identified as an issue to be resolved, even if the Perl modules in that distribution do not make use of the vulnerable feature.
+If a distribution contains a copy of a third-party library with a known vulnerability, then this needs to be identified as an issue to be resolved, even if the Perl modules in that distribution do not make use of the vulnerable feature.
 
 #### Why does CPANSec issue multiple CVEs for the same module version?
 
-A module may have distinct vulnerabilities that need to be identified sepatately. Distinct vulnerabilities will have distinct effects and mitigations. And it is possible that the vulnerabilities are not all fixed in the same release.
+A module may have distinct vulnerabilities that need to be identified separately.
+Distinct vulnerabilities will have distinct effects and mitigations, and it is possible that the vulnerabilities are not all fixed in the same release.
 
 A user may determine that their use of the module does not exercise the code path that includes the vulnerable code.
 They can then make a risk based decision on when to upgrade.
@@ -128,7 +138,8 @@ Unsafe defaults are not considered acceptable, because they are often unchanged 
 
 #### The module author doesn't agree that this is a vulnerability. Now what?
 
-We encourage module authors to push back on reports they do not agree with. We might wrong about something.
+We encourage module authors to push back on reports they do not agree with.
+We might wrong about something.
 
 But if CPANSec can verify that the software has a vulnerability, then a CVE will be issued.
 
@@ -136,16 +147,19 @@ There is a [CVE Dispute Mechanism](https://security.metacpan.org/docs/cna-disclo
 
 #### This issue has been known for years. Why is a CVE being issued now?
 
-There are many security issues that are "known" by people who have experience with a piece of software, but rarely documented and available to everyone, r when they are documented in bug reports, they are overlooked.
+There are many security issues that are "known" by people who have experience with a piece of software, but rarely documented and available to everyone.
+Even when they are documented in bug reports, they are often overlooked.
 
-Publishing a CVE alerts users about an issue they need to consider when evaluating risk.
+Publishing a CVE alerts users about an issue, so they may consider and evaluate their risk.
 
 #### The CVE is for 2025, but this bug was first documented in 2014. Why won't you change it?
 
-The CVE number was reserved for the year that we believe the vulnerability was first reported. (This may be in a bug tracker or mailing list or blog post.)
+The CVE number was reserved for the year that we believe the vulnerability was first reported.
+(This may be in a bug tracker or mailing list or blog post.)
 Once the number has been shared outside of the CNA (to the module authors, for example) or published, it cannot be changed.
 
-Sometimes as a result of publication, people contact the CNA to identify earlier reports. We will update the CVE record to reflect additional information.
+Sometimes as a result of publication, people contact the CNA to identify earlier reports.
+We will update the CVE record to reflect this additional information.
 
 #### Do CVEs make the Perl community look bad?
 
@@ -155,11 +169,11 @@ Issuing CVEs shows that we care about security enough to evaluate projects for s
 
 Nothing is removed from CPAN unless it contains malware or violates copyright.
 
-Sometimes modules have open CVEs because the maintainers do not agree with the issue, or that the issue is worth fixing, or because the software is abandoned.
+Sometimes modules have open CVEs because the maintainers do not agree with the issue, or that the issue is not worth fixing, or because the software is abandoned.
 
-But having the module available means that someone else can take over maintenance or fork the module, or apply a patch to that version.
+But having the module available means that someone else can take over maintenance (adopt) or fork the module, or apply a patch to that version.
 
-MetaCPAN [displays security advisories](https://security.metacpan.org/2026/02/25/metacpan-displays-advisories) for modules with know vulnerabilities.
+MetaCPAN [displays security advisories](https://security.metacpan.org/2026/02/25/metacpan-displays-advisories) for modules with known vulnerabilities.
 
 #### A module has an unfixed CVE. Is it safe to use it?
 
@@ -182,7 +196,8 @@ If you need help understanding the report, or making changes, contact CPANSec.
 
 #### I've received a report from someone outside of CPANSec. What do I do?
 
-Anyone can submit a security report to you. But you (as the maintainer) have the right to disclose this to anyone.
+Anyone can submit a security report to you.
+But you (as the maintainer) have the right to disclose this to anyone.
 We recommend that you disclose this to CPANSec, so that we can assist in triage, fixing, and assigning CVEs.
 
 #### The reporter is asking me for money!
@@ -197,7 +212,9 @@ CPAN authors and maintainers are encouraged to.
 
 #### You can't tell me what to do!
 
-That's true. We're not telling you what to. We're telling you about vulnerabilities, and offering advice to fix them.
+That's true.
+We're not telling you what to do.
+We're telling you about vulnerabilities, and offering advice to fix them.
 
 You don't have to follow our advice or cooperate with us in any way.
 
@@ -221,11 +238,15 @@ If you need assistance, please reach out to us.
 
 We may ask for maintenance permissions to release an update the software, if you agree.
 
+With that said, some people enjoy working with others on their software.
+Have you considered reaching out to your users, looking for co-maintainers?
+
 #### Telling me to fix a vulnerability is stressful!
 
 You don't have to fix anything.
 
-If you are too busy, or physically or mentally unable to fix the software, then let us know that you are unable to. (You don't need to tell us why.)
+If you are too busy, or physically or mentally unable to fix the software, then let us know that you are unable to.
+(You don't need to tell us why.)
 
 We may ask for maintenance permissions to release an update the software, if you agree.
 
@@ -244,14 +265,12 @@ You have no "deadline" for fixing security vulnerabilities.
 CPANSec policy is to publish vulnerabilities at 14 days after the maintainer is notified, unless there are compelling reasons for a longer embargo on publishing.
 (For example, we may want to coordinate releases of fixes for multiple modules, or the result of publishing the vulnerability may be dire enough to ensuring that fixes are available first.)
 
-We may publish vulnerabilities sooner if they have already been disclosed, for example, by the maintainers of a module (including a commit or pending release in a software repository),
-or by a user in a public forum (including the issue tracker or pull requests for a module).
+We may publish vulnerabilities sooner if they have already been disclosed, for example, by the maintainers of a module (including a commit or pending release in a software repository), or by a user in a public forum (including the issue tracker or pull requests for a module).
 
 If we are unable to contact any maintainers, then we may disclose the vulnerability sooner.
 
 Note that the 14-day embargo has emerged from a consensus in the security community that issues discovered with LLMs are essentially public, since anyone using these tools can find them.
-The 14-day window is a compromise that allows maintainers (many of whom are volunteers working in their spare time) to fix issues without waiting too long for duplicate reports to be submitted,
-or for malicious people to take advantage of unfixed vulnerabilities.
+The 14-day window is a compromise that allows maintainers (many of whom are volunteers working in their spare time) to fix issues without waiting too long for duplicate reports to be submitted, or for malicious actors to take advantage of unfixed vulnerabilities.
 
 #### I don't maintain this module anymore.
 
@@ -264,9 +283,10 @@ In some cases, they may also mark the module as "deprecated" if we believe the m
 
 Deleted modules reside on BackPAN and are still available for those who are still using them. We will still publish security advisories for them.
 
-#### Can I subscribe to receive notificastions about new vulnerabilities?
+#### Can I subscribe to receive notifications about new vulnerabilities?
 
-Yes. Visit [CVE Announcement List](https://lists.security.metacpan.org/cve-announce/), follow the link for more information and fill in the form to subscribe.
+Yes.
+Visit [CVE Announcement List](https://lists.security.metacpan.org/cve-announce/), follow the link for more information and fill in the form to subscribe.
 
 ### Tooling & AI Models
 
@@ -298,3 +318,8 @@ See the above discussion.
 
 CPAN and MetaCPAN do block badly behaved robots (especially since metacpan.org itself is meant for people, not bots).
 But ultimately we (CPAN and mirrors) cannot control what someone does with a module once they have downloaded it.
+
+ 
+*[Upriver]: Upriver – a module on CPAN that has dependencies published on CPAN. The more dependencies, the further upriver it is considered.
+*[CNA]: CNA – CVE Numbering Authority.
+*[CVE]: CVE – Common Vulnerability Enumeration is an numeric identifier for publicly disclosed vulnerabilities.

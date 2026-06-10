@@ -21,13 +21,13 @@ CPANSec was founded at the Perl Toolchain Summit 2023 in Lyon.
 
 [The Perl and Raku Foundation](https://perlfoundation.org) (TPRF) is a community organisation that supports the Perl and Raku languages and community.
 
-CPANSec is a distinct and independent group from TPRF, though they do cooperate when the circumstances call for it.
+CPANSec is a distinct and independent group from TPRF, although we do cooperate when the circumstances call for it.
 
 ### How is CPANSec related to P5P?
 
 The [Perl 5 Porters](https://lists.perl.org/list/perl5-porters.html) (P5P) is a mailing list of people in the Perl community who take an interest in maintaining and growing the Perl language and interpreter.
 
-While some of the people who maintain the Perl language are members of CPANSec, they are two entirely different groups.
+While some of the people who maintain the Perl language are members of CPANSec, these are two entirely different groups.
 
 ### CPANSec is a CNA. What is a CNA?
 
@@ -53,7 +53,7 @@ The April Task Force is a CPANSec project founded in April 2026 by members of CP
 
 The aim of the task force is to strengthen the Perl/CPAN CNA function by developing and using specialised tools to identify security vulnerabilities in the Perl ecosystem.
 This includes LLM-based security analysis tools.
-When vulnerabilities are found, they are handed to the CPANSec CNA, who will contact authors and encourage them to fix vulnerabilities.
+When vulnerabilities are found, these are handed to the CPANSec CNA, who will contact authors and encourage them to fix vulnerabilities.
 
 ### How is the April Task Force related to the Perl and Raku Foundation?
 
@@ -114,7 +114,7 @@ By publishing the CVE, we are alerting downstream users that the software they a
 Some modules are considered "risky" and it is assumed that the user must use them in a restricted context and trust the data processed.
 There may still be security vulnerabilities despite that fact.
 
-CPANSec may have decided an older issue was still a vulnerability and should have a CVE.
+CPANSec may have assessed an older issue is still a vulnerability, and should therefore be assigned a CVE number.
 
 ### Why does CPANSec issue CVEs for embedded vulnerabilities that don't affect the module?
 
@@ -132,7 +132,7 @@ They can then make a risk based decision on when to upgrade.
 
 ### The documentation already warns users about the issue. Why is it a CVE?
 
-Unsafe defaults are not considered acceptable, because they are often unchanged when software is used in production.
+Unsafe defaults are not considered acceptable, because these are often unchanged when software is used in production.
 
 ### The module author doesn't agree that this is a vulnerability. Now what?
 
@@ -146,7 +146,7 @@ There is a [CVE Dispute Mechanism](https://security.metacpan.org/docs/cna-disclo
 ### This issue has been known for years. Why is a CVE being issued now?
 
 There are many security issues that are "known" by people who have experience with a piece of software, but rarely documented and available to everyone.
-Even when they are documented in bug reports, they are often overlooked.
+Even when these are documented in bug reports, they are often overlooked.
 
 Publishing a CVE alerts users about an issue, so they may consider and evaluate their risk.
 
@@ -212,7 +212,7 @@ CPAN authors and maintainers are encouraged to.
 
 That's true.
 We're not telling you what to do.
-We're telling you about vulnerabilities, and offering advice to fix them.
+We're telling you about vulnerabilities, and offering advice on how to fix them.
 
 You don't have to follow our advice or cooperate with us in any way.
 
@@ -235,8 +235,6 @@ And we understand that people have other obligations, and more important things 
 If you need assistance, please reach out to us.
 
 We may ask for maintenance permissions to release an update the software, if you agree.
-
-With that said, some people enjoy working with others on their software.
 Have you considered reaching out to your users, looking for co-maintainers?
 
 ### Telling me to fix a vulnerability is stressful!
@@ -263,7 +261,7 @@ You have no "deadline" for fixing security vulnerabilities.
 CPANSec policy is to publish vulnerabilities at 14 days after the maintainer is notified, unless there are compelling reasons for a longer embargo on publishing.
 (For example, we may want to coordinate releases of fixes for multiple modules, or the result of publishing the vulnerability may be dire enough to ensuring that fixes are available first.)
 
-We may publish vulnerabilities sooner if they have already been disclosed, for example, by the maintainers of a module (including a commit or pending release in a software repository), or by a user in a public forum (including the issue tracker or pull requests for a module).
+We may publish vulnerabilities sooner if these have already been disclosed, for example, by the maintainers of a module (including a commit or pending release in a software repository), or by a user in a public forum (including the issue tracker or pull requests for a module).
 
 If we are unable to contact any maintainers, then we may disclose the vulnerability sooner.
 

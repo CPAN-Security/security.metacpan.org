@@ -22,6 +22,7 @@ Documents relevant to the CPAN Security Group.
 * [Perl Developer's Guide to Secure Software Development](guides/perl-secure-development-guide.md) ⚠️  DRAFT
 * [CPAN Author's Guide to Random Data for Security](guides/random-data-for-security.md)
 * [CPAN Author's Security Policy guide](guides/security-policy-for-authors.md)
+* [Security Reports for Module Maintainers](guides/maintainer-security-reports.md)
 
 See [guides/](guides/) for the full list of guides.
 

@@ -21,7 +21,8 @@ The first thing you should do is acknowledge receipt of the report,
 ideally copying the CPAN Security Group [cpan-security@security.metacpan.org](mailto:cpan-security@security.metacpan.org)
 if the notification is not from us or copied to us.
 
-If you no longer maintain the module, indicate that in your reply.
+If you no longer maintain the module, indicate that in your reply. (Also consider
+[marking your module for adoption](https://neilb.org/2013/08/07/adoptme.html).)
 If there is a different maintainer, then refer the reporter to that maintainer, and ideally copy them on the report.
 
 CPANSec will usually provide you with CVE numbers for the vulnerabilities in the report,

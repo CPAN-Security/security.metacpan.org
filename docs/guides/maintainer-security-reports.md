@@ -19,7 +19,7 @@ to have an adverse impact on the system.
 
 The first thing you should do is acknowledge receipt of the report,
 ideally copying the CPAN Security Group [cpan-security@security.metacpan.org](mailto:cpan-security@security.metacpan.org)
-if the noticiation is not from us or copied to us.
+if the notification is not from us or copied to us.
 
 If you no longer maintain the module, indicate that in your reply.
 If there is a different maintainer, then refer the reporter to that maintainer, and ideally copy them on the report.
@@ -40,7 +40,7 @@ When this happens, we may arrange for coordinated disclosure where multiple modu
 
 The next step is to triage the issue.
 This is done is much the same way you would triage the bug reports,
-but taking precutions to protect systems from potential side effects of the reported bugs.
+but taking precautions to protect systems from potential side effects of the reported bugs.
 
 If you cannot confirm the issue, then please reply to the reporter indicating that.
 The reporter may respond with additional information.
@@ -56,7 +56,7 @@ When you release a module with a fix, please indicate the CVE numbers in the cha
 (If the report contains other codes such as [CWE](https://cwe.mitre.org) or [CAPEC](https://capec.mitre.org) numbers, you do not need to include those in the change log. These are used for classifying vulnerability reports, but are not considered useful for software developers.)
 
 If there are multiple vulnerabilities in the report, you do not need to fix them in the same release.
-It is acceptable to release seperate versions with fixes for different vulnerabilities.
+It is acceptable to release separate versions with fixes for different vulnerabilities.
 
 When you have released a fix, please notify CPANSec so that we can publish or update the CVE.
 

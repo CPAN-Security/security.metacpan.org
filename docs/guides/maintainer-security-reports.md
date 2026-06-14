@@ -50,7 +50,7 @@ If you confirm the bug but do not believe it to be a security issue, then please
 
 If you have been sent a patch to fix the bug, then this is only a suggested fix.
 You do not need to apply this patch, although CPANSec may publish this patch along with the vulnerability if it is unfixed.
-If theere is a problem with that patch, then please notify CPANSec.
+If there is a problem with that patch, then please notify CPANSec.
 
 When you release a module with a fix, please indicate the CVE numbers in the change log.
 (If the report contains other codes such as [CWE](https://cwe.mitre.org) or [CAPEC](https://capec.mitre.org) numbers, you do not need to include those in the change log. These are used for classifying vulnerability reports, but are not considered useful for software developers.)
@@ -66,9 +66,9 @@ If you need further information, please see the [CPANSec CNA and CVE Frequently 
 
 If you have received a vulnerability report from someone unaffiliated with CPANSec, or found one while working on your module, then please notify us at [cpan-security@security.metacpan.org](mailto:cpan-security@security.metacpan.org).
 
-CPANSec can assign a CVE number, and publish the vulnerability repport with the [CVE Program](https://www.cve.org).
+CPANSec can assign a CVE number, and publish the vulnerability report with the [CVE Program](https://www.cve.org).
 
-By proactively submitting security reports to CPANSec, you can save us time and effort in issuing a retroactive CVE after a release, and to alert downstream users of your moduke that they need to upgrade their software
+By proactively submitting security reports to CPANSec, you can save us time and effort in issuing a retroactive CVE after a release, and to alert downstream users of your module that they need to upgrade their software
 or make changes to mitigate the effects of a vulnerability.
 
 CPANSec can also assist you with fixing the vulnerability, if you want assistance.

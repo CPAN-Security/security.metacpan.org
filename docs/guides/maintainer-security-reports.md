@@ -4,7 +4,7 @@ published: true
 toc: true
 title: "Security Reports for Module Maintainers"
 date: 2025-01-05 18:15:00 +0000
-tags: faq cna cve
+tags: cpan module authors bug triage
 authors:
   - robrwo
 ---

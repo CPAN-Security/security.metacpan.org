@@ -3,7 +3,7 @@ layout: single
 published: true
 toc: true
 title: "Security Reports for Module Maintainers"
-date: 2025-01-05 18:15:00 +0000
+date: 2026-06-19 11:00:00 +0000
 tags: cpan module authors bug triage
 authors:
   - robrwo

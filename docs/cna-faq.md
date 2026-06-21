@@ -41,7 +41,7 @@ The [CVE Program](https://www.cve.org/) is an international, community-driven ef
 
 ### What is a CVE?
 
-A CVE (Common Vulnerability Enumeration) is a numeric identifier for publicly disclosed vulnerabilities.
+A CVE (Common Vulnerabilities and Exposures) is a numeric identifier for publicly disclosed vulnerabilities.
 It allows different groups to use the same ID when discussing vulnerabilities.
 
 Publishing a CVE is a way of alerting downstream users (distributors, system administrators, and software developers) that the software has a vulnerability.
@@ -316,4 +316,4 @@ But ultimately we (CPAN and mirrors) cannot control what someone does with a mod
 
 *[Upriver]: Upriver - a module on CPAN that has dependencies published on CPAN. The more dependencies, the further upriver it is considered.
 *[CNA]: CNA - CVE Numbering Authority.
-*[CVE]: CVE - Common Vulnerability Enumeration is a numeric identifier for publicly disclosed vulnerabilities.
+*[CVE]: CVE - Common Vulnerabilities and Exposures is a numeric identifier for publicly disclosed vulnerabilities.

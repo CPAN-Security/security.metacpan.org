@@ -194,9 +194,8 @@ If you need help understanding the report, or making changes, contact CPANSec.
 
 ### I've received a report from someone outside of CPANSec. What do I do?
 
-Anyone can submit a security report to you.
-But you (as the maintainer) have the right to disclose this to anyone.
-We recommend that you disclose this to CPANSec, so that we can assist in triage, fixing, and assigning CVEs.
+Anyone can submit a security report to you, and you (as the maintainer) are free to share it with others.
+We recommend that you disclose it to CPANSec, so that we can assist in triage, fixing, and assigning CVEs.
 
 ### The reporter is asking me for money!
 

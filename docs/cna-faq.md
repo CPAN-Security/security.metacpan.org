@@ -10,7 +10,7 @@ authors:
   - sjn
 ---
 
-## Organization
+## Organisation
 
 ### What is the CPAN Security Group (CPANSec)?
 
@@ -37,7 +37,7 @@ A team of CPANSec members operates the [CNA for the CPAN and Perl ecosystems](ht
 
 ### What is the CVE Program?
 
-The [CVE Program](https://www.cve.org/) is an international, community-driven effort to identify and catalog publicly disclosed vulnerabilities.
+The [CVE Program](https://www.cve.org/) is an international, community-driven effort to identify and catalogue publicly disclosed vulnerabilities.
 
 ### What is a CVE?
 
@@ -61,7 +61,7 @@ The Perl and Raku Foundation (TPRF) is the fiscal host of the April Task Force.
 
 ### Who funds the April Task Force?
 
-This task force is funded through a grant from Linux Foundation, via their [Alpha-Omega project](https://alpha-omega.dev/)
+This task force is funded through a grant from Linux Foundation, via their [Alpha-Omega project](https://alpha-omega.dev/).
 
 ### Who decides what the task force works on?
 
@@ -77,7 +77,7 @@ If the vendor (module maintainers) consider something to be a security vulnerabi
 
 ### What is a security vulnerability?
 
-Security vulnerabilities are considered anything that allows users to execute unauthorised code, access unauthorised resources, or to have an adverse impact on accessibility, integrity or performance of a system.
+Security vulnerabilities are considered anything that allows users to execute unauthorised code, access unauthorised resources, or have an adverse impact on accessibility, integrity or performance of a system.
 
 ### How do you go from a vulnerability report to a CVE?
 
@@ -182,7 +182,7 @@ CVEs are often published with mitigation advice or patches that you can apply.
 If the vulnerability is for a feature that you are not using, then it may not be relevant.
 If you choose not to upgrade because you are not using the vulnerable feature, take care to ensure that future versions of your software cannot use the vulnerable feature.
 
-## Process & Community concerns
+## Process and community concerns
 
 ### I've just received a vulnerability report. What do I do?
 
@@ -284,7 +284,7 @@ Deleted modules reside on BackPAN and are still available for those who are stil
 Yes.
 Visit [CVE Announcement List](https://lists.security.metacpan.org/cve-announce/), follow the link for more information and fill in the form to subscribe.
 
-## Tooling & AI Models
+## Tooling and AI models
 
 ### What tools does the April Task Force and CPANSec use?
 
@@ -315,7 +315,6 @@ See the above discussion.
 CPAN and MetaCPAN do block badly behaved robots (especially since metacpan.org itself is meant for people, not bots).
 But ultimately we (CPAN and mirrors) cannot control what someone does with a module once they have downloaded it.
 
- 
-*[Upriver]: Upriver – a module on CPAN that has dependencies published on CPAN. The more dependencies, the further upriver it is considered.
-*[CNA]: CNA – CVE Numbering Authority.
-*[CVE]: CVE – Common Vulnerability Enumeration is a numeric identifier for publicly disclosed vulnerabilities.
+*[Upriver]: Upriver - a module on CPAN that has dependencies published on CPAN. The more dependencies, the further upriver it is considered.
+*[CNA]: CNA - CVE Numbering Authority.
+*[CVE]: CVE - Common Vulnerability Enumeration is a numeric identifier for publicly disclosed vulnerabilities.

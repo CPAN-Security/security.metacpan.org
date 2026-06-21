@@ -180,6 +180,7 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-include-cache
   - jekyll-gfm-admonitions
+  - jekyll-last-modified-at
 #  - jekyll-optional-front-matter
 
 # Exclude from processing.

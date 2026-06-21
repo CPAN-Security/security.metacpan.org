@@ -17,6 +17,7 @@ group :jekyll_plugins do
   gem "jekyll-mermaid", ">= 1"
   gem "jekyll-include-cache"
   gem "jekyll-gfm-admonitions"
+  gem "jekyll-last-modified-at"
 #  gem 'jekyll-optional-front-matter'
 end
 

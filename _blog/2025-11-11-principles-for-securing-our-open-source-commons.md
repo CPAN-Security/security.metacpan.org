@@ -11,7 +11,6 @@ excerpt: "17 reality checks for interacting with the open source software projec
 ---
 
 ## Unpaid volunteers has become critical for managing business risk. Why?
-
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!NOTE]
 > **Who is the intended audience?**
@@ -19,8 +18,8 @@ excerpt: "17 reality checks for interacting with the open source software projec
 > * CEO, CTO, CIO, CISO, other management.
 > * OSPO, Procurement, Legal staff.
 
-With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in 2026, cybersecurity is required to become a important aspect of developing products with digital elements.
-One of the first steps in preparing for the CRA, will relate to mapping out product dependencies, and ensure that each one of these are _taken care of appropriately_.
+With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in September 2026, cybersecurity is required to become a important aspect of developing all products with digital elements.
+One of the first steps in preparing for the CRA, will relate to mapping out the software dependencies if these products, and ensure that each dependency is _taken care of appropriately_.
 The vast majority (70-90%, according to [Linux Foundation](https://www.linuxfoundation.org/blog/blog/a-summary-of-census-ii-open-source-software-application-libraries-the-world-depends-on)) of these dependencies are Open Source Software (OSS) components, and many of these are likely to get increased scrutiny from manufacturers in order to reduce security-related risks in their products.
 
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
@@ -29,8 +28,10 @@ The vast majority (70-90%, according to [Linux Foundation](https://www.linuxfoun
 > * OSS Components have Projects, which have Maintainers, Contributors and Communities.
 > * Communities may consist of Contributors working for Businesses, unpaid Volunteers or others.
 
-This means there is a need for all affected businesses to come to terms with their role in these OSS ecosystems, and what the rules of engagement are in the particular communities they depend on.
-Missteps may lead to alienating the maintainers businesses rely on - how can this be avoided?
+This means there is a need for all affected businesses to come to terms with their own role in these OSS ecosystems, and what the rules of engagement are in the particular communities they rely on.
+Cultural misalignment with the communities one relies on may lead to alienating the same people who take care of parts of the software you use.
+
+
 
 Let's first look at what problem needs to be solved, then describe the context it needs to be solved in, and finally look at a short check-list that can assist one towards good solutions.
 
@@ -165,8 +166,12 @@ While this "rebate" exists by design (and a consequence of the OSS license langu
 
 ### 14. Open Source Security doesn't improve in a vacuum
 
+If your venture relies on an open source component's security, you are now a stakeholder in it's project health, sustainability and continued capability to respond to discovered vulnerabilities and incidents.
+
 
 ### 15. Many maintainers don't like the thought of receiving money for something they _enjoy_
+
+
 
 
 ### 16. The median Open Source project size is 1

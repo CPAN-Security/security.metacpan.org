@@ -262,7 +262,9 @@ Annexes are technical materials presented separately from the main text, and hav
 * (Eclipse) ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
 * (EU) The '[Blue Guide](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.247.01.0001.01.ENG&toc=OJ%3AC%3A2022%3A247%3ATOC)' on the implementation of EU product rules (2022/C 247/01). Published 2022-06-29; [PDF](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04))
 * (EU) [CRA Corrigendum](https://draftable.com/compare/ShyQnqhNqFGP) comparison. Published 2024-09-03; [Original PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130-FNL-COR01_EN.pdf)
-* List of [EU Notified Conformity Assessment Bodies](https://webgate.ec.europa.eu/single-market-compliance-space/notified-bodies/notified-body-list?filter=legislationId:167953,notificationStatusId:1)
+* List of _active_ [EU Notified Conformity Assessment Bodies](https://webgate.ec.europa.eu/single-market-compliance-space/notified-bodies/notified-body-list?filter=legislationId:167953,notificationStatusId:1)
+* List of [EU Notifying authorities](https://webgate.ec.europa.eu/single-market-compliance-space/notified-bodies/notifying-authorities?filter=legislationId:167953)
+* List of [EU Market Surveillance Authorities](https://webgate.ec.europa.eu/single-market-compliance-space/market-surveillance/ms-authorities?filter=legislationId:9021,t:1)
 
 ### EU and EEA – PLD {#pld}
 

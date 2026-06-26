@@ -120,6 +120,11 @@ CPANSec may have assessed an older issue is still a vulnerability, and should th
 
 If a distribution contains a copy of a third-party library with a known vulnerability, then this needs to be identified as an issue to be resolved, even if the Perl modules in that distribution do not make use of the vulnerable feature.
 
+Security-conscious users use SCA tooling to discover unknown or vulnerable dependencies.
+While the distribution itself may avoid using the vulnerable code path, the user may still do so inadvertently – and even if they don't, the process of discovering and managing false positives may be quite costly.
+
+If the embedded code cannot be updated, then please consider mitigating the issue yourself, and then adding a VEX file to your distribution stating this.
+
 ### Why does CPANSec issue multiple CVEs for the same module version?
 
 A module may have distinct vulnerabilities that need to be identified separately.
@@ -317,3 +322,5 @@ But ultimately we (CPAN and mirrors) cannot control what someone does with a mod
 *[Upriver]: Upriver - a module on CPAN that has dependencies published on CPAN. The more dependencies, the further upriver it is considered.
 *[CNA]: CNA - CVE Numbering Authority.
 *[CVE]: CVE - Common Vulnerabilities and Exposures is a numeric identifier for publicly disclosed vulnerabilities.
+*[SCA]: SCA - Software Composition Analysis - a method for determining what a software artifact is made of (it's composition), after the fact, using tools like static code analyzers, decompilers, checksum databases, machine learning or other techniques.
+*[VEX]: VEX - Vulnerability Exploitability eXchange - a JSON-LD file format for describing the applicability of security findings in a software artifact. See the OpenVEX project for more info.

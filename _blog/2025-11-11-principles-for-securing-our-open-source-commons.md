@@ -11,6 +11,7 @@ excerpt: "17 reality checks for interacting with the open source software projec
 ---
 
 ## Unpaid volunteers has become critical for managing business risk. Why?
+
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!NOTE]
 > **Who is the intended audience?**
@@ -28,7 +29,7 @@ The vast majority (70-90%, according to [Linux Foundation](https://www.linuxfoun
 > * OSS Components have Projects, which have Maintainers, Contributors and Communities.
 > * Communities may consist of Contributors working for Businesses, unpaid Volunteers or others.
 
-This means there is a need for all affected businesses to come to terms with their own role in these OSS ecosystems, and what the rules of engagement are in the particular communities they rely on.
+This means there is a need for all affected businesses to come to terms with their role in these OSS ecosystems, and what the rules of engagement are in the particular communities they depend on.
 Cultural misalignment with the communities one relies on may lead to alienating the same people who take care of parts of the software you use.
 
 
@@ -36,7 +37,7 @@ Cultural misalignment with the communities one relies on may lead to alienating 
 Let's first look at what problem needs to be solved, then describe the context it needs to be solved in, and finally look at a short check-list that can assist one towards good solutions.
 
 
-## Performing _due diligence_ work involving volunteers?
+## Performing _Due Diligence_ while depending on volunteers
 
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
@@ -44,23 +45,27 @@ Let's first look at what problem needs to be solved, then describe the context i
 > *Due Care* is about the *actions a reasonable and prudent person is expected to do* during an event.
 > *Due Diligence* is about the *preparations this reasonable and prudent person has to do in order to succeed* acting with Due Care.
 
-When and serious incident happens or a critical vulnerability is discovered, we are expected to conduct ourselves with _Due Care_ – and before the emergency develops, to have prepared for this with _Due Diligence_.
+When ensuring your technology bedrock is secure and well-maintained, everyone is expected to conduct themselves with reasonable _Due Care_ and prepare for this with _Due Diligence_.
+This is especially true for businesses operating in sectors subject to security regulations like the CRA, NIS2, DORA and similar.
+
+_Due Care_ is about _what actions a reasonable person is expected to do_ (e.g. in case of an emergency), and _Due Diligence_ is about _what preparations need to happen for this reasonable person to succeed_.
+When an integrator or manufacturer prepares to act with _Due Care_, they may do any number of the following actions:
 
 So when an integrator or manufacturer performs _Due Diligence_, there are a number of steps worth adopting when volunteers are involved:
 
 * Start with ensuring the software under their own control lives up their own expectations.
-* Take a hard look at what open source communities they depend on, and keep track of this information in their SBOM documents.
+* Take a hard look at what open source communities you depend on, and keep track of this information in their SBOM documents.
 * Perform a risk assessment of these, to determine which ones require attention first.
 * With this assessment in hand, take steps to address or mitigate any issues you have identified – this is your _Due Diligence_.
 
-What these steps entail in detail, is outside of the scope of this article. Though while the details are likely to depend on the software and circumstances unique to you, it's reasonably safe to assume you may encounter a few common scenarios:
+What these steps may be are outside of the scope of this article, but while the details will depend heavily on the software and circumstances unique to you, it's reasonably safe to assume you may encounter a few common scenarios.
 
-* A significant number of component in your digital infrastructure are Open Source projects. This means you may have a real influence in improving these, without having to bear the full cost of this responsibility.
-* As long as licensing terms and ways of working are taken into account for each component project, you very likely to find ways to lower any risks associated with using these components.
-* If all the "low-hanging fruits" have been addressed or mitigated (by yourself, or others), you may still find ways to improve the project's total security posture indirectly by reaching out and supporting relevant ecosystem support organizations.
+* The projects that are part of your infrastructure are Open Source, meaning you have a real influence in improving them without having to bear the full cost of doing so.
+* As long as you take into account licensing terms and ways of working for each component project, you very likely to find ways to lower any risks associated with using these components.
+* If all the "low-hanging fruits" have been addressed or mitigated (by yourself, or others), you may still find ways to improve the situation by reaching out and supporting relevant ecosystem support organizations.
 * And as a last resort, you have always the option to adopt, create a private or a public fork, or to migrate or re-implement.
 
-Whatever path you choose, please note that there are no "gratis" options any more.
+Whatever path you choose, these tips may help you along the way.
 
 
 ## 17 reality checks about open source communities

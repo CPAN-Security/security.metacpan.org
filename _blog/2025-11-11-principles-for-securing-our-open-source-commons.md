@@ -41,29 +41,34 @@ Let's first look at what problem needs to be solved, then describe the context i
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
 > **What is _Due Diligence_ and _Due Care_?**
-> *Due Care* is about the *actions a reasonable and prudent person is expected to do* during an event.
-> *Due Diligence* is about the *preparations this reasonable and prudent person has to do in order to succeed* acting with Due Care.
+> *Due Care* describes *the actions a competent, reasonable and prudent person is expected to do* during any circumstance or event.
+> *Due Diligence* describes *the preparations this competent, reasonable and prudent person has to do in order to succeed* when acting with Due Care.
 
-When and serious incident happens or a critical vulnerability is discovered, we are expected to conduct ourselves with _Due Care_ – and before the emergency develops, to have prepared for this with _Due Diligence_.
+When and serious incident happens or a critical vulnerability is discovered, we are expected to conduct ourselves with the _Due Care_ we'd expect from a competent person in a similar situation – and likewise, that we expect to have prepared for with _Due Diligence_ beforehand.
 
 So when an integrator or manufacturer performs _Due Diligence_, there are a number of steps worth adopting when volunteers are involved:
 
-* Start with ensuring the software under their own control lives up their own expectations.
-* Take a hard look at what open source communities they depend on, and keep track of this information in their SBOM documents.
-* Perform a risk assessment of these, to determine which ones require attention first.
+* Start with ensuring the software under their own control lives up reasonable and necessary expectations.
+* Take a hard look at what open source communities you depend on, and keep track of relevant information shared in their SBOM documents.
+* Perform a risk assessment of these, to determine which ones require attention first, second, and so on.
 * With this assessment in hand, take steps to address or mitigate any issues you have identified – this is your _Due Diligence_.
 
-What these steps entail in detail, is outside of the scope of this article. Though while the details are likely to depend on the software and circumstances unique to you, it's reasonably safe to assume you may encounter a few common scenarios:
+What these steps entail in detail, is outside of the scope of this article.
+Though while the details are likely to depend on the software and circumstances unique to you, it's reasonably safe to assume you may encounter a few common scenarios:
 
-* A significant number of component in your digital infrastructure are Open Source projects. This means you may have a real influence in improving these, without having to bear the full cost of this responsibility.
+* A significant number of component in your digital infrastructure are Open Source projects.
+    * This means you _may_ have a real influence in improving these, without having to bear the full cost of this responsibility.
 * As long as licensing terms and ways of working are taken into account for each component project, you very likely to find ways to lower any risks associated with using these components.
 * If all the "low-hanging fruits" have been addressed or mitigated (by yourself, or others), you may still find ways to improve the project's total security posture indirectly by reaching out and supporting relevant ecosystem support organizations.
+    * Long-term sustainability is also a security concern; Is the project being taken care of for the expected life-time of your products or services?
 * And as a last resort, you have always the option to adopt, create a private or a public fork, or to migrate or re-implement.
 
-Whatever path you choose, please note that there are no "gratis" options any more.
+Whatever path you choose, please take note _no "gratis" options remain_.
+Either you take upon yourself the full cost of maintenance, or you share this cost with others by using Open Source software.
 
+To help you navigate this, here are some useful "Free and Open Source _facts of life_".
 
-## 17 reality checks about open source communities
+## 17 _facts of life_ about open source communities
 
 ### 1. Most of everyone's digital infrastructure is in the commons
 
@@ -71,33 +76,48 @@ The Open Source components, their communities, and the ecosystems your business 
 If you rely on these in any substantial way, then you rely on _volunteers_.
 Take a moment to **let this fact sink in** so you completely realize its implications.
 
+* You have externalized costs that shouldn't be.
+* You are not alone in having these costs.
+* This digital infrastructure is still useful and valuable, even after assuming your share of the maintenance costs.
+
 ### 2. There is no unified Open Source community
 
 While a few Open Source communities are well-known, and therefore somewhat safe to assume, well-organized and well-resourced, you're likely to find these on the left side of the power law graph.
 Expect a substantial portion of your dependencies are found in the "long tail" part of the power law graph.
 Check your assumptions on how to interact with these, and take into account their needs and ways of working when you do interact.
+Each project has it's own community, culture, priorities and habits.
 
 ### 3. Open Source was never free
 
 The cost of creating and maintaining your infrastructure was never free.
 The cost for you was always _externalized_, meaning that you benefited from other people's investments of time and attention.
-While assuming this will always be the case is reckless, there's no need to despair – the infrastructure is still maintained collaboratively.
-Your experiences and resources are still welcome, and is likely to offer cheaper and less risky solutions than anything you might gain from switching to an alternative or by rewriting your digital foundation.
 
-### 4. Not all Open Source are your _third party_ suppliers
+While assuming this will always remain the case is reckless, there's time for your organization to adapt and learn – the infrastructure is still maintained collaboratively while you reorganize.
+
+In the meantime, learning by doing works well: Your experiences and resources are still welcome, and is likely to offer cheaper and less risky solutions than anything you might gain from switching to commercial alternatives or by attempting a rewrite of your digital foundation.
+
+### 4. Not all Open Source projects are your _third party_ suppliers
 
 You have almost certainly no contracts with the Open Source communities you rely on, and means they are not your commercial suppliers.
-Instead, consider them as your "Open Source colleagues", "voluntary second-party suppliers", or "digital infrastructure partners" and treat them accordingly.
+
+A more constructive approach is to consider them as your "Open Source colleagues", "voluntary second-party suppliers", or "digital infrastructure partners" and treat them accordingly.
+
 Assume that you both have a genuine interest in the correctness, resiliency, reliability and usefulness of their code, and therefore that you have common goals and good reasons to collaborate.
-If you decide to think of them as a "third party supplier" despite this fact, then please accept that they have no reason to treat you differently.
-Ask yourself – "Why should they care about you?" – You are not part of their community of "second parties", you are just an incidental "third party" user who does not contribute back.
-You are already getting their software for free, and they are already absorbing the cost of maintaining it, that you have already externalized.
+
+If you decide to think of them as a "third party supplier" despite this fact, then please accept that they still have no reason to treat you as a valued customer: It costs them literally nothing to ignore you.
+
+Ask yourself – "Why should they care about me?" – You are not part of their community of "second parties", you are just an incidental "third party" bystander, who does nothing to contribute or support.
+
+You are already getting their software gratis, and they are already absorbing the cost of maintaining it – the same costs you have already externalized.
 
 ### 5. Your own Open Source bedrock is stabilized and supported by _you_
 
-You may be relying on thousands, if not tens of thousands of components and their maintainers and communities; Interacting with all of them is daunting, if not impossible – therefore, prioritize (perform a risk assessment), and look for – and promote – predictability, reliability and responsiveness in the communities on the top of your list.
+You may be relying on thousands (if not tens of thousands) of components with their projects, maintainers and communities; Interacting with all of them is daunting, if not impossible – therefore, prioritize (perform a risk assessment), and look for – and promote – predictability, reliability and responsiveness in the communities on your list.
+
 This is to foster trust in these communities, so they may continue providing a safe and secure foundation for your business.
-In the meantime, you retain the freedom to verify this, due to them publishing under the terms of an open source license.
+
+While this goes on, you retain the freedom to verify this, due to them publishing under the terms of an open source license.
+
 Look for ways to strengthen the communities where their need is the greatest – not only in the large and "important" parts of your infrastructure, but also the smaller ones who have communities that may be resource-starved or crumbling.
 If a component is valuable to you, then you need to take care of it accordingly.
 Regardless of whether it is Open Source or not.
@@ -113,13 +133,14 @@ If you bring a transactional mindset into this, they will rightfully look at you
 ### 7. Open Source Maintainers also have to live
 
 After work, family, sleep and recreation, there may not be much time left to work on Open Source.
-This may be different if the Maintainer has set aside dedicated time, they work for an employer who is interested in the well-being of the project, or if the Maintainer uses the project itself as recreation or a safe-space.
+This may be different if the Maintainer has the resources to set aside dedicated time, like working for an employer who is interested in the well-being of the project, or if the Maintainer uses the project itself as recreation or a safe-space.
 If the demands to their project becomes too great (e.g. due to popularity), any changes to their way of working needs to happen on their terms.
 
 
-### 8. Some Open Source work is extremely boring
+### 8. Some Open Source tasks are boring
 
-And boring work tends to get no volunteers. 
+And boring work tends to get no volunteers.
+Usually, this isn't a problem, until someone feels it is.
 
 
 ### 9. Your Open Source Supply Chains are part of your dependency graph

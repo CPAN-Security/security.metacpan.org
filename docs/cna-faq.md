@@ -315,5 +315,12 @@ CPAN and MetaCPAN do block badly behaved robots (especially since metacpan.org i
 But ultimately we (CPAN and mirrors) cannot control what someone does with a module once they have downloaded it.
 
 *[Upriver]: Upriver - a module on CPAN that has dependencies published on CPAN. The more dependencies, the further upriver it is considered.
-*[CNA]: CNA - CVE Numbering Authority.
-*[CVE]: CVE - Common Vulnerabilities and Exposures is a numeric identifier for publicly disclosed vulnerabilities.
+*[SBOM]: Software Bill of Materials – a common machine-readable set of standards for storing and communicating metadata
+*[CPAN]: CPAN – the Comprehensive Perl Archive Network – the primary Open Source package ecosystem for publishing library components (modules) for the Perl programming language. It's the first of it's kind, in continuous operation since 1995!
+*[PAUSE]: PAUSE – the Perl AUthors Upload SErver – The publishing back-end for Perl package authors who wish to publish on CPAN.
+*[IRC]: IRC – Internet Relay Chat – one of the earliest distributed chat systems. Still in active use in many Open Source communities, including the ones related to CPAN and Perl!
+*[CNA]: CNA – CVE Numbering Authority – an organization authorized to reserve and assign CVE numbers to vulnerabilities found within the organization's scope.
+*[CVE]: CVE – Common Vulnerabilities and Exposures – a numeric identifier for publicly disclosed cybersecurity vulnerabilities. The CVE catalog is managed by the MITRE corporation for the benefit of the global cybersecurity community, and with help from many CNA organizations.
+*[CPANSec]: CPANSec – the CPAN Security Group – a group of security-conscious volunteers, working on improving the Perl and CPAN ecosystems security posture.
+*[RSS]: RSS – RDF Site Summary – a simple syndication standard for allowing users to subscribe to website updates.
+*[Fediverse]: Fediverse – The Federated Universe – a collection of independently run social networking services that can communicate with each other for sharing status updates, multimedia files and other data.

@@ -84,7 +84,7 @@ Security vulnerabilities are considered anything that allows users to execute un
 CPANSec members triage the report to verify that there is a vulnerability, in much the same way that one verifies bug reports (although taking precautions to protect systems from damage).
 
 * We check to ensure that the issue is with the reported module, and not a dependency.
-* If the dependency is not Perl-related, then it is out of CPANSec's scope, although we may forward the report to the appropriate maintainer or CNA.
+* If the dependency is not Perl-related, then it is out of the CPANSec scope, although we may forward the report to the appropriate maintainer or CNA.
 * (Note that in some cases, there may still be a CVE issued for code that has an insecure dependency.)
 * We check to ensure that the reported issue is not a duplicate of an existing CVE.
 
@@ -267,7 +267,7 @@ If we are unable to contact any maintainers, then we may disclose the vulnerabil
 Note that the 14-day embargo has emerged from a consensus in the security community that issues discovered with LLMs are essentially public, since anyone using these tools can find them.
 The 14-day window is a compromise that allows maintainers (many of whom are volunteers working in their spare time) to fix issues without waiting too long for duplicate reports to be submitted, or for malicious actors to take advantage of unfixed vulnerabilities.
 
-### I don't maintain this module anymore.
+### I don't maintain this module any more.
 
 If we've written to you, then please respond that you do not maintain the module and are unwilling to update it.
 
@@ -320,7 +320,7 @@ But ultimately we (CPAN and mirrors) cannot control what someone does with a mod
 *[PAUSE]: PAUSE – the Perl AUthors Upload SErver – The publishing back-end for Perl package authors who wish to publish on CPAN.
 *[IRC]: IRC – Internet Relay Chat – one of the earliest distributed chat systems. Still in active use in many Open Source communities, including the ones related to CPAN and Perl!
 *[CNA]: CNA – CVE Numbering Authority – an organization authorized to reserve and assign CVE numbers to vulnerabilities found within the organization's scope.
-*[CVE]: CVE – Common Vulnerabilities and Exposures – a numeric identifier for publicly disclosed cybersecurity vulnerabilities. The CVE catalog is managed by the MITRE corporation for the benefit of the global cybersecurity community, and with help from many CNA organizations.
+*[CVE]: CVE – Common Vulnerabilities and Exposures – a numeric identifier for publicly disclosed cybersecurity vulnerabilities. The CVE catalogue is managed by the MITRE corporation for the benefit of the global cybersecurity community, and with help from many CNA organizations.
 *[CPANSec]: CPANSec – the CPAN Security Group – a group of security-conscious volunteers, working on improving the Perl and CPAN ecosystems security posture.
 *[RSS]: RSS – RDF Site Summary – a simple syndication standard for allowing users to subscribe to website updates.
 *[Fediverse]: Fediverse – The Federated Universe – a collection of independently run social networking services that can communicate with each other for sharing status updates, multimedia files and other data.

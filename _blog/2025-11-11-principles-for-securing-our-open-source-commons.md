@@ -45,52 +45,37 @@ Let's first look at what problem needs to be solved, then describe the context i
 
 When a serious incident happens or a critical vulnerability is discovered, we are expected to conduct ourselves with the _Due Care_ of a competent person in a similar situation – and likewise, we are expected to have prepared for this with _Due Diligence_.
 
-So when an integrator or manufacturer performs their _Due Diligence_, there are a number of steps worth adopting when volunteers are involved:
+So when an integrator or manufacturer performs their _Due Diligence_, there are a number of steps they may consider when volunteers are involved:
 
-* Start with ensuring the software under your own control lives up your own expectations. 
-* Take a hard look at what open source communities you depend on, and keep track of this information in their SBOM documents.
-* Perform a risk assessment of these, to determine which ones require attention first.
-* With this assessment in hand, take steps to address or mitigate any issues you have identified – this is your _Due Diligence_.
-
-What these steps may be are outside of the scope of this article, but while the details will depend heavily on the software and circumstances unique to you, it's reasonably safe to assume you may encounter a few common scenarios.
-
-* The projects that are part of your infrastructure are Open Source, meaning you have a real influence in improving them without having to bear the full cost of doing so.
-* As long as you take into account licensing terms and ways of working for each component project, you very likely to find ways to lower any risks associated with using these components.
-* If all the "low-hanging fruits" have been addressed or mitigated (by yourself, or others), you may still find ways to improve the situation by reaching out and supporting relevant ecosystem support organizations.
-* And as a last resort, you have always the option to adopt, create a private or a public fork, or to migrate or re-implement.
-
-Whatever path you choose, these tips may help you along the way.
-
-
-* Start with ensuring the software under their own control lives up reasonable and necessary expectations.
-* Take a hard look at what open source communities you depend on, and keep track of relevant information shared in their SBOM documents.
+* Start with ensuring the software _under your own control_ lives up to your own expectations. This should include an overview of your software's dependency graph.
+* Take a hard look at what open source projects and communities you depend on, and keep track of this information in your software's SBOM documents.
 * Perform a risk assessment of these, to determine which ones require attention first, second, and so on.
 * With this assessment in hand, take steps to address or mitigate any issues you have identified – this is your _Due Diligence_.
 
-What these steps entail in detail, is outside of the scope of this article.
+The details of these steps are outside the scope of this article.
 Though while the details are likely to depend on the software and circumstances unique to you, it's reasonably safe to assume you may encounter a few common scenarios:
 
-* A significant number of component in your digital infrastructure are Open Source projects.
-    * This means you _may_ have a real influence in improving these, without having to bear the full cost of this responsibility.
-* As long as licensing terms and ways of working are taken into account for each component project, you very likely to find ways to lower any risks associated with using these components.
-* If all the "low-hanging fruits" have been addressed or mitigated (by yourself, or others), you may still find ways to improve the project's total security posture indirectly by reaching out and supporting relevant ecosystem support organizations.
+* A significant number of components in your software's digital infrastructure are Open Source projects.
+    * This means you _may_ have a real influence in improving the compliance and sustainability of these, without having to bear the full cost of this responsibility.
+* As long as you take into account licensing terms and ways of working for each component project, you very likely to find ways to lower any risks associated with using these components.
+* If all the "low-hanging fruits" have been addressed or mitigated (by yourself, or others), you may still wish to find ways of improving the security posture of any given project, by reaching out and supporting them or related ecosystem support organizations.
     * Long-term sustainability is also a security concern; Is the project being taken care of for the expected life-time of your products or services?
 * And as a last resort, you have always the option to adopt, create a private or a public fork, or to migrate or re-implement.
 
 Whatever path you choose, please take note _no "gratis" options remain_.
-Either you take upon yourself the full cost of maintenance, or you share this cost with others by using Open Source software.
+Either you take upon yourself the full cost of maintenance, or you share this cost with others by using and supporting Open Source software.
 
 To help you navigate this, here are some useful "Free and Open Source _facts of life_".
 
 ## 17 _facts of life_ about open source communities
 
-### 1. Most of everyone's digital infrastructure is in the commons
+### 1. Most of everyone's digital infrastructure is in the digital commons
 
-The Open Source components, their communities, and the ecosystems your business uses as a digital bedrock, are produced in the open – almost exclusively with volunteer effort.
+The Open Source components, their communities, and the ecosystems your business uses as a digital bedrock, are produced in the open – to a large extent with volunteer effort.
 If you rely on these in any substantial way, then you rely on _volunteers_.
-Take a moment to **let this fact sink in** so you completely realize its implications.
+Take a moment to **let this fact sink in** so you completely realize the implications.
 
-* You have externalized costs that shouldn't be.
+* You have externalized costs that shouldn't be externalized.
 * You are not alone in having these costs.
 * This digital infrastructure is still useful and valuable, even after assuming your share of the maintenance costs.
 

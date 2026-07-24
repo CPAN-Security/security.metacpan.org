@@ -141,14 +141,14 @@ For [Net::Statsd::Lite](https://metacpan.org/pod/Net::Statsd::Lite) (which I mai
 
 ## References
 
-[1] https://code.flickr.net/2008/10/27/counting-timing/
+[1] [https://code.flickr.net/2008/10/27/counting-timing/](https://code.flickr.net/2008/10/27/counting-timing/)
 
-[2] https://github.com/iamcal/Flickr-StatsD
+[2] [https://github.com/iamcal/Flickr-StatsD](https://github.com/iamcal/Flickr-StatsD)
 
-[3] https://www.etsy.com/codeascraft/measure-anything-measure-everything/
+[3] [https://www.etsy.com/codeascraft/measure-anything-measure-everything/](https://www.etsy.com/codeascraft/measure-anything-measure-everything/)
 
-[4] https://github.com/b/statsd_spec
+[4] [https://github.com/b/statsd_spec](https://github.com/b/statsd_spec)
 
-[5] https://github.com/statsd/statsd/blob/master/docs/client_implementations.md
+[5] [https://github.com/statsd/statsd/blob/master/docs/client_implementations.md](https://github.com/statsd/statsd/blob/master/docs/client_implementations.md)
 
-[6] http://armon.github.io/statsite
+[6] [http://armon.github.io/statsite](http://armon.github.io/statsite)

@@ -63,7 +63,7 @@ In many implementations they consist of multiple names separated by dots, e.g. "
 
 The simplicity of the protocol has allowed many client implementations.
 A list at [\[5\]](#references) shows 58 clients.
-It lists on three Perl clients, but we are aware of 11 Perl distributions that support statsd or an extension.
+It lists three Perl clients, but we are aware of 11 Perl distributions that support statsd or an extension.
 
 There are several common security issues that we have found in the Perl modules we have looked at.
 
@@ -86,7 +86,7 @@ which could be a problem if parameter were not validated beforehand.
 If the statsd server supports command-extensions or has a security vulnerability that can be triggered through the protocol,
 then the impact of metric injection can be much worse.
 
-These can be defended against by disallowing newlines or control chartacters (the colon and pipe) in metric names.
+These can be defended against by disallowing newlines or control characters (the colon and pipe) in metric names.
 
 Metrics that require numeric input should enforce ASCII digits and a decimal.
 
@@ -109,13 +109,13 @@ The set metric that is used to count the number of unique items, e.g.
     myapp.ip:1.2.3.4|s
     myapp.sessions:a6a073f8ac226a336375d54706f9555c|s
 
-It is useful count the number of unique usernames, IP addresses, and sessions,
+It is useful to count the number of unique usernames, IP addresses, and sessions,
 but this can be seen as personally identifying information.
 In the case of counting session ids, this data can be used for session hijacking and should be encoded.
 
 An alternative is to replace sensitive data with anonymised data, for example, an internal user id rather than an email address.
 
-Otherwise. a generic alternative is to hash sensitive data using a message digest or HMAC signature.
+Otherwise, a generic alternative is to hash sensitive data using a message digest or HMAC signature.
 For [Net::Statsd::Lite](https://metacpan.org/pod/Net::Statsd::Lite) (which I maintain), I added the [secure_set_add](https://metacpan.org/pod/Net::Statsd::Lite#secure_set_add) method to do this using HMAC-SHA-256.
 
 [Plack::Middleware::Statsd](https://metacpan.org/pod/Plack::Middleware::Statsd) (which I maintain) was modified to do the same, or use a "secure_set_add" method if the underlying statsd client supports it.

@@ -26,8 +26,8 @@ The vast majority (70-90%, according to [Linux Foundation](https://www.linuxfoun
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
 > **How do I know _who I am relying on_?**
-> * OSS Components have Projects, which have Maintainers, Contributors and Communities.
-> * Communities may consist of Contributors working for Businesses, unpaid Volunteers or others.
+> * OSS Components have projects, which have maintainers, contributors and communities.
+> * Communities may consist of contributors working for Businesses, unpaid Volunteers or others.
 
 This means there is a need for all affected businesses to come to terms with their role in these OSS ecosystems, and what the rules of engagement are in the particular communities they depend on.
 Cultural misalignment with the communities one relies on may lead to alienating the same people who take care of parts of the software you use.
@@ -48,7 +48,7 @@ When a serious incident happens or a critical vulnerability is discovered, we ar
 So when an integrator or manufacturer performs their _Due Diligence_, there are a number of steps they may consider when volunteers are involved:
 
 * Start with ensuring the software _under your own control_ lives up to your own expectations. This should include an overview of your software's dependency graph.
-* Take a hard look at what open source projects and communities you depend on, and keep track of this information in your software's SBOM documents.
+* Take a hard look at what Open Source projects and communities you depend on, and keep track of this information in your software's SBOM documents.
 * Perform a risk assessment of these, to determine which ones require attention first, second, and so on.
 * With this assessment in hand, take steps to address or mitigate any issues you have identified – this is your _Due Diligence_.
 
@@ -65,9 +65,9 @@ Though while the details are likely to depend on the software and circumstances 
 Whatever path you choose, please note that _no "gratis" options remain_.
 Either you take upon yourself the full cost of maintenance, or you share this cost with others by using and supporting Open Source software.
 
-To help you navigate this, here are some useful "Free and Open Source _facts of life_".
+To help you navigate this, here are some useful "Free and Open Source community _reality checks_".
 
-## 17 _facts of life_ about open source communities
+## 17 _Reality checks_ about Open Source communities
 
 ### 1. Most of everyone's digital infrastructure is in the digital commons
 
@@ -116,20 +116,7 @@ Ask yourself – "Why should they care about me?" – You are not part of their 
 You are already getting their software gratis, and they are already absorbing the cost of maintaining it – the same costs you already have externalized.
 
 
-### 5. Your own Open Source bedrock is supported by _you_
-
-You may be relying on thousands, if not tens of thousands of components and their maintainers and communities;
-Interacting with all of them is daunting, if not impossible – therefore, prioritize (perform a risk assessment), and look for – and promote – predictability, reliability and responsiveness in the communities on the top of your list.
-This is to foster trust in these communities, so they may continue providing a safe and secure foundation for your business.
-
-While this goes on, you retain the freedom to verify this, due to them publishing under the terms of an open source license.
-
-Look for ways to strengthen the communities where their need is the greatest – not only in the large and "important" parts of your infrastructure, but also the smaller ones who have communities that may be resource-starved or crumbling.
-If a component is valuable to you, then you need to take care of it accordingly.
-Regardless of whether it is Open Source or not.
-
-
-### 6. Most Open Source Maintainers are not motivated by pay
+### 5. Most Open Source maintainers are not motivated by pay
 
 Instead, they _enjoy_.
 They may find joy in learning, helping, playing or just creating something they can _be proud of_, or just _finish_.
@@ -138,7 +125,21 @@ And when they encounter others with the same or similar interests and willingnes
 If you bring a transactional mindset into this fertile ground, the others will rightfully look at you as someone who says "If I give you $100, will you be my friend?"
 
 
-### 7. Open Source Maintainers also have to live
+### 6. Your own Open Source bedrock is supported by _you_
+
+You may be relying on thousands, if not tens of thousands of components and their maintainers and communities.
+Interacting with all of them may seem daunting, but fortunately not necessary.
+You can manage this by prioritizing which projects to support by performing a risk assessment of your own application dependency graph.
+The outcome of this risk assessment also hints of how you can support these projects.
+If you require project predictability, reliability or responsiveness from the communities on the top of your list, you can look for ways to encourage this behavior where it is needed.
+This may require you to invest in fostering trust in these communities, so they may continue providing a safe and secure foundation for your business for the full life-time of your applications.
+
+1. Look for ways to strengthen the communities where their need is the greatest – not only in the large and "important" parts of your infrastructure, but also the smaller ones who have communities that may be resource-starved or crumbling.
+2. If a component is valuable to you, then you need to take care of it accordingly, regardless of whether it is Open Source or not.
+3. While this goes on, you retain the freedom to contribute and verify under the terms of their Open Source license.
+
+
+### 7. Open Source maintainers also have to live
 
 After work, family, sleep and recreation, there may not be much time left to work on Open Source.
 This may be different if the Maintainer has the resources to set aside dedicated time, like working for an employer who is interested in the well-being of the project, or if the Maintainer uses the project itself as recreation or a safe-space.
@@ -182,7 +183,7 @@ Preventing this requires resources and attention that currently aren't available
 
 ### 11. Support isn't guaranteed, and neither is responsiveness
 
-Open Source Maintainers most commonly share their projects for personal reasons, and not for commercial reasons.
+Open Source maintainers most commonly share their projects for personal reasons, and not for commercial reasons.
 If commercial expectations are to be met, then the businesses requiring these need to ramp up their level of support of the projects themselves, or find other ways to get the required guarantees.
 
 
@@ -199,7 +200,7 @@ While this "rebate" exists by design (and a consequence of the OSS license langu
 
 ### 14. Open Source Security doesn't improve in a vacuum
 
-If your venture relies on an open source component's security, you are now a stakeholder in its project health, sustainability and continued capability to respond to discovered vulnerabilities and incidents.
+If your venture relies on an Open Source component's security, you are now a stakeholder in its project health, sustainability and continued capability to respond to discovered vulnerabilities and incidents.
 
 
 ### 15. Many maintainers don't like the thought of receiving money for something they _enjoy_

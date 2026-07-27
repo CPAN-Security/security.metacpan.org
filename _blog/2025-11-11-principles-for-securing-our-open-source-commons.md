@@ -10,7 +10,7 @@ author: sjn
 excerpt: "17 reality checks for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone) depends on"
 ---
 
-## Unpaid volunteers has become critical for managing business risk. Why?
+## Unpaid volunteers have become critical for managing business risk. Why?
 
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!NOTE]
@@ -19,8 +19,8 @@ excerpt: "17 reality checks for interacting with the open source software projec
 > * CEO, CTO, CIO, CISO, other management.
 > * OSPO, Procurement, Legal staff.
 
-With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in September 2026, cybersecurity is required to become a important aspect of developing all products with digital elements.
-One of the first steps in preparing for the CRA, will relate to mapping out the software dependencies if these products, and ensure that each dependency is _taken care of appropriately_.
+With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in September 2026, cybersecurity is required to become an important aspect of developing all products with digital elements.
+One of the first steps in preparing for the CRA, will relate to mapping out the software dependencies of these products, and ensure that each dependency is _taken care of appropriately_.
 The vast majority (70-90%, according to [Linux Foundation](https://www.linuxfoundation.org/blog/blog/a-summary-of-census-ii-open-source-software-application-libraries-the-world-depends-on)) of these dependencies are Open Source Software (OSS) components, and many of these are likely to get increased scrutiny from manufacturers in order to reduce security-related risks in their products.
 
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
@@ -57,12 +57,12 @@ Though while the details are likely to depend on the software and circumstances 
 
 * A significant number of components in your software's digital infrastructure are Open Source projects.
     * This means you _may_ have a real influence in improving the compliance and sustainability of these, without having to bear the full cost of this responsibility.
-* As long as you take into account licensing terms and ways of working for each component project, you very likely to find ways to lower any risks associated with using these components.
+* As long as you take into account licensing terms and ways of working for each component project, you are very likely to find ways to lower any risks associated with using these components.
 * If all the "low-hanging fruits" have been addressed or mitigated (by yourself, or others), you may still wish to find ways of improving the security posture of any given project, by reaching out and supporting them or related ecosystem support organizations.
     * Long-term sustainability is also a security concern; Is the project being taken care of for the expected life-time of your products or services?
-* And as a last resort, you have always the option to adopt, create a private or a public fork, or to migrate or re-implement.
+* And as a last resort, you always have the option to adopt, create a private or a public fork, or to migrate or re-implement.
 
-Whatever path you choose, please take note _no "gratis" options remain_.
+Whatever path you choose, please note that _no "gratis" options remain_.
 Either you take upon yourself the full cost of maintenance, or you share this cost with others by using and supporting Open Source software.
 
 To help you navigate this, here are some useful "Free and Open Source _facts of life_".
@@ -79,41 +79,47 @@ Take a moment to **let this fact sink in** so you completely realize the implica
 * You are not alone in having these costs.
 * This digital infrastructure is still useful and valuable, even after assuming your share of the maintenance costs.
 
+
 ### 2. There is no unified Open Source community
 
-While a few Open Source communities are well-known, and therefore somewhat safe to assume, well-organized and well-resourced, you're likely to find these on the left side of the power law graph.
+While a few Open Source communities are well-known (and therefore somewhat safe to assume, well-organized and well-resourced), you're likely to find these on the left side of the power law graph.
 Expect a substantial portion of your dependencies are found in the "long tail" part of the power law graph.
 Check your assumptions on how to interact with these, and take into account their needs and ways of working when you do interact.
-Each project has it's own community, culture, priorities and habits.
+Each project has its own community, culture, priorities and habits.
+
 
 ### 3. Open Source was never free
 
 The cost of creating and maintaining your infrastructure was never free.
 The cost for you was always _externalized_, meaning that you benefited from other people's investments of time and attention.
 While assuming this will always be the case is reckless, there's no need to despair – the infrastructure is still maintained collaboratively.
-Your experiences and resources are still welcome, and is likely to offer cheaper and less risky solutions than anything you might gain from switching to an alternative or by rewriting your digital foundation.
+Your experiences and resources are still welcome, and are likely to offer cheaper and less risky solutions than anything you might gain from switching to an alternative or by rewriting your digital foundation.
 
 While assuming this will always remain the case is reckless, there's time for your organization to adapt and learn – the infrastructure is still maintained collaboratively while you reorganize.
 
-In the meantime, learning by doing works well: Your experiences and resources are still welcome, and is likely to offer cheaper and less risky solutions than anything you might gain from switching to commercial alternatives or by attempting a rewrite of your digital foundation.
+In the meantime, learning by doing works well: Your experiences and resources are still welcome, and are likely to offer cheaper and less risky solutions than anything you might gain from switching to commercial alternatives or by attempting a rewrite of your digital foundation.
+
 
 ### 4. Not all Open Source projects are your _third party_ suppliers
 
-You have almost certainly no contracts with the Open Source communities you rely on, and means they are not your commercial suppliers.
+You have almost certainly no contracts with the Open Source communities you rely on, which means they are not your commercial suppliers.
+Still, you might depend on their software in critical code-paths and for business-critical applications, so treating them as "third party suppliers" may be inadvisable.
 
 A more constructive approach is to consider them as your "Open Source colleagues", "voluntary second-party suppliers", or "digital infrastructure partners" and treat them accordingly.
 
-Assume that you both have a genuine interest in the correctness, resiliency, reliability and usefulness of their code, and therefore that you have common goals and good reasons to collaborate.
+Assume that you both have a genuine interest in the correctness, security, resiliency, reliability and usefulness of their code, and therefore that you have common goals and good reasons to collaborate.
 
 If you decide to think of them as a "third party supplier" despite this fact, then please accept that they still have no reason to treat you as a valued customer: It costs them literally nothing to ignore you.
 
-Ask yourself – "Why should they care about me?" – You are not part of their community of "second parties", you are just an incidental "third party" bystander, who does nothing to contribute or support.
+Ask yourself – "Why should they care about me?" – You are not part of their community of "second parties", you are just an incidental "third party" bystander, who does nothing to contribute or support their project.
 
-You are already getting their software gratis, and they are already absorbing the cost of maintaining it – the same costs you have already externalized.
+You are already getting their software gratis, and they are already absorbing the cost of maintaining it – the same costs you already have externalized.
 
-### 5. Your own Open Source bedrock is stabilized and supported by _you_
 
-You may be relying on thousands, if not tens of thousands of components and their maintainers and communities; Interacting with all of them is daunting, if not impossible – therefore, prioritize (perform a risk assessment), and look for – and promote – predictability, reliability and responsiveness in the communities on the top of your list.
+### 5. Your own Open Source bedrock is supported by _you_
+
+You may be relying on thousands, if not tens of thousands of components and their maintainers and communities;
+Interacting with all of them is daunting, if not impossible – therefore, prioritize (perform a risk assessment), and look for – and promote – predictability, reliability and responsiveness in the communities on the top of your list.
 This is to foster trust in these communities, so they may continue providing a safe and secure foundation for your business.
 
 While this goes on, you retain the freedom to verify this, due to them publishing under the terms of an open source license.
@@ -122,13 +128,15 @@ Look for ways to strengthen the communities where their need is the greatest –
 If a component is valuable to you, then you need to take care of it accordingly.
 Regardless of whether it is Open Source or not.
 
-### 6. Most Open Source Maintainers aren't motivated by pay
+
+### 6. Most Open Source Maintainers are not motivated by pay
 
 Instead, they _enjoy_.
-They may be learning, helping, playing or just creating something they can _be proud of_, or that they may _complete_.
-Whatever their intrinsic motivation is, they spend their one irreplaceable, non-refundable resource on it: their time and attention.
-And when they encounter others with the same or similar interests, they may discover they made a fertile ground for friendships to develop.
-If you bring a transactional mindset into this, they will rightfully look at you as someone who says "If I give you $100, will you be my friend?"
+They may find joy in learning, helping, playing or just creating something they can _be proud of_, or just _finish_.
+Whatever their intrinsic motivation is, they spend their an irreplaceable, non-refundable resource on it: their time and attention.
+And when they encounter others with the same or similar interests and willingness to spend time and tuits, they may discover they created a fertile ground for friendships to develop.
+If you bring a transactional mindset into this fertile ground, the others will rightfully look at you as someone who says "If I give you $100, will you be my friend?"
+
 
 ### 7. Open Source Maintainers also have to live
 
@@ -141,6 +149,10 @@ If the demands to their project becomes too great (e.g. due to popularity), any 
 
 And boring work tends to get no volunteers.
 Usually, this isn't a problem, until someone feels it is.
+Do you feel the problem?
+
+Then it's your time to volunteer.
+Problems aren't fixed by bystanders.
 
 
 ### 9. Your Open Source Supply Chains are part of your dependency graph
@@ -160,11 +172,13 @@ The work necessary for improving this also requires time and attention from thei
 This may require efforts toward the adoption of technologies like PURL or other SBOM-related standards, to enable you to create a complete cross-ecosystem map of your dependencies.
 More importantly, the success, availability and prevalence of these standards are term-setting for your expenses to become compliant.
 
+
 ### 10. New regulations are already putting a disproportionate burden on Open Source ecosystems and communities
 
 These communities are often central in setting the terms for what solutions may be considered "easy to adopt" by users, businesses and manufacturers in order for them to become compliant.
-This means there's a need for Open Source Software communities and ecosystems be "first and earliest in class", at the pain of manufacturers start balkanizing the security landscape by "inventing their own wheels", or buying into third-party "solutions" that exposes them to new forms of risk.
+This means there's a need for Open Source Software communities and ecosystems to be "first and earliest in class", on pain of manufacturers balkanizing the security landscape by "inventing their own wheels", or buying into third-party "solutions" that expose them to new forms of risk.
 Preventing this requires resources and attention that currently aren't available for the term-supplying OSS ecosystems and projects out there.
+
 
 ### 11. Support isn't guaranteed, and neither is responsiveness
 
@@ -181,12 +195,11 @@ If commercial expectations are to be met, then the businesses requiring these ne
 
 An article by Harvard Business Review published January 2024, revealed that the projects they analyzed had an estimated investment of 4 Billion USD, and that this lead to an estimated value of 8 Trillion USD.
 While this isn't the same as putting a dollar into a machine and getting 2000 dollars back, it *is* closer to getting an average of 99.95% rebate on the software one is using to create this value.
-While this "rebate" exists by design (and a consequence of the OSS license language), this has lead to public outcry regarding the risks coming from these projects not being supported in a sustainable manner.
-
+While this "rebate" exists by design (and a consequence of the OSS license language), this has led to public outcry regarding the risks coming from these projects not being supported in a sustainable manner.
 
 ### 14. Open Source Security doesn't improve in a vacuum
 
-If your venture relies on an open source component's security, you are now a stakeholder in it's project health, sustainability and continued capability to respond to discovered vulnerabilities and incidents.
+If your venture relies on an open source component's security, you are now a stakeholder in its project health, sustainability and continued capability to respond to discovered vulnerabilities and incidents.
 
 
 ### 15. Many maintainers don't like the thought of receiving money for something they _enjoy_
@@ -215,7 +228,8 @@ Gratitude go out to the following contributors:
 
 *[SBOM]: Software Bill of Materials – a standard machine-readable file that describes what an application or a component is made of, license terms and other metadata.
 *[CRA]: Cyber Resilience Act – a EU product law that, starting in 2027, requires CE-marked products with digital elements also have good cybersecurity.
-*[OSS]: Open Source Software – Software published under the terms of a license that adheres to the Open Source Definition, as described on opensource.org/osd .
+*[OSS]: Open Source Software – Software published under the terms of a license that adheres to the Open Source Definition, as described on opensource.org/osd
 *[OSPO]: Open Source Program Office – a business section with responsibility for coordinating efforts around license compliance, OSS developer relations and corporate guidelines for use of and contributing to Free and Open Source Software.
 *[PURL]: PackageURL – a standard for referring to software packages in a ecosystem-agnostic way.
-*[FOSS]: Free and Open Source Software – Software published under the terms of a license that adheres to the Free Software Definition, as described on gnu.org/philosophy/free-sw .
+*[FOSS]: Free and Open Source Software – Software published under the terms of a license that adheres to the Free Software Definition, as described on gnu.org/philosophy/free-sw
+*[tuits]: A unit of attention - Stemming from the pun «I'll do it when I get a round tuit (around to it)»

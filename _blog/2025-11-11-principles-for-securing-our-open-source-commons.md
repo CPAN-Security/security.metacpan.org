@@ -7,7 +7,7 @@ date: 2026-02-15 17:15:00 +0000
 collection: blog
 tags: authors guides cpan modules security "open source" cra steward "cyber resilience act" principles
 author: sjn
-excerpt: "17 reality checks for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone else) depends on"
+excerpt: "17 reality checks for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone) depends on"
 ---
 
 ## Unpaid volunteers has become critical for managing business risk. Why?
@@ -122,7 +122,7 @@ Look for ways to strengthen the communities where their need is the greatest –
 If a component is valuable to you, then you need to take care of it accordingly.
 Regardless of whether it is Open Source or not.
 
-### 6. Open Source Maintainers aren't motivated by pay
+### 6. Most Open Source Maintainers aren't motivated by pay
 
 Instead, they _enjoy_.
 They may be learning, helping, playing or just creating something they can _be proud of_, or that they may _complete_.
@@ -184,7 +184,6 @@ While this isn't the same as putting a dollar into a machine and getting 2000 do
 While this "rebate" exists by design (and a consequence of the OSS license language), this has lead to public outcry regarding the risks coming from these projects not being supported in a sustainable manner.
 
 
-
 ### 14. Open Source Security doesn't improve in a vacuum
 
 If your venture relies on an open source component's security, you are now a stakeholder in it's project health, sustainability and continued capability to respond to discovered vulnerabilities and incidents.
@@ -195,10 +194,12 @@ If your venture relies on an open source component's security, you are now a sta
 
 
 
-### 16. The median Open Source project size is 1
+### 16. The median Open Source project size is 1 (one)
 
 
-### 17. –
+
+
+### 17. Your dependency graph is your reliance graph
 
 
 ## Summary

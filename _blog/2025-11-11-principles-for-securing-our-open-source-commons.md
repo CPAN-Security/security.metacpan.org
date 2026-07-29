@@ -160,9 +160,6 @@ Problems aren't fixed by bystanders.
 
 ### 9. Your dependency graph is your reliance graph
 
-
-### 10. Your Open Source Supply Chain is itself part of your dependency graph
-
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
 > **What is a dependency graph?**
@@ -170,6 +167,9 @@ Problems aren't fixed by bystanders.
 > * Example: A component for using a network protocol; A remote service the application uses; Data describing the sorting rules or time-zones used.
 > * Dependencies may themselves have dependencies, and these again have their own dependencies, and so on.
 > When we follow these, we map out a _dependency graph_.
+
+
+### 10. Your Open Source Supply Chain is itself part of your dependency graph
 
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]

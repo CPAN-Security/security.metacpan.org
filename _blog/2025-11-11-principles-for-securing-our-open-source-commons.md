@@ -7,6 +7,7 @@ date: 2026-02-15 17:15:00 +0000
 collection: blog
 tags: authors guides cpan modules security "open source" cra steward "cyber resilience act" principles
 author: sjn
+author_profile: true
 excerpt: "17 reality checks for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone) depends on"
 ---
 
@@ -19,7 +20,7 @@ excerpt: "17 reality checks for interacting with the open source software projec
 > * CEO, CTO, CIO, CISO, other management.
 > * OSPO, Procurement, Legal staff.
 
-With the first bits of the EU Cyber Resilience Act (CRA) coming into effect in September 2026, cybersecurity is required to become an important aspect of developing all products with digital elements.
+With the main body of the EU Cyber Resilience Act (CRA) coming into effect in December 2027, cybersecurity is expected to become an important requirement of all CE-marked products placed on the EU market.
 One of the first steps in preparing for the CRA, will relate to mapping out the software dependencies of these products, and ensure that each dependency is _taken care of appropriately_.
 The vast majority (70-90%, according to [Linux Foundation](https://www.linuxfoundation.org/blog/blog/a-summary-of-census-ii-open-source-software-application-libraries-the-world-depends-on)) of these dependencies are Open Source Software (OSS) components, and many of these are likely to get increased scrutiny from manufacturers in order to reduce security-related risks in their products.
 
@@ -80,9 +81,11 @@ Take a moment to **let this fact sink in** so you completely realize the implica
 * This digital infrastructure is still useful and valuable, even after assuming your share of the maintenance costs.
 
 
+
+
 ### 2. There is no unified Open Source community
 
-While a few Open Source communities are well-known (and therefore somewhat safe to assume, well-organized and well-resourced), you're likely to find these on the left side of the power law graph.
+While a few Open Source communities are well-known (and therefore somewhat safe to assume are well-organized and well-resourced), you're likely to find these on the left side of the power law graph.
 Expect a substantial portion of your dependencies are found in the "long tail" part of the power law graph.
 Check your assumptions on how to interact with these, and take into account their needs and ways of working when you do interact.
 Each project has its own community, culture, priorities and habits.
@@ -92,10 +95,9 @@ Each project has its own community, culture, priorities and habits.
 
 The cost of creating and maintaining your infrastructure was never free.
 The cost for you was always _externalized_, meaning that you benefited from other people's investments of time and attention.
-While assuming this will always be the case is reckless, there's no need to despair – the infrastructure is still maintained collaboratively.
-Your experiences and resources are still welcome, and are likely to offer cheaper and less risky solutions than anything you might gain from switching to an alternative or by rewriting your digital foundation.
+While assuming this will always remain the case is reckless, there's time for your organization to adapt and learn – the infrastructure is still maintained collaboratively while you get your budgets and organization in order.
 
-While assuming this will always remain the case is reckless, there's time for your organization to adapt and learn – the infrastructure is still maintained collaboratively while you reorganize.
+Your experiences and resources are still welcome, and are likely to offer cheaper and less risky solutions than anything you might gain from switching to an alternative or by rewriting your digital foundation.
 
 In the meantime, learning by doing works well: Your experiences and resources are still welcome, and are likely to offer cheaper and less risky solutions than anything you might gain from switching to commercial alternatives or by attempting a rewrite of your digital foundation.
 
@@ -120,7 +122,7 @@ You are already getting their software gratis, and they are already absorbing th
 
 Instead, they _enjoy_.
 They may find joy in learning, helping, playing or just creating something they can _be proud of_, or just _finish_.
-Whatever their intrinsic motivation is, they spend their an irreplaceable, non-refundable resource on it: their time and attention.
+Whatever their intrinsic motivation is, they spend their one irreplaceable, non-refundable resource on it: their time and attention.
 And when they encounter others with the same or similar interests and willingness to spend time and tuits, they may discover they created a fertile ground for friendships to develop.
 If you bring a transactional mindset into this fertile ground, the others will rightfully look at you as someone who says "If I give you $100, will you be my friend?"
 
@@ -128,9 +130,9 @@ If you bring a transactional mindset into this fertile ground, the others will r
 ### 6. Your own Open Source bedrock is supported by _you_
 
 You may be relying on thousands, if not tens of thousands of components and their maintainers and communities.
-Interacting with all of them may seem daunting, but fortunately not necessary.
+Interacting with all of them may seem daunting, but fortunately isn't necessary.
 You can manage this by prioritizing which projects to support by performing a risk assessment of your own application dependency graph.
-The outcome of this risk assessment also hints of how you can support these projects.
+The outcome of this risk assessment also hints at how you can support these projects.
 If you require project predictability, reliability or responsiveness from the communities on the top of your list, you can look for ways to encourage this behavior where it is needed.
 This may require you to invest in fostering trust in these communities, so they may continue providing a safe and secure foundation for your business for the full life-time of your applications.
 
@@ -142,7 +144,7 @@ This may require you to invest in fostering trust in these communities, so they 
 ### 7. Open Source maintainers also have to live
 
 After work, family, sleep and recreation, there may not be much time left to work on Open Source.
-This may be different if the Maintainer has the resources to set aside dedicated time, like working for an employer who is interested in the well-being of the project, or if the Maintainer uses the project itself as recreation or a safe-space.
+This may be different if the maintainer has the resources to set aside dedicated time, like working for an employer who is interested in the well-being of the project, or if the maintainer uses the project itself as recreation or a safe-space.
 If the demands to their project becomes too great (e.g. due to popularity), any changes to their way of working needs to happen on their terms.
 
 
@@ -156,64 +158,75 @@ Then it's your time to volunteer.
 Problems aren't fixed by bystanders.
 
 
-### 9. Your Open Source Supply Chains are part of your dependency graph
+### 9. Your dependency graph is your reliance graph
+
+
+### 10. Your Open Source Supply Chain is itself part of your dependency graph
 
 {: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
 > [!TIP]
 > **What is a dependency graph?**
-
 > * A dependency is a software component that is required for another software component to function as expected.
 > * Example: A component for using a network protocol; A remote service the application uses; Data describing the sorting rules or time-zones used.
 > * Dependencies may themselves have dependencies, and these again have their own dependencies, and so on.
 > When we follow these, we map out a _dependency graph_.
 
+{: .align-right style="max-width: 38%; margin: 0 0 1em 2em !important;"}
+> [!TIP]
+> **What is an OSS Supply Chain?**
+> The software components you depend on are distributed to you in any of a number of channels.
+> * Your libraries and modules may be used directly through the tooling made available though your programming language ecosystem.
+> * These libraries may also be vetted, fixed, re-packaged and made available through any number of OS distributions, like Linux, FreeBSD and many others.
+> * These package and OSes may also be made available in convenient virtual machine images or containers.
+> The security, reliability, support terms, interoperability commitments, update cadence, responsiveness and risk appetite will differ depending on where in the supply chain you choose to get your software from.
+
+
 _OSS Supply Chains and ecosystems are themselves OSS projects_, and due to historical reasons, _they are silos_.
-Therefore one can say the same of their security posture – they are inward-looking and in silos.
+Therefore one can say the same of their security posture – they are inward-looking and .
 The work necessary for improving this also requires time and attention from their respective communities.
 This may require efforts toward the adoption of technologies like PURL or other SBOM-related standards, to enable you to create a complete cross-ecosystem map of your dependencies.
 More importantly, the success, availability and prevalence of these standards are term-setting for your expenses to become compliant.
 
 
-### 10. New regulations are already putting a disproportionate burden on Open Source ecosystems and communities
+### 11. New regulations are already putting a disproportionate burden on Open Source ecosystems and communities
 
 These communities are often central in setting the terms for what solutions may be considered "easy to adopt" by users, businesses and manufacturers in order for them to become compliant.
 This means there's a need for Open Source Software communities and ecosystems to be "first and earliest in class", on pain of manufacturers balkanizing the security landscape by "inventing their own wheels", or buying into third-party "solutions" that expose them to new forms of risk.
 Preventing this requires resources and attention that currently aren't available for the term-supplying OSS ecosystems and projects out there.
 
 
-### 11. Support isn't guaranteed, and neither is responsiveness
+### 12. Support isn't guaranteed, and neither is responsiveness
 
 Open Source maintainers most commonly share their projects for personal reasons, and not for commercial reasons.
 If commercial expectations are to be met, then the businesses requiring these need to ramp up their level of support of the projects themselves, or find other ways to get the required guarantees.
 
 
-### 12. Open Source projects thrive on goodwill and contributions, not assessments and analysis
+### 13. Open Source projects thrive on goodwill and contributions, not assessments and analysis
 
 
 
 
-### 13. Open Source ROI is too high, and everyone knows it
+### 14. Open Source ROI is too high, and everyone knows it
 
-An article by Harvard Business Review published January 2024, revealed that the projects they analyzed had an estimated investment of 4 Billion USD, and that this lead to an estimated value of 8 Trillion USD.
+An article by Hoffmann, Nagle & Zhou, _The Value of Open Source Software_ (Harvard Business School Working Paper 24-038, January 2024), revealed that the projects they analyzed had an estimated investment of 4.15 Billion USD, and that this lead to an estimated value of 8.8 Trillion USD.
 While this isn't the same as putting a dollar into a machine and getting 2000 dollars back, it *is* closer to getting an average of 99.95% rebate on the software one is using to create this value.
 While this "rebate" exists by design (and a consequence of the OSS license language), this has led to public outcry regarding the risks coming from these projects not being supported in a sustainable manner.
+What you should ask is «How much less than a 99.95% rebate can my business live comfortably with?»
 
-### 14. Open Source Security doesn't improve in a vacuum
+
+### 15. Open Source Security doesn't improve in a vacuum
 
 If your venture relies on an Open Source component's security, you are now a stakeholder in its project health, sustainability and continued capability to respond to discovered vulnerabilities and incidents.
 
 
-### 15. Many maintainers don't like the thought of receiving money for something they _enjoy_
+### 16. Many maintainers don't like the thought of receiving money for something they _enjoy_
 
 
 
 
-### 16. The median Open Source project size is 1 (one)
+### 17. The median Open Source project size is 1 (one)
 
 
-
-
-### 17. Your dependency graph is your reliance graph
 
 
 ## Summary

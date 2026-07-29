@@ -47,6 +47,9 @@ related_posts: false
 atom_feed:
   hide: true
 
+jekyll-figure:
+  paragraphs: false
+
 collections:
   news:
     output: true
@@ -180,6 +183,8 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-include-cache
   - jekyll-gfm-admonitions
+  - jekyll-last-modified-at
+  - jekyll-figure
 #  - jekyll-optional-front-matter
 
 # Exclude from processing.

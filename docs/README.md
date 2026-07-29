@@ -11,12 +11,19 @@ Documents relevant to the CPAN Security Group.
 
 * [Report an Incident](report.md)
 * [CNA Disclosure Policy](cna-disclosure-policy.md)
+* [CNA Vulnerability Report to CVE Workflow](cve-workflow.md) ⚠️  DRAFT
+* [CNA Revised Default Disclosure Dates](revised-disclosure-delay.md)
+
+### Frequently Asked Questions
+
+* [CPANSec CNA and CVE Frequently Asked Questions (FAQ)](cna-faq.md)
 
 ## Guides
 
-* [CPAN Author's Guide to Secure Software Development](guides/cpan-secure-development-guide.md) ⚠️  DRAFT
+* [Perl Developer's Guide to Secure Software Development](guides/perl-secure-development-guide.md) ⚠️  DRAFT
 * [CPAN Author's Guide to Random Data for Security](guides/random-data-for-security.md)
 * [CPAN Author's Security Policy guide](guides/security-policy-for-authors.md)
+* [Security Reports for CPAN Authors](guides/maintainer-security-reports.md)
 
 See [guides/](guides/) for the full list of guides.
 

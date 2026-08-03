@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 ---
 
 # Minutes 2024-02-10
@@ -10,7 +10,7 @@ Meeting was on Saturday February 10th 2024, at 15:00 UTC, on the TPRF Slack serv
 ## Attendees, absents & regrets
 
 - Attendees
-    - @oalders, @tux, @timlegge, @leont, @stigtsp, @sjn
+    - @oalders, @tux, @timlegge, @leont, @stigtsp, @sjn
 - Regrets
     - @hydahy, @tinita
 

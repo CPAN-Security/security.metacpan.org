@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: CPAN Risk Mitigation Guide
 toc: true
 ---

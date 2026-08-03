@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Pre-Release Disclosure
 toc: true
 ---
@@ -54,6 +54,9 @@ The CPAN Security Group <[cpan-security@security.metacpan.org](cpan-security@sec
 * [andk](https://github.com/andk)
 * [sam](https://github.com/thesamesam)
 * [rrwo](https://github.com/robrwo)
+* [jjatria](https://github.com/jjatria)
+* [haarg](https://github.com/haarg)
+* [pjcj](https://github.com/pjcj)
 
 ------------------
 

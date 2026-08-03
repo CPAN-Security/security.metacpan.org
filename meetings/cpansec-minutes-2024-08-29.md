@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 toc: true
 meeting_time: August 29th, 2024 16:00 UTC
 title: Minutes 2024-08-29
@@ -101,7 +101,7 @@ We continue with this list next meeting!
 ### Upcoming events and deadlines
 
 1. [PostgreSQL Lowlands 2024 NL](https://kangaroot.net/events/pg-day-lowlands-2024-nl) - Fri 13 Sep 2024 - @tux will join
-1. [Open Source Summit Europe](https://events.linuxfoundation.org/open-source-summit-europe/) in Vienna, Austria - September 16-18 + 19-20 - Lots of people from OpenSSF + SBOM + Supply chain security communities - @sjn is going
+1. [Open Source Summit Europe](https://events.linuxfoundation.org/open-source-summit-europe/) in Vienna, Austria - September 16-18 + 19-20 - Lots of people from OpenSSF + SBOM + Supply chain security communities - @sjn is going
 1. [All Systems Go](https://all-systems-go.io/) - Sept. 25-26th, Berlin
 1. [London Perl Workshop](https://act.yapc.eu/lpw2024/) - Saturday 26th October 2024 - @sjn got his talk [accepted](http://act.yapc.eu/lpw2024/talk/7915), @tux got his LT [accepted](https://act.yapc.eu/lpw2024/talk/7922)
 

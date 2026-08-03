@@ -2,6 +2,7 @@
 toc: true
 type: page
 title: Test page
+mastodon: { username: sjn, instance: chaos.social }
 ---
 
 * https://kramdown.gettalong.org/quickref.html
@@ -110,7 +111,7 @@ example.
 
 ----
 
-## Github variables
+## GitHub variables
 
 Found on https://jekyll.github.io/github-metadata/site.github/
 

@@ -1,15 +1,18 @@
 ---
-layout: page
-title: Roles and metadata in open source supply-chains
+layout: single
+title: Roles and metadata in Open Source supply-chains
+mastodon: { username: sjn, instance: chaos.social }
 description: An overview of roles in a supply-chain and the metadata they care about, in light of upcoming regulatory changed introduced by the EU Cyber Resilience Act
 toc: true
+author: sjn
+draft: true
 mermaid: true
 ---
 
 ## Document status: ⚠️  DRAFT {#document-status}
 
 > [!CAUTION]
-> What you see here is a DRAFT of the Supply-chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
+> What you see here is a DRAFT of the supply-chain SBOM roles & responsibilities overview, by the CPAN Security Group (CPANSec).
 > As long as this document is in DRAFT, all of the points and ideas below are _suggestions_, and open to revision, deletion or amending – by you!
 >
 > - Contribute on Github: [https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/supplychain-sbom.md](https://github.com/CPAN-Security/security.metacpan.org/tree/supplychain-sbom/docs/supplychain-sbom.md)
@@ -28,7 +31,7 @@ mermaid: true
 
 ## About this document (TL;DR) {#about}
 
-This document offers **an overview of [Open Source Software](glossary.md#open-source-software) Supply-chains**.
+This document offers **an overview of [Open Source Software](glossary.md#open-source-software) supply-chains**.
 
 * Taking into account the following perspectives:
     1. Environments and Ecosystems,
@@ -36,48 +39,65 @@ This document offers **an overview of [Open Source Software](glossary.md#open-so
     1. Metadata, and
     1. Industry [Terms and Concepts](glossary.md)
 * …Enumerating and describing the Metadata Attributes these Roles typically care about.
-* …Noting the ways each Role may Operate on any given Metadata Attribute,
+* …Noting the ways each Role may operate on any given Metadata Attribute,
     * 🟥 Create (authoritative),
     * 🟨 Assemble or Update (contributing),
     * 🟩 Distribute,
     * 🟦 Verify, or
     * 🟪 Censor
+* …Acknowledging that some ecosystems and environments may have interesting features
+    * 🔃 Is upstream or downstream of own ecosystem type
+    * 🆕 Is a new participant in OSS supply chains
 * …Showing any relevant regulation or other requirements that impose expectations of the presence of specific Metadata Attributes.
-* …So that people having a Role within the Supply-chain can:
-    1. Draw an overarching map of what other Roles may Operate within their Supply-chain
+* …So that people having a Role within the supply-chain can:
+    1. Draw an overarching map of what other Roles may operate within their supply-chain
     1. Form a idea of what purpose each Role may have, and find out where they fit
     1. Get an idea where an Attribute is likely to come from, and which Roles care about these
-    1. Become aware of both upstream and downstream Communities, Ecosystems and Environments are involved in their Supply-chain, in order to interact with them in effective and sustainable ways
+    1. Become aware of both upstream and downstream Communities, Ecosystems and Environments are involved in their supply-chain, in order to interact with them in effective and sustainable ways
     1. Use this information to both live up to their new Regulatory Obligations and to help improve their Security Posture in general
 
-### A Typical Open Source Supply-chain (Simplified)
+### A Typical Open Source supply-chain (Simplified)
+
+> [!NOTE]
+>
+> The graphs in this document do *not* include _Content Delivery Networks_, _Model Ecosystems_ or _Plugin Ecosystems_.
+> If you know of other parts of an Open Source supply-chain that involves the managing of metadata somehow, then please [reach out](#document-status)!
+> We'd love to add them – or at least to be aware of them.
+
+This is a simplified "TL;DR" overview of a typical Open Source supply chain.
+
 
 ```mermaid
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 OSS Project" as environment_project
+    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment&nbsp;🔃" as environment_project
     state "🟨 Contributor" as environment_contributor
-    state "🟩 Collaboration Ecosystem" as ecosystem_repo
-    state "🟨🟩 Language Ecosystem" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem" as ecosystem_package
+    state "🟩&nbsp;Collaboration&nbsp;Ecosystem" as ecosystem_forge
+    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem&nbsp;🔃" as ecosystem_lang
+    state "🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem&nbsp;🔃" as ecosystem_package
+    state "🟩 Container Ecosystem" as ecosystem_container
     state "🟥🟨 Integrator" as environment_integrator
     state "🟦 Production" as environment_prod
 
     [*]                      --> environment_project
-    ecosystem_repo           --> environment_project
-    ecosystem_repo           --> environment_contributor
-    ecosystem_repo           --> ecosystem_lang
-    environment_project      --> ecosystem_repo
+    ecosystem_forge          --> environment_project
+    ecosystem_forge          --> environment_contributor
+    ecosystem_forge          --> ecosystem_lang
+    environment_project      --> ecosystem_forge
     environment_project      --> ecosystem_lang
-    environment_contributor  --> ecosystem_repo
+    environment_contributor  --> ecosystem_forge
     ecosystem_lang           --> ecosystem_package
-    ecosystem_repo           --> ecosystem_package
-    ecosystem_repo           --> environment_integrator
+    ecosystem_forge          --> ecosystem_package
+    %%ecosystem_package        --> ecosystem_package
+    %%ecosystem_lang           --> ecosystem_lang
+    ecosystem_package        --> ecosystem_container
+    %%ecosystem_container      --> ecosystem_container
+    ecosystem_forge          --> environment_integrator
     ecosystem_lang           --> environment_integrator
+    ecosystem_lang           --> ecosystem_container
     ecosystem_package        --> environment_integrator
-    ecosystem_lang           --> ecosystem_lang
-    ecosystem_package        --> ecosystem_package
+    ecosystem_container      --> environment_integrator
     environment_integrator   --> environment_prod
     environment_prod         --> [*]
 
@@ -86,9 +106,9 @@ stateDiagram-v2
 ```
 
 
-## This document is **visionary** and a **proposal**
+### Intention
 
-Some aspects of this document – specifically those related to the role of Open Source Stewards and the role of OSS Attestations – are presented as **suggestions, proposals or visions of a possible future**.
+This document is intended for presenting an opinionated overview that includes aspects that are **visionary** and **proposed** – especially topics related to the role of Open Source Stewards and the role of OSS Attestations.
 
 
 ### Motivation
@@ -97,8 +117,8 @@ Originally, this document stems from the main author's frustration with the lack
 
 Furthermore, this document is also an attempt to explore and map out the consequences that the EU Cyber Resilience Act (CRA) is likely have for Open Source Ecosystems.
 The CRA is the first regulation that has language that explicitly affects Open Source ecosystems.
-This law introduces a new entity – the Open Source Software Steward – with obligations to them (and other Roles) to improve the state of Cybersecurity throughout Open Source Supply-chains.
-This shown us that there's a need to map out what Open Source Supply-chains actually look like, and spell out what Roles can be found throughout it, and more.
+This law introduces a new entity – the Open Source Software Steward – with obligations to them (and other Roles) to improve the state of Cybersecurity throughout Open Source supply-chains.
+This shown us that there's a need to map out what Open Source supply-chains actually look like, and spell out what Roles can be found throughout it, and more.
 This document therefore also represents the author's exploration of this topic, and could be considered as "public notes" on the matter.
 Still, the author hopes this document also can be useful for others than himself and the CPAN Security Group.
 
@@ -109,59 +129,58 @@ For license information and acknowledgements, see the [end of this document](#li
 
 ## Supply-chain Ecosystems, Environments & Roles and Attributes
 
-> [!NOTE]
-> FIXME: Show how metadata may be communicated along these open source supply-chains.
-
-In this section, we map out the different parts of typical Open Source Supply-chains – the Environments and Ecosystems we use, the Roles that are operating within these, what Metadata Attributes they care about, and which Operations they are expected to execute when caring.
+In this section, we map out the different parts of typical Open Source supply-chains – the Environments and Ecosystems we use, the Roles that are operating within these, what Metadata Attributes they care about, and which Operations they are expected to execute when caring.
 Additionally, you should get some indications of what regulations, standards or other requirements that call for the presence of a given Attribute.
 And all this, with the goal of allowing downstream users to both live up to their regulatory obligations and to improve their security posture in general.
 To improve by ensuring that the metadata they need is available, updated and authoritative, and can be helpful in both mitigating vulnerabilities and interacting with the maintainers of any Open Source projects that may be involved.
 
 
-### A Post-CRA Open Source Supply-chain (Simplified)
+### A Post-CRA Open Source supply-chain (Simplified)
 
-> [!NOTE]
-> This diagram is equivalent to the simplified one above, but showing the new Roles implied and introduced by the EU Cyber Resilience Act (CRA).
+This diagram is equivalent to the simplified one above, but showing the new Roles implied and introduced by the EU Cyber Resilience Act (CRA).
+
 
 ```mermaid
 stateDiagram-v2
     direction TB
 
-    state "🟥🟨🟦 OSS Project Environment" as environment_project
+    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment&nbsp;🔃" as environment_project
     state "🟨 Contributor" as environment_contributor
-    state "🟩 Collaboration Ecosystem" as ecosystem_repo
-    state "🟨🟩 Language Ecosystem" as ecosystem_lang
-    state "🟨🟩 Package Ecosystem<br>🟩 Container Ecosystem" as ecosystem_package
-    %%state "🟨🟩 Package Ecosystem" as ecosystem_package
-    %%state "🟩 Container Ecosystem" as ecosystem_container
-    state "🆕🟥🟩🟦 OSS Steward" as ecosystem_steward
-    state "🆕🟥🟨🟦🟪 Manufacturer" as environment_manufacturer
-    state "🟦 Customer<br>🆕🟦 Auditor<br>🆕🟦 Importer<br>🆕🟦 Distributor<br>🆕🟦 Market Authority" as authority_auditor
+    state "🟩&nbsp;Collaboration&nbsp;Ecosystem" as ecosystem_forge
+    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem&nbsp;🔃" as ecosystem_lang
+    state "🟥&zwj;🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem&nbsp;🔃" as ecosystem_package
+    state "🟨&zwj;🟩&nbsp;Container&nbsp;Ecosystem&nbsp;🔃" as ecosystem_container
+    state "🟥🟩🟦 OSS Steward 🆕🔃" as ecosystem_steward
+    state "🟨🟦 Integrator<br>🟥&zwj;🟨&zwj;🟦&zwj;🟪&nbsp;Manufacturer&nbsp;🆕" as environment_integrator
+    state "🟦 Auditor<br>🟦 Market Authority 🆕" as authority_auditor
+    state "🟦 Importer 🆕<br>🟦 Distributor 🆕" as environment_market
+    state "🟦 Customer" as environment_customer
 
     [*]                      --> environment_project
-    ecosystem_repo           --> environment_project
+    ecosystem_forge          --> environment_project
+    ecosystem_forge          --> environment_contributor
+    ecosystem_forge          --> ecosystem_lang
+    environment_project      --> ecosystem_forge
+    environment_project      --> ecosystem_lang
+    environment_contributor  --> ecosystem_forge
     ecosystem_lang           --> ecosystem_package
-    ecosystem_repo           --> ecosystem_package
-    ecosystem_repo           --> ecosystem_lang
-    %%ecosystem_repo           --> ecosystem_container
-    ecosystem_repo           --> environment_manufacturer
-    ecosystem_repo           --> environment_contributor
-    environment_contributor  --> ecosystem_repo
-    environment_project   --> ecosystem_lang
-    environment_project   --> ecosystem_repo
-    %%ecosystem_package        --> ecosystem_container
-    %%ecosystem_lang           --> ecosystem_container
-    ecosystem_lang           --> ecosystem_steward
-    ecosystem_lang           --> environment_manufacturer
-    ecosystem_steward        --> environment_manufacturer
+    ecosystem_forge          --> ecosystem_package
+    ecosystem_package        --> ecosystem_container
+    ecosystem_forge          --> environment_integrator
+    ecosystem_lang           --> environment_integrator
+    ecosystem_lang           --> ecosystem_container
+    ecosystem_forge          --> ecosystem_container
+    ecosystem_package        --> environment_integrator
     ecosystem_package        --> ecosystem_steward
-    %%ecosystem_container      --> ecosystem_steward
-    environment_manufacturer --> authority_auditor
-    %%ecosystem_container      --> environment_manufacturer
-    ecosystem_package        --> environment_manufacturer
-    ecosystem_lang           --> ecosystem_lang
-    ecosystem_package        --> ecosystem_package
-    authority_auditor        --> [*]
+    ecosystem_lang           --> ecosystem_steward
+    ecosystem_container      --> ecosystem_steward
+    ecosystem_steward        --> environment_integrator
+    ecosystem_container      --> environment_integrator
+    environment_integrator   --> authority_auditor
+    environment_integrator   --> environment_market
+    environment_market       --> environment_customer
+    environment_integrator   --> environment_customer
+    environment_customer     --> [*]
 
     %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
     %% Some rights reserved. Licensed CC-BY-SA-4.0
@@ -169,10 +188,10 @@ stateDiagram-v2
 
 ### Legend of Metadata Operations
 
-In the graphs presented above and below, we color-code the different _metadata operations_ in order to quickly show what activities a Supply-chain Role may be involved in.
+In the graphs presented above and below, we color-code the different _metadata operations_ in order to quickly show what activities a supply-chain Role may be involved in.
 
 We're also assuming that Metadata is stored in SBOMs, but this need not be the case.
-To distinguish between Metadata roles and Supply-chain roles, we have decided to refer to the former as "SBOM Roles".
+To distinguish between Metadata roles and supply-chain roles, we have decided to refer to the former as "SBOM Roles".
 This convention is also commonly used (or implied) in the referenced material.
 This may change in later revisions of this document.
 
@@ -185,23 +204,21 @@ This distinction is _not commonly used_ in the referenced material.
 And finally, we acknowledge that some situations may call for an SBOM Censor, which is the time of writing is _not a commonly used term_ in the referenced material.
 
 * 🟥 SBOM Author (Authoritative metadata provider) – **Creates**, defines, signs Metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
-* 🟨 SBOM Contributor (Non-authoritative metadata provider) – **Assembles**, **updates**, merges, refines, maintains, attests, annotates Metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Corrected**_.
-* 🟩 SBOM Distributor – **Distributes**, curates, indexes Metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
+* 🟨 SBOM Contributor (Non-authoritative metadata provider) – **Assembles**, **updates**, merges, enriches, augments, refines, consolidates, maintains, attests, annotates Metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Corrected**_.
+* 🟩 SBOM Distributor – **Distributes**, transports, curates, indexes Metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
 * 🟦 SBOM Consumer – **Verifies**, consumes, aggregates, validates, surveys, analyzes or reports Metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
 * 🟪 SBOM Censor – **Censors**, redacts, deletes, anonymizes or filters Metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
 
 
-## Open Source Supply-chain
+## Graph: Open Source supply-chain {#open-source-supply-chain}
 
-> [!NOTE]
-> The graphs in this document do *not* include _Content Delivery Networks_, _Model Ecosystems_ or _Plugin Ecosystems_.
-> If you know of other parts of an Open Source Supply-chain that involves the managing of metadata somehow, then please [reach out](#document-status--)!
-> We'd love to add them – or at least to be aware of them.
+This is an attempt at a somewhat complete overview of the different Ecosystems, Roles and flow of metadata one can expect to see in an Open Source supply-chain.
+
 
 ```mermaid
 stateDiagram-v2
     direction TB
-    accTitle: An Idealized Open Source Supply-chain Graph
+    accTitle: An Idealized Open Source supply-chain Graph
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %% Role activities
@@ -214,61 +231,73 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %% Open Source Project Environment
-    state "🟥 Author<br>🟥 Owner" as project_author
+    state "🟥 Owner<br>🟥 Author" as project_author
     state "🟥🟨 Maintainer<br>🟨 Custodian" as project_maintainer
-    state "🟨🟦 Artificer<br>🟨🟦 Packager" as project_packager
+    state "🟨🟦 Publisher (Project)" as project_publisher
     %%
     class project_author createsSBOM
     class project_maintainer createsSBOM
-    class project_packager updatesSBOM
+    class project_publisher updatesSBOM
 
     %%
     %%state "🟥 Attestation Authority 🆕" as authority_attester
 
     %% Language Ecosystem
-    state "🟦 Doorkeeper<br>🟦 Authenticator" as language_authenticator
+    state "🟦 Ingester" as language_ingester
     %%state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
     state "🟨 Curator" as language_curator
-    state "🟩 Archivist<br>🟩 Distributor" as language_distributor
+    state "🟩 Distributor" as language_distributor
+    %% "🟩 Reservoir"
     %%
-    class language_authenticator verifiesSBOM
+    class language_ingester verifiesSBOM
     class language_packager assemblesSBOM
     class language_steward createsSBOM
     class language_curator updatesSBOM
     class language_distributor distributesSBOM
 
     %% Collaboration Forge (Ecosystem)
-    state "🟩 Depositary<br>🟩 Distributor" as repository_distributor
+    state "🟩 Distributor (Depositary)" as repository_distributor
     state "🟨 Contributor" as external_contributor
     %%
     class repository_distributor distributesSBOM
     class external_contributor updatesSBOM
 
     %% Package Ecosystem
-    state "🟦 Gatekeeper<br>🟦 Authenticator" as package_authenticator
-    state "🟨 Patcher" as package_patcher
-    state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as package_packager
+    state "🟦 Ingester" as package_ingester
+    state "🟨🟦 Patcher" as package_patcher
+    state "🟥🟨🟦 Builder<br>🟥🟨🟦 Packager" as package_packager
     %% FIXME: package_steward not useful/necessary?
-    state "🟥🟨🟦 OSS Steward Attester 🆕" as package_steward
+    state "🟨🟦 Attester 🆕" as package_steward
     state "🟨 Curator" as package_curator
-    state "🟩 Repository<br>🟩 Distributor" as package_distributor
+    state "🟩 Distributor (Repository)" as package_distributor
     %%
-    class package_authenticator verifiesSBOM
+    class package_ingester verifiesSBOM
     class package_patcher updatesSBOM
     class package_packager assemblesSBOM
     class package_steward createsSBOM
     class package_curator updatesSBOM
     class package_distributor distributesSBOM
 
+    %% Container Ecosystem
+    state "🟦 Ingester" as container_ingester
+    state "🟨🟦 Assembler" as container_packager
+    state "🟨🟦 Attester 🆕" as container_steward
+    state "🟨 Curator" as container_curator
+    state "🟩 Registry<br>🟩 Distributor" as container_distributor
+    %%
+    class container_ingester verifiesSBOM
+    class container_packager assemblesSBOM
+    class container_steward createsSBOM
+    class container_curator updatesSBOM
+    class container_distributor distributesSBOM
+
     %% OSS Steward Environment
-    state "🟥🟨🟦 OSS Steward Attester 🆕" as steward_attester
-    state "🟩 Archivist<br>🟩 Distributor" as steward_distributor
+    state "🟥🟨🟦 Attester 🆕" as steward_attester
     %%
     class steward_attester createsSBOM
-    class steward_distributor distributesSBOM
 
     %% Integrator Environment
-    state "🟥 Manufacturer 🆕" as integrator_owner
+    state "🟥 Owner<br>🟥 Manufacturer 🆕" as integrator_owner
     state "🟦 Procurer" as integrator_procurer
     state "🟥🟨🟦 Integrator" as integrator_developer
     state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as integrator_builder
@@ -287,64 +316,65 @@ stateDiagram-v2
     %% Production Environment
     state "🟨 Deployer" as prod_deployer
     state "🟦 End-user<br>Consumer" as external_consumer
+    state "🟦 Importer 🆕<br>🟦 Distributor 🆕" as prod_distributor
     %%
     class prod_deployer assemblesSBOM
     class external_consumer ignoresSBOM
     %%class authority_attester createsSBOM
 
     %% Market Surveillance Environment
-    state "🟦 Auditor<br>🟦 Importer 🆕<br>🟦 Distributor 🆕<br>🟦 Market Authority 🆕" as authority_auditor
+    state "🟦 Auditor<br>🟦 Market Authority 🆕" as authority_auditor
     %%
     class authority_auditor verifiesSBOM
 
     %%
-    state "OSS Project Environment" as environment_project {
+    state "OSS Project Environment 🔃" as environment_project {
         [*] --> project_author
         [*] --> project_maintainer
-        project_author  --> project_maintainer
-        project_maintainer --> project_packager
+        project_author     --> project_maintainer
+        project_maintainer --> project_publisher
         project_maintainer --> [*]
-        project_packager --> [*]
+        project_publisher  --> [*]
     }
 
     [*] --> environment_project
 
     %%
-    state "Language Ecosystem" as ecosystem_lang {
-        [*] --> language_authenticator
-        language_authenticator --> language_distributor
-        %%language_authenticator --> language_steward
-        language_authenticator --> language_curator
-        language_curator --> language_distributor
-        %%language_steward --> language_distributor
-        %%language_steward --> language_curator
-        language_distributor --> [*]
+    state "Language Ecosystem 🔃" as ecosystem_lang {
+        [*]                    --> language_ingester
+        language_ingester      --> language_distributor
+        %%language_ingester      --> language_steward
+        language_ingester      --> language_curator
+        language_curator       --> language_distributor
+        %%language_steward       --> language_distributor
+        %%language_steward       --> language_curator
+        language_distributor   --> [*]
     }
 
     %%language_packager --> ecosystem_lang
     environment_project --> ecosystem_lang
 
     %%
-    state "Collaboration Ecosystem" as ecosystem_repo {
+    state "Collaboration Ecosystem (Forge)" as ecosystem_forge {
         [*] --> repository_distributor
         external_contributor   --> repository_distributor
         repository_distributor --> external_contributor
         repository_distributor --> [*]
     }
 
-    %%ecosystem_repo    --> maintainer_author
-    %%maintainer_author --> ecosystem_repo
+    %%ecosystem_forge     --> maintainer_author
+    %%maintainer_author   --> ecosystem_forge
     environment_project --> environment_steward
-    environment_project --> ecosystem_repo
-    ecosystem_repo      --> environment_project
+    environment_project --> ecosystem_forge
+    ecosystem_forge     --> environment_project
 
     %%external_contributor   --> repository_distributor
 
     %%
-    state "Package Ecosystem" as ecosystem_package {
-        [*] --> package_authenticator
-        package_authenticator --> package_patcher
-        package_authenticator --> package_packager
+    state "Package Ecosystem (Repository) 🔃" as ecosystem_package {
+        [*] --> package_ingester
+        package_ingester      --> package_patcher
+        package_ingester      --> package_packager
         package_patcher       --> package_packager
         package_packager      --> package_curator
         package_steward       --> package_curator
@@ -355,26 +385,39 @@ stateDiagram-v2
         package_distributor   --> [*]
     }
 
+    %%
+    state "Container Ecosystem (Registry) 🔃" as ecosystem_container {
+        [*] --> container_ingester
+        container_ingester      --> container_packager
+        container_packager      --> container_curator
+        container_steward       --> container_curator
+        container_packager      --> container_distributor
+        container_curator       --> container_distributor
+        container_steward       --> container_distributor
+        container_packager      --> container_steward
+        container_distributor   --> [*]
+    }
+
+    ecosystem_package        --> ecosystem_container
+    ecosystem_container      --> environment_integrator
+
     ecosystem_package        --> environment_integrator
     %%ecosystem_package        --> ecosystem_package
 
-    %%repository_distributor --> ecosystem_package
-    %%language_distributor   --> ecosystem_package
+    %%repository_distributor   --> ecosystem_package
+    %%language_distributor     --> ecosystem_package
     %%ecosystem_lang           --> ecosystem_lang
     ecosystem_lang           --> environment_integrator
     ecosystem_lang           --> ecosystem_package
-    ecosystem_repo           --> ecosystem_package
+    ecosystem_forge          --> ecosystem_package
 
     %%authority_attester --> language_steward
     %%authority_attester --> package_steward
     %%authority_attester --> environment_steward
 
-    
-    state "OSS Steward Environment 🆕" as environment_steward {
+    state "OSS Steward Environment 🆕🔃" as environment_steward {
       [*] --> steward_attester
-      steward_attester --> steward_distributor
-      steward_distributor --> [*]
-      steward_attester --> [*]
+      steward_attester    --> [*]
     }
     ecosystem_lang      --> environment_steward
     environment_steward --> environment_integrator
@@ -382,9 +425,9 @@ stateDiagram-v2
 
     %%
     state "Integrator Environment" as environment_integrator {
-        [*] --> integrator_procurer
-        [*] --> integrator_owner
-        [*] --> integrator_developer
+        [*]                  --> integrator_procurer
+        [*]                  --> integrator_owner
+        [*]                  --> integrator_developer
         integrator_procurer  --> integrator_developer
         integrator_procurer  --> integrator_owner
         integrator_owner     --> integrator_developer
@@ -399,26 +442,28 @@ stateDiagram-v2
         integrator_publisher --> [*]
     }
 
-    %%repository_distributor --> environment_integrator
-    ecosystem_repo           --> environment_integrator
-    %%language_distributor   --> environment_integrator
+    %%repository_distributor   --> environment_integrator
+    ecosystem_forge          --> environment_integrator
+    %%language_distributor     --> environment_integrator
 
     %%
     state "Production Environment" as environment_prod {
-        [*] --> prod_deployer
-        prod_deployer --> [*]
+        [*]              --> prod_deployer
+        [*]              --> prod_distributor
+        prod_distributor --> [*]
+        prod_deployer    --> [*]
     }
 
     %%
-    state "Market Surveillance" as environment_surveillance {
-        [*] --> authority_auditor
+    state "Market Surveillance 🆕" as environment_surveillance {
+        [*]               --> authority_auditor
         authority_auditor --> [*]
     }
 
-    environment_prod        --> environment_surveillance
-    %%integrator_builder   --> environment_prod
-    %%integrator_developer --> environment_prod
-    %%integrator_publisher --> environment_prod
+    environment_prod         --> environment_surveillance
+    %%integrator_builder       --> environment_prod
+    %%integrator_developer     --> environment_prod
+    %%integrator_publisher     --> environment_prod
     environment_integrator   --> environment_surveillance
     environment_integrator   --> environment_prod
     environment_integrator   --> external_consumer
@@ -436,9 +481,9 @@ stateDiagram-v2
 
 ## Supply-chain Ecosystems, their Roles and Metadata
 
-Which environments and Ecosystems are found throughout a Supply-chain? Here's an overview.
+Which environments and Ecosystems are found throughout a supply-chain? Here's an overview.
 
-Throughout Open Source Supply-chains, we find different Roles that care about certain metadata, or are in possession of some authoritative information, or needs to verify these.
+Throughout Open Source supply-chains, we find different Roles that care about certain metadata, or are in possession of some authoritative information, or needs to verify these.
 Here, you'll get an overview of the most important ones, which attributes they care about and how they care, and some information about why they do so (e.g. due to legal requirements).
 
 * Ops: The type of operation that someone with a given Role is most likely to do on a given metadata attribute.
@@ -478,7 +523,7 @@ These are common across all roles, and considered to be _baseline_ because they 
 ```mermaid
 stateDiagram-v2
     direction TB
-    accTitle: An Idealized Open Source Supply-chain Graph, OSS Project perspective
+    accTitle: An Idealized Open Source supply-chain Graph, OSS Project perspective
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %%
@@ -491,24 +536,24 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %% OSS Project Environment
-    state "🟥 Author<br>🟥 Owner" as project_author
+    state "🟥 Owner<br>🟥 Author" as project_author
     state "🟥🟨 Maintainer<br>🟨 Custodian" as project_maintainer
-    state "🟨🟦 Artificer<br>🟨🟦 Packager" as language_packager
+    state "🟨🟦 Publisher" as language_publisher
     %%
     state "OSS Project Environment" as environment_project {
-        [*] --> project_author
-        [*] --> project_maintainer
-        project_author  --> project_maintainer
-        project_maintainer --> language_packager
-        project_author --> language_packager
+        [*]                --> project_author
+        [*]                --> project_maintainer
+        project_author     --> project_maintainer
+        project_maintainer --> language_publisher
+        project_author     --> language_publisher
         project_maintainer --> [*]
-        language_packager --> [*]
-        project_author --> [*]
+        language_publisher --> [*]
+        project_author     --> [*]
     }
     %%
     class project_author createsSBOM
     class project_maintainer createsSBOM
-    class ecosystem_repo distributesSBOM
+    class ecosystem_forge distributesSBOM
     class ecosystem_lang updatesSBOM
     class environment_steward createsSBOM
 
@@ -519,10 +564,10 @@ stateDiagram-v2
     environment_project --> ecosystem_lang
 
     %% Collaboration Ecosystem
-    state "🟨🟩 Collaboration Ecosystem" as ecosystem_repo
-    environment_project --> ecosystem_repo
+    state "🟨🟩 Collaboration Ecosystem" as ecosystem_forge
+    environment_project --> ecosystem_forge
     environment_project --> environment_steward
-    ecosystem_repo      --> environment_project
+    ecosystem_forge     --> environment_project
 
     %% OSS Steward Environment
     state "🟥🟨🟦 OSS Steward Environment" as environment_steward
@@ -542,7 +587,7 @@ This environment represents one or more developers that publish an Open Source c
 
 
 
-#### Author
+#### Author (Project Role) {#author}
 
 The initial creator and main developer of an Open Source project or a product.
 
@@ -561,12 +606,13 @@ The initial creator and main developer of an Open Source project or a product.
 | 🟥  | License(s) (Primary)            | Yes      | CISA-2024-10                        |         |         |
 
 * See also
+  * [Author](glossary#author) in the Glossary
   * [Manufacturer](#manufacturer)
 
 
-#### Maintainer
+#### Maintainer (Project Role) {#maintainer}
 
-A leading developer of an Open Source component project, though not necessarily the original [Author](#author).
+A leading developer of an Open Source [Project](glossary#project), though not necessarily the original [Author](#author).
 
 * Operates within an [OSS Project Environment](#oss-project-environment).
 * Is often the initial and/or main creator ([Author](#author)) of the component in question.
@@ -575,6 +621,12 @@ A leading developer of an Open Source component project, though not necessarily 
 * The Maintainer _can_ be a group of people (having co-maintainers), though a single point of responsibility is common.
 * If a Maintainer has upstream (reverse) dependencies, the Maintainer is also considered to be an [Developer](#developer) (as seen from the upstream Maintainer's perspective).
 * Other common names for this role include Author, Developer, [Owner](#owner).
+* Maintainers may be
+  * Independent (Author or Maintainer is [Owner](#owner))
+  * Managed by a public sector [Owner](#owner)
+  * Managed by a commercial sector [Owner](#owner)
+  * Managed by an academic sector [Owner](#owner)
+  * Managed by an ideal/non-profit/NGO sector [Owner](#owner)
 
 | Ops | Attribute name                     | Required | Required by                                 | Comment | FIXME   |
 | :-: | :--------------------------------- | :------: | ------------------------------------------- | :------ | :------ |
@@ -584,7 +636,7 @@ A leading developer of an Open Source component project, though not necessarily 
 | 🟥  | Unique Product Identifier          | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV               |         |         |
 | 🟥  | Purpose, Intended Use              | Yes      | CRA-AII(4)                                  |         |         |
 | 🟥  | Code Repository                    | No       |                                             |         | Consider recommendation |
-| 🟥  | Project Sustainability             | No       |                                             | CycloneDX 1.7 proposed | |
+| 🟥  | Contribution Instructions          | No       |                                             | CycloneDX 1.7 proposed | |
 | 🟥  | Code Commit Revision               | No       |                                             |         | Consider recommendation |
 | 🟥  | Intended for Commercial Use        | No       | CRA-Rec-15, CRA-Rec-19                      |         |         |
 | 🟥  | Open Source Software Steward       | No       | CRA-Rec-19                                  |         |         |
@@ -618,12 +670,13 @@ A role that operates as a temporary replacement of a [Maintainer](#maintainer), 
 | 🟨  | Dependencies (Included)        | Yes      | CRA-AII(5), NTIA-SBOM                      |         |         |
 | 🟨  | Unique Product Identifier      | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV              |         |         |
 | 🟨  | Supplier Name (Custodian)      | Yes      | CRA-AII(1), NTIA-SBOM, TR-03183, CRA-AV    |         |         |
-| 🟨  | Project Sustainability         | No       |                                            | CycloneDX 1.7 proposed | |
+| 🟨  | Contribution Instructions      | No       |                                            | CycloneDX 1.7 proposed | |
 
 
 #### Packager (Maintainer)
 
 Prepares a Language ecosystem package for upload.
+Can sometimes be called a "Release manager".
 
 * See also
   * [Packager](#packager)
@@ -631,7 +684,7 @@ Prepares a Language ecosystem package for upload.
 
 ----------------------------------------------------------------------
 
-### Collaboration Ecosystem
+### Collaboration Forge (Ecosystem)
 
 A website or tool ("Forge") that offers a public collaboration repository to Authors, so they may cooperate and share ongoing work in public.
 
@@ -681,22 +734,13 @@ Typically, the Ecosystem has dedicated services and tooling for interacting with
 * May be Private
 
 
-#### Doorkeeper (Language ecosystem)
-
-> [!NOTE]
-> * FIXME: Bad term! Improvements appreciated.
->     * Alternatives: Commissionaire, Ostiary
-
-* See [Authenticator](#authenticator)
-
-
-#### Authenticator (Language ecosystem) {#authenticator}
+#### Ingester (Language, Package, Container ecosystem) {#ingester}
 
 > [!CAUTION]
 > * FIXME – Not done
 > * FIXME – Find a better name
 
-Authenticators ensure that only authorized Maintainers are allowed to publish their components to a [Language Ecosystem](#language-ecosystem) or [Package Ecosystem](#package-ecosystem).
+Ingesters ensure that only authorized Maintainers are allowed to publish their components to a [Language Ecosystem](#language-ecosystem), [Package Ecosystem](#package-ecosystem) or [Container ecosystem](#container-ecosystem).
 Usually decides who gets access to which resources.
 
 * Examples
@@ -710,7 +754,7 @@ Usually decides who gets access to which resources.
 > [!CAUTION]
 > * FIXME – Not done
 
-Within, or on behalf of a [Language Ecosystem](#language-ecosystem) or a [Package Ecosystem](#package-ecosystem), the OSS Steward has the task to ensure that their obligations in the EU Cyber Resilience Act are met.
+Within, or on behalf of a [Language Ecosystem](#language-ecosystem), a [Package Ecosystem](#package-ecosystem) or [Container Ecosystem], the OSS Steward has the task to ensure that their obligations in the EU Cyber Resilience Act are met.
 
 
 | Ops | Attribute name                     | Required | Required by            | Comment | FIXME   |
@@ -721,7 +765,7 @@ Within, or on behalf of a [Language Ecosystem](#language-ecosystem) or a [Packag
 
 * See also
   * [Maintainer](#maintainer), and
-  * [Open Source Software Steward](glossary.md#open-source-software-steward-%EF%B8%8F) in the Glossary
+  * [Open Source Software Steward](glossary.md#open-source-software-steward) in the Glossary
 
 
 ----------------------------------------------------------------------
@@ -737,14 +781,6 @@ Package Ecosystems typically have their own tooling and services that are expect
 * May have downstream package ecosystems
 * May be Public
 * May be Private
-
-
-#### Gatekeeper (Package ecosystem)
-
-> [!NOTE]
-> * FIXME: Bad term! Improvements appreciated.
-
-* See [Authenticator](#authenticator)
 
 
 #### Patcher (Package ecosystem) {#patcher}
@@ -783,9 +819,9 @@ This role is necessary when...
 | 🟦  | License(s)                                | Yes      |                         |         |         |
 | 🟦  | Dependencies (Upstream)                   | Yes      | CRA-AII(5), NTIA-SBOM   |         | Confirm if necessary |
 | 🟨  | Dependencies (Included)                   | Yes      | CRA-AII(5), NTIA-SBOM   |         | Confirm if necessary |
-| 🟨  | Version (Redistributed)                   | Yes      | NTIA-SBOM, TR-03183     |         |         |
-| 🟨  | Unique Product Identifier (Redistributed) | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if attribute is replaced or added |
-| 🟨  | Project Sustainability                    | No       |                         | CycloneDX 1.7 proposed | |
+| 🟨  | Version (Patched)                         | Yes      | NTIA-SBOM, TR-03183     |         |         |
+| 🟨  | Unique Product Identifier (Patched)       | Yes      | CRA-AII(3), NTIA-SBOM   |         | Check if attribute is replaced or added |
+| 🟨  | Contribution Instructions                 | No       |                         | CycloneDX 1.7 proposed | |
 
 * Examples
     * In Debian, there is a concept of "Non-Maintainer Uploads", where contributors are allowed to do one-time uploads to fix bugs under certain conditions and following some guidelines. (Source: [Debian developers reference](https://www.debian.org/doc/manuals/developers-reference/pkgs.en.html#non-maintainer-uploads-nmus), [perl5-porters message on NMUs](https://www.nntp.perl.org/group/perl.perl5.porters/2024/08/msg268757.html))
@@ -794,7 +830,11 @@ This role is necessary when...
 #### Builder (Package ecosystem) {#builder}
 
 > [!IMPORTANT]
-> Builders should add build environment metadata (including resolved dependencies) in an accompanying SBOM file.
+> Builders should add build environment metadata (including resolved build dependencies) in an accompanying SBOM file.
+
+| Ops | Attribute name                            | Required | Required by                        | Comment | FIXME   |
+| :-: | :---------------------------------------- | :------: | ---------------------------------- | :------ | :------ |
+| 🟥  | Cryptographic Hash                        | Yes      | CISA-2024-10, TR-03183             |         |         |
 
 * See also
     * [Packager](#packager)
@@ -824,19 +864,6 @@ This role is necessary when...
 | 🟦  | Version (Redistributed)                   | Yes      | NTIA-SBOM, TR-03183                |         | Confirm Role need |
 | 🟥  | Dependencies (Resolved)                   | Yes      | CRA-AII(5), NTIA-SBOM              |         |         |
 
-
-#### Assembler (Package ecosystem) {#assembler}
-
-> [!NOTE]
-> * FIXME – "Assembler" probably isn't the best name for the role that creates container images. If you have suggestions for a better single-word name for this role, that isn't ambiguous or obscure, then please reach out!
-> * FIXME – Flesh out details
-
-* Operates within a [Package Ecosystem](#package-ecosystem), creating containers.
-* Builds, installs package dependencies and creates container images from a base images.
-
-| Ops | Attribute name          | Required | Required by           | Comment | FIXME   |
-| :-: | :---------------------- | :------: | --------------------- | :------ | :------ |
-| 🟨  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM |         |         |
 
 
 #### Curator (Package ecosystem) {#curator}
@@ -880,6 +907,20 @@ Ensures the availability of packages or containers, that they are indexed correc
 | 🟩  | SBOM Location (Repackaged)     | No       | CRA-AII(9)            |         |         |
 
 
+#### Assembler (Container ecosystem) {#assembler}
+
+> [!NOTE]
+> * FIXME – "Assembler" probably isn't the best name for the role that creates container images. If you have suggestions for a better single-word name for this role, that isn't ambiguous or obscure, then please reach out!
+> * FIXME – Flesh out details
+
+* Operates within a [Package Ecosystem](#package-ecosystem), creating containers.
+* Builds, installs package dependencies and creates container images from a base images.
+
+| Ops | Attribute name          | Required | Required by            | Comment | FIXME   |
+| :-: | :---------------------- | :------: | ---------------------- | :------ | :------ |
+| 🟨  | Dependencies (Resolved) | Yes      | CRA-AII(5), NTIA-SBOM  |         |         |
+| 🟥  | Cryptographic Hash      | Yes      | CISA-2024-10, TR-03183 |         |         |
+
 
 ----------------------------------------------------------------------
 
@@ -888,7 +929,7 @@ Ensures the availability of packages or containers, that they are indexed correc
 ```mermaid
 stateDiagram-v2
     direction TB
-    accTitle: An Idealized Open Source Supply-chain Graph
+    accTitle: An Idealized Open Source supply-chain Graph
     %%accDescr: This graph illustrates how different types of development environments and ecosystems interconnect, what kind of roles you may find in these, and what type of metadata operations they may care to do
 
     %% Role activities
@@ -901,7 +942,7 @@ stateDiagram-v2
     classDef ignoresSBOM stroke:#777,stroke-width:3px;
 
     %%
-    state "🟥🟨🟦 Open Source Software Steward 🆕" as language_steward
+    state "🟥🟨🟦 OSS Steward 🆕" as language_steward
     %%
     class language_steward createsSBOM
 
@@ -912,14 +953,19 @@ stateDiagram-v2
 
 
     %% Collaboration Ecosystem
-    state "Collaboration Ecosystem" as ecosystem_repo
+    state "Collaboration Ecosystem" as ecosystem_forge
     %%
-    class ecosystem_repo distributesSBOM
+    class ecosystem_forge distributesSBOM
 
     %% Package Ecosystem
     state "Package Ecosystem" as ecosystem_package
     %%
     class ecosystem_package assemblesSBOM
+
+    %% Container Ecosystem
+    state "Container Ecosystem" as ecosystem_container
+    %%
+    class ecosystem_container assemblesSBOM
 
 
     %% Integrator Environment
@@ -951,7 +997,7 @@ stateDiagram-v2
     class external_consumer ignoresSBOM
 
     %% Market Authorities
-    state "🟦 Auditor 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
+    state "🟦 Market Authority 🆕<br>🟦 Importer 🆕<br>🟦 Distributor 🆕" as authority_auditor
     %%
     class authority_attester createsSBOM
     class authority_auditor verifiesSBOM
@@ -962,10 +1008,11 @@ stateDiagram-v2
     class prod_deployer assemblesSBOM
 
     %%
-    language_steward  --> environment_integrator
-    ecosystem_repo    --> environment_integrator
-    ecosystem_lang    --> environment_integrator
-    ecosystem_package --> environment_integrator
+    language_steward     --> environment_integrator
+    ecosystem_forge      --> environment_integrator
+    ecosystem_lang       --> environment_integrator
+    ecosystem_package    --> environment_integrator
+    ecosystem_container  --> environment_integrator
     %%
     integrator_builder   --> environment_prod
     integrator_developer --> environment_prod
@@ -1023,25 +1070,25 @@ A business or institution that is responsible for developing and building the ap
   * [Maintainer](#maintainer)
   * [Developer](#developer)
 
-| Ops | Attribute name                    | Required | Required by                                     | Comment | FIXME   |
-| :-: | :-------------------------------- | :------: | ----------------------------------------------- | :------ | :------ |
-| 🟦  | Project Sustainability (Upstream) | No       |                                                 | CycloneDX 1.7 proposed | |
-| 🟦  | License(s)                        | Yes      |                                                 |         |         |
-| 🟥  | Primary Component Name            | Yes      | NTIA-SBOM, TR-03183, CRA-AV                     |         |         |
-| 🟥  | Version                           | Yes      | NTIA-SBOM, TR-03183                             |         |         |
-| 🟥  | Dependencies                      | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183   |         |         |
-| 🟥  | Dependency Relationships          | Yes      | CISA-2024-10                                    |         |         |
-| 🟥  | Security contact                  | Yes      | CRA-AII(2)                                      |         | Confirm attribute variations |
-| 🟥  | Unique Product ID                 | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV                   |         |         |
-| 🟥  | Purpose, Intended Use             | Yes      | CRA-AII(4)                                      |         |         |
-| 🟥  | Code Repository                   | Yes      |                                                 |         |         |
-| 🟥  | Project Sustainability            | No       |                                                 | CycloneDX 1.7 proposed | |
-| 🟥  | Code Commit Revision              | No       |                                                 |         | Consider recommendation |
-| 🟥  | Cryptographic Hash                | Yes      | CISA-2024-10, TR-03183                          |         |         |
-| 🟥  | Primary Component Filename        | Yes      | TR-03183                                        |         |         |
-| 🟥  | License (Primary)                 | Yes      | CISA-2024-10                                    |         |         |
-| 🟨  | Supplier Name (Integrator)        | Yes      | CRA-AII(1), NTIA-SBOM, TR-03183, CRA-AV         |         |         |
-| 🟨  | License(s) (Included, Dependency) | Yes      | CISA-2024-10                                    |         |         |
+| Ops | Attribute name                       | Required | Required by                                   | Comment | FIXME   |
+| :-: | :----------------------------------- | :------: | --------------------------------------------- | :------ | :------ |
+| 🟦  | Contribution Instructions (Upstream) | No       |                                               | CycloneDX 1.7 proposed | |
+| 🟦  | License(s)                           | Yes      |                                               |         |         |
+| 🟥  | Primary Component Name               | Yes      | NTIA-SBOM, TR-03183, CRA-AV                   |         |         |
+| 🟥  | Version                              | Yes      | NTIA-SBOM, TR-03183                           |         |         |
+| 🟥  | Dependencies                         | Yes      | CRA-AII(5), NTIA-SBOM, CISA-2024-10, TR-03183 |         |         |
+| 🟥  | Dependency Relationships             | Yes      | CISA-2024-10                                  |         |         |
+| 🟥  | Security contact                     | Yes      | CRA-AII(2)                                    |         | Confirm attribute variations |
+| 🟥  | Unique Product ID                    | Yes      | CRA-AII(3), NTIA-SBOM, CRA-AV                 |         |         |
+| 🟥  | Purpose, Intended Use                | Yes      | CRA-AII(4)                                    |         |         |
+| 🟥  | Code Repository                      | Yes      |                                               |         |         |
+| 🟥  | Contribution Instructions            | No       |                                               | CycloneDX 1.7 proposed | |
+| 🟥  | Code Commit Revision                 | No       |                                               |         | Consider recommendation |
+| 🟥  | Cryptographic Hash                   | Yes      | CISA-2024-10, TR-03183                        |         |         |
+| 🟥  | Primary Component Filename           | Yes      | TR-03183                                      |         |         |
+| 🟥  | License (Primary)                    | Yes      | CISA-2024-10                                  |         |         |
+| 🟨  | Supplier Name (Integrator)           | Yes      | CRA-AII(1), NTIA-SBOM, TR-03183, CRA-AV       |         |         |
+| 🟨  | License(s) (Included, Dependency)    | Yes      | CISA-2024-10                                  |         |         |
 
 
 #### Developer
@@ -1080,7 +1127,7 @@ A business or institution that is responsible for developing and building the ap
 | 🟦  | Security contact           | Yes      | CRA-AII(2)            |         |         |
 | 🟦  | Unique Product ID          | Yes      | CRA-AII(3), NTIA-SBOM |         |         |
 | 🟦  | Security Attestation       | Yes      | CRA-Rec-21            |         |         |
-| 🟦  | Project Sustainability     | No       |                       | CycloneDX 1.7 proposed | |
+| 🟦  | Contribution Instructions  | No       |                       | CycloneDX 1.7 proposed | |
 
 
 ----------------------------------------------------------------------
@@ -1137,7 +1184,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 | 🟦  | CE Technical Documentation          | No       | CRA-AII(8)            |         |         |
 | 🟦  | CE Conformity Assessment Body       | No       | CRA-Art-47(1), CRA-AV |         |         |
 | 🟦  | Download location                   | Yes      |                       |         |         |
-| 🟦  | Project Sustainability              | No       |                       | CycloneDX 1.7 proposed | |
+| 🟦  | Contribution Instructions           | No       |                       | CycloneDX 1.7 proposed | |
 
 
 #### Distributor
@@ -1160,7 +1207,7 @@ This role is required by the EU Cyber Resilience Act. FIXME – find specific a
 #### Importer
 
 > [!CAUTION]
-> * Not directly part of an Open Source Supply-chain, but can be found downstream of Manufacturers that use these.
+> * Not directly part of an Open Source supply-chain, but can be found downstream of Manufacturers that use these.
 > * FIXME – Not done
 
 * A role specific for the EU Cyber Resilience Act.
@@ -1233,7 +1280,7 @@ The environment and systems where a product or service is executed by a customer
 
 #### Supplier
 
-The Supplier is a term used throughout the Supply-chain, but most often represents a Role within a [Maintainer](#maintainer-environment) or an [Integrator](#integrator-environment) Environment.
+The Supplier is a term used throughout the supply-chain, but most often represents a Role within a [Maintainer](#maintainer-environment) or an [Integrator](#integrator-environment) Environment.
 
 * This term is used within the NTIA "SBOM Minimum Elements" document as the legal source of a component.
 * (CPANSec) This term is confusing, as it doesn't distinguish between the different types of "Suppliers" that may be involved in the creation of a product.
@@ -1296,6 +1343,14 @@ The Supplier is a term used throughout the Supply-chain, but most often represen
 The legal owner of the component or project.
 
 * May be a business or other entity, distinct from the component [Author](#author).
+* An Owner may be
+  * Independent ([Author](#author) or [Maintainer](#maintainer) is Owner)
+  * Public sector entity (e.g. a city administration)
+  * Commercial sector entity (e.g. a shareholder-owned business)
+  * Academic sector (e.g. a university)
+  * Ideal/non-profit/NGO sector
+* Project needs, risks, predictability, sustainability and strategy may depend greatly on the Owner entity
+
 
 * See also
   * [Author](#author)
@@ -1362,7 +1417,7 @@ The legal owner of the component or project.
 
 ## License and use of this document
 
-* Version: 0.8.3
+* Version: 0.8.7
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
 * Copyright: © Salve J. Nilsen <sjn@oslo.pm>, Some rights reserved.
 
@@ -1429,43 +1484,45 @@ Several people have been involved in the development of this document
 
 ### SBOM JSON Paths and data types
 
-| Attribute name                      | Data type    | CycloneDX 1.6 (ECMA-424)                                              | SPDX 2.3                | SPDX 3.0 | Comment |
-| :---------------------------------- | :----------: | :-------------------------------------------------------------------- | :---------------------- | -------- | :------ |
+| Attribute name                      | Data type    | CycloneDX 1.6 (ECMA-424)                                              | SPDX 2.3                | SPDX 3.0 | Comment  |
+| :---------------------------------- | :----------: | :-------------------------------------------------------------------- | :---------------------- | -------- | :------- |
 | Primary Component Name              | Text         | bom.components[].name                                                 | packages[].name         | Software.Package.name | |
-| Security contact (Integrator)       | URL          | bom.components[].externalReferences[].security-contact                |                         |          |         |
-| Security contact (Manufacturer)     | URL          | bom.metadata[manufacturer].contact.email, bom.externalReferences[].security-contact |           |          |         |
-| Security contact (Maintainer)       | URL          | bom.metadata[supplier].contact.email, bom.externalReferences[].security-contact |               |          |         |
+| Security contact (Integrator)       | URL          | bom.components[].externalReferences[].security-contact                |                         |          |          |
+| Security contact (Manufacturer)     | URL          | bom.metadata[manufacturer].contact.email, bom.externalReferences[].security-contact |           |          |          |
+| Security contact (Maintainer)       | URL          | bom.metadata[supplier].contact.email, bom.externalReferences[].security-contact |               |          |          |
 | Supplier Name (Author)              | Text, URL    | bom.metadata[supplier], bom.components[].authors[]                    | creationInfo.creators[] | Software.Package.suppliedBy | |
 | Supplier Name (Manufacturer)        | Text, URL    | bom.metadata[manufacturer], bom.components[].manufacturer             | creationInfo.creators[], packages[].originator, packages[].supplier | Software.Package.suppliedBy | |
 | Unique Product Identifier           | PURL         | bom.components[].purl | packages[].externalRefs.referenceCategory = "PACKAGE-MANAGER", packages[].externalRefs.referenceType = "purl", packages[].externalRefs.referenceLocator | |
 | Version                             | Text         | bom.components[].version                                              | packages[].versionInfo  | Software.Package.packageVersion | |
 | Version (Redistributed)             | Text         | bom.metadata.version                                                  | packages[].versionInfo  | Software.Package.packageVersion | FIXME – confirm |
-| Code Commit Revision                | SHA1         |                                                                       |                         |          |         |
-| Code Repository                     | URL          | bom.metadata.component.externalReferences[].vcs | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator | |
+| Code Commit Revision                | SHA1         |                                                                       |                         |          |          |
+| Code Repository                     | URL          | bom.metadata.component.externalReferences[].vcs                       | packages[].externalRefs.referenceCategory = "PERSISTENT_ID", packages[].externalRefs.referenceType = "gitoid", packages[].externalRefs.referenceLocator | |
 | Dependencies                        | List         | bom.components[], bom.dependencies[]                                  | relationships[].[spdxElementId,relatedSpdxElement] | |
 | Download location                   | URL          |                                                                       |                         |          | URL/pURL of where the component artifact was downloaded from |
 | Cryptographic Hash                  | SHA256       | components[].hashes[]                                                 |                         | Software.Package.verifiedUsing | |
 | License(s)                          | SPDX License | bom.metadata.licenses[], bom.components[].licenses[], components[].licenses[].acknowledgement[declared], components[].licenses[].acknowledgement[concluded], components[].licenses[].licensing (proprietary) | packages[].licenseConcluded, packages[].licenseDeclared | Core.Relationship hasConcludedLicense hasDeclaredLicense | |
 | Copyright Holder                    | Text         | bom.components[].copyright, bom.components[].evidence.copyright       |                         | Software.SoftwareArtifact.copyrightText | |
-| Purpose, Intended Use               | Text         | bom.components[].description                                          | packages[].comment      |          |         |
-| Open Source Software Steward        | URL          |                                                                       |                         |          |         |
-| Security Attestation                | URL          |                                                                       |                         |          |         |
-| Intended for Commercial Use         | Boolean      |                                                                       |                         |          |         |
-| SBOM Author                         | Text         | bom.metadata.authors                                                  | creationInfo.creators[] |          |         |
-| SBOM Creation Time-stamp            | DateTime     | bom.metadata.timestamp                                                | creationInfo.created    |          |         |
-| SBOM Format                         | Enum         | bom.properties.bomFormat                                              | SPDXVersion             |          |         |
-| SBOM Generation Tool                | List         | bom.metadata.tools[]                                                  | creationInfo.creators[] |          |         |
-| SBOM Location                       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |                         |          |         |
+| Purpose, Intended Use               | Text         | bom.components[].description                                          | packages[].comment      |          |          |
+| Open Source Software Steward        | URL          |                                                                       |                         |          |          |
+| Security Attestation                | URL          |                                                                       |                         |          |          |
+| Intended for Commercial Use         | Boolean      |                                                                       |                         |          |          |
+| SBOM Author                         | Text         | bom.metadata.authors                                                  | creationInfo.creators[] |          |          |
+| SBOM Creation Time-stamp            | DateTime     | bom.metadata.timestamp                                                | creationInfo.created    |          |          |
+| SBOM Format                         | Enum         | bom.properties.bomFormat                                              | SPDXVersion             |          |          |
+| SBOM Generation Tool                | List         | bom.metadata.tools[]                                                  | creationInfo.creators[] |          |          |
+| SBOM Location                       | URL          | bom.externalReferences[].bom, bom.components.externalReferences[].bom |                         |          |          |
 | SBOM Primary Component              | Text         | bom.metadata.component                                                |                         | Software.Sbom.rootElement | |
-| SBOM Release                        | Int          | bom.properties.specVersion                                            | SPDXVersion             |          |         |
-| SBOM Serial Number                  | UUID         | bom.metadata.serialNumber                                             | SPDXID                  |          |         |
-| SBOM Type (Maintainer)              | Text         | bom.metadata.lifecycles[pre-build]                                    |                         |          | Produces a CISA 'Source' Type SBOM; FIXME – confirm   |
-| SBOM Type (Builder)                 | Text         | bom.metadata.lifecycles[build]                                        |                         |          | Produces a CISA 'Build' Type SBOM; FIXME – confirm    |
-| SBOM Type (Packager)                | Text         | bom.metadata.lifecycles[post-build]                                   |                         |          | Produces a CISA 'Deployed' Type SBOM; FIXME – confirm |
-| SBOM Type (Deployer)                | Text         | bom.metadata.lifecycles[operations]                                   |                         |          | Produces a CISA 'Runtime' Type SBOM; FIXME – confirm  |
-| CE Conformity Assessment Body       | URL          | bom.externalReferences[?(@.conformity-body)]                          |                         |          |         |
-| CE Declaration of Conformity        | URL          | bom.externalReferences[?(@.conformity-declaration)]                   |                         |          |         |
-| CE Support End Date                 | DateTime     | bom.externalReferences[?(@.support-horizon)]                          |                         |          |         |
-| CE Technical Documentation          | URL          | bom.externalReferences[?(@.documentation)]                            |                         |          |         |
-| CE Authorised Representative        | URL          |                                                                       |                         |          |         |
-
+| SBOM Release                        | Int          | bom.properties.specVersion                                            | SPDXVersion             |          |          |
+| SBOM Serial Number                  | UUID         | bom.metadata.serialNumber                                             | SPDXID                  |          |          |
+| SBOM Type (Maintainer)              | Text         | bom.metadata.lifecycles[pre-build]                                    |                         |          |  Produces a CISA 'Source' Type SBOM; FIXME – confirm   |
+| SBOM Type (Builder)                 | Text         | bom.metadata.lifecycles[build]                                        |                         |          |  Produces a CISA 'Build' Type SBOM; FIXME – confirm    |
+| SBOM Type (Packager)                | Text         | bom.metadata.lifecycles[post-build]                                   |                         |          |  Produces a CISA 'Deployed' Type SBOM; FIXME – confirm |
+| SBOM Type (Deployer)                | Text         | bom.metadata.lifecycles[operations]                                   |                         |          |  Produces a CISA 'Runtime' Type SBOM; FIXME – confirm  |
+| CE Conformity Assessment Body       | URL          | bom.externalReferences[?(@.conformity-body)]                          |                         |          |          |
+| CE Declaration of Conformity        | URL          | bom.externalReferences[?(@.conformity-declaration)]                   |                         |          |          |
+| CE Support End Date                 | DateTime     | bom.externalReferences[?(@.support-horizon)]                          |                         |          |          |
+| CE Technical Documentation          | URL          | bom.externalReferences[?(@.documentation)]                            |                         |          |          |
+| CE Authorised Representative        | URL          |                                                                       |                         |          |          |
+| Executable Property                 | Bool         |                                                                       |                         |          | TR-03183 |
+| Archive Property                    | Bool         |                                                                       |                         |          | TR-03183 |
+| Structured Property                 | Bool         |                                                                       |                         |          | TR-03183 |

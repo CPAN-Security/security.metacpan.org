@@ -1,6 +1,7 @@
 ---
 toc: true
-layout: page
+layout: single
+read_time: false
 title: Documents & Guides
 permalink: /docs/
 ---
@@ -10,18 +11,26 @@ Documents relevant to the CPAN Security Group.
 
 * [Report an Incident](report.md)
 * [CNA Disclosure Policy](cna-disclosure-policy.md)
+* [CNA Vulnerability Report to CVE Workflow](cve-workflow.md) ⚠️  DRAFT
+* [CNA Revised Default Disclosure Dates](revised-disclosure-delay.md)
+
+### Frequently Asked Questions
+
+* [CPANSec CNA and CVE Frequently Asked Questions (FAQ)](cna-faq.md)
 
 ## Guides
 
-* [CPAN Author's Secure Coding Guide](guides/cpan-author-guide.md) ⚠️  DRAFT
+* [Perl Developer's Guide to Secure Software Development](guides/perl-secure-development-guide.md) ⚠️  DRAFT
 * [CPAN Author's Guide to Random Data for Security](guides/random-data-for-security.md)
 * [CPAN Author's Security Policy guide](guides/security-policy-for-authors.md)
+* [Security Reports for CPAN Authors](guides/maintainer-security-reports.md)
 
 See [guides/](guides/) for the full list of guides.
 
 ## Studies
 
-* [CPAN Dependency Confusion study](cpan-dependency-confusion.md)
+* [CPAN Dependency Confusion (study)](cpan-dependency-confusion.md)
+* [CPAN StarJacking (study)](cpan-starjacking.md)
 * [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
 
 ## Consultations and hearings

@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: single
 title: Open Source project life-cycle states and indicators
 description: A proposed list of states and their indicators one can find an Open Source project in
 toc: true
+author: sjn
 mermaid: true
 draft_branch: lifecycle
 draft: true
@@ -25,22 +26,28 @@ In this project we try to help both OSS project's Maintainers communicate their 
 
 There are three main perspectives to take into account when considering the sustainability of any given project.
 
-* The Project needs and plans to resolve issues, as communicated by the Project Owner (including Author, Maintainer or Custodian)
-* The Project intentions regarding support offered, as communicated by the Project Owner
-* The Project's exposure to events outside their control, where assistance is needed, as communicated by the Project owner or an Ecosystem Host
+* Project Support Needs
+    * The Project needs and plans to resolve issues, as communicated by the Project Owner (including Author, Maintainer or Custodian)
+    * The types of support and contributions this project **needs** from volunteers, users and stakeholders, in order to ensure continued success
+* Project Support Intentions
+    * The types of support the project maintainers, co-maintainers and community members intend to **provide** to their users
+    * The Project intentions regarding support offered, as communicated by the Project Owner
+* Project State
+    * The current state of the project, as stated by the project owner, maintainer or community
+    * The Project's exposure to events outside their control, where assistance is needed, as communicated by the Project owner or an Ecosystem Host
 
+### Indicators
 
 
 ## Project Need Indicators
 
 | Needs        | Maint < 1 | Maint = 1 | Maint > 1 | Response time | Claim source | On CPAN |
 | :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- | :-----: |
-| NEEDHELP     | no        | YES       | maybe     | LOW           | Maintainer   | ✔️       |
+| NEEDHELP     | no        | YES       | YES       | LOW           | Maintainer   | ✔️       |
+| NEEDFUNDING  | no        | YES       | YES       | LOW           | Maintainer   | ❌      |
+| NEEDSUPPORT  | no        | YES       | YES       | LOW           | Maintainer   | ❌      |
 | HANDOFF      | no        | YES       | no        | LOW           | Maintainer   | ✔️       |
 | ADOPTME      | YES       | no        | no        | NONE          | Ecosystem    | ✔️       |
-| NEEDFUNDING  | no        | YES       | maybe     | LOW           | Maintainer   | ❌      |
-| NEEDSUPPORT  | no        | YES       | maybe     | LOW           | Maintainer   | ❌      |
-
 
 1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))
     * (number of maintainers is higher than 0)
@@ -57,13 +64,21 @@ There are three main perspectives to take into account when considering the sust
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
 1. NEEDSUPPORT – This project needs non-funding support
-    * Project growth and sustainability is hindered by lack of non-code contributions
+    * Project growth and sustainability is hindered by lack of contributions
     * Examples: Branding development; Code security audit; Event organizing; Documentation writing;
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
     * See [Enumeration of NEEDSUPPORT items](#enumeration-of-needsupport-items) for examples
 
 ### Enumeration of Project Support Needs
+
+> [!NOTE]
+> Why is this topic important? How will this help people improve their open source project and / or community? Who will benefit from this guide?
+>
+> I hope this will help users and businesses get an idea of what options are available when selecting what projects to uses and for deciding on what to do with them, depending on the state the project is in.
+>
+> For example, if a project hasn't had any commits in a long time, a state diagram (possibly accompanied with claims about project state made in a CONTRIBUTING.yml file), the user can get a better idea on why the project has stalled and thereby have better information for deciding to use, contribute, adopt, fund, fork or look for alternatives to the project.
+> How would you like to see this guide developed?
 
 When a project signals they NEEDSUPPORT, this can imply any of a number of activities are needed assistance with.
 
@@ -186,19 +201,18 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
     * Consulting
     * Support
 
-
-## Project Support Indicators
+## Project Support Intention Indicators
 
 | Offers             | Maint < 1 | Maint = 1 | Maint > 1 | Response time | Claim source | On CPAN |
 | :----------------- | :-------: | :-------: | :-------: | :-----------: | :----------- | :-----: |
-| MAINTAINED         | no        | YES       | maybe     | OK            | Maintainer   | ❌      |
+| MAINTAINED         | no        | YES       | YES       | OK            | Maintainer   | ❌      |
 | FOR_COMMERCIAL_USE | no        | YES       | YES       | OK            | Maintainer   | ❌      |
-| CASUAL             | no        | YES       | maybe     | LOW           | Maintainer   | ❌      |
+| CASUAL             | no        | YES       | YES       | LOW           | Maintainer   | ❌      |
 | DONE               | no        | YES       | no        | LOW           | Maintainer   | ❌      |
 | DEPRECATED         | no        | YES       | no        | NONE          | Maintainer   | ❌      |
-| SECURITYONLY       | no        | YES       | maybe     | SECURITY      | Maintainer   | ❌      |
+| SECURITYONLY       | no        | YES       | YES       | OK            | Maintainer   | ❌      |
 | SUPERSEEDED        | no        | YES       | no        | NONE          | Maintainer   | ❌      |
-| UNMAINTAINED       | YES       | maybe     | no        | NONE          | Maintainer   | ❌      |
+| UNMAINTAINED       | YES       | YES       | no        | NONE          | Maintainer   | ❌      |
 | ARCHIVED           | YES       | no        | no        | NONE          | Maintainer   | ❌      |
 
 ### Ecosystem Support Indicators
@@ -209,12 +223,31 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 | DUAL               | no        | YES       | YES       | OK            | Ecosystem    | ❌      |
 | NOXFER             | no        | YES       | no        | NONE          | Ecosystem    | ✔️       |
 
+| **HANDOFF**        | no        | YES       | no        | LOW           | Maintainer   |
+| **ADOPTME**        | YES       | no        | no        | NONE          | Ecosystem    |
+| MAINTAINED         | no        | YES       | YES       | OK            | Maintainer   |
+| FOR_COMMECRIAL_USE | no        | YES       | YES       | OK            | Maintainer   |
+| CASUAL             | no        | YES       | YES       | LOW           | Maintainer   |
+| DONE               | no        | YES       | no        | LOW           | Maintainer   |
+| DEPRECATED         | no        | YES       | no        | NONE          | Maintainer   |
+| SECURITYONLY       | no        | YES       | YES       | SECURITY      | Maintainer   |
+| SUPERSEEDED        | no        | YES       | YES       | NONE          | Maintainer   |
+| UNMAINTAINED       | no        | YES       | YES       | NONE          | Maintainer   |
 
+
+1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer (Ref: [PAUSE-2017](#references))
+    * (number of maintainers is 1)
+    * (number of maintainers is about to reduce to 0)
+1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption (Ref: [PAUSE-2017](#references))
+    * The project needs a new maintainer
+    * (number of maintainers is 0)
+    * (number of maintainers is too low)
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
     * Response time expectations should be low
     * (number of maintainers is 1 or higher)
     * (number of maintainers increase may be desired)
 1. DEPRECATED – The project maintainer recommends that this project is not to be used
+    * Is still available for backward compatibility and legacy reasons; Recommended to not be used in new projects.
     * (number of maintainers is 0)
     * (number of maintainers does not need to change)
 1. DONE – The project is considered "Done", and while it is maintained, no further development is needed or expected
@@ -236,7 +269,10 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 1. FOR_COMMERCIAL_USE – This project is _intended for commercial use_ in accordance with the EU Cyber Resilience Act, Recital 19 (Ref: [CRA-Rec-19](#references))
     * Response time expectations should be high for commercial users
     * (number of maintainers is 1 or higher)
-    * (number of maintainers increase may be desired)
+    * (number of maintainers increase may
+    * Media relations
+    * Developer relations
+    * **Public Relations - Interviews with be desired)
 
 
 ## Project Emergency States
@@ -252,7 +288,28 @@ States in **bold** exist on CPAN.
 | UNRESPONSIVE | no        | YES       | maybe     | NONE          | Ecosystem    | ❌      |
 
 
-### Project Emergency Indicators
+1. COMPROMISED – This project has a prevailing and substantial security compromise
+    * Project has removed from the index due to security issues that have prevailed for a substantial time.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+    * (number of maintainers is not relevant)
+1. SUSPENDED
+    * The project has been made inaccessible from the ecosystem index due to breaking of terms or code of conduct.
+        * e.g.: Publishing spam, malware, copyright infringement, illegal material or other inappropriate content.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+1. DELISTED
+    * The project has been removed from the ecosystem index due to extraordinary circumstances.
+        * e.g.: hacking, sabotage, denial of service, repeated suspensions or other types of attacks against the ecosystem infrastructure.
+    * The project is expected to NOT revert to its previous state.
+
+### Project State Indicators
+
+| States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| COMPROMISED  | no        | YES       | YES       | NONE          | Ecosystem    |
+| CUSTODY      | YES       | no        | no        | SECURITY      | Ecosystem    |
+| SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
+
 
 1. COMPROMISED – This project has a prevailing and substantial security compromise
     * Project has removed from the index due to security issues that have prevailed for a substantial time.
@@ -286,6 +343,91 @@ States in **bold** exist on CPAN.
     * The project maintainers(s) have not been responsive to ecosystem concerns for a substantial time, due to non-technical reasons.
         * e.g.: Maintainer does not respond to ecosystem concerns for personal reasons.
     * The project is expected to revert to its previous state after normal interaction resumes.
+1. CUSTODY – This project is under custodianship
+    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
+    * (number of maintainers is 0)
+
+
+
+### Project State Markers
+
+```mermaid
+stateDiagram-v2
+    direction LR
+    state "New"                      as new
+    state "Maintained (Active)"      as maintained
+    state "Developing (Active)"      as developing
+    state "Unmaintained (Abandoned)" as unmaintained
+    state "Deleted (Archived)"       as archived
+    state "Quarantined"              as quarantined
+    state "Dormant"                  as dormant
+    state "In custody"               as custody
+    state "Deprecated"               as deprecated
+    state "Superseded"               as superseded
+    state "Done"                     as done
+    state "Delisted (Deindexed)"     as delisted
+    state "Suspended"                as suspended
+    state "Developing"        as dev
+
+    %% Initial state --> Target state : Transition event
+    %% Adjective --> Adjective : Verb
+
+    new          --> developing   : Develop
+    developing   --> maintained   : Stabilize
+    developing   --> new          : Fork
+    maintained   --> new          : Fork
+    maintained   --> done         : Complete
+    maintained   --> quarantined  : Compromise
+    quarantined  --> maintained   : Remediate
+    archived     --> new          : Fork
+    archived     --> maintained   : Adopt
+    maintained   --> deprecated   : Deprecate
+    superseded   --> new          : Fork
+    superseded   --> maintained   : Recommend
+    maintained   --> superseded   : Replace
+    maintained   --> dormant      : Pause
+    maintained   --> archived     : Deprecate
+    unmaintained --> custody      : Take into custody
+    dormant      --> custody      : Take into custody
+    maintained   --> delisted     : Delist
+    custody      --> maintained   : Adopt
+    dormant      --> new          : Fork
+    dormant      --> maintained   : Handoff
+    unmaintained --> new          : Fork
+    dormant      --> unmaintained : Abandon
+    unmaintained --> maintained   : Adopt
+    maintained   --> suspended    : Suspend
+    suspended    --> maintained   : Greenlight
+```
+
+
+1. QUARANTINED – This project has a prevailing and substantial security compromise
+    * Project has removed from the index due to security issues that have prevailed for a substantial time.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+    * (number of maintainers is not relevant)
+1. SUSPENDED
+    * The project has been made inaccessible from the ecosystem index due to breaking of ecosystem terms or code of conduct.
+        * e.g.: Publishing spam, copyright infringement, illegal material or other inappropriate content.
+    * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+1. DELISTED
+    * The project has been removed from the ecosystem index due to extraordinary circumstances.
+        * e.g.: hacking, sabotage, denial of service, repeated suspensions or other types of bad-faith actions or attacks against the ecosystem infrastructure.
+    * The project is expected to NOT revert to its previous state.
+1. WIPED
+    * The release has been completely removed from the man ecosystem server and index, due to legal requests from a legitimate source.
+        * e.g. a court order or intellectual property owner.
+1. CUSTODY – This project is under custodianship
+    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
+    * (number of maintainers is 0)
+1. ABANDONED
+1. DONE
+1. ARCHIVED
+1. DORMANT
+1. NEW
+1. SUPERSEEDED
+1. MAINTAINED
+
+-----------------
 
 
 ## Other project states, claims and metadata
@@ -313,6 +455,7 @@ Several people have been involved in the development of this document
 
 * Salve J. Nilsen (main author)
 * Georg Link
+* The ECMA TC54 TG4 group
 
 
 ## References

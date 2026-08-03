@@ -1,3 +1,8 @@
+---
+author: tux
+toc: true
+layout: single
+---
 # CPANSec focus areas
 
 The three major areas are

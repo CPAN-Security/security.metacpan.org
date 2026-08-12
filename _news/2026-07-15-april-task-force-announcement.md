@@ -91,7 +91,7 @@ Every major commercial user of Perl is already paying for some version of this w
 
 The April Task Force provides a new opportunity to facilitate a "shift left" for cost-saving across the industry. To enable this, TPRF is establishing a mechanism for ongoing corporate sponsorship of this work; details will follow in the foundation's revised fundraising goals.
 
-Furthermore, we are exploring novel funding mechanisms expected through the EU Cyber Resilience Act, to facilitate the support of Perl and CPAN projects and communities through offering compliance-relevant assurances.
+Furthermore, we are exploring novel funding mechanisms expected through the EU Cyber Resilience Act, to facilitate the support of Perl and CPAN projects, services and communities through offering compliance-relevant assurances.
 
 
 # How to engage
@@ -120,13 +120,21 @@ The Perl and Raku Foundation (TPRF) is a volunteer-led 501(c)(3) non-profit dedi
 - September 2025 OpenSSF open letter: [https://openssf.org/blog/2025/09/23/open-infrastructure-is-not-free-a-joint-statement-on-sustainable-stewardship/](https://openssf.org/blog/2025/09/23/open-infrastructure-is-not-free-a-joint-statement-on-sustainable-stewardship/)
 - Alpha-Omega: [https://alpha-omega.dev](https://alpha-omega.dev)
 
-*[CPAN]: CPAN – the Comprehensive Perl Archive Network – is the primary Open Source package ecosystem for publishing library components (modules) for the Perl programming language. It's the first of it's kind, in continuous operation since 1995!
-*[PAUSE]: PAUSE – the Perl AUthors Upload SErver – The publishing back-end for Perl package authors who wish to publish on CPAN.
-*[CNA]: CNA – CVE Numbering Authority – is an organization authorized to reserve and assign CVE numbers to vulnerabilities found within the organization's scope.
-*[CVE]: CVE – Common Vulnerabilities and Exposures – is the main record of publicly disclosed cybersecurity vulnerabilities. This catalog is managed by the MITRE corporation for the benefit of the global cybersecurity community, and with help from many CNA organizations.
-*[CPANSec]: CPANSec – the CPAN Security Group – is a group of security-conscious volunteers, working on improving the Perl and CPAN ecosystems security posture.
-*[SEIR]: SEIR – Open Source Security Engineers in Residence – is an Alpha-Omega and Linux Foundation program to create a global, community-driven network of security engineers dedicated to strengthening the open-source ecosystem.
-*[XS]: XS – the Perl XS (External Subs) language – is the default _Foreign Function Interface_ for making available C-level library functions for use in Perl code. See the perldoc.perl.org/perlxs for more info.
-*[OSS]: OSS – Open Source Software – is software published with a license that allows freedom to use, learn, improve and share it's source code.
-*[OpenSSF]: OpenSSF – Open Source Security Foundation – is the Linux Foundation's effort to sustainably secure the development, maintenance, release, and consumption of Open Source Software. See openssf.org for more info.
-*[TPRF]: TPRF – The Perl and Raku Foundation – is a volunteer-led non-profit foundation dedicated to advancing the Perl and Raku programming languages. See perlfoundation.org for more info.
+*[CNA]:       CNA – CVE Numbering Authority – an organization authorized to reserve and assign CVE numbers to vulnerabilities found within the organization's scope.
+*[CPAN]:      CPAN – the Comprehensive Perl Archive Network – the primary Open Source package ecosystem for publishing library components (modules) for the Perl programming language. It's the first of its kind, in continuous operation since 1995!
+*[CPANSec]:   CPANSec – the CPAN Security Group – a group of security-conscious volunteers, working on improving the Perl and CPAN ecosystems security posture.
+*[CVE]:       CVE – Common Vulnerabilities and Exposures – a numeric identifier for publicly disclosed cybersecurity vulnerabilities. The CVE catalogue is managed by the MITRE corporation for the benefit of the global cybersecurity community, and with help from many CNA organizations.
+*[Fediverse]: Fediverse – The Federated Universe – a collection of independently run social networking services that can communicate with each other for sharing status updates, multimedia files and other data.
+*[HTML]:      HTML – Hyper Text Markup Language
+*[IRC]:       IRC – Internet Relay Chat – one of the earliest distributed chat systems. Still in active use in many Open Source communities, including the ones related to CPAN and Perl!
+*[OpenSSF]:   OpenSSF – Open Source Security Foundation – the Linux Foundation's effort to sustainably secure the development, maintenance, release, and consumption of Open Source Software. See openssf.org for more info.
+*[OSS]:       OSS – Open Source Software – software published with a license that allows freedom to use, learn, improve and share it's source code.
+*[PAUSE]:     PAUSE – the Perl AUthors Upload SErver – the publishing back-end for Perl package authors who wish to publish on CPAN.
+*[PyPI]:      PyPI – Python Package Index
+*[RSS]:       RSS – RDF Site Summary – a simple syndication standard for allowing users to subscribe to website updates.
+*[SBOM]:      SBOM – Software Bill of Materials – a common machine-readable set of standards for storing and communicating metadata
+*[SEIR]:      SEIR – Open Source Security Engineers in Residence – an Alpha-Omega and Linux Foundation program to create a global, community-driven network of security engineers dedicated to strengthening the open-source ecosystem.
+*[TPRF]:      TPRF – The Perl and Raku Foundation – a volunteer-led non-profit foundation dedicated to advancing the Perl and Raku programming languages. See perlfoundation.org for more info.
+*[Upriver]:   Upriver - a module on CPAN that has dependencies published on CPAN. The more dependencies, the further upriver it is considered.
+*[VCS]:       VCS – Version Control System
+*[XS]:        XS – the Perl XS (External Subs) language – the default Foreign Function Interface (FFI) for making available C-level library functions for use in Perl code. See the perldoc.perl.org/perlxs for more info.

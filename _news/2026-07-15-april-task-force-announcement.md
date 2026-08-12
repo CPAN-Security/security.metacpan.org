@@ -129,3 +129,4 @@ The Perl and Raku Foundation (TPRF) is a volunteer-led 501(c)(3) non-profit dedi
 *[XS]: XS – the Perl XS (External Subs) language – is the default _Foreign Function Interface_ for making available C-level library functions for use in Perl code. See the perldoc.perl.org/perlxs for more info.
 *[OSS]: OSS – Open Source Software – is software published with a license that allows freedom to use, learn, improve and share it's source code.
 *[OpenSSF]: OpenSSF – Open Source Security Foundation – is the Linux Foundation's effort to sustainably secure the development, maintenance, release, and consumption of Open Source Software. See openssf.org for more info.
+*[TPRF]: TPRF – The Perl and Raku Foundation – is a volunteer-led non-profit foundation dedicated to advancing the Perl and Raku programming languages. See perlfoundation.org for more info.

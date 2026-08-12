@@ -2,13 +2,13 @@
 layout: single
 published: true
 toc: true
-title: "17 reality checks for securing our open source commons infrastructure"
+title: "18 reality checks for securing our open source commons infrastructure"
 date: 2026-02-15 17:15:00 +0000
 collection: blog
 tags: authors guides cpan modules security "open source" cra steward "cyber resilience act" principles
 author: sjn
 author_profile: true
-excerpt: "17 reality checks for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone) depends on"
+excerpt: "18 reality checks for interacting with the open source software projects – and people – you depend on, to help secure the digital commons you (and everyone) depends on"
 ---
 
 ## Unpaid volunteers have become critical for managing business risk. Why?
@@ -68,7 +68,7 @@ Either you take upon yourself the full cost of maintenance, or you share this co
 
 To help you navigate this, here are some useful "Free and Open Source community _reality checks_".
 
-## 17 _Reality checks_ about Open Source communities
+## 18 _Reality checks_ about Open Source communities
 
 ### 1. Most of everyone's digital infrastructure is in the digital commons
 
@@ -120,9 +120,9 @@ You are already getting their software gratis, and they are already absorbing th
 
 ### 5. Most Open Source maintainers are not motivated by pay
 
-Instead, they _enjoy_.
-They may find joy in learning, helping, playing or just creating something they can _be proud of_, or just _finish_.
-Whatever their intrinsic motivation is, they spend their one irreplaceable, non-refundable resource on it: their time and attention.
+Instead, they _enjoy_ some aspect of Open Source. They want to have _fun_.
+They may find fun in learning, helping, playing or just creating something they can _be proud of_, or just _finish_, or any other number of things.
+Whatever their motivation is – intrinsic or extrinsic - they are spending their one irreplaceable, non-refundable resource on it: their time and tuits.
 And when they encounter others with the same or similar interests and willingness to spend time and tuits, they may discover they created a fertile ground for friendships to develop.
 If you bring a transactional mindset into this fertile ground, the others will rightfully look at you as someone who says "If I give you $100, will you be my friend?"
 
@@ -228,6 +228,11 @@ If your venture relies on an Open Source component's security, you are now a sta
 
 
 
+### 18. Open Source is the best antidote against _cognitive debt_.
+
+https://www.media.mit.edu/publications/your-brain-on-chatgpt/
+
+
 
 ## Summary
 
@@ -246,4 +251,4 @@ Gratitude go out to the following contributors:
 *[OSPO]: Open Source Program Office – a business section with responsibility for coordinating efforts around license compliance, OSS developer relations and corporate guidelines for use of and contributing to Free and Open Source Software.
 *[PURL]: PackageURL – a standard for referring to software packages in a ecosystem-agnostic way.
 *[FOSS]: Free and Open Source Software – Software published under the terms of a license that adheres to the Free Software Definition, as described on gnu.org/philosophy/free-sw
-*[tuits]: A unit of attention - Stemming from the pun «I'll do it when I get a round tuit (around to it)»
+*[tuits]: Attention (a unit of) - Stemming from the pun «I'll do it when I get a round tuit (around to it)». Comes often in the form of a small wooden token or coin, with the word «Tuit» printed on it.

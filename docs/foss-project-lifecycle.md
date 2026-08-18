@@ -22,7 +22,7 @@ draft: true
 This document is background material and notes for the [CycloneDX OSS Sustainability WG](https://cyclonedx.org/participate/working-groups/) ([Working document](https://docs.google.com/document/d/1IZnHEwzz1N7LbChVkZTE_dfo3I2np8rULssq5I2wchM/edit)).
 In this project we try to help both OSS project's Maintainers communicate their needs and requirements, as well as help the share important information that may assist their user's _business continuity challenges_.
 
-## Three sustainability perspectives
+## Indicators (Overview)
 
 There are three main perspectives to take into account when considering the sustainability of any given project.
 
@@ -49,6 +49,7 @@ There are three main perspectives to take into account when considering the sust
 | HANDOFF      | no        | YES       | no        | LOW           | Maintainer   | ✔️       |
 | ADOPTME      | YES       | no        | no        | NONE          | Ecosystem    | ✔️       |
 
+
 1. NEEDHELP – The project is understaffed, and requires additional co-maintainers for sustainable and continued development. (Ref: [PAUSE-2017](#references))
     * (number of maintainers is higher than 0)
     * (number of maintainers is too low)
@@ -64,7 +65,7 @@ There are three main perspectives to take into account when considering the sust
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
 1. NEEDSUPPORT – This project needs non-funding support
-    * Project growth and sustainability is hindered by lack of contributions
+    * Project growth and sustainability is hindered by lack of non-code contributions
     * Examples: Branding development; Code security audit; Event organizing; Documentation writing;
     * (number of maintainers is 1 or higher)
     * (number of maintainers does not need to change)
@@ -223,25 +224,7 @@ Needs in **bold** are found in [CHAOSS-2020](#references).
 | DUAL               | no        | YES       | YES       | OK            | Ecosystem    | ❌      |
 | NOXFER             | no        | YES       | no        | NONE          | Ecosystem    | ✔️       |
 
-| **HANDOFF**        | no        | YES       | no        | LOW           | Maintainer   |
-| **ADOPTME**        | YES       | no        | no        | NONE          | Ecosystem    |
-| MAINTAINED         | no        | YES       | YES       | OK            | Maintainer   |
-| FOR_COMMECRIAL_USE | no        | YES       | YES       | OK            | Maintainer   |
-| CASUAL             | no        | YES       | YES       | LOW           | Maintainer   |
-| DONE               | no        | YES       | no        | LOW           | Maintainer   |
-| DEPRECATED         | no        | YES       | no        | NONE          | Maintainer   |
-| SECURITYONLY       | no        | YES       | YES       | SECURITY      | Maintainer   |
-| SUPERSEEDED        | no        | YES       | YES       | NONE          | Maintainer   |
-| UNMAINTAINED       | no        | YES       | YES       | NONE          | Maintainer   |
 
-
-1. HANDOFF – The project maintainer is looking for someone to take over the project as a new maintainer (Ref: [PAUSE-2017](#references))
-    * (number of maintainers is 1)
-    * (number of maintainers is about to reduce to 0)
-1. ADOPTME – The project is abandoned, or the project maintainer has been confirmed _beyond reasonable doubt_ to be unresponsive, and therefore the project is made available for adoption (Ref: [PAUSE-2017](#references))
-    * The project needs a new maintainer
-    * (number of maintainers is 0)
-    * (number of maintainers is too low)
 1. CASUAL – This project is only maintained on a casual basis (Ref: [CASUAL-2016](#references))
     * Response time expectations should be low
     * (number of maintainers is 1 or higher)
@@ -310,7 +293,6 @@ States in **bold** exist on CPAN.
 | SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
 | DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
 
-
 1. COMPROMISED – This project has a prevailing and substantial security compromise
     * Project has removed from the index due to security issues that have prevailed for a substantial time.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
@@ -326,6 +308,22 @@ States in **bold** exist on CPAN.
     * The project has been removed from the ecosystem index due to extraordinary circumstances.
         * e.g.: hacking, sabotage, denial of service, repeated suspensions or other types of attacks against the ecosystem infrastructure.
     * The project is expected to NOT revert to its previous state.
+1. CUSTODY – This project is under custodianship
+    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
+    * (number of maintainers is 0)
+
+
+### Project State Markers
+
+
+| States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| DUAL         | no        | YES       | YES       | OK            | Ecosystem    |
+| **NOXFER**   | no        | YES       | no        | NONE          | Ecosystem    |
+| UNREACHABLE  | no        | YES       | YES       | ERROR         | Ecosystem    |
+| UNRESPONSIVE | no        | YES       | YES       | NONE          | Ecosystem    |
+
+
 1. DUAL-LIFE – The project is a core component in the language, with updates published in the language ecosystem as well
     * This project is maintained by the language core team itself.
     * The project is both published as part of the core language, and through the language ecosystem.
@@ -343,13 +341,9 @@ States in **bold** exist on CPAN.
     * The project maintainers(s) have not been responsive to ecosystem concerns for a substantial time, due to non-technical reasons.
         * e.g.: Maintainer does not respond to ecosystem concerns for personal reasons.
     * The project is expected to revert to its previous state after normal interaction resumes.
-1. CUSTODY – This project is under custodianship
-    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
-    * (number of maintainers is 0)
 
 
-
-### Project State Markers
+### Maintainer State Markers
 
 ```mermaid
 stateDiagram-v2
@@ -401,10 +395,21 @@ stateDiagram-v2
 ```
 
 
-1. QUARANTINED – This project has a prevailing and substantial security compromise
-    * Project has removed from the index due to security issues that have prevailed for a substantial time.
+| States       | Maint = 0 | Maint = 1 | Maint > 1 | Response time | Claim source |
+| :----------- | :-------: | :-------: | :-------: | :-----------: | :----------- |
+| COMPROMISED  | no        | YES       | YES       | NONE          | Ecosystem    |
+| CUSTODY      | YES       | no        | no        | SECURITY      | Ecosystem    |
+| SUSPENDED    | YES       | YES       | YES       | NONE          | Ecosystem    |
+| DELISTED     | YES       | YES       | YES       | NONE          | Ecosystem    |
+
+
+1. QUARANTINED 🟧 – This project has a temporary and substantial security compromise leading to the project being made unavailable while the issue is resolved
+    * Affected releases are removed from the index due to the security issues.
     * The project is expected to revert to its previous state after the offending issues have been resolved or mitigated.
+    * No new releases are allowed while the quarantine is in effect.
     * (number of maintainers is not relevant)
+    * (Claim is made by ecosystem)
+    * May affect multiple projects at maintained
 1. SUSPENDED
     * The project has been made inaccessible from the ecosystem index due to breaking of ecosystem terms or code of conduct.
         * e.g.: Publishing spam, copyright infringement, illegal material or other inappropriate content.
@@ -416,16 +421,29 @@ stateDiagram-v2
 1. WIPED
     * The release has been completely removed from the man ecosystem server and index, due to legal requests from a legitimate source.
         * e.g. a court order or intellectual property owner.
-1. CUSTODY – This project is under custodianship
-    * The project is deemed as important for the ecosystem, and needs a trusted maintainer
-    * (number of maintainers is 0)
-1. ABANDONED
-1. DONE
-1. ARCHIVED
-1. DORMANT
-1. NEW
-1. SUPERSEEDED
-1. MAINTAINED
+1. CUSTODY 🟧 – This project is under custodianship
+    * The project is deemed as important for the ecosystem or maintainers, but is not being worked on
+    * No development or fixes happen, but emergency vulnerability fixes may be published.
+    * May still be owned, and may be available for adoption
+    * (number of active maintainers is 0)
+1. ABANDONED 🟧
+    * There are no maintainers left to roll out new releases
+    * (claim by ecosystem; )
+1. DONE 🟩
+1. DORMANT 🟧
+1. NEW 🟩
+1. DEPRECATED 🟥
+    * Maintainer actively discourages the                use of this component
+1. SUPERSEEDED 🟧
+    * Like DEPRECATED, but with a recommendation for another project to use instead
+    * May or may not offer API compatibility
+    * (claimed by maintainer)
+1. MAINTAINED 🟩
+1. DEVELOPING 🟩🟧
+1. UNMAINTAINED (Archived) 🟥
+    * The developer signals the project is no longer maintained
+    * (TODO: PyPI status)
+
 
 -----------------
 

@@ -256,6 +256,7 @@ Annexes are technical materials presented separately from the main text, and hav
 
 #### Other useful resources
 
+* (EU) [The CRA implementation act guidance](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation), Published 2026-07-27; ([PDF](https://ec.europa.eu/newsroom/dae/redirection/document/131456))
 * (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
 * (Eclipse) Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
 * (Eclipse) ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)

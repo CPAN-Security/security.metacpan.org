@@ -271,8 +271,12 @@ The 14-day window is a compromise that allows maintainers (many of whom are volu
 
 If we've written to you, then please respond that you do not maintain the module and are unwilling to update it.
 
+If there's already another maintainer, please let us know who they are.
+(And please ensure they have maintenance rights on PAUSE, and corresponding rights on the software repository.)
+If there is no maintainer, please [mark it as available for adoption](https://neilb.org/2013/08/07/adoptme.html).
+
 Some members of CPANSec might volunteer to take on maintenance, just to release a fix.
-In some cases, they may also mark the module as "deprecated" if we believe the module is no longer suited for its purpose, or if there are better solutions.
+In some cases, they may also mark the module as [deprecated](https://neilb.org/2015/01/17/deprecated-metadata.html) if we believe the module is no longer suited for its purpose, or if there are better solutions.
 
 ### But this module has been deleted from CPAN
 

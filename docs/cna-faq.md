@@ -282,6 +282,14 @@ In some cases, they may also mark the module as [deprecated](https://neilb.org/2
 
 Deleted modules reside on [BackPAN](https://www.olafalders.com/2019/02/19/about-the-various-pans/) and are still available for those who are still using them. We will still publish security advisories for them.
 
+### This module is ancient. Why are you bothering issuing a CVE?
+
+Any module on CPAN (or BackPAN) with a vulnerability that is reported to us will get a CVE.
+
+It is possible (even likely) that very old modules may be used on a production system somewhere.
+
+CVEs can be used by various tools to identify software, including that old module running on a forgotten system.
+
 ### Can I subscribe to receive notifications about new vulnerabilities?
 
 Yes.

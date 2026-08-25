@@ -39,14 +39,6 @@ A team of CPANSec members operates the [CNA for the CPAN and Perl ecosystems](ht
 
 The [CVE Program](https://www.cve.org/) is an international, community-driven effort to identify and catalogue publicly disclosed vulnerabilities.
 
-### What is a CVE?
-
-A CVE (Common Vulnerabilities and Exposures) is a numeric identifier for publicly disclosed vulnerabilities.
-It allows different groups to use the same ID when discussing vulnerabilities.
-
-Publishing a CVE is a way of alerting downstream users (distributors, system administrators, and software developers) that the software has a vulnerability.
-They can take steps to fix the issue (such as upgrading to a fixed version), to mitigate the issue (such as changing the configuration or how the software is used to limit the effects of the vulnerability), or in extreme cases migrate away from using that software.
-
 ### What is the April Task Force?
 
 The April Task Force is a CPANSec project founded in April 2026 by members of CPANSec and the [Perl Toolchain Community](https://perltoolchainsummit.org/pts2026).
@@ -69,15 +61,25 @@ Within the scope of the grant, the task force members work autonomously.
 
 Work on modules may be prioritised based on popularity (using various metrics), including legacy modules that may still be in wide use, and upriver modules with many dependencies.
 
+## Vulnerabilities and CVEs
+
+### What is a security vulnerability?
+
+Security vulnerabilities are considered anything that allows users to execute unauthorised code, access unauthorised resources, or have an adverse impact on accessibility, integrity or performance of a system.
+
+### What is a CVE?
+
+A CVE (Common Vulnerabilities and Exposures) is a numeric identifier for publicly disclosed vulnerabilities.
+It allows different groups to use the same ID when discussing vulnerabilities.
+
+Publishing a CVE is a way of alerting downstream users (distributors, system administrators, and software developers) that the software has a vulnerability.
+They can take steps to fix the issue (such as upgrading to a fixed version), to mitigate the issue (such as changing the configuration or how the software is used to limit the effects of the vulnerability), or in extreme cases migrate away from using that software.
+
 ### What are the criteria for assigning a CVE number?
 
 If the members of CPANSec investigating a reported issue consider it to be a security vulnerability, then a CVE number will be assigned by the CNA.
 
 If the vendor (module maintainers) consider something to be a security vulnerability in their software, and request a CVE from CPANSec, then we will assign a CVE number.
-
-### What is a security vulnerability?
-
-Security vulnerabilities are considered anything that allows users to execute unauthorised code, access unauthorised resources, or have an adverse impact on accessibility, integrity or performance of a system.
 
 ### How do you go from a vulnerability report to a CVE?
 
@@ -314,13 +316,22 @@ See the above discussion.
 CPAN and MetaCPAN do block badly behaved robots (especially since metacpan.org itself is meant for people, not bots).
 But ultimately we (CPAN and mirrors) cannot control what someone does with a module once they have downloaded it.
 
-*[Upriver]: Upriver - a module on CPAN that has dependencies published on CPAN. The more dependencies, the further upriver it is considered.
-*[SBOM]: Software Bill of Materials – a common machine-readable set of standards for storing and communicating metadata
-*[CPAN]: CPAN – the Comprehensive Perl Archive Network – the primary Open Source package ecosystem for publishing library components (modules) for the Perl programming language. It's the first of it's kind, in continuous operation since 1995!
-*[PAUSE]: PAUSE – the Perl AUthors Upload SErver – The publishing back-end for Perl package authors who wish to publish on CPAN.
-*[IRC]: IRC – Internet Relay Chat – one of the earliest distributed chat systems. Still in active use in many Open Source communities, including the ones related to CPAN and Perl!
-*[CNA]: CNA – CVE Numbering Authority – an organization authorized to reserve and assign CVE numbers to vulnerabilities found within the organization's scope.
-*[CVE]: CVE – Common Vulnerabilities and Exposures – a numeric identifier for publicly disclosed cybersecurity vulnerabilities. The CVE catalogue is managed by the MITRE corporation for the benefit of the global cybersecurity community, and with help from many CNA organizations.
-*[CPANSec]: CPANSec – the CPAN Security Group – a group of security-conscious volunteers, working on improving the Perl and CPAN ecosystems security posture.
-*[RSS]: RSS – RDF Site Summary – a simple syndication standard for allowing users to subscribe to website updates.
+*[CNA]:       CNA – CVE Numbering Authority – an organization authorized to reserve and assign CVE numbers to vulnerabilities found within the organization's scope.
+*[CPANSec]:   CPANSec – the CPAN Security Group – a group of security-conscious volunteers, working on improving the Perl and CPAN ecosystems security posture.
+*[CPAN]:      CPAN – the Comprehensive Perl Archive Network – the primary Open Source package ecosystem for publishing library components (modules) for the Perl programming language. It's the first of its kind, in continuous operation since 1995!
+*[CVE]:       CVE – Common Vulnerabilities and Exposures – a numeric identifier for publicly disclosed cybersecurity vulnerabilities. The CVE catalogue is managed by the MITRE corporation for the benefit of the global cybersecurity community, and with help from many CNA organizations.
 *[Fediverse]: Fediverse – The Federated Universe – a collection of independently run social networking services that can communicate with each other for sharing status updates, multimedia files and other data.
+*[HTML]:      HTML – Hyper Text Markup Language
+*[IRC]:       IRC – Internet Relay Chat – one of the earliest distributed chat systems. Still in active use in many Open Source communities, including the ones related to CPAN and Perl!
+*[OSS]:       OSS – Open Source Software – software published with a license that allows freedom to use, learn, improve and share its source code.
+*[OpenSSF]:   OpenSSF – Open Source Security Foundation – the Linux Foundation's effort to sustainably secure the development, maintenance, release, and consumption of Open Source Software. See openssf.org for more info.
+*[P5P]:       P5P – Perl 5 Porters – a mailing list of people in the Perl community who take an interest in maintaining and growing the Perl language and interpreter.
+*[PAUSE]:     PAUSE – the Perl AUthors Upload SErver – The publishing back-end for Perl package authors who wish to publish on CPAN.
+*[PyPI]:      PyPI – Python Package Index
+*[RSS]:       RSS – RDF Site Summary – a simple syndication standard for allowing users to subscribe to website updates.
+*[SBOM]:      SBOM – Software Bill of Materials – a common machine-readable set of standards for storing and communicating metadata
+*[SEIR]:      SEIR – Open Source Security Engineers in Residence – an Alpha-Omega and Linux Foundation program to create a global, community-driven network of security engineers dedicated to strengthening the open-source ecosystem.
+*[TPRF]:      TPRF – The Perl and Raku Foundation – a volunteer-led non-profit foundation dedicated to advancing the Perl and Raku programming languages. See perlfoundation.org for more info.
+*[Upriver]:   Upriver - a module on CPAN that has dependencies published on CPAN. The more dependencies, the further upriver it is considered.
+*[VCS]:       VCS – Version Control System
+*[XS]:        XS – the Perl XS (External Subs) language – the default Foreign Function Interface (FFI) for making available C-level library functions for use in Perl code. See the perldoc.perl.org/perlxs for more info.

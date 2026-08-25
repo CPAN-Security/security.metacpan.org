@@ -273,7 +273,13 @@ The 14-day window is a compromise that allows maintainers (many of whom are volu
 
 If we've written to you, then please respond that you do not maintain the module and are unwilling to update it.
 
-Some members of CPANSec might volunteer to take on maintenance, just to release a fix.
+* If you are able, please [hand off your distribution ownership to another maintainer](https://neilb.org/2013/08/07/adoptme.html) (HANDOFF).
+* If you are unable to find someone else to take over, then please [mark your module as available for adoption](https://neilb.org/2013/08/07/adoptme.html) (ADOPTME).
+* If you believe the module shouldn't be used any more, please [mark your distribution as deprecated](https://neilb.org/2015/01/17/deprecated-metadata.html).
+* If you change your mind and are looking for co-maintainers again, [mark your distribution as needing help](https://neilb.org/2013/08/07/adoptme.html)
+* In any case, please [update your distribution metadata](/2024/12/31/please-keep-your-information-up-to-date.html) (including [contact information](/2026/06/14/cpan.org-email-forwarding-shutdown.html)) so others may reach you.
+
+Failing that, some members of CPANSec might volunteer to take on maintenance, just to release a fix.
 In some cases, they may also mark the module as "deprecated" if we believe the module is no longer suited for its purpose, or if there are better solutions.
 
 ### But this module has been deleted from CPAN

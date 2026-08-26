@@ -24,7 +24,6 @@ In the funding application, we committed to "front-load" our activities to the f
 This first quarter of the period is now done, and here follows an report of some of our activities, both completed and ongoing.
 
 
-
 {% figure caption:"Photo: Stian Kristoffersen; Editing: Salve J. Nilsen; In picture, from left: Paul Johnson, Stig Palmquist, Leon Timmermans, Robert Rothenberg, Salve J. Nilsen, Timothy Legge, and Olaf Alders." %}
 ![April Task Force group picture](/media/april-task-force-workshop-group-picture.jpg)
 {% endfigure %}
@@ -109,7 +108,7 @@ This first quarter of the period is now done, and here follows an report of some
 
 ### ongoing
 
-- Reseach around Steward Cooperative organizational patterns
+- Research around Steward Cooperative organizational patterns
 - Custom CPAN Steward organization template (articles of association, bylaws, business model, etc.)
 - Minimal-compliance membership requirements for Maintainers, Admins and Organizers
 

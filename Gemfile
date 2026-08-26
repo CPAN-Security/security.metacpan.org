@@ -9,7 +9,7 @@ source "https://rubygems.org"
 # to anything you like.
 #
 # Github-pages dependencies: https://pages.github.com/versions.json
-gem "minimal-mistakes-jekyll", "~> 4.27.3"
+gem "minimal-mistakes-jekyll", "~> 4.28.0"
 gem "github-pages", "~> 232", group: :jekyll_plugins
 gem "webrick"
 
@@ -18,6 +18,7 @@ group :jekyll_plugins do
   gem "jekyll-include-cache"
   gem "jekyll-gfm-admonitions"
   gem "jekyll-last-modified-at"
+  gem 'jekyll-figure'
 #  gem 'jekyll-optional-front-matter'
 end
 

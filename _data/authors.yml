@@ -1,8 +1,8 @@
 cpansec:
-  name: "CPANSec Contributors"
+  name: "CPAN Security Group"
   avatar: "/media/cpansec-floater-light-circle.png"
 bio: >-
-  This article is a collective effort by multiple CPANSec contributors.
+  This is a collective publication, with multiple CPANSec contributors.
 
 robrwo:
   name: Robert Rothenberg
@@ -17,7 +17,7 @@ robrwo:
 sjn:
   name: Salve J. Nilsen
   bio: >-
-    Policy, metadata and OSS sustainability guy in CPANSec.
+    Policy, compliance, metadata and OSS sustainability.
     Based in Oslo, Norway.
   github: sjn
   mastodon: { username: "sjn", instance: "chaos.social" }
@@ -39,7 +39,7 @@ garu:
 
 tux:
   name: H. Merijn Brand ("Tux")
-  bio: Data analyst and software developer based in the Netherlands
+  bio: Data analyst and software developer based in the Netherlands.
   github: Tux
   avatar: "/assets/images/authors/tux.png"
   mastodon: { username: "Tux", instance: "mastodon.social" }
@@ -49,3 +49,15 @@ abraxxa:
 
 leont:
   name: Leon Timmermans
+
+sjm:
+  name: Stuart Mackintosh
+  bio: >-
+    President of the Perl and Raku Foundation.
+
+oalders:
+  name: Olaf Alders
+  bio: >-
+    MetaCPAN founder and author.
+  github: oalders
+  cpan: oalders

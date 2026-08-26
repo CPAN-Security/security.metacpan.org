@@ -12,4 +12,5 @@ This is the full list of guides for CPAN Authors and Users, published by CPANSec
 * [CPAN Author's Security Policy Guide](security-policy-for-authors.md)
 * [Risk assessment guide](risk-assessment-guide.md) ⚠️  DRAFT
 * [Risk mitigation guide](risk-mitigation-guide.md) ⚠️  DRAFT
+* [Security Reports for CPAN Authors](maintainer-security-reports.md)
 * [Vulnerability testing](vulnerability-testing.md) ⚠️  DRAFT

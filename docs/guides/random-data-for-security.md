@@ -8,8 +8,8 @@ toc: true
 
 ## Random in general
 
-Any secret token that allows someone to access a resource or perform an action should be generated with a secure
-random number generator.  That includes:
+Any security feature that requires random values should be generated with a secure random number generator.
+That includes:
 
 - encryption keys
 - message padding and initialisation vectors
@@ -25,6 +25,7 @@ For any implementation of a protocol that specifies a random value, it is safer 
 
 The built-in [rand](https://perldoc.perl.org/functions/rand) function is not fit for security purposes: it is seeded
 by only 32-bits (4 bytes), and the [output can be predicted easily](https://www.perlmonks.org/?node_id=151595).
+The internal state of that function can be recovered, and one can [move forward or backward in the sequence](https://metacpan.org/pod/Math::Rand48::Cursor).
 
 A cryptographic-strength pseudo-random number generator (PRNG) won't improve security if it was seeded with data from
 `rand`: ultimately the output is of that algorithm still comes from a 32-bit seed.
@@ -79,6 +80,15 @@ processes with the same parent returning the same data (i.e., it is "fork safe")
 If [Crypt::SysRandom::XS](https://metacpan.org/pod/Crypt::SysRandom::XS) is installed, it will use that to retrieve
 random bytes from system calls.
 
+### Mojo::Util
+
+Since Mojolicious version 9.46, [Mojo::Util](https://metacpan.org/release/SRI/Mojolicious-9.46/view/lib/Mojo/Util.pm) has a `random_bytes` function:
+
+
+    use Mojo::Util qw( random_bytes );
+
+    my $bytes = random_bytes(32);
+
 ### Sys::GetRandom
 
 If you are writing code that only runs on Linux or BSD systems with the `getrandom` system call, you can use
@@ -97,7 +107,7 @@ data returned may be less due to interrupts.
 
 ### Other modules
 
-There are several older modules on CPAN that have been intentionally
+There are several other modules on CPAN that have been intentionally
 omitted from this document:
 
 * They require users to select a source of randomness.
@@ -277,6 +287,8 @@ December 2024.
 
 [Lattice Reduction: a Toolbox for the Cryptanalyst](https://www.di.ens.fr/~stern/data/St54.pdf), A. Joux and J. Stern, 1994.
 
+[Math::Rand48::Cursor](https://metacpan.org/pod/Math::Rand48::Cursor)
+
 [Myths about /dev/urandom](https://www.thomas-huehn.com/myths-about-urandom/), March 2014.
 
 [Predict Random Numbers](https://www.perlmonks.org/?node_id=151595), Perl Monks, March 2002.
@@ -287,9 +299,9 @@ December 2024.
 
 ## License and use of this document
 
-* Version: 0.3.1
+* Version: 0.3.2
 * License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed)
-* Copyright: © Robert Rothenberg <rrwo@cpan.org>, Some rights reserved.
+* Copyright: © Robert Rothenberg <rrwo@cpansec.org>, Some rights reserved.
 
 You may use, modify and share this file under the terms of the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed) license.
 

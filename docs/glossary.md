@@ -174,14 +174,14 @@ See also: [Artifact](#artifact).
 
 > [!CAUTION]
 > * (CPANSec-2024) Dependencies may be declared/stated/referenced or included/embedded or assumed/implied/detected, development phase-specific (e.g. developer, config, build, test, deploy, or runtime-specific), dynamic or static, unresolved or resolved, direct or transitive, or required, recommended or suggested.
->     * The NTIA-2021 definition below is therefore not only **wrong**, but also **entirely insufficient** — is for any practical purpose useless and should not be used.
+>     * The NTIA-2021 definition below is therefore not only **wrong**, but also **entirely insufficient** — it is for any practical purpose useless and should not be used.
 >     * The SLSA-2023 definition below is preferred, though it doesn't sufficiently distinguish between stated, included and assumed dependencies.
 >     * Please consider using the CPANSec-2024 definition
 
-1. (CPANSec-2024) A dependency is a software component that is required for another software to work as expected.
+1. (CPANSec-2024) A dependency is a distinct software component that is required for another software to work as expected.
     * This means the component which is depended upon (required) has been made available for use by the depending software so it may function as expected, without modification.
     * Dependencies exist _after_ they have been made available to the depending software.
-    * If a dependency is unmet (meaning – not made available, deployed, or installed), then it is called a _Requirement_.
+    * If a dependency is unmet (meaning – not made available, resolved and/or installed), then it is called a _Requirement_. This is to clearly distinguish between components that you _have_ from components that you _need_.
     * A dependency can come in many forms,
         * Static, Dynamic
         * Component, Resource or Service

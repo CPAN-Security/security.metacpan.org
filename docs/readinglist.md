@@ -236,6 +236,9 @@ This is not a exhaustive list!
         * **[Article 64(4)]**, Supplying incorrect, incomplete or misleading information may be fined up to 5M EUR or 1% of global turnover
         * **[Article 64(10)(b)]**, Rules on administrative fines shall not apply to Open Source Software Stewards
 * [Chapter VIII] — Transitional and final provisions
+    * [Article 69] — Transitional provisions
+        * [Article 69(2)] — Products […] placed on the market before 11 December 2027 shall be subject to […] this Regulation only if, from that date, those products are subject to a _substantial modification_.
+        * [Article 69(3)] — […] obligations laid down in [Article 14] shall apply to all products […] that fall within the scope of this Regulation that have been placed on the market before 11 December 2027.
     * [Article 71] — Entry into force and application
         * [Article 71(2)], This Regulation shall apply from 11 December 2027. However, [Article 14] shall apply from 11 September 2026 and [Chapter IV] (Articles 35 to 51 - including [Article 47]) shall apply from 11 June 2026.
 
@@ -450,6 +453,9 @@ People have been involved in the development of this document
 [Article 64(10)(b)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#064.010 'Rules on administrative fines shall not apply to Open Source Software Stewards'
 
 [Chapter VIII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#cpt_VIII 'Transitional and final provisions'
+[Article 69]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_69 'Transitional provisions'
+[Article 69(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#069.002 'Products placed on the market before 11 December 2027 shall be subject to this Regulation only if, from that date, those products are subject to a substantial modification.'
+[Article 69(3)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#069.003 'Obligations laid down in Article 14 shall apply to all products that fall within the scope of this Regulation that have been placed on the market before 11 December 2027.'
 [Article 71]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_71 'Entry into force and application'
 [Article 71(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#071.002 'This Regulation shall apply from 11 December 2027. However, Article 14 shall apply from 11 September 2026 and Chapter IV (Articles 35 to 51) shall apply from 11 June 2026.'
 

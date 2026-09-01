@@ -18,28 +18,25 @@ header:
   caption: "Photo credit: [@sjn](https://github.com/sjn)"
 ---
 
-# April Task Force report 1
+# April Task Force - half-term report
 
 In the funding application, we committed to "front-load" our activities to the first three months in the six-month funding period.
-This first quarter of the period is now done, and here follows an report of some of our activities, both completed and ongoing.
-
+This first half of the period is now done, and here follows a report of some of our activities, both ongoing and completed.
 
 {% figure caption:"Photo: Stian Kristoffersen; Editing: Salve J. Nilsen; In picture, from left: Paul Johnson, Stig Palmquist, Leon Timmermans, Robert Rothenberg, Salve J. Nilsen, Timothy Legge, and Olaf Alders." %}
 ![April Task Force group picture](/media/april-task-force-workshop-group-picture.jpg)
 {% endfigure %}
 
+## Summary
 
-
-# April Task Force - mid-term report
-
-…
+- Having dedicated time for working on important security issues, has made a major difference in resolving both new and long-standing issues.
+- While this has allowed us to increase the pace of managing vulnerabilities, it has also revealed new areas that 
 
 ## Success stories
 
-- Debian project have been very good at applying/fixing the published CVE
 - 158 CVEs published since the beginning of the project (May 11th)
-  **HOW MANy FIXES WERE RELEASED?**
-- Dedicated time for working on important security issues 
+- Debian project have been very good at applying/fixing published CVEs
+
 
 
 ## Identified new issues
@@ -49,7 +46,7 @@ This first quarter of the period is now done, and here follows an report of some
 
 # Notes - done, ongoing & pending
 
-## Group activites
+## Group activities
 
 ### done
 

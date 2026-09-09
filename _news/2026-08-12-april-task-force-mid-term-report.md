@@ -38,7 +38,6 @@ This first half of the period is now done, and here follows a report of some of 
 - Debian project have been very good at applying/fixing published CVEs
 
 
-
 ## Identified new issues
 
 - CVE Triage and follow-up is now clearly an issue limited mainly by access to human resources
@@ -92,7 +91,7 @@ This first half of the period is now done, and here follows a report of some of 
   - NOC evaporation
   - PAUSE supply chain attack
 - General supply-chain security crisis planning
-  - promped by CPAN.org email situation
+  - prompted by CPAN.org email situation
 - …
 
 ## sjn
@@ -132,7 +131,7 @@ This first half of the period is now done, and here follows a report of some of 
 
 - CNA work: Triage of many issues/author contact/CVE publishing
 - CNA FAQ (w/sjn)
-- Default discosure dates decision
+- Default disclosure dates decision
 - Guide: Security Reports for CPAN Authors
 - Guide: CPAN Author’s Guide to Random Data for Security
 - Contributed to fixes/hardening
@@ -149,15 +148,15 @@ This first half of the period is now done, and here follows a report of some of 
 
 ### ongoing
 
-- Blog article w/sgo on use of rand
+- Blog article w/stigtsp on use of rand
 - Automation policy and dist tools
 - Improvements for Perl documentation
 
 ### pending
 
-- Security policy prompt injection (w/sgo)
+- Security policy prompt injection (w/stigtsp)
 - Tests for outdated email addresses in .mailmap used in distribution
-- Perl::Critic tests for presense of rand() in modules
+- Perl::Critic tests for presence of rand() in modules
 - Extracting Perl::Critic rules from common findings
 - Blog articles on common issues that we have found
 
@@ -246,7 +245,7 @@ The Perl and Raku Foundation (TPRF) is a volunteer-led 501(c)(3) non-profit dedi
 - [CVE-2026-49940](https://lists.security.metacpan.org/cve-announce/msg/40702749/): Net::CIDR::Set versions through 0.20 for Perl accept non-ASCII IP addresses and netmasks
 - [CVE-2026-49941](https://lists.security.metacpan.org/cve-announce/msg/40702781/): Net::CIDR::Set versions through 0.20 for Perl did not validate IP addresses
 - [CVE-2026-49942](https://lists.security.metacpan.org/cve-announce/msg/40702816/): Net::CIDR::Set versions through 0.20 for Perl did not validate network masks
-- [CVE-2026-8829](https://lists.security.metacpan.org/cve-announce/msg/40702610/): HTML::Entities versions before 3.84 for Perl read freed heap memory in _decode_entities
+- [CVE-2026-8829](https://lists.security.metacpan.org/cve-announce/msg/40702610/): HTML::Entities versions before 3.84 for Perl read freed heap memory in \_decode_entities
 - [CVE-2026-10879](https://lists.security.metacpan.org/cve-announce/msg/40729086/): DBI versions before 1.648 for Perl have a heap overflow when preparsing SQL statements with more than 9 binders
 - [CVE-2026-11362](https://lists.security.metacpan.org/cve-announce/msg/40729465/): DataDog::DogStatsd versions through 0.07 for Perl allow metric injections from event tags
 - [CVE-2026-9270](https://lists.security.metacpan.org/cve-announce/msg/40729463/): DataDog::DogStatsd versions through 0.07 for Perl allow metric injections
@@ -259,8 +258,8 @@ The Perl and Raku Foundation (TPRF) is a volunteer-led 501(c)(3) non-profit dedi
 - [CVE-2017-20240](https://lists.security.metacpan.org/cve-announce/msg/40929601/): Crypt::PBKDF2 versions before 0.261630 for Perl are vulnerable to timing attacks
 - [CVE-2026-9638](https://lists.security.metacpan.org/cve-announce/msg/40932643/): Crypt::PBKDF2 versions before 0.261630 for Perl generate insecure random values for salts
 - [CVE-2026-9641](https://lists.security.metacpan.org/cve-announce/msg/40933040/): Crypt::PBKDF2 versions before 0.261630 for Perl have a weak default algorithm and number of iterations
-- [CVE-2026-11526](https://lists.security.metacpan.org/cve-announce/msg/41004664/): GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle
-- [CVE-2026-11527](https://lists.security.metacpan.org/cve-announce/msg/41004660/): Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle
+- [CVE-2026-11526](https://lists.security.metacpan.org/cve-announce/msg/41004664/): GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in \_make_filehandle
+- [CVE-2026-11527](https://lists.security.metacpan.org/cve-announce/msg/41004660/): Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in \_make_filehandle
 - [CVE-2026-11832](https://lists.security.metacpan.org/cve-announce/msg/41020603/): Dancer2::Plugin::Auth::OAuth versions before 0.22 for Perl default to a predictable nonce
 - [CVE-2026-12087](https://lists.security.metacpan.org/cve-announce/msg/41020451/): Socket versions before 2.041 for Perl have an out-of-bounds heap read
 - [CVE-2026-12205](https://lists.security.metacpan.org/cve-announce/msg/41004653/): Crypt::DSA versions before 1.21 for Perl reused the nonce across signatures, leading to private-key recovery

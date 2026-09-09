@@ -273,18 +273,26 @@ The 14-day window is a compromise that allows maintainers (many of whom are volu
 
 If we've written to you, then please respond that you do not maintain the module and are unwilling to update it.
 
-* If you are able, please [hand off your distribution ownership to another maintainer](https://neilb.org/2013/08/07/adoptme.html) (HANDOFF).
-* If you are unable to find someone else to take over, then please [mark your module as available for adoption](https://neilb.org/2013/08/07/adoptme.html) (ADOPTME).
+* If there's already another maintainer, please let us know who they are. Please [ensure they have maintenance rights on PAUSE](https://neilb.org/2013/08/07/adoptme.html) (HANDOFF), and corresponding rights on the software repository.
+* If you are unable to find your replacement, leaving the project without a maintainer, please [mark it as available for adoption](https://neilb.org/2013/08/07/adoptme.html) (ADOPTME).
 * If you believe the module shouldn't be used any more, please [mark your distribution as deprecated](https://neilb.org/2015/01/17/deprecated-metadata.html).
 * If you change your mind and are looking for co-maintainers again, [mark your distribution as needing help](https://neilb.org/2013/08/07/adoptme.html)
 * In any case, please [update your distribution metadata](/2024/12/31/please-keep-your-information-up-to-date.html) (including [contact information](/2026/06/14/cpan.org-email-forwarding-shutdown.html)) so others may reach you.
 
 Failing that, some members of CPANSec might volunteer to take on maintenance, just to release a fix.
-In some cases, they may also mark the module as "deprecated" if we believe the module is no longer suited for its purpose, or if there are better solutions.
+In some cases, they may also mark the module as [deprecated](https://neilb.org/2015/01/17/deprecated-metadata.html) if we believe the module is no longer suited for its purpose, or if there are better alternatives available.
 
 ### But this module has been deleted from CPAN
 
-Deleted modules reside on BackPAN and are still available for those who are still using them. We will still publish security advisories for them.
+Deleted modules reside on [BackPAN](https://www.olafalders.com/2019/02/19/about-the-various-pans/) and are still available for those who are still using them. We will still publish security advisories for them.
+
+### This module is ancient. Why are you bothering issuing a CVE?
+
+Any module on CPAN (or BackPAN) with a vulnerability that is reported to us will get a CVE.
+
+It is possible (even likely) that very old modules may be used on a production system somewhere.
+
+CVEs can be used by various tools to identify software, including that old module running on a forgotten system.
 
 ### Can I subscribe to receive notifications about new vulnerabilities?
 

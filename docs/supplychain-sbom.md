@@ -71,14 +71,14 @@ This is a simplified "TL;DR" overview of a typical Open Source supply chain.
 stateDiagram-v2
     direction TB
 
-    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment&nbsp;🔃" as environment_project
-    state "🟨 Contributor" as environment_contributor
+    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment" as environment_project
+    state "🟨&nbsp;Contributor" as environment_contributor
     state "🟩&nbsp;Collaboration&nbsp;Ecosystem" as ecosystem_forge
-    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem&nbsp;🔃" as ecosystem_lang
-    state "🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem&nbsp;🔃" as ecosystem_package
-    state "🟩 Container Ecosystem" as ecosystem_container
-    state "🟥🟨 Integrator" as environment_integrator
-    state "🟦 Production" as environment_prod
+    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem" as ecosystem_lang
+    state "🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem" as ecosystem_package
+    state "🟩&nbsp;Container&nbsp;Ecosystem" as ecosystem_container
+    state "🟥🟨&nbsp;Integrator" as environment_integrator
+    state "🟦&nbsp;Production" as environment_prod
 
     [*]                      --> environment_project
     ecosystem_forge          --> environment_project
@@ -86,13 +86,14 @@ stateDiagram-v2
     ecosystem_forge          --> ecosystem_lang
     environment_project      --> ecosystem_forge
     environment_project      --> ecosystem_lang
+    environment_project      --> environment_project
     environment_contributor  --> ecosystem_forge
     ecosystem_lang           --> ecosystem_package
     ecosystem_forge          --> ecosystem_package
-    %%ecosystem_package        --> ecosystem_package
-    %%ecosystem_lang           --> ecosystem_lang
+    ecosystem_package        --> ecosystem_package
+    ecosystem_lang           --> ecosystem_lang
     ecosystem_package        --> ecosystem_container
-    %%ecosystem_container      --> ecosystem_container
+    ecosystem_container      --> ecosystem_container
     ecosystem_forge          --> environment_integrator
     ecosystem_lang           --> environment_integrator
     ecosystem_lang           --> ecosystem_container
@@ -144,23 +145,23 @@ This diagram is equivalent to the simplified one above, but showing the new Role
 stateDiagram-v2
     direction TB
 
-    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment&nbsp;🔃" as environment_project
-    state "🟨 Contributor" as environment_contributor
+    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment" as environment_project
+    state "🟨&nbsp;Contributor" as environment_contributor
     state "🟩&nbsp;Collaboration&nbsp;Ecosystem" as ecosystem_forge
-    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem&nbsp;🔃" as ecosystem_lang
-    state "🟥&zwj;🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem&nbsp;🔃" as ecosystem_package
-    state "🟨&zwj;🟩&nbsp;Container&nbsp;Ecosystem&nbsp;🔃" as ecosystem_container
-    state "🟥🟩🟦 OSS Steward 🆕🔃" as ecosystem_steward
-    state "🟨🟦 Integrator<br>🟥&zwj;🟨&zwj;🟦&zwj;🟪&nbsp;Manufacturer&nbsp;🆕" as environment_integrator
-    state "🟦 Auditor<br>🟦 Market Authority 🆕" as authority_auditor
-    state "🟦 Importer 🆕<br>🟦 Distributor 🆕" as environment_market
-    state "🟦 Customer" as environment_customer
+    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem" as ecosystem_lang
+    state "🟥&zwj;🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem" as ecosystem_package
+    state "🟨&zwj;🟩&nbsp;Container&nbsp;Ecosystem" as ecosystem_container
+    state "🟥&zwj;🟩&zwj;🟦&nbsp;OSS&nbsp;Steward&nbsp;🆕" as ecosystem_steward
+    state "🟨&zwj;🟦 Integrator<br>🟥&zwj;🟨&zwj;🟦&zwj;🟪&nbsp;Manufacturer&nbsp;🆕" as environment_integrator
+    state "🟦&nbsp;Auditor<br>🟦&nbsp;Market&nbsp;Authority&nbsp;🆕" as authority_auditor
+    state "🟦&nbsp;Importer&nbsp;🆕<br>🟦&nbsp;Distributor&nbsp;🆕" as environment_market
+    state "🟦&nbsp;Customer" as environment_customer
 
     [*]                      --> environment_project
     ecosystem_forge          --> environment_project
+    environment_project      --> ecosystem_forge
     ecosystem_forge          --> environment_contributor
     ecosystem_forge          --> ecosystem_lang
-    environment_project      --> ecosystem_forge
     environment_project      --> ecosystem_lang
     environment_contributor  --> ecosystem_forge
     ecosystem_lang           --> ecosystem_package
@@ -170,16 +171,20 @@ stateDiagram-v2
     ecosystem_lang           --> environment_integrator
     ecosystem_lang           --> ecosystem_container
     ecosystem_forge          --> ecosystem_container
-    ecosystem_package        --> environment_integrator
-    ecosystem_package        --> ecosystem_steward
-    ecosystem_lang           --> ecosystem_steward
     ecosystem_container      --> ecosystem_steward
-    ecosystem_steward        --> environment_integrator
+    ecosystem_package        --> ecosystem_steward
+    ecosystem_package        --> ecosystem_package
+    ecosystem_package        --> environment_integrator
+    ecosystem_lang           --> ecosystem_steward
+    ecosystem_lang           --> ecosystem_lang
+    ecosystem_container      --> ecosystem_container
     ecosystem_container      --> environment_integrator
-    environment_integrator   --> authority_auditor
+    ecosystem_steward        --> environment_integrator
+    ecosystem_steward        --> ecosystem_steward
     environment_integrator   --> environment_market
-    environment_market       --> environment_customer
     environment_integrator   --> environment_customer
+    environment_market       --> environment_customer
+    environment_integrator   --> authority_auditor
     environment_customer     --> [*]
 
     %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>

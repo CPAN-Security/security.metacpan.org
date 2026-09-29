@@ -134,7 +134,7 @@ This includes the definition of the relevant components and their semantics, in 
 
 References:
 - [URI::PackageURL](https://metacpan.org/dist/URI-PackageURL)
-- [CPAN type spec](https://github.com/package-url/purl-spec/blob/main/types-doc/cpan-definition.md)
+- [CPAN type spec](https://packageurl.org/docs/purl-spec/types/definitions/cpan-definition)
 - [CPANSec pURL Maker](https://gist.github.com/jjatria/5d50d47c53fe77ab3c63dbc4c9de5641)
 - [CVE 5.2.0 added support for packageURL fields](https://github.com/CVEProject/cve-schema/releases/tag/v5.2.0)
 

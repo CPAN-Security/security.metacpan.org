@@ -5,11 +5,17 @@
       startOnLoad:false,
       supressErrors:false,
       htmlLabels:true,
-      theme: 'redux-color', // 'redux-color' (default), 'neo', 'redux-dark-color', 'forest'
+      securityLevel: 'antiscript',
+      markdownAutoWrap:false,
+      theme: 'redux', // 'redux-color' (default), 'redux', 'neo', 'redux-dark-color', 'forest'
       layout: 'dagre', // 'elk' (default), 'dagre' (old default)
       look: 'classic', // 'classic' (default), 'handDrawn'
       flowchart:{
               useMaxWidth:false
+          },
+      state:{
+              useMaxWidth:true,
+              messageAlign: 'left'
           }
   });
 

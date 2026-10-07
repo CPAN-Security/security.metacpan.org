@@ -260,12 +260,12 @@ Annexes are technical materials presented separately from the main text, and hav
 #### Other useful resources
 
 * (EU) [The CRA implementation act guidance](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation), Published 2026-07-27; ([PDF](https://ec.europa.eu/newsroom/dae/redirection/document/131456))
-* (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
-* (Eclipse) Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
-* (Eclipse) ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)
-* (Eclipse) ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
+* (Eclipse) ORC WG [Official guidance - linked version]( https://cra.orcwg.org/official-guidance/)
+* (EU) [Cyber Resilience Act implementation - Frequently asked questions](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-implementation-frequently-asked-questions), Published 2025-12-03, ([PDF](https://ec.europa.eu/newsroom/dae/redirection/document/122331))
 * (EU) The '[Blue Guide](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.247.01.0001.01.ENG&toc=OJ%3AC%3A2022%3A247%3ATOC)' on the implementation of EU product rules (2022/C 247/01). Published 2022-06-29; [PDF](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04))
-* (EU) [CRA Corrigendum](https://draftable.com/compare/ShyQnqhNqFGP) comparison. Published 2024-09-03; [Original PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130-FNL-COR01_EN.pdf)
+* (Eclipse) Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
+* (Eclipse) ORC WG [CRA FAQ](https://cra.orcwg.org)
+* (Eclipse) ORC WG [github](https://github.com/orcwg/)
 * List of _active_ [EU Notified Conformity Assessment Bodies](https://webgate.ec.europa.eu/single-market-compliance-space/notified-bodies/notified-body-list?filter=legislationId:167953,notificationStatusId:1)
 * List of [EU Notifying authorities](https://webgate.ec.europa.eu/single-market-compliance-space/notified-bodies/notifying-authorities?filter=legislationId:167953)
 * List of [EU Market Surveillance Authorities](https://webgate.ec.europa.eu/single-market-compliance-space/market-surveillance/ms-authorities?filter=legislationId:9021,t:1)

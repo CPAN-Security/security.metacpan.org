@@ -25,6 +25,7 @@ Please contact our security team on [cpan-security@security.metacpan.org](mailto
 
 Examples of malware reports include: typo squatting, dependency confusion, exfiltration of private data, code obfuscation, outbound connections to malicious command and control servers, etc.
 
+See the [malware workflow](malware-workflow.md) for how this will be handled by CPANSec.
 
 ## I've found signs of a compromised CPAN account
 

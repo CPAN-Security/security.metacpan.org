@@ -61,19 +61,24 @@ OSS Steward
 - Possible tasks
   - Confirm quality of metadata, packaging, contact points, distribution
   - Steward as co-maintainer? (not desired)
-- Stewards offering a freelance job marketplace
+  - Steward as a long-term supporter
+- Stewards offering a freelance job marketplace (not desired)
 - Exposing the availability of transitive attestations, given the presence of one component
-- Support related and relevant community projects and services
+- Support related and relevant social communities and services
 - Support related and relevant upstream projects and services
+- Assist manufacturers in finding clarity around the security and sustainability of the projects they support
 
 ### Arguments
 
-- Maintenance is not free
-- Due diligence requires attention from code owners
-  - more attention for "full autopsies" than for "cursory sanity checks"
-- Countering notification fatigue among manufacturers with massive dependency graphs
+- Maintenance is only free when volunteers are willing to contribute; otherwise not.
+- Due diligence requires attention from code owners, primary maintainers and others who are experts on the affected projects
+  - more attention for "full autopsies" than for "cursory sanity checks" does not scale, unless primary maintainer is in
+  - establishing and verifying the correctness and completeness of metadata, and the absence of misleading metadata has to happen upstream in the supply-chain, where the metadata is created or updated.
 - Facilitate the application of [Kerckhoffs’ principle](https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) (everything about a system should be public knowledge, except the keys) in the implementation and securing of business-critical digital infrastructure.
 
+### Nice-to-haves
+
+- Countering notification fatigue among manufacturers with massive dependency graphs
 
 ## Documentation
 
@@ -101,16 +106,16 @@ Base: [§ 10.Vedtekter for samvirkeforetak, Samvirkelova](https://lovdata.no/lov
     - French Perl Mongers (BooK, Emmanuel Seyman)
     - Swiss Perl Mongers (leejo)
     - Oslo Perl Mongers (sjn)
-    - German Perl Mongers (corion)
+    - German/Frankfurt Perl Mongers (corion)
     - Vienna Perl Mongers (domm)
     - Orlando Perl Mongers (perigrin)
     - Toronto Perl Mongers (oalders)
-    - London Perl Mongers ()
+    - London Perl Mongers (ilmari)
   - PAUSE
   - PTS (French Perl Mongers)
 - Organization charter and bylaws
   - Bylaw working group
-    - NUUG Foundation (?, XXX) # Ask sjn about this
+    - ~~NUUG Foundation~~ (?, XXX) # Ask sjn about this
     - Gnutiken (Jeremiah Foster)
     - TPRF (Ruth Holloway)
     - French Perl Mongers (Laurent Boivin, Emmanuel Seyman)
@@ -118,12 +123,12 @@ Base: [§ 10.Vedtekter for samvirkeforetak, Samvirkelova](https://lovdata.no/lov
     - Mark Overmeer
 - Organization funding & Business model development
   - Funding working group
-    - NUUG Foundation
+    - ~~NUUG Foundation~~
     - TPRF
     - CPANSec
-- 
 
 ## Bylaws brainstorming
+
 - Non-voting membership requirements
   - Provides a service to the Perl, CPAN or Raku communities
   - Recognized and publicly provided service of a least 2 years
@@ -152,6 +157,12 @@ Base: [§ 10.Vedtekter for samvirkeforetak, Samvirkelova](https://lovdata.no/lov
 # Organization
 
 - Corporation with a social purpose ("Akjseselskap med sosialt formål")
+
+# Business model
+
+- scenario planning
+- what does success look like? (for each scenario)
+
 
 
 ## TODO

@@ -71,14 +71,14 @@ This is a simplified "TL;DR" overview of a typical Open Source supply chain.
 stateDiagram-v2
     direction TB
 
-    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment&nbsp;🔃" as environment_project
-    state "🟨 Contributor" as environment_contributor
+    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment" as environment_project
+    state "🟨&nbsp;Contributor" as environment_contributor
     state "🟩&nbsp;Collaboration&nbsp;Ecosystem" as ecosystem_forge
-    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem&nbsp;🔃" as ecosystem_lang
-    state "🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem&nbsp;🔃" as ecosystem_package
-    state "🟩 Container Ecosystem" as ecosystem_container
-    state "🟥🟨 Integrator" as environment_integrator
-    state "🟦 Production" as environment_prod
+    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem" as ecosystem_lang
+    state "🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem" as ecosystem_package
+    state "🟩&nbsp;Container&nbsp;Ecosystem" as ecosystem_container
+    state "🟥&zwj;🟨&nbsp;Integrator&nbsp;Environment" as environment_integrator
+    state "🟦&nbsp;Production" as environment_prod
 
     [*]                      --> environment_project
     ecosystem_forge          --> environment_project
@@ -86,13 +86,14 @@ stateDiagram-v2
     ecosystem_forge          --> ecosystem_lang
     environment_project      --> ecosystem_forge
     environment_project      --> ecosystem_lang
+    environment_project      --> environment_project
     environment_contributor  --> ecosystem_forge
     ecosystem_lang           --> ecosystem_package
     ecosystem_forge          --> ecosystem_package
-    %%ecosystem_package        --> ecosystem_package
-    %%ecosystem_lang           --> ecosystem_lang
+    ecosystem_package        --> ecosystem_package
+    ecosystem_lang           --> ecosystem_lang
     ecosystem_package        --> ecosystem_container
-    %%ecosystem_container      --> ecosystem_container
+    ecosystem_container      --> ecosystem_container
     ecosystem_forge          --> environment_integrator
     ecosystem_lang           --> environment_integrator
     ecosystem_lang           --> ecosystem_container
@@ -142,25 +143,26 @@ This diagram is equivalent to the simplified one above, but showing the new Role
 
 ```mermaid
 stateDiagram-v2
+    %%{ text-align:left }%%
     direction TB
 
-    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment&nbsp;🔃" as environment_project
-    state "🟨 Contributor" as environment_contributor
+    state "🟥&zwj;🟨&zwj;🟦&nbsp;OSS&nbsp;Project&nbsp;Environment" as environment_project
+    state "🟨&nbsp;Contributor" as environment_contributor
     state "🟩&nbsp;Collaboration&nbsp;Ecosystem" as ecosystem_forge
-    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem&nbsp;🔃" as ecosystem_lang
-    state "🟥&zwj;🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem&nbsp;🔃" as ecosystem_package
-    state "🟨&zwj;🟩&nbsp;Container&nbsp;Ecosystem&nbsp;🔃" as ecosystem_container
-    state "🟥🟩🟦 OSS Steward 🆕🔃" as ecosystem_steward
-    state "🟨🟦 Integrator<br>🟥&zwj;🟨&zwj;🟦&zwj;🟪&nbsp;Manufacturer&nbsp;🆕" as environment_integrator
-    state "🟦 Auditor<br>🟦 Market Authority 🆕" as authority_auditor
-    state "🟦 Importer 🆕<br>🟦 Distributor 🆕" as environment_market
-    state "🟦 Customer" as environment_customer
+    state "🟨&zwj;🟩&nbsp;Language&nbsp;Ecosystem" as ecosystem_lang
+    state "🟥&zwj;🟨&zwj;🟩&nbsp;Package&nbsp;Ecosystem" as ecosystem_package
+    state "🟨&zwj;🟩&nbsp;Container&nbsp;Ecosystem" as ecosystem_container
+    state "🟥&zwj;🟩&zwj;🟦&nbsp;OSS&nbsp;Steward&nbsp;🆕" as ecosystem_steward
+    state "🟨&zwj;🟦&nbsp;<a href='#integrator-environment'>Integrator&nbsp;Environment</a><br>🟥&zwj;🟨&zwj;🟦&zwj;🟪&nbsp;<a href='#manufacturer'>Manufacturer</a>&nbsp;🆕" as environment_integrator
+    state "🟦&nbsp;Auditor<br>🟦&nbsp;Market&nbsp;Authority&nbsp;🆕" as authority_auditor
+    state "🟦&nbsp;Importer&nbsp;🆕<br>🟦&nbsp;Distributor&nbsp;🆕" as environment_market
+    state "🟦&nbsp;Customer" as environment_customer
 
     [*]                      --> environment_project
     ecosystem_forge          --> environment_project
+    environment_project      --> ecosystem_forge
     ecosystem_forge          --> environment_contributor
     ecosystem_forge          --> ecosystem_lang
-    environment_project      --> ecosystem_forge
     environment_project      --> ecosystem_lang
     environment_contributor  --> ecosystem_forge
     ecosystem_lang           --> ecosystem_package
@@ -170,16 +172,20 @@ stateDiagram-v2
     ecosystem_lang           --> environment_integrator
     ecosystem_lang           --> ecosystem_container
     ecosystem_forge          --> ecosystem_container
-    ecosystem_package        --> environment_integrator
-    ecosystem_package        --> ecosystem_steward
-    ecosystem_lang           --> ecosystem_steward
     ecosystem_container      --> ecosystem_steward
-    ecosystem_steward        --> environment_integrator
+    ecosystem_package        --> ecosystem_steward
+    ecosystem_package        --> ecosystem_package
+    ecosystem_package        --> environment_integrator
+    ecosystem_lang           --> ecosystem_steward
+    ecosystem_lang           --> ecosystem_lang
+    ecosystem_container      --> ecosystem_container
     ecosystem_container      --> environment_integrator
-    environment_integrator   --> authority_auditor
+    ecosystem_steward        --> environment_integrator
+    ecosystem_steward        --> ecosystem_steward
     environment_integrator   --> environment_market
-    environment_market       --> environment_customer
     environment_integrator   --> environment_customer
+    environment_market       --> environment_customer
+    environment_integrator   --> authority_auditor
     environment_customer     --> [*]
 
     %% Copyright © 2025 Salve J. Nilsen <sjn@oslo.pm>
@@ -203,10 +209,10 @@ This distinction is _not commonly used_ in the referenced material.
 
 And finally, we acknowledge that some situations may call for an SBOM Censor, which is the time of writing is _not a commonly used term_ in the referenced material.
 
-* 🟥 SBOM Author (Authoritative metadata provider) – **Creates**, defines, signs Metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**_.
+* 🟥 SBOM Author (Authoritative metadata provider) – **Creates**, defines, signs Metadata — _**Authoritative** roles make sure the metadata and related artifacts they are the author of, **Exist**, is **Complete**, **Correct** and **Not misleading**_.
 * 🟨 SBOM Contributor (Non-authoritative metadata provider) – **Assembles**, **updates**, merges, enriches, augments, refines, consolidates, maintains, attests, annotates Metadata — _**Non-authoritative** roles make sure the metadata and related artifacts they process, are **Updated** and **Corrected**_.
 * 🟩 SBOM Distributor – **Distributes**, transports, curates, indexes Metadata — _**Distributing** roles make sure the metadata and related artifacts they have, are made **Available** to others_.
-* 🟦 SBOM Consumer – **Verifies**, consumes, aggregates, validates, surveys, analyzes or reports Metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are **Complete**, **Compliant** and **Used**_.
+* 🟦 SBOM Consumer – **Verifies**, consumes, aggregates, validates, surveys, analyzes or reports Metadata — _**Consuming** roles makes sure the metadata and related artifacts they consume, are verified as **Complete**, **Correct**, **Compliant**, **Not misleading** and **Used**_.
 * 🟪 SBOM Censor – **Censors**, redacts, deletes, anonymizes or filters Metadata — _**Censoring** roles make sure that certain metadata about related artifacts are **Prevented** from being shared with others_.
 
 
@@ -299,7 +305,7 @@ stateDiagram-v2
     %% Integrator Environment
     state "🟥 Owner<br>🟥 Manufacturer 🆕" as integrator_owner
     state "🟦 Procurer" as integrator_procurer
-    state "🟥🟨🟦 Integrator" as integrator_developer
+    state "🟥🟨🟦 <a href='#integrator'>Integrator</a>" as integrator_developer
     state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as integrator_builder
     state "🟩🟪 Censor" as integrator_censor
     state "🟩 Publisher<br>🟩 Distributor" as integrator_publisher
@@ -924,7 +930,7 @@ Ensures the availability of packages or containers, that they are indexed correc
 
 ----------------------------------------------------------------------
 
-### Integrator Environment
+### Integrator Environment {#integrator-environment}
 
 ```mermaid
 stateDiagram-v2
@@ -970,12 +976,12 @@ stateDiagram-v2
 
     %% Integrator Environment
     state "🟥 Manufacturer 🆕" as integrator_owner
-    state "🟥🟨🟦 Integrator (Developer)" as integrator_developer
+    state "🟥🟨🟦 Developer" as integrator_developer
     state "🟨🟦 Builder<br>🟨🟦 Packager<br>🟨🟦 Assembler" as integrator_builder
     state "🟩🟪 SBOM Censor" as integrator_censor
     state "🟩 Publisher" as integrator_publisher
     state "🟦 Analyst<br>🟦 Auditor" as integrator_analyst
-    state "Integrator Environment" as environment_integrator {
+    state "<a href='#integrator-environment'>Integrator Environment</a>" as environment_integrator {
         [*] --> integrator_developer
         integrator_owner     --> integrator_developer
         integrator_builder   --> integrator_censor
@@ -1056,7 +1062,7 @@ A business or institution that is responsible for developing and building the ap
   * [Owner](#owner)
 
 
-#### Integrator
+#### Integrator (Developer) {#integrator}
 
 > [!NOTE]
 > * Used in the EU Cyber Resilience Act Annex II to denote someone who integrates *a product with digital elements intended for integration* into other products with digital elements.

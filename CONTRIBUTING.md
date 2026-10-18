@@ -12,8 +12,16 @@ This website runs on GitHub Pages, and uses Ruby's _Jekyll_ gem for generating s
 
 ## Installing `ruby` and `gem`
 
+### Debian-based (apt)
+
 ```
 apt install ruby ruby-dev gem
+```
+
+### Arch (pacman)
+
+```
+pacman -S ruby rubygems
 ```
 
 ## Installing Jekyll

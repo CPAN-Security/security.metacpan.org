@@ -17,40 +17,45 @@ What evidence make them believe it?
 What is the clearest way to present that evidence?
 
 
-# Steward, admin and maintainer activities
+# Steward, admin and maintainer activities (Leading indicators)
 
-Maintainer and Admin attests willingness and adherence
-Steward and Organizer commits to support and improve capabilities
-Manufacturer commits resources
+1. Maintainer and Admin attests willingness, adherence and commitment to sustaining for the long-term, assuming support
+2. Steward and Organizer commits to support and improve capabilities of projects and their communities
+3. Manufacturer commits resources for above, by purchasing voluntary security attestations
+4. Market authorities verify and accept attestations in lieu of documentation of Manufacturer due diligence performed
 
-| **Activity**                                                 | **References**                                                  | **Attests willingness**      | **Notes** |
-| Support due diligence with attestations                      | [Article 25], [Article 13(5)], [Article 13(1)], [Article 64(2)] | Maintainer, Admin, Steward   | |
-| Report and publish info on found vulnerabilities             | [Article 24(1)], [Article 15]                                   | Maintainer, Admin, Steward   | |
-| Have a cybersecurity policy                                  | [Article 24(1)], [Article 15]                                   | Maintainer, Admin, Steward   | |
-| Cooperate with market authorities                            | [Article 24(2)]                                                 | Maintainer, Admin, Steward   | |
-| Share documentation with market authorities                  | [Article 24(2)]                                                 | Steward                      | |
-| Notify market auths of actively exploited vulnerabilities    | [Article 24(3)], [Article 14(1)], [Article 64(2)]               | Maintainer, Steward          | [Article 3(42)] |
-| Notify market auths of severe incidents                      | [Article 24(3)], [Article 14(3)], [Article 64(2)]               | Admin, Steward               | [Article 3(44)] |
-| Inform users of actively exploited vulnerabilities           | [Article 24(3)], [Article 14(8)], [Article 64(2)]               | Maintainer, Steward          | [Article 3(42)] |
-| Inform users of severe incidents                             | [Article 24(3)], [Article 14(8)], [Article 64(2)]               | Admin, Steward               | [Article 3(44)] |
-| No known exploitable vulnerabilities                         | [Annex I, Part I (2)(a)], [Article 64(2)]                       | Maintainer, Admin            | |
-| Secure defaults                                              | [Annex I, Part I (2)(b)], [Article 64(2)]                       | Maintainer                   | |
-| Vulnerability fixes are made available                       | [Annex I, Part I (2)(c)], [Article 64(2)]                       | Maintainer                   | |
-| Prevent against unauthorized access                          | [Annex I, Part I (2)(d)], [Article 64(2)]                       | Maintainer, Admin            | |
-| Protect confidentiality of data                              | [Annex I, Part I (2)(e)], [Article 64(2)]                       | Admin                        | |
-| Protect integrity of data                                    | [Annex I, Part I (2)(f)], [Article 64(2)]                       | Admin                        | |
-| Use only necessary data                                      | [Annex I, Part I (2)(g)], [Article 64(2)]                       | Admin                        | |
-| Protect availability of data                                 | [Annex I, Part I (2)(h)], [Article 64(2)]                       | Maintainer, Admin            | |
-| Minimize negative impact on other services                   | [Annex I, Part I (2)(i)], [Article 64(2)]                       | Admin                        | |
-| Design to limit attack surface                               | [Annex I, Part I (2)(j)], [Article 64(2)]                       | Maintainer, Admin            | |
-| Design to reduce impact of incidents                         | [Annex I, Part I (2)(k)], [Article 64(2)]                       | Admin                        | |
-| Monitor for security events                                  | [Annex I, Part I (2)(l)], [Article 64(2)]                       | Admin                        | |
-| Provide removal option to users                              | [Annex I, Part I (2)(m)], [Article 64(2)]                       | Admin                        | |
-| Voluntarily report vulnerability risks and threats           | [Article 15(1)]                                                 | Maintainer                   | |
-| Voluntarily report near misses of incidents                  | [Article 15(2)]                                                 | Admin                        | [Article 3(45)] |
-| Contribute to metadata correctness and completeness          | [Article 31], [Article 64(4)], [Annex VII]                      | Maintainer, Admin            | [Annex VII (1)], [Annex VII (2)], [Annex VII (8)] |
-| Contribute information necessary to comply with VII          | [Annex VII (6)]                                                 | Maintainer                   | |
-| Contribute tests verify conformity with Annex I and VII      | [Annex II (8)(f)], [Annex VII (6)]                              | Maintainer                   | |
+| **Activity**                                              | **Attest** | **References**                                                  | **Attests willingness**      | **Notes** |
+| Support due diligence with attestations                   |            | [Article 25], [Article 13(5)], [Article 13(1)], [Article 64(2)] | Maintainer, Admin, Steward   | |
+| Report and publish info on found vulnerabilities          | Yes        | [Article 24(1)], [Article 15]                                   | Maintainer, Admin, Steward   | |
+| Have a cybersecurity policy                               |            | [Article 24(1)], [Article 15]                                   | Maintainer, Admin, Steward   | |
+| Adhere to a cybersecurity policy                          | Yes        | [Article 24(1)], [Article 15]                                   | Maintainer, Admin, Steward   | |
+| Promise to cooperate with market authorities              | Yes        | [Article 24(2)]                                                 | Maintainer, Admin, Steward   | |
+| Share documentation with market authorities               | Yes        | [Article 24(2)]                                                 | Steward                      | |
+| Notify market auths of actively exploited vulnerabilities | Yes        | [Article 24(3)], [Article 14(1)], [Article 64(2)]               | Maintainer, Steward          | [Article 3(42)] |
+| Notify market auths of severe incidents                   | Yes        | [Article 24(3)], [Article 14(3)], [Article 64(2)]               | Admin, Steward               | [Article 3(44)] |
+| Inform users of actively exploited vulnerabilities        | Yes        | [Article 24(3)], [Article 14(8)], [Article 64(2)]               | Maintainer, Steward          | [Article 3(42)] |
+| Inform users of severe incidents                          | Yes        | [Article 24(3)], [Article 14(8)], [Article 64(2)]               | Admin, Steward               | [Article 3(44)] |
+| No known exploitable vulnerabilities                      |            | [Annex I, Part I (2)(a)], [Article 64(2)]                       | Maintainer, Admin            | |
+| Secure defaults                                           |            | [Annex I, Part I (2)(b)], [Article 64(2)]                       | Maintainer                   | |
+| Vulnerability fixes are made available                    | Yes        | [Annex I, Part I (2)(c)], [Article 64(2)]                       | Maintainer                   | |
+| Prevent against unauthorized access                       | Yes        | [Annex I, Part I (2)(d)], [Article 64(2)]                       | Maintainer, Admin            | |
+| Protect confidentiality of data                           | Yes        | [Annex I, Part I (2)(e)], [Article 64(2)]                       | Admin                        | |
+| Protect integrity of data                                 | Yes        | [Annex I, Part I (2)(f)], [Article 64(2)]                       | Admin                        | |
+| Use only necessary data                                   |            | [Annex I, Part I (2)(g)], [Article 64(2)]                       | Admin                        | |
+| Protect availability of data                              |            | [Annex I, Part I (2)(h)], [Article 64(2)]                       | Maintainer, Admin            | |
+| Minimize negative impact on other services                | Yes        | [Annex I, Part I (2)(i)], [Article 64(2)]                       | Admin                        | |
+| Design to limit attack surface                            | Yes        | [Annex I, Part I (2)(j)], [Article 64(2)]                       | Maintainer, Admin            | |
+| Design to reduce impact of incidents                      | Yes        | [Annex I, Part I (2)(k)], [Article 64(2)]                       | Admin                        | |
+| Monitor for security events                               |            | [Annex I, Part I (2)(l)], [Article 64(2)]                       | Admin                        | |
+| Provide removal option to users                           |            | [Annex I, Part I (2)(m)], [Article 64(2)]                       | Admin                        | |
+| Voluntarily report vulnerability risks and threats        |            | [Article 15(1)]                                                 | Maintainer                   | |
+| Voluntarily report near misses of incidents               |            | [Article 15(2)]                                                 | Admin                        | [Article 3(45)] |
+| Contribute to metadata correctness and completeness       | Yes        | [Article 31], [Article 64(4)], [Annex VII]                      | Maintainer, Admin            | [Annex VII (1)], [Annex VII (2)], [Annex VII (8)] |
+| Contribute information necessary to comply with VII       | Yes        | [Annex VII (6)]                                                 | Maintainer                   | |
+| Contribute tests verify conformity with Annex I and VII   |            | [Annex II (8)(f)], [Annex VII (6)]                              | Maintainer                   | |
+| Demonstrate long-term governance structure is in place    | Yes        |                                                                 | Maintainer, Admin, Steward   | |
+| Demonstrate sustained support from a Steward              | Yes        |                                                                 | Maintainer, Admin, Steward   | |
+| Demonstrate that open source license is used              |            |                                                                 | Maintainer, Admin, Steward   | |
 
 
 [Recital (10)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_10 'CRA relevance for supply chains'

@@ -109,6 +109,65 @@ Additionally, an Ecosystem would do well to be set up as a _European Cooperative
 The OSS Ecosystem Steward operates with three revenue sources, and expects multiple expenses with a focus on 1) Operating the Steward in a surplus-generating manner, so it can offer support to it's members and it's related communities.
 
 
+## Income
+
+1. Public support from funds dedicated to Open Source activities (e.g. the Sovereign Tech Agency fund, or other upcoming funds, possibly based on a similar model) – during a startup period
+2. Enrollment and re-enrollment fees from Manufacturers
+3. Voluntary Security Attestation subscriptions
+
+Note: The Steward does NOT accept donations.
+Instead we are happy to direct any offers to other recipients in the community capable of accepting those.
+
+E.g. PM groups local to the donor's operating regions, the TPRF, or other projects or services set up to receive donations.
+
+## Expenses
+
+1. Staff costs (3-9 FTE positions, including employer's taxes and vacation)
+    1. 1-3 Software developers (membership & manufacturer management; donation management; attestation issuance; etc.)
+    3. 1 Primary contact for member communities (member relations)
+    2. 1 Primary contact for manufacturers (sales)
+    4. 0-1 Primary contact for market authorities (legal)
+    5. 0-1 Training & communications (comms)
+    6. 0-1 Treasurer & fundraising (cfo)
+    7. 0-1 Executive (ceo)
+2. Variable (income-dependent) operating expenses
+    1. Other
+3. Fixed operating expenses
+    1. Accounting services
+    2. Auditing services
+    3. Hosting & computer services
+    4. Insurances
+    5. Contingencies & other expenses
+4. Training, education and outreach expenses
+    1. 4-6 Events visited, travel, lodging, food per employee
+    2. 2 Internal events, venue, food, attendee travel & hotel
+    3. Contingencies & other expenses
+5. Board remuneration
+    1. 4 board meetings x 5 board members x 2 hours
+4. Re-investment into the Ecosystem Steward
+
+The details of this budget are to be jointly proposed by the executive officer and treasurer are to be presented to the Board. The board may adjust it, and present the final budget for the General Assembly to vote on.
+
+## Surplus
+
+As a non-profit, any surplus has to be used on
+
+1. Member support donations, in accordance with the disbursement formula decided by the General Assembly (GA).
+2. Non-member support donations, in accordance with the disbursement formula decided by the GA.
+3. Re-investment into the Steward, in accordance with the disbursement formula decided by the GA.
+
+# Example budget
+
+## Income
+
+
+
+## Expenses
+
+
+
+## Donations
+
 
 
 

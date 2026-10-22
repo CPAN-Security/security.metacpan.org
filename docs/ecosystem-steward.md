@@ -93,10 +93,10 @@ Or for your _digital neighbours_, contribute a fix for a vulnerability, or organ
 These activities, so central to our communities' health, are almost exclusively done on a volunteer basis.
 But sometimes there is work to be done, where it is difficult - even impossible - to find volunteers.
 Sometimes work is "too boring".
-In these cases, we should set in place support mechanisms that allow people to do these tasks anyway – for example by donating enough to enable new life choices, like working one weekday (20% FTE) on Open Source.
-This, and the fact that many of are contributing to FOSS as a way to take a break from corporate and for-profit life, means we should not look to support these communities on a for-profit basis.
+In these cases, we should put in place support mechanisms that enable people to do these tasks anyway – for example by donating enough to facilitate new life choices, like working one weekday (20% FTE) on Open Source.
+This, and the fact that many of are contributing to FOSS as a way to take a break from corporate and for-profit life, means we should _not_ look to support these communities on a for-profit basis.
 
-Instead, we operate on a non-profit basis, and operate in ways where we both can support the "too boring" work ourselves, without introducing the features of corporate life many of us seek to avoid.
+Instead, we support them on a non-profit basis, and operate in ways where we both can support the "too boring" work ourselves, without introducing the features of corporate life many of us seek to recover from.
 
 Fortunately, the CRA also encourages that OSS Stewards operate as a non-profit.
 
@@ -113,7 +113,7 @@ A co-operative operates according to the set of seven ideals laid out in the [Ro
 6. **Cooperation among cooperatives** – Co-operatives serve their members most effectively and strengthen the co-operative movement by working together through local, national, regional and international structures.
 7. **Concern for community** – Co-operatives work for the sustainable development of their communities through policies approved by their members.
 
-Additionally, an Ecosystem would do well to be set up as a _European Cooperative_ ([Societas cooperativa Europaea (SCE)]), in order to operate under a single EEA-wide set of rules and principles, and to allow the moving of the Stewards headquarters to a legislation where the Steward is more likely to succeed in it's non-profit mission.
+Additionally, an Ecosystem Steward would do well to be set up as a _European Cooperative_ ([Societas cooperativa Europaea (SCE)]), in order to operate under a single EEA-wide set of rules and principles, and to allow the moving of the Stewards headquarters to a legislation where the Steward is more likely to succeed in it's non-profit mission.
 
 
 # Business model
@@ -124,12 +124,11 @@ The OSS Ecosystem Steward operates with three revenue sources, and expects multi
 
 1. Public support from funds dedicated to Open Source activities (e.g. the Sovereign Tech Agency fund, or other upcoming funds, possibly based on a similar model) – during a startup period
 2. Enrollment and re-enrollment fees from Manufacturers
-3. Voluntary Security Attestation subscriptions
+3. Voluntary Security Attestations, issued on a recurring basis (e.g. subscription)
 
-Note: The Steward does NOT accept donations.
-Instead we are happy to direct any offers to other recipients in the community capable of accepting those.
-
-E.g. PM groups local to the donor's operating regions, the TPRF, or other projects or services set up to receive donations.
+Note: The Steward should NOT accept donations.
+Instead, donations should be directed to other recipients in the community capable of accepting them.
+Good donation recipients include Perl Monger groups local to the donor's operating regions, the TPRF, or projects or services the donor relies on, and are set up to receive donations.
 
 ## Expenses
 

@@ -8,6 +8,7 @@ An Open Source Software Ecosystem Steward, is a Steward organization as describe
 To make it capable of supporting an _ecosystem_ of project maintainers, service maintainers and community organizers, it is set up as a community-owned non-profit co-operative.
 This is both ensure that the Steward is set up support relevant projects, services and communities in a fair way, but also have the option and capability to support other relevant entities, both in-ecosystem, upstream and downstream.
 
+
 # Background: Cyber Resilience Act
 
 When the [(EU) Regulation 2024/2847 (Cyber Resilience Act)] comes fully into effect on 11 December 2027, businesses wishing to be compliant are expected to perform a number of security-related tasks for each of their CE-marked products and their associated remote data processing solutions.
@@ -19,7 +20,7 @@ Some highlights and implications that affect upstream communities:
 * Product support period that matches with expected usage (eg. 5 years).
     * Implication: Any component used in the product or it's remote data processing solutions should be supported for the same period.
 * Product vulnerability fixes kept available for 5 years after support period is over.
-    * Implication: Software update services depending on OSS need to be kept secure for 5+5 years.
+    * Implication: Software update services depending on OSS need to be kept secure for an _additional 5 years_, in total 10 years.
 * Product has no known exploitable vulnerabilities while available on the EU market.
     * Implication: Products must be capable of being updated for the entire support period.
 * Product metadata (including an SBOM) have to be complete, correct and not misleading.
@@ -37,29 +38,41 @@ Some highlights and implications that affect upstream communities:
 
 What products are in scope of the CRA is beyond this article, but much can be learned from the [CRA Guidance] (e.g. [CRA Guidance chapter 2]) and the [CRA FAQ] (e.g. [CRA FAQ 1.1.2]))
 
-In summary, the CRA applies to _both_ digital and physical products, and their remote data processing solutions (e.g. services that the app needs to function as expected), placed on the EU market in the course of a commercial activity.
+In summary, the CRA applies to _both_ digital and physical products, including any remote data processing solutions (e.g. services that the app needs to function as expected), that are placed on the EU market in the course of a commercial activity.
 
-_This include Phone apps, their server components, and any other services used to keep the product updated and secure_.
+_This includes phone apps, their server components, and any other services used to keep the product updated and secure_.
 
 
 # Implications and expectations for Open Source communities
 
-From the few samples above, we should expect that businesses using Open Source somewhere in their product, are likely to be unwilling, incapable of becoming and remaining compliant without at least _a minimum of assistance_ from the FOSS projects and communities they rely on.
+From the few samples above, we should expect that businesses using Open Source somewhere in their products are likely to be unwilling, incapable or just don't have the required resources to become and remain compliant without at least _a minimum_ of assistance from the FOSS projects and communities they rely on.
 
 Correspondingly, Open Source project maintainers, service administrators and community organizers are forced into making a [Hobson's Choice].
 
 1. Either project maintainers take steps to demonstrate their project is _intended for use in the course of a commercial activity_,
-1. or they do not – and thereby risk a (possibly significant) subset of their users software are forced to switch to alternatives that allow them to become or remain compliant with the CRA.
+1. or they do not – and thereby risk a (possibly significant) subset of their users are forced to switch to alternatives that allow them to become and remain compliant.
 
-## Choosing to help with compliance
+This is a choice that is made more difficult due to the security implications of declining, and the amount of boring and tedious work that comes with the accepting to help with compliance.
 
-The CRA has envisioned a novel legal category – The Open Source Software Steward – who has the purpose or objective to systematically providing support on a sustained basis for the development of FOSS. (See [Article 24] and [CRA Guidance chapter 3].3).
+## Should OSS communities help with compliance?
 
-As the CPAN community has no function or entity that is both willing, competent and capable of taking upon themselves this role, it makes sense to explore other alternatives.
+The CRA has envisioned a novel legal category – The Open Source Software Steward – which has the purpose or objective to _systematically provide support on a sustained basis for the development of FOSS_. (See [Article 24] and [CRA Guidance chapter 3].3).
+
+As the CPAN community has no function or entity that is both willing, competent and capable of taking upon themselves this role, it makes sense to explore other alternatives, so that those who wish to assist in the compliance work can get the opportunity to do so.
+
+Furthermore, the long-term tradition in the CPAN community, is to operate in a _laissez-faire_ manner – letting each individual decide for themselves whether to act or not.
+
 
 # OSS Ecosystem Steward
 
-One alternative, is to create a community-owned non-profit co-operative, specifically set up to be able to support the people that in this ecosystem that are affected by the implications of the CRA.
+To allow everyone to _opt in_ on compliance work in a way that aligns with existing traditions and culture in our Open Source ecosystem, it makes to approach how this is done from a _first principles_ perspective.
+
+As a result of this kind of deliberation, it makes sense to create an entirely new Steward organization, tailor-made to address the issues common for global, laissez-faire, distributed and heterogeneous communities of communities, like Perl and CPAN.
+
+Let's set up an _OSS Ecosystem Steward_ — a community-owned non-profit co-operative, specifically set up to be able to support the people that in the ecosystem that are affected by the implications of the CRA, and wish to help improve our user's compliance situation.
+
+Addressing the implications listed above should not be expected to be done on a volunteer basis, though.
+This means that the Steward has to be capable of supporting it's stewarded communities also by directing enough funding so that even the "boring" and "tedious" work gets done.
 
 ## Community-owned
 
@@ -68,7 +81,6 @@ The project maintainers, service administrators and community organizers that _v
 * Maintainers – because it's the security posture of their FOSS projects (and resulting component releases) that are at the centre of the Manufacturer's concerns, and where the Manufacturers may find their greatest compliance-related expenses in their operational budgets.
 * Administrators – because it's their services Manufacturers and Maintainers alike rely on to publish, identify, download, resolve, test, discuss and educate themselves about the software they rely on.
 * Organizers – because there is no real Open Source without the gathering places, tutorial classes, meetings, conferences, workshops, summits, stands and similar venues for building networks of trust and support, that Community Organizers are dedicated to providing.
-
 
 ## Non-profit
 
@@ -88,7 +100,6 @@ Instead, we operate on a non-profit basis, and operate in ways where we both can
 
 Fortunately, the CRA also encourages that OSS Stewards operate as a non-profit.
 
-
 ## Co-operative
 
 A co-operative is a member-owned legal entity, set up so that any surplus gained from it's operation is used for the benefit of it's members.
@@ -104,10 +115,10 @@ A co-operative operates according to the set of seven ideals laid out in the [Ro
 
 Additionally, an Ecosystem would do well to be set up as a _European Cooperative_ ([Societas cooperativa Europaea (SCE)]), in order to operate under a single EEA-wide set of rules and principles, and to allow the moving of the Stewards headquarters to a legislation where the Steward is more likely to succeed in it's non-profit mission.
 
+
 # Business model
 
 The OSS Ecosystem Steward operates with three revenue sources, and expects multiple expenses with a focus on 1) Operating the Steward in a surplus-generating manner, so it can offer support to it's members and it's related communities.
-
 
 ## Income
 
@@ -160,15 +171,17 @@ As a non-profit, any surplus has to be used on
 
 ## Income
 
+TBD
 
 
 ## Expenses
 
+TBD
 
 
 ## Donations
 
-
+TBD
 
 
 # References

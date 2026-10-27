@@ -179,49 +179,6 @@ sequenceDiagram
     note over MFG: Product is compliant
 ```
 
----
-title: Sequence diagram for issuing of Voluntary Security Attestations
-config:
-    theme: redux-color
-    layout: elk
-    look: classic
----
-sequenceDiagram
-    autonumber
-    participant MA as Market Authority
-    participant MFG as Manufacturer
-    participant ES as OSS Ecosystem Steward
-    participant FOSS as FOSS Project / Maintainer
-    note over MA,ES: Once: Establish Steward
-    ES->>MA: Notify of existance
-    MA-->>ES: Verify & acknowledge
-    MA-->>ES: Issue certificate
-    note over MFG,FOSS: As needed: Using a FOSS project
-    MFG->>FOSS: Depends on project
-    MFG-->>MFG: Perform risk assessment
-    MFG-->>ES: Report project usage of FOSS
-    ES-->>MFG: Inform about current project status
-    ES-->>FOSS: Inform about project use
-    note over ES,FOSS: Once: FOSS Project becomes Steward member
-    FOSS->>ES: Request to become Steward member
-    FOSS-->>ES: Demonstrate FOSS is suitable for PwDE
-    ES-->>FOSS: Update project status: affirm suitability for PwDE and for issuing VSA
-    ES-->>FOSS: Confirm membership
-    note over MFG,FOSS: On a Sustaining schedule: Attest FOSS Project is intended for use in PwDE
-    FOSS->>ES: Issue VSA
-    MFG->>ES: Request VSA for FOSS
-    ES-->>FOSS: Reaffirm suitability for PwDE
-    ES-->>ES: Sign VSA with certificate from Market Authority
-    ES->>MFG: Sell VSA
-    ES-->>FOSS: Donate to projects, communities and services; Update status
-    note over MA,MFG: Eventually: PwDE audit
-    MA->>MFG: Audits product compliance
-    MFG-->>MA: Presents signed VSA
-    MA-->>MFG: Verifies signed VSA
-    note over MFG: Product is compliant
-```
-
-
 ## Expenses
 
 1. Staff costs (4-9 FTE positions, including employer's taxes and vacation)

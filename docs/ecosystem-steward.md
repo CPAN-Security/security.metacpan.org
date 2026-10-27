@@ -27,7 +27,7 @@ Some highlights and implications that affect upstream communities:
     * Implication: Products metadata need to be kept up-to-date with changes in upstream projects. E.g. changes in ownership, names, version numbers or schemas, etc.
 * Vulnerabilities discovered and/or their fixes to be shared with upstream providers. ([Article 13(6)])
     * Implication: There should be someone upstream to receive, improve and apply these fixes.
-* Manufacturers are responsible for the _entirety_ of their product security. ([FAQ 4.1.1], [FAQ 4.3.6])
+* Manufacturers are responsible for the _entirety_ of their product security. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6])
     * Implication: This _includes_ open source components used.
 * Manufacturers are expected to exercise _Due Diligence_ when integrating components, after having performed a cybersecurity risk assessment. ([Article 13], [Article 14])
     * Implication: Depending on the number of products, their remote data processing solutions and their risk profiles, the _Due Diligence_ burden may cover _hundreds_, or _thousands_ of FOSS components.
@@ -36,7 +36,7 @@ Some highlights and implications that affect upstream communities:
 
 ## Scope of the CRA
 
-What products are in scope of the CRA is beyond this article, but much can be learned from the [CRA Guidance] (e.g. [CRA Guidance chapter 2]) and the [CRA FAQ] (e.g. [CRA FAQ 1.1.2]))
+What products are in scope of the CRA is beyond this article, but much can be learned from the [CRA Guidance] (e.g. [CRA Guidance chapter 2]) and the [CRA FAQ] (e.g. [CRA FAQ 1.1.2]).
 
 In summary, the CRA applies to _both_ digital and physical products, including any remote data processing solutions (e.g. services that the app needs to function as expected), that are placed on the EU market in the course of a commercial activity.
 
@@ -116,15 +116,19 @@ A co-operative operates according to the set of seven ideals laid out in the [Ro
 Additionally, an Ecosystem Steward would do well to be set up as a _European Cooperative_ ([Societas cooperativa Europaea (SCE)]), in order to operate under a single EEA-wide set of rules and principles, and to allow the moving of the Stewards headquarters to a legislation where the Steward is more likely to succeed in it's non-profit mission.
 
 
-# Business model
+# Surplus generating model
 
-The OSS Ecosystem Steward operates with three revenue sources, and expects multiple expenses with a focus on 1) Operating the Steward in a surplus-generating manner, so it can offer support to it's members and it's related communities.
+The OSS Ecosystem Steward operates with three revenue sources, and expects multiple expenses with a focus on
 
-## Income
+1) Operating the Steward in a surplus-generating manner, so it can
+2) offer support to it's members, and it's related communities
+3) in an ongoing and long-term sustainable manner, suitable for ensuring the security posture required for CRA Manufacturers products to remain compliant
+
+## Revenue sources
 
 1. Public support from funds dedicated to Open Source activities (e.g. the Sovereign Tech Agency fund, or other upcoming funds, possibly based on a similar model) – during a startup period
 2. Enrollment and re-enrollment fees from Manufacturers
-3. Voluntary Security Attestations, issued on a recurring basis (e.g. subscription)
+3. Voluntary Security Attestations, issued on a recurring basis (subscription)
 
 Note: The Steward should NOT accept donations.
 Instead, donations should be directed to other recipients in the community capable of accepting them.
@@ -132,29 +136,30 @@ Good donation recipients include Perl Monger groups local to the donor's operati
 
 ## Expenses
 
-1. Staff costs (3-9 FTE positions, including employer's taxes and vacation)
+1. Staff costs (4-9 FTE positions, including employer's taxes and vacation)
     1. 1-3 Software developers (membership & manufacturer management; donation management; attestation issuance; etc.)
-    3. 1 Primary contact for member communities (member relations)
-    2. 1 Primary contact for manufacturers (sales)
-    4. 0-1 Primary contact for market authorities (legal)
-    5. 0-1 Training & communications (comms)
-    6. 0-1 Treasurer & fundraising (cfo)
-    7. 0-1 Executive (ceo)
-2. Variable (income-dependent) operating expenses
+    1. 1 Primary contact for member communities (member/developer relations and support)
+    1. 1 Primary contact for manufacturers (sales and manufacturer enrollment support)
+    1. 0-1 Primary contact for market authorities (legal)
+    1. 0-1 Training & communications (member security awareness & training)
+    1. 0-1 Treasurer & fundraising (CFO)
+    1. 1 Executive (CEO)
+1. Variable (income-dependent) operating expenses
     1. Other
-3. Fixed operating expenses
+1. Fixed operating expenses
     1. Accounting services
-    2. Auditing services
-    3. Hosting & computer services
-    4. Insurances
-    5. Contingencies & other expenses
-4. Training, education and outreach expenses
+    1. Auditing services
+    1. Hosting & computer services
+    1. Insurances
+    1. Legal services
+    1. Contingencies & other expenses
+1. Training, education and outreach expenses
     1. 4-6 Events visited, travel, lodging, food per employee
-    2. 2 Internal events, venue, food, attendee travel & hotel
-    3. Contingencies & other expenses
-5. Board remuneration
+    1. 2 Internal events, venue, food, attendee travel & hotel
+    1. Contingencies & other expenses
+1. Board remuneration
     1. 4 board meetings x 5 board members x 2 hours
-4. Re-investment into the Ecosystem Steward
+1. Re-investment into the Ecosystem Steward
 
 The details of this budget are to be jointly proposed by the executive officer and treasurer are to be presented to the Board. The board may adjust it, and present the final budget for the General Assembly to vote on.
 
@@ -168,7 +173,7 @@ As a non-profit, any surplus has to be used on
 
 # Example budget
 
-## Income
+## Revenue
 
 TBD
 
@@ -208,6 +213,7 @@ TBD
 [NTIA-SBOM]:https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf#page=9 'NTIA Minimum Elements for a Software Bill of Materials (SBOM)'
 
 [CRA FAQ]:https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-implementation-frequently-asked-questions 'FAQs on the CRA implementation'
+[CRA FAQ - linkable copy]:https://cra.orcwg.org/faq/official/ 'Linkable version of the Official CRA FAQ by the Open Regulatory Working Group (ORCWG)'
 [CRA FAQ 1.1.2]:https://cra.orcwg.org/faq/official/faq_1-1-2/ "What is a product with digital elements? Are stand-alone software or firmware products with digital elements?"
 [CRA FAQ 4.1.1]:https://cra.orcwg.org/faq/official/faq_4-1-1/ "What does the CRA require of the manufacturer's cybersecurity risk assessment?"
 [CRA FAQ 4.3.6]:https://cra.orcwg.org/faq/official/faq_4-3-6/ 'How should vulnerabilities in integrated components be addressed and remedied?'

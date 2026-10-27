@@ -236,6 +236,9 @@ This is not a exhaustive list!
         * **[Article 64(4)]**, Supplying incorrect, incomplete or misleading information may be fined up to 5M EUR or 1% of global turnover
         * **[Article 64(10)(b)]**, Rules on administrative fines shall not apply to Open Source Software Stewards
 * [Chapter VIII] — Transitional and final provisions
+    * [Article 69] — Transitional provisions
+        * [Article 69(2)] — Products […] placed on the market before 11 December 2027 shall be subject to […] this Regulation only if, from that date, those products are subject to a _substantial modification_.
+        * [Article 69(3)] — […] obligations laid down in [Article 14] shall apply to all products […] that fall within the scope of this Regulation that have been placed on the market before 11 December 2027.
     * [Article 71] — Entry into force and application
         * [Article 71(2)], This Regulation shall apply from 11 December 2027. However, [Article 14] shall apply from 11 September 2026 and [Chapter IV] (Articles 35 to 51 - including [Article 47]) shall apply from 11 June 2026.
 
@@ -256,12 +259,13 @@ Annexes are technical materials presented separately from the main text, and hav
 
 #### Other useful resources
 
-* (EU) [The CRA Fact Sheet](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-factsheet)
-* (Eclipse) Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
-* (Eclipse) ORC WG [gitlab](https://gitlab.eclipse.org/eclipse-wg/open-regulatory-compliance-wg)
-* (Eclipse) ORC WG [Matrix chat](https://matrix.to/#/#open-regulatory-compliance:matrix.eclipse.org)
+* (EU) [The CRA implementation act guidance](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation), Published 2026-07-27; ([PDF](https://ec.europa.eu/newsroom/dae/redirection/document/131456))
+* (Eclipse) ORC WG [Official guidance - linked version]( https://cra.orcwg.org/official-guidance/)
+* (EU) [Cyber Resilience Act implementation - Frequently asked questions](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act-implementation-frequently-asked-questions), Published 2025-12-03, ([PDF](https://ec.europa.eu/newsroom/dae/redirection/document/122331))
 * (EU) The '[Blue Guide](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.C_.2022.247.01.0001.01.ENG&toc=OJ%3AC%3A2022%3A247%3ATOC)' on the implementation of EU product rules (2022/C 247/01). Published 2022-06-29; [PDF](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52022XC0629(04))
-* (EU) [CRA Corrigendum](https://draftable.com/compare/ShyQnqhNqFGP) comparison. Published 2024-09-03; [Original PDF](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0130-FNL-COR01_EN.pdf)
+* (Eclipse) Open Regulatory Compliance (ORC) WG [mailing list archive](https://www.eclipse.org/lists/open-regulatory-compliance/threads.html)
+* (Eclipse) ORC WG [CRA FAQ](https://cra.orcwg.org)
+* (Eclipse) ORC WG [github](https://github.com/orcwg/)
 * List of _active_ [EU Notified Conformity Assessment Bodies](https://webgate.ec.europa.eu/single-market-compliance-space/notified-bodies/notified-body-list?filter=legislationId:167953,notificationStatusId:1)
 * List of [EU Notifying authorities](https://webgate.ec.europa.eu/single-market-compliance-space/notified-bodies/notifying-authorities?filter=legislationId:167953)
 * List of [EU Market Surveillance Authorities](https://webgate.ec.europa.eu/single-market-compliance-space/market-surveillance/ms-authorities?filter=legislationId:9021,t:1)
@@ -278,10 +282,17 @@ Annexes are technical materials presented separately from the main text, and hav
 
 (EU) [Digital Operational Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2554&qid=1710317679922): Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations (DORA, 2022-12-14)
 
-
 * Article 16-23
 
 * [Legislative Train Schedule](https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-cross-sectoral-financial-services-act-1)
+
+
+### EU and EEA – MSA {#msa}
+
+(EU) 2019/1020 on market surveillance and compliance of products
+
+* https://eur-lex.europa.eu/eli/reg/2019/1020/oj/eng
+
 
 
 ## Other informative articles and guides {#other}
@@ -450,6 +461,9 @@ People have been involved in the development of this document
 [Article 64(10)(b)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#064.010 'Rules on administrative fines shall not apply to Open Source Software Stewards'
 
 [Chapter VIII]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#cpt_VIII 'Transitional and final provisions'
+[Article 69]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_69 'Transitional provisions'
+[Article 69(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#069.002 'Products placed on the market before 11 December 2027 shall be subject to this Regulation only if, from that date, those products are subject to a substantial modification.'
+[Article 69(3)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#069.003 'Obligations laid down in Article 14 shall apply to all products that fall within the scope of this Regulation that have been placed on the market before 11 December 2027.'
 [Article 71]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_71 'Entry into force and application'
 [Article 71(2)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#071.002 'This Regulation shall apply from 11 December 2027. However, Article 14 shall apply from 11 September 2026 and Chapter IV (Articles 35 to 51) shall apply from 11 June 2026.'
 

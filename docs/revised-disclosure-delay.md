@@ -30,7 +30,7 @@ authors:
 
 ---
 
-## Long embargos are becoming short disclosure delays
+## Long embargoes are becoming short disclosure delays
 
 At the [Perl Toolchain Summit in April 2026](https://perltoolchainsummit.org/pts2026/), members of the CPANSec CNA discussed disclosure periods and decided to reduce the _default_ planned disclosure date ("embargo") for publishing vulnerabilities from 28 days to 14 days.
 
@@ -51,9 +51,9 @@ There are consequences to this change.
 
 ### LLM-generated security reports are a reality
 
-Whether we like it or not, the source code of many open source projects have been ingested by LLMs, and people are using those LLMs to discover security and bugs.
+Whether we like it or not, the source code of many open source projects have been ingested by LLMs, and people are using those LLMs to discover security issues and bugs.
 
-### Long embargos for vulnerabilities about open source projects are problematic
+### Long embargoes for vulnerabilities about open source projects are problematic
 
 If the availability of this technology means that reports are public, then attackers have access to this too.
 
@@ -115,7 +115,7 @@ Next, add a [security policy](https://security.metacpan.org/docs/guides/security
 Source repositories like GitHub support setting up [private security advisory reporting form](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository),
 that allows people to create private issues and forks which you and your collaborators can work on.
 
-If you do not want to maintain a module anymore, flag this by handing maintenance to [ADOPTME](https://neilb.org/2013/08/07/adoptme.html).
+If you do not want to maintain a module any more, flag this by handing maintenance to [ADOPTME](https://neilb.org/2013/08/07/adoptme.html).
 You'll still have maintenance rights but another author will be able to take it over.
 You can also announce this in other forums to find interested authors who might take the module over.
 

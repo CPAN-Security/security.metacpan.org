@@ -56,7 +56,7 @@ This is a choice that is made more difficult due to the security implications of
 
 ## Should OSS communities help with compliance?
 
-The CRA has envisioned a novel legal category – The Open Source Software Steward – which has the purpose or objective to _systematically provide support on a sustained basis for the development of FOSS_. (See [Article 24] and [CRA Guidance chapter 3].3).
+The CRA has envisioned a novel legal category – The Open Source Software Steward – which has the purpose or objective to _systematically provide support on a sustained basis for the development of FOSS_. (See [Article 24], [CRA Guidance chapter 3] and [CRA Guidance section 3.3]).
 
 As the CPAN community has no function or entity that is both willing, competent and capable of taking upon themselves this role, it makes sense to explore other alternatives, so that those who wish to assist in the compliance work can get the opportunity to do so.
 
@@ -266,6 +266,7 @@ TBD
 [CRA Guidance]:https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation 'Commission guidance on the application of the Cyber Resilience Act (CRA)'
 [CRA Guidance chapter 2]:https://cra.orcwg.org/official-guidance/#sct_2 'CRA Guidance Chapter 2: Scope'
 [CRA Guidance chapter 3]:https://cra.orcwg.org/official-guidance/#sct_3 'CRA Guidance Chapter 3: Free and open-source software'
+[CRA Guidance section 3.3]:https://cra.orcwg.org/official-guidance/#sct_3.sct_3 'CRA Guidance Section 3.3: Open-source software stewards'
 
 [ORCWG]:https://orcwg.org/
 [ORCWG FAQ]:https://cra.orcwg.org/

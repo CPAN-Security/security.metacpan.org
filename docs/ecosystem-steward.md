@@ -2,35 +2,76 @@ toc: true
 markdown: true
 ---
 
-# What is an OSS Ecosystem Steward?
+# What is an Open Source Software Steward?
 
-An Open Source Software Ecosystem Steward, is a Steward organization as described in the EU Cyber Resilience Act [Article 24].
-To make it capable of supporting an _ecosystem_ of project maintainers, service maintainers and community organizers, it is set up as a community-owned non-profit co-operative.
-This is both ensure that the Steward is set up support relevant projects, services and communities in a fair way, but also have the option and capability to support other relevant entities, both in-ecosystem, upstream and downstream.
+The CRA has envisioned a novel legal category – The Open Source Software Steward – which has the purpose or objective to _systematically provide support on a sustained basis for the development of FOSS_.
+([Regulation 2024/2847 (Cyber Resilience Act)] [Recital 19] and [Article 24], definition in [Article 3], [CRA Guidance chapter 3] and [CRA Guidance section 3.3]).
+
+> […] a legal person, other than a manufacturer, that has the purpose […] of _systematically providing support on a sustained basis for the development of […] free and open-source software […] intended for commercial activities, and that ensures the viability of those products.
+
+This organization has several purposes, where the main one is to support FOSS projects in improving their long-term security posture and viability for use in CE-marked products.
+For smaller well-organised and successful communities – e.g. the ones that are supported by an existing foundation – these tasks are quite manageable.
+Even the larger foundations in the OSS world support a number of projects measured in tens or hundreds.
+
+These tasks quickly can become unmanageable when we look at what a Steward for an OSS _Ecosystem_ is expected to support.
+Even CPAN and it's _tens of thousands_ of projects would struggle finding good ways of fulfilling the basic expectations laid out in the CRA – without going into the implications listed below.
+
+Instead of applying the Steward's tasks to existing governance structures, we can ask a better question.
+
+## How do we apply the OSS Steward function to an entire _ecosystem_?
+
+This can be done by _creating an entirely novel organization_, that take the following values and principles into account.
+
+* With awareness of existing traditions, values, habits, culture and essence of the ecosystem, carefully consider – what type of organization would align best with these?
+* What communities, organizations or governance structures exist already, and how can we include them as stakeholders, independent of their organizational maturity?
+* What types of communities can we find that also would benefit from support, but that usually are forgotten?
+* How can we ensure that all aspects of the Steward function is _voluntary_, _opt-in_, and where all parties retain full control and the freedom to join, leave and rejoin as they wish?
+* What types of demands put on the communities are strictly necessary, and what organizational structures must be in place for the Steward to be able to offer support for these on a sustained basis?
+* What steps can we take to minimize the scope and demands imposed on projects, and motivate them to play along with the requirements that remain?
 
 
-# Background: Cyber Resilience Act
+## The OSS Ecosystem Steward
+
+To allow everyone to _opt in_ on compliance work in a way that aligns with existing traditions and culture in our Open Source ecosystem, it makes to approach how this is done from a _first principles_ perspective.
+
+As a result of this kind of deliberation, it makes sense to create an entirely new Steward organization, tailor-made to address the issues common for global, laissez-faire, distributed and heterogeneous communities of communities, like Perl and CPAN.
+
+Let's set up an _OSS Ecosystem Steward_ — a community-owned non-profit co-operative, specifically set up to be able to support the people that in the ecosystem that are affected by the implications of the CRA, and wish to help improve our user's compliance situation.
+In this document, we introduce an organizational structure for supporting an _ecosystem_ of project maintainers, service maintainers and community organizers – a _community-owned non-profit co-operative_.
+
+To make this work, let's design an organization with the following criteria:
+
+1. To set up the organization as a non-profit entity, dedicated to supporting it's communities
+1. Limit the scope of the Steward by only supporting projects that are _actually in use_ by Manufacturers (in the CRA sense)
+1. Retain the option and capability for the Steward to support other relevant entities, both inside, upstream and downstream of our ecosystem – including projects, services and communities that we rely on, but are easily forgotten or are currently "hidden" in the dependency graph
+1. To set up a governance and decision-making structure that ensures the Steward operates in a fair way
+1. Set up organizational rules so that the different community stakeholders may freely join or leave at their own will
+1. Set up the organization so that it also operates well with, and fulfils it's function towards market authorities, manufacturers and others.
+
+
+# Background: Implications of the Cyber Resilience Act to OSS communities
 
 When the [(EU) Regulation 2024/2847 (Cyber Resilience Act)] comes fully into effect on 11 December 2027, businesses wishing to be compliant are expected to perform a number of security-related tasks for each of their CE-marked products and their associated remote data processing solutions.
 
 The full list of obligations are laid out in [Article 13], [Article 14], [Article 64], [Article 69], [Annex I, Part I], [Annex I, Part II], [Annex II], and [Annex VII].
 
-Some highlights and implications that affect upstream communities:
+These are some of the implications of the CRA that are likely to affect upstream OSS communities:
 
-* Product support period that matches with expected usage (eg. 5 years).
-    * Implication: Any component used in the product or it's remote data processing solutions should be supported for the same period.
-* Product vulnerability fixes kept available for 5 years after support period is over.
+* Product support period that matches with expected usage (eg. 5 years). ([Article 13(8)])
+    * Implication: Any OSS component used in the product or it's remote data processing solutions should be supported for the same period.
+* Product vulnerability fixes kept available for 5 years after support period is over. ([Article 13(9)])
     * Implication: Software update services depending on OSS need to be kept secure for an _additional 5 years_, in total 10 years.
-* Product has no known exploitable vulnerabilities while available on the EU market.
-    * Implication: Products must be capable of being updated for the entire support period.
-* Product metadata (including an SBOM) have to be complete, correct and not misleading.
+* Product has no known exploitable vulnerabilities while available on the EU market. ([Annex I, Part I] (2)(a))
+    * Implication: Products must be capable of being updated for the entire support period, including relevant updates from OSS components.
+* Product metadata (including an SBOM) have to be complete, correct and not misleading. ([Article 64(4)])
     * Implication: Products metadata need to be kept up-to-date with changes in upstream projects. E.g. changes in ownership, names, version numbers or schemas, etc.
 * Vulnerabilities discovered and/or their fixes to be shared with upstream providers. ([Article 13(6)])
     * Implication: There should be someone upstream to receive, improve and apply these fixes.
 * Manufacturers are responsible for the _entirety_ of their product security. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6])
-    * Implication: This _includes_ open source components used.
+    * Implication: This _includes_ open source components used in the product, or it's remote data processing solutions.
 * Manufacturers are expected to exercise _Due Diligence_ when integrating components, after having performed a cybersecurity risk assessment. ([Article 13], [Article 14])
     * Implication: Depending on the number of products, their remote data processing solutions and their risk profiles, the _Due Diligence_ burden may cover _hundreds_, or _thousands_ of FOSS components.
+    * Implication: This _Due Diligence_ also covers any concerns about the sustained long-term security posture, viability and governance of the components uses in the products - for the entire support period.
 * Market Surveillance Authorities may carry out an evaluation of the product and it's compliance, and if corrective action is not sufficient, require the product to be withdrawn or recalled from the market, or issue fines. ([Article 52], [Article 54])
     * Implication: If the Manufacturer doesn't have all ducks in a row, and a vulnerability in one of their products is discovered and exploited, this may quickly become expensive.
 
@@ -38,9 +79,9 @@ Some highlights and implications that affect upstream communities:
 
 What products are in scope of the CRA is beyond this article, but much can be learned from the [CRA Guidance] (e.g. [CRA Guidance chapter 2]) and the [CRA FAQ] (e.g. [CRA FAQ 1.1.2]).
 
-In summary, the CRA applies to _both_ digital and physical products, including any remote data processing solutions (e.g. services that the app needs to function as expected), that are placed on the EU market in the course of a commercial activity.
+In summary, the CRA applies to _both_ digital and physical products, including any remote data processing solutions (e.g. online services or APIs the product needs to function as expected), that are placed on the EU market _in the course of a commercial activity_.
 
-_This includes phone apps, their server components, and any other services used to keep the product updated and secure_.
+_This includes phone apps, their server components, and any other services used to keep the product compliant, updated and secure_.
 
 
 # Implications and expectations for Open Source communities
@@ -56,23 +97,18 @@ This is a choice that is made more difficult due to the security implications of
 
 ## Should OSS communities help with compliance?
 
-The CRA has envisioned a novel legal category – The Open Source Software Steward – which has the purpose or objective to _systematically provide support on a sustained basis for the development of FOSS_. (See [Article 24], [CRA Guidance chapter 3] and [CRA Guidance section 3.3]).
-
-As the CPAN community has no function or entity that is both willing, competent and capable of taking upon themselves this role, it makes sense to explore other alternatives, so that those who wish to assist in the compliance work can get the opportunity to do so.
+Since the greater CPAN ecosystem has no existing organization, function or entity that is both willing, competent and capable of taking upon themselves the Steward role, it makes sense to explore other alternatives, to enable those who wish to help improve their long-term viability, may get the opportunity to do so.
 
 Furthermore, the long-term tradition in the CPAN community, is to operate in a _laissez-faire_ manner – letting each individual decide for themselves whether to act or not.
 
+But in the end, it has to be up to each maintainer to decide for themselves if they wish to play along.
 
-# OSS Ecosystem Steward
 
-To allow everyone to _opt in_ on compliance work in a way that aligns with existing traditions and culture in our Open Source ecosystem, it makes to approach how this is done from a _first principles_ perspective.
-
-As a result of this kind of deliberation, it makes sense to create an entirely new Steward organization, tailor-made to address the issues common for global, laissez-faire, distributed and heterogeneous communities of communities, like Perl and CPAN.
-
-Let's set up an _OSS Ecosystem Steward_ — a community-owned non-profit co-operative, specifically set up to be able to support the people that in the ecosystem that are affected by the implications of the CRA, and wish to help improve our user's compliance situation.
+# OSS Ecosystem Steward: A community-owned non-profit co-operative
 
 Addressing the implications listed above should not be expected to be done on a volunteer basis, though.
 This means that the Steward has to be capable of supporting it's stewarded communities also by directing enough funding so that even the "boring" and "tedious" work gets done.
+Which in the end requires this non-profit to operate as a regular business, with the goal of creating a surplus in it's operation that is large enough to actually sustain the projects, services and communities in it care.
 
 ## Community-owned
 

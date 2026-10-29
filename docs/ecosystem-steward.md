@@ -129,6 +129,22 @@ From these questions, we arrive at the following criteria. The Steward should:
 1. **Be freely joinable and leavable** by all community stakeholders.
 1. **Work well with outside parties**, and fulfil its obligations towards market surveillance authorities, Manufacturers and others.
 
+### Value proposition
+
+The key value proposition comes from the Manufacturer's needs that are uncovered during their product risk assessment and due diligence work.
+
+1. Are the FOSS projects used in the PwDE suitable and viable for their purpose?
+   1. Vulnerability and incident handling is suitable
+   1. Maintainers and governance are available to respond in a timely manner
+   1. Security-critical metadata about the components are kept up-to-date, complete and correct
+1. Are these same projects likely to remain suitable for the duration of the product's support period?
+   1. Necessary policy, governance and support structures in place and adhered to
+   1. Suitable long-term commitments are on offer
+
+An easy way to map out, reach and sustain this level of viability can be achieved with the Manufacturer taking reasonable steps to these effects, and have the Steward organisation verify and attest to this, and funding this by the sale of these attestations.
+
+To make this also an attractive path for Maintainers to opt in to, the Steward organizations ownership model and decision making processes are key to success.
+
 
 ## The proposal: A community-owned non-profit co-operative
 
@@ -180,13 +196,12 @@ These principles map directly onto the design criteria above: voluntary membersh
 The Ecosystem Steward would do well to be set up as a _European Cooperative Society_ ([Societas cooperativa Europaea (SCE)]).
 This lets it operate under a single EEA-wide set of rules, and allows it to move its headquarters to the member state where it is most likely to succeed in its non-profit mission.
 
-### Governance
+Details on on articles of association, bylaws and such, will be published later.
 
-The governance structure is still to be worked out in detail. The following bodies are referred to elsewhere in this document:
 
-* **General Assembly (GA)** – all members; votes on the budget and on how the surplus is distributed.
-* **Board** – elected by the GA (e.g. 5 members); adjusts and proposes the budget.
-* **Executive officer (CEO) and treasurer (CFO)** – run the day-to-day operation and draft the budget.
+
+
+
 
 
 ## Funding model
@@ -251,21 +266,23 @@ sequenceDiagram
     note over ES,FOSS: Once: FOSS Project becomes Steward member
     FOSS->>ES: Request to become Steward member
     FOSS-->>ES: Demonstrate FOSS is suitable for PwDE
-    ES-->>FOSS: Affirm suitability for PwDE and for issuing VSA<br>Update project status
+    ES-->>FOSS: Affirm suitability for PwDE and willingness to issue VSA statements<br>Update project status
     ES-->>FOSS: Confirm membership
     note over MFG,FOSS: On a Sustaining schedule: Attest FOSS Project is intended for use in PwDE
-    FOSS->>ES: Issue VSA
+    FOSS->>ES: Attest to suitability and<br>viability by issuing VSA statements
     MFG->>ES: Request VSA for FOSS
-    ES-->>FOSS: Reaffirm suitability for PwDE
-    ES-->>ES: Sign VSA with certificate from Market Authority
-    ES->>MFG: Sell VSA
-    ES-->>FOSS: Donate to projects, communities and services<br>Update project status
+    ES-->>FOSS: Reaffirm statements in VSA
+    ES-->>ES: Confirm VSA by signing it with<br>certificate from Market Authority
+    ES->>MFG: Sell signed VSA
+    ES-->>FOSS: Donate surplus to projects, communities and services<br>Update project status
     note over MA,MFG: Eventually: PwDE audit
     MA->>MFG: Audits product compliance
     MFG-->>MA: Presents signed VSA
     MA-->>MFG: Verifies signed VSA
     note over MFG: Product is compliant
 ```
+
+<!--
 
 ### Expenses
 
@@ -309,6 +326,7 @@ As a non-profit, the Steward must use any surplus on:
 
 TBD: revenue, expenses and donations.
 
+-->
 
 ## References
 

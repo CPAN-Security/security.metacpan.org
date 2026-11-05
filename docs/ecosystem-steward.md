@@ -53,7 +53,7 @@ The obligations below fall on the manufacturer, but each has an implication for 
 | Obligation on the manufacturer | Implication for upstream Open Source |
 |---|---|
 | The product must have a support period that matches its expected use (e.g. 5 years). ([Article 13(8)]) | Any Open Source component used in the product, or in its remote data processing solutions, should be supported for the same period. |
-| Security updates must remain available for 5 years after the support period ends. ([Article 13(9)]) | Software update services that depend on Open Source must be kept secure for an _additional 5 years_ – 10 years in total. |
+| Security updates must remain available for 5 years after the support period ends. ([Article 13(9)]) | Software update services that depend on Open Source must be kept secure for an _additional 5 years_. |
 | The product must have no known exploitable vulnerabilities while it is on the EU market. ([Annex I, Part I] (2)(a)) | The product must be updatable for its entire support period, including with relevant updates from its Open Source components. |
 | Product metadata (including the SBOM) must be complete, correct and not misleading. ([Article 64(4)]) | Metadata must be kept up to date with changes in upstream projects, e.g. changes in ownership, names, version numbers or schemas. |
 | Vulnerabilities and fixes found must be shared with the upstream maintainer. ([Article 13(6)]) | Someone upstream must be there to receive, improve and apply these fixes. |
@@ -136,6 +136,7 @@ The Steward should:
 1. **Impose as few obligations as possible on members** so they may continue managing their projects as they wish, but from now with security and compliance needs of their users in mind.
 1. **Operate as a business**, generating a surplus by selling compliance-relevant security attestations, to generate a surplus capable of sustaining it's communities.
 1. **Work well with outside parties** to fulfil its obligations towards market surveillance authorities, manufacturers and others.
+1. **Do not accept donations** and instead aim to create an _additional_ source of funding, suitable for OPEX budget line items of manufacturers wishing to remain compliant.
 1. **Be able to support others** both inside, upstream and downstream of the ecosystem – including projects, services and communities we rely on, but that are easily forgotten or "hidden" in the dependency graph.
 
 

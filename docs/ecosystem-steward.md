@@ -138,27 +138,6 @@ The Steward should:
 1. **Work well with outside parties** to fulfil its obligations towards market surveillance authorities, manufacturers and others.
 1. **Be able to support others** both inside, upstream and downstream of the ecosystem – including projects, services and communities we rely on, but that are easily forgotten or "hidden" in the dependency graph.
 
-### Value proposition
-
-The key value proposition comes from the manufacturer's compliance needs that are uncovered during their product risk assessment and subsequent due diligence work.
-As part of this due diligence, the manufacturer should consider the following:
-
-1. Intended for use in the course of a commercial activity: Are the FOSS projects used in the PwDE meeting the "light touch" compliance expectations in the CRA?
-   1. Vulnerability and incident handling is documented and suitable
-   1. Maintainers committed to be available to respond in a timely manner
-   1. Security-critical metadata about the components are kept up-to-date, complete and correct
-1. Viable: Are these same projects likely to remain sustained for the duration of the product's support period?
-   1. Necessary policy, governance and support structures in place and adhered to
-   1. Suitable long-term commitments are on offer
-   1. Options for sustained funding from manufacturers are on offer
-
-The Steward facilitates this due diligence by encouraging maintainers to opt in and take steps to meet these needs where this is required.
-The Steward then confirms when the projects meet the compliance expectations, and attests to this together with the maintainer.
-
-This initial work is funded through an manufacturer enrollment fee, and sustained through the sale of the same attestations.
-
-To make this also an attractive path for maintainers to opt in, the Steward organization's ownership model and decision making processes are key, while preserving the continued independence of the maintainers.
-
 
 ## The proposal: A community-owned non-profit co-operative
 
@@ -215,6 +194,41 @@ The Ecosystem Steward would do well to be set up as a _European Cooperative Soci
 This lets it operate under a single EEA-wide set of rules, and allows it to move its headquarters to the member state where it is most likely to succeed in its non-profit mission.
 
 Details on articles of association, bylaws and such, will be published later.
+
+
+## Value proposition for manufacturers
+
+The key value proposition comes from the manufacturer's compliance needs that are uncovered during their product risk assessment and subsequent due diligence work.
+As part of this due diligence, the manufacturer should consider the following:
+
+1. Intended for use in the course of a commercial activity: Are the FOSS projects used in the PwDE meeting the "light touch" compliance expectations in the CRA?
+   1. Vulnerability and incident handling is documented and suitable
+   1. Maintainers committed to be available to respond in a timely manner
+   1. Security-critical metadata about the components are kept up-to-date, complete and correct
+1. Viable: Are these same projects likely to remain sustained for the duration of the product's support period?
+   1. Necessary policy, governance and support structures in place and adhered to
+   1. Suitable long-term commitments are on offer
+   1. Options for sustained funding from manufacturers are on offer
+
+The Steward facilitates the needs uncovered during this due diligence by encouraging affected maintainers to opt in and take steps to meet these where it is required.
+The Steward then confirms when the projects meet the compliance expectations, and attests to this together with the maintainer.
+
+This initial work is funded through an manufacturer enrollment fee, and sustained through the sale of the same attestations.
+
+To make this also an attractive path for maintainers to opt in, the Steward organization's ownership model and decision making processes are key, while preserving the continued independence of the maintainers.
+
+## Value proposition for community members
+
+By pre-qualifying, and then opting in to become a member of the Steward, they qualify for receiving a portion of the Steward's surplus in the form of donations.
+As members, they also get and invitation to the Steward organization's General Assembly meeting, where they can propose and vote on how the surplus is disbursed, and elect candidates to the board.
+
+To pre-qualify for membership, the individual has to:
+
+* Be an individual maintainer, administrator of organizer in the community, or represent a non-profit organization dedicated to the same.
+* Maintain a project that is reported used by a manufacturer, or any of their required upstream projects or services, or organize a community that supports these.
+* Demonstrate that they have fulfilled the minimum required steps to show their project is intended for use in commercial activities.
+* Willingly state they are committed to the long-term care of their project, as long as this work is sufficiently sustained.
+* Commit to take part in issuing voluntary security attestations to this effect, on a recurring basis, and allow the Steward to use these to generate the surplus needed for this operation to succeed.
 
 
 ## Funding model

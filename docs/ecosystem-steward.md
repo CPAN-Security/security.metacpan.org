@@ -59,16 +59,16 @@ The full list of obligations is laid out in [Article 13], [Article 14], [Article
 
 The obligations below fall on the manufacturer, but each has an implication for the Open Source communities upstream of them:
 
-| Obligation on the manufacturer | Implication for upstream Open Source |
+| Obligation on the manufacturer | Example implication for upstream Open Source |
 |---|---|
 | The product must have a support period that matches its expected use (e.g. 5 years). ([Article 13(8)]) | Any Open Source component used in the product, or in its remote data processing solutions, should be supported for the same period. |
-| Security updates must remain available for 5 years after the support period ends. ([Article 13(9)]) | Software update services that depend on Open Source must be kept secure for an _additional 5 years_. |
+| Security updates must remain available for 5 years after the support period ends. ([Article 13(9)]) | Software update services that depend on Open Source must be kept secure for an _additional 5 years_. 
 | The product must have no known exploitable vulnerabilities while it is on the EU market. ([Annex I, Part I] (2)(a)) | The product must be updatable for its entire support period, including with relevant updates from its Open Source components. |
-| Product metadata (including the SBOM) must be complete, correct and not misleading. ([Article 64(4)]) | Metadata must be kept up to date with changes in upstream projects, e.g. changes in ownership, names, version numbers or schemas. |
-| Vulnerabilities and fixes found must be shared with the upstream maintainer. ([Article 13(6)]) | Someone upstream must be there to receive, improve and apply these fixes. |
+| Product metadata (including the SBOM) must be complete, correct and not misleading. ([Article 64(4)]) | Metadata must be kept up to date with changes in upstream projects, e.g. changes in ownership, project name, version number schema, license. |
+| Vulnerabilities and fixes found must be shared with the upstream maintainer. ([Article 13(6)]) | Someone upstream must be available to receive, improve and apply these fixes, in a timely manner. |
 | The manufacturer is responsible for the security of the _entire_ product. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6]) | This _includes_ the Open Source components in the product and in its remote data processing solutions. |
 | The manufacturer must perform a cybersecurity risk assessment, and exercise _due diligence_ when integrating components. ([Article 13], [Article 14]) | Depending on the number of products and their risk profiles, due diligence may cover _hundreds_ or _thousands_ of Open Source components. It also covers the long-term security posture, viability and governance of those components, for the entire support period. |
-| Market Surveillance Authorities may evaluate the product, and if corrective action is insufficient, require it to be withdrawn or recalled from the market, or issue fines. ([Article 52], [Article 54]) | If a vulnerability in a product is discovered and exploited before the manufacturer has its ducks in a row, this can quickly become expensive. |
+| Market Surveillance Authorities may evaluate the product, and if corrective action is insufficient, require it to be withdrawn or recalled from the market, or issue fines. ([Article 52], [Article 54]) | If a vulnerability in a product is discovered and exploited before the manufacturer has its _ducks in a row_, this can quickly become expensive. |
 
 ### The choice facing Open Source community stakeholders
 
@@ -142,11 +142,12 @@ The Steward should:
 1. **Be governed fairly**, through a transparent and democratic decision-making structure.
 1. **Limit its scope** so it only applies to projects, services and communities that are _actually in use_ by manufacturers, or that otherwise offer a service benefiting the community.
 1. **Be freely joinable and leavable** at will by anyone in the community affected by the CRA.
-1. **Impose as few obligations as possible on members** so they may continue managing their projects as they wish, but from now on, with security and compliance needs of their users in mind.
+1. **Limit imposing obligations on members to the minimum** required so they may continue managing their projects as they wish, but from now with project viability, security and compliance needs of their users sufficiently covered.
 1. **Operate as a business**, generating a surplus by selling compliance-relevant security attestations, capable of sustaining its communities through donations.
 1. **Work well with outside parties** to fulfil its obligations towards market surveillance authorities, manufacturers and others.
 1. **Do not accept donations** and instead aim to create an _additional_ source of funding, suitable for OPEX budget line items of manufacturers wishing to remain compliant.
 1. **Be able to support others** inside, upstream and downstream of the ecosystem – including projects, services and communities we rely on, but that are easily forgotten or "hidden" in the dependency graph.
+1. **Ensure member projects, services and communities remain fully self-owned and independent** so that members remain in control of their project.
 
 
 ## The proposal: A community-owned non-profit co-operative
@@ -235,14 +236,21 @@ To make this also an attractive path for maintainers to opt in, the Steward orga
 
 ## Value proposition for the community
 
-By qualifying, and then opting in to become a member of the Steward, the community member receives a portion of the Steward's surplus in the form of recurring donations, capable of supporting them on a stable, ongoing, and a minimum 20% of full-time equivalent basis.
-As a member, they also get an invitation to the Steward organization's General Assembly, where they can propose and vote on how the surplus is disbursed, and elect candidates to the board.
+1. By qualifying, and then opting in to become a member of the Steward, the community member receives a portion of the Steward's surplus in the form of recurring donations
+    * …capable of supporting them on a stable, ongoing, and enough to cover a meaningful part of a full-time equivalent basis.
+1. As a member, they also get an invitation to the Steward organization's General Assembly, where they can…
+    * propose surplus disbursement formulas
+    * vote on which of the surplus is disbursed offered are used in the coming period, and
+    * elect candidates to the board.
 
-To qualify for membership, the individual project has to:
+More benefits may be offered to members _in good standing_.
 
-* Be an individual maintainer, administrator or organiser in the community, or represent a organization dedicated to the same, while operating on non-profit or volunteer basis.
-* Maintain a project that is reported used by a manufacturer, or any of their required upstream projects or services, or organise a community that supports these.
-* Demonstrate that they have fulfilled the minimum required to show their project is intended for use in commercial activities, including relevant "light-touch" compliance obligations that apply to the Steward, like publishing a security policy.
+To qualify for Steward membership, the applicant has to:
+
+* Be an individual owner or primary maintainer of a project, a service administrator or community organiser, or represent a legally registered entity dedicated to the same.
+* Has to operate on a non-profit or volunteer basis.
+* Maintain a project that is reported as used by a manufacturer, or be any of their required upstream projects or services, or organise a community that supports these.
+* Demonstrate that they have fulfilled the minimum required to show their project or service is _intended for use in commercial activities_, including any relevant "light-touch" compliance obligations that apply to the Steward.
 * Willingly state they are committed to the long-term care of their project, as long as this care is sufficiently sustained.
 * Commit to improve their project long-term viability and governance, including publishing succession and sunset plans and policies.
 * As long as they are a member, take part in issuing voluntary security attestations confirming the claims above, and allow the Steward to use these attestations to generate the surplus needed for this venture to fulfil its purpose.

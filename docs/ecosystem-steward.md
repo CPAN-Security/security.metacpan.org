@@ -42,7 +42,7 @@ The rest of this document explains why this is needed and how it could work:
 
 1. [Background](#background-the-cra-and-open-source) – what the CRA requires, and what that means for Open Source communities
 1. [What is an Open Source Software Steward?](#what-is-an-open-source-software-steward) – and why the role is hard to fill for an entire ecosystem
-1. [Designing a Steward for an ecosystem on the community's terms](#designing-a-steward-for-an-ecosystem-on-the-community-s-terms) – guiding questions and design criteria
+1. [Designing a Steward for an ecosystem on the community's terms](#designing-a-steward-for-an-ecosystem-on-the-communitys-terms) – guiding questions and design criteria
 1. [The proposal](#the-proposal-a-community-owned-non-profit-co-operative) – a community-owned non-profit co-operative
 1. [Funding model](#funding-model) – revenue sources for creating a surplus
 

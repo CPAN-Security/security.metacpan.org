@@ -280,6 +280,14 @@ The Steward must therefore:
 
 ### Voluntary Security Attestations
 
+> [!WARNING]
+> As of 2026-11-08, the EU Commission hasn't published any guidance or delegated act on the [Article 25] Attestation regime.
+> Until anything is published, the following is a _speculation_ on how this regime may work.
+> With this said, there aren't really that many ways of using an attestation regime in service of the requirements in the CRA.
+> An attestation regime that doesn't allow for any avenues to sustain the open source projects relevant for PwDE, would be useless at providing any motivation for OSS maintainers to voluntarily play along.
+
+Until the EU Commission publishes any details on the [Article 25] attestations, we assume the following:
+
 A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer, signed by the Steward, attesting to the viability and intention of their Open Source project, for use in PwDE.
 The CRA explicitly opens for such attestation programmes in [Recital (21)], [Recital (117)], and [Article 25].
 
@@ -289,7 +297,6 @@ The CRA explicitly opens for such attestation programmes in [Recital (21)], [Rec
 1. **The project maintainer issues an attestation (as needed)** – This attestation includes relevant viability and compliance claims suitable for demonstrating the project is _intended for use in commercial activities_.
 1. **Attesting the project (on a recurring schedule)** – The manufacturer requests a VSA for the project. The Steward reaffirms with the project that it is still compliant, signs the VSA, and sells it to the manufacturer. Part of the proceeds are donated to projects, communities and services in the ecosystem.
 1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSA, which the authority can verify.
-O
 
 
 ```mermaid

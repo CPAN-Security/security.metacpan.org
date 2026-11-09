@@ -461,6 +461,22 @@ TBD: revenue, expenses and donations.
 
 -->
 
+## The way forward
+
+As of this writing, there are several outstanding tasks before this concept can be put into effect.
+Each of these can and will be addressed in the coming months.
+
+* [ ] EU Commission published their delegated act on [Article 25].
+    * [ ] Adopt the funding model in this concept to any details published there.
+* [ ] Finish and present first draft of the OSS Ecosystem Steward [Societas cooperativa Europaea (SCE)] bylaws.
+* [ ] Reach out to community organizers that have a legal entity registered for their feedback on this document, and offer them to become founding members.
+* [ ] Present this concept at relevant conferences
+    * [x] [London Perl Workshop 2026](https://act.yapc.eu/lpw2026/talk/8062)
+    * [x] [YAPC::Tokyo 2026](https://fortee.jp/yapc-tokyo-2026/proposal/71b322a4-14f5-42d9-bac6-18a9956019c4) (Link may be unavailable from EU: [Translation gist](https://chaos.social/@sjn/117344794232894183) on github)
+    * [ ] FOSDEM - TBD
+* [ ] Fundraising for the required starting capital for the SCE
+
+
 ## Acknowledgements
 
 The OSS Ecosystem Steward concept is the product of many conversations with many people. Some are mentioned here, and the ones that are not still have my gratitude.

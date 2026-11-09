@@ -16,8 +16,9 @@ mermaid: true
 
 ## The concept, in two sentences
 
-1. A maintainers' co-op, owned by the people who serve and take care of an volunteer-based software ecosystem's projects, services, and communities.
+1. A maintainers' co-op, owned by the people who serve and take care of a volunteer-based software ecosystem's projects, services, and communities.
 1. Companies pay it for proof that the code and ecosystem they rely on is looked after, and the money goes back to the people who look after it.
+1. Maintainers receive support for the additional work needed, while retaining full control of their project.
 
 
 ## Summary
@@ -33,10 +34,10 @@ This document proposes a variant of this organisation, designed for that scale: 
 ### Key features
 
 * **Community-owned** – owned by ecosystem participants: the project maintainers, service administrators and community organisers who choose to join.
-* **Co-operative** – democratically governed, with voluntary, opt-in membership that allow ecosystem participants to                      leave and rejoin.
+* **Co-operative** – democratically governed, with voluntary, opt-in membership that allow ecosystem participants to leave and rejoin.
 * **Non-profit** – any surplus goes back to the projects, services and communities in the co-op and the ecosystem.
 * **Funded by manufacturers** – mainly through enrollment fees and recurring _Voluntary Security Attestations_, which help manufacturers show their market surveillance authorities that the Open Source projects they rely on are both supported and viable for use in their products.
-* **Dedicated to improving the long-term sustainability and security posture of its OSS communities** – by donating enough of its surplus to fund a meaningful part of a full-time-equivalent position per week per maintainer, administrator or organiser.
+* **Dedicated to improving the long-term sustainability and security posture of its OSS communities** – by donating enough of its surplus to fund a meaningful part of a working week per maintainer, administrator or organiser.
 
 
 ## Background: The CRA and Open Source
@@ -63,7 +64,7 @@ Many of the obligations falling on the manufacturer have implications for the Op
 | Obligation on the manufacturer | Example implication for upstream Open Source |
 |---|---|
 | The product must have a support period that matches its expected use (e.g. 5 years). ([Article 13(8)]) | Any Open Source component used in the product, or in its remote data processing solutions, should be supported for the same period. |
-| Security updates must remain available for 5 years after the support period ends. ([Article 13(9)]) | Software update services that depend on Open Source should be kept secure for an _additional 5 years_. |
+| Security updates must remain available for up to 10 years after published, or until the support period ends, whichever is longer. ([Article 13(9)]) | Software update services that depend on Open Source should be kept secure for an _additional 5 years_. |
 | The product must have no known exploitable vulnerabilities while it is on the EU market. ([Annex I, Part I] (2)(a)) | The product must be updatable for its entire support period, including with relevant updates from its Open Source components. |
 | Information about the product must be complete, correct and not misleading. ([Article 64(4)]) | This includes any metadata provided in an SBOM, which also must be kept current with upstream projects (e.g. tracking changes in ownership, project name, version number schema, license, etc.) |
 | Vulnerabilities and fixes found must be shared with the upstream maintainer. ([Article 13(6)]) | Someone upstream needs to be available to receive, adopt and apply these fixes, ideally in a timely manner. |
@@ -85,7 +86,6 @@ Accepting brings a lot of boring and tedious compliance work.
 Neither option is attractive, and in the end, each maintainer has to decide for themselves.
 
 From a security perspective, our common goal should be to make the choice realistic, and fair, so to increase the likelihood that more maintainers choose to accept it.
-But this quickly encounters issues from scaling this up to an ecosystem level.
 Here is where the _Open Source Software Steward_ has a critical role to play.
 
 
@@ -106,7 +106,7 @@ Even the largest Open Source foundations support projects numbering in the tens 
 
 For an _ecosystem_ like CPAN, the picture is very different.
 CPAN alone has _tens of thousands_ of projects, and would struggle to meet even the basic expectations of the CRA described above.
-Even if we limit ourselves to the few hundred projects most likely to be used directly in _Products with Digital Elements_ (PwDE – the CRA's term for the products it regulates), there remains a _long_tail_ of smaller projects hidden among the transitive dependencies, also in use.
+Even if we limit ourselves to the few hundred projects most likely to be used directly in _Products with Digital Elements_ (PwDE – the CRA's term for the products it regulates), there remains a _long tail_ of smaller projects hidden among the transitive dependencies, also in use.
 
 To make it worse, there are further complications for CPAN specifically:
 
@@ -142,7 +142,7 @@ From these questions, we arrive at the following criteria.
 1. **Be governed fairly**, through a transparent and democratic decision-making structure.
 1. **Be freely joinable and leavable** at will by anyone in the community affected by the CRA.
 1. **Limit imposing obligations on members to the minimum** required so they may continue managing their projects as they wish, but from now on, with project viability, security and compliance needs of their users sufficiently covered.
-1. **Membership is a viability marker** by ensuring the membership criteria themselves are the tasks that need to be done to demonstrate viability and compliance.
+1. **Make membership a marker of viability** by ensuring the membership criteria themselves are the tasks that need to be done to demonstrate viability and compliance.
 1. **Operate as a business**, generating a surplus by selling compliance-relevant security attestations, capable of sustaining its communities through donations.
 1. **Work well with outside parties** to fulfil its obligations towards market surveillance authorities, manufacturers and others.
 1. **Operate without need for donations** and instead aim to create an _additional_ source of funding, suitable for OPEX budget line items of manufacturers wishing to remain compliant.
@@ -177,13 +177,13 @@ Or, for your _digital neighbours_: contribute a fix for a vulnerability, organis
 
 Many activities are central to our communities' overall health, and are almost always done by volunteers.
 And some of this work is hard – even impossible – to find volunteers for, because it is "too boring", "too tedious" or just unappealing.
-For that work, we need support mechanisms that motivate people do it anyway – for example funding that makes it possible to spend one weekday (20% FTE) on Open Source.
+For that work, we need support mechanisms that motivate people to do it anyway – for example funding that makes it possible to spend one weekday (20% FTE) on Open Source.
 
 Many of us contribute to Open Source as a break from corporate and for-profit life.
 So the Steward must _not_ support these communities the way a for-profit business would.
-Ecosystem participants are not hired, and don't receive a wage
+Ecosystem participants are not hired, and don't receive a wage.
 
-They are independent co-owners who receiving donations, with no strings attached beyond what is expected as a member.
+They are independent co-owners who receive donations, with no strings attached beyond what is expected as a member.
 And the Steward must never become another way to extract value from the communities it supports.
 
 Conveniently, the CRA also encourages Open Source Software Stewards to operate as non-profits.
@@ -199,10 +199,10 @@ As a non-profit, the Steward must use any surplus on:
 A co-operative is a member-owned legal entity, where any surplus from its operation is used for the benefit of its members.
 Co-operatives follow the seven [Rochdale Principles], as formulated by the International Co-operative Alliance:
 
-1. **Voluntary and open membership** – Co-operatives are voluntary organiseations, open to all persons able to use their services and willing to accept the responsibilities of membership, without gender, social, racial, political or religious discrimination.
-2. **Democratic member control** – Co-operatives are democratic organiseations controlled by their members, who actively participate in setting their policies and making decisions. Men and women serving as elected representatives are accountable to the membership. In primary co-operatives members have equal voting rights (one member, one vote) and co-operatives at other levels are also organised in a democratic manner.
+1. **Voluntary and open membership** – Co-operatives are voluntary organisations, open to all persons able to use their services and willing to accept the responsibilities of membership, without gender, social, racial, political or religious discrimination.
+2. **Democratic member control** – Co-operatives are democratic organisations controlled by their members, who actively participate in setting their policies and making decisions. Men and women serving as elected representatives are accountable to the membership. In primary co-operatives members have equal voting rights (one member, one vote) and co-operatives at other levels are also organised in a democratic manner.
 3. **Member economic participation** – Members contribute equitably to, and democratically control, the capital of their co-operative. At least part of that capital is usually the common property of the co-operative. Members usually receive limited compensation, if any, on capital subscribed as a condition of membership. Members allocate surpluses for any or all of the following purposes: developing their co-operative, possibly by setting up reserves, part of which at least would be indivisible; benefiting members in proportion to their transactions with the co-operative; and supporting other activities approved by the membership.
-4. **Autonomy and independence** – Co-operatives are autonomous, self-help organiseations controlled by their members. If they enter into agreements with other organiseations, including governments, or raise capital from external sources, they do so on terms that ensure democratic control by their members and maintain their co-operative autonomy.
+4. **Autonomy and independence** – Co-operatives are autonomous, self-help organisations controlled by their members. If they enter into agreements with other organisations, including governments, or raise capital from external sources, they do so on terms that ensure democratic control by their members and maintain their co-operative autonomy.
 5. **Education, training, and information** – Co-operatives provide education and training for their members, elected representatives, managers and employees so they can contribute effectively to the development of their co-operatives. They inform the general public – particularly young people and opinion leaders – about the nature and benefits of co-operation.
 6. **Cooperation among cooperatives** – Co-operatives serve their members most effectively and strengthen the co-operative movement by working together through local, national, regional and international structures.
 7. **Concern for community** – Co-operatives work for the sustainable development of their communities through policies approved by their members.
@@ -238,15 +238,15 @@ The Steward then confirms when the projects meet the compliance expectations, an
 
 This initial work is funded through a manufacturer enrollment fee, and sustained through the sale of the same attestations.
 
-To make this also an attractive path for maintainers to opt in, the Steward organiseation's ownership model and decision making processes are key, while preserving the continued independence of the maintainers.
+To make this also an attractive path for maintainers to opt in, the Steward organisation's ownership model and decision making processes are key, while at the same time preserve the continued independence of the maintainers.
 
 ## Value proposition for the OSS community
 
 1. By qualifying, and then opting in to become a member of the Steward, the community member becomes eligible to receive a portion of the Steward's surplus in the form of recurring donations
     * …where the donation amount is according to the Steward's disbursement formula,
-    * …up to a level capable of supporting their expenses, including covering a meaningful part of their full-time-equivalent work week living expenses.
+    * …up to a level that can cover their expenses, including a meaningful part of their living costs.
 1. Additionally, those who qualify as a _member in good standing_ – who take additional steps to ensure their _long-term_ viability, are eligible to receive additional donations, also in accordance with the disbursement formula.
-1. As a member, they also get an invitation to the Steward organiseation's General Assembly, where they can…
+1. As a member, they also get an invitation to the Steward organisation's General Assembly, where they can…
     * …propose surplus disbursement formulas,
     * …vote on which surplus disbursement formula on offer is to be used until the next General Assembly, and
     * …elect candidates to the board.
@@ -305,8 +305,8 @@ The CRA explicitly opens for such attestation programmes in [Recital (21)], [Rec
 1. **Acknowledging the Steward (once)** – The Steward notifies a market surveillance authority of its existence and intended scope. The authority verifies and acknowledges it, and issues a certificate the Steward can use to sign Voluntary Security Attestations with.
 1. **A manufacturer starts using a project (as needed)** – The manufacturer performs a risk assessment, and with due diligence reports its use of a project to the Steward. The Steward reports to the manufacturer the project's current status, and tells the project maintainer it is in use.
 1. **The project joins the Steward (once)** – If the maintainer wishes – they apply for their project to become a member of the Steward, by demonstrating the project is viable, compliant and intended for use in PwDE. The Steward affirms this, updates the project's status towards relevant manufacturers, and confirms membership is accepted.
-1. **The project maintainer issues an attestation (as needed)** – This attestation includes relevant viability and compliance claims suitable for demonstrating the project is _intended for use in commercial activities_.
-1. **Attesting the project (on a recurring schedule)** – The manufacturer requests a VSA for the project. The Steward reaffirms with the project that it is still compliant, signs the VSA, and sells it to the manufacturer. Part of the proceeds are donated to projects, communities and services in the ecosystem.
+1. **The project maintainer attests to their project's compliance and viability** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_.
+1. **The Steward signs the project's attestation (on a recurring schedule)** – The manufacturer requests a VSA for the project. The Steward reaffirms with the project that it is still compliant, signs the VSA, and sells it to the manufacturer. Part of the surplus is donated to projects, communities and services in the ecosystem, according to the Steward's disbursement formula.
 1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSA, which the authority can verify.
 
 
@@ -465,8 +465,9 @@ As of this writing, there are several outstanding tasks before this concept can 
 Each of these can and will be addressed in the coming months.
 
 * [ ] EU Commission publishes their delegated act on [Article 25].
-    * [ ] Adopt the funding model in this concept to any details published there.
+    * [ ] Adapt the funding model in this concept to any details published there.
 * [ ] Finish and present first draft of the OSS Ecosystem Steward [Societas cooperativa Europaea (SCE)] bylaws.
+    * [ ] Ensure that any legal and tax implications from the combination of selling attestations and donating to members are made clear, verified and taken care of.
 * [ ] Reach out to community organisers that have a legal entity registered for their feedback on this document, and offer them to become founding members.
 * [ ] Present this concept at relevant conferences
     * [x] [London Perl Workshop 2026](https://act.yapc.eu/lpw2026/talk/8062)

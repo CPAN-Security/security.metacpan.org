@@ -1,6 +1,7 @@
+{% assign locale = include.locale | default: site.locale %}
 {% assign entries_limit = include.entries_limit %}
 {% assign collection = include.collection | default: "news" %}
-{% assign entries = include.entries | default: site[collection] | where_exp: "post", "post.hidden != true" %}
+{% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
 
 {% if include.sort_by %}
   {% assign entries = entries | sort: include.sort_by %}
@@ -11,7 +12,7 @@
 {% endif %}
 
 {%- for post in entries limit:entries_limit -%}
-  {% include archive-single.html type=include.type %}
+  {% include archive-single.html locale=locale type=include.type %}
 {%- endfor -%}
 
 {%- if entries.size > entries_limit %}

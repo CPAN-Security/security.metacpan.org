@@ -32,6 +32,7 @@ See [guides/](guides/) for the full list of guides.
 * [CPAN Dependency Confusion (study)](cpan-dependency-confusion.md)
 * [CPAN StarJacking (study)](cpan-starjacking.md)
 * [Supply-chain SBOM roles and metadata overview](supplychain-sbom.md) ⚠️  DRAFT
+* NEW: [OSS Ecosystem Steward](ecosystem-steward.md) ⚠️  DRAFT
 
 ## Consultations and hearings
 

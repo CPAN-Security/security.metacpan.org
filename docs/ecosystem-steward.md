@@ -64,11 +64,11 @@ Many of the obligations falling on the manufacturer have implications for the Op
 | Obligation on the manufacturer | Example implication for upstream Open Source |
 |---|---|
 | The product must have a support period that matches its expected use (e.g. 5 years). ([Article 13(8)]) | Any Open Source component used in the product, or in its remote data processing solutions, should be supported for the same period. |
-| Security updates must remain available for at least 10 years after issuing, or until the support period ends, whichever is longer. ([Article 13(9)]) | Software update services that depend on Open Source need to stay secure and available for the same period. |
+| Security updates must remain available for at least 10 years after being issued, or until the support period ends, whichever is longer. ([Article 13(9)]) | Software update services that depend on Open Source need to stay secure and available for the same period. |
 | The product must have no known exploitable vulnerabilities while it is on the EU market. ([Annex I, Part I] (2)(a)) | The product must be updatable for its entire support period, including with relevant updates from its Open Source components. |
 | Information about the product must be complete, correct and not misleading. ([Article 64(4)]) | This includes any metadata provided in an SBOM, which also must be kept current with upstream projects (e.g. tracking changes in ownership, project name, version number schema, license, etc.) |
 | Vulnerabilities and fixes found must be shared with the upstream maintainer. ([Article 13(6)]) | Someone upstream needs to be available to receive, adopt and apply these fixes, ideally in a timely manner. |
-| The manufacturer is responsible for the security of the _entire_ product. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6]) |  There is no transfer of liability to Steward or Maintainer, so the liability remains with the Manufacturer, even for the Open Source components used in the product and in its remote data processing solutions, their transitive dependencies, and their metadata. |
+| The manufacturer is responsible for the security of the _entire_ product. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6]) | There is no transfer of liability to Steward or Maintainer, so the liability remains with the Manufacturer, even for the Open Source components used in the product and in its remote data processing solutions, their transitive dependencies, and their metadata. |
 | The manufacturer must perform a cybersecurity risk assessment, and exercise _due diligence_ when integrating components. ([Article 13], [Article 14]) | Depending on the number of products and their risk profiles, due diligence may cover _hundreds_ or _thousands_ of Open Source components. It also covers the long-term security posture, viability and concerns around the governance of those components – for the entire support period. |
 | Market Surveillance Authorities may evaluate the product, and if corrective action is insufficient, require it to be withdrawn or recalled from the market, or issue fines. ([Article 52], [Article 54]) | If a vulnerability in a product is discovered and exploited before the manufacturer has its _ducks in a row_, this can quickly become expensive. |
 
@@ -225,13 +225,13 @@ The key value proposition comes from the manufacturer's compliance needs that ar
 As part of this due diligence, the manufacturer should consider the following:
 
 1. **Intended for use in the course of a commercial activity**: Are the OSS projects used in the PwDE meeting the same "light-touch" compliance obligations Stewards have in the CRA?
-   1. Vulnerability and incident handling is documented and compliant
-   1. Maintainers and administrators are committed to be available to respond to emergencies in a timely manner
-   1. Security-critical metadata about the components are kept current, complete and correct
+    1. Vulnerability and incident handling is documented and compliant
+    1. Maintainers and administrators are committed to be available to respond to emergencies in a timely manner
+    1. Security-critical metadata about the components are kept current, complete and correct
 1. **Viable and sustained** for this use: Are these same projects likely to remain sustained for the duration of the product's support period?
-   1. Necessary policy, governance and support structures in place and adhered to
-   1. Suitable long-term commitments are on offer
-   1. Options for sustained funding from manufacturers are on offer, and the manufacturer is making use of these
+    1. Necessary policy, governance and support structures in place and adhered to
+    1. Suitable long-term commitments are on offer
+    1. Options for sustained funding from manufacturers are on offer, and the manufacturer is making use of these
 
 The Steward facilitates the needs uncovered during this due diligence by encouraging affected maintainers to opt in and take steps to meet at least the minimum of these needs, where required.
 The Steward then confirms when the projects meet the compliance expectations, and attests to this together with the maintainer.
@@ -302,11 +302,11 @@ Until the EU Commission publishes any details on the [Article 25] attestations, 
 A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer, signed by the Steward, limited to a series of supported releases, issued on a recurring basis for a limited time, attesting to the viability and intention of their Open Source project, for use in PwDE.
 The CRA explicitly opens for such attestation programmes in [Recital (21)], [Recital (117)], and [Article 25].
 
-1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope, and under which electronic identity it must be referred to by others.
+1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope, and which electronic identity it must be referred to by others, and the certificate it will be signing with.
 1. **A manufacturer starts using a project (as needed)** – The manufacturer performs a risk assessment, and with due diligence reports its use of a project to the Steward. The Steward reports to the manufacturer the project's current membership status, and tells the project maintainer its use has been reported.
 1. **The project joins the Steward (once)** – If the maintainer wishes – they apply for their project to become a member of the Steward, by demonstrating the project is viable, compliant and intended for use in PwDE, and by stating who their Steward is in the project's metadata, using the Steward's electronic identity. The Steward affirms this, confirms compliance, updates the project's membership status, and reports this status change to affected manufacturers.
 1. **The project maintainer attests to their project's compliance and viability (as needed)** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_.
-1. **The Steward signs the project's attestation (on a recurring schedule)** – The manufacturer verifies the VSA for the project, reaffirming that the project is still compliant, which release artifacts it applies to and the duration it is valid for. The Stewarrd then cryptographically signs the VSA using it's electronic identity, and makes it available available to the manufacturer for a fee. Any surplus from these sales are donated to projects, communities and services in accordance with the Steward's current disbursement formula.
+1. **The Steward signs the project's attestation (on a recurring schedule)** – The manufacturer verifies the VSA for the project, reaffirming that the project is still compliant, which release artifacts it applies to and the duration it is valid for. The Steward then cryptographically signs the VSA using its electronic identity, and makes it available to the manufacturer for a fee. Any surplus from these sales is donated to projects, communities and services in accordance with the Steward's current disbursement formula.
 1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSA, which the authority can verify.
 
 
@@ -469,7 +469,7 @@ Each of these can and will be addressed in the coming months.
 * [ ] Finish and present first draft of the OSS Ecosystem Steward [Societas cooperativa Europaea (SCE)] bylaws.
     * [ ] Ensure that any legal and tax implications from the combination of selling attestations and donating to members are made clear, verified and taken care of.
     * [ ] What happens if an attestation turns out to be false? Clarify and consider if this has to be addressed in the bylaws or somewhere else.
-    * [ ] Consider the implications of selling attestations – does this lead to the Steward risking be considered as a Manufacturer?
+    * [ ] Consider the implications of selling attestations – does this lead to the Steward risking being considered as a Manufacturer?
     * [ ] Are there any "anti trust law" implications somewhere here? (a concern raised by Gregor Bransky)
 * [ ] Reach out to community organisers that have a legal entity registered for their feedback on this document, and offer them to become founding members.
 * [ ] Present this concept at relevant conferences

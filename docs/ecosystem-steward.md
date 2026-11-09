@@ -64,7 +64,7 @@ Many of the obligations falling on the manufacturer have implications for the Op
 | Obligation on the manufacturer | Example implication for upstream Open Source |
 |---|---|
 | The product must have a support period that matches its expected use (e.g. 5 years). ([Article 13(8)]) | Any Open Source component used in the product, or in its remote data processing solutions, should be supported for the same period. |
-| Security updates must remain available for 10 years after published, or until the support period ends, whichever is longer. ([Article 13(9)]) | Software update services that depend on Open Source need to stay secure and available for the same period. |
+| Security updates must remain available for at least 10 years after issuing, or until the support period ends, whichever is longer. ([Article 13(9)]) | Software update services that depend on Open Source need to stay secure and available for the same period. |
 | The product must have no known exploitable vulnerabilities while it is on the EU market. ([Annex I, Part I] (2)(a)) | The product must be updatable for its entire support period, including with relevant updates from its Open Source components. |
 | Information about the product must be complete, correct and not misleading. ([Article 64(4)]) | This includes any metadata provided in an SBOM, which also must be kept current with upstream projects (e.g. tracking changes in ownership, project name, version number schema, license, etc.) |
 | Vulnerabilities and fixes found must be shared with the upstream maintainer. ([Article 13(6)]) | Someone upstream needs to be available to receive, adopt and apply these fixes, ideally in a timely manner. |
@@ -170,7 +170,7 @@ Why these three groups?
 ### Non-profit
 
 Open Source relies heavily on volunteer spirit, and on individual motivation to create something cool or make something cool happen.
-In Norway, we call this spirit "Dugnad" or "Dugnadsånd" – the willingness to help your neighbours improve something you share, or something placed in _the commons_.
+In Norway, we call this spirit "Dugnad" or "Dugnadsånd" – the willingness to help your neighbours improve something you share, or something found in _the commons_.
 Clean up the neighbourhood after a long winter.
 Renovate the local children's playground.
 Or, for your _digital neighbours_: contribute a fix for a vulnerability, organise a conference, or run a service everyone relies on.
@@ -367,7 +367,7 @@ swimlane-beta TB
     notifyExist["Notify Market Surveillance Authority of existence"]
     readyToSignVSA["Steward may now sign VSAs"]
     informOSSviability["Inform Manufacturer of project status"]
-    informOSSlegibility["Inform project of its use"]
+    informOSSeligibility["Inform project of its use"]
     verifyOSSviability["Affirm suitability for PwDE and willingness to issue VSA statements; update project status"]
     confirmOSSmembership["Confirm membership"]
     reaffirmOSSviability["Reaffirm statements in VSA"]
@@ -393,7 +393,7 @@ swimlane-beta TB
   end
 
   subgraph OSS [OSS Project / Maintainer]
-    isElegibleForMembership["Project is elegible for membership"]
+    isEligibleForMembership["Project is eligible for membership"]
     requestStewardMembership["Request Steward membership"]
     demonstrateOSSviability["Demonstrate OSS is suitable for PwDE"]
     isStewardMember["Project is member of Steward"]
@@ -405,10 +405,10 @@ swimlane-beta TB
   readyToSignVSA -.->|"later..."| signVSA
   %% As needed: Using an OSS project
   useOSS --\> assessOSS --\> reportOSSusage --\> informOSSviability
-  reportOSSusage --\> informOSSlegibility
-  informOSSlegibility --\> isElegibleForMembership
+  reportOSSusage --\> informOSSeligibility
+  informOSSeligibility --\> isEligibleForMembership
   %% Once: OSS project becomes Steward member
-  isElegibleForMembership -.->|"later..."| requestStewardMembership
+  isEligibleForMembership -.->|"later..."| requestStewardMembership
   requestStewardMembership --\> demonstrateOSSviability --\> verifyOSSviability --\> confirmOSSmembership --\> isStewardMember
   verifyOSSviability --\> confirmVSAavailability
   %% Sustaining schedule: attest OSS project is intended for PwDE

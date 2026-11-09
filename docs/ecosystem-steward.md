@@ -468,6 +468,9 @@ Each of these can and will be addressed in the coming months.
     * [ ] Adapt the funding model in this concept to any details published there.
 * [ ] Finish and present first draft of the OSS Ecosystem Steward [Societas cooperativa Europaea (SCE)] bylaws.
     * [ ] Ensure that any legal and tax implications from the combination of selling attestations and donating to members are made clear, verified and taken care of.
+    * [ ] What happens if an attestation turns out to be false? Clarify and consider if this has to be addressed in the bylaws or somewhere else.
+    * [ ] Consider the implications of selling attestations – does this lead to the Steward risking be considered as a Manufacturer?
+    * [ ] Are there any "anti trust law" implications somewhere here? (a concern raised by Gregor Bransky)
 * [ ] Reach out to community organisers that have a legal entity registered for their feedback on this document, and offer them to become founding members.
 * [ ] Present this concept at relevant conferences
     * [x] [London Perl Workshop 2026](https://act.yapc.eu/lpw2026/talk/8062)

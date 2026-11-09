@@ -243,13 +243,13 @@ To make this also an attractive path for maintainers to opt in, the Steward orga
 ## Value proposition for the OSS community
 
 1. By qualifying, and then opting in to become a member of the Steward, the community member becomes eligible to receive a portion of the Steward's surplus in the form of recurring donations
-    * …where the donation amount is according to the Steward's disbursement formula,
-    * …up to a level that can cover their expenses, including a meaningful part of their living costs.
+   * …where the donation amount is according to the Steward's disbursement formula,
+   * …up to a level that can cover their expenses, including a meaningful part of their living costs.
 1. Additionally, those who qualify as a _member in good standing_ – who take additional steps to ensure their _long-term_ viability, are eligible to receive additional donations, also in accordance with the disbursement formula.
 1. As a member, they also get an invitation to the Steward organisation's General Assembly, where they can…
-    * …propose surplus disbursement formulas,
-    * …vote on which surplus disbursement formula on offer is to be used until the next General Assembly, and
-    * …elect candidates to the board.
+   * …propose surplus disbursement formulas,
+   * …vote on which surplus disbursement formula on offer is to be used until the next General Assembly, and
+   * …elect candidates to the board.
 
 To qualify for Steward membership, the applicant has to:
 
@@ -465,14 +465,14 @@ As of this writing, there are several outstanding tasks before this concept can 
 Each of these can and will be addressed in the coming months.
 
 * [ ] EU Commission publishes their delegated act on [Article 25].
-    * [ ] Adapt the funding model in this concept to any details published there.
+   * [ ] Adapt the funding model in this concept to any details published there.
 * [ ] Finish and present first draft of the OSS Ecosystem Steward [Societas cooperativa Europaea (SCE)] bylaws.
-    * [ ] Ensure that any legal and tax implications from the combination of selling attestations and donating to members are made clear, verified and taken care of.
+   * [ ] Ensure that any legal and tax implications from the combination of selling attestations and donating to members are made clear, verified and taken care of.
 * [ ] Reach out to community organisers that have a legal entity registered for their feedback on this document, and offer them to become founding members.
 * [ ] Present this concept at relevant conferences
-    * [x] [London Perl Workshop 2026](https://act.yapc.eu/lpw2026/talk/8062)
-    * [x] [YAPC::Tokyo 2026](https://fortee.jp/yapc-tokyo-2026/proposal/71b322a4-14f5-42d9-bac6-18a9956019c4) (Link may be unavailable from EU: [Translation gist](https://chaos.social/@sjn/117344794232894183) on github)
-    * [ ] FOSDEM - TBD
+   * [x] [London Perl Workshop 2026](https://act.yapc.eu/lpw2026/talk/8062)
+   * [x] [YAPC::Tokyo 2026](https://fortee.jp/yapc-tokyo-2026/proposal/71b322a4-14f5-42d9-bac6-18a9956019c4) (Link may be unavailable from EU: [Translation gist](https://chaos.social/@sjn/117344794232894183) on github)
+   * [ ] FOSDEM - TBD
 * [ ] Fundraising for the required starting capital for the SCE
 
 

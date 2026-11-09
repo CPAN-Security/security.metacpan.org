@@ -4,8 +4,15 @@ title: "The OSS Ecosystem Steward"
 description: A proposal for a community-owned, non-profit co-operative acting as the CRA Open Source Software Steward for an entire ecosystem, such as Perl and CPAN
 author: sjn
 toc: true
+classes: wide
 mermaid: true
 ---
+
+> [!WARNING]
+> This document is a DRAFT, and still missing important details expected to be published by the EU Commission regarding the CRA Article 25 Attestation regime.
+>
+> Please return later! Any comments and concerns about the text is also quite welcome in the meantime.
+
 
 ## The concept, in three sentences
 
@@ -453,6 +460,17 @@ The Board may adjust it, and presents the final budget to the General Assembly f
 TBD: revenue, expenses and donations.
 
 -->
+
+## Acknowledgements
+
+The OSS Ecosystem Steward concept is the product of many conversations with many people. Some are mentioned here, and the ones that are not still have my gratitude.
+
+* Greg Wallace
+* Laurent Hosen
+* Arne Sommer
+* Stig Palmquist
+* Alistair Woodman
+* Æva Black
 
 ## References
 

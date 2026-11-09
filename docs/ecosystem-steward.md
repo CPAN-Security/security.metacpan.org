@@ -465,11 +465,11 @@ TBD: revenue, expenses and donations.
 
 The OSS Ecosystem Steward concept is the product of many conversations with many people. Some are mentioned here, and the ones that are not still have my gratitude.
 
+* Alistair Woodman
+* Arne Sommer
 * Greg Wallace
 * Laurent Hosen
-* Arne Sommer
 * Stig Palmquist
-* Alistair Woodman
 * Æva Black
 
 ## References

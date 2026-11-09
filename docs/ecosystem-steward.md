@@ -47,11 +47,11 @@ The rest of this document explains why this is needed and how it could work:
 1. [Funding model](#funding-model) – revenue sources for creating a surplus
 
 
-# Background: The CRA and Open Source
+## Background: The CRA and Open Source
 
 When the [(EU) Regulation 2024/2847 (Cyber Resilience Act)] comes fully into effect on 11 December 2027, businesses that want to be compliant must perform a number of security-related tasks for each of their CE-marked products, and for the remote data processing solutions those products rely on.
 
-## What is in scope?
+### What is in scope?
 
 The details of what is in scope are beyond this document, but the [CRA Guidance] (e.g. [CRA Guidance chapter 2]) and the [CRA FAQ] (e.g. [CRA FAQ 1.1.2]) cover it in depth.
 
@@ -159,11 +159,11 @@ From these questions, we arrive at the following criteria.
 1. **Ensure member projects, services and communities remain fully self-owned and independent** so that members remain in control of their project.
 
 
-# The proposal: A community-owned non-profit co-operative
+## The proposal: A community-owned non-profit co-operative
 
 An _OSS Ecosystem Steward_ is a community-owned non-profit co-operative, set up to support the people in the ecosystem who are affected by the CRA, and who wish to help improve their users' security posture.
 
-## Community owned
+### Community owned
 
 The project maintainers, service administrators and community organisers who _voluntarily choose to opt in_ become the _owners_ of their Ecosystem Steward.
 Here, it is important to acknowledge that Open Source projects are not alone in ensuring the overall health and security posture of their software and ecosystem.
@@ -173,7 +173,7 @@ If you are an active participant in the ecosystem, and affected by the CRA, you 
 * **Service administrators** – because manufacturers and maintainers alike rely on their services to publish, identify, download, resolve, test, discuss and learn about the software they use. These services have to remain available and secured for everyone using them.
 * **Community organisers** – because there is no real Open Source without the meetings, conferences, workshops, summits, tutorials, stands and other venues where networks of trust and support are built, where we can learn and teach the skills we need.
 
-## Non-profit
+### Non-profit
 
 Open Source relies heavily on volunteer spirit, and on individual motivation to create something cool or make something cool happen.
 In Norway, we call this spirit "Dugnad" or "Dugnadsånd" – the willingness to help your neighbours improve something you share, or something placed in _the commons_.
@@ -199,7 +199,7 @@ As a non-profit, the Steward must use any surplus on:
 1. **Non-member support donations**, according to a disbursement formula decided by the General Assembly.
 1. **Re-investment into the Steward itself**, according to a disbursement formula decided by the General Assembly.
 
-## Co-operative
+### Co-operative
 
 A co-operative is a member-owned legal entity, where any surplus from its operation is used for the benefit of its members.
 Co-operatives follow the seven [Rochdale Principles], as formulated by the International Co-operative Alliance:
@@ -214,7 +214,7 @@ Co-operatives follow the seven [Rochdale Principles], as formulated by the Inter
 
 These principles map directly onto the design criteria above: voluntary membership, fair and democratic governance, and a surplus used for the benefit of the community.
 
-### A note on the co-op legal form
+#### A note on the co-op legal form
 
 The Ecosystem Steward would additionally do well to be set up as a _European Cooperative Society_ ([Societas cooperativa Europaea (SCE)]).
 
@@ -276,7 +276,7 @@ If a project's membership criteria are fulfilled at some point later, they may o
 TBD
 
 
-# Funding model
+## Funding model
 
 Addressing the CRA's implications should not be expected to happen on a volunteer basis.
 The Steward must therefore:
@@ -286,7 +286,7 @@ The Steward must therefore:
 1. in a long-term sustainable way,
 1. that helps achieve and maintain the security posture manufacturers require for their products to remain compliant.
 
-## Revenue sources
+### Revenue sources
 
 1. **Public funding** – until the Steward operation is established and proven sustainable.
 1. **Enrollment fees** – paid by manufacturers when enrolling, and when re-enrolling.
@@ -294,7 +294,7 @@ The Steward must therefore:
 
 **The Steward should _not_ accept donations or public funding** once it's operation is capable of producing a surplus on it's own.
 
-## Voluntary Security Attestations
+### Voluntary Security Attestations
 
 > [!WARNING]
 > As of 2026-11-08, the EU Commission hasn't published any guidance or delegated act on the Article 25 Attestation regime.
@@ -466,7 +466,7 @@ TBD: revenue, expenses and donations.
 
 -->
 
-# The way forward
+## The next steps (TODO)
 
 As of this writing, there are several outstanding tasks before this concept can be put into effect.
 Each of these can and will be addressed in the coming months.

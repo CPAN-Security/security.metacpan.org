@@ -14,11 +14,11 @@ mermaid: true
 > Please return later! Any comments and concerns about the text is also quite welcome in the meantime.
 
 
-## The concept, in two sentences
+## The concept, in three sentences
 
 1. A maintainers' co-op, owned by the people who serve and take care of a volunteer-based software ecosystem's projects, services, and communities.
 1. Companies pay it for proof that the code and ecosystem they rely on is looked after, and the money goes back to the people who look after it.
-1. Maintainers receive support for the additional work needed, while retaining full control of their project.
+1. Maintainers receive support for the additional work needed, while retaining full control of their project, enjoying doing what they wish on a _dugnad_ basis.
 
 
 ## Summary
@@ -34,9 +34,9 @@ This document proposes a variant of this organisation, designed for that scale: 
 ### Key features
 
 * **Community-owned** – owned by ecosystem participants: the project maintainers, service administrators and community organisers who choose to join.
-* **Co-operative** – democratically governed, with voluntary, opt-in membership that allow ecosystem participants to leave and rejoin.
+* **Co-operative** – democratically governed, with voluntary, opt-in membership that allows ecosystem participants to leave and rejoin.
 * **Non-profit** – any surplus goes back to the projects, services and communities in the co-op and the ecosystem.
-* **Funded by manufacturers** – mainly through enrollment fees and recurring _Voluntary Security Attestations_, which help manufacturers show their market surveillance authorities that the Open Source projects they rely on are both supported and viable for use in their products.
+* **Funded by manufacturers** – mainly through enrolment fees and recurring _Voluntary Security Attestations_, which help manufacturers show their market surveillance authorities that the Open Source projects they rely on are both supported and viable for use in their products.
 * **Dedicated to improving the long-term sustainability and security posture of its OSS communities** – by donating enough of its surplus to fund a meaningful part of a working week per maintainer, administrator or organiser.
 
 
@@ -64,7 +64,7 @@ Many of the obligations falling on the manufacturer have implications for the Op
 | Obligation on the manufacturer | Example implication for upstream Open Source |
 |---|---|
 | The product must have a support period that matches its expected use (e.g. 5 years). ([Article 13(8)]) | Any Open Source component used in the product, or in its remote data processing solutions, should be supported for the same period. |
-| Security updates must remain available for up to 10 years after published, or until the support period ends, whichever is longer. ([Article 13(9)]) | Software update services that depend on Open Source should be kept secure for an _additional 5 years_. |
+| Security updates must remain available for 10 years after published, or until the support period ends, whichever is longer. ([Article 13(9)]) | Software update services that depend on Open Source need to stay secure and available for the same period. |
 | The product must have no known exploitable vulnerabilities while it is on the EU market. ([Annex I, Part I] (2)(a)) | The product must be updatable for its entire support period, including with relevant updates from its Open Source components. |
 | Information about the product must be complete, correct and not misleading. ([Article 64(4)]) | This includes any metadata provided in an SBOM, which also must be kept current with upstream projects (e.g. tracking changes in ownership, project name, version number schema, license, etc.) |
 | Vulnerabilities and fixes found must be shared with the upstream maintainer. ([Article 13(6)]) | Someone upstream needs to be available to receive, adopt and apply these fixes, ideally in a timely manner. |
@@ -236,9 +236,9 @@ As part of this due diligence, the manufacturer should consider the following:
 The Steward facilitates the needs uncovered during this due diligence by encouraging affected maintainers to opt in and take steps to meet these needs where required.
 The Steward then confirms when the projects meet the compliance expectations, and attests to this together with the maintainer.
 
-This initial work is funded through a manufacturer enrollment fee, and sustained through the sale of the same attestations.
+This initial work is funded through a manufacturer enrolment fee, and sustained through the sale of the same attestations.
 
-To make this also an attractive path for maintainers to opt in, the Steward organisation's ownership model and decision making processes are key, while at the same time preserve the continued independence of the maintainers.
+To make this also an attractive path for maintainers to opt in, the Steward organisation's ownership model and decision making processes are key, as is preserving the maintainers' continued independence.
 
 ## Value proposition for the OSS community
 
@@ -283,7 +283,7 @@ The Steward must therefore operate in a way so its revenue sources generate a su
 ### Revenue sources
 
 1. **Public funding** – until the Steward operation is established and proven sustainable.
-1. **Enrollment fees** – paid by manufacturers when enrolling, and when re-enrolling.
+1. **Enrolment fees** – paid by manufacturers when enrolling, and when re-enrolling.
 1. **Voluntary Security Attestations** – issued on a recurring (subscription) basis. (See below)
 
 **The Steward should eventually _not_ require donations or public funding** once its regular revenue sources are capable of producing a surplus suitable for its purpose.
@@ -305,7 +305,7 @@ The CRA explicitly opens for such attestation programmes in [Recital (21)], [Rec
 1. **Acknowledging the Steward (once)** – The Steward notifies a market surveillance authority of its existence and intended scope. The authority verifies and acknowledges it, and issues a certificate the Steward can use to sign Voluntary Security Attestations with.
 1. **A manufacturer starts using a project (as needed)** – The manufacturer performs a risk assessment, and with due diligence reports its use of a project to the Steward. The Steward reports to the manufacturer the project's current status, and tells the project maintainer it is in use.
 1. **The project joins the Steward (once)** – If the maintainer wishes – they apply for their project to become a member of the Steward, by demonstrating the project is viable, compliant and intended for use in PwDE. The Steward affirms this, updates the project's status towards relevant manufacturers, and confirms membership is accepted.
-1. **The project maintainer attests to their project's compliance and viability** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_.
+1. **The project maintainer attests to their project's compliance and viability (as needed)** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_.
 1. **The Steward signs the project's attestation (on a recurring schedule)** – The manufacturer requests a VSA for the project. The Steward reaffirms with the project that it is still compliant, signs the VSA, and sells it to the manufacturer. Part of the surplus is donated to projects, communities and services in the ecosystem, according to the Steward's disbursement formula.
 1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSA, which the authority can verify.
 
@@ -393,7 +393,7 @@ swimlane-beta TB
   end
 
   subgraph OSS [OSS Project / Maintainer]
-    isLegibleForMembership["Project is elegible for membership"]
+    isElegibleForMembership["Project is elegible for membership"]
     requestStewardMembership["Request Steward membership"]
     demonstrateOSSviability["Demonstrate OSS is suitable for PwDE"]
     isStewardMember["Project is member of Steward"]
@@ -406,9 +406,9 @@ swimlane-beta TB
   %% As needed: Using an OSS project
   useOSS --\> assessOSS --\> reportOSSusage --\> informOSSviability
   reportOSSusage --\> informOSSlegibility
-  informOSSlegibility --\> isLegibleForMembership
+  informOSSlegibility --\> isElegibleForMembership
   %% Once: OSS project becomes Steward member
-  isLegibleForMembership -.->|"later..."| requestStewardMembership
+  isElegibleForMembership -.->|"later..."| requestStewardMembership
   requestStewardMembership --\> demonstrateOSSviability --\> verifyOSSviability --\> confirmOSSmembership --\> isStewardMember
   verifyOSSviability --\> confirmVSAavailability
   %% Sustaining schedule: attest OSS project is intended for PwDE
@@ -428,7 +428,7 @@ swimlane-beta TB
 1. **Staff** (4–9 FTE, including employer's taxes and vacation)
     1. 1–3 Software developers (membership & manufacturer management; donation management; attestation issuance; etc.)
     1. 1 Primary contact for member communities (member/developer relations and support)
-    1. 1 Primary contact for manufacturers (sales and enrollment support)
+    1. 1 Primary contact for manufacturers (sales and enrolment support)
     1. 0–1 Primary contact for market surveillance authorities (legal)
     1. 0–1 Training & communications (member security awareness & training)
     1. 0–1 Treasurer & fundraising (CFO)

@@ -51,7 +51,9 @@ The details of what is in scope are beyond this document, but the [CRA Guidance]
 In short, the CRA applies to _both_ digital and physical products placed on the EU market _in the course of a commercial activity_.
 This includes their remote data processing solutions – e.g. online services or APIs the product needs to function as expected.
 
-_This includes phone apps, their server components, and any other solutions used to keep the product updated, secure and compliant_.
+> [!IMPORTANT]
+> This includes phone apps, their server components, and any other solutions used to keep the product updated, secure and compliant.
+
 
 ## The problem: Manufacturer obligations that reach upstream Open Source projects
 
@@ -100,7 +102,7 @@ In practice, the Steward's main purpose is to help Open Source projects improve 
 
 ### Why this is hard for an entire ecosystem
 
-For smaller, well-organised communities – e.g. those already supported by a foundation – the Steward's tasks are quite manageable. 
+For smaller, well-organised communities – e.g. those already supported by a foundation – the Steward's tasks are quite manageable.
 Even the largest Open Source foundations support projects numbering in the tens or hundreds, and even then they have the benefit of being able to impose policies onto the projects in their care.
 
 For an _ecosystem_ like CPAN, the picture is very different.
@@ -204,12 +206,14 @@ Co-operatives follow the seven [Rochdale Principles], as formulated by the Inter
 
 These principles map directly onto the design criteria above: voluntary membership, fair and democratic governance, and a surplus used for the benefit of the community.
 
-### Legal form
+#### A note on the co-op legal form
 
 The Ecosystem Steward would additionally do well to be set up as a _European Cooperative Society_ ([Societas cooperativa Europaea (SCE)]).
+
 This lets it operate under a single EEA-wide set of rules, and allows it to move its headquarters to the member state where it is most likely to succeed in its non-profit mission.
 
-Details on articles of association, bylaws and such, will be published later.
+> [!NOTE]
+> Details on articles of association, bylaws and such, will be published later.
 
 
 ## Value proposition for manufacturers
@@ -281,9 +285,11 @@ The Steward must therefore:
 ### Voluntary Security Attestations
 
 > [!WARNING]
-> As of 2026-11-08, the EU Commission hasn't published any guidance or delegated act on the [Article 25] Attestation regime.
+> As of 2026-11-08, the EU Commission hasn't published any guidance or delegated act on the Article 25 Attestation regime.
 > Until anything is published, the following is a _speculation_ on how this regime may work.
+>
 > With this said, there aren't really that many ways of using an attestation regime in service of the requirements in the CRA.
+>
 > An attestation regime that doesn't allow for any avenues to sustain the open source projects relevant for PwDE, would be useless at providing any motivation for OSS maintainers to voluntarily play along.
 
 Until the EU Commission publishes any details on the [Article 25] attestations, we assume the following:

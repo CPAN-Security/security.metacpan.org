@@ -18,7 +18,7 @@ mermaid: true
 
 1. A maintainers' co-op, owned by the people who serve and take care of a volunteer-based software ecosystem's projects, services, and communities.
 1. Companies pay it for proof that the code and ecosystem they rely on is looked after, and the money goes back to the people who look after it.
-1. Maintainers receive support for the additional work needed, while retaining full control of their project, enjoying doing what they wish on a _dugnad_ basis.
+1. Maintainers receive support for the additional work needed, while retaining full control of their project, enjoying doing what they wish on a _dugnad_ basis (the Danish and Norwegian tradition of neighbours pitching in on shared work).
 
 
 ## Summary
@@ -170,7 +170,7 @@ Why these three groups?
 ### Non-profit
 
 Open Source relies heavily on volunteer spirit, and on individual motivation to create something cool or make something cool happen.
-In Norway, we call this spirit "Dugnad" or "Dugnadsånd" – the willingness to help your neighbours improve something you share, or something found in _the commons_.
+In Norway, we call this spirit "dugnad" or "dugnadsånd" – the willingness to help your neighbours improve something you share, or something found in _the commons_.
 Clean up the neighbourhood after a long winter.
 Renovate the local children's playground.
 Or, for your _digital neighbours_: contribute a fix for a vulnerability, organise a conference, or run a service everyone relies on.

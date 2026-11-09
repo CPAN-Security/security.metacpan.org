@@ -1,6 +1,7 @@
 <script type="module">
   // import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.3/dist/mermaid.esm.min.mjs';
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@12.0.0/dist/mermaid.esm.min.mjs';
+  // import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@12.0.0/dist/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@12.3.0/dist/mermaid.esm.min.mjs';
   mermaid.initialize({
       startOnLoad:false,
       supressErrors:false,
@@ -16,6 +17,9 @@
       state:{
               useMaxWidth:true,
               messageAlign: 'left'
+          },
+      swimlane:{
+              useMaxWidth:true
           }
   });
 

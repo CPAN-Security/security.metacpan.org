@@ -233,7 +233,7 @@ As part of this due diligence, the manufacturer should consider the following:
    1. Suitable long-term commitments are on offer
    1. Options for sustained funding from manufacturers are on offer, and the manufacturer is making use of these
 
-The Steward facilitates the needs uncovered during this due diligence by encouraging affected maintainers to opt in and take steps to meet these needs where required.
+The Steward facilitates the needs uncovered during this due diligence by encouraging affected maintainers to opt in and take steps to meet at least the minimum of these needs, where required.
 The Steward then confirms when the projects meet the compliance expectations, and attests to this together with the maintainer.
 
 This initial work is funded through a manufacturer enrolment fee, and sustained through the sale of the same attestations.
@@ -294,19 +294,19 @@ The Steward must therefore operate in a way so its revenue sources generate a su
 > As of 2026-11-08, the EU Commission hasn't published any guidance or delegated act on the Article 25 Attestation regime.
 > Until anything is published, the following is a _speculation_ on how this regime may work.
 
-With this said, there aren't really that many ways of using an attestation regime in service of the requirements in the CRA.
+With this said, there aren't really _that_ many ways of using an attestation regime in service of the requirements in the CRA.
 An attestation regime that doesn't allow for any avenues to sustain the open source projects relevant for PwDE, would be useless at providing any motivation for OSS maintainers to voluntarily play along.
 
 Until the EU Commission publishes any details on the [Article 25] attestations, we assume the following:
 
-A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer, signed by the Steward, attesting to the viability and intention of their Open Source project, for use in PwDE.
+A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer, signed by the Steward, limited to a series of supported releases, issued on a recurring basis for a limited time, attesting to the viability and intention of their Open Source project, for use in PwDE.
 The CRA explicitly opens for such attestation programmes in [Recital (21)], [Recital (117)], and [Article 25].
 
-1. **Acknowledging the Steward (once)** – The Steward notifies a market surveillance authority of its existence and intended scope. The authority verifies and acknowledges it, and issues a certificate the Steward can use to sign Voluntary Security Attestations with.
-1. **A manufacturer starts using a project (as needed)** – The manufacturer performs a risk assessment, and with due diligence reports its use of a project to the Steward. The Steward reports to the manufacturer the project's current status, and tells the project maintainer it is in use.
-1. **The project joins the Steward (once)** – If the maintainer wishes – they apply for their project to become a member of the Steward, by demonstrating the project is viable, compliant and intended for use in PwDE. The Steward affirms this, updates the project's status towards relevant manufacturers, and confirms membership is accepted.
+1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope, and under which electronic identity it must be referred to by others.
+1. **A manufacturer starts using a project (as needed)** – The manufacturer performs a risk assessment, and with due diligence reports its use of a project to the Steward. The Steward reports to the manufacturer the project's current membership status, and tells the project maintainer its use has been reported.
+1. **The project joins the Steward (once)** – If the maintainer wishes – they apply for their project to become a member of the Steward, by demonstrating the project is viable, compliant and intended for use in PwDE, and by stating who their Steward is in the project's metadata, using the Steward's electronic identity. The Steward affirms this, confirms compliance, updates the project's membership status, and reports this status change to affected manufacturers.
 1. **The project maintainer attests to their project's compliance and viability (as needed)** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_.
-1. **The Steward signs the project's attestation (on a recurring schedule)** – The manufacturer requests a VSA for the project. The Steward reaffirms with the project that it is still compliant, signs the VSA, and sells it to the manufacturer. Part of the surplus is donated to projects, communities and services in the ecosystem, according to the Steward's disbursement formula.
+1. **The Steward signs the project's attestation (on a recurring schedule)** – The manufacturer verifies the VSA for the project, reaffirming that the project is still compliant, which release artifacts it applies to and the duration it is valid for. The Stewarrd then cryptographically signs the VSA using it's electronic identity, and makes it available available to the manufacturer for a fee. Any surplus from these sales are donated to projects, communities and services in accordance with the Steward's current disbursement formula.
 1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSA, which the authority can verify.
 
 
@@ -484,6 +484,7 @@ The OSS Ecosystem Steward concept is the product of many conversations with many
 * Arne Sommer
 * Greg Wallace
 * Laurent Hosen
+* Lukas Kahwe Smith
 * Stig Palmquist
 * Æva Black
 

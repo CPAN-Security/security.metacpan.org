@@ -14,10 +14,10 @@ mermaid: true
 > Please return later! Any comments and concerns about the text is also quite welcome in the meantime.
 
 
-## The concept, in three sentences
+## The concept, in two sentences
 
-* A maintainer's co-op, owned by the people who serve and take cake of an volunteer-based software ecosystem's projects,  services, and communities.
-* Companies pay it for proof that the code and ecosystem they rely on is looked after, and the money goes back to the people who look after it.
+1. A maintainer's co-op, owned by the people who serve and take cake of an volunteer-based software ecosystem's projects,  services, and communities.
+1. Companies pay it for proof that the code and ecosystem they rely on is looked after, and the money goes back to the people who look after it.
 
 
 ## Summary
@@ -47,11 +47,11 @@ The rest of this document explains why this is needed and how it could work:
 1. [Funding model](#funding-model) – revenue sources for creating a surplus
 
 
-## Background: The CRA and Open Source
+# Background: The CRA and Open Source
 
 When the [(EU) Regulation 2024/2847 (Cyber Resilience Act)] comes fully into effect on 11 December 2027, businesses that want to be compliant must perform a number of security-related tasks for each of their CE-marked products, and for the remote data processing solutions those products rely on.
 
-### What is in scope?
+## What is in scope?
 
 The details of what is in scope are beyond this document, but the [CRA Guidance] (e.g. [CRA Guidance chapter 2]) and the [CRA FAQ] (e.g. [CRA FAQ 1.1.2]) cover it in depth.
 
@@ -73,7 +73,7 @@ Many of the obligations falling on the manufacturer have implications for the Op
 | The product must have a support period that matches its expected use (e.g. 5 years). ([Article 13(8)]) | Any Open Source component used in the product, or in its remote data processing solutions, should be supported for the same period. |
 | Security updates must remain available for 5 years after the support period ends. ([Article 13(9)]) | Software update services that depend on Open Source should be kept secure for an _additional 5 years_. |
 | The product must have no known exploitable vulnerabilities while it is on the EU market. ([Annex I, Part I] (2)(a)) | The product must be updatable for its entire support period, including with relevant updates from its Open Source components. |
-| Product metadata (including the SBOM) must be complete, correct and not misleading. ([Article 64(4)]) | Metadata must be kept current with upstream projects, e.g. changes in ownership, project name, version number schema, license. |
+| Information about the product must be complete, correct and not misleading. ([Article 64(4)]) | This includes any metadata provided in an SBOM, which also must be kept current with upstream projects (e.g. tracking changes in ownership, project name, version number schema, license, etc.) |
 | Vulnerabilities and fixes found must be shared with the upstream maintainer. ([Article 13(6)]) | Someone upstream needs to be available to receive, adopt and apply these fixes, ideally in a timely manner. |
 | The manufacturer is responsible for the security of the _entire_ product. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6]) | This _includes_ the Open Source components used in the product and in its remote data processing solutions. |
 | The manufacturer must perform a cybersecurity risk assessment, and exercise _due diligence_ when integrating components. ([Article 13], [Article 14]) | Depending on the number of products and their risk profiles, due diligence may cover _hundreds_ or _thousands_ of Open Source components. It also covers the long-term security posture, viability and concerns around the governance of those components – for the entire support period. |
@@ -107,7 +107,7 @@ The CRA defines a new legal category – the _Open Source Software Steward_ – 
 
 In practice, the Steward's main purpose is to help Open Source projects improve their long-term security posture, and their viability for use in CE-marked products.
 
-### Why this is hard for an entire ecosystem
+## Why this is hard for an entire ecosystem
 
 For smaller, well-organised communities – e.g. those already supported by a foundation – the Steward's tasks are quite manageable.
 Even the largest Open Source foundations support projects numbering in the tens or hundreds, and even then they have the benefit of being able to impose policies onto the projects in their care.
@@ -120,7 +120,7 @@ To make it worse, there are further complications for CPAN specifically:
 
 * **No existing candidate** – The greater CPAN ecosystem has no existing organization that is willing, competent and able to take on the Steward role.
 * **A laissez-faire tradition** – The CPAN community has long operated in a _laissez-faire_ way, letting each individual decide for themselves whether to act or not. Any Steward must respect this.
-* **A fiercely independent culture** – Many maintainers look with scepticism at any centralizing "authority", which has been acknowledged for decades with the Perl Foundation's "hands-off" and "servant leadership" philosophy for supporting the community. Imposing even basic requirements like security policies or viability requirements on projects, is therefore quite unrealistic.
+* **A fiercely independent culture** – Many maintainers look with scepticism at any centralizing "authority", which has been acknowledged for decades with the Perl and Raku Foundation's "hands-off" and "servant leadership" philosophy for supporting the community. Imposing even basic requirements like security policies or viability requirements on projects, is therefore quite unrealistic.
 
 So instead of trying to fit the Steward's tasks onto existing governance structures, we ask a different question:
 
@@ -148,21 +148,22 @@ From these questions, we arrive at the following criteria.
 1. **Be a non-profit**, dedicated to supporting its communities.
 1. **Be community owned**, allowing individuals and communities affected by CRA to have a say in how this may affect them positively.
 1. **Be governed fairly**, through a transparent and democratic decision-making structure.
-1. **Limit its scope** so it only applies to projects, services and communities that are _actually in use_ by manufacturers, or that otherwise offer a service benefiting the community.
 1. **Be freely joinable and leavable** at will by anyone in the community affected by the CRA.
 1. **Limit imposing obligations on members to the minimum** required so they may continue managing their projects as they wish, but from now with project viability, security and compliance needs of their users sufficiently covered.
+1. **Membership is proof of viability** by fulfilling the membership criteria that are directly relevant for viability and compliance.
 1. **Operate as a business**, generating a surplus by selling compliance-relevant security attestations, capable of sustaining its communities through donations.
 1. **Work well with outside parties** to fulfil its obligations towards market surveillance authorities, manufacturers and others.
 1. **Do not accept donations** and instead aim to create an _additional_ source of funding, suitable for OPEX budget line items of manufacturers wishing to remain compliant.
 1. **Be able to support others** inside, upstream and downstream of the ecosystem – including projects, services and communities we rely on, but that are easily forgotten or "hidden" in the dependency graph.
+1. **Limit its scope** so it only applies to projects, services and communities that are _actually in use_ by manufacturers, or that otherwise offer a service benefiting the community.
 1. **Ensure member projects, services and communities remain fully self-owned and independent** so that members remain in control of their project.
 
 
-## The proposal: A community-owned non-profit co-operative
+# The proposal: A community-owned non-profit co-operative
 
 An _OSS Ecosystem Steward_ is a community-owned non-profit co-operative, set up to support the people in the ecosystem who are affected by the CRA, and who wish to help improve their users' security posture.
 
-### Community owned
+## Community owned
 
 The project maintainers, service administrators and community organisers who _voluntarily choose to opt in_ become the _owners_ of their Ecosystem Steward.
 Here, it is important to acknowledge that Open Source projects are not alone in ensuring the overall health and security posture of their software and ecosystem.
@@ -172,7 +173,7 @@ If you are an active participant in the ecosystem, and affected by the CRA, you 
 * **Service administrators** – because manufacturers and maintainers alike rely on their services to publish, identify, download, resolve, test, discuss and learn about the software they use. These services have to remain available and secured for everyone using them.
 * **Community organisers** – because there is no real Open Source without the meetings, conferences, workshops, summits, tutorials, stands and other venues where networks of trust and support are built, where we can learn and teach the skills we need.
 
-### Non-profit
+## Non-profit
 
 Open Source relies heavily on volunteer spirit, and on individual motivation to create something cool or make something cool happen.
 In Norway, we call this spirit "Dugnad" or "Dugnadsånd" – the willingness to help your neighbours improve something you share, or something placed in _the commons_.
@@ -198,7 +199,7 @@ As a non-profit, the Steward must use any surplus on:
 1. **Non-member support donations**, according to a disbursement formula decided by the General Assembly.
 1. **Re-investment into the Steward itself**, according to a disbursement formula decided by the General Assembly.
 
-### Co-operative
+## Co-operative
 
 A co-operative is a member-owned legal entity, where any surplus from its operation is used for the benefit of its members.
 Co-operatives follow the seven [Rochdale Principles], as formulated by the International Co-operative Alliance:
@@ -213,7 +214,7 @@ Co-operatives follow the seven [Rochdale Principles], as formulated by the Inter
 
 These principles map directly onto the design criteria above: voluntary membership, fair and democratic governance, and a surplus used for the benefit of the community.
 
-#### A note on the co-op legal form
+### A note on the co-op legal form
 
 The Ecosystem Steward would additionally do well to be set up as a _European Cooperative Society_ ([Societas cooperativa Europaea (SCE)]).
 
@@ -244,7 +245,7 @@ This initial work is funded through a manufacturer enrollment fee, and sustained
 
 To make this also an attractive path for maintainers to opt in, the Steward organization's ownership model and decision making processes are key, while preserving the continued independence of the maintainers.
 
-## Value proposition for the community
+## Value proposition for the OSS community
 
 1. By qualifying, and then opting in to become a member of the Steward, the community member becomes eligible to receive a portion of the Steward's surplus in the form of recurring donations
     * …where the donation amount is according to the Steward's disbursement formula,
@@ -266,12 +267,16 @@ To qualify for Steward membership, the applicant has to:
 * Commit to improve their project long-term viability and governance, including publishing succession and sunset plans and policies.
 * As long as they are a member, take part in issuing voluntary security attestations confirming the claims above, and allow the Steward to use these attestations to generate the surplus needed for this venture to fulfil its purpose.
 
-If a project fails to any of the criteria above, the projects an opportunity to rectify this in a timely manner – or failing this – risk losing their membership.
-Manufacturers will be notified by the Steward of any relevant, substantial or long-term changes, so they may conduct a risk assessment and act accordingly.
+If a project fails to any of the criteria above, the projects get an opportunity to rectify this in a timely manner – or failing that – risk losing their membership.
+Manufacturers will be notified by the Steward of any relevant, substantial or long-term changes like these, so they may conduct a risk assessment and act accordingly.
 If a project's membership criteria are fulfilled at some point later, they may of course freely apply for membership again.
 
+## Value proposition for the Market Authorities
 
-## Funding model
+TBD
+
+
+# Funding model
 
 Addressing the CRA's implications should not be expected to happen on a volunteer basis.
 The Steward must therefore:
@@ -281,7 +286,7 @@ The Steward must therefore:
 1. in a long-term sustainable way,
 1. that helps achieve and maintain the security posture manufacturers require for their products to remain compliant.
 
-### Revenue sources
+## Revenue sources
 
 1. **Public funding** – until the Steward operation is established and proven sustainable.
 1. **Enrollment fees** – paid by manufacturers when enrolling, and when re-enrolling.
@@ -289,7 +294,7 @@ The Steward must therefore:
 
 **The Steward should _not_ accept donations or public funding** once it's operation is capable of producing a surplus on it's own.
 
-### Voluntary Security Attestations
+## Voluntary Security Attestations
 
 > [!WARNING]
 > As of 2026-11-08, the EU Commission hasn't published any guidance or delegated act on the Article 25 Attestation regime.
@@ -461,7 +466,7 @@ TBD: revenue, expenses and donations.
 
 -->
 
-## The way forward
+# The way forward
 
 As of this writing, there are several outstanding tasks before this concept can be put into effect.
 Each of these can and will be addressed in the coming months.

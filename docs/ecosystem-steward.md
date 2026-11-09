@@ -59,7 +59,7 @@ In short, the CRA applies to _both_ digital and physical products placed on the 
 This includes their remote data processing solutions – e.g. online services or APIs the product needs to function as expected.
 
 > [!IMPORTANT]
-> This includes phone apps, their server components, and any other solutions used to keep the product updated, secure and compliant.
+> This includes **phone apps**, their **server components**, and any other solutions used to keep the product updated, secure and compliant.
 
 
 ## The problem: Manufacturer obligations that reach upstream Open Source projects

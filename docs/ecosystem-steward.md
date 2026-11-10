@@ -4,6 +4,7 @@ title: "The OSS Ecosystem Steward"
 description: A proposal for a community-owned, non-profit co-operative acting as the CRA Open Source Software Steward for an entire ecosystem, such as Perl and CPAN
 author: sjn
 toc: true
+date: 2026-11-10 09:00:00 +0100
 classes: wide
 mermaid: true
 ---
@@ -64,11 +65,11 @@ Many of the obligations falling on the manufacturer have implications for the Op
 | Obligation on the manufacturer | Example implication for upstream Open Source |
 |---|---|
 | The product must have a support period that matches its expected use (e.g. 5 years). ([Article 13(8)]) | Any Open Source component used in the product, or in its remote data processing solutions, should be supported for the same period. |
-| Security updates must remain available for at least 10 years after issuing, or until the support period ends, whichever is longer. ([Article 13(9)]) | Software update services that depend on Open Source need to stay secure and available for the same period. |
+| Security updates must remain available for at least 10 years after being issued, or until the support period ends, whichever is longer. ([Article 13(9)]) | Software update services that depend on Open Source need to stay secure and available for the same period. |
 | The product must have no known exploitable vulnerabilities while it is on the EU market. ([Annex I, Part I] (2)(a)) | The product must be updatable for its entire support period, including with relevant updates from its Open Source components. |
 | Information about the product must be complete, correct and not misleading. ([Article 64(4)]) | This includes any metadata provided in an SBOM, which also must be kept current with upstream projects (e.g. tracking changes in ownership, project name, version number schema, license, etc.) |
 | Vulnerabilities and fixes found must be shared with the upstream maintainer. ([Article 13(6)]) | Someone upstream needs to be available to receive, adopt and apply these fixes, ideally in a timely manner. |
-| The manufacturer is responsible for the security of the _entire_ product. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6]) |  There is no transfer of liability to Steward or Maintainer, so the liability remains with the Manufacturer, even for the Open Source components used in the product and in its remote data processing solutions, their transitive dependencies, and their metadata. |
+| The manufacturer is responsible for the security of the _entire_ product. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6]) | There is no transfer of liability to Steward or Maintainer, so the liability remains with the Manufacturer, even for the Open Source components used in the product and in its remote data processing solutions, their transitive dependencies, and their metadata. |
 | The manufacturer must perform a cybersecurity risk assessment, and exercise _due diligence_ when integrating components. ([Article 13], [Article 14]) | Depending on the number of products and their risk profiles, due diligence may cover _hundreds_ or _thousands_ of Open Source components. It also covers the long-term security posture, viability and concerns around the governance of those components – for the entire support period. |
 | Market Surveillance Authorities may evaluate the product, and if corrective action is insufficient, require it to be withdrawn or recalled from the market, or issue fines. ([Article 52], [Article 54]) | If a vulnerability in a product is discovered and exploited before the manufacturer has its _ducks in a row_, this can quickly become expensive. |
 
@@ -225,15 +226,15 @@ The key value proposition comes from the manufacturer's compliance needs that ar
 As part of this due diligence, the manufacturer should consider the following:
 
 1. **Intended for use in the course of a commercial activity**: Are the OSS projects used in the PwDE meeting the same "light-touch" compliance obligations Stewards have in the CRA?
-   1. Vulnerability and incident handling is documented and compliant
-   1. Maintainers and administrators are committed to be available to respond to emergencies in a timely manner
-   1. Security-critical metadata about the components are kept current, complete and correct
+    1. Vulnerability and incident handling is documented and compliant
+    1. Maintainers and administrators are committed to be available to respond to emergencies in a timely manner
+    1. Security-critical metadata about the components are kept current, complete and correct
 1. **Viable and sustained** for this use: Are these same projects likely to remain sustained for the duration of the product's support period?
-   1. Necessary policy, governance and support structures in place and adhered to
-   1. Suitable long-term commitments are on offer
-   1. Options for sustained funding from manufacturers are on offer, and the manufacturer is making use of these
+    1. Necessary policy, governance and support structures in place and adhered to
+    1. Suitable long-term commitments are on offer
+    1. Options for sustained funding from manufacturers are on offer, and the manufacturer is making use of these
 
-The Steward facilitates the needs uncovered during this due diligence by encouraging affected maintainers to opt in and take steps to meet these needs where required.
+The Steward facilitates the needs uncovered during this due diligence by encouraging affected maintainers to opt in and take steps to meet at least the minimum of these needs, where required.
 The Steward then confirms when the projects meet the compliance expectations, and attests to this together with the maintainer.
 
 This initial work is funded through a manufacturer enrolment fee, and sustained through the sale of the same attestations.
@@ -294,19 +295,22 @@ The Steward must therefore operate in a way so its revenue sources generate a su
 > As of 2026-11-08, the EU Commission hasn't published any guidance or delegated act on the Article 25 Attestation regime.
 > Until anything is published, the following is a _speculation_ on how this regime may work.
 
-With this said, there aren't really that many ways of using an attestation regime in service of the requirements in the CRA.
+With this said, there aren't really _that_ many ways of using an attestation regime in service of the requirements in the CRA.
 An attestation regime that doesn't allow for any avenues to sustain the open source projects relevant for PwDE, would be useless at providing any motivation for OSS maintainers to voluntarily play along.
 
 Until the EU Commission publishes any details on the [Article 25] attestations, we assume the following:
 
-A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer, signed by the Steward, attesting to the viability and intention of their Open Source project, for use in PwDE.
+A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer and signed by the Steward.
+It attests to the viability and intended use of their Open Source project in PwDE, covers a specific series of supported releases, and is reissued on a recurring basis, since each VSA is only valid for a limited time.
+A VSA functions also a proof that the Manufacturer contributes to the long-term sustainability of the project.
+
 The CRA explicitly opens for such attestation programmes in [Recital (21)], [Recital (117)], and [Article 25].
 
-1. **Acknowledging the Steward (once)** – The Steward notifies a market surveillance authority of its existence and intended scope. The authority verifies and acknowledges it, and issues a certificate the Steward can use to sign Voluntary Security Attestations with.
-1. **A manufacturer starts using a project (as needed)** – The manufacturer performs a risk assessment, and with due diligence reports its use of a project to the Steward. The Steward reports to the manufacturer the project's current status, and tells the project maintainer it is in use.
-1. **The project joins the Steward (once)** – If the maintainer wishes – they apply for their project to become a member of the Steward, by demonstrating the project is viable, compliant and intended for use in PwDE. The Steward affirms this, updates the project's status towards relevant manufacturers, and confirms membership is accepted.
+1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope, and which electronic identity it must be referred to by others, and the certificate it will be signing with.
+1. **A manufacturer starts using a project (as needed)** – The manufacturer performs a risk assessment, and with due diligence reports its use of a project to the Steward. The Steward reports to the manufacturer the project's current membership status, and tells the project maintainer its use has been reported.
+1. **The project joins the Steward (once)** – If the maintainer wishes – they apply for their project to become a member of the Steward, by demonstrating the project is viable, compliant and intended for use in PwDE, and by stating who their Steward is in the project's metadata, using the Steward's electronic identity. The Steward affirms this, confirms compliance, updates the project's membership status, and reports this status change to affected manufacturers.
 1. **The project maintainer attests to their project's compliance and viability (as needed)** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_.
-1. **The Steward signs the project's attestation (on a recurring schedule)** – The manufacturer requests a VSA for the project. The Steward reaffirms with the project that it is still compliant, signs the VSA, and sells it to the manufacturer. Part of the surplus is donated to projects, communities and services in the ecosystem, according to the Steward's disbursement formula.
+1. **The Steward signs the project's attestation (on a recurring schedule)** – The manufacturer verifies the VSA for the project, reaffirming that the project is still compliant, which release artifacts it applies to and the duration it is valid for. The Steward then cryptographically signs the VSA using its electronic identity, and makes it available to the manufacturer for a fee. Any surplus from these sales is donated to projects, communities and services in accordance with the Steward's current disbursement formula.
 1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSA, which the authority can verify.
 
 
@@ -320,36 +324,36 @@ config:
 ---
 sequenceDiagram
     autonumber
-    participant MA as Market Surveillance Authority
+    participant MSA as Market Surveillance Authority (MSA)
     participant MFG as Manufacturer
     participant ES as OSS Ecosystem Steward
     participant OSS as OSS Project / Maintainer
-    note over MA,ES: Once: Establish Steward
-    ES->>MA: Notify of existence
-    MA-->>ES: Verify & acknowledge
-    MA-->>ES: Issue certificate for signing attestations
-    note over MFG,OSS: As needed: Using an OSS project
-    MFG->>OSS: Depends on project
+    note over ES,OSS: Once: Announce Steward
+    ES->>OSS: Announce existence, intended scope<br>and electronic identity to the community
+    ES->>MSA: Announce existence, intended scope<br>and electronic identity to the MSA
+    note over MFG,OSS: As needed: A manufacturer starts using a project
+    MFG-->>OSS: Depends on project
     MFG-->>MFG: Perform risk assessment
-    MFG-->>ES: Report project usage of OSS
-    ES-->>MFG: Inform about current project status
-    ES-->>OSS: Inform about project use
-    note over ES,OSS: Once: OSS Project becomes Steward member
-    OSS->>ES: Request to become Steward member
-    OSS-->>ES: Demonstrate OSS is suitable for PwDE
-    ES-->>OSS: Affirm suitability for PwDE and willingness to issue VSA statements<br>Update project status
-    ES-->>OSS: Confirm membership
-    note over MFG,OSS: On a Sustaining schedule: Attest OSS Project is intended for use in PwDE
-    OSS->>ES: Attest to suitability and<br>viability by issuing VSA statements
-    MFG->>ES: Request VSA for OSS
-    ES-->>OSS: Reaffirm statements in VSA
-    ES-->>ES: Confirm VSA by signing it with<br>certificate from Market Surveillance Authority
-    ES->>MFG: Sell signed VSA
-    ES-->>OSS: Donate surplus to projects, communities and services<br>Update project status
-    note over MA,MFG: Eventually: PwDE audit
-    MA->>MFG: Audits product compliance
-    MFG-->>MA: Presents signed VSA
-    MA-->>MFG: Verifies signed VSA
+    MFG->>ES: Report use of project
+    ES->>MFG: Report project's current membership status
+    ES->>OSS: Inform that its use has been reported
+    note over MFG,OSS: Once: The project joins the Steward
+    OSS->>ES: Apply for membership
+    OSS-->>ES: Demonstrate project is viable, compliant<br>and intended for use in PwDE
+    OSS-->>OSS: Declare project's compliance in project
+    ES->>OSS: Confirm initial compliance<br>Confirm membership and update status
+    ES->>MFG: Report membership status change
+    note over ES,OSS: As needed: Maintainer attests to compliance and viability
+    OSS->>ES: Attest viability and compliance markers
+    note over MFG,ES: Recurring schedule: Steward signs the project's VSA
+    MFG->>ES: Verify VSA: still compliant,<br>which release artifacts, valid for how long
+    ES-->>ES: Cryptographically sign VSA<br>using its electronic identity
+    ES->>MFG: Make signed VSA available for a fee
+    ES-->>OSS: Donate surplus to projects, communities and services<br>according to current disbursement formula
+    note over MSA,MFG: Eventually: PwDE audit
+    MSA->>MFG: Audits product compliance
+    MFG-->>MSA: Presents signed VSA
+    MSA-->>MFG: Verifies signed VSA
     note over MFG: Product is compliant
 ```
 
@@ -364,21 +368,18 @@ config:
 ---
 swimlane-beta TB
   subgraph ES [OSS Ecosystem Steward]
-    notifyExist["Notify Market Surveillance Authority of existence"]
+    notifyExist["Announce existence, intended scope and electronic identity to the community"]
     readyToSignVSA["Steward may now sign VSAs"]
-    informOSSviability["Inform Manufacturer of project status"]
-    informOSSeligibility["Inform project of its use"]
-    verifyOSSviability["Affirm suitability for PwDE and willingness to issue VSA statements; update project status"]
-    confirmOSSmembership["Confirm membership"]
-    reaffirmOSSviability["Reaffirm statements in VSA"]
-    signVSA["Sign VSA with certificate<br>from Market Surveillance Authority"]
-    sellVSA["Sell signed VSA to Manufacturer"]
-    donateSurplus["Donate surplus to projects, communities and services; update project status"]
+    informOSSviability["Report project's current membership status to Manufacturer"]
+    informOSSeligibility["Inform project that its use has been reported"]
+    verifyOSSviability["Affirm and confirm compliance; update membership status"]
+    confirmOSSmembership["Report membership status change to affected Manufacturers"]
+    signVSA["Cryptographically sign VSA<br>using its electronic identity"]
+    sellVSA["Make signed VSA available to Manufacturer for a fee"]
+    donateSurplus["Donate surplus to projects, communities and services, according to current disbursement formula"]
   end
 
   subgraph MA [Market Surveillance Authority]
-    acknowledgeSteward["Verify & acknowledge Steward"]
-    issueCert["Issue certificate for signing attestations"]
     auditProduct["Audit product compliance"]
     verifyVSA["Verify signed VSA"]
   end
@@ -386,22 +387,23 @@ swimlane-beta TB
   subgraph MFG [Manufacturer]
     useOSS["Depend on OSS project"]
     assessOSS["Perform risk assessment"]
-    reportOSSusage["Report project usage of OSS"]
-    requestVSA["Request VSA for OSS"]
+    reportOSSusage["Report use of project"]
+    requestVSA["Verify VSA: still compliant, which release artifacts, valid for how long"]
     presentVSA["Present signed VSA"]
     done(["Product is compliant"])
   end
 
   subgraph OSS [OSS Project / Maintainer]
     isEligibleForMembership["Project is eligible for membership"]
-    requestStewardMembership["Request Steward membership"]
-    demonstrateOSSviability["Demonstrate OSS is suitable for PwDE"]
+    requestStewardMembership["Apply for membership"]
+    demonstrateOSSviability["Demonstrate project is viable, compliant and intended for use in PwDE"]
+    nameSteward["State Steward's electronic identity in project metadata"]
     isStewardMember["Project is member of Steward"]
-    issueVSA["Attest suitability and viability by issuing VSA"]
+    issueVSA["Attest viability and compliance markers"]
   end
 
-  %% Once: Establish Steward
-  notifyExist --\> acknowledgeSteward --\> issueCert --\>|cert| readyToSignVSA
+  %% Once: Announce Steward
+  notifyExist --\> readyToSignVSA
   readyToSignVSA -.->|"later..."| signVSA
   %% As needed: Using an OSS project
   useOSS --\> assessOSS --\> reportOSSusage --\> informOSSviability
@@ -409,11 +411,12 @@ swimlane-beta TB
   informOSSeligibility --\> isEligibleForMembership
   %% Once: OSS project becomes Steward member
   isEligibleForMembership -.->|"later..."| requestStewardMembership
-  requestStewardMembership --\> demonstrateOSSviability --\> verifyOSSviability --\> confirmOSSmembership --\> isStewardMember
-  verifyOSSviability --\> confirmVSAavailability
-  %% Sustaining schedule: attest OSS project is intended for PwDE
-  %%s12 -.->|"Sustaining schedule: attest for PwDE"| s13
-  requestVSA --\> reaffirmOSSviability --\> issueVSA --\> signVSA --\> sellVSA --\> donateSurplus
+  requestStewardMembership --\> demonstrateOSSviability --\> nameSteward --\> verifyOSSviability --\> confirmOSSmembership
+  verifyOSSviability --\> isStewardMember
+  %% As needed: maintainer attests to compliance and viability
+  isStewardMember -.->|"later..."| issueVSA
+  %% Recurring schedule: Steward signs the project's attestation
+  issueVSA --\> requestVSA --\> signVSA --\> sellVSA --\> donateSurplus
   %% Eventually: PwDE audit
   %%s18 -.->|"Eventually: PwDE audit"| s19
   auditProduct --\> presentVSA --\> verifyVSA --\> done
@@ -468,6 +471,9 @@ Each of these can and will be addressed in the coming months.
     * [ ] Adapt the funding model in this concept to any details published there.
 * [ ] Finish and present first draft of the OSS Ecosystem Steward [Societas cooperativa Europaea (SCE)] bylaws.
     * [ ] Ensure that any legal and tax implications from the combination of selling attestations and donating to members are made clear, verified and taken care of.
+    * [ ] What happens if an attestation turns out to be false? Clarify and consider if this has to be addressed in the bylaws or somewhere else.
+    * [ ] Consider the implications of selling attestations – does this lead to the Steward risking being considered as a Manufacturer?
+    * [ ] Are there any "anti trust law" implications somewhere here? (a concern raised by Gregor Bransky)
 * [ ] Reach out to community organisers that have a legal entity registered for their feedback on this document, and offer them to become founding members.
 * [ ] Present this concept at relevant conferences
     * [x] [London Perl Workshop 2026](https://act.yapc.eu/lpw2026/talk/8062)
@@ -484,6 +490,7 @@ The OSS Ecosystem Steward concept is the product of many conversations with many
 * Arne Sommer
 * Greg Wallace
 * Laurent Hosen
+* Lukas Kahwe Smith
 * Stig Palmquist
 * Æva Black
 

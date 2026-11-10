@@ -4,7 +4,7 @@ title: "The OSS Ecosystem Steward"
 description: A proposal for a community-owned, non-profit co-operative acting as the CRA Open Source Software Steward for an entire ecosystem, like Perl and CPAN
 author: sjn
 toc: true
-date: 2026-11-10 09:00:00 +0100
+date: 2026-11-09 22:35:00 +0100
 classes: wide
 mermaid: true
 ---

@@ -4,6 +4,7 @@ title: "The OSS Ecosystem Steward"
 description: A proposal for a community-owned, non-profit co-operative acting as the CRA Open Source Software Steward for an entire ecosystem, such as Perl and CPAN
 author: sjn
 toc: true
+date: 2026-11-10 09:00:00 +0100
 classes: wide
 mermaid: true
 ---
@@ -299,7 +300,10 @@ An attestation regime that doesn't allow for any avenues to sustain the open sou
 
 Until the EU Commission publishes any details on the [Article 25] attestations, we assume the following:
 
-A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer, signed by the Steward, limited to a series of supported releases, issued on a recurring basis for a limited time, attesting to the viability and intention of their Open Source project, for use in PwDE.
+A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer and signed by the Steward.
+It attests to the viability and intended use of their Open Source project in PwDE, covers a specific series of supported releases, and is reissued on a recurring basis, since each VSA is only valid for a limited time.
+A VSA functions also a proof that the Manufacturer contributes to the long-term sustainability of the project.
+
 The CRA explicitly opens for such attestation programmes in [Recital (21)], [Recital (117)], and [Article 25].
 
 1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope, and which electronic identity it must be referred to by others, and the certificate it will be signing with.
@@ -320,36 +324,36 @@ config:
 ---
 sequenceDiagram
     autonumber
-    participant MA as Market Surveillance Authority
+    participant MSA as Market Surveillance Authority (MSA)
     participant MFG as Manufacturer
     participant ES as OSS Ecosystem Steward
     participant OSS as OSS Project / Maintainer
-    note over MA,ES: Once: Establish Steward
-    ES->>MA: Notify of existence
-    MA-->>ES: Verify & acknowledge
-    MA-->>ES: Issue certificate for signing attestations
-    note over MFG,OSS: As needed: Using an OSS project
-    MFG->>OSS: Depends on project
+    note over ES,OSS: Once: Announce Steward
+    ES->>OSS: Announce existence, intended scope<br>and electronic identity to the community
+    ES->>MSA: Announce existence, intended scope<br>and electronic identity to the MSA
+    note over MFG,OSS: As needed: A manufacturer starts using a project
+    MFG-->>OSS: Depends on project
     MFG-->>MFG: Perform risk assessment
-    MFG-->>ES: Report project usage of OSS
-    ES-->>MFG: Inform about current project status
-    ES-->>OSS: Inform about project use
-    note over ES,OSS: Once: OSS Project becomes Steward member
-    OSS->>ES: Request to become Steward member
-    OSS-->>ES: Demonstrate OSS is suitable for PwDE
-    ES-->>OSS: Affirm suitability for PwDE and willingness to issue VSA statements<br>Update project status
-    ES-->>OSS: Confirm membership
-    note over MFG,OSS: On a Sustaining schedule: Attest OSS Project is intended for use in PwDE
-    OSS->>ES: Attest to suitability and<br>viability by issuing VSA statements
-    MFG->>ES: Request VSA for OSS
-    ES-->>OSS: Reaffirm statements in VSA
-    ES-->>ES: Confirm VSA by signing it with<br>certificate from Market Surveillance Authority
-    ES->>MFG: Sell signed VSA
-    ES-->>OSS: Donate surplus to projects, communities and services<br>Update project status
-    note over MA,MFG: Eventually: PwDE audit
-    MA->>MFG: Audits product compliance
-    MFG-->>MA: Presents signed VSA
-    MA-->>MFG: Verifies signed VSA
+    MFG->>ES: Report use of project
+    ES->>MFG: Report project's current membership status
+    ES->>OSS: Inform that its use has been reported
+    note over MFG,OSS: Once: The project joins the Steward
+    OSS->>ES: Apply for membership
+    OSS-->>ES: Demonstrate project is viable, compliant<br>and intended for use in PwDE
+    OSS-->>OSS: Declare project's compliance in project
+    ES->>OSS: Confirm initial compliance<br>Confirm membership and update status
+    ES->>MFG: Report membership status change
+    note over ES,OSS: As needed: Maintainer attests to compliance and viability
+    OSS->>ES: Attest viability and compliance markers
+    note over MFG,ES: Recurring schedule: Steward signs the project's VSA
+    MFG->>ES: Verify VSA: still compliant,<br>which release artifacts, valid for how long
+    ES-->>ES: Cryptographically sign VSA<br>using its electronic identity
+    ES->>MFG: Make signed VSA available for a fee
+    ES-->>OSS: Donate surplus to projects, communities and services<br>according to current disbursement formula
+    note over MSA,MFG: Eventually: PwDE audit
+    MSA->>MFG: Audits product compliance
+    MFG-->>MSA: Presents signed VSA
+    MSA-->>MFG: Verifies signed VSA
     note over MFG: Product is compliant
 ```
 
@@ -364,21 +368,18 @@ config:
 ---
 swimlane-beta TB
   subgraph ES [OSS Ecosystem Steward]
-    notifyExist["Notify Market Surveillance Authority of existence"]
+    notifyExist["Announce existence, intended scope and electronic identity to the community"]
     readyToSignVSA["Steward may now sign VSAs"]
-    informOSSviability["Inform Manufacturer of project status"]
-    informOSSeligibility["Inform project of its use"]
-    verifyOSSviability["Affirm suitability for PwDE and willingness to issue VSA statements; update project status"]
-    confirmOSSmembership["Confirm membership"]
-    reaffirmOSSviability["Reaffirm statements in VSA"]
-    signVSA["Sign VSA with certificate<br>from Market Surveillance Authority"]
-    sellVSA["Sell signed VSA to Manufacturer"]
-    donateSurplus["Donate surplus to projects, communities and services; update project status"]
+    informOSSviability["Report project's current membership status to Manufacturer"]
+    informOSSeligibility["Inform project that its use has been reported"]
+    verifyOSSviability["Affirm and confirm compliance; update membership status"]
+    confirmOSSmembership["Report membership status change to affected Manufacturers"]
+    signVSA["Cryptographically sign VSA<br>using its electronic identity"]
+    sellVSA["Make signed VSA available to Manufacturer for a fee"]
+    donateSurplus["Donate surplus to projects, communities and services, according to current disbursement formula"]
   end
 
   subgraph MA [Market Surveillance Authority]
-    acknowledgeSteward["Verify & acknowledge Steward"]
-    issueCert["Issue certificate for signing attestations"]
     auditProduct["Audit product compliance"]
     verifyVSA["Verify signed VSA"]
   end
@@ -386,22 +387,23 @@ swimlane-beta TB
   subgraph MFG [Manufacturer]
     useOSS["Depend on OSS project"]
     assessOSS["Perform risk assessment"]
-    reportOSSusage["Report project usage of OSS"]
-    requestVSA["Request VSA for OSS"]
+    reportOSSusage["Report use of project"]
+    requestVSA["Verify VSA: still compliant, which release artifacts, valid for how long"]
     presentVSA["Present signed VSA"]
     done(["Product is compliant"])
   end
 
   subgraph OSS [OSS Project / Maintainer]
     isEligibleForMembership["Project is eligible for membership"]
-    requestStewardMembership["Request Steward membership"]
-    demonstrateOSSviability["Demonstrate OSS is suitable for PwDE"]
+    requestStewardMembership["Apply for membership"]
+    demonstrateOSSviability["Demonstrate project is viable, compliant and intended for use in PwDE"]
+    nameSteward["State Steward's electronic identity in project metadata"]
     isStewardMember["Project is member of Steward"]
-    issueVSA["Attest suitability and viability by issuing VSA"]
+    issueVSA["Attest viability and compliance markers"]
   end
 
-  %% Once: Establish Steward
-  notifyExist --\> acknowledgeSteward --\> issueCert --\>|cert| readyToSignVSA
+  %% Once: Announce Steward
+  notifyExist --\> readyToSignVSA
   readyToSignVSA -.->|"later..."| signVSA
   %% As needed: Using an OSS project
   useOSS --\> assessOSS --\> reportOSSusage --\> informOSSviability
@@ -409,11 +411,12 @@ swimlane-beta TB
   informOSSeligibility --\> isEligibleForMembership
   %% Once: OSS project becomes Steward member
   isEligibleForMembership -.->|"later..."| requestStewardMembership
-  requestStewardMembership --\> demonstrateOSSviability --\> verifyOSSviability --\> confirmOSSmembership --\> isStewardMember
-  verifyOSSviability --\> confirmVSAavailability
-  %% Sustaining schedule: attest OSS project is intended for PwDE
-  %%s12 -.->|"Sustaining schedule: attest for PwDE"| s13
-  requestVSA --\> reaffirmOSSviability --\> issueVSA --\> signVSA --\> sellVSA --\> donateSurplus
+  requestStewardMembership --\> demonstrateOSSviability --\> nameSteward --\> verifyOSSviability --\> confirmOSSmembership
+  verifyOSSviability --\> isStewardMember
+  %% As needed: maintainer attests to compliance and viability
+  isStewardMember -.->|"later..."| issueVSA
+  %% Recurring schedule: Steward signs the project's attestation
+  issueVSA --\> requestVSA --\> signVSA --\> sellVSA --\> donateSurplus
   %% Eventually: PwDE audit
   %%s18 -.->|"Eventually: PwDE audit"| s19
   auditProduct --\> presentVSA --\> verifyVSA --\> done

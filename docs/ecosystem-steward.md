@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "The OSS Ecosystem Steward"
-description: A proposal for a community-owned, non-profit co-operative acting as the CRA Open Source Software Steward for an entire ecosystem, such as Perl and CPAN
+description: A proposal for a community-owned, non-profit co-operative acting as the CRA Open Source Software Steward for an entire ecosystem, like Perl and CPAN
 author: sjn
 toc: true
 date: 2026-11-10 09:00:00 +0100
@@ -19,7 +19,7 @@ mermaid: true
 
 1. A maintainers' co-op, owned by the people who serve and take care of a volunteer-based software ecosystem's projects, services, and communities.
 1. Companies pay it for proof that the code and ecosystem they rely on is looked after, and the money goes back to the people who look after it.
-1. Maintainers receive support for the additional work needed, while retaining full control of their project, enjoying doing what they wish on a _dugnad_ basis (the Danish and Norwegian tradition of neighbours pitching in on shared work).
+1. Maintainers retain full control of their project, so they may continue doing what they enjoy while receiving support for doing the important work nobody wishes to volunteer for.
 
 
 ## Summary
@@ -516,6 +516,7 @@ The OSS Ecosystem Steward concept is the product of many conversations with many
 *[CRA]:       CRA – Cyber Resilience Act – (EU) Regulation 2024/2847, the EU product cybersecurity regulation.
 *[TPRF]:      TPRF – The Perl and Raku Foundation – a volunteer-led non-profit foundation dedicated to advancing the Perl and Raku programming languages. See perlfoundation.org for more info.
 *[VSA]:       VSA – Voluntary Security Attestation – a maintainer's and steward's attestation about the security posture of an OSS project.
+*[Dugnad]:    Dugnad – The Norwegian and Danish word for the tradition for helping one's neighbours pitching in on shared work.
 
 
 [(EU) Regulation 2024/2847 (Cyber Resilience Act)]:https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402847 '(EU) Regulation 2024/2847 (Cyber Resilience Act)'

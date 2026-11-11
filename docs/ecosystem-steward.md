@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "The OSS Ecosystem Steward"
-description: A proposal for a community-owned, non-profit co-operative acting as the CRA Open Source Software Steward for an entire ecosystem, like Perl and CPAN
+description: A proposal for a community-owned, non-profit co-operative acting as the CRA Open Source Software Steward for an entire ecosystem, like Perl and its CPAN
 author: sjn
 toc: true
 date: 2026-11-09 22:35:00 +0100
@@ -39,13 +39,13 @@ This document proposes a variant of this organisation, designed for that scale: 
 * **Non-profit** – any surplus goes back to the projects, services and communities in the co-op and the ecosystem.
 * **Funded by manufacturers** – mainly through enrolment fees and recurring _Voluntary Security Attestations_, which help manufacturers show their market surveillance authorities that the Open Source projects they rely on are both supported and viable for use in their products.
 * **Dedicated to improving the long-term sustainability and security posture of its OSS communities** – by donating enough of its surplus to fund a meaningful part of a working week per maintainer, administrator or organiser.
-
+* **Control remains with each participant** – by limiting membership criteria to the minimum required for demonstrating viability and compliance.
 
 ## Background: The CRA and Open Source
 
 When the [(EU) Regulation 2024/2847 (Cyber Resilience Act)] comes fully into effect on 11 December 2027, businesses that want to be compliant must perform a number of security-related tasks for each of their CE-marked products, and for the remote data processing solutions those products rely on.
 
-### What is in scope?
+### What falls within the scope of the CRA?
 
 The details of what is in scope are beyond this document, but the [CRA Guidance] (e.g. [CRA Guidance chapter 2]) and the [CRA FAQ] (e.g. [CRA FAQ 1.1.2]) cover it in depth.
 
@@ -53,7 +53,7 @@ In short, the CRA applies to _both_ digital and physical products placed on the 
 This includes their remote data processing solutions – e.g. online services or APIs the product needs to function as expected.
 
 > [!IMPORTANT]
-> This includes **phone apps**, their **server components**, and any other solutions used to keep the product updated, secure and compliant.
+> This also includes **phone apps**, their **server components**, and any other solutions used to keep the product updated, secure and compliant.
 
 
 ## The problem: Manufacturer obligations that reach upstream Open Source projects
@@ -69,7 +69,7 @@ Many of the obligations falling on the manufacturer have implications for the Op
 | The product must have no known exploitable vulnerabilities while it is on the EU market. ([Annex I, Part I] (2)(a)) | The product must be updatable for its entire support period, including with relevant updates from its Open Source components. |
 | Information about the product must be complete, correct and not misleading. ([Article 64(4)]) | This includes any metadata provided in an SBOM, which also must be kept current with upstream projects (e.g. tracking changes in ownership, project name, version number schema, license, etc.) |
 | Vulnerabilities and fixes found must be shared with the upstream maintainer. ([Article 13(6)]) | Someone upstream needs to be available to receive, adopt and apply these fixes, ideally in a timely manner. |
-| The manufacturer is responsible for the security of the _entire_ product. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6]) | There is no transfer of liability to Steward or Maintainer, so the liability remains with the Manufacturer, even for the Open Source components used in the product and in its remote data processing solutions, their transitive dependencies, and their metadata. |
+| The manufacturer is responsible for the security of the _entire_ product. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6]) | There is no transfer of liability to OSS Steward or maintainer, so the liability remains with the manufacturer, even for the Open Source components used in the product and in its remote data processing solutions, their transitive dependencies, and their metadata. |
 | The manufacturer must perform a cybersecurity risk assessment, and exercise _due diligence_ when integrating components. ([Article 13], [Article 14]) | Depending on the number of products and their risk profiles, due diligence may cover _hundreds_ or _thousands_ of Open Source components. It also covers the long-term security posture, viability and concerns around the governance of those components – for the entire support period. |
 | Market Surveillance Authorities may evaluate the product, and if corrective action is insufficient, require it to be withdrawn or recalled from the market, or issue fines. ([Article 52], [Article 54]) | If a vulnerability in a product is discovered and exploited before the manufacturer has its _ducks in a row_, this can quickly become expensive. |
 
@@ -124,7 +124,7 @@ So instead of trying to fit the Steward's tasks onto existing governance structu
 
 Here, the answer is to _create an entirely new organisation_, designed from first principles for a global, laissez-faire, distributed and heterogeneous community of communities – like the Perl and CPAN ecosystem.
 
-### Guiding questions
+### Guiding questions and values
 
 * With awareness of the existing traditions, values, habits and culture of the ecosystem: what type of organisation would align best with these?
 * What communities, organisations and governance structures exist already, and how can we include them as participants, regardless of their role in the ecosystem and their organisational maturity?
@@ -142,12 +142,12 @@ From these questions, we arrive at the following criteria.
 1. **Be community owned**, allowing individuals and communities affected by the CRA to have a say in how the Steward may support them.
 1. **Be governed fairly**, through a transparent and democratic decision-making structure.
 1. **Be freely joinable and leavable** at will by anyone in the community affected by the CRA.
-1. **Limit imposing obligations on members to the minimum** required so they may continue managing their projects as they wish, but from now on, with project viability, security and compliance needs of their users sufficiently covered.
-1. **Make membership a marker of viability** by ensuring the membership criteria themselves are the tasks that need to be done to demonstrate viability and compliance.
-1. **Operate as a business**, generating a surplus by selling compliance-relevant security attestations, capable of sustaining its communities through donations.
+1. **Limit imposing obligations on members to the minimum** required so they may continue managing their projects as they wish, but from now on, with project long-term viability, security and compliance needs of both manufacturers and market surveillance authorities, sufficiently covered.
+1. **Make membership a trusted marker of viability and compliance** by ensuring the membership criteria themselves cover what is needed to demonstrate this.
+1. **Operate as a business**, generating a surplus by selling compliance-relevant security attestations, capable of sustaining its member communities, while allowing manufacturers both save on compliance expenses and get access up-to-date evidence that the software they rely on is take well care of.
 1. **Work well with outside parties** to fulfil its obligations towards market surveillance authorities, manufacturers and others.
-1. **Operate without need for donations** and instead aim to create an _additional_ source of funding, suitable for OPEX budget line items of manufacturers wishing to remain compliant.
-1. **Be able to support others** inside, upstream and downstream of the ecosystem – including projects, services and communities we rely on, but that are easily forgotten or "hidden" in the dependency graph.
+1. **Operate without need for donations** and instead aim to create an _additional_ stable source of funding, suitable for OPEX budget line items of manufacturers wishing to remain compliant.
+1. **Be able to support others** internally, upstream and downstream of the ecosystem – including projects, services and communities we rely on, but that are easily forgotten or "hidden" in the dependencies.
 1. **Limit its scope** so it only applies to projects, services and communities that are _actually in use_ by manufacturers, or that otherwise offer a service benefiting the community.
 1. **Ensure member projects, services and communities remain fully self-owned and independent** so that members remain in control of their project.
 
@@ -302,7 +302,7 @@ Until the EU Commission publishes any details on the [Article 25] attestations, 
 
 A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer and signed by the Steward.
 It attests to the viability and intended use of their Open Source project in PwDE, covers a specific series of supported releases, and is reissued on a recurring basis, since each VSA is only valid for a limited time.
-A VSA functions also a proof that the Manufacturer contributes to the long-term sustainability of the project.
+A VSA functions also a proof that the manufacturer contributes to the long-term sustainability of the project.
 
 The CRA explicitly opens for such attestation programmes in [Recital (21)], [Recital (117)], and [Article 25].
 
@@ -370,12 +370,12 @@ swimlane-beta TB
   subgraph ES [OSS Ecosystem Steward]
     notifyExist["Announce existence, intended scope and electronic identity to the community"]
     readyToSignVSA["Steward may now sign VSAs"]
-    informOSSviability["Report project's current membership status to Manufacturer"]
+    informOSSviability["Report project's current membership status to manufacturer"]
     informOSSeligibility["Inform project that its use has been reported"]
     verifyOSSviability["Affirm and confirm compliance; update membership status"]
     confirmOSSmembership["Report membership status change to affected Manufacturers"]
     signVSA["Cryptographically sign VSA<br>using its electronic identity"]
-    sellVSA["Make signed VSA available to Manufacturer for a fee"]
+    sellVSA["Make signed VSA available to manufacturer for a fee"]
     donateSurplus["Donate surplus to projects, communities and services, according to current disbursement formula"]
   end
 
@@ -472,7 +472,7 @@ Each of these can and will be addressed in the coming months.
 * [ ] Finish and present first draft of the OSS Ecosystem Steward [Societas cooperativa Europaea (SCE)] bylaws.
     * [ ] Ensure that any legal and tax implications from the combination of selling attestations and donating to members are made clear, verified and taken care of.
     * [ ] What happens if an attestation turns out to be false? Clarify and consider if this has to be addressed in the bylaws or somewhere else.
-    * [ ] Consider the implications of selling attestations – does this lead to the Steward risking being considered as a Manufacturer?
+    * [ ] Consider the implications of selling attestations – does this lead to the Steward risking being considered as a manufacturer?
     * [ ] Are there any "anti trust law" implications somewhere here? (a concern raised by Gregor Bransky)
 * [ ] Reach out to community organisers that have a legal entity registered for their feedback on this document, and offer them to become founding members.
 * [ ] Present this concept at relevant conferences

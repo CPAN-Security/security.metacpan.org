@@ -10,16 +10,16 @@ mermaid: true
 ---
 
 > [!WARNING]
-> This document is a DRAFT, and still missing important details expected to be published by the EU Commission regarding the CRA Article 25 Attestation regime.
+> This document is a DRAFT, and still missing important details expected to be published by the EU Commission regarding the CRA Article 25 Attestation programme.
 >
-> Please return later! Any comments and concerns about the text is also quite welcome in the meantime.
+> Please return later! Any comments and concerns about the text are also quite welcome in the meantime.
 
 
 ## The concept, in three sentences
 
-1. A maintainers' co-op, owned by the people who serve and take care of a volunteer-based software ecosystem's projects, services, and communities.
-1. Companies pay it for proof that the code and ecosystem they rely on is looked after, and the money goes back to the people who look after it.
-1. Maintainers retain full control of their project, so they may continue doing what they enjoy while receiving support for doing the important work nobody wishes to volunteer for.
+1. A maintainers' co-op, owned by the people who serve and look after volunteer-based software ecosystem's projects, services, and communities.
+1. Companies pay it by purchasing attestations that the code and ecosystem they rely on is looked after, and where this money goes back to the people who look after it.
+1. Maintainers retain full control of their project, so they may continue doing what they enjoy, but now also in a sustained and viable way.
 
 
 ## Summary
@@ -58,8 +58,6 @@ This includes their remote data processing solutions – e.g. online services or
 
 ## The problem: Manufacturer obligations that reach upstream Open Source projects
 
-The complete set of manufacturer obligations are also beyond the scope of this document, but the most important ones are laid out in [Article 13], [Article 14], [Article 64], [Article 69], [Annex I, Part I], [Annex I, Part II], [Annex II], and [Annex VII].
-
 Many of the obligations falling on the manufacturer have implications for the Open Source communities in use. Some of the most relevant are:
 
 | Obligation on the manufacturer | Example implication for upstream Open Source |
@@ -72,6 +70,10 @@ Many of the obligations falling on the manufacturer have implications for the Op
 | The manufacturer is responsible for the security of the _entire_ product. ([CRA FAQ 4.1.1], [CRA FAQ 4.3.6]) | There is no transfer of liability to OSS Steward or maintainer, so the liability remains with the manufacturer, even for the Open Source components used in the product and in its remote data processing solutions, their transitive dependencies, and their metadata. |
 | The manufacturer must perform a cybersecurity risk assessment, and exercise _due diligence_ when integrating components. ([Article 13], [Article 14]) | Depending on the number of products and their risk profiles, due diligence may cover _hundreds_ or _thousands_ of Open Source components. It also covers the long-term security posture, viability and concerns around the governance of those components – for the entire support period. |
 | Market Surveillance Authorities may evaluate the product, and if corrective action is insufficient, require it to be withdrawn or recalled from the market, or issue fines. ([Article 52], [Article 54]) | If a vulnerability in a product is discovered and exploited before the manufacturer has its _ducks in a row_, this can quickly become expensive. |
+
+The most important obligations laid out in [Article 13], [Article 14], [Article 64], [Article 69], [Annex I, Part I], [Annex I, Part II], [Annex II], and [Annex VII].
+
+The full list of obligations, and their details, is beyond the scope of this document.
 
 ### The choice facing Open Source ecosystem participants
 
@@ -86,7 +88,7 @@ Declining has security consequences for everyone using the project.
 Accepting brings a lot of boring and tedious compliance work.
 Neither option is attractive, and in the end, each maintainer has to decide for themselves.
 
-From a security perspective, our common goal should be to make the choice realistic, and fair, so to increase the likelihood that more maintainers choose to accept it.
+From a security perspective, our common goal should be to make the choice realistic, and fair, so as to increase the likelihood that more maintainers choose to accept it.
 Here is where the _Open Source Software Steward_ has a critical role to play.
 
 
@@ -142,9 +144,9 @@ From these questions, we arrive at the following criteria.
 1. **Be community owned**, allowing individuals and communities affected by the CRA to have a say in how the Steward may support them.
 1. **Be governed fairly**, through a transparent and democratic decision-making structure.
 1. **Be freely joinable and leavable** at will by anyone in the community affected by the CRA.
-1. **Limit imposing obligations on members to the minimum** required so they may continue managing their projects as they wish, but from now on, with project long-term viability, security and compliance needs of both manufacturers and market surveillance authorities, sufficiently covered.
+1. **Limit imposing obligations on members to the minimum** so they may continue managing their projects as they wish, while the long-term viability, security and compliance needs of manufacturers and market surveillance authorities are covered.
 1. **Make membership a trusted marker of viability and compliance** by ensuring the membership criteria themselves cover what is needed to demonstrate this.
-1. **Operate as a business**, generating a surplus by selling compliance-relevant security attestations, capable of sustaining its member communities, while allowing manufacturers both save on compliance expenses and get access up-to-date evidence that the software they rely on is take well care of.
+1. **Operate as a business**, generating a surplus by selling compliance-relevant security attestations, capable of sustaining its member communities, while allowing manufacturers both to save on compliance costs and to get up-to-date evidence that the software they rely on is well taken care of.
 1. **Work well with outside parties** to fulfil its obligations towards market surveillance authorities, manufacturers and others.
 1. **Operate without need for donations** and instead aim to create an _additional_ stable source of funding, suitable for OPEX budget line items of manufacturers wishing to remain compliant.
 1. **Be able to support others** internally, upstream and downstream of the ecosystem – including projects, services and communities we rely on, but that are easily forgotten or "hidden" in the dependencies.
@@ -152,7 +154,7 @@ From these questions, we arrive at the following criteria.
 1. **Ensure member projects, services and communities remain fully self-owned and independent** so that members remain in control of their project.
 
 
-## The proposal: A community-owned non-profit co-operative
+## The proposal: A community-owned non-profit co-operative funded through the sale of voluntary security attestations
 
 An _OSS Ecosystem Steward_ is a community-owned non-profit co-operative, set up to support the people in the ecosystem who are affected by the CRA, and who wish to help improve their users' security posture.
 
@@ -219,6 +221,31 @@ This lets it operate under a single EEA-wide set of rules, and allows it to move
 > [!NOTE]
 > Details on articles of association, bylaws and such, will be published later.
 
+### Voluntary Security Attestations
+
+> [!WARNING]
+> As of 2026-11-12, the EU Commission has **not** published any guidance or delegated act on the Article 25 Attestation programme.
+> Until anything is published, the following is a _speculation_ on how this programme may work.
+
+Until the EU Commission publishes any details on the [Article 25] attestations, we assume the following:
+
+A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer and signed by the Steward.
+It attests to the viability and intended use of their Open Source project in PwDE, covers a specific series of supported releases, and is reissued on a recurring basis, since each VSA is only valid for a limited time.
+A VSA works also proof that the manufacturer contributes to the long-term sustainability of the project.
+
+The CRA explicitly opens for such attestation programmes in [Recital (21)], [Recital (117)], and [Article 25].
+
+> [!NOTE]
+> There aren't really _that_ many ways of using an attestation programme in service of the requirements in the CRA.
+> An attestation programme that doesn't allow for any avenues to sustain the open source projects relevant for PwDE, would be useless at providing any motivation for OSS maintainers to voluntarily play along.
+>
+> Existing voluntary options for sustaining OSS projects don't work well with the smaller "long tail" projects.
+> In practice, the projects that are funded today, are predominantly the larger, well-known and successful ones.
+> These same projects are also the ones that tend to already have resources to sustain them.
+> Smaller projects that provide functionality good enough for use in PwDE may take too long to go through traditional steps required to reach a reasonable level of sustainability.
+>
+> A programme that enables the sale of Voluntary Security Attestations for the purpose of sustaining the community, seem to be the only viable option today.
+
 
 ## Value proposition for manufacturers
 
@@ -243,10 +270,10 @@ To make this also an attractive path for maintainers to opt in, the Steward orga
 
 ## Value proposition for the OSS community
 
-1. By qualifying, and then opting in to become a member of the Steward, the community member becomes eligible to receive a portion of the Steward's surplus in the form of recurring donations
+1. By qualifying, and then opting in to become a member of the Steward, the community member becomes eligible to receive a portion of the Steward's surplus in the form of recurring donations:
     * …where the donation amount is according to the Steward's disbursement formula,
     * …up to a level that can cover their expenses, including a meaningful part of their living costs.
-1. Additionally, those who qualify as a _member in good standing_ – who take additional steps to ensure their _long-term_ viability, are eligible to receive additional donations, also in accordance with the disbursement formula.
+1. Additionally, those who qualify as a _member in good standing_ – who take additional steps to ensure their _long-term_ viability – are eligible to receive additional donations, also in accordance with the disbursement formula.
 1. As a member, they also get an invitation to the Steward organisation's General Assembly, where they can…
     * …propose surplus disbursement formulas,
     * …vote on which surplus disbursement formula on offer is to be used until the next General Assembly, and
@@ -259,10 +286,10 @@ To qualify for Steward membership, the applicant has to:
 * Maintain a project that is reported as used by a manufacturer, or maintain a required upstream project or service, or organise or administer a community or service that supports the ecosystem participants in general.
 * Demonstrate that they have fulfilled the minimum required to show their project or service is _intended for use in commercial activities_, including any relevant "light-touch" compliance obligations that apply to the Steward.
 * Willingly state they are committed to the long-term care of their project, as long as this care is sufficiently supported by the Steward's sustaining activities.
-* Commit to improve their project long-term viability and governance, including publishing succession and sunset plans and policies.
-* As long as they are a member, take part in issuing voluntary security attestations confirming the claims above, and allow the Steward to use these attestations to generate the surplus needed for this venture to fulfil its purpose.
+* Commit to improve their project's long-term viability and governance, including publishing succession and sunset plans and policies.
+* As long as they are a member, take part in issuing _Voluntary Security Attestations_ confirming the claims above, and allow the Steward to use these attestations to generate the surplus needed for this venture to fulfil its purpose.
 
-If a project fails to meet any of the criteria above, the projects get an opportunity to rectify this in a timely manner – or failing that – risk losing their membership.
+If a project fails to meet any of the criteria above, the project gets an opportunity to rectify this in a timely manner – or failing that – risk losing their membership.
 Manufacturers will be notified by the Steward of any relevant, substantial or long-term changes like these, so they may conduct a risk assessment and act accordingly.
 If a project's membership criteria are fulfilled at some point later, they may of course freely apply for membership again.
 
@@ -289,24 +316,7 @@ The Steward must therefore operate in a way so its revenue sources generate a su
 
 **The Steward should eventually _not_ require donations or public funding** once its regular revenue sources are capable of producing a surplus suitable for its purpose.
 
-### Voluntary Security Attestations
-
-> [!WARNING]
-> As of 2026-11-08, the EU Commission hasn't published any guidance or delegated act on the Article 25 Attestation regime.
-> Until anything is published, the following is a _speculation_ on how this regime may work.
-
-With this said, there aren't really _that_ many ways of using an attestation regime in service of the requirements in the CRA.
-An attestation regime that doesn't allow for any avenues to sustain the open source projects relevant for PwDE, would be useless at providing any motivation for OSS maintainers to voluntarily play along.
-
-Until the EU Commission publishes any details on the [Article 25] attestations, we assume the following:
-
-A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer and signed by the Steward.
-It attests to the viability and intended use of their Open Source project in PwDE, covers a specific series of supported releases, and is reissued on a recurring basis, since each VSA is only valid for a limited time.
-A VSA functions also a proof that the manufacturer contributes to the long-term sustainability of the project.
-
-The CRA explicitly opens for such attestation programmes in [Recital (21)], [Recital (117)], and [Article 25].
-
-1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope, and which electronic identity it must be referred to by others, and the certificate it will be signing with.
+1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope and it's electronic identity used for cryptographic signing.
 1. **A manufacturer starts using a project (as needed)** – The manufacturer performs a risk assessment, and with due diligence reports its use of a project to the Steward. The Steward reports to the manufacturer the project's current membership status, and tells the project maintainer its use has been reported.
 1. **The project joins the Steward (once)** – If the maintainer wishes – they apply for their project to become a member of the Steward, by demonstrating the project is viable, compliant and intended for use in PwDE, and by stating who their Steward is in the project's metadata, using the Steward's electronic identity. The Steward affirms this, confirms compliance, updates the project's membership status, and reports this status change to affected manufacturers.
 1. **The project maintainer attests to their project's compliance and viability (as needed)** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_.
@@ -473,7 +483,7 @@ Each of these can and will be addressed in the coming months.
     * [ ] Ensure that any legal and tax implications from the combination of selling attestations and donating to members are made clear, verified and taken care of.
     * [ ] What happens if an attestation turns out to be false? Clarify and consider if this has to be addressed in the bylaws or somewhere else.
     * [ ] Consider the implications of selling attestations – does this lead to the Steward risking being considered as a manufacturer?
-    * [ ] Are there any "anti trust law" implications somewhere here? (a concern raised by Gregor Bransky)
+    * [ ] Are there any "antitrust law" implications somewhere here? (a concern raised by Gregor Bransky)
 * [ ] Reach out to community organisers that have a legal entity registered for their feedback on this document, and offer them to become founding members.
 * [ ] Present this concept at relevant conferences
     * [x] [London Perl Workshop 2026](https://act.yapc.eu/lpw2026/talk/8062)
@@ -516,7 +526,6 @@ The OSS Ecosystem Steward concept is the product of many conversations with many
 *[CRA]:       CRA – Cyber Resilience Act – (EU) Regulation 2024/2847, the EU product cybersecurity regulation.
 *[TPRF]:      TPRF – The Perl and Raku Foundation – a volunteer-led non-profit foundation dedicated to advancing the Perl and Raku programming languages. See perlfoundation.org for more info.
 *[VSA]:       VSA – Voluntary Security Attestation – a maintainer's and steward's attestation about the security posture of an OSS project.
-*[Dugnad]:    Dugnad – The Norwegian and Danish word for the tradition for helping one's neighbours pitching in on shared work.
 
 
 [(EU) Regulation 2024/2847 (Cyber Resilience Act)]:https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402847 '(EU) Regulation 2024/2847 (Cyber Resilience Act)'

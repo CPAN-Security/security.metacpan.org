@@ -277,7 +277,7 @@ sequenceDiagram
     note over ES,OSS: Once: Announce Steward
     ES->>OSS: Announce existence, intended scope<br>and electronic identity to the community
     note over MFG,OSS: Once: A manufacturer starts using a project
-    ES->>MFG: Manufacturer enrolls into the Steward's VSA programme by paying an enrolment fee
+    ES->>MFG: Manufacturer enrolls into the Steward's VSA programme<br>by paying an enrolment fee
     note over MFG,OSS: As needed: A manufacturer starts using a project
     MFG-->>OSS: Depends on project
     MFG-->>MFG: Perform risk assessment

@@ -13,13 +13,15 @@ mermaid: true
 > This document is a DRAFT, and still missing important details expected to be published by the EU Commission regarding the CRA Article 25 Attestation programme.
 >
 > Please return later! Any comments and concerns about the text are also quite welcome in the meantime.
+>
+> Last update: 2026-11-12 06:35:00 +0100
 
 
 ## The concept, in three sentences
 
 1. A maintainers' co-op, owned by the people who serve and look after a volunteer-based software ecosystem's projects, services, and communities.
-1. Companies pay it by purchasing attestations, so that the viability, security, code and ecosystem they rely on, funds the people who are best suited for looking after it.
-1. Maintainers, administrators and organizers retain full control, so they may continue doing what they enjoy, while now also receiving the resources necessary to do compliance work.
+1. Companies buy attestations from it showing that the code they rely on is viable and secure, and the money funds the people best placed to look after it.
+1. Maintainers, administrators and organisers retain full control, so they may continue doing what they enjoy, while now also receiving the resources necessary to do compliance work.
 
 
 ## Summary
@@ -253,6 +255,7 @@ The CRA explicitly opens for such attestation programmes in [Recital (21)], [Rec
 To enable the sale of attestations, certain steps have to be taken:
 
 1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope, and its electronic identity used for cryptographic signing.
+1. **A manufacturer starts using a project (once)** – The manufacturer performs a risk assessment, and with due diligence notes that they depend on a project that may or may not have a Steward. To fund part of the work required for getting the project into a viable state, the Manufacturer pays a one-time fee to enroll into the Steward's VSA programme.
 1. **A manufacturer starts using a project (as needed)** – The manufacturer performs a risk assessment, and with due diligence reports its use of a project to the Steward. The Steward reports to the manufacturer the project's current membership status, and tells the project maintainer its use has been reported.
 1. **The project joins the Steward (once)** – If the maintainer wishes – they apply for their project to become a member of the Steward, by demonstrating the project is viable, compliant and intended for use in PwDE, and by stating who their Steward is in the project's metadata, using the Steward's electronic identity. The Steward affirms this, confirms compliance, updates the project's membership status, and reports this status change to affected manufacturers.
 1. **The project maintainer attests to their project's compliance and viability (as needed)** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_.
@@ -276,11 +279,12 @@ sequenceDiagram
     participant OSS as OSS Project / Maintainer
     note over ES,OSS: Once: Announce Steward
     ES->>OSS: Announce existence, intended scope<br>and electronic identity to the community
+    note over MFG,OSS: Once: A manufacturer starts using a project
+    ES->>MFG: Manufacturer enrolls into the Steward's VSA programme by paying an enrollment fee
     note over MFG,OSS: As needed: A manufacturer starts using a project
     MFG-->>OSS: Depends on project
     MFG-->>MFG: Perform risk assessment
     MFG->>ES: Report use of project
-    ES->>MFG: Charge Manufacturer an enrollment fee for taking part in the Steward's program
     ES->>MFG: Report project's current membership status
     ES->>OSS: Inform that its use has been reported
     note over MFG,OSS: Once: The project joins the Steward

@@ -20,7 +20,7 @@ mermaid: true
 ## The concept, in three sentences
 
 1. A maintainers' co-op, owned by the people who serve and look after a volunteer-based software ecosystem's projects, services, and communities.
-1. Companies buy attestations from it showing that the code they rely on is viable and secure, and the money funds the people best placed to look after it.
+1. Companies buy attestations from it, showing that the projects they rely on are secure and compliant, so this money is used to ensure their long-term viability.
 1. Maintainers, administrators and organisers retain full control, so they may continue doing what they enjoy, while now also receiving the resources necessary to do compliance work.
 
 
@@ -237,20 +237,17 @@ The CRA explicitly opens for such attestation programmes in [Recital (21)], [Rec
 
 > [!NOTE]
 > There aren't really _that_ many ways of using an attestation programme in service of the requirements in the CRA.
-> An attestation programme that doesn't allow for any avenues to sustain the open source projects relevant for PwDE, would be useless at providing any motivation for OSS maintainers to voluntarily play along.
+> An attestation programme that doesn't allow for any avenues to sustain the open source projects relevant for PwDE would be useless at providing any motivation for OSS maintainers to play along.
 > This would in practice lead to only the most successful projects surviving in the long run, since smaller projects are unlikely to find the resources necessary to become viable for use in PwDE.
 >
 > Existing voluntary options for sustaining OSS projects don't work well with the smaller "long tail" projects.
-> In practice, the projects that are funded today, are predominantly the larger, well-known and successful ones.
+> In practice, the projects that are funded today are predominantly the larger, well-known and successful ones.
 > These same projects are also the ones that tend to already have resources to sustain them.
 > Smaller projects that provide functionality good enough for use in PwDE may take too long to go through traditional steps required to reach a reasonable level of sustainability.
 >
-> A programme that enables the sale of Voluntary Security Attestations for the purpose of sustaining the community, seem to be the only viable option today.
+> A programme that enables the sale of Voluntary Security Attestations for the purpose of sustaining the community, seems to be the only promising option today.
 
 #### How Voluntary Security Attestations are issued
-
-> [!WARNING]
-> The steps in this section are speculative. When details on Article 25 are published, this section will be updated.
 
 To enable the sale of attestations, certain steps have to be taken:
 
@@ -280,7 +277,7 @@ sequenceDiagram
     note over ES,OSS: Once: Announce Steward
     ES->>OSS: Announce existence, intended scope<br>and electronic identity to the community
     note over MFG,OSS: Once: A manufacturer starts using a project
-    ES->>MFG: Manufacturer enrolls into the Steward's VSA programme by paying an enrollment fee
+    ES->>MFG: Manufacturer enrolls into the Steward's VSA programme by paying an enrolment fee
     note over MFG,OSS: As needed: A manufacturer starts using a project
     MFG-->>OSS: Depends on project
     MFG-->>MFG: Perform risk assessment
@@ -437,7 +434,8 @@ Each of these can and will be addressed in the coming months.
     * [ ] FOSDEM - TBD
 * [ ] Fundraising for the required starting capital for the SCE.
 * [ ] Gather commitment from founding members: at least 3 communities that have registered a legal entity, of which two must be in different EEA countries.
-* [ ] Cover enrollment fees and privacy and data minimisation concerns
+* [ ] Cover enrolment fees and privacy and data minimisation concerns
+* [ ] Find a better term for "members in good standing" tier, as this term already has a well-defined meaning: a member who has fulfilled the requirements for membership
 
 
 ## Acknowledgements

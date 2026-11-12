@@ -236,6 +236,7 @@ The CRA explicitly opens for such attestation programmes in [Recital (21)], [Rec
 > [!NOTE]
 > There aren't really _that_ many ways of using an attestation programme in service of the requirements in the CRA.
 > An attestation programme that doesn't allow for any avenues to sustain the open source projects relevant for PwDE, would be useless at providing any motivation for OSS maintainers to voluntarily play along.
+> This would in practice lead to only the most successful projects surviving in the long run, since smaller projects are unlikely to find the resources necessary to become viable for use in PwDE.
 >
 > Existing voluntary options for sustaining OSS projects don't work well with the smaller "long tail" projects.
 > In practice, the projects that are funded today, are predominantly the larger, well-known and successful ones.
@@ -279,6 +280,7 @@ sequenceDiagram
     MFG-->>OSS: Depends on project
     MFG-->>MFG: Perform risk assessment
     MFG->>ES: Report use of project
+    ES->>MFG: Charge Manufacturer an enrollment fee for taking part in the Steward's program
     ES->>MFG: Report project's current membership status
     ES->>OSS: Inform that its use has been reported
     note over MFG,OSS: Once: The project joins the Steward
@@ -328,7 +330,6 @@ To make this also an attractive path for maintainers to opt in, the Steward orga
 1. By qualifying, and then opting in to become a member of the Steward, the community member becomes eligible to receive a portion of the Steward's surplus in the form of recurring donations:
     * …where the donation amount is according to the Steward's disbursement formula,
     * …up to a level that can cover their expenses, including a meaningful part of their living costs.
-1. Additionally, those who qualify as a _member in good standing_ – who take additional steps to ensure their _long-term_ viability – are eligible to receive additional donations, also in accordance with the disbursement formula.
 1. As a member, they also get an invitation to the Steward organisation's General Assembly, where they can…
     * …propose surplus disbursement formulas,
     * …vote on which surplus disbursement formula on offer is to be used until the next General Assembly, and
@@ -350,6 +351,10 @@ If a project's membership criteria are fulfilled at some point later, they may o
 
 If a project wishes to leave the Steward, they only have to declare that the project's Steward organisation is a different one (or none).
 When the most recent attestation expires, no new attestations are issued or signed by the Steward, and their membership commitments end.
+
+### Option: Members in good standing
+
+Additionally, the Steward may introduce a second tier of membership. Those who qualify as a _member in good standing_ take additional steps to ensure their _long-term_ viability, becoming eligible to receive additional donations (also in accordance with the disbursement formula).
 
 
 ## Value proposition for Market Surveillance Authorities
@@ -428,6 +433,7 @@ Each of these can and will be addressed in the coming months.
     * [ ] FOSDEM - TBD
 * [ ] Fundraising for the required starting capital for the SCE.
 * [ ] Gather commitment from founding members: at least 3 communities that have registered a legal entity, of which two must be in different EEA countries.
+* [ ] Cover enrollment fees and privacy and data minimisation concerns
 
 
 ## Acknowledgements

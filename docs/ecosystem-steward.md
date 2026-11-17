@@ -270,37 +270,40 @@ config:
 ---
 sequenceDiagram
     autonumber
-    participant MSA as Market Surveillance Authority (MSA)
     participant MFG as Manufacturer
     participant ES as OSS Ecosystem Steward
     participant OSS as OSS Project / Maintainer
+    participant MSA as Market Surveillance Authority
     note over ES,OSS: Once: Announce Steward
     ES->>OSS: Announce existence, intended scope<br>and electronic identity to the community
     note over MFG,OSS: Once: A manufacturer starts using a project
-    ES->>MFG: Manufacturer enrolls into the Steward's VSA programme<br>by paying an enrolment fee
+    ES->>OSS: Announce existence, intended<br>scope and electronic identity
+    ES->>MSA: Announce existence, intended<br>scope and electronic identity
+    MSA->>ES: Confirm identity
     note over MFG,OSS: As needed: A manufacturer starts using a project
     MFG-->>OSS: Depends on project
     MFG-->>MFG: Perform risk assessment
-    MFG->>ES: Report use of project
-    ES->>MFG: Report project's current membership status
-    ES->>OSS: Inform that its use has been reported
+    MFG->>ES:   Report use of project
+    ES->>MFG:   Report project's current membership status
+    ES->>OSS:   Inform project is CRA relevant<br>and eligible for membership
+    ES->>MFG:   Manufacturer enrolls into the Steward's VSA programme<br>by paying an enrolment fee
     note over MFG,OSS: Once: The project joins the Steward
-    OSS->>ES: Apply for membership
-    OSS-->>ES: Demonstrate project is viable, compliant<br>and intended for use in PwDE
-    OSS-->>OSS: Declare project's compliance in project
-    ES->>OSS: Confirm initial compliance<br>Confirm membership and update status
-    ES->>MFG: Report membership status change
+    OSS->>ES:   Apply for membership
+    OSS-->>ES:  Demonstrate project is viable,<br> compliant and intended for<br>use in PwDE
+    ES->>OSS:   Confirm initial compliance<br>Confirm membership and update status
+    ES->>MFG:   Report membership status change
     note over ES,OSS: As needed: Maintainer attests to compliance and viability
-    OSS->>ES: Attest viability and compliance markers
+    OSS-->>OSS:  Assess and document compliance
+    OSS->>ES:    Attestat to intention,<br>viability and compliance
     note over MFG,ES: Recurring schedule: Steward signs the project's VSA
-    MFG->>ES: Verify VSA: still compliant,<br>which release artifacts, valid for how long
-    ES-->>ES: Cryptographically sign VSA<br>using its electronic identity
-    ES->>MFG: Make signed VSA available for a fee
-    ES-->>OSS: Donate surplus to projects, communities and services<br>according to current disbursement formula
+    MFG->>ES:    Verify VSA: still compliant,<br>release artifacts, and validity duration
+    ES-->>ES:    Cryptographically sign VSA<br>using its electronic identity
+    ES->>MFG:    Make signed VSA available<br>for a recurring fee
+    ES-->>OSS:   Donate surplus to projects,<br>communities and services according<br>to current disbursement formula
     note over MSA,MFG: Eventually: PwDE audit
-    MSA->>MFG: Audits product compliance
-    MFG-->>MSA: Presents signed VSA
-    MSA-->>MFG: Verifies signed VSA
+    MSA->>MFG:   Audits product compliance
+    MFG-->>MSA:  Documents compliance, including signed VSAs
+    MSA-->>MFG:  Verifies signed VSA
     note over MFG: Product is compliant
 ```
 
@@ -586,6 +589,7 @@ The OSS Ecosystem Steward concept is the product of many conversations with many
 [Article 28]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_28 'EU declaration of conformity'
 [Article 28(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#028.001 'Manufacturer states that cybersecurity requirements in [Annex I] has been demonstrated'
 [Article 28(4)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#028.004 'Manufacturer assumes responsibility for compliance'
+[Article 29]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_30 'General principles of the CE marking'
 [Article 30]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_30 'Rules and conditions for affixing the CE marking'
 [Article 30(3)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#030.003 'The CE marking shall be affixed before the product with digital elements is placed on the market'
 [Article 32]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_32 'Conformity assessment procedures'

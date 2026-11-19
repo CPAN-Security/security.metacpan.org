@@ -1,4 +1,3 @@
-
 ## Funding
 
 - Funding targets
@@ -103,7 +102,7 @@ Base: [§ 10.Vedtekter for samvirkeforetak, Samvirkelova](https://lovdata.no/lov
     - Oslo Perl Mongers (sjn)
     - German Perl Mongers (corion)
     - Vienna Perl Mongers (domm)
-    - Orlando Perl Mongers (perigrin)
+    - Orlando Perl Mongers (perigrin)?
     - Toronto Perl Mongers (oalders)
     - London Perl Mongers ()
   - PAUSE
@@ -152,6 +151,20 @@ Base: [§ 10.Vedtekter for samvirkeforetak, Samvirkelova](https://lovdata.no/lov
 # Organization
 
 - Corporation with a social purpose ("Akjseselskap med sosialt formål")
+
+
+# To read:
+
+- The commercial carve-out in Recital 19, "[…] free and open-source software that are published, but **not made available on the market within the meaning of this Regulation**" should be interpreted strictly, according to Gregor Bransky.
+   - This presumably a possible way to avoid the risk of a Steward being considered a manufacturer, in the case where they have a revenue source (used for sustaining their FOSS projects).
+   - 
+
+- Single Economic Entity doctrine
+   - https://www.judicialcompetitiontraining.eu/wp-content/uploads/2020/03/Notion-of-Undertaking_compressed.pdf
+   - https://cccpl-encyclopaedia.lovable.app/term/single-economic-entity
+   - "who has control?"
+   - "who is the financial beneficiary?"
+
 
 
 ## TODO

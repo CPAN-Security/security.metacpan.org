@@ -4,7 +4,7 @@ title: "The OSS Ecosystem Steward"
 description: A proposal for a community-owned, non-profit co-operative acting as the CRA Open Source Software Steward for an entire ecosystem, like Perl and its CPAN
 author: sjn
 toc: true
-date: 2026-11-09 22:35:00 +0100
+date: 2026-11-19 23:35:00 +0100
 classes: wide
 mermaid: true
 ---
@@ -20,7 +20,7 @@ mermaid: true
 ## The concept, in three sentences
 
 1. A maintainers' co-op, owned by the people who serve and look after a volunteer-based software ecosystem's projects, services, and communities.
-1. Companies buy attestations from it, showing that the projects they rely on are secure and compliant, so this money is used to ensure their long-term viability.
+1. Companies buy attestations from it, showing that the projects they rely on are secure and compliant, and so this money is used to sustain the community.
 1. Maintainers, administrators and organisers retain full control, so they may continue doing what they enjoy, while now also receiving the resources necessary to do compliance work.
 
 
@@ -201,7 +201,7 @@ As a non-profit, the Steward must use any surplus on:
 
 ### Co-operative
 
-A co-operative is a member-owned legal entity, where any surplus from its operation is used for the benefit of its members – the OSS communities it serves.
+A co-operative is a member-owned legal entity, where any surplus from its operation is used for the benefit of its members– the OSS communities it serves.
 Co-operatives follow the seven [Rochdale Principles], as formulated by the International Co-operative Alliance:
 
 1. **Voluntary and open membership** – Co-operatives are voluntary organisations, open to all persons able to use their services and willing to accept the responsibilities of membership, without gender, social, racial, political or religious discrimination.
@@ -252,12 +252,12 @@ The CRA explicitly opens for such attestation programmes in [Recital (21)], [Rec
 To enable the sale of attestations, certain steps have to be taken:
 
 1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope, and its electronic identity used for cryptographic signing.
-1. **A manufacturer starts using a project (once)** – The manufacturer performs a risk assessment, and with due diligence notes that they depend on a project that may or may not have a Steward. To fund part of the work required for getting the project into a viable state, the Manufacturer pays a one-time fee to enroll into the Steward's VSA programme.
-1. **A manufacturer starts using a project (as needed)** – The manufacturer performs a risk assessment, and with due diligence reports its use of a project to the Steward. The Steward reports to the manufacturer the project's current membership status, and tells the project maintainer its use has been reported.
-1. **The project joins the Steward (once)** – If the maintainer wishes – they apply for their project to become a member of the Steward, by demonstrating the project is viable, compliant and intended for use in PwDE, and by stating who their Steward is in the project's metadata, using the Steward's electronic identity. The Steward affirms this, confirms compliance, updates the project's membership status, and reports this status change to affected manufacturers.
-1. **The project maintainer attests to their project's compliance and viability (as needed)** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_.
-1. **The Steward signs the project's attestation (on a recurring schedule)** – The Steward verifies the VSA for the project, reaffirming that it is still compliant, which release artifacts it applies to, and the duration it is valid for. The Steward then cryptographically signs the VSA using its electronic identity, and makes it available to the manufacturer for a fee. Any surplus from these sales is donated to projects, communities and services, or reinvested – in accordance with the Steward's current disbursement formula.
-1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSA, which the authority can verify.
+1. **A manufacturer starts using a project (once)** – The manufacturer performs a risk assessment, and with due diligence notes that they depend on a project that may or may not have a Steward. The Maintainer is informed that their project is in use by a sustaining manufacturer. The manufacturer pays the enrolment fee for the Steward's VSA programme, and committing to a subscription to remain enrolled.
+1. **The project joins the Steward (once)** – The maintainer applies to become a member of the Steward, by demonstrating their project is viable, compliant and intended for use in PwDE. They declare their Steward's identity in the project's metadata, together with the level of sustaining required. The Steward affirms this, confirms compliance, updates the project's membership status, and reports this status change to affected manufacturers.
+1. **The project maintainer attests to their project's compliance and viability (as needed)** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_, and other markers relevant for the manufacturer to do their due diligence.
+1. **The Steward signs the project's attestation (on a recurring schedule)** – The Steward reaffirms the VSA for the project, that it is still compliant, which release artifacts it applies to, and the duration it is valid for. The Steward then cryptographically signs the VSA using its electronic identity, and makes it available to subscribing manufacturers. Any surplus generated from these sales is donated to sustain projects, communities and services, or to be reinvested in the Steward – in accordance with the Steward's current disbursement formula.
+1. **A manufacturer receives VSAs (on a recurring schedule)** – Steward makes available to the manufacturer the project's current compliance, level of sustaining, and membership status. These come in the form of signed VSAs, as long as the manufacturer is enrolled.
+1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSAs as part of their compliance documentation. The market authority can verify the recency, validity and correctness of these.
 
 
 ```mermaid
@@ -275,34 +275,33 @@ sequenceDiagram
     participant OSS as OSS Project / Maintainer
     participant MSA as Market Surveillance Authority
     note over ES,OSS: Once: Announce Steward
-    ES->>OSS: Announce existence, intended scope<br>and electronic identity to the community
+    ES->>OSS:   Announce existence, intended<br>scope and electronic identity
+    ES->>MSA:   Announce existence, intended<br>scope and electronic identity
+    MSA->>ES:   Confirm identity
     note over MFG,OSS: Once: A manufacturer starts using a project
-    ES->>OSS: Announce existence, intended<br>scope and electronic identity
-    ES->>MSA: Announce existence, intended<br>scope and electronic identity
-    MSA->>ES: Confirm identity
-    note over MFG,OSS: As needed: A manufacturer starts using a project
-    MFG-->>OSS: Depends on project
-    MFG-->>MFG: Perform risk assessment
-    MFG->>ES:   Report use of project
-    ES->>MFG:   Report project's current membership status
+    ES->>MFG:   Manufacturer commits to the Steward's VSA programme<br>by paying an enrolment fee
     ES->>OSS:   Inform project is CRA relevant<br>and eligible for membership
-    ES->>MFG:   Manufacturer enrolls into the Steward's VSA programme<br>by paying an enrolment fee
     note over MFG,OSS: Once: The project joins the Steward
-    OSS->>ES:   Apply for membership
+    OSS->>ES:   Apply for membership, if desired<br>Report membership status
     OSS-->>ES:  Demonstrate project is viable,<br> compliant and intended for<br>use in PwDE
     ES->>OSS:   Confirm initial compliance<br>Confirm membership and update status
-    ES->>MFG:   Report membership status change
+    ES->>MFG:   Report updated membership status
+    note over MFG,OSS: As needed: A manufacturer uses a project
+    MFG-->>OSS: Depends on project
+    MFG-->>MFG: Perform risk assessment
+    MFG->>ES:   Report use of project,<br>if VSA is needed
+    ES->>MFG:   Report project's current membership status
     note over ES,OSS: As needed: Maintainer attests to compliance and viability
     OSS-->>OSS:  Assess and document compliance
-    OSS->>ES:    Attestat to intention,<br>viability and compliance
-    note over MFG,ES: Recurring schedule: Steward signs the project's VSA
-    MFG->>ES:    Verify VSA: still compliant,<br>release artifacts, and validity duration
+    OSS->>ES:    Attest to intention,<br>viability and compliance
+    note over MFG,OSS: Recurring schedule: Steward signs the project's VSA
+    OSS->>ES:    Reaffirm VSA: still compliant,<br>release artifacts, and validity duration
     ES-->>ES:    Cryptographically sign VSA<br>using its electronic identity
-    ES->>MFG:    Make signed VSA available<br>for a recurring fee
-    ES-->>OSS:   Donate surplus to projects,<br>communities and services according<br>to current disbursement formula
+    ES->>MFG:    Make signed VSA available<br>to those paying the recurring fee
+    ES-->>OSS:   Reinvest or donate surplus to<br>projects, communities and<br>services according to<br>disbursement formula
     note over MSA,MFG: Eventually: PwDE audit
     MSA->>MFG:   Audits product compliance
-    MFG-->>MSA:  Documents compliance, including signed VSAs
+    MFG-->>MSA:  Documents compliance, including the signed VSAs
     MSA-->>MFG:  Verifies signed VSA
     note over MFG: Product is compliant
 ```
@@ -375,7 +374,7 @@ The Steward must therefore operate in a way so its revenue sources generate a su
 ### Revenue sources
 
 1. **Public funding** – until the Steward operation is established and proven sustainable.
-1. **Enrolment fees** – paid by manufacturers when enrolling, and when re-enrolling.
+1. **Enrolment fees** – paid by manufacturers when enrolling.
 1. **Voluntary Security Attestations** – issued on a recurring (subscription) basis.
 
 **The Steward should eventually _not_ require donations or public funding** once its regular revenue sources are capable of producing a surplus suitable for its purpose.
@@ -448,6 +447,7 @@ The OSS Ecosystem Steward concept is the product of many conversations with many
 * Alistair Woodman
 * Arne Sommer
 * Greg Wallace
+* Gregor Bransky
 * Laurent Hosen
 * Lukas Kahwe Smith
 * Stig Palmquist
@@ -589,7 +589,7 @@ The OSS Ecosystem Steward concept is the product of many conversations with many
 [Article 28]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_28 'EU declaration of conformity'
 [Article 28(1)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#028.001 'Manufacturer states that cybersecurity requirements in [Annex I] has been demonstrated'
 [Article 28(4)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#028.004 'Manufacturer assumes responsibility for compliance'
-[Article 29]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_30 'General principles of the CE marking'
+[Article 29]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_29 'General principles of the CE marking'
 [Article 30]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_30 'Rules and conditions for affixing the CE marking'
 [Article 30(3)]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#030.003 'The CE marking shall be affixed before the product with digital elements is placed on the market'
 [Article 32]:https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_32 'Conformity assessment procedures'

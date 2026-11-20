@@ -97,7 +97,7 @@ Manufacturers are responsible for the security of _every_ component in their pro
 - …including the Open Source ones
 - …and the remote data processing solutions they rely on (phone apps, servers, APIs)
 
-No transfer of liability – it stays with the manufacturer ([CRA FAQ 4.1.1])
+No transfer of liability – it stays with the manufacturer ([CRA FAQ 4.1.1](https://cra.orcwg.org/faq/official/faq_4-1-1/))
 
 
 [comment]: # (!!! data-auto-animate)
@@ -109,75 +109,75 @@ No transfer of liability – it stays with the manufacturer ([CRA FAQ 4.1.1])
 
 ## What reaches upstream
 
-- Support period matching expected use, e.g. 5 years ([Article 13(8)])
+- Support period matching expected use, e.g. 5 years ([Article 13(8)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.008))
 
 
 [comment]: # (||| data-auto-animate)
 
 ## What reaches upstream
 
-- Support period matching expected use, e.g. 5 years ([Article 13(8)])
-- Security updates available for 10 years ([Article 13(9)])
+- Support period matching expected use, e.g. 5 years ([Article 13(8)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.008))
+- Security updates available for 10 years ([Article 13(9)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.009))
 
 
 [comment]: # (||| data-auto-animate)
 
 ## What reaches upstream
 
-- Support period matching expected use, e.g. 5 years ([Article 13(8)])
-- Security updates available for 10 years ([Article 13(9)])
-- No known exploitable vulnerabilities ([Annex I, Part I])
+- Support period matching expected use, e.g. 5 years ([Article 13(8)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.008))
+- Security updates available for 10 years ([Article 13(9)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.009))
+- No known exploitable vulnerabilities ([Annex I, Part I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#d1e47-68-1))
 
 
 [comment]: # (||| data-auto-animate)
 
 ## What reaches upstream
 
-- Support period matching expected use, e.g. 5 years ([Article 13(8)])
-- Security updates available for 10 years ([Article 13(9)])
-- No known exploitable vulnerabilities ([Annex I, Part I])
-- Correct and current metadata, e.g. SBOMs ([Article 64(4)])
+- Support period matching expected use, e.g. 5 years ([Article 13(8)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.008))
+- Security updates available for 10 years ([Article 13(9)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.009))
+- No known exploitable vulnerabilities ([Annex I, Part I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#d1e47-68-1))
+- Correct and current metadata, e.g. SBOMs ([Article 64(4)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#064.004))
 
 
 [comment]: # (||| data-auto-animate)
 
 ## What reaches upstream
 
-- Support period matching expected use, e.g. 5 years ([Article 13(8)])
-- Security updates available for 10 years ([Article 13(9)])
-- No known exploitable vulnerabilities ([Annex I, Part I])
-- Correct and current metadata, e.g. SBOMs ([Article 64(4)])
-- Fixes shared with upstream – someone has to receive them ([Article 13(6)])
+- Support period matching expected use, e.g. 5 years ([Article 13(8)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.008))
+- Security updates available for 10 years ([Article 13(9)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.009))
+- No known exploitable vulnerabilities ([Annex I, Part I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#d1e47-68-1))
+- Correct and current metadata, e.g. SBOMs ([Article 64(4)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#064.004))
+- Fixes shared with upstream – someone has to receive them ([Article 13(6)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.006))
 
 
 [comment]: # (||| data-auto-animate)
 
 ## What reaches upstream
 
-- Support period matching expected use, e.g. 5 years ([Article 13(8)])
-- Security updates available for 10 years ([Article 13(9)])
-- No known exploitable vulnerabilities ([Annex I, Part I])
-- Correct and current metadata, e.g. SBOMs ([Article 64(4)])
-- Fixes shared with upstream – someone has to receive them ([Article 13(6)])
+- Support period matching expected use, e.g. 5 years ([Article 13(8)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.008))
+- Security updates available for 10 years ([Article 13(9)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.009))
+- No known exploitable vulnerabilities ([Annex I, Part I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#d1e47-68-1))
+- Correct and current metadata, e.g. SBOMs ([Article 64(4)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#064.004))
+- Fixes shared with upstream – someone has to receive them ([Article 13(6)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#013.006))
 
 …and due diligence on _hundreds_ or _thousands_ of components
 
 
 [comment]: # (!!! data-auto-animate)
 
-## A [Hobson's Choice] for maintainers
+## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice) for maintainers
 
 
 [comment]: # (||| data-auto-animate)
 
-## A [Hobson's Choice] for maintainers
+## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice) for maintainers
 
 - **Accept** – demonstrate the project is _intended for commercial use_
 
 
 [comment]: # (||| data-auto-animate)
 
-## A [Hobson's Choice] for maintainers
+## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice) for maintainers
 
 - **Accept** – demonstrate the project is _intended for commercial use_
   - …and take on boring, tedious compliance work
@@ -185,7 +185,7 @@ No transfer of liability – it stays with the manufacturer ([CRA FAQ 4.1.1])
 
 [comment]: # (||| data-auto-animate)
 
-## A [Hobson's Choice] for maintainers
+## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice) for maintainers
 
 - **Accept** – demonstrate the project is _intended for commercial use_
   - …and take on boring, tedious compliance work
@@ -194,7 +194,7 @@ No transfer of liability – it stays with the manufacturer ([CRA FAQ 4.1.1])
 
 [comment]: # (||| data-auto-animate)
 
-## A [Hobson's Choice] for maintainers
+## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice) for maintainers
 
 - **Accept** – demonstrate the project is _intended for commercial use_
   - …and take on boring, tedious compliance work
@@ -204,7 +204,7 @@ No transfer of liability – it stays with the manufacturer ([CRA FAQ 4.1.1])
 
 [comment]: # (||| data-auto-animate)
 
-## A [Hobson's Choice] for maintainers
+## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice) for maintainers
 
 - **Accept** – demonstrate the project is _intended for commercial use_
   - …and take on boring, tedious compliance work
@@ -223,14 +223,14 @@ Goal: make accepting **realistic and fair**
 
 ## The Open Source Software Steward
 
-A new legal category in the CRA ([Article 3], [Article 24])
+A new legal category in the CRA ([Article 3](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_3), [Article 24](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24))
 
 
 [comment]: # (||| data-auto-animate)
 
 ## The Open Source Software Steward
 
-A new legal category in the CRA ([Article 3], [Article 24])
+A new legal category in the CRA ([Article 3](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_3), [Article 24](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24))
 
 - …_systematically_ supporting Open Source intended for commercial use
 
@@ -239,7 +239,7 @@ A new legal category in the CRA ([Article 3], [Article 24])
 
 ## The Open Source Software Steward
 
-A new legal category in the CRA ([Article 3], [Article 24])
+A new legal category in the CRA ([Article 3](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_3), [Article 24](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24))
 
 - …_systematically_ supporting Open Source intended for commercial use
 - …ensuring the viability of those projects
@@ -249,7 +249,7 @@ A new legal category in the CRA ([Article 3], [Article 24])
 
 ## The Open Source Software Steward
 
-A new legal category in the CRA ([Article 3], [Article 24])
+A new legal category in the CRA ([Article 3](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_3), [Article 24](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24))
 
 - …_systematically_ supporting Open Source intended for commercial use
 - …ensuring the viability of those projects
@@ -493,7 +493,7 @@ The General Assembly decides the disbursement formula
 
 ## A community-owned non-profit **co-operative**
 
-Following the seven [Rochdale Principles]:
+Following the seven [Rochdale Principles](https://en.wikipedia.org/wiki/Rochdale_Principles):
 
 - Voluntary and open membership
 - Democratic member control
@@ -508,7 +508,7 @@ Following the seven [Rochdale Principles]:
 
 ## A community-owned non-profit **co-operative**
 
-Following the seven [Rochdale Principles]:
+Following the seven [Rochdale Principles](https://en.wikipedia.org/wiki/Rochdale_Principles):
 
 - Voluntary and open membership
 - Democratic member control
@@ -518,7 +518,7 @@ Following the seven [Rochdale Principles]:
 - Co-operation among co-operatives
 - Concern for community
 
-Set up as a European Cooperative Society ([Societas cooperativa Europaea (SCE)])
+Set up as a European Cooperative Society ([Societas cooperativa Europaea (SCE)](https://en.wikipedia.org/wiki/Societas_cooperativa_Europaea))
 
 
 [comment]: # (!!! data-auto-animate)
@@ -573,7 +573,7 @@ A claim **issued by the maintainer**, **signed by the Steward**
 - …covering specific releases, valid for a limited time
 - …and a receipt for the manufacturer's contribution to the project
 
-The CRA opens for this ([Recital (21)], [Recital (117)], [Article 25])
+The CRA opens for this ([Recital (21)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_21), [Recital (117)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#rct_117), [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25))
 
 ⚠️ **No delegated act published yet – this part is speculation**
 
@@ -847,14 +847,14 @@ Goal: **no donations or public funding needed** in the long run
 
 ## Next steps
 
-- EU Commission publishes the [Article 25] delegated act
+- EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
 
 
 [comment]: # (||| data-auto-animate)
 
 ## Next steps
 
-- EU Commission publishes the [Article 25] delegated act
+- EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
 - Draft the SCE bylaws – legal, tax and antitrust questions
 
 
@@ -862,7 +862,7 @@ Goal: **no donations or public funding needed** in the long run
 
 ## Next steps
 
-- EU Commission publishes the [Article 25] delegated act
+- EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
 - Draft the SCE bylaws – legal, tax and antitrust questions
 - Founding members: ≥3 legal entities, in ≥2 EEA countries
 
@@ -871,7 +871,7 @@ Goal: **no donations or public funding needed** in the long run
 
 ## Next steps
 
-- EU Commission publishes the [Article 25] delegated act
+- EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
 - Draft the SCE bylaws – legal, tax and antitrust questions
 - Founding members: ≥3 legal entities, in ≥2 EEA countries
   - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm have responded
@@ -881,7 +881,7 @@ Goal: **no donations or public funding needed** in the long run
 
 ## Next steps
 
-- EU Commission publishes the [Article 25] delegated act
+- EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
 - Draft the SCE bylaws – legal, tax and antitrust questions
 - Founding members: ≥3 legal entities, in ≥2 EEA countries
   - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm have responded
@@ -892,7 +892,7 @@ Goal: **no donations or public funding needed** in the long run
 
 ## Next steps
 
-- EU Commission publishes the [Article 25] delegated act
+- EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
 - Draft the SCE bylaws – legal, tax and antitrust questions
 - Founding members: ≥3 legal entities, in ≥2 EEA countries
   - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm have responded
@@ -909,14 +909,14 @@ Goal: **no donations or public funding needed** in the long run
 
 ## How you can help
 
-- Read the proposal: [The OSS Ecosystem Steward]
+- Read the proposal: [The OSS Ecosystem Steward](https://security.metacpan.org/docs/ecosystem-steward.html)
 
 
 [comment]: # (||| data-auto-animate)
 
 ## How you can help
 
-- Read the proposal: [The OSS Ecosystem Steward]
+- Read the proposal: [The OSS Ecosystem Steward](https://security.metacpan.org/docs/ecosystem-steward.html)
 - Send comments and concerns
 
 
@@ -924,7 +924,7 @@ Goal: **no donations or public funding needed** in the long run
 
 ## How you can help
 
-- Read the proposal: [The OSS Ecosystem Steward]
+- Read the proposal: [The OSS Ecosystem Steward](https://security.metacpan.org/docs/ecosystem-steward.html)
 - Send comments and concerns
 - Does your Perl community have a legal entity? Become a founding member!
 
@@ -943,20 +943,6 @@ Salve J. Nilsen
 🦆🦆
 
 
-
-
-
-
-*[PwDE]:      PwDE – Products with Digital Elements – Products with a CE marking, including their digital parts and remote data processing solutions, that are regulated by the CRA.
-*[FTE]:       FTE – Full-time Equivalent – 100% is equivalent to a full-time position at an employer, typically 37.5-40 hours per week.
-*[OSS]:       OSS – Open Source Software – Software published under an OSI approved Open Source License.
-*[CPANSec]:   CPANSec – the CPAN Security Group – a group of security-conscious volunteers, working on improving the Perl and CPAN ecosystems security posture.
-*[CPAN]:      CPAN – the Comprehensive Perl Archive Network – the primary Open Source package ecosystem for publishing library components (modules) for the Perl programming language. It is the first of its kind, in continuous operation since 1995!
-*[SBOM]:      SBOM – Software Bill of Materials – a common machine-readable set of standards for storing and communicating software metadata, like dependencies, licensing and contact information.
-*[OPEX]:      OPEX – Operational expenses – budget items for covering ongoing costs of running the business.
-*[CRA]:       CRA – Cyber Resilience Act – (EU) Regulation 2024/2847, the EU product cybersecurity regulation.
-*[TPRF]:      TPRF – The Perl and Raku Foundation – a volunteer-led non-profit foundation dedicated to advancing the Perl and Raku programming languages. See perlfoundation.org for more info.
-*[VSA]:       VSA – Voluntary Security Attestation – a maintainer's and Steward's attestation about the security posture of an OSS project.
 
 
 [(EU) Regulation 2024/2847 (Cyber Resilience Act)]:https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402847 '(EU) Regulation 2024/2847 (Cyber Resilience Act)'

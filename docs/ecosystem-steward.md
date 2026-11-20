@@ -4,7 +4,7 @@ title: "The OSS Ecosystem Steward"
 description: A proposal for a community-owned, non-profit co-operative acting as the CRA Open Source Software Steward for an entire ecosystem, like Perl and its CPAN
 author: sjn
 toc: true
-date: 2026-11-19 23:35:00 +0100
+date: 2026-11-09 22:35:00 +0100
 classes: wide
 mermaid: true
 ---
@@ -14,13 +14,13 @@ mermaid: true
 >
 > Please return later! Any comments and concerns about the text are also quite welcome in the meantime.
 >
-> Last update: 2026-11-12 06:35:00 +0100
+> Last update: 2026-11-19 23:55:00 +0100
 
 
 ## The concept, in three sentences
 
 1. A maintainers' co-op, owned by the people who serve and look after a volunteer-based software ecosystem's projects, services, and communities.
-1. Companies buy attestations from it, showing that the projects they rely on are secure and compliant, and so this money is used to sustain the community.
+1. Companies buy attestations from it, showing that the projects they rely on are secure and compliant, and that money sustains the community.
 1. Maintainers, administrators and organisers retain full control, so they may continue doing what they enjoy, while now also receiving the resources necessary to do compliance work.
 
 
@@ -117,11 +117,11 @@ To make it worse, there are further complications for CPAN specifically:
 
 * **No existing candidate** – The greater CPAN ecosystem has no existing organisation that is willing, competent and able to take on the Steward role.
 * **A laissez-faire tradition** – The CPAN community has long operated in a _laissez-faire_ way, letting each individual decide for themselves whether to act or not. Any Steward must respect this.
-* **A fiercely independent culture** – Many maintainers look with scepticism at any centralising "authority", which has been acknowledged for decades with the Perl and Raku Foundation's "hands-off" and "servant leadership" philosophy for supporting the community. Succeeding in imposing even basic requirements like security policies or viability requirements on projects, is therefore quite unrealistic, if this is to happen on a volunteer basis.
+* **A fiercely independent culture** – Many maintainers look with scepticism at any centralising "authority", which has been acknowledged for decades with the Perl and Raku Foundation's "hands-off" and "servant leadership" philosophy for supporting the community. Succeeding in imposing even basic requirements like security policies or viability requirements on projects is therefore quite unrealistic, if this is to happen on a volunteer basis.
 
 So instead of trying to fit the Steward's tasks onto existing governance structures, we ask a different question:
 
-**How do we apply the Steward function to an entire ecosystem _on the community's terms_?**
+**How do we introduce the Steward function to an entire ecosystem _on the community's terms_?**
 
 
 ## Designing a Steward for an ecosystem on the community's terms
@@ -201,7 +201,7 @@ As a non-profit, the Steward must use any surplus on:
 
 ### Co-operative
 
-A co-operative is a member-owned legal entity, where any surplus from its operation is used for the benefit of its members– the OSS communities it serves.
+A co-operative is a member-owned legal entity, where any surplus from its operation is used for the benefit of its members – the OSS communities it serves.
 Co-operatives follow the seven [Rochdale Principles], as formulated by the International Co-operative Alliance:
 
 1. **Voluntary and open membership** – Co-operatives are voluntary organisations, open to all persons able to use their services and willing to accept the responsibilities of membership, without gender, social, racial, political or religious discrimination.
@@ -226,12 +226,12 @@ This lets it operate under a single EEA-wide set of rules, and allows it to move
 ### Voluntary Security Attestations
 
 > [!WARNING]
-> As of 2026-11-12, the EU Commission has **not** published any guidance or delegated act on the Article 25 Attestation programme.
+> As of this writing, the EU Commission has **not** published any guidance or delegated act on the Article 25 Attestation programme.
 > Until anything is published, the following is a _speculation_ on how this programme may work.
 
 A _Voluntary Security Attestation_ (VSA) is a claim issued by a maintainer and signed by the Steward.
 It attests to the viability and intended use of their Open Source project in PwDE, covers a specific series of supported releases, and is reissued on a recurring basis, since each VSA is only valid for a limited time.
-A VSA works also as proof that the manufacturer contributes to the long-term sustainability of the project.
+A VSA also works as receipt for the manufacturer's contribution to the long-term sustainability of the project.
 
 The CRA explicitly opens for such attestation programmes in [Recital (21)], [Recital (117)], and [Article 25].
 
@@ -252,11 +252,11 @@ The CRA explicitly opens for such attestation programmes in [Recital (21)], [Rec
 To enable the sale of attestations, certain steps have to be taken:
 
 1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope, and its electronic identity used for cryptographic signing.
-1. **A manufacturer starts using a project (once)** – The manufacturer performs a risk assessment, and with due diligence notes that they depend on a project that may or may not have a Steward. The Maintainer is informed that their project is in use by a sustaining manufacturer. The manufacturer pays the enrolment fee for the Steward's VSA programme, and committing to a subscription to remain enrolled.
-1. **The project joins the Steward (once)** – The maintainer applies to become a member of the Steward, by demonstrating their project is viable, compliant and intended for use in PwDE. They declare their Steward's identity in the project's metadata, together with the level of sustaining required. The Steward affirms this, confirms compliance, updates the project's membership status, and reports this status change to affected manufacturers.
+1. **A manufacturer starts using a project (once)** – The manufacturer performs a risk assessment, and with due diligence notes that they depend on a project that may or may not have a Steward. The Maintainer is informed that their project is in use by a manufacturer. The manufacturer pays the enrolment fee for the Steward's VSA programme, and commits to a subscription for remaining enrolled.
+1. **The project joins the Steward (once)** – If desired, the maintainer applies to become a member of the Steward by demonstrating their project is viable, compliant and intended for use in PwDE. They declare their Steward's identity in the project's metadata, and their required FTE level of sustaining. The Steward affirms this, confirms compliance, updates the project's membership status, and reports this status change to affected manufacturers.
 1. **The project maintainer attests to their project's compliance and viability (as needed)** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_, and other markers relevant for the manufacturer to do their due diligence.
 1. **The Steward signs the project's attestation (on a recurring schedule)** – The Steward reaffirms the VSA for the project, that it is still compliant, which release artifacts it applies to, and the duration it is valid for. The Steward then cryptographically signs the VSA using its electronic identity, and makes it available to subscribing manufacturers. Any surplus generated from these sales is donated to sustain projects, communities and services, or to be reinvested in the Steward – in accordance with the Steward's current disbursement formula.
-1. **A manufacturer receives VSAs (on a recurring schedule)** – Steward makes available to the manufacturer the project's current compliance, level of sustaining, and membership status. These come in the form of signed VSAs, as long as the manufacturer is enrolled.
+1. **A manufacturer receives VSAs (on a recurring schedule)** – Steward makes available to the manufacturer the project's current compliance, FTE level of sustaining, and membership status. These come in the form of signed VSAs, as long as the manufacturer remains enrolled.
 1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSAs as part of their compliance documentation. The market authority can verify the recency, validity and correctness of these.
 
 
@@ -274,15 +274,15 @@ sequenceDiagram
     participant ES as OSS Ecosystem Steward
     participant OSS as OSS Project / Maintainer
     participant MSA as Market Surveillance Authority
-    note over ES,OSS: Once: Announce Steward
+    note over OSS,MSA: Once: Announce Steward
     ES->>OSS:   Announce existence, intended<br>scope and electronic identity
     ES->>MSA:   Announce existence, intended<br>scope and electronic identity
     MSA->>ES:   Confirm identity
     note over MFG,OSS: Once: A manufacturer starts using a project
-    ES->>MFG:   Manufacturer commits to the Steward's VSA programme<br>by paying an enrolment fee
+    MFG->>ES:   Manufacturer commits to the<br>Steward's VSA programme, by<br>paying an enrolment fee
     ES->>OSS:   Inform project is CRA relevant<br>and eligible for membership
     note over MFG,OSS: Once: The project joins the Steward
-    OSS->>ES:   Apply for membership, if desired<br>Report membership status
+    OSS->>ES:   Apply for membership, if desired
     OSS-->>ES:  Demonstrate project is viable,<br> compliant and intended for<br>use in PwDE
     ES->>OSS:   Confirm initial compliance<br>Confirm membership and update status
     ES->>MFG:   Report updated membership status
@@ -295,11 +295,11 @@ sequenceDiagram
     OSS-->>OSS:  Assess and document compliance
     OSS->>ES:    Attest to intention,<br>viability and compliance
     note over MFG,OSS: Recurring schedule: Steward signs the project's VSA
-    OSS->>ES:    Reaffirm VSA: still compliant,<br>release artifacts, and validity duration
+    ES->>OSS:    Reaffirm VSA: still compliant,<br>release artifacts, and validity duration
     ES-->>ES:    Cryptographically sign VSA<br>using its electronic identity
-    ES->>MFG:    Make signed VSA available<br>to those paying the recurring fee
-    ES-->>OSS:   Reinvest or donate surplus to<br>projects, communities and<br>services according to<br>disbursement formula
-    note over MSA,MFG: Eventually: PwDE audit
+    ES->>MFG:    Make signed VSA available to<br>manufacturers paying the recurring fee
+    ES-->>OSS:   Reinvest or donate surplus<br>to projects, communities and<br>services according to<br>disbursement formula
+    note over MFG,MSA: Eventually: PwDE audit
     MSA->>MFG:   Audits product compliance
     MFG-->>MSA:  Documents compliance, including the signed VSAs
     MSA-->>MFG:  Verifies signed VSA
@@ -314,7 +314,7 @@ As part of this due diligence, the manufacturer should consider the following:
 
 1. **Intended for use in the course of a commercial activity**: Are the OSS projects used in the PwDE meeting the same "light-touch" compliance obligations Stewards have in the CRA?
     1. Vulnerability and incident handling is documented and compliant
-    1. Maintainers and administrators are committed to be available to respond to emergencies in a timely manner
+    1. Maintainers and administrators are committed to being available to respond to emergencies in a timely manner
     1. Security-critical metadata about the components are kept current, complete and correct
 1. **Viable and sustained** for this use: Are these same projects likely to remain sustained for the duration of the product's support period?
     1. Necessary policy, governance and support structures in place and adhered to
@@ -348,7 +348,7 @@ To qualify for Steward membership, the applicant has to:
 * Commit to improve their project's long-term viability and governance, including publishing succession and sunset plans and policies.
 * As long as they are a member, take part in issuing _Voluntary Security Attestations_ confirming the claims above, and allow the Steward to use these attestations to generate the surplus needed for this venture to fulfil its purpose.
 
-If a project fails to meet any of the criteria above, the project gets an opportunity to rectify this in a timely manner – or failing that – risk losing their membership.
+If a project fails to meet the criteria above, the project gets an opportunity to rectify this – or risk losing their membership.
 Manufacturers will be notified by the Steward of any relevant, substantial or long-term changes like these, so they may conduct a risk assessment and act accordingly.
 If a project's membership criteria are fulfilled at some point later, they may of course freely apply for membership again.
 
@@ -374,8 +374,8 @@ The Steward must therefore operate in a way so its revenue sources generate a su
 ### Revenue sources
 
 1. **Public funding** – until the Steward operation is established and proven sustainable.
-1. **Enrolment fees** – paid by manufacturers when enrolling.
-1. **Voluntary Security Attestations** – issued on a recurring (subscription) basis.
+1. **Enrolment fees** – paid by manufacturers when enrolling to the steward's VSA subscription programme.
+1. **Voluntary Security Attestations** – issued, and made available to enrolled manufacturers.
 
 **The Steward should eventually _not_ require donations or public funding** once its regular revenue sources are capable of producing a surplus suitable for its purpose.
 
@@ -387,7 +387,7 @@ The Steward must therefore operate in a way so its revenue sources generate a su
     1. 1–3 Software developers (membership & manufacturer management; donation management; attestation issuance; etc.)
     1. 1 Primary contact for member communities (member/developer relations and support)
     1. 1 Primary contact for manufacturers (sales and enrolment support)
-    1. 0–1 Primary contact for market surveillance authorities (legal)
+    1. 0–1 Primary contact for market surveillance authorities (legal/security)
     1. 0–1 Training & communications (member security awareness & training)
     1. 0–1 Treasurer & fundraising (CFO)
     1. 1 Executive (CEO)
@@ -401,11 +401,11 @@ The Steward must therefore operate in a way so its revenue sources generate a su
     1. Legal services
     1. Contingencies & other expenses
 1. **Training, education and outreach**
-    1. 4–6 external events per employee (travel, lodging, food)
+    1. 3–5 external events per employee (travel, lodging, food)
     1. 2 internal events (venue, food, attendee travel & hotel)
     1. Contingencies & other expenses
 1. **Board remuneration**
-    1. 4 board meetings × 5 board members × 2 hours
+    1. 4 board meetings × 5 board members × 3 hours
 1. **Re-investment into the Ecosystem Steward**
 
 The executive officer and treasurer jointly propose the detailed budget to the Board.
@@ -436,7 +436,16 @@ Each of these can and will be addressed in the coming months.
     * [ ] FOSDEM - TBD
 * [ ] Fundraising for the required starting capital for the SCE.
 * [ ] Gather commitment from founding members: at least 3 communities that have registered a legal entity, of which two must be in different EEA countries.
-* [ ] Cover enrolment fees and privacy and data minimisation concerns
+    * [x] The Perl and Raku Foundation (requires business model)
+    * [x] Vienna.pm (requires funding)
+    * [ ] Frankfurt.pm
+    * [x] Les Mongueurs de Perl (requires funding)
+    * [ ] Swiss Perl Mongers
+    * [ ] Oslo.pm
+    * [ ] Japan Perl Association
+    * [x] ~~London.pm~~ (no legal entity)
+    * [x] ~~Orlando.pm~~ (no legal entity)
+* [ ] Cover enrolment fees and privacy and data minimisation concerns (for GDPR compliance)
 * [ ] Find a better term for "members in good standing" tier, as this term already has a well-defined meaning: a member who has fulfilled the requirements for membership
 
 
@@ -447,7 +456,6 @@ The OSS Ecosystem Steward concept is the product of many conversations with many
 * Alistair Woodman
 * Arne Sommer
 * Greg Wallace
-* Gregor Bransky
 * Laurent Hosen
 * Lukas Kahwe Smith
 * Stig Palmquist

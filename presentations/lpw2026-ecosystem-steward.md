@@ -15,9 +15,9 @@
 [comment]: # (controlsBackArrows: "true")
 
 
-## The OSS Ecosystem Steward
+## What is an OSS Ecosystem Steward, and can we have one?
 
-London Perl Workshop 2026
+London Perl & Raku Workshop 2026
 
 Salve J. Nilsen
 
@@ -27,6 +27,14 @@ Salve J. Nilsen
 
 
 Note:
+
+The EU Cyber Resilience Act (CRA) introduces a new entity dedicated to sustaining and securing Open Source projects: the OSS Steward.
+
+This organization is meant to support projects in many ways – including helping attest their software is intended for commercial use, and to be the single contact point towards market authorities, CSIRTs, and manufacturers wishing to remain CRA compliant.
+
+In many ecosystems, existing foundations may offer this help. But for Perl and CPAN, there is no central organization that is both capable and willing to assume the responsibilities of a Steward. So how can we still support all who intend to continue make, rely on, and benefit from OSS, Perl and CPAN?
+
+Here, Salve presents his solution – a non-profit community-owned cooperative: the OSS Ecosystem Steward.
 
 [comment]: # (!!! data-auto-animate)
 
@@ -255,6 +263,54 @@ A new legal category in the CRA ([Article 3](https://eur-lex.europa.eu/legal-con
 - …ensuring the viability of those projects
 
 Works well for a foundation with _tens or hundreds_ of projects
+
+
+[comment]: # (!!! data-auto-animate)
+
+## The Steward's obligations
+
+
+[comment]: # (||| data-auto-animate)
+
+## The Steward's obligations
+
+Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24)):
+
+- …a cybersecurity policy
+
+
+[comment]: # (||| data-auto-animate)
+
+## The Steward's obligations
+
+Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24)):
+
+- …a cybersecurity policy
+- …cooperate with market surveillance authorities
+
+
+[comment]: # (||| data-auto-animate)
+
+## The Steward's obligations
+
+Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24)):
+
+- …a cybersecurity policy
+- …cooperate with market surveillance authorities
+- …report actively exploited vulnerabilities and severe incidents (CSIRTs / ENISA)
+
+
+[comment]: # (||| data-auto-animate)
+
+## The Steward's obligations
+
+Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24)):
+
+- …a cybersecurity policy
+- …cooperate with market surveillance authorities
+- …report actively exploited vulnerabilities and severe incidents (CSIRTs / ENISA)
+
+…and a **single point of contact** – for authorities, CSIRTs and manufacturers
 
 
 [comment]: # (!!! data-auto-animate)
@@ -898,6 +954,53 @@ Goal: **no donations or public funding needed** in the long run
   - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm have responded
   - Blockers: funding, a business model, GA decisions
 - Fundraising for the SCE's starting capital
+
+
+[comment]: # (!!! data-auto-animate)
+
+## So, can we have one?
+
+
+[comment]: # (||| data-auto-animate)
+
+## So, can we have one?
+
+**Yes** – if…
+
+- …the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) programme allows attestations to sustain projects
+
+
+[comment]: # (||| data-auto-animate)
+
+## So, can we have one?
+
+**Yes** – if…
+
+- …the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) programme allows attestations to sustain projects
+- …≥3 Perl communities with legal entities join as founders
+
+
+[comment]: # (||| data-auto-animate)
+
+## So, can we have one?
+
+**Yes** – if…
+
+- …the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) programme allows attestations to sustain projects
+- …≥3 Perl communities with legal entities join as founders
+- …we raise the starting capital
+
+
+[comment]: # (||| data-auto-animate)
+
+## So, can we have one?
+
+**Yes** – if…
+
+- …the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) programme allows attestations to sustain projects
+- …≥3 Perl communities with legal entities join as founders
+- …we raise the starting capital
+- …maintainers choose to opt in
 
 
 [comment]: # (!!! data-auto-animate)

@@ -252,12 +252,12 @@ The CRA explicitly opens for such attestation programmes in [Recital (21)], [Rec
 To enable the sale of attestations, certain steps have to be taken:
 
 1. **Announcing the Steward (once)** – The Steward notifies the community of its existence and intended scope, and its electronic identity used for cryptographic signing.
-1. **A manufacturer starts using a project (once)** – The manufacturer performs a risk assessment, and with due diligence notes that they depend on a project that may or may not have a Steward. The Maintainer is informed that their project is in use by a manufacturer. The manufacturer pays the enrolment fee for the Steward's VSA programme, and commits to a subscription for remaining enrolled.
+1. **A manufacturer starts using a project (once)** – The manufacturer performs a risk assessment, and with due diligence notes that they depend on a project that may or may not have a Steward. The maintainer is informed that their project is in use by a manufacturer. The manufacturer pays the enrolment fee for the Steward's VSA programme, and commits to a subscription for remaining enrolled.
 1. **The project joins the Steward (once)** – If desired, the maintainer applies to become a member of the Steward by demonstrating their project is viable, compliant and intended for use in PwDE. They declare their Steward's identity in the project's metadata, and their required FTE level of sustaining. The Steward affirms this, confirms compliance, updates the project's membership status, and reports this status change to affected manufacturers.
 1. **The project maintainer attests to their project's compliance and viability (as needed)** – This attestation includes relevant viability and compliance markers, suitable for demonstrating the project is _intended for use in commercial activities_, and other markers relevant for the manufacturer to do their due diligence.
-1. **The Steward signs the project's attestation (on a recurring schedule)** – The Steward reaffirms the VSA for the project, that it is still compliant, which release artifacts it applies to, and the duration it is valid for. The Steward then cryptographically signs the VSA using its electronic identity, and makes it available to subscribing manufacturers. Any surplus generated from these sales is donated to sustain projects, communities and services, or to be reinvested in the Steward – in accordance with the Steward's current disbursement formula.
-1. **A manufacturer receives VSAs (on a recurring schedule)** – Steward makes available to the manufacturer the project's current compliance, FTE level of sustaining, and membership status. These come in the form of signed VSAs, as long as the manufacturer remains enrolled.
-1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSAs as part of their compliance documentation. The market authority can verify the recency, validity and correctness of these.
+1. **The Steward signs the project's attestation (on a recurring schedule)** – The Steward reaffirms the project's VSA is still compliant, which release artifacts it covers, and how long it is valid. The Steward then cryptographically signs the VSA using its electronic identity, and makes it available to subscribing manufacturers. Any surplus generated from these sales is donated to sustain projects, communities and services, or reinvested in the Steward – in accordance with the Steward's current disbursement formula.
+1. **A manufacturer receives VSAs (on a recurring schedule)** – The Steward makes available to the manufacturer the project's current compliance, FTE level of sustaining, and membership status. These come in the form of signed VSAs, as long as the manufacturer remains enrolled.
+1. **Audit (eventually)** – When a market surveillance authority audits the manufacturer's product, the manufacturer presents the signed VSAs as part of their compliance documentation. The market surveillance authority can verify the recency, validity and correctness of these.
 
 
 ```mermaid
@@ -348,9 +348,10 @@ To qualify for Steward membership, the applicant has to:
 * Commit to improve their project's long-term viability and governance, including publishing succession and sunset plans and policies.
 * As long as they are a member, take part in issuing _Voluntary Security Attestations_ confirming the claims above, and allow the Steward to use these attestations to generate the surplus needed for this venture to fulfil its purpose.
 
-If a project fails to meet the criteria above, the project gets an opportunity to rectify this – or risk losing their membership.
+If a member no longer meets the criteria above, they get an opportunity to rectify this, and otherwise risk losing the membership.
+
 Manufacturers will be notified by the Steward of any relevant, substantial or long-term changes like these, so they may conduct a risk assessment and act accordingly.
-If a project's membership criteria are fulfilled at some point later, they may of course freely apply for membership again.
+If someone's membership criteria are fulfilled at some point later, they may of course freely apply for membership again.
 
 If a project wishes to leave the Steward, they only have to declare that the project's Steward organisation is a different one (or none).
 When the most recent attestation expires, no new attestations are issued or signed by the Steward, and their membership commitments end.
@@ -369,13 +370,13 @@ TBD
 
 Addressing the CRA's implications should not be expected to happen on a volunteer basis.
 
-The Steward must therefore operate in a way so its revenue sources generate a surplus large enough to offer the necessary support to its members and related communities, in a long-term sustainable way, that helps achieve and maintain the security posture manufacturers require for their products to remain compliant.
+The Steward must therefore operate in a way so its revenue sources generate a surplus large enough to offer the necessary support to its members and related communities, in a long-term sustainable way, that helps achieve and maintain the security posture manufacturers require for their products to remain compliant. A goal here, is to cover the time and expenses up to a 20% FTE position.
 
 ### Revenue sources
 
 1. **Public funding** – until the Steward operation is established and proven sustainable.
-1. **Enrolment fees** – paid by manufacturers when enrolling to the steward's VSA subscription programme.
-1. **Voluntary Security Attestations** – issued, and made available to enrolled manufacturers.
+1. **Enrolment fees** – paid by manufacturers when enrolling in the steward's VSA subscription programme.
+1. **Voluntary Security Attestations** – issued, and made available to the manufacturers that remain .
 
 **The Steward should eventually _not_ require donations or public funding** once its regular revenue sources are capable of producing a surplus suitable for its purpose.
 
@@ -433,18 +434,19 @@ Each of these can and will be addressed in the coming months.
 * [ ] Present this concept at relevant conferences
     * [x] [London Perl Workshop 2026](https://act.yapc.eu/lpw2026/talk/8062)
     * [x] [YAPC::Tokyo 2026](https://fortee.jp/yapc-tokyo-2026/proposal/71b322a4-14f5-42d9-bac6-18a9956019c4) (Link may be unavailable from EU: [Translation gist](https://chaos.social/@sjn/117344794232894183) on github)
+    * [ ] FOSDEM Fringe - TBD
     * [ ] FOSDEM - TBD
 * [ ] Fundraising for the required starting capital for the SCE.
-* [ ] Gather commitment from founding members: at least 3 communities that have registered a legal entity, of which two must be in different EEA countries.
-    * [x] The Perl and Raku Foundation (requires business model)
-    * [x] Vienna.pm (requires funding)
+* [ ] Gather commitments and blockers from prospective founding members: at least 3 communities that have registered a legal entity, of which two must be in different EEA countries (this is a legal requirement for creating a SCE).
+    * [x] The Perl and Raku Foundation (response: requires business model)
+    * [x] Vienna.pm (response: requires funding)
     * [ ] Frankfurt.pm
-    * [x] Les Mongueurs de Perl (requires funding)
+    * [x] Les Mongueurs de Perl (response: requires funding)
     * [ ] Swiss Perl Mongers
-    * [ ] Oslo.pm
+    * [x] Oslo.pm (response: requires GA decision)
     * [ ] Japan Perl Association
-    * [x] ~~London.pm~~ (no legal entity)
-    * [x] ~~Orlando.pm~~ (no legal entity)
+    * [x] ~~London.pm~~ (response: no legal entity)
+    * [x] ~~Orlando.pm~~ (response: no legal entity)
 * [ ] Cover enrolment fees and privacy and data minimisation concerns (for GDPR compliance)
 * [ ] Find a better term for "members in good standing" tier, as this term already has a well-defined meaning: a member who has fulfilled the requirements for membership
 
@@ -456,6 +458,7 @@ The OSS Ecosystem Steward concept is the product of many conversations with many
 * Alistair Woodman
 * Arne Sommer
 * Greg Wallace
+* Gregor Bransky
 * Laurent Hosen
 * Lukas Kahwe Smith
 * Stig Palmquist

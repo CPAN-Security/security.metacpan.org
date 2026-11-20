@@ -2,6 +2,7 @@
 layout: single
 title: Presentations
 toc: false
+mermaid: true
 permalink: /presentations/
 ---
 
@@ -23,3 +24,26 @@ This directory contains presentations relevant to CPANSec given at conferences a
 * German Perl Workshop 2026 — [What might a CPAN Steward organization look like?](https://act.yapc.eu/gpw2026/talk/8037) ([Slides](gpw2026-steward-proposal/), Video)
 * German Perl Workshop 2026 — An update on CPANSec (Lightning talk, ([Slides](gpw2026-cpansec-update/))
 * ORC WG "Due Diligence & Vulnerability Handling Task Force" meeting, 2026-05-07 – Due Diligence, Due Care, Reasonable Person, ([Slides, PDF](orcwg-due-diligence-due-care-reasonable-person-2025-05-07.pdf))
+
+```mermaid
+---
+config:
+  theme: redux-color
+  look: neo
+---
+venn-beta
+    title "I code because I…"
+    set WANT["I Want to"]:10
+        text want1["Fun"]
+        text want2["Learn"]
+        text want3["Show"]
+    set MUST["I Must"]:20
+        text must1["Contract"]
+        text must2["Law"]
+        text must3["Boss"]
+    union MUST,WANT["I Care"]:4
+        text fs1["Help"]
+        text fs2["Give"]
+    style MUST fill:skyblue
+    style WANT fill:lightgreen
+```

@@ -102,9 +102,9 @@ Base: [§ 10.Vedtekter for samvirkeforetak, Samvirkelova](https://lovdata.no/lov
     - Oslo Perl Mongers (sjn)
     - German Perl Mongers (corion)
     - Vienna Perl Mongers (domm)
-    - Orlando Perl Mongers (perigrin)?
-    - Toronto Perl Mongers (oalders)
-    - London Perl Mongers ()
+    - ~~Orlando Perl Mongers~~ (perigrin)
+    - ~~Toronto Perl Mongers~~ (talexb)
+    - ~~London Perl Mongers~~ (ilmari)
   - PAUSE
   - PTS (French Perl Mongers)
 - Organization charter and bylaws
@@ -130,8 +130,8 @@ Base: [§ 10.Vedtekter for samvirkeforetak, Samvirkelova](https://lovdata.no/lov
   - One natural person that is a contact person
 - Voting membership requirements
   - Same requirements as non-voting members, plus:
-  - Registered organization
-  - Asset control
+  - Registered legal entity for the organization
+  - Asset control verified
   - Non-profit
   - Biannual general assembly
   - Sustainable organization

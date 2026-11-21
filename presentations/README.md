@@ -24,6 +24,7 @@ This directory contains presentations relevant to CPANSec given at conferences a
 * German Perl Workshop 2026 — [What might a CPAN Steward organization look like?](https://act.yapc.eu/gpw2026/talk/8037) ([Slides](gpw2026-steward-proposal/), Video)
 * German Perl Workshop 2026 — An update on CPANSec (Lightning talk, ([Slides](gpw2026-cpansec-update/))
 * ORC WG "Due Diligence & Vulnerability Handling Task Force" meeting, 2026-05-07 – Due Diligence, Due Care, Reasonable Person, ([Slides, PDF](orcwg-due-diligence-due-care-reasonable-person-2025-05-07.pdf))
+* London Perl Workshop 2026 — [What is an OSS Ecosystem Steward, and can we have one?](https://act.yapc.eu/lpw2026/talk/8062) ([Slides](lpw2026-ecosystem-steward/))
 
 ```mermaid
 ---

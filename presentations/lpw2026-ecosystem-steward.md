@@ -259,7 +259,7 @@ For _manufacturers_ wishing to place their _products_ on the _European market_.
 
 ## Upstream implications
 
-…due diligence on _hundreds_ or _thousands_ of components
+We get _our own due diligence_ expectations, by implication, on _hundreds_ or _thousands_ of components
 
 
 [comment]: # (!!! data-auto-animate)

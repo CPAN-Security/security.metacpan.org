@@ -354,7 +354,7 @@ A new legal category in the CRA ([Article 3](https://eur-lex.europa.eu/legal-con
 - …_systematically_ supporting Open Source intended for commercial use
 - …ensuring the viability of those projects
 
-Works well for a foundation with _hundreds_ of projects
+Should be doable for _hundreds_ of projects, no?
 
 
 [comment]: # (!!! data-auto-animate)
@@ -402,6 +402,20 @@ Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN
 - …cooperate with market surveillance authorities
 - …report actively exploited vulnerabilities and severe incidents (CSIRTs / ENISA)
 - …single point of contact for authorities, CSIRTs, manufacturers, etc.
+
+
+[comment]: # (||| data-auto-animate)
+
+## The Steward's obligations
+
+Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_24)):
+
+- …a cybersecurity policy
+- …cooperate with market surveillance authorities
+- …report actively exploited vulnerabilities and severe incidents (CSIRTs / ENISA)
+- …single point of contact for authorities, CSIRTs, manufacturers, etc.
+
+And the upstream implications!
 
 
 [comment]: # (!!! data-auto-animate)

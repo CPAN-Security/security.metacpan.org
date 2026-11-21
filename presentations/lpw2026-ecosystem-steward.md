@@ -420,7 +420,7 @@ Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN
 
 ## A Steward for CPAN is different
 
-- _Tens of thousands_ of projects, and a long tail of transitive dependencies
+- _Tens of thousands_ of projects, with a long tail of transitive dependencies
 - No existing organisation willing and able to be the Steward
 
 
@@ -428,7 +428,7 @@ Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN
 
 ## A Steward for CPAN is different
 
-- _Tens of thousands_ of projects, and a long tail of transitive dependencies
+- _Tens of thousands_ of projects, with a long tail of transitive dependencies
 - No existing organisation willing and able to be the Steward
 - A _laissez-faire_ tradition
 
@@ -437,7 +437,7 @@ Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN
 
 ## A Steward for CPAN is different
 
-- _Tens of thousands_ of projects, and a long tail of transitive dependencies
+- _Tens of thousands_ of projects, with a long tail of transitive dependencies
 - No existing organisation willing and able to be the Steward
 - A _laissez-faire_ tradition
 - A fiercely independent culture
@@ -447,7 +447,7 @@ Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN
 
 ## A Steward for CPAN is different
 
-- _Tens of thousands_ of projects, and a long tail of transitive dependencies
+- _Tens of thousands_ of projects, with a long tail of transitive dependencies
 - No existing organisation willing and able to be the Steward
 - A _laissez-faire_ tradition
 - A fiercely independent culture
@@ -519,14 +519,14 @@ Light-touch obligations ([Article 24](https://eur-lex.europa.eu/legal-content/EN
 
 [comment]: # (!!! data-auto-animate)
 
-## A **community-owned** non-profit co-operative
+### A **community-owned** non-profit co-operative
 
 Owned by those who opt in:
 
 
 [comment]: # (||| data-auto-animate)
 
-## A **community-owned** non-profit co-operative
+### A **community-owned** non-profit co-operative
 
 Owned by those who opt in:
 
@@ -535,7 +535,7 @@ Owned by those who opt in:
 
 [comment]: # (||| data-auto-animate)
 
-## A **community-owned** non-profit co-operative
+### A **community-owned** non-profit co-operative
 
 Owned by those who opt in:
 
@@ -545,7 +545,7 @@ Owned by those who opt in:
 
 [comment]: # (||| data-auto-animate)
 
-## A **community-owned** non-profit co-operative
+### A **community-owned** non-profit co-operative
 
 Owned by those who opt in:
 
@@ -556,19 +556,19 @@ Owned by those who opt in:
 
 [comment]: # (!!! data-auto-animate)
 
-## A community-owned **non-profit** co-operative
+### A community-owned **non-profit** co-operative
 
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned **non-profit** co-operative
+### A community-owned **non-profit** co-operative
 
 _Dugnad_ – helping your neighbours improve the commons
 
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned **non-profit** co-operative
+### A community-owned **non-profit** co-operative
 
 _Dugnad_ – helping your neighbours improve the commons
 
@@ -577,7 +577,7 @@ Some work is too boring to find volunteers for
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned **non-profit** co-operative
+### A community-owned **non-profit** co-operative
 
 _Dugnad_ – helping your neighbours improve the commons
 
@@ -588,7 +588,7 @@ Some work is too boring to find volunteers for
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned **non-profit** co-operative
+### A community-owned **non-profit** co-operative
 
 _Dugnad_ – helping your neighbours improve the commons
 
@@ -600,7 +600,7 @@ Some work is too boring to find volunteers for
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned **non-profit** co-operative
+### A community-owned **non-profit** co-operative
 
 _Dugnad_ – helping your neighbours improve the commons
 
@@ -613,7 +613,7 @@ Some work is too boring to find volunteers for
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned **non-profit** co-operative
+### A community-owned **non-profit** co-operative
 
 _Dugnad_ – helping your neighbours improve the commons
 
@@ -628,12 +628,12 @@ The General Assembly decides the disbursement formula
 
 [comment]: # (!!! data-auto-animate)
 
-## A community-owned non-profit **co-operative**
+### A community-owned non-profit **co-operative**
 
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit **co-operative**
+### A community-owned non-profit **co-operative**
 
 Following the seven [Rochdale Principles](https://en.wikipedia.org/wiki/Rochdale_Principles):
 
@@ -648,7 +648,7 @@ Following the seven [Rochdale Principles](https://en.wikipedia.org/wiki/Rochdale
 
 [comment]: # (||| data-auto-animate)
 
-## A community-owned non-profit **co-operative**
+### A community-owned non-profit **co-operative**
 
 Following the seven [Rochdale Principles](https://en.wikipedia.org/wiki/Rochdale_Principles):
 
@@ -997,6 +997,15 @@ Goal: **no donations or public funding needed** in the long run
 ## Next steps
 
 - EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
+- Put together a business case for the co-op
+
+
+[comment]: # (||| data-auto-animate)
+
+## Next steps
+
+- EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
+- Put together a business case for the co-op
 - Draft the SCE bylaws – legal, tax and antitrust questions
 
 
@@ -1005,6 +1014,7 @@ Goal: **no donations or public funding needed** in the long run
 ## Next steps
 
 - EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
+- Put together a business case for the co-op
 - Draft the SCE bylaws – legal, tax and antitrust questions
 - Founding members: ≥3 legal entities, in ≥2 EEA countries
 
@@ -1014,9 +1024,10 @@ Goal: **no donations or public funding needed** in the long run
 ## Next steps
 
 - EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
+- Put together a business case for the co-op
 - Draft the SCE bylaws – legal, tax and antitrust questions
 - Founding members: ≥3 legal entities, in ≥2 EEA countries
-  - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm, & more have responded
+  - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm, & others
 
 
 [comment]: # (||| data-auto-animate)
@@ -1024,9 +1035,10 @@ Goal: **no donations or public funding needed** in the long run
 ## Next steps
 
 - EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
+- Put together a business case for the co-op
 - Draft the SCE bylaws – legal, tax and antitrust questions
 - Founding members: ≥3 legal entities, in ≥2 EEA countries
-  - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm & more have responded
+  - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm & others
 
 
 [comment]: # (||| data-auto-animate)
@@ -1034,10 +1046,24 @@ Goal: **no donations or public funding needed** in the long run
 ## Next steps
 
 - EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
+- Put together a business case for the co-op
 - Draft the SCE bylaws – legal, tax and antitrust questions
 - Founding members: ≥3 legal entities, in ≥2 EEA countries
-  - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm have responded
+  - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm & others
 - Fundraising for the SCE's starting capital
+
+
+[comment]: # (||| data-auto-animate)
+
+## Next steps
+
+- EU Commission publishes the [Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_25) delegated act
+- Put together a business case for the co-op
+- Draft the SCE bylaws – legal, tax and antitrust questions
+- Founding members: ≥3 legal entities, in ≥2 EEA countries
+  - TPRF, Vienna.pm, Mongueurs de Perl, Oslo.pm & others
+- Fundraising for the SCE's starting capital
+- A lot of talking!
 
 
 [comment]: # (!!! data-auto-animate)

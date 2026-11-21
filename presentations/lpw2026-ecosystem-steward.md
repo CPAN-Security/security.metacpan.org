@@ -5,14 +5,15 @@
 
 [comment]: # (THEME = serif)
 
-[comment]: # (minScale: 0.4)
+[comment]: # (minScale: 0.3)
 [comment]: # (maxScale: 1.0)
 [comment]: # (controls: true)
 [comment]: # (width: "1440")
 [comment]: # (height: "810")
 [comment]: # (help: true)
 [comment]: # (progress: true)
-[comment]: # (controlsBackArrows: "true")
+[comment]: # (controlsBackArrows: true)
+[comment]: # (center: false)
 
 
 ## What is an OSS Ecosystem Steward, and can we have one?
@@ -172,9 +173,7 @@ For _manufacturers_ wishing to place their _products_ on the _European market_.
 
 [comment]: # (!!! data-auto-animate)
 
-## Upstream implications
-
-![Yes, but no.](media/cra-oss-yes-but-no.jpg)
+![Yes, but no.](media/cra-oss-yes-but-no.png)
 
 
 [comment]: # (||| data-auto-animate)
@@ -272,49 +271,43 @@ For _manufacturers_ wishing to place their _products_ on the _European market_.
 
 ## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice)
 
-### Accept – demonstrate the project is _intended for commercial use_
+#### **Accept** – demonstrate the project is _intended for commercial use_
 
 
 [comment]: # (||| data-auto-animate)
 
 ## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice)
 
-### Accept – demonstrate the project is _intended for commercial use_
-- …and take on boring, tedious compliance work
+#### **Accept** – demonstrate the project is _intended for commercial use_
+> …and take on boring, tedious compliance work
 
 
 [comment]: # (||| data-auto-animate)
 
 ## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice)
 
-### Accept – demonstrate the project is _intended for commercial use_
-- …and take on boring, tedious compliance work
+#### **Accept** – demonstrate the project is _intended for commercial use_
+> …and take on boring, tedious compliance work
 
-### **Decline** – and risk users being forced to switch away
-
-
-[comment]: # (||| data-auto-animate)
-
-## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice)
-
-### Accept – demonstrate the project is _intended for commercial use_
-- …and take on boring, tedious compliance work
-
-### **Decline** – and risk users being forced to switch away
-- …with security consequences for everyone
+#### **Decline** – and risk users being forced to switch away
 
 
 [comment]: # (||| data-auto-animate)
 
 ## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice)
 
-### Accept – demonstrate the project is _intended for commercial use_
-- …and take on boring, tedious compliance work
+#### **Accept** – demonstrate the project is _intended for commercial use_
+> …and take on boring, tedious compliance work
 
-### **Decline** – and risk users being forced to switch away
-- …with security consequences for everyone
+#### **Decline** – and risk users being forced to switch away
+> …with security consequences for everyone
 
-Our challenge: make accepting **realistic and fair**
+
+[comment]: # (||| data-auto-animate)
+
+## A [Hobson's Choice](https://en.wikipedia.org/wiki/Hobson%27s_choice)
+
+Our challenge: make _accepting_ the **realistic and fair** option
 
 
 [comment]: # (!!! data-auto-animate)
@@ -361,7 +354,7 @@ A new legal category in the CRA ([Article 3](https://eur-lex.europa.eu/legal-con
 - …_systematically_ supporting Open Source intended for commercial use
 - …ensuring the viability of those projects
 
-Works well for a foundation with _tens or hundreds_ of projects
+Works well for a foundation with _hundreds_ of projects
 
 
 [comment]: # (!!! data-auto-animate)

@@ -6,7 +6,7 @@
 [comment]: # (THEME = serif)
 
 [comment]: # (minScale: 0.4)
-[comment]: # (maxScale: 1.1)
+[comment]: # (maxScale: 1.0)
 [comment]: # (controls: true)
 [comment]: # (width: "1440")
 [comment]: # (height: "810")
@@ -172,10 +172,12 @@ For _manufacturers_ wishing to place their _products_ on the _European market_.
 
 [comment]: # (!!! data-auto-animate)
 
-![CE Mark](media/cra-oss-yes-but-no.jpg)
+## Upstream implications
+
+![Yes, but no.](media/cra-oss-yes-but-no.jpg)
 
 
-[comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
 ## Upstream implications
 
